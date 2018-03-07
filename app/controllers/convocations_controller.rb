@@ -96,7 +96,10 @@ class ConvocationsController < ApplicationController
   
     #authentification basic on rails framework
   def basic_auth
-    http_basic_authenticate_with :name => "agis", :password => "agis"
+      authenticate_or_request_with_http_basic do |user, password|
+        user == "agis" && password == "agis"
+      end
+
   end
 
     # Never trust parameters from the scary internet, only allow the white list through.
