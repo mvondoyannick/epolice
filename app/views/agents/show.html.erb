@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-sm">  </div>
+</div>  
+<p>
+  <strong>Name:</strong>
+  <%= @agent.name %>
+</p>
+
+<p>
+  <strong>Prenom:</strong>
+  <%= @agent.prenom %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @agent.phone %>
+</p>
+
+<p>
+  <strong>Matricule:</strong>
+  <%= @agent.matricule %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @agent.grade %>
+</p>
+
+<%= link_to 'Edit', edit_agent_path(@agent) %> |
+<%= link_to 'Back', agents_path %>

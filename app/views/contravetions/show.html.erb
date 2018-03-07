@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Token:</strong>
+  <%= @contravetion.token %>
+</p>
+
+<p>
+  <strong>Motif:</strong>
+  <%= @contravetion.motif %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @contravetion.status %>
+</p>
+
+<p>
+  <strong>Agent:</strong>
+  <%= @contravetion.Agent.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @contravetion.User.name %>
+</p>
+
+<%= link_to 'Edit', edit_contravetion_path(@contravetion) %> |
+<%= link_to 'Back', contravetions_path %>

@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@contravetion) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :token %>
+    <%= f.input :motif %>
+    <%= f.input :status, collection: ["Non Payé", "Payé"], prompt: "Selectionner un statut", label: "Statut" %>
+    <%= f.association :Agent, prompt: "Selectionner un agent" %>
+    <%= f.association :User, prompt: "Selectionner un utilisateur" %>
+    <%= f.input :description, as: :text %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

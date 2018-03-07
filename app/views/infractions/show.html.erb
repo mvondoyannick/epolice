@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Motif:</strong>
+  <%= @infraction.motif %>
+</p>
+
+<p>
+  <strong>Montant:</strong>
+  <%= @infraction.montant %>
+</p>
+
+<%= link_to 'Edit', edit_infraction_path(@infraction) %> |
+<%= link_to 'Back', infractions_path %>

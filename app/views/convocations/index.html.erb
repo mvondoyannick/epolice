@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<div class="col-xs-12">
+  <table class="table table-hover" id="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>#</th>
+        <th>Cni</th>
+        <th>Phone</th>
+        <th>Name</th>
+        <th>Prenom</th>
+        <th>Immatr.</th>
+        <th>Motif</th>
+        <th>Statut</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @convocations.each do |convocation| %>
+        <tr>
+          <td><%= image_tag 'user.png', height: 20, width: 20 %></td>
+          <td><%= convocation.cni %></td>
+          <td><%= convocation.phone %></td>
+          <td><%= convocation.name %></td>
+          <td><%= convocation.prenom %></td>
+          <td><%= convocation.immatriculation %></td>
+          <td><%= convocation.motif %></td>
+          <td>
+            <% if convocation.status.nil? %>
+              <%= image_tag 'impaye.png', height: 15, width: 15 %>
+              inconnu
+            <% else %>
+              <%= convocation.status %>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to 'Afficher', convocation %>
+          </td>
+          <!-- <td><%= link_to 'Modifier', edit_convocation_path(convocation) %></td>
+          <td><%= link_to 'Supprimer', convocation, method: :delete, data: { confirm: 'Etes vous sur?' } %></td> -->
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
