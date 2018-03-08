@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   resources :infractions
   resources :convocations
   resources :users
-  resources :contravetions
   resources :agents
   root 'convocations#home'
   get 'convocations/all/not_paid', to: 'convocations#not_paid'
@@ -14,7 +13,7 @@ Rails.application.routes.draw do
     #connexion d'un utilisateur, return matricule
     get 'convocations/authUser/:phone/:matricule', to: 'convocations#authUser'
 
-    get 'convocations/verify/:phone', to: 'convocations#verifyContravention'
+    get 'convocations/verify/:code', to: 'convocations#verifyContravention'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

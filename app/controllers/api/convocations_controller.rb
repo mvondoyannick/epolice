@@ -26,17 +26,16 @@ class Api::ConvocationsController < ApplicationController
   #permet de verifier une contravention
   def verifyContravention
     code = params[:code]
-    @p = Convocation.where(code: code)
-    if @p.empty?
+    @p = Convocation.find_by(code: code.upcase)
+    if @p.nil?
       render json: {
         status: :not_found,
-        message: "Code inconnu"
+        message: "téléphone inconnu"
       }
     else
       render json: {
-        phone: @p.phone,
-        status: @p.status,
-        paiement: @p.updated_at
+        status: :found,
+        message: @p.status
       }
     end
   end
@@ -50,9 +49,9 @@ class Api::ConvocationsController < ApplicationController
     pieceretenue = params[:pieceretenue]
     agent = params[:agent]
     status = "impaye"
-    code = SecureRandom.hex(5)
+    code = SecureRandom.hex(3)
 
-    @result = Convocation.new(cni: cni, phone: phone, immatriculation: immatriculation, motif: motif, pieceretenue: pieceretenue, status: status, agent_id: agent, code: SecureRandom.hex(5))
+    @result = Convocation.new(cni: cni, phone: phone, immatriculation: immatriculation, motif: motif, pieceretenue: pieceretenue, status: status, agent_id: agent, code: code.upcase)
     if @result.save
       render json: {
         status: :save,
