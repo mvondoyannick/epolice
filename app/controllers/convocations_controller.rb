@@ -48,6 +48,30 @@ class ConvocationsController < ApplicationController
   def edit
   end
 
+  # le paiement
+  def payer
+    #permet de payer une convocation
+    #on recuper l'ID de la convocation et on effectue la recherche avec
+    id = params[:id]
+    #on recherche le status de la convocation
+    @d = Convocation.find(id)
+  end
+
+  #la facture
+  def facture
+    #affiche une facture à l'ecran
+    id = params[:id]
+    @f = Convocation.find(id)
+  end
+
+
+  #impression
+  def print
+    respond_to do |format|
+      format.html { render layout: false }
+    end
+  end
+
   # POST /convocations
   # POST /convocations.json
   def create

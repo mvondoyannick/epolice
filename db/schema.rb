@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180307184528) do
+ActiveRecord::Schema.define(version: 20180309023247) do
 
   create_table "agents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -76,6 +76,14 @@ ActiveRecord::Schema.define(version: 20180307184528) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "paiements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "montant"
+    t.bigint "convocation_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["convocation_id"], name: "index_paiements_on_convocation_id"
+  end
+
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "prenom"
@@ -91,4 +99,5 @@ ActiveRecord::Schema.define(version: 20180307184528) do
   add_foreign_key "contravetions", "users", column: "User_id"
   add_foreign_key "convocations", "agents"
   add_foreign_key "convocations", "infractions"
+  add_foreign_key "paiements", "convocations"
 end

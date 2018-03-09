@@ -1,5 +1,10 @@
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 <p id="notice"><%= notice %></p>
-
+  <%  @agent = Agent.find(@convocation.agent_id) %>
+  <h2>
+    Infraction du <%= @convocation.created_at %>
+  </h2>
+  <br>
 <div class="row">
   <div class="col-md-4">
     <!-- <div class="card" style="width: 18rem;">
@@ -10,7 +15,6 @@
   <a href="#" class="btn btn-primary">Dossier complet</a>
 </div>
     </div> -->
-    <%  @agent = Agent.find(@convocation.agent_id) %>
     <div class="box box-widget widget-user-2">
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header bg-yellow">
@@ -18,8 +22,13 @@
                 <%= image_tag 'img/avatar.png', class: "img-circle" %>
               </div>
               <!-- /.widget-user-image -->
-              <h3 class="widget-user-username"><%= @agent.name %> <%= @agent.prenom %></h3>
-              <h5 class="widget-user-desc"><%= @agent.grade %></h5>
+              <% if @agent.nil? %>
+                <h3 class="widget-user-username">Agent non identifié</h3>
+              <% else %>
+                <h3 class="widget-user-username"><%= @agent.name %> <%= @agent.prenom %></h3>
+                <h5 class="widget-user-desc"><%= @agent.grade %></h5>
+              <% end %>
+
             </div>
             <div class="box-footer no-padding">
               <br>
@@ -48,6 +57,7 @@
           </div>
   </div>
   <div class="col-md-4">
+    <h3>Details Infraction</h3>
     <table class="table">
       <tr>
         <td><strong>Cni:</strong></td>
@@ -84,7 +94,7 @@
     </table>
   </div>
   <div class="col-md-4">
-
+    <br>
     <table class="table">
       <tr>
         <td><strong>Piece(s) retenuee(s):</strong></td>
@@ -124,12 +134,31 @@
           <% end %> 
         </td>
       </tr>
+      <tr>
+        <td><strong>Code:</strong></td>
+        <td>
+          <% if @convocation.code.nil? %>
+            Inconnue
+          <% else %>
+            <%= @convocation.code %>
+          <% end %>
+        </td>
+      </tr>
     </table>
   </p>
 
   <p>
-    <%= link_to 'Mettre à jour', edit_convocation_path(@convocation), class: "btn btn-primary" %> |
-    <%= link_to 'Retour', convocations_path, class: "btn btn-primary" %>
+    <% if @convocation.residence.nil? %>
+      <%= link_to 'Mettre à jour', edit_convocation_path(@convocation), class: "btn btn-primary" %>
+    <% else %>
+      <% if @convocation.status == "paye" %>
+        <%= link_to 'Payer', "/convocations/request/payer/#{@convocation.id}" %> |
+      <% else %>
+        <%= link_to 'Modifier', "/convocations/request/payer/#{@convocation.id}" %> |
+      <% end %>
+    <% end %>
+    <%= link_to 'Retour', convocations_path %>
   </p>
   </div>
 </div>
+</main>

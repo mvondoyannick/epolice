@@ -5,14 +5,96 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'bootstrap-grid', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'bootstrap-reboot', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'bootstrap', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
 
+  <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">POP CIRCULATION</a>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Rechercher" aria-label="Search">
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" href="#">Se déconnecter</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                <span data-feather="home"></span>
+                Administration <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+            <%= link_to 'Contraventions', convocations_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Carrefours', '#', class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Agents', agents_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Rapports & stat.', '#', class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Utilisateurs', '#', class: "nav-link" %>
+            </li>
+          </ul>
+
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Saved reports</span>
+            <a class="d-flex align-items-center text-muted" href="#">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Current month
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Last quarter
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Social engagement
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Year-end sale
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
     <%= yield %>
 
+    </div>
+  </div>
 
   </body>
 </html>

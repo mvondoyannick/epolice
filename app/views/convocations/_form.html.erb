@@ -19,7 +19,7 @@
         <%= f.input :rue, label: "N° rue ou description", as: :text %>
         <%= f.input :residence, label: "Lieu dit", as: :text %>
         <%= f.input :emploi, label: "Emploi occupé", as: :text %>
-        <%= f.association :infraction, label_method: :motif, prompt: "Selectionner une infraction" %>
+
         <%= f.input :observation, label: "Observation sur le conducteur", as: :text %>
         <%= f.input :pieceretenue, label: "Pieces retenue", collection: ["Permis de conduire", "Carte Grise", "Aucune"], prompt: "Selctionner une piece retenue" %>
         <%= f.input :status, label: "Statut", collection: [["Impayé","impaye"], ["Payé","paye"]], prompt: "Selectionner un statut" %>

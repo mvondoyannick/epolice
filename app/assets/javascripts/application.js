@@ -16,6 +16,5 @@
 //= require_tree .
 
 $(document).ready(function() {
-  $("#table").dataTable();
-  $('.dropdown-toggle').dropdown()
-});
+    $('#table').DataTable();
+} );

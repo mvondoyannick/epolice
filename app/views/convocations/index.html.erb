@@ -1,10 +1,12 @@
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 <p id="notice"><%= notice %></p>
 
 <div class="col-xs-12">
+  <h2>Liste des convocation</h2>
   <table class="table table-hover" id="table">
     <thead class="thead-dark">
       <tr>
-        <th>#</th>
+        <th>Date</th>
         <th>Cni</th>
         <th>Phone</th>
         <th>Name</th>
@@ -19,7 +21,7 @@
     <tbody>
       <% @convocations.each do |convocation| %>
         <tr>
-          <td><%= image_tag 'user.png', height: 20, width: 20 %></td>
+          <td><%= convocation.created_at.strftime('%x') %></td>
           <td><%= convocation.cni %></td>
           <td><%= convocation.phone %></td>
           <td><%= convocation.name %></td>
@@ -44,4 +46,4 @@
     </tbody>
   </table>
 </div>
-
+</main>

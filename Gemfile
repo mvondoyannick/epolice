@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # Simple_form gem
 gem 'simple_form'
 #Adding bootstrap
-#gem 'bootstrap', '~> 4.0'
+gem 'bootstrap', '~> 4.0'
 #adding jquery-rails
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 #for xls generation file

@@ -1,0 +1,50 @@
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+<h2>
+  recu de paiement de l'amande forfaitaire
+</h2>
+
+  <div class="col-xs-12">
+    <p>
+      Details
+    </p>
+    <table class="table">
+      <tr>
+        <td>Date convocation</td>
+        <td><%= @f.created_at %></td>
+      </tr>
+      <tr>
+        <td>Nom et prénom du contrevenant</td>
+        <td>Mr/Mme <%=  @f.name+" "+@f.prenom %></td>
+      </tr>
+      <tr>
+        <td>Nature et classe de la contravention</td>
+        <td><%= @f.cni %></td>
+      </tr>
+      <tr>
+        <td>Proces verbal N°</td>
+        <td><%= @f.created_at %></td>
+      </tr>
+      <tr>
+        <td>Montant de l'amande forfaitaire</td>
+        <td><%= @f.motif %></td>
+      </tr>
+      <tr>
+        <td>Date de versement</td>
+        <td><%= @f.updated_at %></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Le contrevenant</td>
+        <td>L'agent verbaliseur</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+  <%= link_to 'Imrimer', action: "print", target: "_new" %> | <%= link_to 'Annuler', convocations_path %>
+</main>

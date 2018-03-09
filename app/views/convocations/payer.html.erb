@@ -1,0 +1,54 @@
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+<h2>Proces verbal de Mr/Mme <%= @d.name.upcase %> </h2>
+<p>
+  les faits suivants vous sont reproché:
+</p>
+  <div class="col-xs-12">
+    <p>
+      Details
+    </p>
+    <table class="table">
+      <tr>
+        <td>Date convocation</td>
+        <td><%= @d.created_at %></td>
+      </tr>
+      <tr>
+        <td>Contrevenant</td>
+        <td>Mr/Mme <%=  @d.name+" "+@d.prenom %></td>
+      </tr>
+      <tr>
+        <td>Piece d'identité</td>
+        <td><%= @d.cni %></td>
+      </tr>
+      <tr>
+        <td>Montant contravention</td>
+        <td><%= @d.infraction.name %></td>
+      </tr>
+      <tr>
+        <td>Motif convocation</td>
+        <td><%= @d.motif %></td>
+      </tr>
+      <tr>
+        <td>Pieces retenues</td>
+        <td><%= @d.pieceretenue %></td>
+      </tr>
+      <tr>
+        <td>Code contravention</td>
+        <td><%= @d.code.upcase %></td>
+      </tr>
+      <tr>
+        <td>Date convocation</td>
+        <td><%= @d.created_at %></td>
+      </tr>
+      <tr>
+        <td>Date convocation</td>
+        <td><%= @d.created_at %></td>
+      </tr>
+      <tr>
+        <td>Date convocation</td>
+        <td><%= @d.created_at %></td>
+      </tr>
+    </table>
+  </div>
+  <%= link_to 'Payer', "/convocations/r/g/facture/#{@d.id}" %> | <%= link_to 'Mettre a jour', action: "edit", id: @d.id %> |<%= link_to 'Annuler', '#' %>
+</main>
