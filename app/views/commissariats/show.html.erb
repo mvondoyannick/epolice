@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @commissariat.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @commissariat.phone %>
+</p>
+
+<p>
+  <strong>Ville:</strong>
+  <%= @commissariat.ville %>
+</p>
+
+<%= link_to 'Edit', edit_commissariat_path(@commissariat) %> |
+<%= link_to 'Back', commissariats_path %>

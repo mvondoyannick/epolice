@@ -46,5 +46,5 @@
       </tr>
     </table>
   </div>
-  <%= link_to 'Imrimer', action: "print", target: "_new" %> | <%= link_to 'Annuler', convocations_path %>
+  <%= link_to 'Imrimer', action: "print", format: "pdf", target: "_blank", id: @f.id %> | <%= link_to 'Annuler', convocations_path %>
 </main>

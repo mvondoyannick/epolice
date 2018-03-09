@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180309023247) do
+ActiveRecord::Schema.define(version: 20180309213109) do
 
   create_table "agents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -20,6 +20,17 @@ ActiveRecord::Schema.define(version: 20180309023247) do
     t.string "grade"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "commissariat_id"
+    t.index ["commissariat_id"], name: "index_agents_on_commissariat_id"
+  end
+
+  create_table "commissariats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "phone"
+    t.bigint "ville_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ville_id"], name: "index_commissariats_on_ville_id"
   end
 
   create_table "contravetions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -95,6 +106,16 @@ ActiveRecord::Schema.define(version: 20180309023247) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "villes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "long"
+    t.string "lat"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "agents", "commissariats"
+  add_foreign_key "commissariats", "villes"
   add_foreign_key "contravetions", "agents", column: "Agent_id"
   add_foreign_key "contravetions", "users", column: "User_id"
   add_foreign_key "convocations", "agents"

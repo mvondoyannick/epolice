@@ -37,6 +37,9 @@ gem 'bootstrap', '~> 4.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 #for xls generation file
 #gem 'axlsx_rails'
+# PDF generate
+gem 'prawn', '~> 2.2', '>= 2.2.2'
+gem 'prawn-table'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

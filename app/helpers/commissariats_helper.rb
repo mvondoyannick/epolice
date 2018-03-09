@@ -1,0 +1,2 @@
+module CommissariatsHelper
+end

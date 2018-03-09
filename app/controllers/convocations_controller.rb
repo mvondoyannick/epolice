@@ -1,6 +1,7 @@
 class ConvocationsController < ApplicationController
   before_action :set_convocation, only: [:show, :edit, :update, :destroy]
   before_action :basic_auth, only: [:new, :update, :destroy]
+  require 'prawn'
 
   # GET /convocations
   # GET /convocations.json
@@ -67,8 +68,15 @@ class ConvocationsController < ApplicationController
 
   #impression
   def print
+    id = params[:id]
+    @code = Convocation.find(params[:id]).code
     respond_to do |format|
-      format.html { render layout: false }
+      format.html
+      format.pdf do
+        pdf = Prawn::Document.new
+        pdf.text "Convocation \##{@code}"
+        send_data pdf.render, filename: "ConvocationTest.pdf", type: "application/pdf", disposition: "inline"
+      end
     end
   end
 
