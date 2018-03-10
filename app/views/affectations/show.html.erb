@@ -1,0 +1,44 @@
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+<p id="notice"><%= notice %></p>
+
+  <h2>
+    Affectation d'un Agent à un carrefour
+  </h2>
+<p>
+  <strong>Type:</strong>
+  <%= @affectation.type.name %>
+</p>
+
+  <p>
+    <strong>Agent:</strong>
+    <%= @affectation.agent.name %> <%= @affectation.agent.prenom %>
+  </p>
+
+  <p>
+    <strong>Matricule:</strong>
+    <%= @affectation.agent.matricule %>
+  </p>
+
+  <p>
+    <strong>Grade:</strong>
+    <%= @affectation.agent.grade %>
+  </p>
+
+  <p>
+    <strong>Téléphone:</strong>
+    <%= @affectation.agent.phone %>
+  </p>
+
+  <p>
+    <strong>Carrefour:</strong>
+    <%= @affectation.carrefour.name %>
+  </p>
+
+  <p>
+    <strong>Date affectation:</strong>
+    <%= @affectation.date %>
+  </p>
+
+<%= link_to 'Edit', edit_affectation_path(@affectation) %> |
+<%= link_to 'Back', affectations_path %>
+</main>

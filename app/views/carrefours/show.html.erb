@@ -1,0 +1,31 @@
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @carrefour.name %>
+</p>
+
+<p>
+  <strong>Quartier:</strong>
+  <%= @carrefour.quartier %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @carrefour.status %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @carrefour.image %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @carrefour.description %>
+</p>
+
+<%= link_to 'Edit', edit_carrefour_path(@carrefour) %> |
+<%= link_to 'Back', carrefours_path %>
+</main>

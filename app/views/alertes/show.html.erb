@@ -1,0 +1,26 @@
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titre:</strong>
+  <%= @alerte.titre %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @alerte.description %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @alerte.date %>
+</p>
+
+<p>
+  <strong>Ville:</strong>
+  <%= @alerte.ville.name %>
+</p>
+
+<%= link_to 'Edit', edit_alerte_path(@alerte) %> |
+<%= link_to 'Back', alertes_path %>
+</main>

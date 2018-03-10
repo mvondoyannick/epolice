@@ -1,0 +1,47 @@
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+  <p id="notice"><%= notice %></p>
+
+  <div class="col-xs-12">
+    <h2>Historique pour <%= params[:phone] %> </h2>
+    <table class="table table-hover" id="table">
+      <thead class="thead-dark">
+      <tr>
+        <th>Date</th>
+        <th>N° CNI</th>
+        <th>Name</th>
+        <th>Prenom</th>
+        <th>Immatr.</th>
+        <th>Motif</th>
+        <th>Statut</th>
+        <th></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @data.each do |convocation| %>
+        <tr>
+          <td><%= convocation.created_at.strftime('%x') %></td>
+          <td><%= convocation.cni %></td>
+          <td><%= convocation.name %></td>
+          <td><%= convocation.prenom %></td>
+          <td><%= link_to convocation.immatriculation, '#' %></td>
+          <td><%= convocation.motif %></td>
+          <td>
+            <% if convocation.status.nil? %>
+              <%= image_tag 'impaye.png', height: 15, width: 15 %>
+              inconnu
+            <% else %>
+              <%= convocation.status %>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to 'Afficher', convocation %>
+          </td>
+          <!-- <td><%= link_to 'Modifier', edit_convocation_path(convocation) %></td>
+          <td><%= link_to 'Supprimer', convocation, method: :delete, data: { confirm: 'Etes vous sur?' } %></td> -->
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</main>

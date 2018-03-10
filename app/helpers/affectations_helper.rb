@@ -1,0 +1,2 @@
+module AffectationsHelper
+end

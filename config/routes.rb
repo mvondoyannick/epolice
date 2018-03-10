@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :carrefours
+  resources :affectations
+  resources :statuses
+  resources :types
+  resources :alertes
   resources :commissariats
   resources :villes
   resources :infractions
@@ -12,6 +17,9 @@ Rails.application.routes.draw do
   get 'convocations/request/payer/:id', to: 'convocations#payer'
   get 'convocations/r/g/facture/:id', to: 'convocations#facture'
   get 'convocations/r/p/print/:id', to: 'convocations#print'
+  get 'convocations/r/h/historiqueCni/:cni', to: 'convocations#historiqueCni'
+  get 'convocations/r/h/historiquePhone/:phone', to: 'convocations#historiquePhone'
+  get 'convocations/r/h/historiqueImmatriculation/:imm', to: 'convocations#historiqueImmatriculation'
   namespace :api, defaults: {format: :json} do
     get 'convocations/create/:cni/:phone/:immatriculation/:motif/:pieceretenue/:agent', to: 'convocations#conv'
     #connexion d'un utilisateur, return matricule

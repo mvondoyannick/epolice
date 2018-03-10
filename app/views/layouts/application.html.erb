@@ -32,6 +32,12 @@
     <div class="row">
       <nav class="col-md-2 d-none d-md-block bg-light sidebar">
         <div class="sidebar-sticky">
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Gestion convocations</span>
+            <a class="d-flex align-items-center text-muted" href="#">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
           <ul class="nav flex-column">
             <li class="nav-item">
               <a class="nav-link active" href="#">
@@ -40,19 +46,70 @@
               </a>
             </li>
             <li class="nav-item">
-            <%= link_to 'Contraventions', convocations_path, class: "nav-link" %>
+            <%= link_to 'Liste des Contraventions', convocations_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <%= link_to 'Carrefours', '#', class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Agents', agents_path, class: "nav-link" %>
+              <%= link_to 'Ajouter une contravention', new_convocation_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
               <%= link_to 'Rapports & stat.', '#', class: "nav-link" %>
             </li>
             <li class="nav-item">
               <%= link_to 'Utilisateurs', '#', class: "nav-link" %>
+            </li>
+          </ul>
+
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Gestion carrefours</span>
+            <a class="d-flex align-items-center text-muted" href="#">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <%= link_to 'Cartographie des carrefours', '#', class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Cafferour non encombrés', '#', class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Carrefours encombrés', '#', class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Ajouter carrefours', new_carrefour_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Affecter agent à un carrefour', affectations_path, class: "nav-link" %>
+            </li>
+          </ul>
+
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Gestion des agents</span>
+            <a class="d-flex align-items-center text-muted" href="#">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <%= link_to 'Liste des agents', agents_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Ajouter un agent', new_agent_path, class: "nav-link" %>
+            </li>
+          </ul>
+
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Gestion des villes</span>
+            <a class="d-flex align-items-center text-muted" href="#">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <%= link_to 'Liste des villes', villes_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Ajouter ville', new_ville_path, class: "nav-link" %>
             </li>
           </ul>
 
@@ -77,6 +134,61 @@
                 <span data-feather="file-text"></span>
                 Year-end sale
               </a>
+            </li>
+          </ul>
+
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Gestion des commissariats</span>
+            <a class="d-flex align-items-center text-muted" href="#">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <%= link_to 'Liste des commissariats', commissariats_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Ajouter commissariatville', new_commissariat_path, class: "nav-link" %>
+            </li>
+          </ul>
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Alertes & notifications</span>
+            <a class="d-flex align-items-center text-muted" href="#">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <%= link_to 'Liste des alertes', alertes_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Ajouter une alerte', new_alerte_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Alerte en cours', '#', class: "nav-link" %>
+            </li>
+          </ul>
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Configurations</span>
+            <a class="d-flex align-items-center text-muted" href="#">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <%= link_to 'Gestion des statuts', statuses_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Gestion des villes', villes_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Gestion des infranctions', infractions_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Securité', '#', class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Droits & authorisations', '#', class: "nav-link" %>
             </li>
           </ul>
         </div>

@@ -73,10 +73,49 @@ class ConvocationsController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf do
-        pdf = PrintPdf.new(@data)
-        #pdf.text "Convocation \##{@code}"
+        pdf = Prawn::Document.new
+        pdf.text "RECU DE PAIEMENT DE L'AMENDE FORFAITAIRE \n"
+        pdf.text "Nom et prénom diu contrevenant : #{@data.name} #{@data.prenom}"
+        pdf.text "Nature et classe de la contravention : #{@data}"
+        pdf.text "Proces verbal N° : #{@data}"
+        pdf.text "Montant de l'amende forfaitaire : #{@data}"
+        pdf.text "Date de versement : #{Time.now}"
         send_data pdf.render, filename: "ConvocationTest.pdf", type: 'application/pdf', disposition: 'inline'
       end
+    end
+  end
+
+  #historique des convocations suivant le numero de CNI
+  def historiqueCni
+    cni = params[:cni]
+    query = Convocation.where(cni: cni)
+    if query.nil?
+      redirect_back(fallback_location: root_path)
+    else
+      @data = query
+    end
+  end
+
+
+  #historique des convocation suivant le numero de téléphone
+  def historiquePhone
+    phone = params[:phone]
+    query = Convocation.where(phone: phone)
+    if query.nil?
+      redirect_back(fallback_location: root_path)
+    else
+      @data = query
+    end
+  end
+
+  #historique suivant l'immatriculation du vehicule
+  def historiqueImmatriculation
+    imma = params[:immatriculation]
+    query = Convocation.where(immatriculation: imma)
+    if query.nil?
+      redirect_back(fallback_location: root_path)
+    else
+      @data = query
     end
   end
 

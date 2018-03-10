@@ -22,11 +22,13 @@
       <% @convocations.each do |convocation| %>
         <tr>
           <td><%= convocation.created_at.strftime('%x') %></td>
-          <td><%= convocation.cni %></td>
-          <td><%= convocation.phone %></td>
+          <td>
+            <%= link_to convocation.cni, "convocations/r/h/historiqueCni/#{convocation.cni}", title: "historique suivant #{convocation.cni}" %>
+          </td>
+          <td><%= link_to convocation.phone, "convocations/r/h/historiquePhone/#{convocation.phone}", title: "historiuque suivant #{convocation.phone}" %></td>
           <td><%= convocation.name %></td>
           <td><%= convocation.prenom %></td>
-          <td><%= convocation.immatriculation %></td>
+          <td><%= link_to convocation.immatriculation, "convocations/r/h/historiqueImmatriculation/#{convocation.immatriculation}", title: "Historique suivant #{convocation.immatriculation}"  %></td>
           <td><%= convocation.motif %></td>
           <td>
             <% if convocation.status.nil? %>

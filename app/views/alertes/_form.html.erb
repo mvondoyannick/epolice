@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@alerte) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :type, prompt: "Selectionner un type" %>
+    <%= f.input :titre %>
+    <%= f.input :description, as: :text, placeholder: "Decrivez l'alerte ici" %>
+    <%= f.input :date, as: :date, html5: true %>
+    <%= f.association :ville, prompt: "Selectionner une ville" %>
+    <%= f.association :agent, prompt: "Selectionner un agent" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, 'Creer une alerte' %>
+  </div>
+<% end %>

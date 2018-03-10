@@ -1,4 +1,6 @@
 class Api::ConvocationsController < ApplicationController
+  require 'net/http'
+  require 'uri'
 
   #authentification d'un agent sur la plateforme
   def authUser
@@ -78,6 +80,12 @@ class Api::ConvocationsController < ApplicationController
         message: :created,
         data: @result
       }
+      uri = URI.parse("http://textbelt.com/text")
+      Net::HTTP.post_form(uri, {
+          :phone => '+237691451189',
+          :message => 'Hello world',
+          :key => 'e0cc5680081956c7d206955ddc96ae9f58ae53044H9HtTWAkm6ApR6MV285mFTT4',
+      })
     else
       render json: {
         status: :unprocessable_entity,
