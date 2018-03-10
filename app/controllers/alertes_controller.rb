@@ -21,6 +21,16 @@ class AlertesController < ApplicationController
   def edit
   end
 
+  #Affiche les alertes encors
+  def currentAlerte
+    query = Alerte.where(status: "current")
+    if query.nil?
+      redirect_back(fallback_location: root_path)
+    else
+      @query = query
+    end
+  end
+
   # POST /alertes
   # POST /alertes.json
   def create
@@ -69,6 +79,6 @@ class AlertesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alerte_params
-      params.require(:alerte).permit(:titre, :description, :date, :ville_id, :type_id, :agent_id)
+      params.require(:alerte).permit(:titre, :description, :date, :ville_id, :type_id, :agent_id, :action, :lieu, :status)
     end
 end

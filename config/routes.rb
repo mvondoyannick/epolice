@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'convocations/r/h/historiqueCni/:cni', to: 'convocations#historiqueCni'
   get 'convocations/r/h/historiquePhone/:phone', to: 'convocations#historiquePhone'
   get 'convocations/r/h/historiqueImmatriculation/:imm', to: 'convocations#historiqueImmatriculation'
+  get 'convocations/r/a/alerteReq/:titre/:description/:date/:ville_id/:type_id/:agent_id', to: 'convocations#alerteReq'
   namespace :api, defaults: {format: :json} do
     get 'convocations/create/:cni/:phone/:immatriculation/:motif/:pieceretenue/:agent', to: 'convocations#conv'
     #connexion d'un utilisateur, return matricule

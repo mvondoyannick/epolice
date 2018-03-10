@@ -8,7 +8,10 @@
     <%= f.input :description, as: :text, placeholder: "Decrivez l'alerte ici" %>
     <%= f.input :date, as: :date, html5: true %>
     <%= f.association :ville, prompt: "Selectionner une ville" %>
+    <%= f.input :lieu, label: "Decrire le lieu", as: :text %>
+    <%= f.input :action, label: "Action opérée pour la resolution de l'alerte", placeholder: "Qu'avez vous fait pour solutionner cette alert?", as: :text %>
     <%= f.association :agent, prompt: "Selectionner un agent" %>
+    <%= f.input :status, label: "Statut de cette alerte" %>
   </div>
 
   <div class="form-actions">

@@ -62,6 +62,31 @@ class Api::ConvocationsController < ApplicationController
     end
   end
 
+  #gestion des alertes
+  def alerteReq
+    titre = params[:titre]
+    description = params[:description]
+    date = params[:date]
+    ville = params[:ville_id]
+    type = params[:type_id]
+    agent = params[:agent_id]
+    status = "unresolve"
+
+    #creation d'une alerte
+    query = Alerte.new(titre: titre, description: description, date: date, ville_id: ville, type_id: type, agent_id: agent, status: status)
+    if query.save
+      render json: {
+          status: :created,
+          message: query
+      }
+    else
+      render json: {
+          status: :not_created,
+          message: "une erreur est survenue"
+      }
+    end
+  end
+
   # GET /convocations/new
   def conv
     cni = params[:cni]

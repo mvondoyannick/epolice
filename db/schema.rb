@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180310170125) do
+ActiveRecord::Schema.define(version: 20180310205850) do
 
   create_table "affectations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "type_id"
@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 20180310170125) do
     t.bigint "type_id"
     t.bigint "agent_id"
     t.string "status"
+    t.string "lieu"
+    t.string "action"
     t.index ["agent_id"], name: "index_alertes_on_agent_id"
     t.index ["type_id"], name: "index_alertes_on_type_id"
     t.index ["ville_id"], name: "index_alertes_on_ville_id"
