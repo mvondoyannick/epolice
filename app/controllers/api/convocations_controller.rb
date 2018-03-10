@@ -23,6 +23,16 @@ class Api::ConvocationsController < ApplicationController
     end
   end
 
+
+  #permet de ne plus utiliser une code a pluseieurs reprise
+  def protectCode
+    @code = params[:code]
+    data = Convocation.where(code: @code)
+    #mise a jour effective
+    #data.used = "utilise"
+    data.update(used: "utilise")
+  end
+
   #permet de verifier une contravention
   def verifyContravention
     code = params[:code]
@@ -32,6 +42,11 @@ class Api::ConvocationsController < ApplicationController
         status: :not_found,
         message: "téléphone inconnu"
       }
+      if @p.used == "utilise"
+        render json: {
+            status: :used_code,
+            message: "Code deja utilisé"
+        }
     else
       render json: {
         status: :found,
