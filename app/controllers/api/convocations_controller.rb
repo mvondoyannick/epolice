@@ -36,7 +36,7 @@ class Api::ConvocationsController < ApplicationController
       if @p.used == "utilise"
           render json: {
               status: :code_used,
-              message: "Code deja utilisé"
+              message: "Ce Code deja utilisé"
           }
       else
         #mise ajour de l'information avant affichage
