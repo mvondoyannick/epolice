@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180309220849) do
+ActiveRecord::Schema.define(version: 20180310080236) do
 
   create_table "agents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20180309220849) do
     t.string "an"
     t.string "code"
     t.bigint "infraction_id"
+    t.string "used"
     t.index ["agent_id"], name: "index_convocations_on_agent_id"
     t.index ["infraction_id"], name: "index_convocations_on_infraction_id"
   end
