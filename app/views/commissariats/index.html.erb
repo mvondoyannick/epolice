@@ -1,13 +1,15 @@
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 <p id="notice"><%= notice %></p>
 
 <h1>Commissariats</h1>
 
-<table>
+<table class="table" id="table">
   <thead>
     <tr>
       <th>Name</th>
       <th>Phone</th>
       <th>Ville</th>
+      <th>Quartier</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +19,8 @@
       <tr>
         <td><%= commissariat.name %></td>
         <td><%= commissariat.phone %></td>
-        <td><%= commissariat.ville %></td>
+        <td><%= commissariat.ville.name %></td>
+        <td><%= commissariat.quartier %></td>
         <td><%= link_to 'Show', commissariat %></td>
         <td><%= link_to 'Edit', edit_commissariat_path(commissariat) %></td>
         <td><%= link_to 'Destroy', commissariat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,3 +32,4 @@
 <br>
 
 <%= link_to 'New Commissariat', new_commissariat_path %>
+</main>

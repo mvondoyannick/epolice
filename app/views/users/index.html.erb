@@ -1,16 +1,17 @@
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 <p id="notice"><%= notice %></p>
 
 <h1>Users</h1>
 
-<table>
+<table class="table" id="table">
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Nom</th>
       <th>Prenom</th>
       <th>Sexe</th>
-      <th>Cartegrise</th>
+      <th>Carte grise</th>
       <th>Immatriculation</th>
-      <th>Phone</th>
+      <th>Téléphone</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -35,3 +36,4 @@
 <br>
 
 <%= link_to 'New User', new_user_path %>
+</main>

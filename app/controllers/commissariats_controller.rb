@@ -69,6 +69,6 @@ class CommissariatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def commissariat_params
-      params.require(:commissariat).permit(:name, :phone, :ville_id)
+      params.require(:commissariat).permit(:name, :phone, :ville_id, :quartier)
     end
 end
