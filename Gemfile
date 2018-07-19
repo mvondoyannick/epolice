@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.5'
+gem 'rails', '~> 5.2'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 # Use Puma as the app server
@@ -37,9 +37,18 @@ gem 'bootstrap', '~> 4.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 #for xls generation file
 #gem 'axlsx_rails'
-# PDF generate
+# using PDF generate with prawn
 gem 'prawn', '~> 2.2', '>= 2.2.2'
 gem 'prawn-table'
+#using font awesome icons
+#gem 'material_icons'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+#Using gmap for rails
+gem 'gmaps4rails'
+#gestion des authentification et des connexion
+gem 'devise'
+#using underscore js
+gem 'underscore-rails', '~> 1.8', '>= 1.8.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

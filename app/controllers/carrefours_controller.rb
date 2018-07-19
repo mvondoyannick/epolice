@@ -7,6 +7,10 @@ class CarrefoursController < ApplicationController
     @carrefours = Carrefour.all
   end
 
+  def cartographie
+    @title = "Cartographie des carrefours"
+  end
+
   # GET /carrefours/1
   # GET /carrefours/1.json
   def show

@@ -119,4 +119,9 @@ class Api::ConvocationsController < ApplicationController
       }.to_json    
     end
   end
+
+  #GET ALERTS 
+  def new_alerte
+    
+  end
 end

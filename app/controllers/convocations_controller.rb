@@ -41,6 +41,7 @@ class ConvocationsController < ApplicationController
 
   # GET /convocations/new
   def new
+    @code = SecureRandom.hex(10).upcase
     @convocation = Convocation.new
     @description = "Creer une nouvelle convocation"
   end
@@ -175,6 +176,6 @@ class ConvocationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def convocation_params
-      params.require(:convocation).permit(:cni, :phone, :name, :prenom, :immatriculation, :residence, :emploi, :motif, :observation, :pieceretenue, :ville, :quartier, :rue, :jour, :mois, :an, :sexe, :status, :agent_id, :code)
+      params.require(:convocation).permit(:cni, :phone, :name, :prenom, :immatriculation, :residence, :emploi, :motif, :observation, :pieceretenue, :ville, :quartier, :rue, :an, :sexe, :status, :agent_id, :code)
     end
 end

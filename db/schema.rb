@@ -10,9 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180310205850) do
+ActiveRecord::Schema.define(version: 2018_05_11_134446) do
 
-  create_table "affectations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "affectations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -24,7 +45,7 @@ ActiveRecord::Schema.define(version: 20180310205850) do
     t.index ["type_id"], name: "index_affectations_on_type_id"
   end
 
-  create_table "agents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "agents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "prenom"
     t.string "phone"
@@ -36,7 +57,7 @@ ActiveRecord::Schema.define(version: 20180310205850) do
     t.index ["commissariat_id"], name: "index_agents_on_commissariat_id"
   end
 
-  create_table "alertes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "alertes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "titre"
     t.string "description"
     t.string "date"
@@ -53,7 +74,7 @@ ActiveRecord::Schema.define(version: 20180310205850) do
     t.index ["ville_id"], name: "index_alertes_on_ville_id"
   end
 
-  create_table "carrefours", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "carrefours", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "quartier"
     t.string "status"
@@ -63,7 +84,7 @@ ActiveRecord::Schema.define(version: 20180310205850) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "commissariats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "commissariats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "phone"
     t.bigint "ville_id"
@@ -73,7 +94,7 @@ ActiveRecord::Schema.define(version: 20180310205850) do
     t.index ["ville_id"], name: "index_commissariats_on_ville_id"
   end
 
-  create_table "contravetions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "contravetions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "token"
     t.string "motif"
     t.string "status"
@@ -86,7 +107,7 @@ ActiveRecord::Schema.define(version: 20180310205850) do
     t.index ["User_id"], name: "index_contravetions_on_User_id"
   end
 
-  create_table "convocations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "convocations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "cni"
     t.string "phone"
     t.string "name"
@@ -102,12 +123,10 @@ ActiveRecord::Schema.define(version: 20180310205850) do
     t.string "ville"
     t.string "quartier"
     t.string "rue"
-    t.string "jour"
     t.string "sexe"
     t.bigint "agent_id"
     t.string "status"
     t.string "token"
-    t.string "mois"
     t.string "an"
     t.string "code"
     t.bigint "infraction_id"
@@ -116,19 +135,19 @@ ActiveRecord::Schema.define(version: 20180310205850) do
     t.index ["infraction_id"], name: "index_convocations_on_infraction_id"
   end
 
-  create_table "convocations_infractions", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "convocations_infractions", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "convocation_id", null: false
     t.bigint "infraction_id", null: false
   end
 
-  create_table "infractions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "infractions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "motif"
     t.string "montant"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "paiements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "paiements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "montant"
     t.bigint "convocation_id"
     t.datetime "created_at", null: false
@@ -136,21 +155,21 @@ ActiveRecord::Schema.define(version: 20180310205850) do
     t.index ["convocation_id"], name: "index_paiements_on_convocation_id"
   end
 
-  create_table "statuses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "statuses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "prenom"
     t.string "sexe"
@@ -161,7 +180,7 @@ ActiveRecord::Schema.define(version: 20180310205850) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "villes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "villes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "long"
     t.string "lat"
@@ -169,17 +188,17 @@ ActiveRecord::Schema.define(version: 20180310205850) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "affectations", "agents"
-  add_foreign_key "affectations", "carrefours"
-  add_foreign_key "affectations", "types"
-  add_foreign_key "agents", "commissariats"
-  add_foreign_key "alertes", "agents"
-  add_foreign_key "alertes", "types"
-  add_foreign_key "alertes", "villes"
-  add_foreign_key "commissariats", "villes"
-  add_foreign_key "contravetions", "agents", column: "Agent_id"
-  add_foreign_key "contravetions", "users", column: "User_id"
-  add_foreign_key "convocations", "agents"
-  add_foreign_key "convocations", "infractions"
-  add_foreign_key "paiements", "convocations"
+  add_foreign_key "affectations", "agents", name: "affectations_ibfk_1"
+  add_foreign_key "affectations", "carrefours", name: "affectations_ibfk_2"
+  add_foreign_key "affectations", "types", name: "affectations_ibfk_3"
+  add_foreign_key "agents", "commissariats", name: "agents_ibfk_1"
+  add_foreign_key "alertes", "agents", name: "alertes_ibfk_3"
+  add_foreign_key "alertes", "types", name: "alertes_ibfk_2"
+  add_foreign_key "alertes", "villes", name: "alertes_ibfk_1"
+  add_foreign_key "commissariats", "villes", name: "commissariats_ibfk_1"
+  add_foreign_key "contravetions", "agents", column: "Agent_id", name: "contravetions_ibfk_2"
+  add_foreign_key "contravetions", "users", column: "User_id", name: "contravetions_ibfk_1"
+  add_foreign_key "convocations", "agents", name: "convocations_ibfk_2"
+  add_foreign_key "convocations", "infractions", name: "convocations_ibfk_1"
+  add_foreign_key "paiements", "convocations", name: "paiements_ibfk_1"
 end
