@@ -121,7 +121,14 @@ class Api::ConvocationsController < ApplicationController
   end
 
   #GET ALERTS 
+  #permet de creer une nouvelle alerte
   def new_alerte
+    quartier = params[:quartier]
+    coordonnee = params[:coordonnees]
+    description = params[:description]
+    photo = params[:photo]
+    type = params[:type]
+    agent = params[:matricule]
     
   end
 end

@@ -1,7 +1,14 @@
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-<h1>New Alerte</h1>
+<% @page_title = "Nouvelle alerte" %>
+<div class="columns">
+    <div class="column">
+    </div>
+    <div class="column">
+        <h1>New Alerte</h1>
 
-<%= render 'form', alerte: @alerte %>
+        <%= render 'form', alerte: @alerte %>
 
-<%= link_to 'Back', alertes_path %>
-</main>
+        <%= link_to 'Back', alertes_path %>
+    </div>
+    <div class="column">
+    </div>
+  </div>

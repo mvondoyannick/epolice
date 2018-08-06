@@ -45,17 +45,12 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (9.0.0)
-    autoprefixer-rails (9.0.0)
-      execjs
     bcrypt (3.1.12)
     bcrypt (3.1.12-x86-mingw32)
     bindex (0.5.0)
-    bootstrap (4.1.1)
-      autoprefixer-rails (>= 6.0.3)
-      popper_js (>= 1.12.9, < 2)
-      sass (>= 3.5.2)
     builder (3.2.3)
     byebug (10.0.2)
+    cancancan (2.2.0)
     capybara (2.18.0)
       addressable
       mini_mime (>= 0.1.3)
@@ -120,7 +115,6 @@ GEM
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
     pdf-core (0.7.0)
-    popper_js (1.12.9)
     prawn (2.2.2)
       pdf-core (~> 0.7.0)
       ttfunk (~> 1.5)
@@ -219,8 +213,9 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  bootstrap (~> 4.0)
+  bcrypt (~> 3.1.7)
   byebug
+  cancancan (~> 2.0)
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise

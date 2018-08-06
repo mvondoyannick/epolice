@@ -5,206 +5,119 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'bootstrap-grid', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'bootstrap-reboot', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'bulma.min', media: 'all', 'data-turbolinks-track': 'reload'  %>
+    <%= javascript_include_tag 'https://use.fontawesome.com/releases/v5.1.0/js/all.js', media: 'all' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'bootstrap', 'data-turbolinks-track': 'reload' %>
-
-    <script src="//maps.google.com/maps/api/js?key=[your API key]"></script>
-    <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
-    <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
+    <%= javascript_include_tag "view-source:https://dansup.github.io/bulma-templates/js/bulma.js", media: 'all' %>
+    
   </head>
 
   <body>
+    <div class="container">
+      <section class="hero is-primary">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+          <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+            <div class="container">
+              <div class="navbar-brand">
+                <%= link_to  "E-POLICE", root_path, class: "navbar-item" %>
+                <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+              <div id="navbarMenuHeroA" class="navbar-menu">
+                <div class="navbar-end">
+                  <%= link_to  "Accueil", root_path, class: "navbar-item is-active" %>
+                  <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                      Docs
+                    </a>
 
-  <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">POP CIRCULATION</a>
-    <input class="form-control form-control-dark w-100" type="text" placeholder="Rechercher" aria-label="Search">
-    <ul class="navbar-nav px-3">
-      <li class="nav-item text-nowrap">
-        <a class="nav-link" href="#">Se déconnecter</a>
-      </li>
-    </ul>
-  </nav>
+                    <div class="navbar-dropdown" style="background-color: #000;">
+                      <a class="navbar-item">
+                        Overview
+                      </a>
+                      <a class="navbar-item">
+                        Elements
+                      </a>
+                      <a class="navbar-item">
+                        Components
+                      </a>
+                      <hr class="navbar-divider">
+                      <div class="navbar-item">
+                        Version 0.7.1
+                      </div>
+                    </div>
+                  </div>
+                  <a class="navbar-item">
+                    Message
+                  </a>
+                  <a class="navbar-item">
+                    Configuration
+                  </a>
+                  <div class="navbar-item has-dropdown is-hoverable">
+                    <%= link_to  session[:name], '#', class: "navbar-item", style: "margin-right: 20px;" %>
 
-  <div class="container-fluid">
-    <div class="row">
-      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-        <div class="sidebar-sticky">
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Gestion convocations</span>
-            <a class="d-flex align-items-center text-muted" href="#">
-              <span data-feather="plus-circle"></span>
-            </a>
-          </h6>
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">
-                <span data-feather="home"></span>
-                Administration <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-            <%= link_to "Liste contraventions", convocations_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Ajouter une contravention', new_convocation_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Rapports & stat.', '#', class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Utilisateurs', '#', class: "nav-link" %>
-            </li>
-          </ul>
-
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Gestion carrefours</span>
-            <a class="d-flex align-items-center text-muted" href="#">
-              <span data-feather="plus-circle"></span>
-            </a>
-          </h6>
-          <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-              <%= link_to 'Liste des carrefours', carrefours_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Cartographie des carrefours', carrefours_cartograhie_all_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Cafferour non encombrés', '#', class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Carrefours encombrés', '#', class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Ajouter carrefours', new_carrefour_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Affecter agent à un carrefour', affectations_path, class: "nav-link" %>
-            </li>
-          </ul>
-
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Gestion des agents</span>
-            <a class="d-flex align-items-center text-muted" href="#">
-              <span data-feather="plus-circle"></span>
-            </a>
-          </h6>
-          <ul class="nav flex-column mb-2">
-            <li class="nav-item">
-              <%= link_to 'Liste des agents', agents_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Ajouter un agent', new_agent_path, class: "nav-link" %>
-            </li>
-          </ul>
-
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Gestion des villes</span>
-            <a class="d-flex align-items-center text-muted" href="#">
-              <span data-feather="plus-circle"></span>
-            </a>
-          </h6>
-          <ul class="nav flex-column mb-2">
-            <li class="nav-item">
-              <%= link_to 'Liste des villes', villes_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Ajouter ville', new_ville_path, class: "nav-link" %>
-            </li>
-          </ul>
-
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Saved reports</span>
-            <a class="d-flex align-items-center text-muted" href="#">
-              <span data-feather="plus-circle"></span>
-            </a>
-          </h6>
-          <ul class="nav flex-column mb-2">
-            <li class="nav-item">
-              <%= link_to 'Villes', villes_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Commissariats', commissariats_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Groupements regionaux', '#', class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file-text"></span>
-                Year-end sale
-              </a>
-            </li>
-          </ul>
-
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Gestion des commissariats</span>
-            <a class="d-flex align-items-center text-muted" href="#">
-              <span data-feather="plus-circle"></span>
-            </a>
-          </h6>
-          <ul class="nav flex-column mb-2">
-            <li class="nav-item">
-              <%= link_to 'Liste des commissariats', commissariats_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Ajouter commissariatville', new_commissariat_path, class: "nav-link" %>
-            </li>
-          </ul>
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Alertes & notifications</span>
-            <a class="d-flex align-items-center text-muted" href="#">
-              <span data-feather="plus-circle"></span>
-            </a>
-          </h6>
-          <ul class="nav flex-column mb-2">
-            <li class="nav-item">
-              <%= link_to 'Liste des alertes', alertes_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Ajouter une alerte', new_alerte_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Alerte en cours', '#', class: "nav-link" %>
-            </li>
-          </ul>
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Configurations</span>
-            <a class="d-flex align-items-center text-muted" href="#">
-              <span data-feather="plus-circle"></span>
-            </a>
-          </h6>
-          <ul class="nav flex-column mb-2">
-            <li class="nav-item">
-              <%= link_to 'Gestion des statuts', statuses_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Gestion des villes', villes_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Gestion des infranctions', infractions_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Securité', '#', class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Droits & authorisations', '#', class: "nav-link" %>
-            </li>
-          </ul>
+                    <div class="navbar-dropdown" style="background-color: #000;">
+                      <a class="navbar-item">
+                        Compte
+                      </a>
+                      <a class="navbar-item">
+                        Elements
+                      </a>
+                      <%= link_to  'Déconnexion', access_logout_path, class: "navbar-item", style: "margin-right: 20px;" %>
+                      <hr class="navbar-divider">
+                      <div class="navbar-item">
+                        Version 0.7.1
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
         </div>
-      </nav>
 
-    <%= yield %>
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <h1 class="title">
+              <%= @page_title %>
+            </h1>
+            <h2 class="subtitle">
+              Subtitle
+            </h2>
+          </div>
+        </div>
 
+        <!-- Hero footer: will stick at the bottom -->
+        <div class="hero-foot" style="margin-bottom: 20px;">
+          <nav class="tabs">
+            <div class="container">
+              <ul>
+                <li class="is-active"><a>Overview</a></li>
+                <li><%= link_to  "Agents", agents_path %></li>
+                <li><%= link_to  "Alertes", alertes_path %></li>
+                <li><%= link_to  "Commissariat", commissariats_path %></li>
+                <li><%= link_to  "Carrefours", carrefours_path %></li>
+                <li><a>Layout</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <%= yield %>
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          </p>
+        </div>
+      </footer>
     </div>
-  </div>
-
   </body>
 </html>

@@ -1,0 +1,101 @@
+<div class="columns">
+  <div class="column is-6">
+    <div class="card events-card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Liste d'alertes
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </a>
+      </header>
+      <div class="card-table">
+        <div class="content">
+          <table class="table is-fullwidth is-striped">
+            <tbody>
+              <% @alerte_tmp = Alerte.all.limit(10) %>
+              <% if @alerte_tmp.nil? %>
+                <tr>
+                  <td width="5%"><i class="fa fa-bell-o"></i></td>
+                  <td>Aucunes alertes publiées pour le moment.</td>
+                </tr>
+              <% else %>
+                <% @alerte_tmp.each do |alerte| %>
+                  <tr>
+                    <td width="5%"><i class="fa fa-bell-o"></i></td>
+                    <td>
+                      <%= alerte.created_at.strftime("%B %d, %Y") %>
+                    </td>
+                    <td>
+                      <%= alerte.titre %>
+                    </td>
+                    <td>
+                      <%= link_to  "Détail", "#", class: "button is-small is-primary" %>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <a href="#" class="card-footer-item">Voir tout</a>
+      </footer>
+    </div>
+  </div>
+  <div class="column is-6">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Inventory Search
+          </p>
+          <a href="#" class="card-header-icon" aria-label="more options">
+            <span class="icon">
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </a>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-large" type="text" placeholder="">
+              <span class="icon is-medium is-left">
+                <i class="fa fa-search"></i>
+              </span>
+              <span class="icon is-medium is-right">
+                <i class="fa fa-check"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Rechercher un utilisateur
+          </p>
+          <a href="#" class="card-header-icon" aria-label="more options">
+            <span class="icon">
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </a>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-large" type="text" placeholder="">
+              <span class="icon is-medium is-left">
+                <i class="fa fa-search"></i>
+              </span>
+              <span class="icon is-medium is-right">
+                <i class="fa fa-check"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

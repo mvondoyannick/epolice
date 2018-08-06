@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
+  get 'access/index'
+  get 'access/login'
+  get 'access/logout'
+  get 'access/admin'
+  devise_for :users
+  get 'loggedin/home'
+  get 'loggedin/private'
   get 'welcome/index'
 
   get 'welcome/home'
+
+  #route generique
+  match ':controller(/:action/(:id))', via: [:get, :post]
 
   resources :carrefours
   resources :carrefours do
@@ -23,9 +33,23 @@ Rails.application.routes.draw do
   resources :users
   resources :agents
   #root 'convocations#index'
-  root 'welcome#home'
+  #root 'welcome#home'
+  root 'access#login'
   #pour la gestion des carrefours
   get 'carrefours/cartograhie/all', to: 'carrefours#cartographie'
+
+  #gestion de la de connexion et de son meniu
+  #gestion de la documentation
+  get 'access/request_docs', to: 'access#request_docs'
+
+  #gestion de la demande d'un compte
+  get 'access/request_account', to: 'access#request_account'
+
+  #gestion de about
+  get 'access/about', to: 'access#about'
+
+  #concernant les email
+  get 'access/email', to: 'access#email'
 
   #gestion des convocation
   get 'convocations/all/not_paid', to: 'convocations#not_paid'
@@ -46,8 +70,8 @@ Rails.application.routes.draw do
     get 'convocations/authUser/:phone/:matricule', to: 'convocations#authUser'
     get 'convocations/verify/:code', to: 'convocations#verifyContravention'
     get 'convocations/protectCode/:code', to: 'convocations#protectCode'
-    # sending alert and return status
-    get 'alert/new/:matricule/:type/:lat/:lon/:date/:photo/:description/:ville', to: 'alert#new_alerte'
+    #----------------------sending alert and return status----------------------------------
+    get 'alert/new/:matricule/:type/:coordonnees/:photo/:description/:ville', to: 'alert#new_alerte'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

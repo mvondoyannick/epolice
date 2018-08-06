@@ -12,9 +12,9 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
-Rails.application.config.assets.precompile += %w( bootstrap.css )
-Rails.application.config.assets.precompile += %w( dashboard.css )
-Rails.application.config.assets.precompile += %w( bootstrap.js )
-Rails.application.config.assets.precompile += %w( bootstrap-grid.css )
-Rails.application.config.assets.precompile += %w( bootstrap-reboot.css )
-
+Rails.application.config.assets.precompile += %w( bulma.min.css )
+Rails.application.config.assets.precompile += %w( bulma.css.map )
+Rails.application.config.assets.precompile += %w( admin.css )
+Rails.application.config.assets.precompile += %w( bulma.js )
+Rails.application.config.assets.precompile += %w( inbox.css )
+Rails.application.config.assets.precompile += %w( email.js )

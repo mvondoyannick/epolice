@@ -1,0 +1,2191 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>animate.css - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../../";
+  var index_rel_prefix = "../../../../";
+</script>
+
+<script src="../../../../js/jquery.js"></script>
+<script src="../../../../js/darkfish.js"></script>
+
+<link href="../../../../css/fonts.css" rel="stylesheet">
+<link href="../../../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../../../README_md.html">README</a>
+  
+    <li><a href="../../../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="../../../../app/assets/javascripts/access_coffee.html">access.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/affectations_coffee.html">affectations.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/agents_coffee.html">agents.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/alertes_coffee.html">alertes.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../../../app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="../../../../app/assets/javascripts/carrefours_coffee.html">carrefours.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/commissariats_coffee.html">commissariats.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/convocations_coffee.html">convocations.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/infractions_coffee.html">infractions.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/statuses_coffee.html">statuses.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/types_coffee.html">types.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/users_coffee.html">users.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/villes_coffee.html">villes.coffee</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/_application_scss.html">_application.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/access_scss.html">access.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/affectations_scss.html">affectations.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/agents_scss.html">agents.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/alertes_scss.html">alertes.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/application_css.html">application.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/bulma_css.html">bulma.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/bulma_css_map.html">bulma.css.map</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/bulma_min_css.html">bulma.min.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/carrefours_scss.html">carrefours.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/commissariats_scss.html">commissariats.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/contravetions_scss.html">contravetions.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/convocations_scss.html">convocations.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/animate_css.html">animate.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/bootstrap-select_css.html">bootstrap-select.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/bootstrap_css.html">bootstrap.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/bootstrap_css_map.html">bootstrap.css.map</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/bootstrap_min_css_map.html">bootstrap.min.css.map</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/cs-skin-elastic_css.html">cs-skin-elastic.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/flag-icon_min_css.html">flag-icon.min.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/font-awesome_min_css.html">font-awesome.min.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/lib/chosen/chosen_css.html">chosen.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/lib/chosen/chosen_min_css.html">chosen.min.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/lib/datatable/buttons_bootstrap_min_css.html">buttons.bootstrap.min.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/lib/datatable/buttons_dataTables_min_css.html">buttons.dataTables.min.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/lib/datatable/dataTables_bootstrap_min_css.html">dataTables.bootstrap.min.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/lib/vector-map/jqvmap_min_css.html">jqvmap.min.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/normalize_css.html">normalize.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/style_css.html">style.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/style_css_map.html">style.css.map</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/themify-icons_css.html">themify-icons.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/dashboard/variables_css.html">variables.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/infractions_scss.html">infractions.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/statuses_scss.html">statuses.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/types_scss.html">types.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/users_scss.html">users.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/villes_scss.html">villes.scss</a>
+  
+    <li><a href="../../../../app/views/affectations/_affectation_json_jbuilder.html">_affectation.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/affectations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/affectations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/agents/_agent_json_jbuilder.html">_agent.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/agents/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/agents/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/alertes/_alerte_json_jbuilder.html">_alerte.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/alertes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/alertes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/carrefours/_carrefour_json_jbuilder.html">_carrefour.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/carrefours/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/carrefours/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/commissariats/_commissariat_json_jbuilder.html">_commissariat.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/commissariats/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/commissariats/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/contravetions/_contravetion_json_jbuilder.html">_contravetion.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/contravetions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/contravetions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/convocations/_convocation_json_jbuilder.html">_convocation.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/convocations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/convocations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/infractions/_infraction_json_jbuilder.html">_infraction.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/infractions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/infractions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/statuses/_status_json_jbuilder.html">_status.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/statuses/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/statuses/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/types/_type_json_jbuilder.html">_type.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/types/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/types/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/users/_user_json_jbuilder.html">_user.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/users/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/users/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/villes/_ville_json_jbuilder.html">_ville.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/villes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/villes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../config_ru.html">config.ru</a>
+  
+    <li><a href="../../../../log/development_log.html">development.log</a>
+  
+    <li><a href="../../../../log/production_log.html">production.log</a>
+  
+    <li><a href="../../../../package_json.html">package.json</a>
+  
+    <li><a href="../../../../public/404_html.html">404.html</a>
+  
+    <li><a href="../../../../public/422_html.html">422.html</a>
+  
+    <li><a href="../../../../public/500_html.html">500.html</a>
+  
+    <li><a href="../../../../public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="../../../../public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="../../../../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../../../../public/robots_txt.html">robots</a>
+  
+    <li><a href="../../../../tmp/pids/server_pid.html">server.pid</a>
+  
+    <li><a href="../../../../tmp/restart_txt.html">restart</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page app/assets/stylesheets/dashboard/animate.css">
+
+<p>@charset “UTF-8”;</p>
+
+<pre>!
+ animate.css -http://daneden.me/animate
+ Version - 3.5.2
+ Licensed under the MIT license - http://opensource.org/licenses/MIT
+
+ Copyright (c) 2017 Daniel Eden</pre>
+
+<p>.animated {</p>
+
+<pre>animation-duration: 1s;
+animation-fill-mode: both;</pre>
+
+<p>}</p>
+
+<p>.animated.infinite {</p>
+
+<pre>animation-iteration-count: infinite;</pre>
+
+<p>}</p>
+
+<p>.animated.hinge {</p>
+
+<pre>animation-duration: 2s;</pre>
+
+<p>}</p>
+
+<p>.animated.flipOutX, .animated.flipOutY, .animated.bounceIn,
+.animated.bounceOut {</p>
+
+<pre>animation-duration: .75s;</pre>
+
+<p>}</p>
+
+<p>@keyframes bounce {</p>
+
+<pre>from, 20%, 53%, 80%, to {
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  transform: translate3d(0,0,0);
+}
+
+40%, 43% {
+  animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+  transform: translate3d(0, -30px, 0);
+}
+
+70% {
+  animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+  transform: translate3d(0, -15px, 0);
+}
+
+90% {
+  transform: translate3d(0,-4px,0);
+}</pre>
+
+<p>}</p>
+
+<p>.bounce {</p>
+
+<pre>animation-name: bounce;
+transform-origin: center bottom;</pre>
+
+<p>}</p>
+
+<p>@keyframes flash {</p>
+
+<pre>from, 50%, to {
+  opacity: 1;
+}
+
+25%, 75% {
+  opacity: 0;
+}</pre>
+
+<p>}</p>
+
+<p>.flash {</p>
+
+<pre>animation-name: flash;</pre>
+
+<p>}</p>
+
+<pre>originally authored by Nick Pettit - https://github.com/nickpettit/glide</pre>
+
+<p>@keyframes pulse {</p>
+
+<pre>from {
+  transform: scale3d(1, 1, 1);
+}
+
+50% {
+  transform: scale3d(1.05, 1.05, 1.05);
+}
+
+to {
+  transform: scale3d(1, 1, 1);
+}</pre>
+
+<p>}</p>
+
+<p>.pulse {</p>
+
+<pre>animation-name: pulse;</pre>
+
+<p>}</p>
+
+<p>@keyframes rubberBand {</p>
+
+<pre>from {
+  transform: scale3d(1, 1, 1);
+}
+
+30% {
+  transform: scale3d(1.25, 0.75, 1);
+}
+
+40% {
+  transform: scale3d(0.75, 1.25, 1);
+}
+
+50% {
+  transform: scale3d(1.15, 0.85, 1);
+}
+
+65% {
+  transform: scale3d(.95, 1.05, 1);
+}
+
+75% {
+  transform: scale3d(1.05, .95, 1);
+}
+
+to {
+  transform: scale3d(1, 1, 1);
+}</pre>
+
+<p>}</p>
+
+<p>.rubberBand {</p>
+
+<pre>animation-name: rubberBand;</pre>
+
+<p>}</p>
+
+<p>@keyframes shake {</p>
+
+<pre>from, to {
+  transform: translate3d(0, 0, 0);
+}
+
+10%, 30%, 50%, 70%, 90% {
+  transform: translate3d(-10px, 0, 0);
+}
+
+20%, 40%, 60%, 80% {
+  transform: translate3d(10px, 0, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.shake {</p>
+
+<pre>animation-name: shake;</pre>
+
+<p>}</p>
+
+<p>@keyframes headShake {</p>
+
+<pre>0% {
+  transform: translateX(0);
+}
+
+6.5% {
+  transform: translateX(-6px) rotateY(-9deg);
+}
+
+18.5% {
+  transform: translateX(5px) rotateY(7deg);
+}
+
+31.5% {
+  transform: translateX(-3px) rotateY(-5deg);
+}
+
+43.5% {
+  transform: translateX(2px) rotateY(3deg);
+}
+
+50% {
+  transform: translateX(0);
+}</pre>
+
+<p>}</p>
+
+<p>.headShake {</p>
+
+<pre>animation-timing-function: ease-in-out;
+animation-name: headShake;</pre>
+
+<p>}</p>
+
+<p>@keyframes swing {</p>
+
+<pre>20% {
+  transform: rotate3d(0, 0, 1, 15deg);
+}
+
+40% {
+  transform: rotate3d(0, 0, 1, -10deg);
+}
+
+60% {
+  transform: rotate3d(0, 0, 1, 5deg);
+}
+
+80% {
+  transform: rotate3d(0, 0, 1, -5deg);
+}
+
+to {
+  transform: rotate3d(0, 0, 1, 0deg);
+}</pre>
+
+<p>}</p>
+
+<p>.swing {</p>
+
+<pre>transform-origin: top center;
+animation-name: swing;</pre>
+
+<p>}</p>
+
+<p>@keyframes tada {</p>
+
+<pre>from {
+  transform: scale3d(1, 1, 1);
+}
+
+10%, 20% {
+  transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+}
+
+30%, 50%, 70%, 90% {
+  transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+}
+
+40%, 60%, 80% {
+  transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+}
+
+to {
+  transform: scale3d(1, 1, 1);
+}</pre>
+
+<p>}</p>
+
+<p>.tada {</p>
+
+<pre>animation-name: tada;</pre>
+
+<p>}</p>
+
+<p>/* originally authored by Nick Pettit - <a
+href="https://github.com/nickpettit/glide">github.com/nickpettit/glide</a>
+*/</p>
+
+<p>@keyframes wobble {</p>
+
+<pre>from {
+  transform: none;
+}
+
+15% {
+  transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+}
+
+30% {
+  transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+}
+
+45% {
+  transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+}
+
+60% {
+  transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+}
+
+75% {
+  transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+}
+
+to {
+  transform: none;
+}</pre>
+
+<p>}</p>
+
+<p>.wobble {</p>
+
+<pre>animation-name: wobble;</pre>
+
+<p>}</p>
+
+<p>@keyframes jello {</p>
+
+<pre>from, 11.1%, to {
+  transform: none;
+}
+
+22.2% {
+  transform: skewX(-12.5deg) skewY(-12.5deg);
+}
+
+33.3% {
+  transform: skewX(6.25deg) skewY(6.25deg);
+}
+
+44.4% {
+  transform: skewX(-3.125deg) skewY(-3.125deg);
+}
+
+55.5% {
+  transform: skewX(1.5625deg) skewY(1.5625deg);
+}
+
+66.6% {
+  transform: skewX(-0.78125deg) skewY(-0.78125deg);
+}
+
+77.7% {
+  transform: skewX(0.390625deg) skewY(0.390625deg);
+}
+
+88.8% {
+  transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+}</pre>
+
+<p>}</p>
+
+<p>.jello {</p>
+
+<pre>animation-name: jello;
+transform-origin: center;</pre>
+
+<p>}</p>
+
+<p>@keyframes bounceIn {</p>
+
+<pre>from, 20%, 40%, 60%, 80%, to {
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+0% {
+  opacity: 0;
+  transform: scale3d(.3, .3, .3);
+}
+
+20% {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+40% {
+  transform: scale3d(.9, .9, .9);
+}
+
+60% {
+  opacity: 1;
+  transform: scale3d(1.03, 1.03, 1.03);
+}
+
+80% {
+  transform: scale3d(.97, .97, .97);
+}
+
+to {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+}</pre>
+
+<p>}</p>
+
+<p>.bounceIn {</p>
+
+<pre>animation-name: bounceIn;</pre>
+
+<p>}</p>
+
+<p>@keyframes bounceInDown {</p>
+
+<pre>from, 60%, 75%, 90%, to {
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+0% {
+  opacity: 0;
+  transform: translate3d(0, -3000px, 0);
+}
+
+60% {
+  opacity: 1;
+  transform: translate3d(0, 25px, 0);
+}
+
+75% {
+  transform: translate3d(0, -10px, 0);
+}
+
+90% {
+  transform: translate3d(0, 5px, 0);
+}
+
+to {
+  transform: none;
+}</pre>
+
+<p>}</p>
+
+<p>.bounceInDown {</p>
+
+<pre>animation-name: bounceInDown;</pre>
+
+<p>}</p>
+
+<p>@keyframes bounceInLeft {</p>
+
+<pre>from, 60%, 75%, 90%, to {
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+0% {
+  opacity: 0;
+  transform: translate3d(-3000px, 0, 0);
+}
+
+60% {
+  opacity: 1;
+  transform: translate3d(25px, 0, 0);
+}
+
+75% {
+  transform: translate3d(-10px, 0, 0);
+}
+
+90% {
+  transform: translate3d(5px, 0, 0);
+}
+
+to {
+  transform: none;
+}</pre>
+
+<p>}</p>
+
+<p>.bounceInLeft {</p>
+
+<pre>animation-name: bounceInLeft;</pre>
+
+<p>}</p>
+
+<p>@keyframes bounceInRight {</p>
+
+<pre>from, 60%, 75%, 90%, to {
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+from {
+  opacity: 0;
+  transform: translate3d(3000px, 0, 0);
+}
+
+60% {
+  opacity: 1;
+  transform: translate3d(-25px, 0, 0);
+}
+
+75% {
+  transform: translate3d(10px, 0, 0);
+}
+
+90% {
+  transform: translate3d(-5px, 0, 0);
+}
+
+to {
+  transform: none;
+}</pre>
+
+<p>}</p>
+
+<p>.bounceInRight {</p>
+
+<pre>animation-name: bounceInRight;</pre>
+
+<p>}</p>
+
+<p>@keyframes bounceInUp {</p>
+
+<pre>from, 60%, 75%, 90%, to {
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+from {
+  opacity: 0;
+  transform: translate3d(0, 3000px, 0);
+}
+
+60% {
+  opacity: 1;
+  transform: translate3d(0, -20px, 0);
+}
+
+75% {
+  transform: translate3d(0, 10px, 0);
+}
+
+90% {
+  transform: translate3d(0, -5px, 0);
+}
+
+to {
+  transform: translate3d(0, 0, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.bounceInUp {</p>
+
+<pre>animation-name: bounceInUp;</pre>
+
+<p>}</p>
+
+<p>@keyframes bounceOut {</p>
+
+<pre>20% {
+  transform: scale3d(.9, .9, .9);
+}
+
+50%, 55% {
+  opacity: 1;
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+to {
+  opacity: 0;
+  transform: scale3d(.3, .3, .3);
+}</pre>
+
+<p>}</p>
+
+<p>.bounceOut {</p>
+
+<pre>animation-name: bounceOut;</pre>
+
+<p>}</p>
+
+<p>@keyframes bounceOutDown {</p>
+
+<pre>20% {
+  transform: translate3d(0, 10px, 0);
+}
+
+40%, 45% {
+  opacity: 1;
+  transform: translate3d(0, -20px, 0);
+}
+
+to {
+  opacity: 0;
+  transform: translate3d(0, 2000px, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.bounceOutDown {</p>
+
+<pre>animation-name: bounceOutDown;</pre>
+
+<p>}</p>
+
+<p>@keyframes bounceOutLeft {</p>
+
+<pre>20% {
+  opacity: 1;
+  transform: translate3d(20px, 0, 0);
+}
+
+to {
+  opacity: 0;
+  transform: translate3d(-2000px, 0, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.bounceOutLeft {</p>
+
+<pre>animation-name: bounceOutLeft;</pre>
+
+<p>}</p>
+
+<p>@keyframes bounceOutRight {</p>
+
+<pre>20% {
+  opacity: 1;
+  transform: translate3d(-20px, 0, 0);
+}
+
+to {
+  opacity: 0;
+  transform: translate3d(2000px, 0, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.bounceOutRight {</p>
+
+<pre>animation-name: bounceOutRight;</pre>
+
+<p>}</p>
+
+<p>@keyframes bounceOutUp {</p>
+
+<pre>20% {
+  transform: translate3d(0, -10px, 0);
+}
+
+40%, 45% {
+  opacity: 1;
+  transform: translate3d(0, 20px, 0);
+}
+
+to {
+  opacity: 0;
+  transform: translate3d(0, -2000px, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.bounceOutUp {</p>
+
+<pre>animation-name: bounceOutUp;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeIn {</p>
+
+<pre>from {
+  opacity: 0;
+}
+
+to {
+  opacity: 1;
+}</pre>
+
+<p>}</p>
+
+<p>.fadeIn {</p>
+
+<pre>animation-name: fadeIn;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeInDown {</p>
+
+<pre>from {
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+}
+
+to {
+  opacity: 1;
+  transform: none;
+}</pre>
+
+<p>}</p>
+
+<p>.fadeInDown {</p>
+
+<pre>animation-name: fadeInDown;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeInDownBig {</p>
+
+<pre>from {
+  opacity: 0;
+  transform: translate3d(0, -2000px, 0);
+}
+
+to {
+  opacity: 1;
+  transform: none;
+}</pre>
+
+<p>}</p>
+
+<p>.fadeInDownBig {</p>
+
+<pre>animation-name: fadeInDownBig;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeInLeft {</p>
+
+<pre>from {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+
+to {
+  opacity: 1;
+  transform: none;
+}</pre>
+
+<p>}</p>
+
+<p>.fadeInLeft {</p>
+
+<pre>animation-name: fadeInLeft;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeInLeftBig {</p>
+
+<pre>from {
+  opacity: 0;
+  transform: translate3d(-2000px, 0, 0);
+}
+
+to {
+  opacity: 1;
+  transform: none;
+}</pre>
+
+<p>}</p>
+
+<p>.fadeInLeftBig {</p>
+
+<pre>animation-name: fadeInLeftBig;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeInRight {</p>
+
+<pre>from {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+
+to {
+  opacity: 1;
+  transform: none;
+}</pre>
+
+<p>}</p>
+
+<p>.fadeInRight {</p>
+
+<pre>animation-name: fadeInRight;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeInRightBig {</p>
+
+<pre>from {
+  opacity: 0;
+  transform: translate3d(2000px, 0, 0);
+}
+
+to {
+  opacity: 1;
+  transform: none;
+}</pre>
+
+<p>}</p>
+
+<p>.fadeInRightBig {</p>
+
+<pre>animation-name: fadeInRightBig;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeInUp {</p>
+
+<pre>from {
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+}
+
+to {
+  opacity: 1;
+  transform: none;
+}</pre>
+
+<p>}</p>
+
+<p>.fadeInUp {</p>
+
+<pre>animation-name: fadeInUp;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeInUpBig {</p>
+
+<pre>from {
+  opacity: 0;
+  transform: translate3d(0, 2000px, 0);
+}
+
+to {
+  opacity: 1;
+  transform: none;
+}</pre>
+
+<p>}</p>
+
+<p>.fadeInUpBig {</p>
+
+<pre>animation-name: fadeInUpBig;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeOut {</p>
+
+<pre>from {
+  opacity: 1;
+}
+
+to {
+  opacity: 0;
+}</pre>
+
+<p>}</p>
+
+<p>.fadeOut {</p>
+
+<pre>animation-name: fadeOut;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeOutDown {</p>
+
+<pre>from {
+  opacity: 1;
+}
+
+to {
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.fadeOutDown {</p>
+
+<pre>animation-name: fadeOutDown;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeOutDownBig {</p>
+
+<pre>from {
+  opacity: 1;
+}
+
+to {
+  opacity: 0;
+  transform: translate3d(0, 2000px, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.fadeOutDownBig {</p>
+
+<pre>animation-name: fadeOutDownBig;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeOutLeft {</p>
+
+<pre>from {
+  opacity: 1;
+}
+
+to {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.fadeOutLeft {</p>
+
+<pre>animation-name: fadeOutLeft;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeOutLeftBig {</p>
+
+<pre>from {
+  opacity: 1;
+}
+
+to {
+  opacity: 0;
+  transform: translate3d(-2000px, 0, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.fadeOutLeftBig {</p>
+
+<pre>animation-name: fadeOutLeftBig;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeOutRight {</p>
+
+<pre>from {
+  opacity: 1;
+}
+
+to {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.fadeOutRight {</p>
+
+<pre>animation-name: fadeOutRight;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeOutRightBig {</p>
+
+<pre>from {
+  opacity: 1;
+}
+
+to {
+  opacity: 0;
+  transform: translate3d(2000px, 0, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.fadeOutRightBig {</p>
+
+<pre>animation-name: fadeOutRightBig;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeOutUp {</p>
+
+<pre>from {
+  opacity: 1;
+}
+
+to {
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.fadeOutUp {</p>
+
+<pre>animation-name: fadeOutUp;</pre>
+
+<p>}</p>
+
+<p>@keyframes fadeOutUpBig {</p>
+
+<pre>from {
+  opacity: 1;
+}
+
+to {
+  opacity: 0;
+  transform: translate3d(0, -2000px, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.fadeOutUpBig {</p>
+
+<pre>animation-name: fadeOutUpBig;</pre>
+
+<p>}</p>
+
+<p>@keyframes flip {</p>
+
+<pre>from {
+  transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+  animation-timing-function: ease-out;
+}
+
+40% {
+  transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+  animation-timing-function: ease-out;
+}
+
+50% {
+  transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+  animation-timing-function: ease-in;
+}
+
+80% {
+  transform: perspective(400px) scale3d(.95, .95, .95);
+  animation-timing-function: ease-in;
+}
+
+to {
+  transform: perspective(400px);
+  animation-timing-function: ease-in;
+}</pre>
+
+<p>}</p>
+
+<p>.animated.flip {</p>
+
+<pre>-webkit-backface-visibility: visible;
+backface-visibility: visible;
+animation-name: flip;</pre>
+
+<p>}</p>
+
+<p>@keyframes flipInX {</p>
+
+<pre>from {
+  transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  animation-timing-function: ease-in;
+  opacity: 0;
+}
+
+40% {
+  transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+  animation-timing-function: ease-in;
+}
+
+60% {
+  transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+  opacity: 1;
+}
+
+80% {
+  transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+}
+
+to {
+  transform: perspective(400px);
+}</pre>
+
+<p>}</p>
+
+<p>.flipInX {</p>
+
+<pre>-webkit-backface-visibility: visible !important;
+backface-visibility: visible !important;
+animation-name: flipInX;</pre>
+
+<p>}</p>
+
+<p>@keyframes flipInY {</p>
+
+<pre>from {
+  transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+  animation-timing-function: ease-in;
+  opacity: 0;
+}
+
+40% {
+  transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+  animation-timing-function: ease-in;
+}
+
+60% {
+  transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+  opacity: 1;
+}
+
+80% {
+  transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+}
+
+to {
+  transform: perspective(400px);
+}</pre>
+
+<p>}</p>
+
+<p>.flipInY {</p>
+
+<pre>-webkit-backface-visibility: visible !important;
+backface-visibility: visible !important;
+animation-name: flipInY;</pre>
+
+<p>}</p>
+
+<p>@keyframes flipOutX {</p>
+
+<pre>from {
+  transform: perspective(400px);
+}
+
+30% {
+  transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+  opacity: 1;
+}
+
+to {
+  transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  opacity: 0;
+}</pre>
+
+<p>}</p>
+
+<p>.flipOutX {</p>
+
+<pre>animation-name: flipOutX;
+-webkit-backface-visibility: visible !important;
+backface-visibility: visible !important;</pre>
+
+<p>}</p>
+
+<p>@keyframes flipOutY {</p>
+
+<pre>from {
+  transform: perspective(400px);
+}
+
+30% {
+  transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+  opacity: 1;
+}
+
+to {
+  transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+  opacity: 0;
+}</pre>
+
+<p>}</p>
+
+<p>.flipOutY {</p>
+
+<pre>-webkit-backface-visibility: visible !important;
+backface-visibility: visible !important;
+animation-name: flipOutY;</pre>
+
+<p>}</p>
+
+<p>@keyframes lightSpeedIn {</p>
+
+<pre>from {
+  transform: translate3d(100%, 0, 0) skewX(-30deg);
+  opacity: 0;
+}
+
+60% {
+  transform: skewX(20deg);
+  opacity: 1;
+}
+
+80% {
+  transform: skewX(-5deg);
+  opacity: 1;
+}
+
+to {
+  transform: none;
+  opacity: 1;
+}</pre>
+
+<p>}</p>
+
+<p>.lightSpeedIn {</p>
+
+<pre>animation-name: lightSpeedIn;
+animation-timing-function: ease-out;</pre>
+
+<p>}</p>
+
+<p>@keyframes lightSpeedOut {</p>
+
+<pre>from {
+  opacity: 1;
+}
+
+to {
+  transform: translate3d(100%, 0, 0) skewX(30deg);
+  opacity: 0;
+}</pre>
+
+<p>}</p>
+
+<p>.lightSpeedOut {</p>
+
+<pre>animation-name: lightSpeedOut;
+animation-timing-function: ease-in;</pre>
+
+<p>}</p>
+
+<p>@keyframes rotateIn {</p>
+
+<pre>from {
+  transform-origin: center;
+  transform: rotate3d(0, 0, 1, -200deg);
+  opacity: 0;
+}
+
+to {
+  transform-origin: center;
+  transform: none;
+  opacity: 1;
+}</pre>
+
+<p>}</p>
+
+<p>.rotateIn {</p>
+
+<pre>animation-name: rotateIn;</pre>
+
+<p>}</p>
+
+<p>@keyframes rotateInDownLeft {</p>
+
+<pre>from {
+  transform-origin: left bottom;
+  transform: rotate3d(0, 0, 1, -45deg);
+  opacity: 0;
+}
+
+to {
+  transform-origin: left bottom;
+  transform: none;
+  opacity: 1;
+}</pre>
+
+<p>}</p>
+
+<p>.rotateInDownLeft {</p>
+
+<pre>animation-name: rotateInDownLeft;</pre>
+
+<p>}</p>
+
+<p>@keyframes rotateInDownRight {</p>
+
+<pre>from {
+  transform-origin: right bottom;
+  transform: rotate3d(0, 0, 1, 45deg);
+  opacity: 0;
+}
+
+to {
+  transform-origin: right bottom;
+  transform: none;
+  opacity: 1;
+}</pre>
+
+<p>}</p>
+
+<p>.rotateInDownRight {</p>
+
+<pre>animation-name: rotateInDownRight;</pre>
+
+<p>}</p>
+
+<p>@keyframes rotateInUpLeft {</p>
+
+<pre>from {
+  transform-origin: left bottom;
+  transform: rotate3d(0, 0, 1, 45deg);
+  opacity: 0;
+}
+
+to {
+  transform-origin: left bottom;
+  transform: none;
+  opacity: 1;
+}</pre>
+
+<p>}</p>
+
+<p>.rotateInUpLeft {</p>
+
+<pre>animation-name: rotateInUpLeft;</pre>
+
+<p>}</p>
+
+<p>@keyframes rotateInUpRight {</p>
+
+<pre>from {
+  transform-origin: right bottom;
+  transform: rotate3d(0, 0, 1, -90deg);
+  opacity: 0;
+}
+
+to {
+  transform-origin: right bottom;
+  transform: none;
+  opacity: 1;
+}</pre>
+
+<p>}</p>
+
+<p>.rotateInUpRight {</p>
+
+<pre>animation-name: rotateInUpRight;</pre>
+
+<p>}</p>
+
+<p>@keyframes rotateOut {</p>
+
+<pre>from {
+  transform-origin: center;
+  opacity: 1;
+}
+
+to {
+  transform-origin: center;
+  transform: rotate3d(0, 0, 1, 200deg);
+  opacity: 0;
+}</pre>
+
+<p>}</p>
+
+<p>.rotateOut {</p>
+
+<pre>animation-name: rotateOut;</pre>
+
+<p>}</p>
+
+<p>@keyframes rotateOutDownLeft {</p>
+
+<pre>from {
+  transform-origin: left bottom;
+  opacity: 1;
+}
+
+to {
+  transform-origin: left bottom;
+  transform: rotate3d(0, 0, 1, 45deg);
+  opacity: 0;
+}</pre>
+
+<p>}</p>
+
+<p>.rotateOutDownLeft {</p>
+
+<pre>animation-name: rotateOutDownLeft;</pre>
+
+<p>}</p>
+
+<p>@keyframes rotateOutDownRight {</p>
+
+<pre>from {
+  transform-origin: right bottom;
+  opacity: 1;
+}
+
+to {
+  transform-origin: right bottom;
+  transform: rotate3d(0, 0, 1, -45deg);
+  opacity: 0;
+}</pre>
+
+<p>}</p>
+
+<p>.rotateOutDownRight {</p>
+
+<pre>animation-name: rotateOutDownRight;</pre>
+
+<p>}</p>
+
+<p>@keyframes rotateOutUpLeft {</p>
+
+<pre>from {
+  transform-origin: left bottom;
+  opacity: 1;
+}
+
+to {
+  transform-origin: left bottom;
+  transform: rotate3d(0, 0, 1, -45deg);
+  opacity: 0;
+}</pre>
+
+<p>}</p>
+
+<p>.rotateOutUpLeft {</p>
+
+<pre>animation-name: rotateOutUpLeft;</pre>
+
+<p>}</p>
+
+<p>@keyframes rotateOutUpRight {</p>
+
+<pre>from {
+  transform-origin: right bottom;
+  opacity: 1;
+}
+
+to {
+  transform-origin: right bottom;
+  transform: rotate3d(0, 0, 1, 90deg);
+  opacity: 0;
+}</pre>
+
+<p>}</p>
+
+<p>.rotateOutUpRight {</p>
+
+<pre>animation-name: rotateOutUpRight;</pre>
+
+<p>}</p>
+
+<p>@keyframes hinge {</p>
+
+<pre>0% {
+  transform-origin: top left;
+  animation-timing-function: ease-in-out;
+}
+
+20%, 60% {
+  transform: rotate3d(0, 0, 1, 80deg);
+  transform-origin: top left;
+  animation-timing-function: ease-in-out;
+}
+
+40%, 80% {
+  transform: rotate3d(0, 0, 1, 60deg);
+  transform-origin: top left;
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+}
+
+to {
+  transform: translate3d(0, 700px, 0);
+  opacity: 0;
+}</pre>
+
+<p>}</p>
+
+<p>.hinge {</p>
+
+<pre>animation-name: hinge;</pre>
+
+<p>}</p>
+
+<p>@keyframes jackInTheBox {</p>
+
+<pre>from {
+  opacity: 0;
+  transform: scale(0.1) rotate(30deg);
+  transform-origin: center bottom;
+}
+
+50% {
+  transform: rotate(-10deg);
+}
+
+70% {
+  transform: rotate(3deg);
+}
+
+to {
+  opacity: 1;
+  transform: scale(1);
+}</pre>
+
+<p>}</p>
+
+<p>.jackInTheBox {</p>
+
+<pre>animation-name: jackInTheBox;</pre>
+
+<p>}</p>
+
+<p>/* originally authored by Nick Pettit - <a
+href="https://github.com/nickpettit/glide">github.com/nickpettit/glide</a>
+*/</p>
+
+<p>@keyframes rollIn {</p>
+
+<pre>from {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+}
+
+to {
+  opacity: 1;
+  transform: none;
+}</pre>
+
+<p>}</p>
+
+<p>.rollIn {</p>
+
+<pre>animation-name: rollIn;</pre>
+
+<p>}</p>
+
+<p>/* originally authored by Nick Pettit - <a
+href="https://github.com/nickpettit/glide">github.com/nickpettit/glide</a>
+*/</p>
+
+<p>@keyframes rollOut {</p>
+
+<pre>from {
+  opacity: 1;
+}
+
+to {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+}</pre>
+
+<p>}</p>
+
+<p>.rollOut {</p>
+
+<pre>animation-name: rollOut;</pre>
+
+<p>}</p>
+
+<p>@keyframes zoomIn {</p>
+
+<pre>from {
+  opacity: 0;
+  transform: scale3d(.3, .3, .3);
+}
+
+50% {
+  opacity: 1;
+}</pre>
+
+<p>}</p>
+
+<p>.zoomIn {</p>
+
+<pre>animation-name: zoomIn;</pre>
+
+<p>}</p>
+
+<p>@keyframes zoomInDown {</p>
+
+<pre>from {
+  opacity: 0;
+  transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+  animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+}
+
+60% {
+  opacity: 1;
+  transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+}</pre>
+
+<p>}</p>
+
+<p>.zoomInDown {</p>
+
+<pre>animation-name: zoomInDown;</pre>
+
+<p>}</p>
+
+<p>@keyframes zoomInLeft {</p>
+
+<pre>from {
+  opacity: 0;
+  transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+  animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+}
+
+60% {
+  opacity: 1;
+  transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+}</pre>
+
+<p>}</p>
+
+<p>.zoomInLeft {</p>
+
+<pre>animation-name: zoomInLeft;</pre>
+
+<p>}</p>
+
+<p>@keyframes zoomInRight {</p>
+
+<pre>from {
+  opacity: 0;
+  transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+  animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+}
+
+60% {
+  opacity: 1;
+  transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+}</pre>
+
+<p>}</p>
+
+<p>.zoomInRight {</p>
+
+<pre>animation-name: zoomInRight;</pre>
+
+<p>}</p>
+
+<p>@keyframes zoomInUp {</p>
+
+<pre>from {
+  opacity: 0;
+  transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+  animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+}
+
+60% {
+  opacity: 1;
+  transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+}</pre>
+
+<p>}</p>
+
+<p>.zoomInUp {</p>
+
+<pre>animation-name: zoomInUp;</pre>
+
+<p>}</p>
+
+<p>@keyframes zoomOut {</p>
+
+<pre>from {
+  opacity: 1;
+}
+
+50% {
+  opacity: 0;
+  transform: scale3d(.3, .3, .3);
+}
+
+to {
+  opacity: 0;
+}</pre>
+
+<p>}</p>
+
+<p>.zoomOut {</p>
+
+<pre>animation-name: zoomOut;</pre>
+
+<p>}</p>
+
+<p>@keyframes zoomOutDown {</p>
+
+<pre>40% {
+  opacity: 1;
+  transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+  animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+}
+
+to {
+  opacity: 0;
+  transform: scale3d(.1, .1, .1) translate3d(0, 2000px, 0);
+  transform-origin: center bottom;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+}</pre>
+
+<p>}</p>
+
+<p>.zoomOutDown {</p>
+
+<pre>animation-name: zoomOutDown;</pre>
+
+<p>}</p>
+
+<p>@keyframes zoomOutLeft {</p>
+
+<pre>40% {
+  opacity: 1;
+  transform: scale3d(.475, .475, .475) translate3d(42px, 0, 0);
+}
+
+to {
+  opacity: 0;
+  transform: scale(.1) translate3d(-2000px, 0, 0);
+  transform-origin: left center;
+}</pre>
+
+<p>}</p>
+
+<p>.zoomOutLeft {</p>
+
+<pre>animation-name: zoomOutLeft;</pre>
+
+<p>}</p>
+
+<p>@keyframes zoomOutRight {</p>
+
+<pre>40% {
+  opacity: 1;
+  transform: scale3d(.475, .475, .475) translate3d(-42px, 0, 0);
+}
+
+to {
+  opacity: 0;
+  transform: scale(.1) translate3d(2000px, 0, 0);
+  transform-origin: right center;
+}</pre>
+
+<p>}</p>
+
+<p>.zoomOutRight {</p>
+
+<pre>animation-name: zoomOutRight;</pre>
+
+<p>}</p>
+
+<p>@keyframes zoomOutUp {</p>
+
+<pre>40% {
+  opacity: 1;
+  transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+  animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+}
+
+to {
+  opacity: 0;
+  transform: scale3d(.1, .1, .1) translate3d(0, -2000px, 0);
+  transform-origin: center bottom;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+}</pre>
+
+<p>}</p>
+
+<p>.zoomOutUp {</p>
+
+<pre>animation-name: zoomOutUp;</pre>
+
+<p>}</p>
+
+<p>@keyframes slideInDown {</p>
+
+<pre>from {
+  transform: translate3d(0, -100%, 0);
+  visibility: visible;
+}
+
+to {
+  transform: translate3d(0, 0, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.slideInDown {</p>
+
+<pre>animation-name: slideInDown;</pre>
+
+<p>}</p>
+
+<p>@keyframes slideInLeft {</p>
+
+<pre>from {
+  transform: translate3d(-100%, 0, 0);
+  visibility: visible;
+}
+
+to {
+  transform: translate3d(0, 0, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.slideInLeft {</p>
+
+<pre>animation-name: slideInLeft;</pre>
+
+<p>}</p>
+
+<p>@keyframes slideInRight {</p>
+
+<pre>from {
+  transform: translate3d(100%, 0, 0);
+  visibility: visible;
+}
+
+to {
+  transform: translate3d(0, 0, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.slideInRight {</p>
+
+<pre>animation-name: slideInRight;</pre>
+
+<p>}</p>
+
+<p>@keyframes slideInUp {</p>
+
+<pre>from {
+  transform: translate3d(0, 100%, 0);
+  visibility: visible;
+}
+
+to {
+  transform: translate3d(0, 0, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.slideInUp {</p>
+
+<pre>animation-name: slideInUp;</pre>
+
+<p>}</p>
+
+<p>@keyframes slideOutDown {</p>
+
+<pre>from {
+  transform: translate3d(0, 0, 0);
+}
+
+to {
+  visibility: hidden;
+  transform: translate3d(0, 100%, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.slideOutDown {</p>
+
+<pre>animation-name: slideOutDown;</pre>
+
+<p>}</p>
+
+<p>@keyframes slideOutLeft {</p>
+
+<pre>from {
+  transform: translate3d(0, 0, 0);
+}
+
+to {
+  visibility: hidden;
+  transform: translate3d(-100%, 0, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.slideOutLeft {</p>
+
+<pre>animation-name: slideOutLeft;</pre>
+
+<p>}</p>
+
+<p>@keyframes slideOutRight {</p>
+
+<pre>from {
+  transform: translate3d(0, 0, 0);
+}
+
+to {
+  visibility: hidden;
+  transform: translate3d(100%, 0, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.slideOutRight {</p>
+
+<pre>animation-name: slideOutRight;</pre>
+
+<p>}</p>
+
+<p>@keyframes slideOutUp {</p>
+
+<pre>from {
+  transform: translate3d(0, 0, 0);
+}
+
+to {
+  visibility: hidden;
+  transform: translate3d(0, -100%, 0);
+}</pre>
+
+<p>}</p>
+
+<p>.slideOutUp {</p>
+
+<pre>animation-name: slideOutUp;</pre>
+
+<p>}</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.0.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

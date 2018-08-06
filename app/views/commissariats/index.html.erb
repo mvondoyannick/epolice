@@ -1,9 +1,18 @@
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-<p id="notice"><%= notice %></p>
+<% @page_title = "Gestion des commissariats" %>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Gestion des commissariat
+      </h1>
+      <h2 class="subtitle">
+        Entrer vos données d'authentification
+      </h2>
+    </div>
+  </div>
+</section>
 
-<h1>Commissariats</h1>
-
-<table class="table" id="table">
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -28,8 +37,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Commissariat', new_commissariat_path %>
-</main>

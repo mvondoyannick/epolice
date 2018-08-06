@@ -28,11 +28,11 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 # Simple_form gem
 gem 'simple_form'
 #Adding bootstrap
-gem 'bootstrap', '~> 4.0'
+#gem 'bootstrap', '~> 4.0'
 #adding jquery-rails
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 #for xls generation file
@@ -47,6 +47,8 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 gem 'gmaps4rails'
 #gestion des authentification et des connexion
 gem 'devise'
+#Ajout de cancancan
+gem 'cancancan', '~> 2.0'
 #using underscore js
 gem 'underscore-rails', '~> 1.8', '>= 1.8.3'
 

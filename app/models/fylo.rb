@@ -1,0 +1,2 @@
+class Fylo < ApplicationRecord
+end

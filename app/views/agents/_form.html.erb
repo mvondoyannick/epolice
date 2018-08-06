@@ -1,17 +1,25 @@
-
-<%= simple_form_for(@agent) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :name, label: "Nom" %>
-    <%= f.input :prenom, label: "Prénom" %>
-    <%= f.input :phone, label: "Numéro de téléphone" %>
-    <%= f.input :matricule, label: "Matricule" %>
-    <%= f.input :grade, prompt: "Selectionner le grade", collection: ["Lieutenant", "Adjudant", "Capitaine", "Sergent"] %>
-    <%= f.association :commissariat, prompt: "Selectionner commissariat d'affectation", label: "Commissariat" %>
+<div class="columns">
+  <div class="column">
+    First column
   </div>
+  <div class="column">
+    <%= simple_form_for(@agent, html: {class: "field"}) do |f| %>
+      <%= f.error_notification %>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+      <div class="control">
+        <%= f.input :name, label: "Nom", input_html: { class: 'input' }%>
+        <%= f.input :prenom, label: "Prénom", input_html: { class: 'input' } %>
+        <%= f.input :phone, label: "Numéro de téléphone", input_html: { class: 'input' } %>
+        <%= f.input :matricule, label: "Matricule", input_html: { class: 'input' } %>
+        <%= f.input :grade, prompt: "Selectionner le grade", collection: ["Lieutenant", "Adjudant", "Capitaine", "Sergent"] %>
+        <%= f.association :commissariat, prompt: "Selectionner commissariat d'affectation", label: "Commissariat" %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+  <div class="column">
+    First column
+  </div>

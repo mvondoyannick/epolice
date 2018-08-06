@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>carrefours.scss - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../";
+  var index_rel_prefix = "../../../";
+</script>
+
+<script src="../../../js/jquery.js"></script>
+<script src="../../../js/darkfish.js"></script>
+
+<link href="../../../css/fonts.css" rel="stylesheet">
+<link href="../../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../../README_md.html">README</a>
+  
+    <li><a href="../../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/access_coffee.html">access.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/affectations_coffee.html">affectations.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/agents_coffee.html">agents.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/alertes_coffee.html">alertes.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/carrefours_coffee.html">carrefours.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/commissariats_coffee.html">commissariats.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/convocations_coffee.html">convocations.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/infractions_coffee.html">infractions.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/statuses_coffee.html">statuses.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/types_coffee.html">types.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/users_coffee.html">users.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/villes_coffee.html">villes.coffee</a>
+  
+    <li><a href="../../../app/assets/stylesheets/_application_scss.html">_application.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/access_scss.html">access.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/affectations_scss.html">affectations.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/agents_scss.html">agents.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/alertes_scss.html">alertes.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/application_css.html">application.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/bulma_css.html">bulma.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/bulma_css_map.html">bulma.css.map</a>
+  
+    <li><a href="../../../app/assets/stylesheets/bulma_min_css.html">bulma.min.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/carrefours_scss.html">carrefours.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/commissariats_scss.html">commissariats.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/contravetions_scss.html">contravetions.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/convocations_scss.html">convocations.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/animate_css.html">animate.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/bootstrap-select_css.html">bootstrap-select.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/bootstrap_css.html">bootstrap.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/bootstrap_css_map.html">bootstrap.css.map</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/bootstrap_min_css_map.html">bootstrap.min.css.map</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/cs-skin-elastic_css.html">cs-skin-elastic.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/flag-icon_min_css.html">flag-icon.min.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/font-awesome_min_css.html">font-awesome.min.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/lib/chosen/chosen_css.html">chosen.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/lib/chosen/chosen_min_css.html">chosen.min.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/lib/datatable/buttons_bootstrap_min_css.html">buttons.bootstrap.min.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/lib/datatable/buttons_dataTables_min_css.html">buttons.dataTables.min.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/lib/datatable/dataTables_bootstrap_min_css.html">dataTables.bootstrap.min.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/lib/vector-map/jqvmap_min_css.html">jqvmap.min.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/normalize_css.html">normalize.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/style_css.html">style.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/style_css_map.html">style.css.map</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/themify-icons_css.html">themify-icons.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/dashboard/variables_css.html">variables.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/infractions_scss.html">infractions.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/statuses_scss.html">statuses.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/types_scss.html">types.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/users_scss.html">users.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/villes_scss.html">villes.scss</a>
+  
+    <li><a href="../../../app/views/affectations/_affectation_json_jbuilder.html">_affectation.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/affectations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/affectations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/agents/_agent_json_jbuilder.html">_agent.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/agents/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/agents/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/alertes/_alerte_json_jbuilder.html">_alerte.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/alertes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/alertes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/carrefours/_carrefour_json_jbuilder.html">_carrefour.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/carrefours/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/carrefours/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/commissariats/_commissariat_json_jbuilder.html">_commissariat.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/commissariats/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/commissariats/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/contravetions/_contravetion_json_jbuilder.html">_contravetion.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/contravetions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/contravetions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/convocations/_convocation_json_jbuilder.html">_convocation.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/convocations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/convocations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/infractions/_infraction_json_jbuilder.html">_infraction.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/infractions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/infractions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/statuses/_status_json_jbuilder.html">_status.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/statuses/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/statuses/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/types/_type_json_jbuilder.html">_type.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/types/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/types/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/users/_user_json_jbuilder.html">_user.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/users/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/users/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/villes/_ville_json_jbuilder.html">_ville.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/villes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/villes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../config_ru.html">config.ru</a>
+  
+    <li><a href="../../../log/development_log.html">development.log</a>
+  
+    <li><a href="../../../log/production_log.html">production.log</a>
+  
+    <li><a href="../../../package_json.html">package.json</a>
+  
+    <li><a href="../../../public/404_html.html">404.html</a>
+  
+    <li><a href="../../../public/422_html.html">422.html</a>
+  
+    <li><a href="../../../public/500_html.html">500.html</a>
+  
+    <li><a href="../../../public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="../../../public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="../../../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../../../public/robots_txt.html">robots</a>
+  
+    <li><a href="../../../tmp/pids/server_pid.html">server.pid</a>
+  
+    <li><a href="../../../tmp/restart_txt.html">restart</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page app/assets/stylesheets/carrefours.scss">
+
+<p>// Place all the styles related to the carrefours controller here. // They
+will automatically be included in application.css. // You can use Sass
+(SCSS) here: <a href="http://sass-lang.com">sass-lang.com</a>/</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.0.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

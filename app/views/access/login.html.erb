@@ -1,0 +1,48 @@
+<section class="hero is-success is-fullheight">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="column is-4 is-offset-4">
+        <h3 class="title has-text-grey">Identifiez-vous</h3>
+          <p class="subtitle has-text-grey">Merci de fournir vos identifications de connexion.</p>
+            <div class="box">
+              <figure class="avatar">
+                <%= image_tag("logo.png", size: 128) %>
+              </figure>
+              <%= form_tag( action: 'attemp_login') do %>
+                <div class="field">
+                  <div class="control">
+                    <%= label_tag ("Email") %></td>
+                    <%= text_field_tag :email, "", class: 'input is-large' %>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <%= label_tag ("Mot de passe") %></td>
+                    <%= password_field_tag :pwd, "", class: 'input is-large' %>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="checkbox">
+                    <%= check_box_tag (:checked) %>
+                    Se souvenir de moi
+                  </label>
+                </div>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><%= submit_tag "Se connecter", class: 'button is-block is-info is-large is-fullwidth' %></td>
+                  </tr>
+                </table>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+              <% end %>
+                </div>
+                  <p class="has-text-grey">
+                    <a href="../">Demander un compte</a> &nbsp;·&nbsp;
+                    <a href="../">Mot de passe oublié</a> &nbsp;·&nbsp;
+                    <a href="../">Aide</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+    
+  </div>
+</div>
