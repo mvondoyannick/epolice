@@ -21,7 +21,15 @@ class AlertesController < ApplicationController
   # GET /alertes/1
   # GET /alertes/1.json
   def show
-    render layout: 'admin'
+    respond_to do |format|
+      format.html
+      format.json
+      format.pdf do
+        pdf = PrintPdf.new(@alerte)
+        send_data pdf.render, filename: "document_#{@alerte.code}.pdf", type: 'application/pdf', disposition: 'inline'
+      end
+    end
+    #render layout: 'admin'
   end
 
   # GET /alertes/new

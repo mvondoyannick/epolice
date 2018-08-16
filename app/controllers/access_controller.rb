@@ -82,6 +82,11 @@ class AccessController < ApplicationController
     end
   end
 
+  #permet de generer un fichier PDF
+  def read
+    
+  end
+
   #voir toutes les alertes
   def alerte_all
     @alerte = Alerte.all

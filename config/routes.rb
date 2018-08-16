@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get 'access/login'
   get 'access/logout'
   get 'access/admin'
-  devise_for :users
   get 'loggedin/home'
   get 'loggedin/private'
   get 'welcome/index'
