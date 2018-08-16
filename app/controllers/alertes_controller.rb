@@ -25,11 +25,12 @@ class AlertesController < ApplicationController
       format.html
       format.json
       format.pdf do
-        pdf = PrintPdf.new(@alerte)
-        send_data pdf.render, filename: "document_#{@alerte.code}.pdf", type: 'application/pdf', disposition: 'inline'
+        pdf = Prawn::Document.new
+        pdf.text "Alerte #{@alerte.code}"
+        #send_data pdf.render, filename: "document_#{@alerte.code}.pdf", type: 'application/pdf', disposition: 'inline'
       end
     end
-    #render layout: 'admin'
+    render layout: 'admin'
   end
 
   # GET /alertes/new
