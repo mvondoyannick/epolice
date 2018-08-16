@@ -41,7 +41,6 @@ Rails.application.routes.draw do
     resources :villes
   end
 
-  resources :users
   resources :agents
   #root 'convocations#index'
   #root 'welcome#home'
