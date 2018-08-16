@@ -5,20 +5,24 @@ class TypesController < ApplicationController
   # GET /types.json
   def index
     @types = Type.all
+    render layout: 'admin'
   end
 
   # GET /types/1
   # GET /types/1.json
   def show
+    render layout: 'admin'
   end
 
   # GET /types/new
   def new
     @type = Type.new
+    render layout: 'admin'
   end
 
   # GET /types/1/edit
   def edit
+    render layout: 'admin'
   end
 
   # POST /types
@@ -69,6 +73,6 @@ class TypesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def type_params
-      params.require(:type).permit(:name, :description)
+      params.require(:type).permit(:name, :description, :service_id)
     end
 end

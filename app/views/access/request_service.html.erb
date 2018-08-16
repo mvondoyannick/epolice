@@ -1,0 +1,61 @@
+<div class="container">
+    <div id="flow">
+        <span class="flow-1"></span>
+        <span class="flow-2"></span>
+        <span class="flow-3"></span>
+    </div>
+    <div class="section">
+        <div class="box">
+            <div class="field has-addons">
+                <div class="control is-expanded">
+                    <%= search_field_tag :rechercher, "", class: "input has-text-centered", placeholder: "Rechercher" %>
+                </div>
+                <div class="control">
+                    <a class="button is-info">Search</a>
+                </div>
+            </div>
+        </div>
+        <!-- Developers -->
+        <div class="notification" class="height: 200px;">
+            <%= session[:name] %> vous etes indentifier comme appartenant au service : <%=  %>
+        </div>
+        <!-- End Developers -->
+
+        <!-- Staff -->
+        <div class="row columns is-multiline">
+            <% (Alerte.all).each do |index| %>
+                <div class="column is-one-third">
+                    <div class="card large round">
+                        <div class="card-image ">
+                            <figure class="image">
+                                <% if index.alertes.attached? %>
+                                    <%= link_to image_tag(index.alertes, resize: 250), alerte_path(index)%>
+                                <% else %>
+                                    <%= link_to image_tag('https://bulma.io/images/placeholders/1280x960.png', resize: 250), alerte_path(index)%>
+                                <% end %>
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-96x96">
+                                        <%= link_to image_tag(index.agent.avatar), agent_path(index.agent) if index.agent.avatar.attached? %>
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4 no-padding"><%= index.titre %></p>
+                                    <p><span class="title is-6"><a href="http://twitter.com/#">@twitterid</a></span></p>
+                                    <p class="subtitle is-6"><%= index.agent.name %></p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <%= index.description %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+        <!-- End Staff -->
+    </div>
+</div>

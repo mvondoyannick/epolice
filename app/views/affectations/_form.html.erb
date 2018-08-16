@@ -2,14 +2,14 @@
 <%= simple_form_for(@affectation) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.association :type, prompt: "Selectionner un type" %>
-    <%= f.association :agent, prompt: "Selectionner un agent" %>
-    <%= f.association :carrefour, prompt: "Selectionner un carrefour"  %>
-    <%= f.input :date, as: :date, html5: true %>
+  <div class="field">
+    <%= f.association :type, prompt: "Selectionner un type", html_input: {class: "input is-large"} %>
+    <%= f.association :agent, prompt: "Selectionner un agent", html_input: {class: "input is-large"} %>
+    <%= f.association :carrefour, prompt: "Selectionner un carrefour", html_input: {class: "input is-large"}  %>
+    <%= f.input :date, as: :date, html5: true, html_input: {class: "input is-large"} %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "button is-primary" %>
   </div>
 <% end %>

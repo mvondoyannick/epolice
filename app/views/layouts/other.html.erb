@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bulma cards</title>
+    <%= stylesheet_link_tag "bulma.min", media: 'all' %>
+    <%= stylesheet_link_tag "https://use.fontawesome.com/releases/v5.1.0/js/all.js", media: 'all' %>
+    <%= stylesheet_link_tag "cards", media: 'all' %>
+    <%= javascript_include_tag "bulma", media: 'all' %>
+
+</head>
+
+<body>
+
+        <!-- START NAV -->
+        <!--nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="../">
+                                <img src="../images/bulma.png" alt="Logo">
+                            </a>
+                        <span class="navbar-burger burger" data-target="navbarMenu">
+                                <span></span>
+                        <span></span>
+                        <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a class="navbar-item is-active">
+                                    Home
+                                </a>
+                            <a class="navbar-item">
+                                    Examples
+                                </a>
+                            <a class="navbar-item">
+                                    Features
+                                </a>
+                            <a class="navbar-item">
+                                    Team
+                                </a>
+                            <a class="navbar-item">
+                                    Archives
+                                </a>
+                            <a class="navbar-item">
+                                    Help
+                                </a>
+                            <div class="navbar-item has-dropdown is-hoverable">
+                                <a class="navbar-link">
+                                        Account
+                                    </a>
+                                <div class="navbar-dropdown">
+                                    <a class="navbar-item">
+                                            Dashboard
+                                        </a>
+                                    <a class="navbar-item">
+                                            Profile
+                                        </a>
+                                    <a class="navbar-item">
+                                            Settings
+                                        </a>
+                                    <hr class="navbar-divider">
+                                    <div class="navbar-item">
+                                        Logout
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav-->
+            <!-- END NAV -->
+    <%= render  "layouts/menu_other" %>
+
+    <%= yield %>
+
+    <!--footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <div class="soc">
+                    <a href="#"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                </div>
+                <p>
+                    <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. 
+                    The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. <br>
+                </p>
+            </div>
+        </div>
+    </footer-->
+
+
+</body>
+
+</html>

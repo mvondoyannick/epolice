@@ -1,0 +1,149 @@
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="box box-widget widget-user-2">
+      <!-- Add the bg color to the header using any of the bg-* classes -->
+      <div class="widget-user-header bg-yellow">
+        <div class="widget-user-image">
+          <%= image_tag 'img/avatar.png', class: "img-circle" %>
+        </div>
+        <!-- /.widget-user-image -->
+        <% if @agent.nil? %>
+          <h3 class="widget-user-username">Agent non identifié</h3>
+        <% else %>
+          <h3 class="widget-user-username"><%= @agent.name %> <%= @agent.prenom %></h3>
+          <h5 class="widget-user-desc"><%= @agent.grade %></h5>
+        <% end %>
+
+      </div>
+      <div class="box-footer no-padding">
+        <br>
+        <p>
+          <span class="pull-left badge bg-blue">0</span> &nbsp; Nom : <%= @agent.name.upcase %>
+        </p>
+        <p>
+          <span class="pull-left badge bg-blue">0</span> &nbsp; Prénom : <%= @agent.prenom %>
+        </p>
+        <p>
+          <span class="pull-left badge bg-blue">0</span> &nbsp; Matricule : <%= @agent.matricule %>
+        </p>
+        <p>
+          <span class="pull-left badge bg-blue">0</span> &nbsp; Téléphone : <%= @agent.phone %>
+        </p>
+        <p>
+          <span class="pull-left badge bg-blue">0</span> &nbsp; Grade : <%= @agent.grade %>
+        </p>
+        <p>
+          <span class="pull-left badge bg-blue">0</span> &nbsp; Crée le : <%= @agent.created_at %>
+        </p>
+        <p>
+          <span class="pull-left badge bg-blue">0</span> &nbsp; <%= link_to 'Voir historique' %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <h3>Details Infraction</h3>
+    <table class="table">
+      <tr>
+        <td><strong>Cni:</strong></td>
+        <td><%= @convocation.cni %></td>
+      </tr>
+      <tr>
+        <td><strong>Phone:</strong></td>
+        <td><%= @convocation.phone %></td>
+      </tr>
+      <tr>
+        <td><strong>Prenom:</strong></td>
+        <td><%= @convocation.prenom %></td>
+      </tr>
+      <tr>
+        <td><strong>Immatriculation:</strong></td>
+        <td><%= @convocation.immatriculation %></td>
+      </tr>
+      <tr>
+        <td><strong>Residence:</strong></td>
+        <td><%= @convocation.residence %></td>
+      </tr>
+      <tr>
+        <td><strong>Emploi:</strong></td>
+        <td><%= @convocation.emploi %></td>
+      </tr>
+      <tr>
+        <td><strong>Motif:</strong></td>
+        <td><%= @convocation.motif %></td>
+      </tr>
+      <tr>
+        <td><strong>Observation:</strong></td>
+        <td><%= @convocation.observation %></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-md-4">
+    <br>
+    <table class="table">
+      <tr>
+        <td><strong>Piece(s) retenuee(s):</strong></td>
+        <td><%= @convocation.observation %></td>
+      </tr>
+      <tr>
+        <td><strong>Ville:</strong></td>
+        <td><%= @convocation.ville %></td>
+      </tr>
+      <tr>
+        <td><strong>Quartier:</strong></td>
+        <td><%= @convocation.quartier %></td>
+      </tr>
+      <tr>
+        <td><strong>Rue:</strong></td>
+        <td><%= @convocation.rue %></td>
+      </tr>
+      <tr>
+        <td><strong>Année de Naissance:</strong></td>
+        <td><%= @convocation.an %></td>
+      </tr>
+      <tr>
+        <td><strong>Quartier:</strong></td>
+        <td><%= @convocation.quartier %></td>
+      </tr>
+      <tr>
+        <td><strong>sexe:</strong></td>
+        <td><%= @convocation.sexe %></td>
+      </tr>
+      <tr>
+        <td><strong>Statut:</strong></td>
+        <td>
+          <% if @convocation.status.nil? %>
+            Inconnu
+          <% else %>
+            <%= @convocation.status %>
+          <% end %> 
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Code:</strong></td>
+        <td>
+          <% if @convocation.code.nil? %>
+            Inconnue
+          <% else %>
+            <%= @convocation.code %>
+          <% end %>
+        </td>
+      </tr>
+    </table>
+  </p>
+
+  <p>
+    <% if @convocation.residence.nil? %>
+      <%= link_to 'Mettre à jour', edit_convocation_path(@convocation), class: "btn btn-primary" %>
+    <% else %>
+      <% if @convocation.status == "paye" %>
+        <%= link_to 'Payer', "/convocations/request/payer/#{@convocation.id}" %> |
+      <% else %>
+        <%= link_to 'Modifier', "/convocations/request/payer/#{@convocation.id}" %> |
+      <% end %>
+    <% end %>
+    <%= link_to 'Retour', convocations_path %>
+  </p>
+  </div>
+</div>

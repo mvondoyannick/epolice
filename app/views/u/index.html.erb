@@ -1,0 +1,13 @@
+<h1>U#index</h1>
+<p>Find me in app/views/u/index.html.erb</p>
+
+<% if u_signed_in? %>
+    <p>
+        <%= link_to  "Se deconnecter", destroy_u_session_path, method: :delete %>
+        <%= debug current_u.email %>
+    </p>
+<% else %>
+    <p>
+        <%= link_to  "Se connecter", new_u_session_path %>
+    </p>
+<% end %>

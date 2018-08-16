@@ -26,7 +26,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 # Simple_form gem
@@ -51,6 +51,14 @@ gem 'devise'
 gem 'cancancan', '~> 2.0'
 #using underscore js
 gem 'underscore-rails', '~> 1.8', '>= 1.8.3'
+#user JSON Web Token
+gem 'jwt'
+#add minimagick gem for cropping images
+gem 'mini_magick'
+#integration de leaflet from https://github.com/axyjo/leaflet-rails
+gem 'leaflet-rails'
+#pour le breadcrumb
+gem "breadcrumbs_on_rails"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -1,0 +1,13 @@
+
+<%= simple_form_for(@grade, html: {class: 'field'}) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="control">
+    <%= f.input :name, input_html: {class: 'input is-large'}, label_html: {class: 'label subtitle is-4'} %>
+    <%= f.input :detail, input_html: {class: 'input is-large', style: "margin-botton: 25px;"}, label_html: {class: 'label subtitle is-4'} %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'button is-primary' %>
+  </div>
+<% end %>

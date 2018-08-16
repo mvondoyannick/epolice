@@ -1,25 +1,20 @@
 <div class="columns">
-  <div class="column">
-    First column
-  </div>
-  <div class="column">
+  <div class="column is-12">
     <%= simple_form_for(@agent, html: {class: "field"}) do |f| %>
       <%= f.error_notification %>
 
       <div class="control">
-        <%= f.input :name, label: "Nom", input_html: { class: 'input' }%>
-        <%= f.input :prenom, label: "Prénom", input_html: { class: 'input' } %>
-        <%= f.input :phone, label: "Numéro de téléphone", input_html: { class: 'input' } %>
-        <%= f.input :matricule, label: "Matricule", input_html: { class: 'input' } %>
-        <%= f.input :grade, prompt: "Selectionner le grade", collection: ["Lieutenant", "Adjudant", "Capitaine", "Sergent"] %>
-        <%= f.association :commissariat, prompt: "Selectionner commissariat d'affectation", label: "Commissariat" %>
+        <%= f.input :name, label: "Nom", input_html: { class: 'input is-large', style: "margin-bottom: 30px;" }, label_html: {class: 'label subtitle is-4'}%>
+        <%= f.input :prenom, label: "Prénom", input_html: { class: 'input is-large', style: "margin-bottom: 30px;" }, label_html: {class: 'subtitle is-4'} %>
+        <%= f.input :phone, label: "Numéro de téléphone", input_html: { class: 'input is-large', style: "margin-bottom: 30px;" }, label_html: {class: 'subtitle is-4'} %>
+        <%= f.input :matricule, label: "Matricule", input_html: { class: 'input is-large', style: "margin-bottom: 30px;" }, label_html: {class: 'subtitle is-4'} %>
+        <%= f.input :avatar, label: "Image", label_html: {class: "subtitle is-4", style: "margin-right: 100px;"}, input_html: {class: "input "} %>
+        <%= f.association :grade, prompt: "Selectionner un grade", label: "Grade", input_html: { class: 'select is-large', style: "margin-bottom: 30px;"}, label_html: {class: 'subtitle is-4'} %>
+        <%= f.association :commissariat, prompt: "Selectionner commissariat d'affectation", label: "Commissariat", input_html: { class: 'select is-large', style: "margin-bottom: 30px;"}, label_html: {class: 'subtitle is-4'} %>
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit %>
+        <%= f.button :submit, class: 'button is-primary' %>
       </div>
     <% end %>
-  </div>
-  <div class="column">
-    First column
   </div>

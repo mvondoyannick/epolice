@@ -1,37 +1,4 @@
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 <p id="notice"><%= notice %></p>
-
-  <div class="row">
-    <div class="col-lg-4">
-      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-        <div class="card-header">Nouvelle affectation</div>
-        <div class="card-body">
-          <h5 class="card-title"><%= link_to 'Nouvelle affectation d agent', new_affectation_path, style: "color: #FFF;" %></h5>
-          <p class="card-text"></p>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-        <div class="card-header">Carte des carrefours</div>
-        <div class="card-body">
-          <h5 class="card-title"><%= link_to 'Voir la cartographie des carrefours', convocations_path, style: "color: #FFF;" %></h5>
-          <p class="card-text"></p>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-        <div class="card-header">Historique</div>
-        <div class="card-body">
-          <h5 class="card-title"><%= link_to 'Historique des agents affectés', agents_path, style: "color: #FFF;" %></h5>
-          <p class="card-text"></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<h1>Affectations</h1>
 
 <table class="table" id="table">
   <thead>
@@ -57,9 +24,9 @@
         <td><%= affectation.agent.phone %></td>
         <td><%= affectation.carrefour.name %></td>
         <td><%= affectation.date %></td>
-        <td><%= link_to 'Show', affectation %></td>
-        <td><%= link_to 'Edit', edit_affectation_path(affectation) %></td>
-        <td><%= link_to 'Destroy', affectation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', affectation, class: "button is-primary" %></td>
+        <td><%= link_to 'Edit', edit_affectation_path(affectation), class: "button is-primary" %></td>
+        <td><%= link_to 'Destroy', affectation, method: :delete, data: { confirm: 'Are you sure?' }, class: "button is-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -67,5 +34,5 @@
 
 <br>
 
-<%= link_to 'New Affectation', new_affectation_path %>
+<%= link_to 'New Affectation', new_affectation_path, class: "button is-primary" %>
 </main>

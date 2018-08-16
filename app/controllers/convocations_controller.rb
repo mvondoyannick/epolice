@@ -6,6 +6,7 @@ class ConvocationsController < ApplicationController
   # GET /convocations
   # GET /convocations.json
   def index
+    render layout: 'admin'
     @convocations = Convocation.all
     @title = "Toutes les convocations"
     @compteur = @convocations.count
@@ -14,6 +15,7 @@ class ConvocationsController < ApplicationController
   # GET /convocations/1
   # GET /convocations/1.json
   def show
+    render layout: 'admin'
   end
 
   def home
@@ -41,6 +43,7 @@ class ConvocationsController < ApplicationController
 
   # GET /convocations/new
   def new
+    render layout: 'admin'
     @code = SecureRandom.hex(10).upcase
     @convocation = Convocation.new
     @description = "Creer une nouvelle convocation"
@@ -48,6 +51,7 @@ class ConvocationsController < ApplicationController
 
   # GET /convocations/1/edit
   def edit
+    render layout: 'admin'
   end
 
   # le paiement

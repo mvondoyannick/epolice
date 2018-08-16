@@ -1,0 +1,45 @@
+<div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Liste de contraventions
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </a>
+      </header>
+      <div class="card-table">
+        <div class="content">
+          <table class="table is-fullwidth is-striped">
+            <tbody>
+              <% @alerte_tmp = Convocation.all.limit(10) %>
+              <% if @alerte_tmp.nil? %>
+                <tr>
+                  <td width="5%"><i class="fa fa-bell-o"></i></td>
+                  <td>Aucunes convocation publiées pour le moment.</td>
+                </tr>
+              <% else %>
+                <% @alerte_tmp.each do |alerte| %>
+                  <tr>
+                    <td width="5%"><i class="fa fa-bell-o"></i></td>
+                    <td>
+                      <%= alerte.created_at.strftime("%B %d, %Y") %>
+                    </td>
+                    <td>
+                      <%= alerte.phone %>
+                    </td>
+                    <td>
+                      <%= link_to  "Détail", convocation_path(alerte.id), class: "button is-small is-primary" %>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <%= link_to 'Voir toutes les convocations', acces_convocations_convocation_all_path, class: 'card-footer-item' %>
+      </footer>
+    </div>

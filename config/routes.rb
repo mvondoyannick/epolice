@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  resources :roles
+  resources :services
+  resources :workflows
+  get 'u/index'
+  get 'u/private'
+  devise_for :us
+  resources :grades
   get 'access/index'
   get 'access/login'
   get 'access/logout'
@@ -11,7 +18,12 @@ Rails.application.routes.draw do
   get 'welcome/home'
 
   #route generique
-  match ':controller(/:action/(:id))', via: [:get, :post]
+  #match ':controller(/:action/(:id))', via: [:get, :post]
+
+  post 'a/b', to: 'access#attemp_login'
+
+  #demande de compte et envoi des parametres
+  post 'b/c', to: 'access#attemp_account'
 
   resources :carrefours
   resources :carrefours do
@@ -35,6 +47,9 @@ Rails.application.routes.draw do
   #root 'convocations#index'
   #root 'welcome#home'
   root 'access#login'
+
+  resources :access do
+  end
   #pour la gestion des carrefours
   get 'carrefours/cartograhie/all', to: 'carrefours#cartographie'
 
@@ -43,13 +58,23 @@ Rails.application.routes.draw do
   get 'access/request_docs', to: 'access#request_docs'
 
   #gestion de la demande d'un compte
-  get 'access/request_account', to: 'access#request_account'
+  get 'access/request/auth/account', to: 'access#request_account'
+  #post 'access/request/auth/account', to: 'access#request_account'
 
   #gestion de about
   get 'access/about', to: 'access#about'
 
+  #voir toutes les alertes
+  get 'access/alertes/alerte/all', to: 'access#alerte_all'
+
+  #voir toutes les convocations
+  get 'acces/convocations/convocation/all', to: 'access#convocation_all'
+
+  #pour les autres services de la plateforme autres que la DGSN
+  get 'access/request/service/open', to: 'access#request_service'
+
   #concernant les email
-  get 'access/email', to: 'access#email'
+  get 'access/email(/:user_id)', to: 'access#email'
 
   #gestion des convocation
   get 'convocations/all/not_paid', to: 'convocations#not_paid'

@@ -1,164 +1,214 @@
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
 <p id="notice"><%= notice %></p>
   <%  @agent = Agent.find(@convocation.agent_id) %>
-  <h2>
-    Infraction du <%= @convocation.created_at %>
+  <h2 class="title is-3">
+    Infraction du <%= @convocation.created_at.strftime("%B %d, %Y") %> par <%= @convocation.name %> 
   </h2>
-  <br>
-<div class="row">
-  <div class="col-md-4">
-    <!-- <div class="card" style="width: 18rem;">
-      <%= image_tag 'img/avatar.png', class: "card-img-top" %>
-<div class="card-body">
-  <h5 class="card-title">Agent de police</h5>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="btn btn-primary">Dossier complet</a>
-</div>
-    </div> -->
-    <div class="box box-widget widget-user-2">
-            <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="widget-user-header bg-yellow">
-              <div class="widget-user-image">
-                <%= image_tag 'img/avatar.png', class: "img-circle" %>
-              </div>
-              <!-- /.widget-user-image -->
-              <% if @agent.nil? %>
-                <h3 class="widget-user-username">Agent non identifié</h3>
-              <% else %>
-                <h3 class="widget-user-username"><%= @agent.name %> <%= @agent.prenom %></h3>
-                <h5 class="widget-user-desc"><%= @agent.grade %></h5>
-              <% end %>
+  <hr>
+  <div class="columns">
+  <div class="column is-6">
+    <div class="card events-card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Liste d'alertes
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </a>
+      </header>
+      <div class="card-table">
+        <div class="content">
+          <table class="table is-fullwidth is-striped">
+            <tbody>
+              <tr>
+                <td width="5%">CNI</td>
+                <td>
+                  <%= @convocation.cni %> <!-- #strftime("%B %d, %Y") -->
+                </td>
+              </tr>
+              <tr>
+                <td width="5%">Téléphone</td>
+                <td>
+                  <%= @convocation.phone %> <!-- #strftime("%B %d, %Y") -->
+                </td>
+              </tr>
+              <tr>
+                <td width="5%">Prénom</td>
+                <td>
+                  <%= @convocation.prenom %> <!-- #strftime("%B %d, %Y") -->
+                </td>
+              </tr> 
+              <tr>
+                <td width="5%">Immatriculation</td>
+                <td>
+                  <%= @convocation.immatriculation %> <!-- #strftime("%B %d, %Y") -->
+                </td>
+              </tr>
+              <tr>
+                <td width="5%">Résidence</td>
+                <td>
+                  <%= @convocation.residence %> <!-- #strftime("%B %d, %Y") -->
+                </td>
+              </tr>
+              <tr>
+                <td width="5%">Emploi</td>
+                <td>
+                  <%= @convocation.emploi %> <!-- #strftime("%B %d, %Y") -->
+                </td>
+              </tr>
+              <tr>
+                <td width="5%">Motif</td>
+                <td>
+                  <%= @convocation.motif %> <!-- #strftime("%B %d, %Y") -->
+                </td>
+              </tr>
+              <tr>
+                <td width="5%">CNI</td>
+                <td>
+                  <%= @convocation.cni %> <!-- #strftime("%B %d, %Y") -->
+                </td>
+              </tr>
+              <tr>
+                <td width="5%">Observation</td>
+                <td>
+                  <%= @convocation.observation %> <!-- #strftime("%B %d, %Y") -->
+                </td>
+              </tr> 
+              <tr>
+                <td width="5%">Localisation</td>
+                <td>
+                  <%= @convocation.observation %> <!-- #strftime("%B %d, %Y") -->
+                </td>
+              </tr> 
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <a href="#" class="card-footer-item">Voir sur la carte</a>
+      </footer>
+    </div>
+    <div class="card-table">
+      <div class="content">
+        <table class="table is-fullwidth is-striped">
+          <tbody>
+            <tr>
+              <td width="5%">Piece (s) retenue (s)</td>
+              <td>
+                <%= @convocation.observation %> <!-- #strftime("%B %d, %Y") -->
+              </td>
+            </tr>
+            <tr>
+              <td width="5%">Ville</td>
+              <td>
+                <%= @convocation.ville %> <!-- #strftime("%B %d, %Y") -->
+              </td>
+            </tr>
+            <tr>
+              <td width="5%">Quartier</td>
+              <td>
+                <%= @convocation.quartier %> <!-- #strftime("%B %d, %Y") -->
+              </td>
+            </tr> 
+            <tr>
+              <td width="5%">Rue</td>
+              <td>
+                <%= @convocation.rue %> <!-- #strftime("%B %d, %Y") -->
+              </td>
+            </tr>
+            <tr>
+              <td width="5%">Année naissance</td>
+              <td>
+                <%= @convocation.an %> <!-- #strftime("%B %d, %Y") -->
+              </td>
+            </tr>
+            <tr>
+              <td width="5%">Sexe</td>
+              <td>
+                <%= @convocation.sexe %> <!-- #strftime("%B %d, %Y") -->
+              </td>
+            </tr>
+            <tr>
+              <td width="5%">Motif</td>
+              <td>
+                <%= @convocation.motif %> <!-- #strftime("%B %d, %Y") -->
+              </td>
+            </tr>
+            <tr>
+              <td width="5%">CNI</td>
+              <td>
+                <%= @convocation.cni %> <!-- #strftime("%B %d, %Y") -->
+              </td>
+            </tr>
+            <tr>
+              <td width="5%">Observation</td>
+              <td>
+                <%= @convocation.observation %> <!-- #strftime("%B %d, %Y") -->
+              </td>
+            </tr> 
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="column is-6">
+      <div class="card">
+  <div class="card-image">
+    <figure class="image is-4by4">
+    <%= image_tag  "logo" %>
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-48x48">
+          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="title is-4"><%= @agent.name %></p>
+        <p class="subtitle is-6"><%= @agent.prenom %></p>
+      </div>
+    </div>
 
-            </div>
-            <div class="box-footer no-padding">
-              <br>
-              <p>
-                <span class="pull-left badge bg-blue">0</span> &nbsp; Nom : <%= @agent.name.upcase %>
-              </p>
-              <p>
-                <span class="pull-left badge bg-blue">0</span> &nbsp; Prénom : <%= @agent.prenom %>
-              </p>
-              <p>
-                <span class="pull-left badge bg-blue">0</span> &nbsp; Matricule : <%= @agent.matricule %>
-              </p>
-              <p>
-                <span class="pull-left badge bg-blue">0</span> &nbsp; Téléphone : <%= @agent.phone %>
-              </p>
-              <p>
-                <span class="pull-left badge bg-blue">0</span> &nbsp; Grade : <%= @agent.grade %>
-              </p>
-              <p>
-                <span class="pull-left badge bg-blue">0</span> &nbsp; Crée le : <%= @agent.created_at %>
-              </p>
-              <p>
-                <span class="pull-left badge bg-blue">0</span> &nbsp; <%= link_to 'Voir historique' %>
-              </p>
+    <div class="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+      <a href="#">#css</a> <a href="#">#responsive</a>
+      <br>
+      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+      <br>
+      <br>
+      <%= link_to  "Voir le profile", @agent, class: 'button is-primary' %>
+    </div>
+  </div>
+</div>
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Rechercher un utilisateur
+          </p>
+          <a href="#" class="card-header-icon" aria-label="more options">
+            <span class="icon">
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </a>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-large" type="text" placeholder="">
+              <span class="icon is-medium is-left">
+                <i class="fa fa-search"></i>
+              </span>
+              <span class="icon is-medium is-right">
+                <i class="fa fa-check"></i>
+              </span>
             </div>
           </div>
-  </div>
-  <div class="col-md-4">
-    <h3>Details Infraction</h3>
-    <table class="table">
-      <tr>
-        <td><strong>Cni:</strong></td>
-        <td><%= @convocation.cni %></td>
-      </tr>
-      <tr>
-        <td><strong>Phone:</strong></td>
-        <td><%= @convocation.phone %></td>
-      </tr>
-      <tr>
-        <td><strong>Prenom:</strong></td>
-        <td><%= @convocation.prenom %></td>
-      </tr>
-      <tr>
-        <td><strong>Immatriculation:</strong></td>
-        <td><%= @convocation.immatriculation %></td>
-      </tr>
-      <tr>
-        <td><strong>Residence:</strong></td>
-        <td><%= @convocation.residence %></td>
-      </tr>
-      <tr>
-        <td><strong>Emploi:</strong></td>
-        <td><%= @convocation.emploi %></td>
-      </tr>
-      <tr>
-        <td><strong>Motif:</strong></td>
-        <td><%= @convocation.motif %></td>
-      </tr>
-      <tr>
-        <td><strong>Observation:</strong></td>
-        <td><%= @convocation.observation %></td>
-      </tr>
-    </table>
-  </div>
-  <div class="col-md-4">
-    <br>
-    <table class="table">
-      <tr>
-        <td><strong>Piece(s) retenuee(s):</strong></td>
-        <td><%= @convocation.observation %></td>
-      </tr>
-      <tr>
-        <td><strong>Ville:</strong></td>
-        <td><%= @convocation.ville %></td>
-      </tr>
-      <tr>
-        <td><strong>Quartier:</strong></td>
-        <td><%= @convocation.quartier %></td>
-      </tr>
-      <tr>
-        <td><strong>Rue:</strong></td>
-        <td><%= @convocation.rue %></td>
-      </tr>
-      <tr>
-        <td><strong>Année de Naissance:</strong></td>
-        <td><%= @convocation.an %></td>
-      </tr>
-      <tr>
-        <td><strong>Quartier:</strong></td>
-        <td><%= @convocation.quartier %></td>
-      </tr>
-      <tr>
-        <td><strong>sexe:</strong></td>
-        <td><%= @convocation.sexe %></td>
-      </tr>
-      <tr>
-        <td><strong>Statut:</strong></td>
-        <td>
-          <% if @convocation.status.nil? %>
-            Inconnu
-          <% else %>
-            <%= @convocation.status %>
-          <% end %> 
-        </td>
-      </tr>
-      <tr>
-        <td><strong>Code:</strong></td>
-        <td>
-          <% if @convocation.code.nil? %>
-            Inconnue
-          <% else %>
-            <%= @convocation.code %>
-          <% end %>
-        </td>
-      </tr>
-    </table>
-  </p>
-
-  <p>
-    <% if @convocation.residence.nil? %>
-      <%= link_to 'Mettre à jour', edit_convocation_path(@convocation), class: "btn btn-primary" %>
-    <% else %>
-      <% if @convocation.status == "paye" %>
-        <%= link_to 'Payer', "/convocations/request/payer/#{@convocation.id}" %> |
-      <% else %>
-        <%= link_to 'Modifier', "/convocations/request/payer/#{@convocation.id}" %> |
-      <% end %>
-    <% end %>
-    <%= link_to 'Retour', convocations_path %>
-  </p>
+        </div>
+      </div>
   </div>
 </div>
-</main>

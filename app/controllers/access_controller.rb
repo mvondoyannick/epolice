@@ -5,6 +5,10 @@ class AccessController < ApplicationController
   def index
   end
 
+  def new
+    @request = Fylo.new
+  end
+
   def login
     render layout: 'login'
   end
@@ -50,7 +54,44 @@ class AccessController < ApplicationController
   #route /access/request/account
   #params:
   def request_account
-    
+    @request = Fylo.new(params[:name])
+
+    respond_to do |format|
+      if @request.save
+        format.html { redirect_to @request, notice: 'Alerte was successfully created.' }
+        format.json { render :show, status: :created, location: @request }
+      else
+        format.html { render controller: "access", action: "login" }
+        format.json { render json: @request.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def request_service
+    render layout: 'other'
+    @alert = Alerte.all
+  end
+
+  def attemp_account
+    if params[:service].present? && params[:nom].present? && params[:prenom].present? && params[:matricule].present? && params[:phone].present? && params[:email].present? && params[:_pwd].present? && params[:pwd_confirme].present?
+      #on considere que tout est ok
+      redirect_to(action: 'login')
+    else
+      flash[:notice] = "Certains champs semblent etre vides"
+      print "Certains champs semblent etre vides #{params}"
+    end
+  end
+
+  #voir toutes les alertes
+  def alerte_all
+    @alerte = Alerte.all
+    render layout: 'admin'
+  end
+
+  #voir toutes les convocations
+  def convocation_all
+    @convocation = Convocation.all
+    render layout: 'admin'
   end
 
   def attemp_login
@@ -62,13 +103,16 @@ class AccessController < ApplicationController
         session[:name] = found_user.name
         session[:id] = found_user.id
         session[:lastConnection] = found_user.lastConnected
-        flash[:notice] = "vous etes connecté"
+        flash[:notice] = "#{session[:name]} vous etes connecté"
         case found_user.service
           when "urgence"
-            redirect_to(action: 'urgence')
+            session[:service] = "urgence"
+            redirect_to(action: 'request_service', id: 'fylo')
           when "developer"
+            session[:service] = "admin"
             redirect_to(action: 'developer')
           when "admin"
+            session[:service] = "admin"
             redirect_to(action: 'admin')
         end
       else
@@ -95,5 +139,10 @@ class AccessController < ApplicationController
       return true
     end
   end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  # def access_params
+  #   params.require(:fylo).permit(:name, :prenom, :email)
+  # end
 
 end

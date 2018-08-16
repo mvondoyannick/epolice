@@ -1,4 +1,3 @@
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 <p id="notice"><%= notice %></p>
 
 <div class="col-xs-12">
@@ -19,6 +18,7 @@
     </thead>
 
     <tbody>
+      <% @convocations = Convocation.all %>
       <% @convocations.each do |convocation| %>
         <tr>
           <td><%= convocation.created_at.strftime('%x') %></td>
@@ -39,7 +39,7 @@
             <% end %>
           </td>
           <td>
-            <%= link_to 'Afficher', convocation %>
+            <%= link_to 'Afficher', convocation, class: "button is-primary" %>
           </td>
           <!-- <td><%= link_to 'Modifier', edit_convocation_path(convocation) %></td>
           <td><%= link_to 'Supprimer', convocation, method: :delete, data: { confirm: 'Etes vous sur?' } %></td> -->

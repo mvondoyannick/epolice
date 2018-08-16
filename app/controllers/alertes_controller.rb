@@ -1,24 +1,38 @@
 class AlertesController < ApplicationController
   before_action :set_alerte, only: [:show, :edit, :update, :destroy]
+  require 'net/http'
+  require 'json'
 
+  def parseUri(adresse)
+    url = adresse.to_s
+    uri = URI(url)
+    response = Net::HTTP(uri)
+    @response = JSON.parse(response)
+  end
+
+  #render layout: 'admin'
   # GET /alertes
   # GET /alertes.json
   def index
     @alertes = Alerte.all
+    render layout: 'admin'
   end
 
   # GET /alertes/1
   # GET /alertes/1.json
   def show
+    render layout: 'admin'
   end
 
   # GET /alertes/new
   def new
     @alerte = Alerte.new
+    render layout: 'admin'
   end
 
   # GET /alertes/1/edit
   def edit
+    render layout: 'admin'
   end
 
   #Affiche les alertes encors
@@ -79,6 +93,6 @@ class AlertesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alerte_params
-      params.require(:alerte).permit(:titre, :description, :date, :ville_id, :type_id, :agent_id, :action, :lieu, :status)
+      params.require(:alerte).permit(:titre, :description, :date, :ville_id, :type_id, :agent_id, :action, :lieu, :status, :longitude, :latitude, :alertes)
     end
 end

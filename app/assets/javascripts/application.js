@@ -11,7 +11,23 @@
 // about supported directives.
 //
 //= require jquery
+//= require leaflet
 //= require underscore
 //= require rails-ujs
 //= require turbolinks
+//= require gmaps
 //= require_tree .
+
+/* on recherche la classe .fa et on lui ajoute la couleur noire  */
+$("i").css('color','#000000');
+
+Rails.ajax({
+    type: "GET",
+    url: "/alertes/1.json",
+    success: function(response){
+        console.log(response);
+    },
+    error: function(err){
+        console.log(err);
+    }
+})

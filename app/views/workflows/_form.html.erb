@@ -1,0 +1,55 @@
+
+<%= simple_form_for(@workflow) do |f| %>
+  <%= f.error_notification %>
+  <div class="columns">
+    <div class="column">
+      <% @agent = Agent.find(session[:id]) %>
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4"><%= @agent.name %></p>
+              <p class="subtitle is-6"><%= @agent.prenom %></p>
+            </div>
+          </div>
+
+          <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+            <a href="#">#css</a> <a href="#">#responsive</a>
+            <br>
+            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="controls">
+        <%= f.input :status, as: :radio_buttons, priority: ["Not receive"], collection: ["Not receive", "receive"], prompt: "Selectionner un status", input_html: {style: "margin: 20px;"} %>
+        <hr>
+        <%= f.input :document, as: :check_boxes, collection: ["Permis de conduire", "Carte grise", "Dossier complet", "Immobilisation du vehicule", "carte grise"], input_html: {style: 'margin: 20px;'} %>
+        <hr>
+        <%= f.association :agent, prompt: "Selectionner un agent", label: "Agent", input_html: {class: 'dropdown', style: 'display: inline;'}, label_html: {class: 'checkbox', style: 'display: inline;'} %>
+        <hr>
+        <%= f.association :commissariat, prompt: "Selectionner une contravention", label: "Contravention" %>
+        <hr>
+        <%= f.association :contravetion, prompt: "Selectionner une contravention", label: "Contravention" %>
+      </div> 
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+  
+<% end %>

@@ -4,120 +4,15 @@
     <title>POP Circulation</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'bulma.min', media: 'all', 'data-turbolinks-track': 'reload'  %>
     <%= javascript_include_tag 'https://use.fontawesome.com/releases/v5.1.0/js/all.js', media: 'all' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag "view-source:https://dansup.github.io/bulma-templates/js/bulma.js", media: 'all' %>
+    <%= javascript_include_tag "bulma", media: 'all' %>
     
   </head>
 
   <body>
-    <div class="container">
-      <section class="hero is-primary">
-        <!-- Hero head: will stick at the top -->
-        <div class="hero-head">
-          <nav class="navbar" role="navigation" aria-label="dropdown navigation">
-            <div class="container">
-              <div class="navbar-brand">
-                <%= link_to  "E-POLICE", root_path, class: "navbar-item" %>
-                <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </span>
-              </div>
-              <div id="navbarMenuHeroA" class="navbar-menu">
-                <div class="navbar-end">
-                  <%= link_to  "Accueil", root_path, class: "navbar-item is-active" %>
-                  <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                      Docs
-                    </a>
-
-                    <div class="navbar-dropdown" style="background-color: #000;">
-                      <a class="navbar-item">
-                        Overview
-                      </a>
-                      <a class="navbar-item">
-                        Elements
-                      </a>
-                      <a class="navbar-item">
-                        Components
-                      </a>
-                      <hr class="navbar-divider">
-                      <div class="navbar-item">
-                        Version 0.7.1
-                      </div>
-                    </div>
-                  </div>
-                  <a class="navbar-item">
-                    Message
-                  </a>
-                  <a class="navbar-item">
-                    Configuration
-                  </a>
-                  <div class="navbar-item has-dropdown is-hoverable">
-                    <%= link_to  session[:name], '#', class: "navbar-item", style: "margin-right: 20px;" %>
-
-                    <div class="navbar-dropdown" style="background-color: #000;">
-                      <a class="navbar-item">
-                        Compte
-                      </a>
-                      <a class="navbar-item">
-                        Elements
-                      </a>
-                      <%= link_to  'Déconnexion', access_logout_path, class: "navbar-item", style: "margin-right: 20px;" %>
-                      <hr class="navbar-divider">
-                      <div class="navbar-item">
-                        Version 0.7.1
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-
-        <!-- Hero content: will be in the middle -->
-        <div class="hero-body">
-          <div class="container has-text-centered">
-            <h1 class="title">
-              <%= @page_title %>
-            </h1>
-            <h2 class="subtitle">
-              Subtitle
-            </h2>
-          </div>
-        </div>
-
-        <!-- Hero footer: will stick at the bottom -->
-        <div class="hero-foot" style="margin-bottom: 20px;">
-          <nav class="tabs">
-            <div class="container">
-              <ul>
-                <li class="is-active"><a>Overview</a></li>
-                <li><%= link_to  "Agents", agents_path %></li>
-                <li><%= link_to  "Alertes", alertes_path %></li>
-                <li><%= link_to  "Commissariat", commissariats_path %></li>
-                <li><%= link_to  "Carrefours", carrefours_path %></li>
-                <li><a>Layout</a></li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </section>
-      <%= yield %>
-      <footer class="footer">
-        <div class="content has-text-centered">
-          <p>
-            <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-          </p>
-        </div>
-      </footer>
-    </div>
+    <%= yield %>
   </body>
 </html>

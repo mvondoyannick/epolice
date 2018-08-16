@@ -1,14 +1,6 @@
 <% @page_title = "Nouvelle alerte" %>
-<div class="columns">
-    <div class="column">
-    </div>
-    <div class="column">
-        <h1>New Alerte</h1>
+    <h1 class="title is-2">New Alerte</h1>
 
-        <%= render 'form', alerte: @alerte %>
+    <%= render 'form', alerte: @alerte %>
 
-        <%= link_to 'Back', alertes_path %>
-    </div>
-    <div class="column">
-    </div>
-  </div>
+    <%= link_to 'Back', alertes_path %>

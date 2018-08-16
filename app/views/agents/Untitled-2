@@ -1,0 +1,32 @@
+<section class="hero">
+  <div class="hero-body">
+    
+  </div>
+</section>
+
+<div class="columns">
+  <div class="column">
+    
+  </div>
+  <div class="column containerLocal">
+      <h1 class="title" style="text-align: center; margin-top: 50px;">
+        Identifiez-vous!
+      </h1>
+    <%= form_tag( action: 'attemp_login') do %>
+      <table class="table noborder">
+        <tr>
+          <td><%= label_tag ("Email") %></td>
+          <td><%= text_field_tag :email, "", class: 'input' %></td>
+        </tr>
+        <tr>
+          <td><%= label_tag ("Mot de passe") %></td>
+          <td><%= password_field_tag :pwd, "", class: 'input' %></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td><%= submit_tag "Se connecter", class: 'button is-dark' %></td>
+        </tr>
+      </table>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+    <% end %>
+  </div>
+  <div class="column">

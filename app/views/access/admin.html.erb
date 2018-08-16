@@ -1,9 +1,11 @@
+<p id="notice" class="notification"> <button class="delete" id="close-warning"></button> <%= notice %></p>
+
 <div class="columns">
   <div class="column is-6">
-    <div class="card events-card">
+    <div class="card">
       <header class="card-header">
         <p class="card-header-title">
-          Liste d'alertes
+          Inventory Search
         </p>
         <a href="#" class="card-header-icon" aria-label="more options">
           <span class="icon">
@@ -11,11 +13,36 @@
           </span>
         </a>
       </header>
+      <div class="card-content">
+        <div class="content">
+          <div class="control has-icons-left has-icons-right">
+            <input class="input is-large" type="text" placeholder="">
+            <span class="icon is-medium is-left">
+              <i class="fa fa-search" style="color: #000000;"></i>
+            </span>
+            <span class="icon is-medium is-right">
+              <i class="fa fa-check" style="color: #000000;"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Liste d'alertes
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fa fa-angle-down" aria-hidden="false" style="color: #000000;"></i>
+          </span>
+        </a>
+      </header>
       <div class="card-table">
         <div class="content">
           <table class="table is-fullwidth is-striped">
             <tbody>
-              <% @alerte_tmp = Alerte.all.limit(10) %>
+              <% @alerte_tmp = Alerte.order(created_at: :desc).last(10) %>
               <% if @alerte_tmp.nil? %>
                 <tr>
                   <td width="5%"><i class="fa fa-bell-o"></i></td>
@@ -24,7 +51,7 @@
               <% else %>
                 <% @alerte_tmp.each do |alerte| %>
                   <tr>
-                    <td width="5%"><i class="fa fa-bell-o"></i></td>
+                    <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
                     <td>
                       <%= alerte.created_at.strftime("%B %d, %Y") %>
                     </td>
@@ -32,7 +59,7 @@
                       <%= alerte.titre %>
                     </td>
                     <td>
-                      <%= link_to  "Détail", "#", class: "button is-small is-primary" %>
+                      <%= link_to  "Détail", alerte_path(alerte), class: "button is-small is-primary" %>
                     </td>
                   </tr>
                 <% end %>
@@ -42,36 +69,11 @@
         </div>
       </div>
       <footer class="card-footer">
-        <a href="#" class="card-footer-item">Voir tout</a>
+        <%= link_to  "Voir toutes les alertes", access_alertes_alerte_all_path, class: "card-footer-item" %>
       </footer>
     </div>
   </div>
   <div class="column is-6">
-      <div class="card">
-        <header class="card-header">
-          <p class="card-header-title">
-            Inventory Search
-          </p>
-          <a href="#" class="card-header-icon" aria-label="more options">
-            <span class="icon">
-              <i class="fa fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </a>
-        </header>
-        <div class="card-content">
-          <div class="content">
-            <div class="control has-icons-left has-icons-right">
-              <input class="input is-large" type="text" placeholder="">
-              <span class="icon is-medium is-left">
-                <i class="fa fa-search"></i>
-              </span>
-              <span class="icon is-medium is-right">
-                <i class="fa fa-check"></i>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="card">
         <header class="card-header">
           <p class="card-header-title">
@@ -88,14 +90,59 @@
             <div class="control has-icons-left has-icons-right">
               <input class="input is-large" type="text" placeholder="">
               <span class="icon is-medium is-left">
-                <i class="fa fa-search"></i>
+                <i class="fa fa-search" style="color: #000000;"></i>
               </span>
               <span class="icon is-medium is-right">
-                <i class="fa fa-check"></i>
+                <i class="fa fa-check" style="color: #000000;"></i>
               </span>
             </div>
           </div>
         </div>
       </div>
+      <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Liste de contraventions
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fa fa-angle-down" style="color: #000000;" aria-hidden="true"></i>
+          </span>
+        </a>
+      </header>
+      <div class="card-table">
+        <div class="content">
+          <table class="table is-fullwidth is-striped">
+            <tbody>
+              <% @alerte_tmp = Convocation.order(created_at: :desc).last(10) %>
+              <% if @alerte_tmp.nil? %>
+                <tr>
+                  <td width="5%"><i class="fa fa-bell-o"></i></td>
+                  <td>Aucunes convocation publiées pour le moment.</td>
+                </tr>
+              <% else %>
+                <% @alerte_tmp.each do |alerte| %>
+                  <tr>
+                    <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
+                    <td>
+                      <%= alerte.created_at.strftime("%B %d, %Y") %>
+                    </td>
+                    <td>
+                      <%= alerte.phone %>
+                    </td>
+                    <td>
+                      <%= link_to  "Détail", convocation_path(alerte.id), class: "button is-small is-primary" %>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <%= link_to 'Voir toutes les convocations', acces_convocations_convocation_all_path, class: 'card-footer-item' %>
+      </footer>
+    </div>
   </div>
 </div>

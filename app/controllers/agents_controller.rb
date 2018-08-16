@@ -5,20 +5,24 @@ class AgentsController < ApplicationController
   # GET /agents.json
   def index
     @agents = Agent.all
+    render layout: 'admin'
   end
 
   # GET /agents/1
   # GET /agents/1.json
   def show
+    render layout: 'admin'
   end
 
   # GET /agents/new
   def new
     @agent = Agent.new
+    render layout: 'admin'
   end
 
   # GET /agents/1/edit
   def edit
+    render layout: 'admin'
   end
 
   # POST /agents
@@ -69,6 +73,6 @@ class AgentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def agent_params
-      params.require(:agent).permit(:name, :prenom, :phone, :matricule, :grade, :commissariat_id)
+      params.require(:agent).permit(:name, :prenom, :phone, :matricule, :grade, :commissariat_id, :grade_id, :avatar)
     end
 end

@@ -1,0 +1,69 @@
+<div class="column is-3">
+    <aside class="menu">
+        <p class="menu-label">
+            Général
+        </p>
+        <ul class="menu-list">
+            <li><a class="is-active">Dashboard</a></li>
+            <li><a>Customers</a></li>
+        </ul>
+        <p class="menu-label">
+            Administration DGSN
+        </p>
+        <ul class="menu-list">
+        <li>
+            <%= link_to  "Gestion des agents", agents_path %>
+            <ul>
+                <li><a>Personnels</a></li>
+                <li><%= link_to  "Ajout", new_agent_path %></li>
+                <li><a>Imprimer</a></li>
+                <li><a>Par region</a></li>
+                <li><a>Repartion sur une carte</a></li>
+                <li><%= link_to  "Gestion des affectation des agents", affectations_path %></li>
+            </ul>
+        </li>
+        <li>
+            <%= link_to  "Gestion des grades", grades_path %>
+            <ul>
+                <li><%= link_to  "Liste des grades", grades_path %></li>
+                <li><%= link_to  "Ajouter un grade", new_grade_path %></li>
+            </ul>
+        </li>
+        <li>
+            <%= link_to  "Gestion des convocations", convocations_path %>
+            <ul>
+                <li><%= link_to  "Nouvelle convocation", new_convocation_path %></li>
+                <li><a>Plugins</a></li>
+                <li><a>Add a member</a></li>
+            </ul>
+        </li>
+        <li>
+            <%= link_to  "Gestion des infractions", infractions_path %>
+            <ul>
+                <li><%= link_to  "Nouvelle convocation", new_convocation_path %></li>
+                <li><a>Plugins</a></li>
+                <li><a>Add a member</a></li>
+            </ul>
+        </li>
+        <li>
+            <%= link_to  "Gestion des villes", villes_path %>
+            <ul>
+                <li><%= link_to  "Nouvelle convocation", new_convocation_path %></li>
+                <li><a>Plugins</a></li>
+                <li><a>Add a member</a></li>
+            </ul>
+        </li>
+        <li><%= link_to  "Gestion des commissariats", commissariats_path %></li>
+        <li><%= link_to  "Gestion des alertes", alertes_path %></li>
+        <li><%= link_to  "Gestion des carrefours", carrefours_path %></li>
+        </ul>
+        <p class="menu-label">
+        Comptes et partenaires
+        </p>
+        <ul class="menu-list">
+        <li><a>Payments</a></li>
+        <li><a>Transfers</a></li>
+        <li><a>Balance</a></li>
+        </ul>
+    </aside>
+</div>

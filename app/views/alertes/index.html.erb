@@ -1,9 +1,9 @@
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
 <p id="notice"><%= notice %></p>
 
-<h1>Alertes</h1>
+<h1 class="title is-2">Liste des Alertes</h1>
 
-<table class="table table-hover" id="table">
+<table class="table" id="table">
   <thead class="thead-dark">
     <tr>
       <th>Titre</th>
@@ -31,5 +31,4 @@
 
 <br>
 
-<%= link_to 'New Alerte', new_alerte_path %>
-</main>
+<%= link_to 'New Alerte', new_alerte_path, class: 'button is-primary' %>

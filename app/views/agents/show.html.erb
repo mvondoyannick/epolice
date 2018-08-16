@@ -1,34 +1,75 @@
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-<p id="notice"><%= notice %></p>
 
-<div class="row">
-  <div class="col-sm">  </div>
-</div>  
-<p>
-  <strong>Name:</strong>
-  <%= @agent.name %>
+<p id="notice" class="notification"><%= notice %></p>
+<div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Information sur l'agent
+        </p>
+        <%= link_to 'Modifier', edit_agent_path(@agent), class: 'button is-primary' %> |
+      <%= link_to 'Retour', agents_path %>
+      </header>
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <% if @agent.avatar.attached? %>
+            <%= image_tag(@agent.avatar, size: 250) %>
+          <% else %>
+            <%= image_tag 'https://bulma.io/images/placeholders/1280x960.png' %>
+          <% end %>
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="content">
+          <div class="subtitle is-4">
+            Identifiants de l'agent de police
+          </div>
+          <table class="table">
+            <tr>
+              <td><strong>1</strong></td>
+              <td><strong>Matricule</strong></td>
+              <td><%= @agent.matricule %></td>
+            </tr>
+            <tr>
+              <td><strong>2</strong></td>
+              <td><strong>Nom</strong></td>
+              <td><%= @agent.name %></td>
+            </tr>
+            <tr>
+              <td><strong>1</strong></td>
+              <td><strong>Prénom</strong></td>
+              <td><%= @agent.prenom %></td>
+            </tr>
+            <tr>
+              <td><strong>1</strong></td>
+              <td><strong>Téléphone</strong></td>
+              <td><%= @agent.phone %></td>
+            </tr>
+            <tr>
+              <td><strong>1</strong></td>
+              <td><strong>Grade</strong></td>
+              <td><%= @agent.grade.name %></td>
+            </tr>
+            <tr>
+              <td><strong>1</strong></td>
+              <td><strong>Commissariat</strong></td>
+              <td><%= @agent.commissariat.name %></td>
+            </tr>
+            <tr>
+              <td><strong>1</strong></td>
+              <td><strong>Ville</strong></td>
+              <td><%= @agent.matricule %></td>
+            </tr>
+            <tr>
+              <td><strong>1</strong></td>
+              <td><strong>Identifiant</strong></td>
+              <td><%= rand(@agent.id) %></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <a href="#" class="card-footer-item">Save</a>
+        <a href="#" class="card-footer-item">Edit</a>
+        <a href="#" class="card-footer-item">Delete</a>
+      </footer>
+    </div>
 </p>
-
-<p>
-  <strong>Prenom:</strong>
-  <%= @agent.prenom %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @agent.phone %>
-</p>
-
-<p>
-  <strong>Matricule:</strong>
-  <%= @agent.matricule %>
-</p>
-
-<p>
-  <strong>Grade:</strong>
-  <%= @agent.grade %>
-</p>
-
-<%= link_to 'Edit', edit_agent_path(@agent) %> |
-<%= link_to 'Back', agents_path %>
-</main>

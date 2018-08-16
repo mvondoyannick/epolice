@@ -5,20 +5,24 @@ class AffectationsController < ApplicationController
   # GET /affectations.json
   def index
     @affectations = Affectation.all
+    render layout: 'admin'
   end
 
   # GET /affectations/1
   # GET /affectations/1.json
   def show
+    render layout: 'admin'
   end
 
   # GET /affectations/new
   def new
     @affectation = Affectation.new
+    render layout: 'admin'
   end
 
   # GET /affectations/1/edit
   def edit
+    render layout: 'admin'
   end
 
   # POST /affectations
