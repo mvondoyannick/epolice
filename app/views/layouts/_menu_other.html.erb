@@ -37,11 +37,27 @@
                 <%= link_to  Fylo.find(session[:id]).name, "#", class: "navbar-item" %>
             <% end  %>
             
-            <%= link_to  "Administration", access_admin_path, class: "navbar-item" %>
-            <%= link_to  "Notifications", root_path, class: "navbar-item" %>
-            <%= link_to  "Messages", "/access/email/#{session[:id]}", class: "navbar-item" %>
-            <%= link_to  "Comptes", root_path, class: "navbar-item" %>
-            <%= link_to  "Déconnexion", access_logout_path, class: "navbar-item" %>
+            <%= link_to  access_admin_path, class: "navbar-item" if control? do %>
+              <i class="fa fa-envelope"></i>
+              "Administration" 
+            <% end %>
+            <%= link_to  root_path, class: "navbar-item" do %>
+              <i class="fa fa-comments-o" style="color: #000000;" ></i>
+              Notifications
+            <% end %>
+            <%= link_to  "/access/email/#{session[:id]}", class: "navbar-item" do %>
+              <i class="fa fa-envelope" style="color: #000000;"></i>
+              Messages
+            <% end %>
+            <%= link_to  "Comptes", root_path, class: "navbar-item" if control? %>
+            <%= link_to  root_path, class: "navbar-item" do %>
+              <i class="fa fa-search" style="color: #000000;"></i>
+              Hisrorique
+            <% end -%>
+            <%= link_to  access_logout_path, class: "navbar-item" do %>
+              <i class="fa fa-sign-out" style="color: #000000;"></i>
+              Déconnexion
+            <% end -%>
           </div>
         </div>
       </div>

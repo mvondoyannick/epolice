@@ -1,6 +1,7 @@
 class AccessController < ApplicationController
   #on verifie si l'utilisateur est connecter avant de donner acces aux ressource
-  before_action :confirm_logged_in, only: [:login, :attemp_login, :admin, :logout]
+  #before_action :confirm_logged_in, only: [:login, :attemp_login, :admin, :logout]
+
 
   def index
   end
@@ -10,7 +11,27 @@ class AccessController < ApplicationController
   end
 
   def login
-    render layout: 'login'
+    if !session[:role].nil?
+      case current_user.role.name #found_user.service
+        when "urgence"
+          session[:role] = "urgence"
+          redirect_to(action: 'request_service', id: 'fylo')
+        when "developer"
+          session[:role] = "admin"
+          redirect_to(action: 'developer')
+        when "admin"
+          session[:role] = current_user.role.name
+          redirect_to(action: 'admin')
+        when "administrateur"
+          session[:role] = current_user.role.name
+          redirect_to(action: 'administrateur')
+        when "eneo" || "camwater" || "camtel"
+          session[:role] = current_user.role.name
+          redirect_to(action: 'request_service') 
+      end
+    else
+      render layout: 'login'
+    end
   end
 
   #pour la lecture des email 
@@ -23,7 +44,12 @@ class AccessController < ApplicationController
   #route /acces/admin
   #params:
   def admin
-    render layout: 'admin'
+    if control? #si et seulement si c'est un administrateur
+      render layout: 'admin'
+    else
+      session[:role] = nil #on vide la session parce qu'il a essayé de frauder
+      redirect_to action: 'login', notice: 'Vous n\' este pas authorisé'
+    end
 
     #les 10 dernieres alertes
     #@alerte_tmp = Alerte.all.limit(10)
@@ -109,16 +135,22 @@ class AccessController < ApplicationController
         session[:id] = found_user.id
         session[:lastConnection] = found_user.lastConnected
         flash[:notice] = "#{session[:name]} vous etes connecté"
-        case found_user.service
+        case current_user.role.name #found_user.service
           when "urgence"
-            session[:service] = "urgence"
+            session[:role] = "urgence"
             redirect_to(action: 'request_service', id: 'fylo')
           when "developer"
-            session[:service] = "admin"
+            session[:role] = "admin"
             redirect_to(action: 'developer')
           when "admin"
-            session[:service] = "admin"
+            session[:role] = current_user.role.name
             redirect_to(action: 'admin')
+          when "administrateur"
+            session[:role] = current_user.role.name
+            redirect_to(access_a_l_administration_url)
+          when "eneo" || "camwater" || "camtel"
+            session[:role] = current_user.role.name
+            redirect_to(action: 'request_service') 
         end
       else
         print "======== utilisateur inconnu ========="
@@ -131,17 +163,54 @@ class AccessController < ApplicationController
   end
 
   def logout
-    session[:name] = nil
+    session[:role] = nil
+    print "======= #{session[:role].inspect} ========="
     redirect_to(action: 'login')
   end
-  
-  private
-  def confirm_logged_in
-    unless session[:name]
-      #redirect_to(action: 'login')
-      return false
-    else
-      return true
+
+  #=========== pour les partenaires ==============
+  def partenaires
+    render layout: 'admin'
+  end
+
+  #pour le paiement dans l'administration camerounaise
+  def administration
+    render layout: 'administration'
+  end
+
+  #pour la recherche des documents
+  def search_document
+    query = params[:input]
+    type = params[:type]
+    case type
+      when "cni"
+        @title = "Recherche suivant "+type
+        @query = Convocation.where(cni: query).uniq
+      when "immatriculation"
+        @query = Convocation.where(immatriculation: query).uniq
+      when "telephone"
+        @title = "Recherche suivant "+type
+        @query = Convocation.where(phone: query, status: "impaye").order(created_at: :desc)
+        #redirect_to action: self, id: "#{type}/#{query}"
+      when "code"
+        @query = Convocation.where(code: query).uniq
+    end
+    render layout: 'administration'
+  end
+
+  #lesture d'un document de contravention
+  def read_document
+    #puts "======= #{params[:controller]} ========"
+    #on pars chercher le contenu du params
+    @query = Convocation.find(params[:contravention_id])
+    respond_to do |format|
+      format.html
+      #format.json query
+      format.pdf do |pdf|
+        #possibilité de rendre le document au format pdf
+        pdfs = Prawn::Document.new
+
+      end
     end
   end
 

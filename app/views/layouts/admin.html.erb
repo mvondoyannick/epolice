@@ -35,7 +35,7 @@
             <div class="hero-body">
               <div class="container">
                 <h1 class="title">
-                  Hello, <%= session[:name] %>.
+                  <i class="fa fa-user-circle-o"></i> Hello, <%= session[:name] %>.
                 </h1>
                 <h2 class="subtitle">
                   
@@ -44,32 +44,82 @@
             </div>
           </section>
           <section class="info-tiles">
-              <div class="tile is-ancestor has-text-centered">
-                <div class="tile is-parent">
-                  <article class="tile is-child box">
-                    <p class="title"><%= Agent.count %></p>
-                    <p class="subtitle">Agents</p>
-                  </article>
-                </div>
-                <div class="tile is-parent">
-                  <article class="tile is-child box">
-                    <p class="title"><%= Alerte.count %></p>
-                    <p class="subtitle">Alertes</p>
-                  </article>
-                </div>
-                <div class="tile is-parent">
-                  <article class="tile is-child box">
-                    <p class="title"><%= Convocation.count %></p>
-                    <p class="subtitle">Contraventions</p>
-                  </article>
-                </div>
-                <div class="tile is-parent">
-                  <article class="tile is-child box">
-                    <p class="title"><%= Convocation.count %></p>
-                    <p class="subtitle">Convocations</p>
-                  </article>
-                </div>
+          <% if control? %>
+            <div class="tile is-ancestor has-text-centered">
+              <div class="tile is-parent">
+                <article class="tile is-child box">
+                  <p class="title"><i class="fa fa-bell-slash fa-1x" style="color: #000000;"></i></p>
+                  <p class="subtitle is-6"><%= Alerte.count %> Alerte(s) aujourd'hui</p>
+                  <%= link_to '#', class: 'button' do %>
+                    <i class="fa fa-check" style="color: #000000;"></i>
+                    Acceder
+                  <% end %>
+                </article>
               </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box">
+                  <p class="title"><%= Alerte.count %></p>
+                  <p class="subtitle">Alertes</p>
+                  <%= link_to '#', class: 'button' do %>
+                    <i class="fa fa-check" style="color: #000000;"></i>
+                    Acceder
+                  <% end %>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box">
+                  <p class="title"><i class="fa fa-car fa-1x" style="color: #000000;"></i></p>
+                  <p class="subtitle is-6"><%= Convocation.count %> Contraventions aujourd'hui</p>
+                  <%= link_to '#', class: 'button' do %>
+                    <i class="fa fa-check" style="color: #000000;"></i>
+                    Acceder
+                  <% end %>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box">
+                  <p class="title"><i class="fa fa-clone fa-1x" style="color: #000000;"></i></p>
+                  <p class="subtitle is-6">0 Constats aujourd'hui</p>
+                  <%= link_to '#', class: 'button' do %>
+                    <i class="fa fa-check" style="color: #000000;"></i>
+                    Acceder
+                  <% end %>
+                </article>
+              </div>
+            </div>
+          <% else %>
+            <div class="tile is-ancestor has-text-centered">
+              <div class="tile is-parent">
+                <article class="tile is-child box">
+                  <p class="title"><i class="fa fa-bell fa-2x" style="color: #000000;"></i></p>
+                  <p class="subtitle"><%= Alerte.count %> Alertes</p>
+                  <%= link_to '#', class: 'button' do %>
+                    <i class="fa fa-check" style="color: #000000;"></i>
+                    Acceder
+                  <% end %>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box">
+                  <p class="title"><i class="fa fa-bell-slash fa-2x" style="color: #000000;"></i></p>
+                  <p class="subtitle"><%= Alerte.count %> non lu</p>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box">
+                  <p class="title"><i class="fa fa-bell-o fa-2x" style="color: #000000;"></i></p>
+                  <p class="subtitle"><%= Alerte.count %> lu</p>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box">
+                  <p class="title"><i class="fa fa-bell fa-2x" style="color: #000000;"></i></p>
+                  <p class="subtitle"><%= Alerte.count %> Alertes</p>
+                </article>
+              </div>
+            </div>
+          <% end %>
+
           </section>
           <%= yield %>
     </div>

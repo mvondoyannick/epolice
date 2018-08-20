@@ -1,0 +1,63 @@
+<div class="subtitle is-3">Alertes de la ville de <%= @ville %>
+<hr style="background-color: #b9b7b7;" />
+<div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Liste d'alertes pour pour les regions
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fa fa-angle-down" aria-hidden="false" style="color: #000000;"></i>
+          </span>
+        </a>
+      </header>
+      <div class="card-table">
+        <div class="content">
+          <table class="table is-fullwidth is-striped">
+            <thead>
+                <tr>
+                    <td width="5%">#</td>
+                    <td>Date</td>
+                    <td>Titre</td>
+                    <td>Ville</td>
+                    <td>Matricule</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+              <% if @alerte.nil? %>
+                <tr>
+                  <td width="5%"><i class="fa fa-bell-o"></i></td>
+                  <td class="subtitle is-3"><i class="fa fa-bell-slash-o" style="color: #000000;"></i> Aucunes alertes pour le moment.</td>
+                </tr>
+              <% else %>
+                <% @alerte.each do |alerte| %>
+                  <tr>
+                    <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
+                    <td>
+                      <%= alerte.created_at.strftime("%B %d, %Y") %>
+                    </td>
+                    <td>
+                      <%= alerte.titre %>
+                    </td>
+                    <td>
+                      <%= link_to "/villes/ville/#{alerte.ville_id}/show" do %>
+                        <i class="fa fa-building-o" style="color: #000000;"></i>
+                        <%= alerte.ville.name %>
+                      <% end %>
+                    </td>
+                    <td>
+                      <%= alerte.agent.matricule %>
+                    </td>
+                    <td>
+                      <%= link_to  "Détail", '#', class: "button is-small is-primary" %>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>

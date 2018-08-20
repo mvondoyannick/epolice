@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  get 'gestion_constat/today'
+  get 'gestion_constat/hier'
+  get 'gestion_constat/week'
+  get 'gestion_constat/mounth'
+  get 'gestion_constat/all'
+  get 'gestion_constat/cartography'
+  get 'gestion_constat/region'
+  get 'gestion_constat/assureur'
+  get 'gestion_contravention/today'
+  get 'gestion_contravention/week'
+  get 'gestion_contravention/mounth'
+  get 'gestion_contravention/cartography'
+  get 'gestion_contravention/region'
+  get 'gestion_alerte/today'
+  get 'gestion_alerte/week'
+  get 'gestion_alerte/mounth'
+  get 'gestion_alerte/cartography'
+  get 'gestion_alerte/region'
   resources :roles
   resources :services
   resources :workflows
@@ -24,11 +42,21 @@ Rails.application.routes.draw do
   #demande de compte et envoi des parametres
   post 'b/c', to: 'access#attemp_account'
 
-  resources :carrefours
-  resources :carrefours do
-    resources :villes
-  end
+  #se connecter dans le compte administrateur de l'etat
+  get 'access/a/l/administration', to: 'access#administration'
 
+  #pour la recherche des documents
+  #match 'search/documents', via: ['get', 'post']
+  post 'search/documents/', to: 'access#search_document'
+  get 'search/documents', to: 'access#search_document'
+
+  #lire une contravention
+  get 'search/documents/:contravention_id/read', to: 'access#read_document'
+
+  #affichage des requetes pour une ville
+  get 'villes/ville/:ville_id/show', to: 'gestion_alerte#tri_ville'
+
+  resources :carrefours
   resources :affectations
   resources :statuses
   resources :types
@@ -37,10 +65,6 @@ Rails.application.routes.draw do
   resources :villes
   resources :infractions
   resources :convocations
-  resources :convocations do
-    resources :villes
-  end
-
   resources :agents
   #root 'convocations#index'
   #root 'welcome#home'

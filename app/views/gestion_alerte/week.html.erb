@@ -1,0 +1,48 @@
+<h1 class="subtitle is-3"><i class="fa fa-bell" style="color: #000000;"></i> Alertes semaine du <%= 7.days.ago.strftime("%D") %> au <%= Date.today.strftime("%D") %></h1>
+<hr>
+<hr style="background-color: #b9b7b7;" />
+<div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Liste d'alertes pour la semaine du <%= 7.days.ago %> et <%= Date.today %>
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fa fa-angle-down" aria-hidden="false" style="color: #000000;"></i>
+          </span>
+        </a>
+      </header>
+      <div class="card-table">
+        <div class="content">
+          <table class="table is-fullwidth is-striped">
+            <tbody>
+              <% if @week.nil? %>
+                <tr>
+                  <td width="5%"><i class="fa fa-bell-o"></i></td>
+                  <td class="subtitle is-3"><i class="fa fa-bell-slash-o" style="color: #000000;"></i> Aucunes alertes pour le moment.</td>
+                </tr>
+              <% else %>
+                <% @week.each do |alerte| %>
+                  <tr>
+                    <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
+                    <td>
+                      <%= alerte.created_at.strftime("%B %d, %Y") %>
+                    </td>
+                    <td>
+                      <%= alerte.titre %>
+                    </td>
+                    <td>
+                      <%= link_to  "Détail", '#', class: "button is-small is-primary" %>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <%= link_to  "Voir toutes les alertes", '#', class: "card-footer-item" if !@week.nil? %>
+      </footer>
+    </div>
+</div>

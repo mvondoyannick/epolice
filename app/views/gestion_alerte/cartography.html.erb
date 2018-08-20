@@ -1,0 +1,20 @@
+<h1>GestionAlerte#cartography</h1>
+<p>Find me in app/views/gestion_alerte/cartography.html.erb</p>
+<%= @cartography.to_json %>
+
+<%= map(:center => {
+  :latlng => [10, 20],
+  :zoom => 2
+},
+:markers => [
+    {
+       :latlng => [10, 22],
+       :popup => 'welcome'
+    },
+    {
+        :latlng => [11.12, 29.21],
+        :popup => 'welcome to me'
+    }
+  ]
+)
+%>
