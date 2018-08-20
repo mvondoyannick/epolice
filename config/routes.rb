@@ -118,7 +118,7 @@ Rails.application.routes.draw do
     get 'convocations/verify/:code', to: 'convocations#verifyContravention'
     get 'convocations/protectCode/:code', to: 'convocations#protectCode'
     #----------------------sending alert and return status----------------------------------
-    get 'alert/new/:matricule/:type/:lon/:lat/:photo/:description/:ville', to: 'alert#new_alerte'
+    get 'alert/new/:matricule/:type/:lon/:lat/:photo/:description/:ville', to: 'convocations#new_alerte'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

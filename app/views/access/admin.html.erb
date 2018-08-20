@@ -5,34 +5,7 @@
     <div class="card">
       <header class="card-header">
         <p class="card-header-title">
-          Inventory Search
-        </p>
-        <a href="#" class="card-header-icon" aria-label="more options">
-          <span class="icon">
-            <i class="fa fa-angle-down" aria-hidden="true"></i>
-          </span>
-        </a>
-      </header>
-      <div class="card-content">
-        <div class="content">
-          <div class="control has-icons-left has-icons-right">
-            <input class="input is-large" type="text" placeholder="">
-            <span class="icon is-medium is-left">
-              <i class="fa fa-search" style="color: #000000;"></i>
-            </span>
-            <span class="icon is-medium is-right">
-              <i class="fa fa-check" style="color: #000000;"></i>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
           Liste d'alertes
-          <%= current_user.is_admin?.inspect %>
-          <%= jiggle %>
         </p>
         <a href="#" class="card-header-icon" aria-label="more options">
           <span class="icon">
@@ -44,7 +17,7 @@
         <div class="content">
           <table class="table is-fullwidth is-striped">
             <tbody>
-              <% @alerte_tmp = Alerte.order(created_at: :desc).last(10) %>
+              <% @alerte_tmp = Alerte.order(created_at: :desc).limit(10) %>
               <% if @alerte_tmp.nil? %>
                 <tr>
                   <td width="5%"><i class="fa fa-bell-o"></i></td>
@@ -76,32 +49,7 @@
     </div>
   </div>
   <div class="column is-6">
-      <div class="card">
-        <header class="card-header">
-          <p class="card-header-title">
-            Rechercher un utilisateur
-          </p>
-          <a href="#" class="card-header-icon" aria-label="more options">
-            <span class="icon">
-              <i class="fa fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </a>
-        </header>
-        <div class="card-content">
-          <div class="content">
-            <div class="control has-icons-left has-icons-right">
-              <input class="input is-large" type="text" placeholder="">
-              <span class="icon is-medium is-left">
-                <i class="fa fa-search" style="color: #000000;"></i>
-              </span>
-              <span class="icon is-medium is-right">
-                <i class="fa fa-check" style="color: #000000;"></i>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
+    <div class="card">
       <header class="card-header">
         <p class="card-header-title">
           Liste de contraventions
@@ -116,7 +64,7 @@
         <div class="content">
           <table class="table is-fullwidth is-striped">
             <tbody>
-              <% @alerte_tmp = Convocation.order(created_at: :desc).last(10) %>
+              <% @alerte_tmp = Convocation.all.order(created_at: :desc).limit(10) %>
               <% if @alerte_tmp.nil? %>
                 <tr>
                   <td width="5%"><i class="fa fa-bell-o"></i></td>

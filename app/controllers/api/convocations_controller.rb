@@ -124,11 +124,13 @@ class Api::ConvocationsController < ApplicationController
   #permet de creer une nouvelle alerte
   def new_alerte
     quartier = params[:quartier]
-    coordonnee = params[:coordonnees]
+    #coordonnee = params[:coordonnees]
+    lon = params[:lon]
+    lat = params[:lat]
     description = params[:description]
     photo = params[:photo]
     type = params[:type]
     agent = params[:matricule]
-    
+    Alerte.new(agent_id: agent, type_id: type, longitude: lon, latitude: lat, photo: photo, description: description, ville_id: ville)
   end
 end
