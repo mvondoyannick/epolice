@@ -1,1 +1,74 @@
-<%= @query.inspect %>
+<p class="title is-4">
+    Recapitulatif de la contraventoin de Mr <%= params[:contravention_id] %>
+</p>
+<hr style="background-color: #000;">
+<table class="table">
+    <tr>
+        <td><i class="fa fa-address-card-o" style="color: #000;"> </i> Identifiant</td>
+        <td><%= @query.id %></td>
+    </tr>
+    <tr>
+        <td><i class="fa fa-user-circle" style="color: #000;"> </i> Nom et prénom</td>
+        <td><%= @query.name %>&nbsp;<%= @query.prenom %></td>
+    </tr>
+    <tr>
+        <td><i class="fa fa-calendar" style="color: #000;"> </i> Date</td>
+        <td><%= @query.created_at %></td>
+    </tr>
+    <tr>
+        <td><i class="fa fa-address-card-o" style="color: #000;"> </i> Immatriculation</td>
+        <td><%= @query.immatriculation %></td>
+    </tr>
+    <tr>
+        <td><i class="fa fa-map-o" style="color: #000;"> </i> Ville</td>
+        <td><%= @query.ville %></td>
+    </tr>
+    <tr>
+        <td><i class="fa fa-neuter" style="color: #000;"> </i> Sexe</td>
+        <td><%= @query.sexe%></td>
+    </tr>
+    <tr>
+        <td><i class="fa fa-car" style="color: #000;"> </i> Type infraction</td>
+        <td><%= @query.infraction.motif if !@query.infraction_id.nil? %></td>
+    </tr>
+    <tr>
+        <td><i class="fa fa-home" style="color: #000;"> </i> Résidence</td>
+        <td><%= @query.infraction_id if @query.infraction_id.nil? %></td>
+    </tr>
+    <tr>
+        <td><i class="fa fa-square" style="color: #000;"> </i> Emploi</td>
+        <td><%= @query.emploi %></td>
+    </tr>
+    <tr>
+        <td><i class="fa fa-pencil" style="color: #000;"> </i> Observation</td>
+        <td><%= @query.observation %></td>
+    </tr>
+    <tr>
+        <td><i class="fa fa-paperclip" style="color: #000;"> </i> Pieces retenues</td>
+        <td><%= @query.pieceretenue %></td>
+    </tr>
+    <tr>
+        <td><i class="fa fa-codepen" style="color: #000;"> </i> Code sécurité</td>
+        <td><%= @query.token %></td>
+    </tr>
+    <tr>
+        <td><i class="fa fa-check" style="color: #000;"> </i> Valider</td>
+        <td><%= @query.used %></td>
+    </tr>
+    <tr>
+        <td><i class="fa fa-shield" style="color: #000;"> </i> Agent verbaliseur</td>
+        <td>
+            <%= link_to  agent_path(@query.agent_id) do %>
+                <%= @query.agent.name %> &nbsp;<%= @query.agent.prenom %>
+            <% end %>
+        </td>
+    </tr>
+    <tr>
+        <td><i class="fa fa-address-card-o" style="color: #000;"> </i>Statut</td>
+        <% if @query.status == 'Impayé' %>
+            <td><%= link_to 'Payer maintenant', "/paiements/pay/#{@query.id}/sent", class: 'button is-primary' %></td>
+            <% else %>
+            <td>Contravention déja payée</td>
+        <% end %>
+    </tr>
+</table>

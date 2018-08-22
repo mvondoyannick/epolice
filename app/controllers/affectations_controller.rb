@@ -73,6 +73,6 @@ class AffectationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def affectation_params
-      params.require(:affectation).permit(:type_id, :agent_id, :affectation_id, :carrefour_id, :date)
+      params.require(:affectation).permit(:agent_id, :affectation_id, :carrefour_id, :date, :fin)
     end
 end

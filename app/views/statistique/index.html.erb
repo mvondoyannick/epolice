@@ -1,0 +1,14 @@
+<h1>Statistique#index</h1>
+<p>Find me in app/views/statistique/index.html.erb</p>
+<hr style="background-color: #000;">
+Statistiques : <%= link_to "Aujourd'hui", "#", class: "button is-primary" %> <%= link_to "Hebdomadire", "#", class: "button is-primary" %> <%= link_to "Mensuelle", "#", class: "button is-primary" %> <%= link_to "Annuelle", "#", class: "button is-primary" %>
+<hr style="background-color: #000;">
+<div id="chart-id"></div>
+<p class="subtitle">Line chart</p>
+<%= line_chart Convocation.group_by_day_of_week(:created_at, format: "%a").count %>
+<hr style="background-color: #000;">
+<p class="subtitle">Pie chart</p>
+<%= pie_chart Convocation.group_by_day_of_week(:created_at).count %>
+<hr style="background-color: #000;">
+<p class="subtitle">Column chart</p>
+<%= column_chart Convocation.group_by_day_of_week(:created_at, format: "%a").count %>

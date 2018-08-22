@@ -148,7 +148,7 @@ class AccessController < ApplicationController
           when "administrateur"
             session[:role] = current_user.role.name
             redirect_to(access_a_l_administration_url)
-          when "eneo" || "camwater" || "camtel"
+          when "camwater"
             session[:role] = current_user.role.name
             redirect_to(action: 'request_service') 
         end
@@ -156,7 +156,7 @@ class AccessController < ApplicationController
         print "======== utilisateur inconnu ========="
       end
     else
-      flash[:notice] = "Entrer une information"
+      flash[:notice] = "Entrer une information est manquante"
       redirect_to(action: 'login')
     end
     
@@ -190,11 +190,18 @@ class AccessController < ApplicationController
         @query = Convocation.where(immatriculation: query).uniq
       when "telephone"
         @title = "Recherche suivant "+type
-        @query = Convocation.where(phone: query, status: "impaye").order(created_at: :desc)
+        @query = Convocation.where(phone: query, status: "impaye").order(created_at: :desc).order(cni: :desc)
+        #@cni = Convocation 
         #redirect_to action: self, id: "#{type}/#{query}"
       when "code"
         @query = Convocation.where(code: query).uniq
     end
+    render layout: 'administration'
+  end
+
+  def search_cni
+    cni = params[:cni]
+    @query = Convocation.where(cni: cni)
     render layout: 'administration'
   end
 
@@ -203,15 +210,29 @@ class AccessController < ApplicationController
     #puts "======= #{params[:controller]} ========"
     #on pars chercher le contenu du params
     @query = Convocation.find(params[:contravention_id])
-    respond_to do |format|
-      format.html
-      #format.json query
-      format.pdf do |pdf|
-        #possibilité de rendre le document au format pdf
-        pdfs = Prawn::Document.new
+    render layout: 'administration'
+  end
 
-      end
+  #permet de payer une contravention
+  def buy_document
+    #confirm paiement
+
+    #recherche de l'enregistrement dans la BD
+    pay = Convocation.find(params[:id])
+
+    #debut de la mise a jour
+    pay.status = "paye"
+    s = pay.save
+    #verification
+    if s
+      puts "====== c'est bon, on a update ========"
+      flash[:notice] = "A Paiement effectué"
+      redirect_to action: 'administration'
+    else
+      puts "========= error ========="
+      redirect_to action: 'administration', notice: "Impossible d\'effectuer le paiement : #{s.errors.messages}"
     end
+    
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

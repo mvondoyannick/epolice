@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :status
+  get 'constat/read'
+  get 'constat/search'
+  get 'constat/transmettre'
+  get 'constat/archiver'
+  get 'statistique/index'
+  get 'statistique/day'
+  get 'statistique/week'
+  get 'statistique/mois'
   get 'gestion_constat/today'
   get 'gestion_constat/hier'
   get 'gestion_constat/week'
@@ -17,6 +26,8 @@ Rails.application.routes.draw do
   get 'gestion_alerte/mounth'
   get 'gestion_alerte/cartography'
   get 'gestion_alerte/region'
+  get 'gestion_alerte/periode'
+  post 'gestion_alerte/periode'
   resources :roles
   resources :services
   resources :workflows
@@ -38,6 +49,7 @@ Rails.application.routes.draw do
   #match ':controller(/:action/(:id))', via: [:get, :post]
 
   post 'a/b', to: 'access#attemp_login'
+  post 'time_machine/search/periode/week', to: 'gestion_alerte#periode'
 
   #demande de compte et envoi des parametres
   post 'b/c', to: 'access#attemp_account'
@@ -49,6 +61,12 @@ Rails.application.routes.draw do
   #match 'search/documents', via: ['get', 'post']
   post 'search/documents/', to: 'access#search_document'
   get 'search/documents', to: 'access#search_document'
+
+  #payer une contravention
+  get 'paiements/pay/:id/sent', to: 'access#buy_document'
+
+  #
+  get 'search/documents/by_cni/:cni/search', to: 'access#search_cni'
 
   #lire une contravention
   get 'search/documents/:contravention_id/read', to: 'access#read_document'

@@ -1,10 +1,16 @@
-<h1 class="subtitle is-3">Liste d'alertes pour le mois, période du <%= 30.days.ago %> et <%= Date.today %></h1>
-<hr>
+<%= link_to :back, class: 'button is-link is-outlined' do %>
+  <i class="fa fa-arrow-left noir"></i>
+  Retourner
+<% end %>
+<hr style="background-color: #000;">
+<h1 class="subtitle is-3"><i class="fa fa-calendar-o noir"></i> Liste d'alertes pour le mois, <%= 30.days.ago.strftime("%d/%m/%Y") %> au <%= Date.today.strftime("%d/%m/%Y") %>
+</h1>
+<hr style="background-color: #000;">
 <hr style="background-color: #b9b7b7;" />
 <div class="card">
       <header class="card-header">
         <p class="card-header-title">
-          Liste d'alertes pour le mois, période du <%= 30.days.ago %> et <%= Date.today %>
+          Liste d'alertes pour le mois
         </p>
         <a href="#" class="card-header-icon" aria-label="more options">
           <span class="icon">
@@ -32,7 +38,7 @@
                       <%= alerte.titre %>
                     </td>
                     <td>
-                      <%= link_to  "Détail", '#', class: "button is-small is-primary" %>
+                      <%= link_to  "Détail", alerte_path(alerte), class: "button is-small is-link is-outlined" %>
                     </td>
                   </tr>
                 <% end %>
@@ -42,7 +48,7 @@
         </div>
       </div>
       <footer class="card-footer">
-        <%= link_to  "Voir toutes les alertes", '#', class: "card-footer-item" if !@mois.nil? %>
+        
       </footer>
     </div>
 </div>

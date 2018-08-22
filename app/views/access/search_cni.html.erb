@@ -1,0 +1,52 @@
+<p class="title is-4">
+	Contravention pour la Pièce : <%= params[:cni] %>
+</p> 
+<hr style="background-color: #000;">
+
+<table class="table is-fullwidth is-striped">
+  <thead>
+      <tr>
+          <td>Date</td>
+          <td>CNI</td>
+          <td>Objet</td>
+          <td>Statut</td>
+          <td>phone</td>
+          <td>Statut</td>
+          <td>Action</td>
+      </tr>
+  </thead>
+  <tbody>
+    <% if @query.nil? %>
+      <tr>
+        <td width="5%"><i class="fa fa-bell-o"></i></td>
+        <td class="subtitle is-3"><i class="fa fa-bell-slash-o" style="color: #000000;"></i> Aucunes alertes pour le moment.</td>
+      </tr>
+    <% else %>
+      <% @query.each do |alerte| %>
+        <tr>
+          <td>
+            <%= alerte.created_at.strftime("%B %d, %Y") %>
+          </td>
+          <td>
+            <%= link_to alerte.cni, "/search/documents/by_cni/#{alerte.cni}/search" %>
+          </td>
+          <td>
+            <%= alerte.infraction.motif if !alerte.infraction_id.nil? %>
+          </td>
+          <td>
+            <%= alerte.infraction.motif if !alerte.infraction_id.nil? %>
+          </td>
+          <td>
+            <%= alerte.phone %>
+          </td>
+          <td>
+            <%= alerte.status %>
+          </td>
+          <td>
+            <%= link_to  "Détail", "/search/documents/#{alerte.id}/read", class: "button is-small is-primary" %>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

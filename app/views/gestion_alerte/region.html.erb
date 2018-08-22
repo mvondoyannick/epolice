@@ -1,8 +1,8 @@
 <h1 class="subtitle is-3"><i class="fa fa-building-o" style="color: #000000;"></i> Alertes organisées par ville</h1>
 <hr style="background-color: #b9b7b7;" />
 <% @ville.each do |item| %>
-    <%= link_to "/villes/ville/#{item}/show", class: 'button is-primary' do %>
-        <i class="fa fa-building-o"></i>
+    <%= link_to "/villes/ville/#{item}/show", class: 'button is-link is-outlined' do %>
+        <i class="fa fa-building-o noir"></i>
         <%= Ville.find(item).name %>
     <% end %>
 <% end %>
@@ -21,6 +21,15 @@
       <div class="card-table">
         <div class="content">
           <table class="table is-fullwidth is-striped">
+            <thead>
+              <tr class="is-selected">
+                <td><i class="fa fa-bell noir"></i></td>
+                <td><i class="fa fa-calendar noir"></i> Date</td>
+                <td><i class="fa fa-edit noir"></i> Libellé</td>
+                <td><i class="fa fa-building-o noir"></i> Ville</td>
+                <td><i class="fa fa-hand-pointer-o noir"></i> Action</td>
+              </tr>
+            </thead>
             <tbody>
               <% if @region.nil? %>
                 <tr>
@@ -44,7 +53,7 @@
                       <% end %>
                     </td>
                     <td>
-                      <%= link_to  "Détail", '#', class: "button is-small is-primary" %>
+                      <%= link_to  "Détail", '#', class: "button is-small is-link is-outlined" %>
                     </td>
                   </tr>
                 <% end %>
@@ -54,7 +63,7 @@
         </div>
       </div>
       <footer class="card-footer">
-        <%= link_to  "Voir toutes les alertes", '#', class: "card-footer-item" if !@region.nil? %>
+        
       </footer>
     </div>
 </div>

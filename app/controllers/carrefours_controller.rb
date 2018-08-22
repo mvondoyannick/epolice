@@ -5,10 +5,12 @@ class CarrefoursController < ApplicationController
   # GET /carrefours.json
   def index
     @carrefours = Carrefour.all
+    render layout: 'admin'
   end
 
   def cartographie
     @title = "Cartographie des carrefours"
+    render layout: 'admin'
   end
 
   # GET /carrefours/1
@@ -19,6 +21,7 @@ class CarrefoursController < ApplicationController
   # GET /carrefours/new
   def new
     @carrefour = Carrefour.new
+    render layout: 'admin'
   end
 
   # GET /carrefours/1/edit
@@ -73,6 +76,6 @@ class CarrefoursController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def carrefour_params
-      params.require(:carrefour).permit(:name, :quartier, :status, :image, :description)
+      params.require(:carrefour).permit(:name, :quartier, :image, :description, :ville_id)
     end
 end

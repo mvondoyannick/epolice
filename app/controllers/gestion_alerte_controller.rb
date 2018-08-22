@@ -18,7 +18,14 @@ class GestionAlerteController < ApplicationController
 
   #Affiche touts les points sur une carte leafleft
   def cartography
-    @cartography = Alerte.all
+    if params[:id].nil
+      id = params[:id].to_i #contient la date de debut
+      @cartography = Alerte.where(created_at: id.days.ago..Date.today).order(created_at: :desc)  
+    else
+      id = params[:id].to_i #contient la date de debut
+      @cartography = Alerte.where(created_at: id.days.ago..Date.today).order(created_at: :desc)
+    end
+    
     render layout: 'admin'
   end
 
@@ -34,5 +41,22 @@ class GestionAlerteController < ApplicationController
     @ville = Ville.find(params[:ville_id]).name
     @alerte = Alerte.where(ville_id: params[:ville_id]).order(created_at: :desc)
     render layout: 'admin'
+  end
+
+  #permet de gere la recherche par periode
+  def periode
+    @debut = params[:debut]
+    @fin = params[:fin]
+    @query = Alerte.where(created_at: params[:debut]..params[:fin]).order(created_at: :desc)
+    render layout: 'admin'
+  end
+
+  def carte
+    data = params
+    puts "========= #{data} ============="
+    redirect_to action: 'cartography', id: data
+  end
+
+  def time_machine
   end
 end

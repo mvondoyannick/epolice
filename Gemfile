@@ -59,7 +59,10 @@ gem 'mini_magick'
 gem 'leaflet-rails'
 #pour le breadcrumb
 gem "breadcrumbs_on_rails"
-
+#gestion des charts pour les statistiques
+gem "chartkick"
+#installation de groupdate
+gem "groupdate"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -1,0 +1,37 @@
+<div class="tile is-ancestor has-text-centered">
+    <div class="tile is-parent">
+    <article class="tile is-child box">
+        <p class="title"><i class="fa fa-bell fa-2x" style="color: #000000;"></i></p>
+        <p class="subtitle"><%= Alerte.count %> Alertes</p>
+        <%= link_to '#', class: 'button' do %>
+        <i class="fa fa-check" style="color: #000000;"></i>
+        Acceder
+        <% end %>
+    </article>
+    </div>
+    <div class="tile is-parent">
+    <article class="tile is-child box">
+        <p class="title"><i class="fa fa-bell-slash fa-2x" style="color: #000000;"></i></p>
+        <p class="subtitle"><%= Alerte.count %> non lu</p>
+    </article>
+    </div>
+    <div class="tile is-parent">
+    <article class="tile is-child box">
+        <p class="title"><i class="fa fa-bell-o fa-2x" style="color: #000000;"></i></p>
+        <p class="subtitle"><%= Alerte.count %> lu</p>
+    </article>
+    </div>
+    <div class="tile is-parent">
+    <article class="tile is-child box">
+        <p class="title"><i class="fa fa-bell fa-2x" style="color: #000000;"></i></p>
+        <p class="subtitle"><%= Alerte.count %> Alertes</p>
+    </article>
+    </div>
+</div>
+
+=====================
+<figure class="avatar">
+    <%= image_tag("logo.png", size: 128) %>
+</figure>
+=====================
+<td><%= link_to 'Destroy', agent, method: :delete, data: { confirm: 'Are you sure?' }, class: "button is-danger" %></td>

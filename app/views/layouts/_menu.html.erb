@@ -31,26 +31,31 @@
         </div>
         <div id="navMenu" class="navbar-menu has-text-right">
           <div class="navbar-start">
-            <% if session[:name].nil?  %>
-                <%= link_to  "Accueil", root_path, class: "navbar-item" if control? %>
-                <% else  %>
-                <%= link_to  "Precedent", access_admin_path, class: "navbar-item" if control? %>
-            <% end  %>
-            
-            <%= link_to  "Administration", access_admin_path, class: "navbar-item" if control? %>
-            <%= link_to  root_path, class: "navbar-item" do %>
-              <i class="fa fa-snowflake-o" style="color: #000000;"></i>
-              Notifications
-            <% end %>
-            <%= link_to  "access/email/#{session[:id]}", class: "navbar-item"  do %>
-                <i class="fa fa-envelope-open" style="color: #000000;"></i>
-              Message
-            <% end %>
-            <%= link_to  "Comptes", root_path, class: "navbar-item" if control? %>
-            <%= link_to  "Configuration", root_path, class: "navbar-item" if control? %>
-            <%= link_to  access_logout_path, class: "navbar-item" do %>
-              <i class="fa fa-sign-out" style="color: #000000;"></i>
-              Déconnexion
+            <% if control? %>
+                <%= link_to  access_admin_path, class: "navbar-item" do %>
+                <i class="fa fa-shield" style="color: #000000;"></i>
+                Accueil
+              <% end %>
+              <%= link_to  root_path, class: "navbar-item" do %>
+                <i class="fa fa-snowflake-o" style="color: #000000;"></i>
+                Notifications
+              <% end %>
+              <%= link_to  "access/email/#{session[:id]}", class: "navbar-item"  do %>
+                  <i class="fa fa-envelope-open" style="color: #000000;"></i>
+                Message
+              <% end %>
+              <%= link_to  root_path, class: "navbar-item" do %>
+                <i class="fa fa-user-circle" style="color: #000000;"></i>
+                Comptes
+              <% end %>
+              <%= link_to  '#', class: "navbar-item" do %>
+                <i class="fa fa-cog" style="color: #000000;"></i>
+                Configuration
+              <% end %>
+              <%= link_to  access_logout_path, class: "navbar-item" do %>
+                <i class="fa fa-sign-out" style="color: #000000;"></i>
+                Déconnexion
+              <% end %>  
             <% end %>
           </div>
         </div>

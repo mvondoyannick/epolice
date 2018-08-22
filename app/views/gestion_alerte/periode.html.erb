@@ -1,0 +1,126 @@
+<p class="subtitle is-6 is-vertical-center">
+  <%= link_to :back, class: "button is-link is-outlined" do %>
+    <i class="fa fa-arrow-left noir"></i>
+    Retour à la vue précedente
+  <% end %>
+</p>
+<hr style="background-color: #b9b7b7;" />
+<h1 class="subtitle is-3"><i class="fa fa-calendar-plus-o" style="color: #000000;"></i> Alertes pour une période sélectionnée</h1>
+<hr style="background-color: #b9b7b7;" />
+<% if @debut.nil? %>
+  <div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        Selectionner la date correspondant au début et à la fin
+      </p>
+      <% if @query.nil? %>
+        <%= link_to '#', class: 'button' do %>
+          <i class="fa fa-map" aria-hidden="false" style="color: #000000;"></i>
+          voir sur la carte
+        <% end %>
+      <% end %>
+    </header>
+    <div class="card-table">
+      <div class="content">
+        <table class="table is-fullwidth is-striped">
+          <tbody>
+            <% if @debut.nil? %>
+              <table class="table">
+                <tr>
+                  <%= form_tag( action: 'periode') do %>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                  <td>
+                    <div class="field">
+                      <div class="control">
+                        <%= label_tag 'Date début' %>
+                        <%= date_field_tag :debut, "", class: 'input is-large' %>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="field">
+                      <div class="control">
+                        <%= label_tag 'Date fin' %>
+                        <%= date_field_tag :fin, "", class: 'input is-large' %>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <%= submit_tag "Rechercher", class: 'button  is-large is-block is-info is-outlined is-fullwidth' %>
+                  </td>
+                  <% end %>
+                </tr>
+              </table>
+            <% else %>
+              <% @query.each do |alerte| %>
+                <tr>
+                  <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
+                  <td>
+                    <%= alerte.created_at.strftime("%B %d, %Y") %>
+                  </td>
+                  <td>
+                    <%= alerte.titre %>
+                  </td>
+                  <td>
+                    <%= link_to  "Détail", alerte_path(alerte), class: "button is-small is-primary" %>
+                  </td>
+                </tr>
+              <% end %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="card-footer">
+      <%=  %>
+    </footer>
+  </div>
+</div>
+  <% else %>
+  <!-- on affiche les resultats -->
+    <div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        Période allant du <%= @debut %> au <%= @fin %>
+      </p>
+      <% if @query.nil? %>
+        <%= link_to '#', class: 'button' do %>
+          <i class="fa fa-map" aria-hidden="false" style="color: #000000;"></i>
+          voir sur la carte
+        <% end %>
+      <% end %>
+    </header>
+    <div class="card-table">
+      <div class="content">
+        <table class="table is-fullwidth is-striped">
+          <tbody>
+            <% if @query.nil? %>
+              <tr>
+                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                <td class="subtitle is-3"><i class="fa fa-bell-slash-o" style="color: #000000;"></i> Aucunes alertes pour le moment.</td>
+              </tr>
+            <% else %>
+              <% @query.each do |alerte| %>
+                <tr>
+                  <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
+                  <td>
+                    <%= alerte.created_at.strftime("%B %d, %Y") %>
+                  </td>
+                  <td>
+                    <%= alerte.titre %>
+                  </td>
+                  <td>
+                    <%= link_to  "Détail", alerte_path(alerte), class: "button is-small is-link is-outlined" %>
+                  </td>
+                </tr>
+              <% end %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="card-footer">
+      <%=  %>
+    </footer>
+  </div>
+</div>
+<% end %>

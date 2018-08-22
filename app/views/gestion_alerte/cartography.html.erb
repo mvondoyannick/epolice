@@ -1,5 +1,9 @@
-<h1>GestionAlerte#cartography</h1>
-<p>Find me in app/views/gestion_alerte/cartography.html.erb</p>
+<%= link_to :back, class: 'button is-link is-outlined' do %>
+  <i class="fa fa-arrow-left noir" ></i>
+  Retourner à la vue précédente
+<% end %>
+<h1 class="title is-4" style="margin-top: 25px;">Cartographie des alertes</h1>
+<p class="subtitle is-6">Période allant du <%= (params[:id].to_i).days.ago.to_date %> au <%= Date.today %> </p>
 <%= @cartography.to_json %>
 
 <%= map(:center => {

@@ -1,7 +1,10 @@
 class Alerte < ApplicationRecord
+  before_save :init
+
   belongs_to :ville
   belongs_to :type
   belongs_to :agent
+  belongs_to :statu
   validates_presence_of :titre, presence: true
   validates_presence_of :description, presence: true
   validates_presence_of :type, presence: true
@@ -12,4 +15,10 @@ class Alerte < ApplicationRecord
 
   #ajout de active storage pour les fichiers
   has_one_attached :alertes
+
+  private
+  def init
+    self.statu_id = Statu.last.id
+    self.action = "Aucune action pour le moment"
+  end
 end

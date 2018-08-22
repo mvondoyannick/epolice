@@ -10,6 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//
+//= require Chart.bundle
+//= require chartkick
 //= require jquery
 //= require leaflet
 //= require underscore
@@ -20,6 +23,9 @@
 
 /* on recherche la classe .fa et on lui ajoute la couleur noire  */
 $("i").css('color','#000000');
+
+/* insertion de chart */
+var chart = Chartkick.charts['chart-id']
 
 Rails.ajax({
     type: "GET",

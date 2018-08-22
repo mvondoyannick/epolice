@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<h1>Agents</h1>
+<h1 class="title is-2">Liste d'agents</h1>
 
 <table class="table" id="table">
   <thead>
@@ -10,6 +10,7 @@
       <th>Téléphone</th>
       <th>Matricule</th>
       <th>Grade</th>
+      <th>Date ajout</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,9 +25,9 @@
         <td><%= agent.phone %></td>
         <td><%= agent.matricule %></td>
         <td><%= agent.grade.name if !agent.grade.nil? %></td>
-        <td><%= link_to 'Show', agent, class: "button is-primary" %></td>
-        <td><%= link_to 'Edit', edit_agent_path(agent), class: "button is-primary" %></td>
-        <td><%= link_to 'Destroy', agent, method: :delete, data: { confirm: 'Are you sure?' }, class: "button is-danger" %></td>
+        <td><%= agent.created_at %></td>
+        <td><%= link_to 'Show', agent, class: "button is-link is-outlined" %></td>
+        <td><%= link_to 'Edit', edit_agent_path(agent), class: "button is-link is-outlined" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +35,4 @@
 
 <br>
 
-<%= link_to 'New Agent', new_agent_path, class: "button is-primary" %>
+<%= link_to 'New Agent', new_agent_path, class: "button is-link is-outlined" %>

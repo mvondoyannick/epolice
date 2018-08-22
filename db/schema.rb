@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_15_103445) do
+ActiveRecord::Schema.define(version: 2018_08_21_180720) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -34,15 +34,14 @@ ActiveRecord::Schema.define(version: 2018_08_15_103445) do
   end
 
   create_table "affectations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "agent_id"
     t.string "date"
     t.bigint "carrefour_id"
+    t.string "fin"
     t.index ["agent_id"], name: "index_affectations_on_agent_id"
     t.index ["carrefour_id"], name: "index_affectations_on_carrefour_id"
-    t.index ["type_id"], name: "index_affectations_on_type_id"
   end
 
   create_table "agents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -75,7 +74,9 @@ ActiveRecord::Schema.define(version: 2018_08_15_103445) do
     t.string "code"
     t.string "longitude"
     t.string "latitude"
+    t.bigint "statu_id"
     t.index ["agent_id"], name: "index_alertes_on_agent_id"
+    t.index ["statu_id"], name: "index_alertes_on_statu_id"
     t.index ["type_id"], name: "index_alertes_on_type_id"
     t.index ["ville_id"], name: "index_alertes_on_ville_id"
   end
@@ -88,6 +89,8 @@ ActiveRecord::Schema.define(version: 2018_08_15_103445) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "ville_id"
+    t.index ["ville_id"], name: "index_carrefours_on_ville_id"
   end
 
   create_table "commissariats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -197,6 +200,13 @@ ActiveRecord::Schema.define(version: 2018_08_15_103445) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "status", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "detail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "statuses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -278,12 +288,13 @@ ActiveRecord::Schema.define(version: 2018_08_15_103445) do
 
   add_foreign_key "affectations", "agents", name: "affectations_ibfk_1"
   add_foreign_key "affectations", "carrefours", name: "affectations_ibfk_2"
-  add_foreign_key "affectations", "types", name: "affectations_ibfk_3"
   add_foreign_key "agents", "commissariats", name: "agents_ibfk_1"
   add_foreign_key "agents", "grades"
   add_foreign_key "alertes", "agents", name: "alertes_ibfk_3"
+  add_foreign_key "alertes", "status", column: "statu_id"
   add_foreign_key "alertes", "types", name: "alertes_ibfk_2"
   add_foreign_key "alertes", "villes", name: "alertes_ibfk_1"
+  add_foreign_key "carrefours", "villes"
   add_foreign_key "commissariats", "villes", name: "commissariats_ibfk_1"
   add_foreign_key "contravetions", "agents", column: "Agent_id", name: "contravetions_ibfk_2"
   add_foreign_key "contravetions", "users", column: "User_id", name: "contravetions_ibfk_1"

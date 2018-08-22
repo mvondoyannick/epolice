@@ -1,15 +1,22 @@
-<h1 class="subtitle is-3">Alertes de ce jour <%= Date.today %> </h1>
+<h1 class="subtitle is-3">Alertes de ce jour <%= Date.today.strftime("%D") %> </h1>
+<hr style="background-color: #b9b7b7;" />
+<p class="subtitle is-6"><i class="fa fa-hourglass-start" style="color: #000;"></i> Vous pouvez egalement  voir les alertes </p> 
+  <%= link_to 'Hier', '#', class: 'button is-link is-outlined' %> <%= link_to "D'avant hier", '#', class: 'button is-link is-outlined' %> <%= link_to "D'il ya 3 jours", '#', class: 'button is-link is-outlined' %>
 <hr style="background-color: #b9b7b7;" />
 <div class="card">
       <header class="card-header">
         <p class="card-header-title">
-          Liste d'alertes pour la date du <%= Date.today %>
+          Liste d'alertes pour la date du <%= Date.today.strftime("%D") %>
         </p>
-        <a href="#" class="card-header-icon" aria-label="more options">
-          <span class="icon">
+          <!--span class="icon">
             <i class="fa fa-angle-down" aria-hidden="false" style="color: #000000;"></i>
-          </span>
-        </a>
+          </span-->
+          <% if @today.nil? %>
+            <%= link_to '#', class: 'button' do %>
+              <i class="fa fa-map" aria-hidden="false" style="color: #000000;"></i>
+              voir sur la carte
+            <% end %>
+          <% end %>
       </header>
       <div class="card-table">
         <div class="content">
@@ -31,7 +38,7 @@
                       <%= alerte.titre %>
                     </td>
                     <td>
-                      <%= link_to  "Détail", '#', class: "button is-small is-primary" %>
+                      <%= link_to  "Détail", alerte_path(allerte), class: "button is-small is-primary" %>
                     </td>
                   </tr>
                 <% end %>

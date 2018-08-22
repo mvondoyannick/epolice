@@ -5,6 +5,7 @@ class CommissariatsController < ApplicationController
   # GET /commissariats.json
   def index
     @commissariats = Commissariat.all
+    render layout: 'admin'
   end
 
   # GET /commissariats/1

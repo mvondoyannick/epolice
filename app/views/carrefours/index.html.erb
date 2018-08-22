@@ -1,14 +1,13 @@
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 <p id="notice"><%= notice %></p>
 
-<h1>Carrefours</h1>
+<h1 class="title is-2">Liste des Carrefours</h1>
+<h1 class="subtitle is-5">Afficher la liste des carrefours enregistré dans le système</h1>
 
 <table class="table" id="table">
   <thead>
     <tr>
       <th>Name</th>
       <th>Quartier</th>
-      <th>Status</th>
       <th>Image</th>
       <th>Description</th>
       <th colspan="3"></th>
@@ -20,7 +19,6 @@
       <tr>
         <td><%= carrefour.name %></td>
         <td><%= carrefour.quartier %></td>
-        <td><%= carrefour.status %></td>
         <td><%= carrefour.image %></td>
         <td><%= carrefour.description %></td>
         <td><%= link_to 'Show', carrefour %></td>
@@ -33,5 +31,4 @@
 
 <br>
 
-<%= link_to 'New Carrefour', new_carrefour_path %>
-</main>
+<%= link_to 'New Carrefour', new_carrefour_path, class: 'button is-link is-outlined' %>

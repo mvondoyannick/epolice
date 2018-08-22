@@ -6,9 +6,25 @@
         </p>
         <ul class="menu-list">
             <li><a class="is-active">Dashboard</a></li>
-            <li><a><i class="fa fa-home" style="color: #000000;"></i>Administration</a></li>
-            <li><a><i class="fa fa-home" style="color: #000000;"></i>Partenaires</a></li>
-            <li><a><i class="fa fa-home" style="color: #000000;"></i>Stistiques</a></li>
+            <li><a><i class="fa fa-area-chart" style="color: #000000;"></i>Administration</a></li>
+            <li>
+                <%= link_to statistique_index_path do %>
+                    <i class="fa fa-users" style="color: #000000;"></i>
+                    Statistiques
+                <% end %>
+            </li>
+            <li>
+                <%= link_to affectations_path do %>
+                    <i class="fa fa-address-book" style="color: #000000;"></i>
+                    Affectation agents
+                <% end %>
+            </li>
+            <li>
+                <%= link_to commissariats_path do %>
+                    <i class="fa fa-home" style="color: #000000;"></i>
+                    Commissariats
+                <% end %>
+            </li>
         </ul>
         <p class="menu-label">
             Administration DGSN
@@ -32,13 +48,13 @@
                 <li>
                     <%= link_to gestion_alerte_mounth_path do %>
                         <i class="fa fa-calendar-o" style="color: #000000;"></i>
-                        Du mois
+                        Par mois
                     <% end %>
                 </li>
                 <li>
-                    <%= link_to gestion_alerte_cartography_path do %>
-                        <i class="fa fa-map" style="color: #000000;"></i>
-                        Cartographie
+                    <%= link_to gestion_alerte_periode_path do %>
+                        <i class="fa fa-calendar-plus-o" style="color: #000000;"></i>
+                        Par période
                     <% end %>
                 </li>
                 <li>
@@ -132,14 +148,6 @@
             </ul>
         </li>
         </ul>
-        <p class="menu-label">
-        Comptes et partenaires
-        </p>
-        <ul class="menu-list">
-        <li><a>Payments</a></li>
-        <li><a>Transfers</a></li>
-        <li><a>Balance</a></li>
-        </ul>
     </aside>
     <% else %>
         <aside class="menu">
@@ -181,6 +189,12 @@
                         <%= link_to  new_agent_path do %>
                             <i class="fa fa-map" style="color: #000000;"></i>
                             Sur la carte
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= link_to  new_agent_path do %>
+                            <i class="fa fa-map" style="color: #000000;"></i>
+                            Toutes les alertes
                         <% end %>
                     </li>
                 </ul>

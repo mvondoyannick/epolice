@@ -1,29 +1,39 @@
+<p id="notice" class="notification"> <button class="delete"></button> <%= notice %></p>
+<div class="media">
+    <div class="media-content has-text-centered">
+        <p class="title article-title">Entrer votre recherche</p>
+        <p class="subtitle is-6 article-subtitle">
+            Vous pouvez rechercher la CNI, l'Immatriculation, <br> le Numéro de téléphone, 
+                le code de contravention
+        </p>
+    </div>
+</div>
 <%= form_tag( action: 'search_document') do %>
     <div class="field">
         <div class="control">
         <%= label_tag ("Téléphone, CNI, Immatriculation, ") %></td>
-        <%= text_field_tag :input, "", class: 'input is-large', require: true, placeholder: "Entre le numéro de téléphone ou le code" %>
+        <%= text_field_tag :input, "", class: 'input is-large' ,require: true, placeholder: "Entre le numéro de téléphone ou le code" %>
     </div>
-    <div class="field">
+    <div class="field" style="margin-top: 20px;">
         <label class="radio">
-        <%= radio_button_tag 'type','cni', true %>
-        <i class="fa fa-address-card-o" style="color: #000000;"></i>
-        CNI
+            <%= radio_button_tag 'type','cni', true %>
+            <i class="fa fa-address-card-o" style="color: #000000;"></i>
+            CNI
         </label>
         <label class="radio">
-        <%= radio_button_tag 'type','immatriculation' %>
-        <i class="fa fa-automobile" style="color: #000000;"></i>
-        Immatriculation
+            <%= radio_button_tag 'type','immatriculation' %>
+            <i class="fa fa-automobile" style="color: #000000;"></i>
+            Immatriculation
         </label>
         <label class="radio">
-        <%= radio_button_tag 'type','telephone' %>
-        <i class="fa fa-phone" style="color: #000000;"></i>
-        Téléphone
+            <%= radio_button_tag 'type','telephone' %>
+            <i class="fa fa-phone" style="color: #000000;"></i>
+            Téléphone
         </label>
         <label class="radio">
-        <%= radio_button_tag 'type','code' %>
-        <i class="fa fa-code" style="color: #000000;"></i>
-        Code
+            <%= radio_button_tag 'type','code' %>
+            <i class="fa fa-code" style="color: #000000;"></i>
+            Code
         </label>
     </div>
     </div>

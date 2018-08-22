@@ -102,6 +102,6 @@ class AlertesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alerte_params
-      params.require(:alerte).permit(:titre, :description, :date, :ville_id, :type_id, :agent_id, :action, :lieu, :status, :longitude, :latitude, :alertes)
+      params.require(:alerte).permit(:titre, :description, :date, :ville_id, :type_id, :agent_id, :action, :lieu, :statu_id, :longitude, :latitude, :alertes)
     end
 end

@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
+<%= link_to :back, class: 'button is-link is-outlined' do %>
+  <i class="fa fa-arrow-left noir" ></i>
+  Retourner à la vue précédente
+<% end %>
+<div style="margin-bottom: 25px;" /></div>
 <div class="title is-4">
-  Detail de l'alerte numéro <%= @alerte.code if !@alerte.code.nil? %>
+  Detail de l'alerte 
 </div>
 <br>
 <div class="subtitle is-5">
@@ -17,10 +22,11 @@
        :popup => @alerte.description
     }
   ]
-) %>
+)
+%>
 
 <br>
-<hr>
+<hr style="background-color: #000;">
 <div class="subtitle is-3">Details des informations</div>
 <div class="columns">
   <div class="column">
@@ -29,16 +35,21 @@
         <p class="card-header-title">
           Informations sur l'alerte
         </p>
-        <a href="#" class="card-header-icon" aria-label="more options">
+        <!--a href="#" class="card-header-icon" aria-label="more options">
           <span class="icon">
             <i class="fas fa-angle-down" aria-hidden="true"></i>
           </span>
-        </a>
+        </a-->
+        <%= link_to @alerte.statu.name, '#', class: 'button is-outlined is-danger' %>
       </header>
       <div class="card-content">
         <div class="content">
           <div class="subtitle is-4"><%= @alerte.titre %></div>
           <%= @alerte.description %>
+          <hr>
+          statut
+          <%= @alerte.statu.name if !@alerte.statu.nil? %>
+          <hr>
           <br>
           Publiée le : <time datetime="2016-1-1"><%= @alerte.created_at %></time>
         </div>

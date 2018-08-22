@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="title is-2">Status</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Detail</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @status.each do |status| %>
+      <tr>
+        <td><%= status.name %></td>
+        <td><%= status.detail %></td>
+        <td><%= link_to 'Show', status %></td>
+        <td><%= link_to 'Edit', edit_status_path(status) %></td>
+        <td><%= link_to 'Destroy', status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Status', new_status_path, class: 'button is-link is-outlined' %>
