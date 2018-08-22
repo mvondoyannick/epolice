@@ -1,14 +1,14 @@
-<h1 class="subtitle is-3">Convocation de ce mois <%= 30.days.ago.strftime("%D") %> </h1>
+<h1 class="subtitle is-3"><i class="fa fa-bell-o noir"></i>Liste d'alertes non resolues </h1>
 <hr style="background-color: #b9b7b7;" />
 <div class="card">
     <header class="card-header">
     <p class="card-header-title">
-        Liste de contravention pour la date du <%= Date.today.strftime("%D") %>
+        <i class="fa fa-bell-o noir"></i>Liste d'alertes non resolues
     </p>
         <!--span class="icon">
         <i class="fa fa-angle-down" aria-hidden="false" style="color: #000000;"></i>
         </span-->
-        <% if @mois.nil? %>
+        <% if @query.nil? %>
         <%= link_to '#', class: 'button' do %>
             <i class="fa fa-map" aria-hidden="false" style="color: #000000;"></i>
             voir sur la carte
@@ -19,13 +19,13 @@
     <div class="content">
         <table class="table is-fullwidth is-striped">
         <tbody>
-            <% if @mois.nil? %>
+            <% if @query.nil? %>
             <tr>
                 <td width="5%"><i class="fa fa-bell-o"></i></td>
-                <td class="subtitle is-3"><i class="fa fa-bell-slash-o" style="color: #000000;"></i> Aucunes alertes pour le moment.</td>
+                <td class="subtitle is-3"><i class="fa fa-bell-slash-o" style="color: #000000;"></i> Aucunes alertes non résolue.</td>
             </tr>
             <% else %>
-            <% @mois.each do |alerte| %>
+            <% @query.each do |alerte| %>
                 <tr>
                 <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
                 <td>
@@ -51,6 +51,6 @@
     </div>
     </div>
     <footer class="card-footer">
-    <%= link_to  "Voir toutes les alertes", access_alertes_alerte_all_path, class: "card-footer-item" if @mois.nil? %>
+    <%= link_to  "Voir toutes les alertes", access_alertes_alerte_all_path, class: "card-footer-item" if @query.nil? %>
     </footer>
 </div>

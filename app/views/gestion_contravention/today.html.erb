@@ -1,2 +1,56 @@
-<h1>GestionContravention#today</h1>
-<p>Find me in app/views/gestion_contravention/today.html.erb</p>
+<h1 class="subtitle is-3"><i class="fa fa-car noir"></i>Contraventions de ce jour <%= Date.today.strftime("%D") %> </h1>
+<hr style="background-color: #b9b7b7;" />
+<div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Liste de contraventions pour la date du <%= Date.today.strftime("%D") %>
+        </p>
+          <!--span class="icon">
+            <i class="fa fa-angle-down" aria-hidden="false" style="color: #000000;"></i>
+          </span-->
+          <% if @today.nil? %>
+            <%= link_to '#', class: 'button' do %>
+              <i class="fa fa-map" aria-hidden="false" style="color: #000000;"></i>
+              voir sur la carte
+            <% end %>
+          <% end %>
+      </header>
+      <div class="card-table">
+        <div class="content">
+          <table class="table is-fullwidth is-striped">
+            <tbody>
+              <% if !@today.nil? %>
+                <tr>
+                  <td width="5%"><i class="fa fa-bell-o"></i></td>
+                  <td class="subtitle is-3"><i class="fa fa-bell-slash-o" style="color: #000000;"></i> Aucunes contraventions.</td>
+                </tr>
+              <% else %>
+                <% @today.each do |alerte| %>
+                  <tr>
+                    <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
+                    <td>
+                      <%= alerte.created_at.strftime("%B %d, %Y") %>
+                    </td>
+                    <td>
+                      <%= alerte.titre %>
+                    </td>
+                    <td>
+                      <%= alerte.agent.name %>&nbsp;<%= alerte.agent.prenom %>
+                    </td>
+                    <td>
+                      <%= alerte.ville.name %>
+                    </td>
+                    <td>
+                      <%= link_to  "Détail", alerte_path(alerte), class: "button is-small is-link is-outlined" %>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <%= link_to  "Voir toutes les alertes", access_alertes_alerte_all_path, class: "card-footer-item" if @today.nil? %>
+      </footer>
+    </div>

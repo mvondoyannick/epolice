@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'journal/public'
+  get 'journal/private'
   resources :status
   get 'constat/read'
   get 'constat/search'
@@ -8,6 +10,7 @@ Rails.application.routes.draw do
   get 'statistique/day'
   get 'statistique/week'
   get 'statistique/mois'
+  #========================================
   get 'gestion_constat/today'
   get 'gestion_constat/hier'
   get 'gestion_constat/week'
@@ -16,11 +19,15 @@ Rails.application.routes.draw do
   get 'gestion_constat/cartography'
   get 'gestion_constat/region'
   get 'gestion_constat/assureur'
+  #=========================================
   get 'gestion_contravention/today'
   get 'gestion_contravention/week'
   get 'gestion_contravention/mounth'
   get 'gestion_contravention/cartography'
   get 'gestion_contravention/region'
+  get 'gestion_contravention/periode'
+  post 'gestion_contravention/periode'
+  #===========================================
   get 'gestion_alerte/today'
   get 'gestion_alerte/week'
   get 'gestion_alerte/mounth'
@@ -28,6 +35,8 @@ Rails.application.routes.draw do
   get 'gestion_alerte/region'
   get 'gestion_alerte/periode'
   post 'gestion_alerte/periode'
+  get 'gestion_alerte/resolve'
+  get 'gestion_alerte/unresolve'
   resources :roles
   resources :services
   resources :workflows
@@ -135,8 +144,12 @@ Rails.application.routes.draw do
     get 'convocations/authUser/:phone/:matricule', to: 'convocations#authUser'
     get 'convocations/verify/:code', to: 'convocations#verifyContravention'
     get 'convocations/protectCode/:code', to: 'convocations#protectCode'
+    #============================== retourner le type d'infraction ===============================
+    get 'alert/types/type', to: 'convocations#api_type'
     #----------------------sending alert and return status----------------------------------
     get 'alert/new/:matricule/:type/:lon/:lat/:photo/:description/:ville', to: 'convocations#new_alerte'
+    #========== lire les alertes publiées =============
+    get 'alert/read/all/:matricule/:ville_id', to: 'convocations#read_alertes'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

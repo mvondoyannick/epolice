@@ -20,5 +20,8 @@ class Alerte < ApplicationRecord
   def init
     self.statu_id = Statu.last.id
     self.action = "Aucune action pour le moment"
+    self.date = Date.today
+    self.longitude = "9.42"
+    self.latitude = "4.03"
   end
 end

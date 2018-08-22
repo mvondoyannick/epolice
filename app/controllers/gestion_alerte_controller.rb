@@ -2,17 +2,17 @@ class GestionAlerteController < ApplicationController
 
   #retourne toutes les alertes de ce jour
   def today
-    @today = Alerte.where(created_at: Time.now.beginning_of_day..Time.now.end_of_day).order(created_at: :desc)
+    @today = Alerte.where(created_at: Time.now.beginning_of_day..Time.now.end_of_day, ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc).all
     render layout: 'admin'
   end
 
   def week
-    @week = Alerte.where(created_at: 7.days.ago..Date.today).order(created_at: :desc)
+    @week = Alerte.where(created_at: 7.days.ago..Date.tomorrow, ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc)
     render layout: 'admin'
   end
 
   def mounth
-    @mois = Alerte.where(created_at: 30.days.ago..Date.today).order(created_at: :desc)
+    @mois = Alerte.where(created_at: 30.days.ago..Date.tomorrow, ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc)
     render layout: 'admin'
   end
 
@@ -20,10 +20,10 @@ class GestionAlerteController < ApplicationController
   def cartography
     if params[:id].nil
       id = params[:id].to_i #contient la date de debut
-      @cartography = Alerte.where(created_at: id.days.ago..Date.today).order(created_at: :desc)  
+      @cartography = Alerte.where(created_at: id.days.ago..Date.today, ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc)  
     else
       id = params[:id].to_i #contient la date de debut
-      @cartography = Alerte.where(created_at: id.days.ago..Date.today).order(created_at: :desc)
+      @cartography = Alerte.where(created_at: id.days.ago..Date.today, ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc)
     end
     
     render layout: 'admin'
@@ -47,7 +47,7 @@ class GestionAlerteController < ApplicationController
   def periode
     @debut = params[:debut]
     @fin = params[:fin]
-    @query = Alerte.where(created_at: params[:debut]..params[:fin]).order(created_at: :desc)
+    @query = Alerte.where(created_at: params[:debut]..params[:fin], ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc)
     render layout: 'admin'
   end
 
@@ -58,5 +58,17 @@ class GestionAlerteController < ApplicationController
   end
 
   def time_machine
+  end
+
+  #pour les alerte resolues
+  def resolve
+    @query = Alerte.where(statu_id: 1).order(created_at: :desc)
+    render layout: 'admin'
+  end
+
+  #pour les alertes non resolues
+  def unresolve
+    @query = Alerte.where(statu_id: 2).order(created_at: :desc)
+    render layout: 'admin'
   end
 end

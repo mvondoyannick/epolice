@@ -63,6 +63,18 @@
                         Par région
                     <% end %>
                 </li>
+                <li>
+                    <%= link_to gestion_alerte_resolve_path do %>
+                        <i class="fa fa-bell-slash" style="color: #000000;"></i>
+                        Résolues
+                    <% end %>
+                </li>
+                <li>
+                    <%= link_to gestion_alerte_unresolve_path do %>
+                        <i class="fa fa-bell-o" style="color: #000000;"></i>
+                        Non résolues
+                    <% end %>
+                </li>
             </ul>
         </li>
         <li>

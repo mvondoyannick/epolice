@@ -11,6 +11,7 @@
       <th>Matricule</th>
       <th>Grade</th>
       <th>Date ajout</th>
+      <th>Ville affectation</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,6 +27,7 @@
         <td><%= agent.matricule %></td>
         <td><%= agent.grade.name if !agent.grade.nil? %></td>
         <td><%= agent.created_at %></td>
+        <td><%= agent.ville.name %></td>
         <td><%= link_to 'Show', agent, class: "button is-link is-outlined" %></td>
         <td><%= link_to 'Edit', edit_agent_path(agent), class: "button is-link is-outlined" %></td>
       </tr>

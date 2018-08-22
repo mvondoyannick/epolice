@@ -1,8 +1,5 @@
 <h1 class="subtitle is-3">Alertes de ce jour <%= Date.today.strftime("%D") %> </h1>
 <hr style="background-color: #b9b7b7;" />
-<p class="subtitle is-6"><i class="fa fa-hourglass-start" style="color: #000;"></i> Vous pouvez egalement  voir les alertes </p> 
-  <%= link_to 'Hier', '#', class: 'button is-link is-outlined' %> <%= link_to "D'avant hier", '#', class: 'button is-link is-outlined' %> <%= link_to "D'il ya 3 jours", '#', class: 'button is-link is-outlined' %>
-<hr style="background-color: #b9b7b7;" />
 <div class="card">
       <header class="card-header">
         <p class="card-header-title">
@@ -22,7 +19,7 @@
         <div class="content">
           <table class="table is-fullwidth is-striped">
             <tbody>
-              <% if !@today.nil? %>
+              <% if @today.nil? %>
                 <tr>
                   <td width="5%"><i class="fa fa-bell-o"></i></td>
                   <td class="subtitle is-3"><i class="fa fa-bell-slash-o" style="color: #000000;"></i> Aucunes alertes pour le moment.</td>
@@ -38,7 +35,13 @@
                       <%= alerte.titre %>
                     </td>
                     <td>
-                      <%= link_to  "Détail", alerte_path(allerte), class: "button is-small is-primary" %>
+                      <%= alerte.agent.name %>&nbsp;<%= alerte.agent.prenom %>
+                    </td>
+                    <td>
+                      <%= alerte.ville.name %>
+                    </td>
+                    <td>
+                      <%= link_to  "Détail", alerte_path(alerte), class: "button is-small is-link is-outlined" %>
                     </td>
                   </tr>
                 <% end %>

@@ -5,7 +5,7 @@
     <div class="card">
       <header class="card-header">
         <p class="card-header-title">
-          Liste d'alertes
+          Liste des 10 dernieres d'alertes
         </p>
         <a href="#" class="card-header-icon" aria-label="more options">
           <span class="icon">
@@ -17,7 +17,7 @@
         <div class="content">
           <table class="table is-fullwidth is-striped">
             <tbody>
-              <% @alerte_tmp = Alerte.order(created_at: :desc).limit(10) %>
+              <% @alerte_tmp = Alerte.where(ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc, ).limit(10) %>
               <% if @alerte_tmp.nil? %>
                 <tr>
                   <td width="5%"><i class="fa fa-bell-o"></i></td>
@@ -34,7 +34,7 @@
                       <%= alerte.titre %>
                     </td>
                     <td>
-                      <%= link_to  "Détail", alerte_path(alerte), class: "button is-small is-primary" %>
+                      <%= link_to  "Détail", alerte_path(alerte), class: "button is-small is-link is-outlined" %>
                     </td>
                   </tr>
                 <% end %>
@@ -81,7 +81,7 @@
                       <%= alerte.phone %>
                     </td>
                     <td>
-                      <%= link_to  "Détail", convocation_path(alerte.id), class: "button is-small is-primary" %>
+                      <%= link_to  "Détail", convocation_path(alerte.id), class: "button is-small is-link is-outlined" %>
                     </td>
                   </tr>
                 <% end %>

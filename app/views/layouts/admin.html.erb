@@ -49,9 +49,9 @@
                 <div class="tile is-parent">
                   <article class="tile is-child box">
                     <p class="title"><i class="fa fa-bell-slash fa-1x" style="color: #000000;"></i></p>
-                    <p class="subtitle is-6"><%= @a = Alerte.where(created_at: Date.today).count %> Alerte(s) aujourd'hui</p>
-                    <% if @a.nil? %>
-                      <%= link_to alerte_path(@a), class: 'button' do %>
+                    <p class="subtitle is-6"><%= @a = Alerte.where(created_at: Time.now.beginning_of_day..Time.now.end_of_day, ville_id: Agent.find(session[:id]).ville_id).count %> Alerte(s) aujourd'hui</p>
+                    <% if !@a.nil? %>
+                      <%= link_to gestion_alerte_today_path, class: 'button is-link is-outlined' do %>
                         <i class="fa fa-check" style="color: #000000;"></i>
                         Acceder
                       <% end %>

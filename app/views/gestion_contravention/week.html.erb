@@ -1,2 +1,78 @@
-<h1>GestionContravention#week</h1>
-<p>Find me in app/views/gestion_contravention/week.html.erb</p>
+<h1 class="subtitle is-3"><i class="fa fa-car" style="color: #000000;"></i> Contravention semaine du <%= 7.days.ago.strftime("%D") %> au <%= Date.today.strftime("%D") %></h1>
+<hr style="background-color: #b9b7b7;" />
+<p class="subtitle is-6 is-vertical-center"><i class="fa fa-hourglass-start" style="color: #000;"></i> Séléctionner la période que vous souhaiter voir </p>
+<table class="table">
+  <tr>
+    <%= form_tag( action: 'periode') do %>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+    <td>
+      <div class="field">
+        <div class="control">
+          <%= date_field_tag :debut, "", class: 'input' %>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <div class="control">
+          <%= date_field_tag :fin, "", class: 'input' %>
+        </div>
+      </div>
+    </td>
+    <td>
+      <%= submit_tag "Rechercher", class: 'button is-block is-info is-outlined is-fullwidth' %>
+    </td>
+    <% end %>
+  </tr>
+</table>
+<hr style="background-color: #b9b7b7;" />
+<div class="card">
+      <header class="card-header">
+        <p class="card-header-title is-5">
+          Liste de contravention pour la semaine du <%= 7.days.ago.strftime("%D") %> au <%= Date.today.strftime("%D") %>
+        </p>
+        <!--a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fa fa-angle-down" aria-hidden="false" style="color: #000000;"></i>
+          </span>
+        </a-->
+        <% if @week.nil? %>
+          <%= link_to action: 'cartography', id: 7 do %>
+            <i class="fa fa-map noir"></i>
+            voir sur la carte
+          <% end %>
+        <% end %>
+      </header>
+      <div class="card-table">
+        <div class="content">
+          <table class="table is-fullwidth is-striped">
+            <tbody>
+              <% if !@week.nil? %>
+                <tr>
+                  <td width="5%"><i class="fa fa-bell-o"></i></td>
+                  <td class="subtitle is-3"><i class="fa fa-bell-slash-o" style="color: #000000;"></i> Aucunes Contravention pour le moment.</td>
+                </tr>
+              <% else %>
+                <% @week.each do |alerte| %>
+                  <tr>
+                    <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
+                    <td>
+                      <%= alerte.created_at.strftime("%B %d, %Y") %>
+                    </td>
+                    <td>
+                      <%= alerte.titre %>
+                    </td>
+                    <td>
+                      <%= link_to  "Détail", alerte_path(alerte), class: "button is-small is-primary" %>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <%=  %>
+      </footer>
+    </div>
+</div>

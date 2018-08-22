@@ -8,8 +8,8 @@ class Api::ConvocationsController < ApplicationController
     matricule = params[:matricule]
 
     #verification des information recu
-    @token = Agent.where(phone: phone, matricule: matricule)
-    if @token.empty?
+    token = Agent.where(phone: phone, matricule: matricule)
+    if token.empty?
       render json: {
         status: :not_found,
         message: :agent_inconnu,
@@ -18,9 +18,12 @@ class Api::ConvocationsController < ApplicationController
     else
       render json: {
         status: :found,
-        message: @token,
+        message: token,
+        ville: token[0].ville.name,
+        ville_id: token[0].ville_id,
+        apikey: SecureRandom.hex(10),
         code: 200,
-        blue_print: SecureRandom.hex(10)
+        cookies:  {value: SecureRandom.hex(10), expires: 1.hour.from_now }
       }
     end
   end
@@ -87,6 +90,12 @@ class Api::ConvocationsController < ApplicationController
     end
   end
 
+
+  #retourner tous les types au format json pour l'API
+  def api_type
+    render json: Type.all
+  end
+
   # GET /convocations/new
   def conv
     cni = params[:cni]
@@ -123,7 +132,7 @@ class Api::ConvocationsController < ApplicationController
   #GET ALERTS 
   #permet de creer une nouvelle alerte
   def new_alerte
-    quartier = params[:quartier]
+    quartier = params[:ville]
     #coordonnee = params[:coordonnees]
     lon = params[:lon]
     lat = params[:lat]
@@ -131,6 +140,28 @@ class Api::ConvocationsController < ApplicationController
     photo = params[:photo]
     type = params[:type]
     agent = params[:matricule]
-    Alerte.new(agent_id: agent, type_id: type, longitude: lon, latitude: lat, photo: photo, description: description, ville_id: ville)
+     a = Alerte.new(agent_id: agent, type_id: type, longitude: Base64.decode64(lon), latitude: Base64.decode64(lat), description: description, ville_id: quartier, statu_id: 1, titre: Type.find(type).name)
+     if a.save
+      render json: a
+     else
+      render json: {'errro': a.errors.messages}
+     end
+  end
+
+  #get stored alertes on plateforme
+  def read_alertes
+    #on recupere les informations de l'agent au nombre de 3
+    matricule = params[:matricule]
+    ville   = params[:ville_id]
+
+    #on verifie les informations
+    read = Alerte.where(ville_id: ville).order(created_at: :desc)
+    if read
+      render json: read
+      else
+        render json: {
+          status: 'aucunes reponse correspondante'
+        }
+    end
   end
 end

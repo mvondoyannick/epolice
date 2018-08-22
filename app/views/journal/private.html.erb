@@ -1,0 +1,19 @@
+<h1 class="title is-2">Journal des activités de la plateforme</h1>
+<p>Find me in app/views/journal/private.html.erb</p>
+<hr style="background-color: #000;">
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-12">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <% @journale.each do |a| %>
+            <article class="tile is-child box">
+            <p class="title"><i class="fa fa-bell-slash noir"></i> <%= a.titre %></p>
+            <p class="subtitle"><%= a.created_at %> @ <%= a.ville.name %> par <%= a.agent.name %> <%= a.agent.prenom %></p>
+            <div class="content"><%= a.description %></div>
+            <%= link_to 'Detail', alerte_path(a), class: "button is-link is-outlined" %> <%= link_to 'Signaler', alerte_path(a), class: "button is-link is-outlined" %>
+            </article>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

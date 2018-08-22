@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_21_180720) do
+ActiveRecord::Schema.define(version: 2018_08_22_152525) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -55,8 +55,10 @@ ActiveRecord::Schema.define(version: 2018_08_21_180720) do
     t.bigint "commissariat_id"
     t.string "crypted"
     t.bigint "grade_id"
+    t.bigint "ville_id"
     t.index ["commissariat_id"], name: "index_agents_on_commissariat_id"
     t.index ["grade_id"], name: "index_agents_on_grade_id"
+    t.index ["ville_id"], name: "index_agents_on_ville_id"
   end
 
   create_table "alertes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -290,6 +292,7 @@ ActiveRecord::Schema.define(version: 2018_08_21_180720) do
   add_foreign_key "affectations", "carrefours", name: "affectations_ibfk_2"
   add_foreign_key "agents", "commissariats", name: "agents_ibfk_1"
   add_foreign_key "agents", "grades"
+  add_foreign_key "agents", "villes"
   add_foreign_key "alertes", "agents", name: "alertes_ibfk_3"
   add_foreign_key "alertes", "status", column: "statu_id"
   add_foreign_key "alertes", "types", name: "alertes_ibfk_2"
