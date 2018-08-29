@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  browser: MyString
+  address: MyString
+  controller: MyString
+  action: MyString
+  date: MyString
+
+two:
+  browser: MyString
+  address: MyString
+  controller: MyString
+  action: MyString
+  date: MyString

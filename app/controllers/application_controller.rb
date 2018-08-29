@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   #devise init
   #before_action :configure_devise_parameters, if: :devise_controller?
   #before_action :is_admin?
+  before_action :add_log
 
   def configure_devise_parameters
     devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :prenom, :note)}
@@ -32,6 +33,11 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  def add_log
+    #permet de journaliser toutes les action dans la plateforme
+
+  end
 
   def verifyLogin
     if !session[:role].nil?
