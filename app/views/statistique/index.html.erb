@@ -1,14 +1,92 @@
-<h1>Statistique#index</h1>
-<p>Find me in app/views/statistique/index.html.erb</p>
-<hr style="background-color: #000;">
-Statistiques : <%= link_to "Aujourd'hui", "#", class: "button is-primary" %> <%= link_to "Hebdomadire", "#", class: "button is-primary" %> <%= link_to "Mensuelle", "#", class: "button is-primary" %> <%= link_to "Annuelle", "#", class: "button is-primary" %>
-<hr style="background-color: #000;">
-<div id="chart-id"></div>
-<p class="subtitle">Line chart</p>
-<%= line_chart Convocation.group_by_day_of_week(:created_at, format: "%a").count %>
-<hr style="background-color: #000;">
-<p class="subtitle">Pie chart</p>
-<%= pie_chart Convocation.group_by_day_of_week(:created_at).count %>
-<hr style="background-color: #000;">
-<p class="subtitle">Column chart</p>
-<%= column_chart Convocation.group_by_day_of_week(:created_at, format: "%a").count %>
+<nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <%= link_to "Statistiques", "#", class: 'navbar-item' %>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <%= link_to  '#', class: 'navbar-item' do %>
+        <i class="fa fa-shield noir"></i>
+        Agents
+      <% end %>
+      <%= link_to  '#', class: 'navbar-item' do %>
+        <i class="fa fa-bell-o noir"></i>
+        Alertes
+      <% end %>
+      <%= link_to  '#', class: 'navbar-item' do %>
+        <i class="fa fa-car noir"></i>
+        Contraventions
+      <% end %>
+      <%= link_to  "Constats", '#', class: 'navbar-item' %>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="/documentation/overview/start/">
+          Docs
+        </a>
+        <div class="navbar-dropdown is-boxed">
+          <a class="navbar-item" href="/documentation/overview/start/">
+            Overview
+          </a>
+          <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
+            Modifiers
+          </a>
+          <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
+            Columns
+          </a>
+          <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
+            Layout
+          </a>
+          <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
+            Form
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
+            Elements
+          </a>
+          <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
+            Components
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=http://localhost:4000&amp;via=jgthms">
+              <span class="icon">
+                <i class="fab fa-twitter"></i>
+              </span>
+              <span>
+                Tweet
+              </span>
+            </a>
+          </p>
+          <p class="control">
+            <a class="button is-primary" href="https://github.com/jgthms/bulma/releases/download/0.7.1/bulma-0.7.1.zip">
+              <span class="icon">
+                <i class="fa fa-download"></i>
+              </span>
+              <span>Download</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<hr style="background-color: #000000;">
+<iframe
+  src="http://192.168.1.200:3000/public/dashboard/0cb85a2b-1db4-4f48-beff-9b98a1cb42fa"
+  frameborder="0"
+  width="100%"
+  height="100%"
+  allowtransparency>
+</iframe>
+

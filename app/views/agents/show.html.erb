@@ -1,11 +1,15 @@
 
 <p id="notice" class="notification"><%= notice %></p>
+<%= link_to :back, class: 'button is-link is-outlined' do %>
+  <i class="fa fa-arrow-left noir"></i>
+  Retourner à la vue precedente
+<% end %>
 <div class="card">
       <header class="card-header">
         <p class="card-header-title">
           Information sur l'agent
         </p>
-        <%= link_to 'Modifier', edit_agent_path(@agent), class: 'button is-primary' %> |
+        <%= link_to 'Modifier', edit_agent_path(@agent), class: 'button is-link is-outlined' %>
       <%= link_to 'Retour', agents_path %>
       </header>
       <div class="card-image">

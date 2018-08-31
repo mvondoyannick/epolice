@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  get 'archive/index'
+  get 'compte/index'
+  get 'compte/validate'
+  get 'compte/update'
+  get 'compte/authorise'
+  get 'compte/block'
+  get 'public/index'
+  get 'public/search'
+  get 'public/result'
+  get 'public/abonne'
+  get 'public/desabonne'
+  get 'public/attempt_search'
+  post 'public/attempt_search'
   get 'journal/public'
   get 'journal/private'
   resources :status
@@ -37,6 +50,9 @@ Rails.application.routes.draw do
   post 'gestion_alerte/periode'
   get 'gestion_alerte/resolve'
   get 'gestion_alerte/unresolve'
+  get 'gestion_alerte/archive/:alerte_id', to: 'gestion_alerte#archive'
+  #==========================================
+  get 'statistique/statistique_home'
   resources :roles
   resources :services
   resources :workflows
@@ -48,6 +64,7 @@ Rails.application.routes.draw do
   get 'access/login'
   get 'access/logout'
   get 'access/admin'
+  get 'access/access_control'
   get 'loggedin/home'
   get 'loggedin/private'
   get 'welcome/index'

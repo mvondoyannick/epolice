@@ -63,6 +63,10 @@ gem "breadcrumbs_on_rails"
 gem "chartkick"
 #installation de groupdate
 gem "groupdate"
+#pour la gestion des SMS avec SMSAPI
+gem 'smsapi-client-rails', '~> 0.1.0'
+#ajout de httparty
+gem 'httparty'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

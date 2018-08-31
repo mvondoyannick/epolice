@@ -36,6 +36,17 @@ class ApplicationController < ActionController::Base
 
   def add_log
     #permet de journaliser toutes les action dans la plateforme
+    log = Log.new
+    log.browser = request.env['HTTP_USER_AGENT']
+    log.address = request.env['REMOTE_ADDR']
+    log.controller = params[:controller]
+    log.action = params[:action]
+    log.date = Time.now
+    log.user = current_user.name+' '+current_user.prenom if !session[:id].nil?
+    log.role = current_user.role.name if !session[:id].nil?
+
+    #on enregistre l'activité
+    log.save
 
   end
 

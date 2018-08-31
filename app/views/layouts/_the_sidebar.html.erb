@@ -6,7 +6,18 @@
         </p>
         <ul class="menu-list">
             <li><a class="is-active">Dashboard</a></li>
-            <li><a><i class="fa fa-area-chart" style="color: #000000;"></i>Administration</a></li>
+            <li>
+                <%= link_to  controller: 'access', action: 'access_control' do %>
+                    <i class="fa fa-area-chart" style="color: #000000;"></i>
+                    Administration
+                <% end %>
+            </li>
+            <li>
+              <%= link_to  workflows_path do %>
+                <i class="fa fa-paper-plane-o" style="color: #000000;"></i>
+                Transmission de pieces
+              <% end %>
+            </li>
             <li>
                 <%= link_to statistique_index_path do %>
                     <i class="fa fa-users" style="color: #000000;"></i>

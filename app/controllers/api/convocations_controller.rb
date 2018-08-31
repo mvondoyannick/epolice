@@ -76,7 +76,15 @@ class Api::ConvocationsController < ApplicationController
     status = "unresolve"
 
     #creation d'une alerte
-    query = Alerte.new(titre: titre, description: description, date: date, ville_id: ville, type_id: type, agent_id: agent, status: status)
+    query = Alerte.new(
+        titre: titre,
+        description: description,
+        date: date,
+        ville_id: ville,
+        type_id: type,
+        agent_id: agent,
+        status: status
+    )
     if query.save
       render json: {
           status: :created,
@@ -93,10 +101,11 @@ class Api::ConvocationsController < ApplicationController
 
   #retourner tous les types au format json pour l'API
   def api_type
-    render json: Type.all
+    render json: {types: Type.all}
   end
 
   # GET /convocations/new
+  # permet la creation d'une convocation
   def conv
     cni = params[:cni]
     phone = params[:phone]
@@ -107,19 +116,27 @@ class Api::ConvocationsController < ApplicationController
     status = "impaye"
     code = SecureRandom.hex(3)
 
+    #il faudra verifier si l'utilisateur et son téléphone sont authorisé
+
     @result = Convocation.new(cni: cni, phone: phone, immatriculation: immatriculation, motif: motif, pieceretenue: pieceretenue, status: status, agent_id: agent, code: code.upcase)
     if @result.save
-      render json: {
-        status: :save,
-        message: :created,
-        data: @result
-      }
-      uri = URI.parse("http://textbelt.com/text")
-      Net::HTTP.post_form(uri, {
-          :phone => '+237691451189',
-          :message => 'Hello world',
-          :key => 'e0cc5680081956c7d206955ddc96ae9f58ae53044H9HtTWAkm6ApR6MV285mFTT4',
-      })
+      #c'est ok, on envoi le SMS
+      sms = SmsapiRails.send_sms phone, "La CNI #{cni} est verbalisé pour #{@result.infraction.motif}, cout: #{@result.infraction.montant}. plus sur https://pop-circulation.herokuapp.com/user/public/c/#{@result.code}"
+      puts "===== #{sms} ====="
+      if sms.status == 'ok' && sms.success?
+        render json: {
+            status: :save,
+            message: :created,
+            data: @result
+        }
+      end
+
+      #uri = URI.parse("http://textbelt.com/text")
+      #Net::HTTP.post_form(uri, {
+      #    :phone => '+237691451189',
+      #    :message => 'Hello world',
+      #    :key => 'e0cc5680081956c7d206955ddc96ae9f58ae53044H9HtTWAkm6ApR6MV285mFTT4',
+      #})
     else
       render json: {
         status: :unprocessable_entity,

@@ -21,6 +21,7 @@
 
         <%= f.input :observation, label: "Observation sur le conducteur", as: :text %>
         <%= f.input :pieceretenue, label: "Pieces retenue", collection: ["Permis de conduire", "Carte Grise", "Aucune"], prompt: "Selctionner une piece retenue" %>
+        <%= f.input :infraction_id, collection: [["Vol de véhicule",1.to_i], ["Pas d'extincteur",2.to_i]], label: "Infraction",  prompt: "Selectionner une infraction" %>
         <%= f.input :status, label: "Statut", collection: [["Impayé","impaye"], ["Payé","paye"]], prompt: "Selectionner un statut" %>
         <%= f.association :agent, label: "Agent verbaliseur ", prompt: "Selectionner l'agent" %>
       </div>

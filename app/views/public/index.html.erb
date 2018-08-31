@@ -1,0 +1,58 @@
+<div class="container">
+  <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+    <a class="navbar-item">
+      <%= image_tag('police', size: 25) %> &nbsp; E-POLICE
+    </a>
+
+  </nav>
+  <section class="hero is-link">
+    <div class="hero-body">
+      <p class="title">
+        <%= image_tag('police', size: 50) %> E-POLICE
+      </p>
+      <p class="subtitle">
+        Plateforme de recherche publique de la police
+      </p>
+    </div>
+  </section>
+
+  <div class="columns">
+    <div class="column"></div>
+    <div class="column">
+      <%= form_tag(action: 'attempt_search') do %>
+        <div class="field" style="margin-top: 200px;">
+          <div class="control">
+            <%= label_tag "Téléphoné ou code" %></td>
+            <%= text_field_tag :content, nil, placeholder: "Numéro de téléphone ou code recu", class: 'input is-large noir' %>
+          </div>
+        </div>
+        <div class="field" style="margin-top: 20px;">
+          <label class="radio">
+            <%= radio_button_tag 'type','immatriculation' %>
+            <i class="fa fa-automobile" style="color: #000000;"></i>
+            Immatriculation
+          </label>
+          <label class="radio">
+            <%= radio_button_tag 'type','telephone' %>
+            <i class="fa fa-phone" style="color: #000000;"></i>
+            Téléphone
+          </label>
+          <label class="radio">
+            <%= radio_button_tag 'type','code' %>
+            <i class="fa fa-code" style="color: #000000;"></i>
+            Code
+          </label>
+        </div>
+
+        <%= submit_tag "Rechercher", class: 'button is-block is-link is-outlined is-large', id: 'send' %>
+      <% end %>
+    </div>
+    <div class="column"></div>
+  </div>
+
+<div id="result">
+
+</div>
+</div>
+
+

@@ -40,6 +40,12 @@
                     <td>
                       <%= link_to  "Détail", alerte_path(alerte), class: "button is-small is-link is-outlined" %>
                     </td>
+                    <td>
+                      <%= link_to  "/gestion_alerte/archive/#{alerte.id}", class: "button is-small is-link is-outlined" do %>
+                        <i class="fa fa-archive noir"></i>
+                        Archiver
+                      <% end %>
+                    </td>
                   </tr>
                 <% end %>
               <% end %>

@@ -22,7 +22,7 @@
   <nav class="navbar is-white">
       <div class="container">
         <div class="navbar-brand">
-          <%= link_to image_tag( "logo.png" ), root_path, class: 'navbar-item brand-text' %>
+          <%= link_to image_tag( "police" ), root_path, class: 'navbar-item brand-text' %>
           <div class="navbar-burger burger" data-target="navMenu">
             <span></span>
             <span></span>
@@ -44,13 +44,17 @@
                   <i class="fa fa-envelope-open" style="color: #000000;"></i>
                 Message
               <% end %>
-              <%= link_to  root_path, class: "navbar-item" do %>
+              <%= link_to  compte_index_path, class: "navbar-item" do %>
                 <i class="fa fa-user-circle" style="color: #000000;"></i>
                 Comptes
               <% end %>
               <%= link_to  '#', class: "navbar-item" do %>
                 <i class="fa fa-cog" style="color: #000000;"></i>
                 Configuration
+              <% end %>
+              <%= link_to  archive_index_path, class: "navbar-item" do %>
+                <i class="fa fa-archive" style="color: #000000;"></i>
+                Archives
               <% end %>
               <%= link_to  access_logout_path, class: "navbar-item" do %>
                 <i class="fa fa-sign-out" style="color: #000000;"></i>

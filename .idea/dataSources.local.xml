@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Rails e: production" uuid="c3d211de-adf9-4644-bc8d-2c7333dc3f57">
+    <data-source name="Rails pop-circulation: production" uuid="3722b361-3a31-4ef0-b614-f79574544d4d">
+      <database-info product="MySQL" version="5.5.5-10.1.31-MariaDB-cll-lve" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" family="MARIADB" exact-version="5.5.5">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <user-name>restoafr_test</user-name>
+      <introspection-schemas>*:@</introspection-schemas>
+    </data-source>
+    <data-source name="Rails pop-circulation: test" uuid="dee6f2a3-9999-458b-a5a5-d4e6f8f6c977">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="MYSQL" exact-version="0.0" />
-      <secret-storage>master_key</secret-storage>
       <first-sync>true</first-sync>
-      <user-name>root</user-name>
+      <user-name>agis</user-name>
     </data-source>
-    <data-source name="Rails e: development" uuid="a41ced40-9938-4479-bedc-fac35db7cb07">
-      <database-info product="MySQL" version="5.5.5-10.1.22-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.45 ( Revision: 9131eefa398531c7dc98776e8a3fe839e544c5b2 )" family="MARIADB" exact-version="5.5.5">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
-      <user-name>root</user-name>
-      <introspection-schemas>*:e_development</introspection-schemas>
-    </data-source>
-    <data-source name="Rails e: test" uuid="842702d5-4931-4a48-a570-44ce5d05e402">
-      <database-info product="MySQL" version="5.5.5-10.1.22-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.45 ( Revision: 9131eefa398531c7dc98776e8a3fe839e544c5b2 )" family="MARIADB" exact-version="5.5.5">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
-      <user-name>root</user-name>
-      <introspection-schemas>*:e_test</introspection-schemas>
+    <data-source name="Rails pop-circulation: development" uuid="9c93e5d9-8c4a-49a7-8caf-cd059d92d223">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="MYSQL" exact-version="0.0" />
+      <first-sync>true</first-sync>
+      <user-name>agis</user-name>
     </data-source>
   </component>
 </project>

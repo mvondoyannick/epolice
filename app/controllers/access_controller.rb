@@ -1,6 +1,7 @@
 class AccessController < ApplicationController
   #on verifie si l'utilisateur est connecter avant de donner acces aux ressource
   #before_action :confirm_logged_in, only: [:login, :attemp_login, :admin, :logout]
+  before_action :authenticate, only: :access_control
 
 
   def index
@@ -75,6 +76,12 @@ class AccessController < ApplicationController
   def request_doc
     
   end
+
+  #permet une administration totale
+  def access_control
+    
+  end
+  
 
   #Demander un compte à la DGSN
   #route /access/request/account
@@ -239,5 +246,18 @@ class AccessController < ApplicationController
   # def access_params
   #   params.require(:fylo).permit(:name, :prenom, :email)
   # end
+
+  private
+
+  def authenticate
+    #on recupere la page en cours
+    current_page = request.original_url
+     p = authenticate_or_request_with_http_basic do |email, password|
+      email == current_user.email && password == current_user.password
+    end
+
+    puts " ========== #{p} "
+    puts "========#{current_page}"
+  end
 
 end

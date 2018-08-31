@@ -1,0 +1,100 @@
+<%= link_to :back, class: 'button is-link is-outlined' do %>
+  <i class="fa fa-arrow-left noir"></i>
+  Retourner à la vue précedente
+<% end %>
+<p class="title is-3 is-capitalized">
+  Liste des agents et personnels partenaire
+</p>
+<hr class="has-background-grey">
+<p class="subtitle is-3">
+  <i class="fa fa-list noir"></i> Liste des services
+</p>
+<div style="margin-bottom: 20px;">
+  <%= link_to "Agents DGSN", "#", class: 'button is-link is-outlined' %>
+  <%= link_to "Partenaires", "#", class: 'button is-link is-outlined' %>
+  <% (Service.all).each do |service| %>
+    <%= link_to service.name, "#", class: 'button is-link is-outlined' %>
+  <% end %>
+</div>
+<hr class="has-background-grey">
+<% @user.each do |user| %>
+<article class="media">
+  <figure class="media-left">
+    <p class="image is-64x64">
+      <!--img src="https://bulma.io/images/placeholders/128x128.png"-->
+      <% if !user.avatar.attached? %>
+        <img src="https://bulma.io/images/placeholders/128x128.png">
+        <%else %>
+          <%= image_tag(user.avatar, size: 128) %>
+      <%end %>
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <p>
+        <strong><%= user.name %> <%= user.prenom %></strong> </small>
+        <br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+      </p>
+    </div>
+    <div class="level is-mobile">
+      <div class="level-left">
+        <a class="level-item">
+          <span class="icon is-small"><i class="fa fa-reply noir"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fa fa-retweet noir"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fa fa-heart noir"></i></span>
+        </a>
+      </div>
+        <%= link_to "Bloquer", "#", class: 'button is-danger is-outlined is-small' %>
+        <%= link_to "Detail", agent_path(user), class: 'button is-link is-outlined is-small' %>
+        <div class="dropdown is-active">
+          <div class="dropdown-trigger">
+            <button class="button is-link is-outlined is-small" aria-haspopup="true" aria-controls="dropdown-menu">
+              <span>Actions</span>
+              <span class="icon is-small">
+          <i class="fa fa-angle-down noir" aria-hidden="true"></i>
+        </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">
+                Ajouter un téléphone
+              </a>
+              <a class="dropdown-item">
+                Bloquer un téléphone
+              </a>
+              <a href="#" class="dropdown-item is-active">
+                Bloquer l'accès
+              </a>
+              <a href="#" class="dropdown-item">
+                Details
+              </a>
+              <a href="#" class="dropdown-item">
+                Historique activité
+              </a>
+              <a href="#" class="dropdown-item">
+                Contacter par message
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item">
+                Supprimer
+              </a>
+              <a href="#" class="dropdown-item">
+                Revoquer l'acces
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!--div class="media-right">
+    <button class="delete"></button>
+  </div-->
+</article>
+<% end %>

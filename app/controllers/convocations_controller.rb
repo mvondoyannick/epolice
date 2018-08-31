@@ -6,10 +6,10 @@ class ConvocationsController < ApplicationController
   # GET /convocations
   # GET /convocations.json
   def index
-    render layout: 'admin'
-    @convocations = Convocation.all
+    @convocations = Convocation.all.order(created_at: :desc)
     @title = "Toutes les convocations"
     @compteur = @convocations.count
+    render layout: 'admin'
   end
 
   # GET /convocations/1
@@ -43,10 +43,10 @@ class ConvocationsController < ApplicationController
 
   # GET /convocations/new
   def new
-    render layout: 'admin'
     @code = SecureRandom.hex(10).upcase
     @convocation = Convocation.new
     @description = "Creer une nouvelle convocation"
+    render layout: 'admin'
   end
 
   # GET /convocations/1/edit
@@ -134,6 +134,7 @@ class ConvocationsController < ApplicationController
         format.html { redirect_to @convocation, notice: 'Convocation was successfully created.' }
         format.json { render :show, status: :created, location: @convocation }
       else
+        puts "===== #{@convocation.errors.messages} ====="
         format.html { render :new }
         format.json { render json: @convocation.errors, status: :unprocessable_entity }
       end
@@ -180,6 +181,6 @@ class ConvocationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def convocation_params
-      params.require(:convocation).permit(:cni, :phone, :name, :prenom, :immatriculation, :residence, :emploi, :motif, :observation, :pieceretenue, :ville, :quartier, :rue, :an, :sexe, :status, :agent_id, :code)
+      params.require(:convocation).permit(:cni, :phone, :name, :prenom, :immatriculation, :residence, :emploi, :motif, :observation, :pieceretenue, :ville, :quartier, :rue, :an, :sexe, :status, :agent_id, :code, :infraction_id)
     end
 end

@@ -71,4 +71,15 @@ class GestionAlerteController < ApplicationController
     @query = Alerte.where(statu_id: 2).order(created_at: :desc)
     render layout: 'admin'
   end
+
+  def archive
+    id = params[:alerte_id]
+    query = Alerte.find(id)
+    query.archive = "archived"
+    if query.save
+      redirect_to :back, flash[:notice] = "Alerte #{id} archivée"
+    else
+      flash[:notice] = "Impossible d'archiver"
+    end
+  end
 end

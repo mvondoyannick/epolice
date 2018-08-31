@@ -1,5 +1,12 @@
 <p id="notice" class="notification"> <button class="delete" id="close-warning"></button> <%= notice %></p>
-
+<iframe
+  src="http://agis-metabase.herokuapp.com/public/dashboard/09cc98fe-ca73-4fd4-af9a-26d5dcb00b7c"
+  frameborder="0"
+  width="100%"
+  height="1000"
+  allowtransparency
+></iframe>
+<hr style="background-color: #4a4a4a;">
 <div class="columns">
   <div class="column is-6">
     <div class="card">
@@ -86,6 +93,102 @@
                   </tr>
                 <% end %>
               <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <%= link_to 'Voir toutes les convocations', acces_convocations_convocation_all_path, class: 'card-footer-item' %>
+      </footer>
+    </div>
+  </div>
+</div>
+<div class="columns">
+  <div class="column is-6">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Liste des 10 dernieres constats
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fa fa-angle-down" aria-hidden="false" style="color: #000000;"></i>
+          </span>
+        </a>
+      </header>
+      <div class="card-table">
+        <div class="content">
+          <table class="table is-fullwidth is-striped">
+            <tbody>
+            <% @alerte_tmp = Alerte.where(ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc, ).limit(10) %>
+            <% if @alerte_tmp.nil? %>
+              <tr>
+                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                <td>Aucunes alertes publiées pour le moment.</td>
+              </tr>
+            <% else %>
+              <% @alerte_tmp.each do |alerte| %>
+                <tr>
+                  <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
+                  <td>
+                    <%= alerte.created_at.strftime("%B %d, %Y") %>
+                  </td>
+                  <td>
+                    <%= alerte.titre %>
+                  </td>
+                  <td>
+                    <%= link_to  "Détail", alerte_path(alerte), class: "button is-small is-link is-outlined" %>
+                  </td>
+                </tr>
+              <% end %>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <%= link_to  "Voir touts les constats", access_alertes_alerte_all_path, class: "card-footer-item" %>
+      </footer>
+    </div>
+  </div>
+  <div class="column is-6">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Liste de contraventions
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fa fa-angle-down" style="color: #000000;" aria-hidden="true"></i>
+          </span>
+        </a>
+      </header>
+      <div class="card-table">
+        <div class="content">
+          <table class="table is-fullwidth is-striped">
+            <tbody>
+            <% @alerte_tmp = Convocation.all.order(created_at: :desc).limit(10) %>
+            <% if @alerte_tmp.nil? %>
+              <tr>
+                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                <td>Aucunes convocation publiées pour le moment.</td>
+              </tr>
+            <% else %>
+              <% @alerte_tmp.each do |alerte| %>
+                <tr>
+                  <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
+                  <td>
+                    <%= alerte.created_at.strftime("%B %d, %Y") %>
+                  </td>
+                  <td>
+                    <%= alerte.phone %>
+                  </td>
+                  <td>
+                    <%= link_to  "Détail", convocation_path(alerte.id), class: "button is-small is-link is-outlined" %>
+                  </td>
+                </tr>
+              <% end %>
+            <% end %>
             </tbody>
           </table>
         </div>
