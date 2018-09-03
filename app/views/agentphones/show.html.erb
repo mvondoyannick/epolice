@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @agentphone.phone %>
+</p>
+
+<p>
+  <strong>Fingerprint:</strong>
+  <%= @agentphone.fingerprint %>
+</p>
+
+<p>
+  <strong>Imei:</strong>
+  <%= @agentphone.imei %>
+</p>
+
+<%= link_to 'Edit', edit_agentphone_path(@agentphone) %> |
+<%= link_to 'Back', agentphones_path %>

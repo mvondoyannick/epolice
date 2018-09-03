@@ -67,6 +67,8 @@ gem "groupdate"
 gem 'smsapi-client-rails', '~> 0.1.0'
 #ajout de httparty
 gem 'httparty'
+#pour le drag and drop
+#gem 'draggable-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

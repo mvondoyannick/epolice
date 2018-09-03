@@ -1,2 +1,76 @@
-<h1>Archive#index</h1>
-<p>Find me in app/views/archive/index.html.erb</p>
+<p class="title is-3">
+  <i class="fa fa-list-alt noir"></i> Archivage et transmission des documents
+</p>
+<p class="subtitle has-text-grey is-6">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci error, eum fuga inventore iste itaque molestiae neque perferendis! Animi distinctio enim laboriosam nisi optio quasi repellendus saepe tenetur voluptatibus?
+</p>
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      Liste des 10 dernieres d'alertes
+    </p>
+    <a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fa fa-angle-down" aria-hidden="false" style="color: #000000;"></i>
+      </span>
+    </a>
+  </header>
+  <div class="card-table">
+    <div class="content">
+      <table class="table is-fullwidth is-striped">
+        <tbody>
+        <% if @agent.nil? %>
+          <tr>
+            <td width="5%"><i class="fa fa-bell-o"></i></td>
+            <td>Aucunes alertes publiées pour le moment.</td>
+          </tr>
+        <% else %>
+          <thead>
+            <tr>
+              <td>#</td>
+              <td>Nom & Prénom</td>
+              <td>Commissariat de rattachement</td>
+              <td>Grade</td>
+              <td>Action</td>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <td>#</td>
+              <td>Nom & Prénom</td>
+              <td>Commissariat de rattachement</td>
+              <td>Grade</td>
+              <td>Action</td>
+            </tr>
+          </tfoot>
+          <% @agent.each do |agent| %>
+            <tr>
+              <td width="5%">
+                <% if !agent.avatar.attached? %>
+                  <%= image_tag('https://bulma.io/images/placeholders/1280x960.png', size: 100) %>
+                  <% else %>
+                  <%= image_tag(agent.avatar, size: 100) %>
+                <% end %>
+              <td>
+                <%= agent.name %>&nbsp;<%= agent.prenom %>
+              </td>
+              <td>
+                <%= agent.commissariat.name if !agent.commissariat_id.nil? %>
+              </td>
+              <td>
+                <%= agent.grade.name if !agent.grade_id.nil? %>
+              </td>
+              <td>
+                <%= link_to  "Démarrer", "/archive/get_contravention_from_agent/#{agent.id}", class: "button is-small is-link is-outlined" %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <%= link_to  "", "#", class: "card-footer-item" %>
+  </footer>
+</div>

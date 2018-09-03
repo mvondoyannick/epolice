@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_31_161517) do
+ActiveRecord::Schema.define(version: 2018_09_03_165724) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -42,6 +42,14 @@ ActiveRecord::Schema.define(version: 2018_08_31_161517) do
     t.string "fin"
     t.index ["agent_id"], name: "index_affectations_on_agent_id"
     t.index ["carrefour_id"], name: "index_affectations_on_carrefour_id"
+  end
+
+  create_table "agentphones", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "phone"
+    t.string "fingerprint"
+    t.string "imei"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "agents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -143,8 +151,10 @@ ActiveRecord::Schema.define(version: 2018_08_31_161517) do
     t.string "code"
     t.bigint "infraction_id"
     t.string "used"
+    t.bigint "pieceretenu_id"
     t.index ["agent_id"], name: "index_convocations_on_agent_id"
     t.index ["infraction_id"], name: "index_convocations_on_infraction_id"
+    t.index ["pieceretenu_id"], name: "index_convocations_on_pieceretenu_id"
   end
 
   create_table "convocations_infractions", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -164,6 +174,8 @@ ActiveRecord::Schema.define(version: 2018_08_31_161517) do
     t.string "email"
     t.string "lastConnected"
     t.bigint "role_id"
+    t.bigint "commissariat_id"
+    t.index ["commissariat_id"], name: "index_fylos_on_commissariat_id"
     t.index ["role_id"], name: "index_fylos_on_role_id"
   end
 
@@ -199,6 +211,13 @@ ActiveRecord::Schema.define(version: 2018_08_31_161517) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["convocation_id"], name: "index_paiements_on_convocation_id"
+  end
+
+  create_table "pieceretenus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "detail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -316,6 +335,8 @@ ActiveRecord::Schema.define(version: 2018_08_31_161517) do
   add_foreign_key "contravetions", "users", column: "User_id", name: "contravetions_ibfk_1"
   add_foreign_key "convocations", "agents", name: "convocations_ibfk_2"
   add_foreign_key "convocations", "infractions", name: "convocations_ibfk_1"
+  add_foreign_key "convocations", "pieceretenus"
+  add_foreign_key "fylos", "commissariats"
   add_foreign_key "fylos", "roles"
   add_foreign_key "paiements", "convocations", name: "paiements_ibfk_1"
   add_foreign_key "types", "services"

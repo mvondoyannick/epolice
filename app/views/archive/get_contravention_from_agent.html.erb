@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+<div class="title is-2"><i class="fa fa-list noir"></i> Contravention de l'agent <%= Agent.find(params[:agent_id]).name %></div>
+<div class="subtitle has-text-grey is-5">
+  Selectionner les contraventions dont vous aimerez recevoir les pieces retenues
+</div>
+<hr class="has-background-grey">
+<% if @query.nil? %>
+  <div class="card">
+    <p class="text-capitalize text-center subtitle is-5">
+      Aucune contravention pour cet agent
+    </p>
+  </div>
+  <% else %>
+  <table class="table" id="table">
+    <thead>
+    <tr>
+      <th>date&nbsp;crétation</th>
+      <th>Code&nbsp;contravention</th>
+      <th>Pièces retenues</th>
+      <th colspan="1"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @query.each do |pieces| %>
+      <tr>
+        <td><%= pieces.created_at %></td>
+        <td>
+          <% if pieces.code.nil? %>
+            <p class="has-text-danger">Pas de code disponilble</p>
+            <% else %>
+            <%= pieces.code %>
+          <% end %>
+        </td>
+        <td><%= pieces.pieceretenue if !pieces.pieceretenue.nil? %></td>
+        <td>
+          <% if pieces.code.nil? %>
+            <%= link_to 'Aucune action', "#", class: "button is-danger is-outlined is-small is-disabled" %>
+          <% else %>
+            <%= link_to 'Demarrer la transaction', "/archive/confirm_contravention_document/#{pieces.agent_id}/#{pieces.code}/fallback", class: "button is-link is-outlined is-small" %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% end %>

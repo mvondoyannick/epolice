@@ -1,0 +1,46 @@
+<%= link_to :back, class: 'button is-link is-outlined' do %>
+  <i class="fa fa-arrow-left noir"></i>
+  Retour
+<% end %>
+<p class="title is-3 has-text-grey">
+  Confirmer la reception des pieces
+</p>
+<p class="subtitle is-5">
+  <i class="fa fa-warning has-text-grey"></i>
+    La confirmation de la reception des documents de contravention est irreversible, il est donc important de clairement identifier les documents que l'on recoi
+</p>
+<hr class="has-background-grey">
+<div class="columns">
+  <div class="column">
+    <i class="fa fa-paperclip fa-5x noir has-text-centered"></i>
+  </div>
+  <div class="column">
+    <div class="card">
+      <table class="table">
+        <% @request.each do |f| %>
+          <tr height="40">
+            <td><i class="fa fa-paperclip fa-2x noir"></i></td>
+            <td>Document</td>
+            <td><%= f.pieceretenue %></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-calendar noir"></i></td>
+            <td>Date creation</td>
+            <td><%= f.created_at %></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-calendar noir"></i></td>
+            <td>Agent emeteur </td>
+            <td><%= f.agent.name %>&nbsp;<%= f.agent.prenom %></td>
+          </tr>
+        <% end %>
+        <tr>
+          <td>&nbsp;</td>
+          <td>
+            <%= link_to "Terminer", "/archive/end_transaction/#{params[:code]}/fallback/end", class: "button is-link is-small is-outlined text-right" %>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

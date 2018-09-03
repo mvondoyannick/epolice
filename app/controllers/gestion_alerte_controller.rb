@@ -77,7 +77,7 @@ class GestionAlerteController < ApplicationController
     query = Alerte.find(id)
     query.archive = "archived"
     if query.save
-      redirect_to :back, flash[:notice] = "Alerte #{id} archivée"
+      redirect_to(:back)
     else
       flash[:notice] = "Impossible d'archiver"
     end

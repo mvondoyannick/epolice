@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Agentphones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phone</th>
+      <th>Fingerprint</th>
+      <th>Imei</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agentphones.each do |agentphone| %>
+      <tr>
+        <td><%= agentphone.phone %></td>
+        <td><%= agentphone.fingerprint %></td>
+        <td><%= agentphone.imei %></td>
+        <td><%= link_to 'Show', agentphone %></td>
+        <td><%= link_to 'Edit', edit_agentphone_path(agentphone) %></td>
+        <td><%= link_to 'Destroy', agentphone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agentphone', new_agentphone_path %>

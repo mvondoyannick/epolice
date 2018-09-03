@@ -181,6 +181,6 @@ class ConvocationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def convocation_params
-      params.require(:convocation).permit(:cni, :phone, :name, :prenom, :immatriculation, :residence, :emploi, :motif, :observation, :pieceretenue, :ville, :quartier, :rue, :an, :sexe, :status, :agent_id, :code, :infraction_id)
+      params.require(:convocation).permit(:cni, :phone, :name, :prenom, :immatriculation, :residence, :emploi, :motif, :observation, :pieceretenue, :ville, :quartier, :rue, :an, :sexe, :status, :agent_id, :code, :infraction_id, :pieceretenue_id)
     end
 end
