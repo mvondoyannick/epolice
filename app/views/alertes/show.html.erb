@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 <%= link_to :back, class: 'button is-link is-outlined' do %>
   <i class="fa fa-arrow-left noir" ></i>
-  Retourner à la vue précédente
+  Retour
 <% end %>
 <div style="margin-bottom: 25px;" /></div>
 <div class="title is-4">
-  Detail de l'alerte 
+  Detail de l'alerte : <%= @alerte.titre %>
 </div>
 <br>
 <div class="subtitle is-5">
-  Carte de localisation
+  Carte de localisation en date du <%= @alerte.created_at %>
 </div>
 
 <%= map(:center => {
@@ -47,11 +47,8 @@
           <div class="subtitle is-4"><%= @alerte.titre %></div>
           <%= @alerte.description %>
           <hr>
-          statut
-          <%= @alerte.statu.name if !@alerte.statu.nil? %>
-          <hr>
           <br>
-          Publiée le : <time datetime="2016-1-1"><%= @alerte.created_at %></time>
+          Alerte publiée le : <time datetime="2016-1-1"><%= @alerte.created_at %></time>
         </div>
       </div>
       <footer class="card-footer">
@@ -145,7 +142,7 @@
     <div class="card">
       <header class="card-header">
         <p class="card-header-title">
-          Information sur la localisation
+          Informations complementaires
         </p>
         <a href="#" class="card-header-icon" aria-label="more options">
           <span class="icon">
@@ -155,58 +152,31 @@
       </header>
       <div class="card-content">
         <div class="content">
-          <table class="table">
-            <thead>
-              <tr class="is-selected">
-                <th><abbr title="Position">#</abbr></th>
-                <th>Logitude</th>
-                <th>Latitude</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tfoot>
-              <tr>
-                <th><abbr title="Position">#</abbr></th>
-                <th>Longitude</th>
-                <th>Latitude</th>
-                <th>Action</th>
-              </tr>
-            </tfoot>
+          <table class="table is-3">
             <tbody>
               <tr>
-                <th>1</th>
+                <td><i class="fa fa-map-marker noir"></i> &nbsp;Longitude</td>
                 <td><%= @alerte.longitude %></td>
-                <td><%= @alerte.latitude %></td>
-                <td><%= link_to "Voir", "#map", class: "button is-primary" %></td>
               </tr>
-            </tbody>
-          </table>
-
-          <hr>
-
-          <table class="table">
-            <thead>
-              <tr class="is-selected">
-                <th><abbr title="Position">#</abbr></th>
-                <th>Logitude</th>
-                <th>Latitude</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tfoot>
               <tr>
-                <th><abbr title="Position">#</abbr></th>
-                <th>Longitude</th>
-                <th>Latitude</th>
-                <th>Action</th>
-              </tr>
-            </tfoot>
-            <tbody>
-              <tr>
-                <th>1</th>
-                <td><%= @alerte.longitude %></td>
+                <td><i class="fa fa-map-marker noir"></i> &nbsp;Latitude</td>
                 <td><%= @alerte.latitude %></td>
-                <td><%= link_to "Voir", "#map", class: "button is-primary" %></td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-mobile-phone noir"></i> &nbsp;Mode d'envoi</td>
+                <td>Mobile</td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-flag noir"></i> &nbsp;Pays</td>
+                <td>Cameroun</td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-internet-explorer noir"></i> &nbsp;Latitude</td>
+                <td><%= @alerte.latitude %></td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-google-wallet noir"></i> &nbsp;Latitude</td>
+                <td><%= @alerte.latitude %></td>
               </tr>
             </tbody>
           </table>
@@ -222,7 +192,7 @@
     <div class="card">
       <header class="card-header">
         <p class="card-header-title">
-          Partie concernées
+          Partenaires concernés
         </p>
         <a href="#" class="card-header-icon" aria-label="more options">
           <span class="icon">
@@ -233,10 +203,7 @@
       <div class="card-content">
         <div class="content">
           <div class="subtitle is-4"><%= @alerte.titre %></div>
-          <%= @alerte.description %>
-          <br>
-          Publiée le : <time datetime="2016-1-1"><%= @alerte.created_at %></time>
-          <%= debug @ip %>
+
         </div>
       </div>
       <footer class="card-footer">

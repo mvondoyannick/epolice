@@ -17,13 +17,13 @@
         </div>
         <!-- Developers -->
         <div class="notification" class="height: 200px;">
-            <%= session[:name] %> vous etes indentifier comme appartenant au service : <%=  %>
+            <%= session[:name] %> vous etes indentifier comme appartenant au service : <%= current_user.inspect  %>
         </div>
         <!-- End Developers -->
 
         <!-- Staff -->
         <div class="row columns is-multiline">
-            <% (Alerte.all).each do |index| %>
+            <% (Alerte.order(created_at: :desc).all).each do |index| %>
                 <div class="column is-one-third">
                     <div class="card large round">
                         <div class="card-image ">

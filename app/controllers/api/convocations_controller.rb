@@ -1,6 +1,11 @@
 class Api::ConvocationsController < ApplicationController
   require 'net/http'
   require 'uri'
+  require 'httparty'
+  require 'base64'
+
+  #autoriser les connexion en https
+  HTTParty::Basement.default_options.update(verify: false)
 
   #authentification d'un agent sur la plateforme
   def authUser
@@ -149,6 +154,9 @@ class Api::ConvocationsController < ApplicationController
   #GET ALERTS 
   #permet de creer une nouvelle alerte
   def new_alerte
+    #ip = request.env['REMOTE_ADDR']
+    #info = HTTParty.get("https://ipapi.co/#{ip}/json/")
+    #puts "======= #{info} ========"
     quartier = params[:ville]
     #coordonnee = params[:coordonnees]
     lon = params[:lon]
@@ -157,9 +165,14 @@ class Api::ConvocationsController < ApplicationController
     photo = params[:photo]
     type = params[:type]
     agent = params[:matricule]
+
      a = Alerte.new(agent_id: agent, type_id: type, longitude: Base64.decode64(lon), latitude: Base64.decode64(lat), description: description, ville_id: quartier, statu_id: 1, titre: Type.find(type).name)
+    #a.alertes.attach(Base64.decode64(photo))
      if a.save
-      render json: a
+      render json: {
+          status: :success,
+          date: Date.today
+      }
      else
       render json: {'errro': a.errors.messages}
      end
@@ -168,17 +181,14 @@ class Api::ConvocationsController < ApplicationController
   #get stored alertes on plateforme
   def read_alertes
     #on recupere les informations de l'agent au nombre de 3
+    # #pener a ajouter les photos
     matricule = params[:matricule]
     ville   = params[:ville_id]
 
     #on verifie les informations
     read = Alerte.where(ville_id: ville).order(created_at: :desc)
-    if read
-      render json: read
-      else
-        render json: {
-          status: 'aucunes reponse correspondante'
-        }
-    end
+    render json: {
+        alerte: read
+    }
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_03_165724) do
+ActiveRecord::Schema.define(version: 2018_09_04_165504) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -232,6 +232,8 @@ ActiveRecord::Schema.define(version: 2018_09_03_165724) do
     t.string "detail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "type_id"
+    t.index ["type_id"], name: "index_services_on_type_id"
   end
 
   create_table "status", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -339,6 +341,7 @@ ActiveRecord::Schema.define(version: 2018_09_03_165724) do
   add_foreign_key "fylos", "commissariats"
   add_foreign_key "fylos", "roles"
   add_foreign_key "paiements", "convocations", name: "paiements_ibfk_1"
+  add_foreign_key "services", "types"
   add_foreign_key "types", "services"
   add_foreign_key "workflows", "agents"
   add_foreign_key "workflows", "commissariats"

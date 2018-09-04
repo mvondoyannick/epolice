@@ -1,5 +1,5 @@
 class Service < ApplicationRecord
-    has_many :type
+    belongs_to :type
     validates_presence_of :detail, presence: true
     validates_presence_of :name, presence: true
 end

@@ -1,56 +1,85 @@
-<h1 class="subtitle is-3">Alertes de ce jour <%= Date.today.strftime("%D") %> </h1>
+<%= link_to :back, class: 'button is-link is-outlined' do %>
+  <i class="fa fa-arrow-left noir"></i>
+  Retour
+<% end %>
+<h1 class="subtitle is-3"><i class="fa fa-sun-o noir"></i>&nbsp;Alertes de ce jour <%= Date.today.to_date %> </h1>
 <hr style="background-color: #b9b7b7;" />
 <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          Liste d'alertes pour la date du <%= Date.today.strftime("%D") %>
-        </p>
-          <!--span class="icon">
-            <i class="fa fa-angle-down" aria-hidden="false" style="color: #000000;"></i>
-          </span-->
-          <% if @today.nil? %>
-            <%= link_to '#', class: 'button' do %>
-              <i class="fa fa-map" aria-hidden="false" style="color: #000000;"></i>
-              voir sur la carte
+  <header class="card-header">
+    <p class="card-header-title">
+      <i class="fa fa-times-circle noir"></i> Liste d'alertes pour la date du <%= Date.today.to_date %>
+    </p>
+      <!--span class="icon">
+        <i class="fa fa-angle-down" aria-hidden="false" style="color: #000000;"></i>
+      </span-->
+      <% if @today.nil? %>
+        <%= link_to '#', class: 'button' do %>
+          <i class="fa fa-map" aria-hidden="false" style="color: #000000;"></i>
+          voir sur la carte
+        <% end %>
+      <% end %>
+  </header>
+  <div class="card-table">
+    <div class="content">
+      <% if @today.nil? %>
+
+        <% else %>
+      <table class="table table-bordered is-fullwidth is-striped">
+        <thead>
+          <tr class="is-link has-background-link ">
+            <td>#</td>
+            <td>Date</td>
+            <td>Titre</td>
+            <td>Nom&nbsp;Agent</td>
+            <td>Ville</td>
+            <td>Actions</td>
+          </tr>
+        </thead>
+        <tbody>
+            <% @today.each do |alerte| %>
+              <tr>
+                <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
+                <td>
+                  <%= alerte.created_at.strftime("%B %d, %Y") %>
+                </td>
+                <td>
+                  <%= alerte.titre %>
+                </td>
+                <td>
+                  <%= alerte.agent.name %>&nbsp;<%= alerte.agent.prenom %>
+                </td>
+                <td>
+                  <%= alerte.ville.name %>
+                </td>
+                <td>
+                  <%= link_to  "Détail", alerte_path(alerte), class: "button is-small is-link is-outlined" %>
+                </td>
+              </tr>
             <% end %>
           <% end %>
-      </header>
-      <div class="card-table">
-        <div class="content">
-          <table class="table is-fullwidth is-striped">
-            <tbody>
-              <% if @today.nil? %>
-                <tr>
-                  <td width="5%"><i class="fa fa-bell-o"></i></td>
-                  <td class="subtitle is-3"><i class="fa fa-bell-slash-o" style="color: #000000;"></i> Aucunes alertes pour le moment.</td>
-                </tr>
-              <% else %>
-                <% @today.each do |alerte| %>
-                  <tr>
-                    <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
-                    <td>
-                      <%= alerte.created_at.strftime("%B %d, %Y") %>
-                    </td>
-                    <td>
-                      <%= alerte.titre %>
-                    </td>
-                    <td>
-                      <%= alerte.agent.name %>&nbsp;<%= alerte.agent.prenom %>
-                    </td>
-                    <td>
-                      <%= alerte.ville.name %>
-                    </td>
-                    <td>
-                      <%= link_to  "Détail", alerte_path(alerte), class: "button is-small is-link is-outlined" %>
-                    </td>
-                  </tr>
-                <% end %>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <footer class="card-footer">
-        <%= link_to  "Voir toutes les alertes", access_alertes_alerte_all_path, class: "card-footer-item" if @today.nil? %>
-      </footer>
+        </tbody>
+      </table>
     </div>
+  </div>
+  <footer class="card-footer">
+    <%= link_to  "Voir toutes les alertes", access_alertes_alerte_all_path, class: "card-footer-item" if @today.nil? %>
+  </footer>
+</div>
+<hr>
+<div class="title is-3">Statistiques rapide</div>
+<%= link_to statistique_index_path, class: 'button is-link is-outlined is-pulled-right' do %>
+  <i class="fa fa-area-chart noir"></i>
+  Voir toutes les statistiques
+<% end %>
+<br>
+<div class="columns">
+  <div class="column">
+    <iframe
+      src="http://metabase-agis.herokuapp.com/public/dashboard/88663a0a-2b15-4d1a-89f2-9760481ef36c"
+      frameborder="0"
+      width="100%"
+      height="1000"
+      allowtransparency
+    ></iframe>
+  </div>
+</div>

@@ -161,6 +161,7 @@ class AccessController < ApplicationController
         end
       else
         print "======== utilisateur inconnu ========="
+        redirect_to root_path
       end
     else
       flash[:notice] = "Entrer une information est manquante"

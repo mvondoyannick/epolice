@@ -2,7 +2,8 @@ class GestionAlerteController < ApplicationController
 
   #retourne toutes les alertes de ce jour
   def today
-    @today = Alerte.where(created_at: Time.now.beginning_of_day..Time.now.end_of_day, ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc).all
+    @today = Alerte.where(created_at: Time.now.beginning_of_day..Time.now.end_of_day).order(created_at: :desc).all
+    #@today = Alerte.where(created_at: Time.now.beginning_of_day..Time.now.end_of_day, ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc).all
     render layout: 'admin'
   end
 

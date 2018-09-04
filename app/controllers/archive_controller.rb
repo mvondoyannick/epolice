@@ -22,8 +22,14 @@ class ArchiveController < ApplicationController
     render layout: 'admin'
   end
 
-  def validate
+  def merci
 
+  end
+
+  def validate
+    if params[:code].present?
+      redirect_to action: 'merci'
+    end
   end
 
   def set_transmission
@@ -34,7 +40,7 @@ class ArchiveController < ApplicationController
     convocation.agent_id = current_user.id
     if convocation.save
       code = rand(1000000)
-      message = "entrer le code #{code} dans le lien http://192.168.1.244:3000/archive/validate/#{convocation.code}/#{convocation.token}"
+      message = "entrer le code #{code} dans le lien http://192.168.1.244:3000/archive/validate"
       HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{convocation.phone}&message=#{message}")
       redirect_to action: 'index'
     else
