@@ -4,7 +4,12 @@ class AffectationsController < ApplicationController
   # GET /affectations
   # GET /affectations.json
   def index
-    @affectations = Affectation.all
+    #@affectations = Affectation.all
+    render layout: 'admin'
+  end
+
+  def home
+    @affect = Affectation.all
     render layout: 'admin'
   end
 
@@ -73,6 +78,6 @@ class AffectationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def affectation_params
-      params.require(:affectation).permit(:agent_id, :affectation_id, :carrefour_id, :date, :fin)
+      params.require(:affectation).permit(:agent_id, :affectation_id, :carrefour_id, :debut, :fin)
     end
 end

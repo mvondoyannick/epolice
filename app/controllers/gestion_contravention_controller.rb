@@ -14,10 +14,18 @@ class GestionContraventionController < ApplicationController
     render layout: 'admin'
   end
 
+  def month_detail
+    id = params[:convocation_id]
+    @query = Convocation.find(id)
+    render layout: 'admin'
+  end
+
   def cartography
+    render layout: 'admin'
   end
 
   def region
+    render layout: 'admin'
   end
 
   #permet de gere la recherche par periode

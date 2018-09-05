@@ -73,7 +73,7 @@
       <div class="card-image">
         <figure class="image is-4by3">
           <% if @alerte.agent.avatar.attached? %>
-            <%= image_tag @alerte.agent.avatar if @alerte.agent.avatar.attached? %>
+            <%= image_tag  "https://bulma.io/images/placeholders/1280x960.png" %>
             <% else %>
             <%= image_tag  "https://bulma.io/images/placeholders/1280x960.png", resize: 250 %>
           <% end %>
@@ -172,12 +172,13 @@
               </tr>
               <tr>
                 <td><i class="fa fa-internet-explorer noir"></i> &nbsp;Latitude</td>
-                <td><%= @alerte.latitude %></td>
+                <td><%= @alerte.longitude %></td>
               </tr>
               <tr>
                 <td><i class="fa fa-google-wallet noir"></i> &nbsp;Latitude</td>
                 <td><%= @alerte.latitude %></td>
               </tr>
+            <%= HTTParty.get("https://ipapi.co/8.8.8.8/json/").inspect %>
             </tbody>
           </table>
         </div>
@@ -227,7 +228,7 @@
       <div class="card-image">
         <figure class="image is-4by3">
           <% if @alerte.alertes.attached? %>
-            <%= image_tag(@alerte.alertes, resize: 250) %>
+            <%= image_tag  "https://bulma.io/images/placeholders/1280x960.png" %>
             <% else %>
             <%= image_tag  "https://bulma.io/images/placeholders/1280x960.png" %>
           <% end %>

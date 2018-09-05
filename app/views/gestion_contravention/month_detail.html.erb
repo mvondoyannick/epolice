@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+<%= link_to :back, class: 'button is-link is-outlined' do %>
+  <i class="fa fa-arrow-left noir" ></i>
+  Retour
+<% end %>
+<div style="margin-bottom: 25px;" /></div>
+<div class="title is-4">
+  Detail de la contravention : CNI N° <%= @query.cni %>
+</div>
+<br>
+<hr style="background-color: #000;">
+<div class="subtitle is-3">Details des informations</div>
+<div class="columns">
+  <div class="column">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Informations sur la convocation
+        </p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <table class="table">
+            <tr>
+              <td><i class="fa fa-user noir"></i></td>
+              <td>Numéro CNI</td>
+              <td><%= @query.cni %></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-mobile-phone noir"></i></td>
+              <td>Numéro de téléphone</td>
+              <td><%= @query.phone %></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-user noir"></i></td>
+              <td>Nom du contrevenant</td>
+              <td><%= @query.name %>&nbsp;<%= @query.prenom %></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-car noir"></i></td>
+              <td>Immatriculation véhicule</td>
+              <td><%= @query.immatriculation %></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-eye-slash noir"></i></td>
+              <td>Observations</td>
+              <td><%= @query.observation %></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-car noir"></i></td>
+              <td>Pièces retenue</td>
+              <td><%= @query.pieceretenu.name %></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-thumb-tack noir"></i></td>
+              <td>Motif de contravention</td>
+              <td><%= @query.infraction.motif %></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-thumb-tack noir"></i></td>
+              <td>Date de création</td>
+              <td><%= @query.created_at %></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <a href="#" class="card-footer-item"></a>
+        <a href="#" class="card-footer-item"></a>
+        <%= link_to  "Imprimer (PDF)", "#", class: 'card-footer-item' %>
+      </footer>
+    </div>
+  </div>
+</div>

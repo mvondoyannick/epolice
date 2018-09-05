@@ -123,7 +123,7 @@ class Api::ConvocationsController < ApplicationController
 
     #il faudra verifier si l'utilisateur et son téléphone sont authorisé
 
-    @result = Convocation.new(cni: cni, phone: phone, immatriculation: immatriculation, motif: motif, pieceretenue: pieceretenue, status: status, agent_id: agent, code: code.upcase)
+    @result = Convocation.new(cni: cni, phone: phone, immatriculation: immatriculation, motif: motif, pieceretenue: pieceretenue, status: status, agent_id: agent, code: code.upcase, ville: Agent.find(agent).ville.name)
     if @result.save
       #c'est ok, on envoi le SMS
       sms = SmsapiRails.send_sms phone, "La CNI #{cni} est verbalisé pour #{@result.infraction.motif}, cout: #{@result.infraction.montant}. plus sur https://pop-circulation.herokuapp.com/user/public/c/#{@result.code}"
@@ -166,8 +166,12 @@ class Api::ConvocationsController < ApplicationController
     type = params[:type]
     agent = params[:matricule]
 
-     a = Alerte.new(agent_id: agent, type_id: type, longitude: Base64.decode64(lon), latitude: Base64.decode64(lat), description: description, ville_id: quartier, statu_id: 1, titre: Type.find(type).name)
+     a = Alerte.new(agent_id: agent, type_id: type, longitude: lon.to_s, latitude: lat.to_s, description: description, ville_id: quartier, statu_id: 1, titre: Type.find(type).name)
     #a.alertes.attach(Base64.decode64(photo))
+    #recherche des autorisations
+    today = Date.today
+    #authorization = Affectation.where(agent_id: Agent.find(2).id).where("#{today} between #{Affectation.where(agent_id: 2).debut} and #{Affectation.where(agent_id: 2).fin}")
+    #puts "========== #{authorization} =========="
      if a.save
       render json: {
           status: :success,

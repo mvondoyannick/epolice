@@ -1,4 +1,3 @@
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 <p id="notice"><%= notice %></p>
 
   <h2>
@@ -31,10 +30,14 @@
   </p>
 
   <p>
-    <strong>Date affectation:</strong>
-    <%= @affectation.date %>
+    <strong>Date début affectation:</strong>
+    <%= @affectation.debut %>
+  </p>
+
+  <p>
+    <strong>Date fin affectation:</strong>
+    <%= @affectation.fin %>
   </p>
 
 <%= link_to 'Edit', edit_affectation_path(@affectation) %> |
 <%= link_to 'Back', affectations_path %>
-</main>

@@ -5,20 +5,24 @@ class AgentphonesController < ApplicationController
   # GET /agentphones.json
   def index
     @agentphones = Agentphone.all
+    render layout: 'admin'
   end
 
   # GET /agentphones/1
   # GET /agentphones/1.json
   def show
+    render layout: 'admin'
   end
 
   # GET /agentphones/new
   def new
     @agentphone = Agentphone.new
+    render layout: 'admin'
   end
 
   # GET /agentphones/1/edit
   def edit
+    render layout: 'admin'
   end
 
   # POST /agentphones

@@ -32,16 +32,16 @@
                     <%= alerte.created_at.strftime("%B %d, %Y") %>
                 </td>
                 <td>
-                    <%= alerte.titre %>
+                    <%= alerte.name %>
                 </td>
                 <td>
                     <%= alerte.agent.name %>&nbsp;<%= alerte.agent.prenom %>
                 </td>
                 <td>
-                    <%= alerte.ville.name %>
+                    <%= alerte.ville if alerte.ville.nil? %>
                 </td>
                 <td>
-                    <%= link_to  "Détail", alerte_path(alerte), class: "button is-small is-link is-outlined" %>
+                    <%= link_to  "Détail", "/convocation/detail/#{alerte.id}/view", class: "button is-small is-link is-outlined" %>
                 </td>
                 </tr>
             <% end %>

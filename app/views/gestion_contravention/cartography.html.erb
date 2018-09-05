@@ -1,2 +1,17 @@
-<h1>GestionContravention#cartography</h1>
-<p>Find me in app/views/gestion_contravention/cartography.html.erb</p>
+<%= link_to :back, class: 'button is-link is-outlined' do %>
+  <i class="fa fa-arrow-left noir"></i>
+  Retour
+<% end %>
+<hr>
+<%= map(:center => {
+    :latlng => [4.00002541, 9.00025718],
+    :zoom => 10
+},
+        :markers => [
+            {
+                :latlng => [4.0005, 9.00025418],
+                :popup => "Catre d'informations"
+            }
+        ]
+    )
+%>

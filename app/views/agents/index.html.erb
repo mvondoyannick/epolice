@@ -25,11 +25,11 @@
         <td><%= agent.prenom %></td>
         <td><%= agent.phone %></td>
         <td><%= agent.matricule %></td>
-        <td><%= agent.grade.name if !agent.grade.nil? %></td>
+        <td><%= agent.grade.name if !agent.grade_id.nil? %></td>
         <td><%= agent.created_at %></td>
-        <td><%= agent.ville.name %></td>
-        <td><%= link_to 'Show', agent, class: "button is-link is-outlined" %></td>
-        <td><%= link_to 'Edit', edit_agent_path(agent), class: "button is-link is-outlined" %></td>
+        <td><%= agent.ville.name if !agent.ville_id.nil? %></td>
+        <td><%= link_to 'Show', agent, class: "button is-link is-outlined is-small " %></td>
+        <td><%= link_to 'Edit', edit_agent_path(agent), class: "button is-link is-outlined is-small" %></td>
       </tr>
     <% end %>
   </tbody>

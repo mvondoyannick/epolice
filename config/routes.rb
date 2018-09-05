@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'convocation/detail/:convocation_id/view', to: 'gestion_contravention#month_detail'
   resources :agentphones
   resources :pieceretenus
   get 'archive/index'
@@ -110,6 +111,7 @@ Rails.application.routes.draw do
 
   resources :carrefours
   resources :affectations
+  get 'affectations/agent/home', to: 'affectations#home'
   resources :statuses
   resources :types
   resources :alertes

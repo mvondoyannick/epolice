@@ -25,7 +25,7 @@
       <% if !user.avatar.attached? %>
         <img src="https://bulma.io/images/placeholders/128x128.png">
         <%else %>
-          <%= image_tag(user.avatar, size: 128) %>
+          <%= image_tag("https://bulma.io/images/placeholders/128x128.png", size: 128) %>
       <%end %>
     </p>
   </figure>
