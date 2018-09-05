@@ -23,7 +23,7 @@ class Alerte < ApplicationRecord
     self.date = Date.today
     self.longitude = Base64.decode64(self.longitude)
     self.latitude = Base64.decode64(self.latitude)
-    self.description = Base64.decode64(self.description)
+    #self.description = Base64.decode64(self.description)
     #self.alertes.attach(Base64.encode64("public/assets/homework-3235100_1280.jpeg"))
   end
 end

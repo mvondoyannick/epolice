@@ -17,7 +17,7 @@
         </div>
         <!-- Developers -->
         <div class="notification" class="height: 200px;">
-            <%= session[:name] %> vous etes indentifier comme appartenant au service : <%= current_user.inspect  %>
+            <%= session[:name] %> vous etes indentifier comme appartenant au service : <strong><%= current_user.role.name  %></strong>
         </div>
         <!-- End Developers -->
 
@@ -39,7 +39,7 @@
                             <div class="media">
                                 <div class="media-left">
                                     <figure class="image is-96x96">
-                                        <%= link_to image_tag(index.agent.avatar), agent_path(index.agent) if index.agent.avatar.attached? %>
+                                        <%= image_tag("https://bulma.io/images/placeholders/1280x960.png", size: 100) %>
                                     </figure>
                                 </div>
                                 <div class="media-content">

@@ -123,30 +123,20 @@ class Api::ConvocationsController < ApplicationController
 
     #il faudra verifier si l'utilisateur et son téléphone sont authorisé
 
-    @result = Convocation.new(cni: cni, phone: phone, immatriculation: immatriculation, motif: motif, pieceretenue: pieceretenue, status: status, agent_id: agent, code: code.upcase, ville: Agent.find(agent).ville.name)
-    if @result.save
+    a = Convocation.new(cni: params[:cni], phone: params[:phone], infraction_id: params[:motif], pieceretenu_id: params[:pieceretenue], agent_id: params[:agent], code: SecureRandom.hex(3), immatriculation: params[:immatriculation], status: "impayé")
+    if a.save
+      message = "Le numero de telephone #{a.phone} ou le code #{a.code} est verbalise pour le(s) motif(s) ci-apres : #{a.infraction.motif}. Le montant de l amende est de : #{a.infraction.montant} F CFA."
+      HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{a.phone}&message=#{message}")
       #c'est ok, on envoi le SMS
-      sms = SmsapiRails.send_sms phone, "La CNI #{cni} est verbalisé pour #{@result.infraction.motif}, cout: #{@result.infraction.montant}. plus sur https://pop-circulation.herokuapp.com/user/public/c/#{@result.code}"
-      puts "===== #{sms} ====="
-      if sms.status == 'ok' && sms.success?
         render json: {
             status: :save,
-            message: :created,
-            data: @result
+            message: :created
         }
-      end
-
-      #uri = URI.parse("http://textbelt.com/text")
-      #Net::HTTP.post_form(uri, {
-      #    :phone => '+237691451189',
-      #    :message => 'Hello world',
-      #    :key => 'e0cc5680081956c7d206955ddc96ae9f58ae53044H9HtTWAkm6ApR6MV285mFTT4',
-      #})
     else
       render json: {
         status: :unprocessable_entity,
-        message: @result.errors,
-        data: @result
+        message: a.errors,
+        data: a.errors.messages
       }.to_json    
     end
   end
@@ -173,6 +163,8 @@ class Api::ConvocationsController < ApplicationController
     #authorization = Affectation.where(agent_id: Agent.find(2).id).where("#{today} between #{Affectation.where(agent_id: 2).debut} and #{Affectation.where(agent_id: 2).fin}")
     #puts "========== #{authorization} =========="
      if a.save
+       message = "La CNI #{a.cni} correspondant au numero #{a.phone} est verbalisee pour #{a.infraction.motif}, cout: #{a.infraction.montant}"
+       m = HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{a.phone}&message=#{message}")
       render json: {
           status: :success,
           date: Date.today

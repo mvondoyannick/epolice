@@ -133,8 +133,8 @@ class AccessController < ApplicationController
   end
 
   def attemp_login
-    if params[:email].present? && params[:pwd].present?
-      found_user = Fylo.where(email: params[:email]).first
+    if params[:matricule].present? && params[:pwd].present?
+      found_user = Fylo.where(matricule: params[:matricule]).first
       if found_user && found_user.password == params[:pwd]
         print "tout est ok"
         print "=============== utilisateur trouvé ============"
@@ -154,7 +154,8 @@ class AccessController < ApplicationController
             redirect_to(action: 'admin')
           when "administrateur"
             session[:role] = current_user.role.name
-            redirect_to(access_a_l_administration_url)
+            redirect_to access_a_l_administration_path
+            #redirect_to action: administration
           when "camwater"
             session[:role] = current_user.role.name
             redirect_to(action: 'request_service') 

@@ -1,6 +1,6 @@
 class GestionContraventionController < ApplicationController
   def today
-    @today = Convocation.where(created_at: Time.now.beginning_of_day..Time.now.end_of_day).order(created_at: :desc).all
+    @today = Convocation.where(created_at: Time.now.beginning_of_day..Time.now.end_of_day).order(created_at: :desc)
     render layout: 'admin'
   end
 
@@ -32,7 +32,7 @@ class GestionContraventionController < ApplicationController
   def periode
     @debut = params[:debut]
     @fin = params[:fin]
-    @query = Alerte.where(created_at: params[:debut]..params[:fin], ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc)
+    @query = Alerte.where(created_at: params[:debut]..params[:fin]).order(created_at: :desc)
     render layout: 'admin'
   end
 end

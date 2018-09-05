@@ -41,7 +41,7 @@ class ArchiveController < ApplicationController
     if convocation.save
       code = rand(1000000)
       message = "entrer le code #{code} dans le lien http://192.168.1.244:3000/archive/validate"
-      HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{convocation.phone}&message=#{message}")
+      HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{convocation.agent.phone}&message=#{message}")
       redirect_to action: 'index'
     else
       puts " une erreur est survvenue"

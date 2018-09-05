@@ -57,8 +57,40 @@
         <%= link_to  "Imprimer (PDF)", alerte_path(@alerte, format: "pdf"), class: 'card-footer-item' %>
       </footer>
     </div>
-
     <hr>
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Image du braquage
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </a>
+      </header>
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <% if @alerte.alertes.attached? %>
+            <%= image_tag  "https://bulma.io/images/placeholders/1280x960.png" %>
+          <% else %>
+            <%= image_tag  "https://bulma.io/images/placeholders/1280x960.png" %>
+          <% end %>
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="content">
+          <% @agent = Agent.find(@alerte.agent_id) %>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <a href="#" class="card-footer-item">Agrandir</a>
+        <a href="#" class="card-footer-item">Imprimer</a>
+        <a href="#" class="card-footer-item">Transmettre à un autre service</a>
+      </footer>
+    </div>
+    <hr>
+    <% if current_user.role.id == 1 %>
     <div class="card">
       <header class="card-header">
         <p class="card-header-title">
@@ -136,6 +168,7 @@
         <a href="#" class="card-footer-item">Delete</a>
       </footer>
     </div>
+      <% end %>
   </div>
 
   <div class="column">
@@ -178,7 +211,6 @@
                 <td><i class="fa fa-google-wallet noir"></i> &nbsp;Latitude</td>
                 <td><%= @alerte.latitude %></td>
               </tr>
-            <%= HTTParty.get("https://ipapi.co/8.8.8.8/json/").inspect %>
             </tbody>
           </table>
         </div>
@@ -203,7 +235,8 @@
       </header>
       <div class="card-content">
         <div class="content">
-          <div class="subtitle is-4"><%= @alerte.titre %></div>
+          <div class="subtitle is-4"><%= @alerte.type %></div>
+          <%= Service.find_by(type_id: @alerte.type_id) %>
 
         </div>
       </div>
@@ -213,64 +246,5 @@
         <a href="#" class="card-footer-item">Delete</a>
       </footer>
     </div>
-
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          Image du braquage
-        </p>
-        <a href="#" class="card-header-icon" aria-label="more options">
-          <span class="icon">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
-          </span>
-        </a>
-      </header>
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <% if @alerte.alertes.attached? %>
-            <%= image_tag  "https://bulma.io/images/placeholders/1280x960.png" %>
-            <% else %>
-            <%= image_tag  "https://bulma.io/images/placeholders/1280x960.png" %>
-          <% end %>
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="content">
-          <% @agent = Agent.find(@alerte.agent_id) %>
-        </div>
-      </div>
-      <footer class="card-footer">
-        <a href="#" class="card-footer-item">Agrandir</a>
-        <a href="#" class="card-footer-item">Imprimer</a>
-        <a href="#" class="card-footer-item">Transmettre à un autre service</a>
-      </footer>
-    </div>
   </div>
 </div>
-<br>
-
-  <table class="table">
-    <thead>
-      <tr>
-        <td>Titre</td>
-        <td>Description</td>
-        <td>Date&nbsp;creation</td>
-        <td> Ville</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><%= @alerte.titre %></td>
-        <td><%= @alerte.description %></td>
-        <td><%= @alerte.date %></td>
-        <td><%= @alerte.ville.name %></td>
-      </tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td><%= link_to  "Modifier", edit_alerte_path(@alerte), class: 'button is-primary' %></td>
-        <td><%= link_to  "Retour", access_admin_path, class: 'button is-primary' %></td>
-      <tr>
-
-      </tr>
-    </tbody>
-  </table>
