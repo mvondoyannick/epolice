@@ -22,7 +22,7 @@
   <nav class="navbar is-white">
       <div class="container">
         <div class="navbar-brand">
-          <%= link_to image_tag( "cud.png" ), root_path, class: 'navbar-item brand-text' %>
+          <%= image_tag("cud.png", size: 100) %>
           <div class="navbar-burger burger" data-target="navMenu">
             <span></span>
             <span></span>
@@ -34,10 +34,13 @@
             <% if session[:name].nil?  %>
                 <%= link_to  "Accueil", root_path, class: "navbar-item" %>
                 <% else  %>
-                <%= link_to  Fylo.find(session[:id]).name, "#", class: "navbar-item" %>
+                <%= link_to  "/access/a/l/administration", class: "navbar-item" do %>
+                  <i class="fa fa-home noir"></i>
+                  Accueil
+                <% end %>
             <% end  %>
             
-            <%= link_to  access_admin_path, class: "navbar-item" if control? do %>
+            <%= link_to  "#", class: "navbar-item" if control? do %>
               <i class="fa fa-envelope"></i>
               "Administration" 
             <% end %>

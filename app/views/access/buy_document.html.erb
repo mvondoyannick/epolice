@@ -1,0 +1,31 @@
+Contravention N° <%= params[:id] %>, code : <%= Convocation.find(params[:id]).code %>, Téléphone : <%= Convocation.find(params[:id]).phone %>
+<br>
+<br>
+<hr>
+<%= form_tag( action: 'attemp_buying') do %>
+  <div class="field">
+    <div class="control">
+      <%= label_tag ("Solde") %></td>
+      <%= number_field_tag :montant, "", placeholder: "Montant de la contravention", class: 'input is-large noir' %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= label_tag ("Montant") %></td>
+      <%= number_field_tag :montant, "", placeholder: "Montant de la contravention", class: 'input is-large noir' %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= label_tag ("Fichier numérisé") %></td>
+      <%= file_field_tag :fichier %>
+    </div>
+  </div>
+  <tr>
+    <td>&nbsp;</td>
+    <td><%= submit_tag "Valider le paiement", class: 'button is-link is-outlined is-large is-fullwidth' %></td>
+  </tr>
+  </table>
+  <br>
+    Ce paiement est effectué par Mr <strong><%= current_user.name %>&nbsp;<%= current_user.prenom %></strong>, il peut vous etre demandé de justifier ce paiement lors d'un controle financier
+<% end %>

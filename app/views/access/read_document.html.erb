@@ -1,5 +1,5 @@
 <p class="title is-4">
-    Recapitulatif de la contraventoin de Mr <%= params[:contravention_id] %>
+    Recapitulatif de la contraventoin de <%= @query.name %>&nbsp;<%= @query.prenom %>
 </p>
 <hr style="background-color: #000;">
 <table class="table">
@@ -65,10 +65,12 @@
     </tr>
     <tr>
         <td><i class="fa fa-address-card-o" style="color: #000;"> </i>Statut</td>
-        <% if @query.status == 'Impayé' %>
-            <td><%= link_to 'Payer maintenant', "/paiements/pay/#{@query.id}/sent", class: 'button is-primary' %></td>
-            <% else %>
-            <td>Contravention déja payée</td>
-        <% end %>
+        <td><%= link_to 'Payer maintenant', "/paiements/pay/#{@query.id}/sent", class: 'button is-link is-outlined' %></td>
     </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <%= link_to "Payer cette contravention", "#", class: 'button is-link is-outlined' if @query.status == "Impayé" %>
+    </td>
+  </tr>
 </table>

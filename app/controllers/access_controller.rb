@@ -152,6 +152,9 @@ class AccessController < ApplicationController
           when "admin"
             session[:role] = current_user.role.name
             redirect_to(action: 'admin')
+          when "superAdmin"
+            session[:role] = current_user.role.name
+            redirect_to "/access/admin"
           when "administrateur"
             session[:role] = current_user.role.name
             redirect_to access_a_l_administration_path
@@ -231,23 +234,28 @@ class AccessController < ApplicationController
 
     #debut de la mise a jour
     pay.status = "paye"
-    s = pay.save
+    #s = pay.save
     #verification
-    if s
+    if pay.save
       puts "====== c'est bon, on a update ========"
       flash[:notice] = "A Paiement effectué"
-      redirect_to action: 'administration'
+      redirect_to action: "/access/a/l/administration"
     else
       puts "========= error ========="
-      redirect_to action: 'administration', notice: "Impossible d\'effectuer le paiement : #{s.errors.messages}"
+      #redirect_to action: 'administration', notice: "Impossible d effectuer le paiement : #{s.errors.messages}"
     end
-    
+    render layout: 'administration'
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   # def access_params
   #   params.require(:fylo).permit(:name, :prenom, :email)
   # end
+  #
+
+  def attemp_buying
+
+  end
 
   private
 

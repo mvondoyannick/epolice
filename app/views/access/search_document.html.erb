@@ -8,12 +8,15 @@
       <tr>
           <td>Date</td>
           <td>CNI</td>
-          <td>Objet</td>
           <td>Statut</td>
           <td>phone</td>
           <td>Statut</td>
+          <td>Montant</td>
           <td>Action</td>
       </tr>
+   <%= @query.each do |p| %>
+      <%= a =  %>
+   <% end %>
   </thead>
   <tbody>
     <% if @query.nil? %>
@@ -34,16 +37,16 @@
             <%= alerte.infraction.motif if !alerte.infraction_id.nil? %>
           </td>
           <td>
-            <%= alerte.infraction.motif if !alerte.infraction_id.nil? %>
-          </td>
-          <td>
             <%= alerte.phone %>
           </td>
           <td>
             <%= alerte.status %>
           </td>
           <td>
-            <%= link_to  "Détail", "/search/documents/#{alerte.id}/read", class: "button is-small is-primary" %>
+            <%= alerte.infraction.montant if !alerte.infraction_id.nil? %>
+          </td>
+          <td>
+            <%= link_to  "Détail", "/search/documents/#{alerte.id}/read", class: "button is-link is-outlined is-small" %>
           </td>
         </tr>
       <% end %>

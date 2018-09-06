@@ -80,6 +80,9 @@ Rails.application.routes.draw do
 
   get 'welcome/home'
 
+  get 'accesss/attemp_buying'
+  post 'access/attemp_buying'
+
   #route generique
   #match ':controller(/:action/(:id))', via: [:get, :post]
 
