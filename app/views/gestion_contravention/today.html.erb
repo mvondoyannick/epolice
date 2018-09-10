@@ -1,9 +1,9 @@
-<h1 class="subtitle is-3"><i class="fa fa-car noir"></i>Contraventions de ce jour <%= Date.today.strftime("%D") %> </h1>
+<h1 class="subtitle is-3"><i class="fa fa-car noir"></i>Contraventions de ce jour <%= Date.today %> </h1>
 <hr style="background-color: #b9b7b7;" />
 <div class="card">
       <header class="card-header">
         <p class="card-header-title">
-          Liste de contraventions pour la date du <%= Date.today.strftime("%D") %>
+          Liste de contraventions pour la date du <%= Date.today) %>
         </p>
           <!--span class="icon">
             <i class="fa fa-angle-down" aria-hidden="false" style="color: #000000;"></i>
@@ -19,7 +19,7 @@
         <div class="content">
           <table class="table is-fullwidth is-striped">
             <tbody>
-              <% if !@today.nil? %>
+              <% if @today.nil? %>
                 <tr>
                   <td width="5%"><i class="fa fa-bell-o"></i></td>
                   <td class="subtitle is-3"><i class="fa fa-bell-slash-o" style="color: #000000;"></i> Aucunes contraventions.</td>
