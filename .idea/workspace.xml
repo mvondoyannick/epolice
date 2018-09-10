@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/convocations/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/convocations/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" afterDir="false" />
-    </list>
+    <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -78,7 +74,7 @@
         <counts>
           <entry key="Gemfile" value="87" />
           <entry key="coffee" value="74" />
-          <entry key="erb" value="12642" />
+          <entry key="erb" value="12644" />
           <entry key="js" value="73" />
           <entry key="pid" value="1" />
           <entry key="rb" value="8744" />
@@ -90,7 +86,7 @@
           <entry key="CoffeeScript" value="74" />
           <entry key="JavaScript" value="73" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="RHTML" value="12642" />
+          <entry key="RHTML" value="12644" />
           <entry key="Ruby" value="8831" />
           <entry key="YAML" value="12" />
         </counts>
@@ -135,16 +131,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_menu.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="109">
-              <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="106" />
+              <caret line="24" column="130" selection-start-line="24" selection-start-column="130" selection-end-line="24" selection-end-column="130" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/convocations/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="214">
@@ -275,8 +271,8 @@
         <option value="$PROJECT_DIR$/app/views/access/buy_document.html.erb" />
         <option value="$PROJECT_DIR$/app/views/access/search_document.html.erb" />
         <option value="$PROJECT_DIR$/app/views/access/login.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" />
         <option value="$PROJECT_DIR$/app/views/convocations/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" />
       </list>
     </option>
   </component>
@@ -482,12 +478,12 @@
       <workItem from="1536004596740" duration="285000" />
       <workItem from="1536049953608" duration="64124000" />
       <workItem from="1536194810952" duration="9303000" />
-      <workItem from="1536583961617" duration="1503000" />
+      <workItem from="1536583961617" duration="2042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146985000" />
+    <option name="totallyTimeSpent" value="147524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -852,17 +848,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_menu.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/convocations/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
           <caret line="159" column="93" selection-start-line="159" selection-start-column="93" selection-end-line="159" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_menu.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="24" column="130" selection-start-line="24" selection-start-column="130" selection-end-line="24" selection-end-column="130" />
         </state>
       </provider>
     </entry>
