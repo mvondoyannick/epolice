@@ -76,7 +76,7 @@
         <counts>
           <entry key="Gemfile" value="87" />
           <entry key="coffee" value="74" />
-          <entry key="erb" value="12736" />
+          <entry key="erb" value="12826" />
           <entry key="js" value="73" />
           <entry key="pid" value="1" />
           <entry key="rb" value="8744" />
@@ -88,7 +88,7 @@
           <entry key="CoffeeScript" value="74" />
           <entry key="JavaScript" value="73" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="RHTML" value="12736" />
+          <entry key="RHTML" value="12826" />
           <entry key="Ruby" value="8831" />
           <entry key="YAML" value="12" />
         </counts>
@@ -118,8 +118,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/gestion_contravention/today.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+            <state relative-caret-position="239">
+              <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+              <folding>
+                <element signature="e#1359#1365#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -480,12 +483,12 @@
       <workItem from="1536004596740" duration="285000" />
       <workItem from="1536049953608" duration="64124000" />
       <workItem from="1536194810952" duration="9303000" />
-      <workItem from="1536583961617" duration="6467000" />
+      <workItem from="1536583961617" duration="6802000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151949000" />
+    <option name="totallyTimeSpent" value="152284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -504,7 +507,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.114967465" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.489154" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.3340564" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -859,8 +862,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/gestion_contravention/today.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+        <state relative-caret-position="239">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+          <folding>
+            <element signature="e#1359#1365#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -18,13 +18,24 @@
       <div class="card-table">
         <div class="content">
           <table class="table is-fullwidth is-striped">
+            <% if @today.nil? %>
+              <tr>
+                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                <td class="subtitle is-3"><i class="fa fa-bell-slash-o" style="color: #000000;"></i> Aucunes contraventions.</td>
+              </tr>
+            <% else %>
+              <thead>
+                <th>
+                <td>#</td>
+                <td>Date</td>
+                <td>Immatricule</td>
+                <td>Téléphone</td>
+                <td>Infraction</td>
+                <td>Agent&nbsp;verbaliseur</td>
+                <td>Actions</td>
+                </th>
+              </thead>
             <tbody>
-              <% if @today.nil? %>
-                <tr>
-                  <td width="5%"><i class="fa fa-bell-o"></i></td>
-                  <td class="subtitle is-3"><i class="fa fa-bell-slash-o" style="color: #000000;"></i> Aucunes contraventions.</td>
-                </tr>
-              <% else %>
                 <% @today.each do |alerte| %>
                   <tr>
                     <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
