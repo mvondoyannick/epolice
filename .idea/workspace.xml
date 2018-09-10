@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/gestion_contravention/today.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestion_contravention/today.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -77,7 +76,7 @@
         <counts>
           <entry key="Gemfile" value="87" />
           <entry key="coffee" value="74" />
-          <entry key="erb" value="12648" />
+          <entry key="erb" value="12682" />
           <entry key="js" value="73" />
           <entry key="pid" value="1" />
           <entry key="rb" value="8744" />
@@ -89,7 +88,7 @@
           <entry key="CoffeeScript" value="74" />
           <entry key="JavaScript" value="73" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="RHTML" value="12648" />
+          <entry key="RHTML" value="12682" />
           <entry key="Ruby" value="8831" />
           <entry key="YAML" value="12" />
         </counts>
@@ -119,8 +118,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/gestion_contravention/today.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="64" lean-forward="true" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+            <state relative-caret-position="462">
+              <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -481,12 +480,12 @@
       <workItem from="1536004596740" duration="285000" />
       <workItem from="1536049953608" duration="64124000" />
       <workItem from="1536194810952" duration="9303000" />
-      <workItem from="1536583961617" duration="4695000" />
+      <workItem from="1536583961617" duration="5016000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150177000" />
+    <option name="totallyTimeSpent" value="150498000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -860,8 +859,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/gestion_contravention/today.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="64" lean-forward="true" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+        <state relative-caret-position="462">
+          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
         </state>
       </provider>
     </entry>
