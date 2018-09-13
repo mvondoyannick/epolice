@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="">
+
+  </div>
+  vous etes connecté en tant que <strong><%= current_metropoli.email %></strong>, vous pouvez
+  <br>
+  Acceder à votre espace de travail <%= link_to "Acceder", metropoli_index_path, class: 'button is-link is-outlined' %>
+  <br>
+  ou Vous deconnecter <%= link_to "log out", destroy_metropoli_session_path, method: :delete, class: 'button is-danger is-outlined' %>
+</div>
+

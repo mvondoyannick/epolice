@@ -12,27 +12,7 @@ class AccessController < ApplicationController
   end
 
   def login
-    if !session[:role].nil?
-      case current_user.role.name #found_user.service
-        when "urgence"
-          session[:role] = "urgence"
-          redirect_to(action: 'request_service', id: 'fylo')
-        when "developer"
-          session[:role] = "admin"
-          redirect_to(action: 'developer')
-        when "admin"
-          session[:role] = current_user.role.name
-          redirect_to(action: 'admin')
-        when "administrateur"
-          session[:role] = current_user.role.name
-          redirect_to(action: 'administrateur')
-        when "eneo" || "camwater" || "camtel"
-          session[:role] = current_user.role.name
-          redirect_to(action: 'request_service') 
-      end
-    else
-      render layout: 'login'
-    end
+    render layout: 'login'
   end
 
   #pour la lecture des email 
@@ -45,22 +25,7 @@ class AccessController < ApplicationController
   #route /acces/admin
   #params:
   def admin
-    if control? #si et seulement si c'est un administrateur
-      render layout: 'admin'
-    else
-      session[:role] = nil #on vide la session parce qu'il a essayé de frauder
-      redirect_to action: 'login', notice: 'Vous n\' este pas authorisé'
-    end
-
-    #les 10 dernieres alertes
-    #@alerte_tmp = Alerte.all.limit(10)
-
-    #nombre total d'agent existant dans la base de données
-    #@agent = Agent.count 
-
-    #nombre d'alertes totales
-    #@alert = Alerte.count
-    #authorize! :read, Access
+    render layout: 'admin'
   end
 
 
@@ -101,8 +66,9 @@ class AccessController < ApplicationController
   end
 
   def request_service
-    render layout: 'other'
     @alert = Alerte.all
+    render layout: 'other'
+
   end
 
   def attemp_account
@@ -165,11 +131,12 @@ class AccessController < ApplicationController
         end
       else
         print "======== utilisateur inconnu ========="
+        flash[:notice] = "Impossible de vous identifier"
         redirect_to root_path
       end
     else
-      flash[:notice] = "Entrer une information est manquante"
-      redirect_to(action: 'login')
+      flash[:notice] = "Une information semble etre incomplete"
+      redirect_to root_path
     end
     
   end

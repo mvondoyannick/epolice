@@ -33,6 +33,16 @@ class Api::ConvocationsController < ApplicationController
     end
   end
 
+  #permet de verifier le token
+  def verify_token
+    matricule = params[:matricule]
+
+    #on recherche l'ID
+
+
+    #ensuite on recherche sont token et le status de ce token
+  end
+
   #permet de verifier une contravention
   def verifyContravention
     code = params[:code]

@@ -1,0 +1,7 @@
+<div class="container">
+  bienvenue adminstrateur <%= current_admin.email %>,
+  <br>
+  acceder à l'interface d'administration <%= link_to "Administrer", access_admin_path, class: 'button is-link is-outlined' %>
+  <br>
+  <%= link_to "log out", destroy_admin_session_path, method: :delete, class: 'button is-danger is-outlined' %>
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_05_223741) do
+ActiveRecord::Schema.define(version: 2018_09_13_114825) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,23 @@ ActiveRecord::Schema.define(version: 2018_09_05_223741) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "email"
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "name"
+    t.string "password"
+    t.string "confirm_password"
+    t.string "phone"
+    t.string "phone1"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_admins_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
   create_table "affectations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -40,16 +57,10 @@ ActiveRecord::Schema.define(version: 2018_09_05_223741) do
     t.bigint "carrefour_id"
     t.string "fin"
     t.string "debut"
+    t.string "token"
+    t.string "status"
     t.index ["agent_id"], name: "index_affectations_on_agent_id"
     t.index ["carrefour_id"], name: "index_affectations_on_carrefour_id"
-  end
-
-  create_table "agentphones", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "phone"
-    t.string "fingerprint"
-    t.string "imei"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "agents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -90,6 +101,20 @@ ActiveRecord::Schema.define(version: 2018_09_05_223741) do
     t.index ["statu_id"], name: "index_alertes_on_statu_id"
     t.index ["type_id"], name: "index_alertes_on_type_id"
     t.index ["ville_id"], name: "index_alertes_on_ville_id"
+  end
+
+  create_table "assurances", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "email"
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "name"
+    t.string "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_assurances_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_assurances_on_reset_password_token", unique: true
   end
 
   create_table "carrefours", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -187,6 +212,22 @@ ActiveRecord::Schema.define(version: 2018_09_05_223741) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "grvpcs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "email"
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "password"
+    t.string "password_confirmation"
+    t.string "matricule"
+    t.string "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_grvpcs_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_grvpcs_on_reset_password_token", unique: true
+  end
+
   create_table "infractions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "motif"
     t.string "montant"
@@ -206,12 +247,69 @@ ActiveRecord::Schema.define(version: 2018_09_05_223741) do
     t.string "role"
   end
 
+  create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.integer "failed_attempts", default: 0, null: false
+    t.string "unlock_token"
+    t.datetime "locked_at"
+    t.string "matricule"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "service_id"
+    t.string "status"
+    t.string "phone"
+    t.string "phone1"
+    t.string "phone2"
+    t.string "code"
+    t.index ["email"], name: "index_members_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
+    t.index ["service_id"], name: "index_members_on_service_id"
+    t.index ["unlock_token"], name: "index_members_on_unlock_token", unique: true
+  end
+
+  create_table "metropolis", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "email"
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "name"
+    t.string "phone"
+    t.string "password"
+    t.string "password_confirmation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_metropolis_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_metropolis_on_reset_password_token", unique: true
+  end
+
   create_table "paiements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "montant"
     t.bigint "convocation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["convocation_id"], name: "index_paiements_on_convocation_id"
+  end
+
+  create_table "partenaires", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "nom"
+    t.string "phone"
+    t.string "phone1"
+    t.string "phone2"
+    t.string "email"
+    t.string "password"
+    t.string "password_confirmation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "pieceretenus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -310,41 +408,3 @@ ActiveRecord::Schema.define(version: 2018_09_05_223741) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "workflows", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "status"
-    t.string "document"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "contravetion_id"
-    t.bigint "agent_id"
-    t.bigint "commissariat_id"
-    t.index ["agent_id"], name: "index_workflows_on_agent_id"
-    t.index ["commissariat_id"], name: "index_workflows_on_commissariat_id"
-    t.index ["contravetion_id"], name: "index_workflows_on_contravetion_id"
-  end
-
-  add_foreign_key "affectations", "agents", name: "affectations_ibfk_1"
-  add_foreign_key "affectations", "carrefours", name: "affectations_ibfk_2"
-  add_foreign_key "agents", "commissariats", name: "agents_ibfk_1"
-  add_foreign_key "agents", "grades"
-  add_foreign_key "agents", "villes"
-  add_foreign_key "alertes", "agents", name: "alertes_ibfk_3"
-  add_foreign_key "alertes", "status", column: "statu_id"
-  add_foreign_key "alertes", "types", name: "alertes_ibfk_2"
-  add_foreign_key "alertes", "villes", name: "alertes_ibfk_1"
-  add_foreign_key "carrefours", "villes"
-  add_foreign_key "commissariats", "villes", name: "commissariats_ibfk_1"
-  add_foreign_key "contravetions", "agents", column: "Agent_id", name: "contravetions_ibfk_2"
-  add_foreign_key "contravetions", "users", column: "User_id", name: "contravetions_ibfk_1"
-  add_foreign_key "convocations", "agents", name: "convocations_ibfk_2"
-  add_foreign_key "convocations", "infractions", name: "convocations_ibfk_1"
-  add_foreign_key "convocations", "pieceretenus"
-  add_foreign_key "fylos", "commissariats"
-  add_foreign_key "fylos", "roles"
-  add_foreign_key "paiements", "convocations", name: "paiements_ibfk_1"
-  add_foreign_key "services", "types"
-  add_foreign_key "types", "services"
-  add_foreign_key "workflows", "agents"
-  add_foreign_key "workflows", "commissariats"
-  add_foreign_key "workflows", "contravetions"
-end

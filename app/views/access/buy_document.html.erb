@@ -27,5 +27,5 @@ Contravention N° <%= params[:id] %>, code : <%= Convocation.find(params[:id]).c
   </tr>
   </table>
   <br>
-    Ce paiement est effectué par Mr <strong><%= current_user.name %>&nbsp;<%= current_user.prenom %></strong>, il peut vous etre demandé de justifier ce paiement lors d'un controle financier
+    Ce paiement est effectué par Mr <strong><%= current_member.email %>&nbsp</strong>, il peut vous etre demandé de justifier ce paiement lors d'un controle financier
 <% end %>

@@ -63,6 +63,7 @@ GEM
     chartkick (3.0.1)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
+    choice (0.2.0)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -157,6 +158,11 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
+    rails-erd (1.5.2)
+      activerecord (>= 3.2)
+      activesupport (>= 3.2)
+      choice (~> 0.2.0)
+      ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
     railties (5.2.1)
@@ -173,6 +179,7 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    ruby-graphviz (1.2.3)
     rubyzip (1.2.2)
     sass (3.5.7)
       sass-listen (~> 4.0.0)
@@ -257,6 +264,7 @@ DEPENDENCIES
   prawn-table
   puma (~> 3.7)
   rails (~> 5.2)
+  rails-erd
   redis (~> 4.0)
   sass-rails (~> 5.0)
   selenium-webdriver

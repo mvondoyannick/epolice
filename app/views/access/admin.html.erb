@@ -1,3 +1,5 @@
+<% content_for(:title, 'DASHBOARD')%>
+<!-- titre dans le Yield de application.html.erb -->
 <p id="notice" class="notification"> <button class="delete" id="close-warning"></button> <%= notice %></p>
 <hr style="background-color: #4a4a4a;">
 <div class="columns">
@@ -17,7 +19,7 @@
         <div class="content">
           <table class="table is-fullwidth is-striped">
             <tbody>
-              <% @alerte_tmp = Alerte.where(ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc, ).limit(10) %>
+              <% @alerte_tmp = Alerte.order(created_at: :desc).limit(10) %>
               <% if @alerte_tmp.nil? %>
                 <tr>
                   <td width="5%"><i class="fa fa-bell-o"></i></td>
@@ -113,7 +115,7 @@
         <div class="content">
           <table class="table is-fullwidth is-striped">
             <tbody>
-            <% @alerte_tmp = Alerte.where(ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc, ).limit(10) %>
+            <% @alerte_tmp = Alerte.order(created_at: :desc).limit(10) %>
             <% if @alerte_tmp.nil? %>
               <tr>
                 <td width="5%"><i class="fa fa-bell-o"></i></td>
@@ -148,7 +150,7 @@
     <div class="card">
       <header class="card-header">
         <p class="card-header-title">
-          Liste de contraventions
+          Statistiques a la volée
         </p>
         <a href="#" class="card-header-icon" aria-label="more options">
           <span class="icon">
@@ -158,36 +160,11 @@
       </header>
       <div class="card-table">
         <div class="content">
-          <table class="table is-fullwidth is-striped">
-            <tbody>
-            <% @alerte_tmp = Convocation.all.order(created_at: :desc).limit(10) %>
-            <% if @alerte_tmp.nil? %>
-              <tr>
-                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                <td>Aucunes convocation publiées pour le moment.</td>
-              </tr>
-            <% else %>
-              <% @alerte_tmp.each do |alerte| %>
-                <tr>
-                  <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
-                  <td>
-                    <%= alerte.created_at.strftime("%B %d, %Y") %>
-                  </td>
-                  <td>
-                    <%= alerte.phone %>
-                  </td>
-                  <td>
-                    <%= link_to  "Détail", convocation_path(alerte.id), class: "button is-small is-link is-outlined" %>
-                  </td>
-                </tr>
-              <% end %>
-            <% end %>
-            </tbody>
-          </table>
+
         </div>
       </div>
       <footer class="card-footer">
-        <%= link_to 'Voir toutes les convocations', acces_convocations_convocation_all_path, class: 'card-footer-item' %>
+        
       </footer>
     </div>
   </div>

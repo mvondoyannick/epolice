@@ -7,7 +7,7 @@ class Agent < ApplicationRecord
 	has_many :alertes
 	has_many :affectations
 	belongs_to :grade
-	belongs_to :agentphone
+	#belongs_to :agentphone
 
 	#pour les villes d'affectations
 	belongs_to :ville

@@ -1,15 +1,40 @@
-<h2>Log in</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+<% if flash[:notice] %>
+  <div class="notice is-desktop has-text-centered">
+    <div class="notification is-danger">
+      <button class="delete"></button>
+      <%= flash[:notice] %>
+    </div>
   </div>
 <% end %>
+<section class="hero is-fullheight">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="column is-4 is-offset-4">
+        <p class="subtitle has-text-black has-text-weight-bold">
+          <i class="fa fa-user fa-5x"></i>
+        </p>
+        <p class="subtitle has-text-black is-6">Merci de fournir vos identifications de connexion.</p>
+        <div class="box" style="margin-top: -10px;">
+          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="form-inputs has-text-left">
+              <%= f.input :email, required: true, autofocus: true, placeholder: 'adresse email' %>
+              <%= f.input :matricule, required: true, autofocus: true, placeholder: 'Votre matricule', label: 'Matricule (Si disponible)' %>
+              <%= f.input :password, required: true, placeholder: 'Votre mot de passe' %>
+              <%= f.association :service, prompt: 'Selectionner votre service', label: 'Service', label_html: {class: 'has-text-left'}, input_html: {class: 'is-fullwidth is-block'}, require: true %>
+              <%= f.input :remember_me, label: 'Se souvenir de moi', input_html: {style: 'margin-top: 50px; margin-right: 10px;' }, as: :boolean if devise_mapping.rememberable? %>
+            </div>
 
-<%= render "devise/shared/links" %>
+            <div class="form-actions">
+              <%= f.button :submit, "Se connecter", class: 'button is-link is-outlined is-fullwidth is-block' %>
+            </div>
+          <% end %>
+            </div>
+            <p class="has-text-grey">
+              <%= render "devise/shared/links" %>
+            </p>
+            </div>
+            </div>
+          </div>
+</section>
+</div>
+</div>

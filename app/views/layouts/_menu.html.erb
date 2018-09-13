@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>E−POLICE :: EMAILS</title>
+    <title><%= full_title(yield :title)%></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag "bulma.min", media: 'all' %>
     <%= stylesheet_link_tag "inbox", media: 'all' %>
@@ -31,7 +31,6 @@
         </div>
         <div id="navMenu" class="navbar-menu has-text-right">
           <div class="navbar-start">
-            <% if control? %>
                 <%= link_to  access_admin_path, class: "navbar-item" do %>
                 <i class="fa fa-shield" style="color: #000000;"></i>
                 Accueil
@@ -56,11 +55,10 @@
                 <i class="fa fa-archive" style="color: #000000;"></i>
                 Archives
               <% end %>
-              <%= link_to  access_logout_path, class: "navbar-item" do %>
+              <%= link_to  destroy_admin_session_path, method: :delete, class: "navbar-item" do %>
                 <i class="fa fa-sign-out" style="color: #000000;"></i>
                 Déconnexion
-              <% end %>  
-            <% end %>
+              <% end %>
           </div>
         </div>
       </div>

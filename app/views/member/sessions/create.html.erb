@@ -1,0 +1,7 @@
+<div class="container">
+  bienvenue assureur <%= current_member.email %>,
+  <br>
+  acceder à l'interface de service <%= link_to "Administrer", member_index_path, class: 'button is-link is-outlined' %>
+  <br>
+  <%= link_to "log out", destroy_member_session_path, method: :delete, class: 'button is-danger is-outlined' %>
+</div>

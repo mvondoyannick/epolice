@@ -1,5 +1,16 @@
-<div class="notice"> <%= notice %></div>
-<section class="hero is-success is-fullheight">
+<% content_for(:title, 'IDENTIFIEZ-VOUS')%>
+<!-- titre dans le Yield de application.html.erb -->
+<% if flash[:notice] %>
+  <div class="notice is-desktop has-text-centered">
+    <div class="notification is-danger">
+      <button class="delete"></button>
+      <%= flash[:notice] %>
+    </div>
+  </div>
+<% end %>
+
+
+<section class="hero is-fullheight">
   <div class="hero-body">
     <div class="container has-text-centered">
       <div class="column is-4 is-offset-4">
@@ -7,39 +18,26 @@
           <p class="subtitle has-text-grey">Plateforme de gestion des contraventions, alertes et constats d'accident de la circulation</p>
           <p class="subtitle has-text-grey is-6">Merci de fournir vos identifications de connexion.</p>
             <div class="box" style="margin-top: -10px;">
-              <%= form_tag( action: 'attemp_login') do %>
-                <div class="field">
-                  <div class="control">
-                    <%= label_tag ("Matricule") %></td>
-                    <%= text_field_tag :matricule, "", placeholder: "Votre adresse email", class: 'input is-large noir' %>
-                  </div>
+              <% if member_signed_in? || admin_signed_in? || metropoli_signed_in? || grvpc_signed_in? || assurance_signed_in? %>
+                <p class="has-text-centered has-text-grey is-6">
+                  Vous n'avez pas encore été activté.
+                </p>
+                <br>
+                <%= link_to "Se déconnecter", "#", method: :delete, class: 'button is-outlined is-danger is-fullwidth is-block is-large' %>
+              <% else %>
+                <%= link_to "DGSN", new_admin_session_path, class: 'button is-outlined is-link is-fullwidth is-block is-large' %>
+                <br>
+                <%= link_to "GRVPC", new_grvpc_session_path, class: 'button is-outlined is-link is-fullwidth is-block is-large' %>
+                <br>
+                <%= link_to "PARTENAIRES", new_member_session_path, class: 'button is-outlined is-link is-fullwidth is-block is-large' %>
+                <br>
+                <%= link_to "ASSURANCES", new_assurance_session_path, class: 'button is-outlined is-link is-fullwidth is-block is-large' %>
+                <br>
+                <%= link_to "COMMUNAUTE URBAINE", new_metropoli_session_path, class: 'button is-outlined is-link is-fullwidth is-block is-large' %>
                 </div>
-                <div class="field">
-                  <div class="control">
-                    <%= label_tag ("Mot de passe") %></td>
-                    <%= password_field_tag :pwd, "", class: 'input is-large' %>
-                  </div>
                 </div>
-                <div class="field">
-                  <label class="checkbox">
-                    <%= check_box_tag (:checked) %>
-                    Se souvenir de moi
-                  </label>
                 </div>
-                  <tr>
-                    <td>&nbsp;</td>
-                    <td><%= submit_tag "Se connecter", class: 'button is-block is-info is-large is-fullwidth' %></td>
-                  </tr>
-                </table>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
               <% end %>
-                </div>
-                  <p class="has-text-grey">
-                    <%= link_to  "Demander un compte", access_request_auth_account_path %>&nbsp;·&nbsp;
-                    <%= link_to  "Mot de passe oublié", "#" %>&nbsp;·&nbsp;
-                    <%= link_to  "Aide", access_request_docs_path %>
-                  </p>
-                </div>
-              </div>
             </div>
           </section>
   </div>

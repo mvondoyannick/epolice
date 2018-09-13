@@ -1,6 +1,46 @@
 Rails.application.routes.draw do
+  get 'metropoli/index'
+  get 'member/index'
+  get 'grvpc/index'
+  get 'assurance/index'
+  get 'assurance/detail'
+  get 'assurance/pay'
+  get 'assurance/bilan'
+  #devise_for :metropolis
+  #devise_for :assurances
+  #devise_for :grvpcs
+  #devise_for :admins
+  devise_for :member, controllers: {
+      sessions: 'member/sessions',
+      registrations: 'member/registrations'
+  }
+
+  #pour lagestion de la DGSN qui est dans notre cas l'administrateur
+  devise_for :admin, controllers: {
+      sessions: 'admin/sessions',
+      registrations: 'admin/registrations'
+  }
+
+  #pour la gestion du grvpc
+  devise_for :grvpc, controllers: {
+      sessions: 'grvpc/sessions',
+      registrations: 'grvpc/registrations'
+  }
+
+  #pour la gestion des assurances
+  devise_for :assurance, controllers: {
+      sessions: 'assurance/sessions',
+      registrations: 'assurance/registrations'
+  }
+
+  #pour la gestion de la communaute urbaine metropi=olis
+  devise_for :metropolis, controllers: {
+      sessions: 'metropolis/sessions',
+      registrations: 'metropolis/registrations'
+  }
+
+
   get 'convocation/detail/:convocation_id/view', to: 'gestion_contravention#month_detail'
-  resources :agentphones
   resources :pieceretenus
   get 'archive/index'
   get 'archive/merci'
@@ -64,10 +104,9 @@ Rails.application.routes.draw do
   get 'statistique/statistique_home'
   resources :roles
   resources :services
-  resources :workflows
+  #resources :workflows
   get 'u/index'
   get 'u/private'
-  devise_for :us
   resources :grades
   get 'access/index'
   get 'access/login'
@@ -180,6 +219,8 @@ Rails.application.routes.draw do
     get 'alert/new/:matricule/:type/:lon/:lat/:photo/:description/:ville', to: 'convocations#new_alerte'
     #========== lire les alertes publiées =============
     get 'alert/read/all/:matricule/:ville_id', to: 'convocations#read_alertes'
+    #================= gestion du token ===================
+    get 'epolice/verification/token/:matricule', to: 'convocation#verify_token'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

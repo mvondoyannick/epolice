@@ -22,7 +22,7 @@
   <nav class="navbar is-white">
       <div class="container">
         <div class="navbar-brand">
-          <%= image_tag("cud.png", size: 100) %>
+
           <div class="navbar-burger burger" data-target="navMenu">
             <span></span>
             <span></span>
@@ -40,7 +40,7 @@
                 <% end %>
             <% end  %>
             
-            <%= link_to  "#", class: "navbar-item" if control? do %>
+            <%= link_to  "#", class: "navbar-item" do %>
               <i class="fa fa-envelope"></i>
               "Administration" 
             <% end %>
@@ -52,12 +52,12 @@
               <i class="fa fa-envelope" style="color: #000000;"></i>
               Messages
             <% end %>
-            <%= link_to  "Comptes", root_path, class: "navbar-item" if control? %>
+            <%= link_to  "Comptes", root_path, class: "navbar-item" %>
             <%= link_to  root_path, class: "navbar-item" do %>
               <i class="fa fa-search" style="color: #000000;"></i>
               Hisrorique
-            <% end -%>
-            <%= link_to  access_logout_path, class: "navbar-item" do %>
+            <% end %>
+            <%= link_to  root_path, class: "navbar-item" do %>
               <i class="fa fa-sign-out" style="color: #000000;"></i>
               Déconnexion
             <% end -%>
