@@ -1,0 +1,2 @@
+class Typeaccident < ApplicationRecord
+end

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :constats
+  resources :typeaccidents
   get 'metropoli/index'
   get 'member/index'
   get 'grvpc/index'

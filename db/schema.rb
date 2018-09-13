@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_13_114825) do
+ActiveRecord::Schema.define(version: 2018_09_13_190657) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -137,6 +137,26 @@ ActiveRecord::Schema.define(version: 2018_09_13_114825) do
     t.datetime "updated_at", null: false
     t.string "quartier"
     t.index ["ville_id"], name: "index_commissariats_on_ville_id"
+  end
+
+  create_table "constats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name1"
+    t.string "name2"
+    t.string "phone1"
+    t.string "phone2"
+    t.string "cni1"
+    t.string "cni2"
+    t.string "immatriculation1"
+    t.string "immatriculation2"
+    t.string "marque1"
+    t.string "marque2"
+    t.string "police1"
+    t.string "police2"
+    t.bigint "typeaccident_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "lieu"
+    t.index ["typeaccident_id"], name: "index_constats_on_typeaccident_id"
   end
 
   create_table "contravetions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -343,6 +363,13 @@ ActiveRecord::Schema.define(version: 2018_09_13_114825) do
   end
 
   create_table "statuses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "typeaccidents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.datetime "created_at", null: false

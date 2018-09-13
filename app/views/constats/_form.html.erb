@@ -1,0 +1,38 @@
+
+<%= simple_form_for(@constat) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+    <%= f.input :name1 %>
+
+    <%= f.input :name2 %>
+
+    <%= f.input :phone1 %>
+
+    <%= f.input :phone2 %>
+
+    <%= f.input :cni1 %>
+
+    <%= f.input :cni2 %>
+
+    <%= f.input :immatriculation1 %>
+
+    <%= f.input :immatriculation2 %>
+
+    <%= f.input :marque1 %>
+
+    <%= f.input :marque2 %>
+
+    <%= f.input :police1 %>
+
+    <%= f.input :police2 %>
+
+    <%= f.association :typeaccident %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

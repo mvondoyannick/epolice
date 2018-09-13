@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name1: MyString
+  name2: MyString
+  phone1: MyString
+  phone2: MyString
+  cni1: MyString
+  cni2: MyString
+  immatriculation1: MyString
+  immatriculation2: MyString
+  marque1: MyString
+  marque2: MyString
+  police1: MyString
+  police2: MyString
+  typeaccident: one
+
+two:
+  name1: MyString
+  name2: MyString
+  phone1: MyString
+  phone2: MyString
+  cni1: MyString
+  cni2: MyString
+  immatriculation1: MyString
+  immatriculation2: MyString
+  marque1: MyString
+  marque2: MyString
+  police1: MyString
+  police2: MyString
+  typeaccident: two

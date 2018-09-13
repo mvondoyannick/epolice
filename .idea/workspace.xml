@@ -2,84 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/admin/registrations/create.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/registrations/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/sessions/create.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/sessions/destroy.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/sessions/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/assurance/registrations/create.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/assurance/registrations/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/assurance/sessions/create.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/assurance/sessions/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/grvpc/registrations/create.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/grvpc/registrations/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/grvpc/sessions/create.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/grvpc/sessions/destroy.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/grvpc/sessions/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/layouts/_menu_assurance.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/layouts/_menu_grvpc.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/layouts/_menu_metropolice.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/layouts/_menu_partenaire.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/member/registrations/create.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/member/registrations/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/member/sessions/create.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/member/sessions/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/metropolis/registrations/create.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/metropolis/sessions/create.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pop-circulation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pop-circulation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/agentphones.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/agentphones.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/access_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/access_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/affectations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/affectations_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/agentphones_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/agentphones_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/affectation.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/affectation.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/agent.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/agent.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/agentphone.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/service.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/service.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/u.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/access/admin.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/admin.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/access/buy_document.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/buy_document.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/access/login.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/login.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/access/request_service.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/request_service.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/access/search_document.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/search_document.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/affectations/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/affectations/home.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/affectations/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/affectations/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/agentphones/_agentphone.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/agentphones/_form.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/agentphones/edit.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/agentphones/index.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/agentphones/index.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/agentphones/new.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/agentphones/show.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/agentphones/show.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gestion_contravention/today.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestion_contravention/today.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_menu_other.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_menu_other.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_the_sidebar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_the_sidebar.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/admin.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/admin.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/login.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/login.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/services/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/services/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20180809191533_devise_create_us.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20180903165545_create_agentphones.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/agentphones_controller_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/agentphones.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/us.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/agentphone_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/u_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/system/agentphones_test.rb" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -188,7 +112,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/access/login.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
+            <state relative-caret-position="96">
               <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
@@ -687,16 +611,15 @@
       <workItem from="1536673327756" duration="10718000" />
       <workItem from="1536756119519" duration="2576000" />
       <workItem from="1536764051079" duration="12469000" />
-      <workItem from="1536831539502" duration="31379000" />
+      <workItem from="1536831539502" duration="32064000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214114000" />
+    <option name="totallyTimeSpent" value="214799000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16471216" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -711,7 +634,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.32212582" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.73318875" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.3340564" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -1082,7 +1005,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/access/login.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
+        <state relative-caret-position="96">
           <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />

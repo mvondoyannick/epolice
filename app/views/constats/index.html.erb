@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Constats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name1</th>
+      <th>Name2</th>
+      <th>Phone1</th>
+      <th>Phone2</th>
+      <th>Cni1</th>
+      <th>Cni2</th>
+      <th>Immatriculation1</th>
+      <th>Immatriculation2</th>
+      <th>Marque1</th>
+      <th>Marque2</th>
+      <th>Police1</th>
+      <th>Police2</th>
+      <th>Typeaccident</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @constats.each do |constat| %>
+      <tr>
+        <td><%= constat.name1 %></td>
+        <td><%= constat.name2 %></td>
+        <td><%= constat.phone1 %></td>
+        <td><%= constat.phone2 %></td>
+        <td><%= constat.cni1 %></td>
+        <td><%= constat.cni2 %></td>
+        <td><%= constat.immatriculation1 %></td>
+        <td><%= constat.immatriculation2 %></td>
+        <td><%= constat.marque1 %></td>
+        <td><%= constat.marque2 %></td>
+        <td><%= constat.police1 %></td>
+        <td><%= constat.police2 %></td>
+        <td><%= constat.typeaccident %></td>
+        <td><%= link_to 'Show', constat %></td>
+        <td><%= link_to 'Edit', edit_constat_path(constat) %></td>
+        <td><%= link_to 'Destroy', constat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Constat', new_constat_path %>
