@@ -1,0 +1,42 @@
+<!-- START NAV -->
+<nav class="navbar is-white">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item brand-text" href="../">
+        Bulma Admin
+      </a>
+      <div class="navbar-burger burger" data-target="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <%= link_to grvpc_index_path, class: 'navbar-item' do %>
+          <i class="fa fa-home"></i>
+          &nbsp;Accueil
+        <% end %>
+        <a class="navbar-item" href="admin.html">
+          Home
+        </a>
+        <a class="navbar-item" href="admin.html">
+          Orders
+        </a>
+        <a class="navbar-item" href="admin.html">
+          Payments
+        </a>
+        <%= link_to edit_grvpc_registration_path, class: 'navbar-item' do %>
+          <i class="fa fa-edit"></i>
+          &nbsp;Mon compte
+        <% end %>
+        <%= link_to root_path, class: 'navbar-item' do %>
+        <i class="fa fa-sign-out"></i>
+          &nbsp;Se déconnecter
+          <% end %>
+      </div>
+
+    </div>
+  </div>
+</nav>
+<!-- END NAV -->

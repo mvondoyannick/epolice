@@ -1,0 +1,16 @@
+<% content_for(:title, "DASHBOARD #{@alerte.titre}")%>
+<div class="title is-3">
+  Alerte <%= @alerte.titre %>
+</div>
+<%= map(:center => {
+    :latlng => [@alerte.latitude, @alerte.longitude],
+    :zoom => 15
+},
+        :markers => [
+            {
+                :latlng => [@alerte.latitude, @alerte.longitude],
+                :popup => @alerte.description
+            }
+        ]
+    )
+%>

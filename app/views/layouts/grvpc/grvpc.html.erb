@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= full_title(yield :title)%></title>
+  <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
+  <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' %>
+  <!-- Bulma Version 0.7.1-->
+  <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css' %>
+  <%= stylesheet_link_tag 'https://dansup.github.io/bulma-templates/css/admin.css' %>
+  <%= javascript_include_tag 'https://dansup.github.io/bulma-templates/js/bulma.js' %>
+</head>
+
+<body>
+
+<%= render 'layouts/grvpc/menu' %>
+<div class="container">
+  <div class="columns">
+    <div class="column is-3">
+      <%= render 'layouts/grvpc/left_menu' %>
+    </div>
+    <div class="column is-9">
+      <%= render 'layouts/grvpc/breadcrumb' %>
+      <%= yield %>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

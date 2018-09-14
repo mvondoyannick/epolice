@@ -1,0 +1,166 @@
+<aside class="menu">
+  <p class="menu-label">
+    General
+  </p>
+  <ul class="menu-list">
+    <li><a class="is-active">Dashboard</a></li>
+    <li>
+      <%= link_to grvpc_transmission_documents_path do %>
+        <i class="fa fa-file-word-o"></i>
+        Transmission documents
+      <% end %>
+    </li>
+    <li>
+      <%= link_to affectations_agent_home_path do %>
+        <i class="fa fa-trash"></i>
+        Affectation agents
+      <% end %>
+    </li>
+    <li>
+      <%= link_to "#" do %>
+        <i class="fa fa-podcast"></i>
+        Postes de police
+      <% end %>
+    </li>
+    <li>
+      <%= link_to "#" do %>
+        <i class="fa fa-pie-chart"></i>
+        Statistiques
+      <% end %>
+    </li>
+  </ul>
+  <p class="menu-label">
+    Administration
+  </p>
+  <ul class="menu-list">
+    <li><a>Team Settings</a></li>
+    <li>
+      <a class="is-active">Gestion des alertes</a>
+      <ul>
+        <li>
+          <%= link_to grvpc_all_alertes_path do %>
+            <i class="fa fa-list-alt"></i>
+            &nbsp;Tout
+          <% end %>
+        </li>
+        <li>
+          <%= link_to grvpc_alertes_today_path do %>
+            <i class="fa fa-calendar-plus-o"></i>
+            &nbsp;Aujourd'hui
+          <% end %>
+        </li>
+        <li>
+          <%= link_to grvpc_alertes_week_path do %>
+            <i class="fa fa-calendar-minus-o"></i>
+            &nbsp;Semaine
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-calendar-check-o"></i>
+            &nbsp;Période
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-calendar-o"></i>
+            &nbsp;Carte
+          <% end %>
+        </li>
+        <li>
+          <%= link_to grvpc_alertes_resolue_all_path do %>
+            <i class="fa fa-check"></i>
+            &nbsp;Résolue
+          <% end %>
+        </li>
+        <li>
+          <%= link_to grvpc_alertes_not_resolue_all_path do %>
+            <i class="fa fa-check-square"></i>
+            &nbsp;Non résolue
+          <% end %>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a class="is-active">Gestion des contraventions</a>
+      <ul>
+        <li>
+          <%= link_to grvpc_all_contraventions_path do %>
+            <i class="fa fa-list-alt"></i>
+            &nbsp;Tout
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-calendar-plus-o"></i>
+            &nbsp;Aujourd'hui
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-calendar-minus-o"></i>
+            &nbsp;Semaine
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-calendar-check-o"></i>
+            &nbsp;Période
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-calendar-o"></i>
+            &nbsp;Carte
+          <% end %>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a class="is-active">Gestion des constats</a>
+      <ul>
+        <li>
+          <%= link_to grvpc_all_constats_path do %>
+            <i class="fa fa-list-alt"></i>
+            &nbsp;Tout
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-calendar-plus-o"></i>
+            &nbsp;Aujourd'hui
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-calendar-minus-o"></i>
+            &nbsp;Semaine
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-calendar-check-o"></i>
+            &nbsp;Période
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-calendar-o"></i>
+            &nbsp;Carte
+          <% end %>
+        </li>
+      </ul>
+    </li>
+    <li><a>Invitations</a></li>
+    <li><a>Cloud Storage Environment Settings</a></li>
+    <li><a>Authentication</a></li>
+  </ul>
+  <p class="menu-label">
+    Transactions
+  </p>
+  <ul class="menu-list">
+    <li><a>Payments</a></li>
+    <li><a>Transfers</a></li>
+    <li><a>Balance</a></li>
+  </ul>
+</aside>

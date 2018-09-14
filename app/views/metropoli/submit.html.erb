@@ -1,0 +1,7 @@
+<% content_for(:title, "SOUMISSION DE #{@query.cni}")%>
+<strong><%= @query.phone %></strong> a été submit à la comptabilité pour paiement <div class="e has-text-right">
+  <%= link_to metropoli_index_path, class: 'button is-link is-outlined is-small has-text-right' do %>
+    <i class="fa fa-arrow-left"></i>
+    &nbsp;Retour
+  <% end %>
+</div>

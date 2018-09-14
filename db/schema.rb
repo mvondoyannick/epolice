@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_13_190657) do
+ActiveRecord::Schema.define(version: 2018_09_14_171046) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -156,6 +156,8 @@ ActiveRecord::Schema.define(version: 2018_09_13_190657) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "lieu"
+    t.bigint "agent_id"
+    t.index ["agent_id"], name: "index_constats_on_agent_id"
     t.index ["typeaccident_id"], name: "index_constats_on_typeaccident_id"
   end
 
@@ -197,6 +199,9 @@ ActiveRecord::Schema.define(version: 2018_09_13_190657) do
     t.bigint "infraction_id"
     t.string "used"
     t.bigint "pieceretenu_id"
+    t.string "submit"
+    t.string "transmittedby"
+    t.string "buy"
     t.index ["agent_id"], name: "index_convocations_on_agent_id"
     t.index ["infraction_id"], name: "index_convocations_on_infraction_id"
     t.index ["pieceretenu_id"], name: "index_convocations_on_pieceretenu_id"

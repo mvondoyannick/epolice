@@ -1,0 +1,70 @@
+<% content_for(:title, "DETAIL DE #{@query.cni}")%>
+<br>
+<br>
+<table class="table">
+  <tbody>
+    <tr>
+      <td><i class="fa fa-id-card-o fa-1x"></i> CNI</td>
+      <td><%= @query.cni %></td>
+    </tr>
+    <tr>
+      <td><i class="fa fa-mobile-phone"></i> PHONE</td>
+      <td><%= @query.phone %></td>
+    </tr>
+    <tr>
+      <td><i class="fa fa-user"></i> NOM & PRENOM</td>
+      <td><%= @query.name %>&nbsp;<%= @query.prenom %></td>
+    </tr>
+    <tr>
+      <td><i class="fa fa-car"></i> IMMATRICULATION</td>
+      <td><%= @query.immatriculation %></td>
+    </tr>
+    <tr>
+      <td><i class="fa fa-dashcube"></i> INFRACTION</td>
+      <td><%= @query.infraction.motif %></td>
+    </tr>
+    <tr>
+      <td><i class="fa fa-dollar"></i> MONTANT INFRACTION</td>
+      <td><%= @query.infraction.montant %> F CFA XAF</td>
+    </tr>
+    <tr>
+      <td><i class="fa fa-close"></i> PIECE RETENUE(S)</td>
+      <td><%= @query.pieceretenu.name %></td>
+    </tr>
+    <tr>
+      <td><i class="fa fa-calendar"></i> DATE CREATION</td>
+      <td><%= @query.created_at %></td>
+    </tr>
+    <tr>
+      <td><i class="fa fa-check"></i> STATUS CONVOCATION</td>
+      <td><%= @query.status %></td>
+    </tr>
+    <tr>
+      <td><i class="fa fa-code"></i> TOKEN RING</td>
+      <td><%= @query.token %></td>
+    </tr>
+    <tr>
+      <td><i class="fa fa-shield"></i> SECURE TOKEN</td>
+      <td><%= @query.code %></td>
+    </tr>
+    <tr>
+      <td class="has-text-left">
+        <%= link_to :back, class: 'button is-link is-outlined' do %>
+          <i class="fa fa-arrow-left"></i>
+          &nbsp;Retour
+        <% end %>
+      </td>
+      <td class="has-text-right">
+        <%= link_to "/metropolis/submit/#{@query.id}/send", class: 'button is-link is-outlined' do %>
+          <i class="fa fa-send-o"></i>
+          &nbsp;Soumettre à la comptabilité
+          <% end %>
+        &nbsp;
+        <%= link_to "#", class: 'button is-link is-outlined' do %>
+          <i class="fa fa-print"></i>
+          &nbsp;Imprimer
+        <% end %>
+      </td>
+    </tr>
+  </tbody>
+</table>

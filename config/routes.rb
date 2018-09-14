@@ -2,8 +2,20 @@ Rails.application.routes.draw do
   resources :constats
   resources :typeaccidents
   get 'metropoli/index'
+  get 'metropolis/detail/:index', to: 'metropoli#detail'
+  get 'metropolis/submit/:index/send', to: 'metropoli#submit'
+  get 'metropolis/comptable/index', to: 'metropoli#comptable'
   get 'member/index'
   get 'grvpc/index'
+  get 'grvpc/all/alertes', to: 'grvpc#all_alertes'
+  get 'grvpc/alertes/today', to: 'grvpc#alerte_today'
+  get 'grvpc/alertes/week', to: 'grvpc#alerte_week'
+  get 'grvpc/alertes/:index/detail', to: 'grvpc#detail_alerte'
+  get 'grvpc/alertes/resolue/all', to: 'grvpc#alerte_resolue'
+  get 'grvpc/alertes/not/resolue/all', to: 'grvpc#alerte_not_resolue'
+  get 'grvpc/transmission/documents', to: 'grvpc#transmission_document'
+  get 'grvpc/all/contraventions', to: 'grvpc#all_contraventions'
+  get 'grvpc/all/constats', to: 'grvpc#all_constats'
   get 'assurance/index'
   get 'assurance/detail'
   get 'assurance/pay'
@@ -26,7 +38,8 @@ Rails.application.routes.draw do
   #pour la gestion du grvpc
   devise_for :grvpc, controllers: {
       sessions: 'grvpc/sessions',
-      registrations: 'grvpc/registrations'
+      registrations: 'grvpc/registrations',
+      edits: 'grvpc/edits'
   }
 
   #pour la gestion des assurances

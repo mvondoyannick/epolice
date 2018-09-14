@@ -1,3 +1,4 @@
-welcome <%= current_grvpc.email %>
+welcome <%= current_grvpc.email %> <br>
+<%= link_to 'Dashboard', grvpc_index_path %> <br>
 
 <%= link_to "log out", destroy_grvpc_session_path, class: 'button is-danger is-outlined' %>

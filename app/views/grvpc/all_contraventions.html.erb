@@ -1,0 +1,66 @@
+<% content_for(:title, 'DASHBOARD TOUTES LES CONTRAVENTIONS')%>
+<section class="hero is-info welcome is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Bonjour, <%= current_grvpc.email %>
+      </h1>
+      <h2 class="subtitle">
+        I hope you are having a great day!
+      </h2>
+    </div>
+  </div>
+</section>
+<br>
+<div class="title is-3">
+  Liste de toutes les infractions de la circulation
+</div>
+<br>
+<div class="columns">
+  <div class="column is-12">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Alertes
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </a>
+      </header>
+      <div class="card-table">
+        <div class="content">
+          <table class="table is-fullwidth is-striped">
+            <theader>
+              <tr height="50">
+                <td>#</td>
+                <td>Date création</td>
+                <td>Imm.</td>
+                <td>Motif</td>
+                <td>Agent</td>
+                <td>Action</td>
+              </tr>
+            </theader>
+            <tbody>
+            <% @contravention.each do |a| %>
+              <tr>
+                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                <td><%= a.created_at %></td>
+                <% if a.immatriculation.nil? %>
+                <td class="has-background-grey"><%= a.immatriculation  %></td>
+                  <% else %>
+                  <td><%= a.immatriculation  %></td>
+                <% end %>
+                <td><%= a.infraction.motif if !a.infraction_id.nil? %></td>
+                <td><%= a.agent.name %>&nbsp,<%= a.agent.prenom %></td>
+                <td><a class="button is-small is-link is-outlined" href="#">Action</a></td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= full_title(yield :title)%></title>
+  <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+  <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css' %>
+  <%= stylesheet_link_tag 'https://use.fontawesome.com/releases/v5.0.10/css/all.css' %>
+  <%= stylesheet_link_tag 'https://dansup.github.io/bulma-templates/css/tabs.css', media: 'all' %>
+  <%= javascript_include_tag 'https://dansup.github.io/bulma-templates/js/bulma.js' %>
+  <%= javascript_include_tag 'https://dansup.github.io/bulma-templates/js/tabs.js' %>
+</head>
+<body>
+<nav class="navbar is-info">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="#">
+      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+    </a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start is-link">
+      <%= link_to assurance_index_path, class: 'navbar-item' do %>
+        <i class="fa fa-home"></i>
+        &nbsp;Acceuil
+      <% end %>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="/documentation/overview/start/">
+          Docs
+        </a>
+        <div class="navbar-dropdown is-boxed">
+          <a class="navbar-item" href="admin.html">
+            Admin
+          </a>
+          <a class="navbar-item" href="forum.html">
+            Forum
+          </a>
+          <a class="navbar-item" href="cover.html">
+            Cover
+          </a>
+          <a class="navbar-item" href="cards.html">
+            Cards
+          </a>
+          <a class="navbar-item" href="blog.html">
+            Blog
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item" href="search.html">
+            Search
+          </a>
+          <a class="navbar-item is-active" href="kanban.html">
+            Kanban
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <%= link_to root_path, class: 'button is-danger is-outlined' do %>
+              <i class="fa fa-sign-out"></i>
+              Déconnexion
+            <% end %>
+          </p>
+          <p class="control">
+            <a class="button is-link is-outlined" href="https://github.com/dansup/bulma-templates">
+                <span class="icon">
+                    <i class="fas fa-download"></i>
+                </span>
+              <span><%= current_assurance.email %>></span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="hero is-info">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        E-ASSURANCE
+      </h1>
+      <h2 class="subtitle is-6">
+        by E-POLICE
+      </h2>
+    </div>
+  </div>
+  <div class="tabs is-boxed is-centered main-menu" id="nav">
+    <ul>
+      <li data-target="pane-1" id="1">
+        <a>
+          <span class="icon is-small"><i class="fa fa-image"></i></span>
+          <span>Pictures</span>
+        </a>
+      </li>
+      <li data-target="pane-2" id="2" class="is-active">
+        <a>
+          <span class="icon is-small"><i class="fab fa-empire"></i></span>
+          <span>Cosntats d'accident</span>
+        </a>
+      </li>
+      <li data-target="pane-3" id="3">
+        <a>
+          <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
+          <span>Team</span>
+        </a>
+      </li>
+      <li data-target="pane-4" id="4">
+        <a>
+          <span class="icon is-small"><i class="fa fa-film"></i></span>
+          <span>Video</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="tab-content">
+    <div class="tab-pane" id="pane-1" class="level">
+      <figure>
+        <img src="https://source.unsplash.com/0_xMuEbpFAQ/400x400" alt="" class="cent">
+      </figure>
+      <figure>
+        <img src="https://source.unsplash.com/wPMvPMD9KBI/800x600" alt="" class="cent">
+      </figure>
+    </div>
+    <div class="tab-pane" id="pane-3">
+      <div class="columns">
+        <div class="container ">
+          <div class="columns">
+            <div class="column">
+              <article class="media">
+                <div class="media-left">
+                  <i class="fab fa-github-square fa-4x"></i>
+                </div>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>Dominic Ipsum</strong>
+                      <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                    </p>
+                  </div>
+                </div>
+              </article>
+              <article class="media">
+                <div class="media-left">
+                  <i class="fab fa-empire fa-4x"></i>
+                </div>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>Cassie Ipsum</strong>
+                      <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="column">
+              <article class="media">
+                <div class="media-left">
+                  <i class="fab fa-ravelry fa-4x"></i>
+                </div>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>Avery Ipsum</strong>
+                      <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                    </p>
+                  </div>
+                </div>
+              </article>
+              <article class="media">
+                <div class="media-left">
+                  <i class="fab fa-github-alt fa-4x"></i>
+                </div>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>io Ipsum</strong>
+                      <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis. ╳
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane" id="pane-4">
+      <iframe src="https://player.vimeo.com/video/261794608" width="640" height="360" class="video"></iframe>
+    </div>
+    <div class="tab-pane is-active" id="pane-2">
+      <div class="content">
+        <h1>Constats d'accidents</h1>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

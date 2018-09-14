@@ -1,6 +1,6 @@
 class AssuranceController < ApplicationController
   def index
-
+    render layout: 'assurance/assurance'
   end
 
   def detail

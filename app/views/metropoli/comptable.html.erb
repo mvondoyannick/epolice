@@ -1,0 +1,85 @@
+<% content_for(:title, 'COMPTABLE')%>
+<% if @convocations.nil? %>
+  <article class="post">
+    <h4></h4>
+    <div class="media">
+      <div class="media-left">
+        <p class="image is-32x32">
+          <img src="http://bulma.io/images/placeholders/128x128.png">
+        </p>
+      </div>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            Aucune convocation transmise!
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+  <% else %>
+    <% @convocations.each do |c| %>
+      <article class="post">
+        <h4></h4>
+        <div class="media">
+          <div class="media-left">
+            <p class="image is-32x32">
+              <img src="http://bulma.io/images/placeholders/128x128.png">
+            </p>
+          </div>
+          <div class="media-content">
+            <div class="content">
+              <table class="table">
+                <tr>
+                  <td><i class="fa fa-phone-square"></i>&nbsp;Téléphone</td>
+                  <td><%= c.phone %></td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-id-card-o"></i>&nbsp;Immatriculation</td>
+                  <td><%= c.immatriculation %></td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-close"></i>&nbsp;Infraction</td>
+                  <td><%= c.infraction.motif if !c.infraction_id.nil? %></td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-dollar"></i>&nbsp;Montant infraction</td>
+                  <td><%= c.infraction.montant if !c.infraction_id.nil? %></td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-calendar"></i>&nbsp;Date creation</td>
+                  <td><%= c.created_at %></td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-calendar"></i>&nbsp;TRANSMISSION STATUS</td>
+                  <td><%= c.submit %></td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-calendar"></i>&nbsp;TRANSMITTED DATE</td>
+                  <td><%= c.updated_at %></td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-calendar"></i>&nbsp;TRANSMITTED BY</td>
+                  <td><%= c.transmittedby %></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="media-right">
+            <span class="has-text-grey-light">
+              <%= link_to "/metropolis/detail/#{c.id}", class: 'button is-danger is-outlined is-small' do %>
+                <i class="fa fa-money"></i>
+                &nbsp;Payer
+              <% end %>
+              &nbsp;
+              <%= link_to "#", class: 'button is-link is-outlined is-small' do %>
+                <i class="fa fa-print"></i>
+                &nbsp;Imprimer
+              <% end %>
+            </span>
+          </div>
+        </div>
+      </article>
+    <hr style="background-color: #000000;">
+    <% end %>
+  <% end %>

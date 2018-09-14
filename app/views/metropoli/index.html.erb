@@ -1,2 +1,53 @@
-<h1>Metropoli#index</h1>
-<p>Find me in app/views/metropoli/index.html.erb</p>
+<% content_for(:title, 'METROPOLIS ORDONANCEUR')%>
+<%= @convocations.each do |c| %>
+  <article class="post">
+    <h4></h4>
+    <div class="media">
+      <div class="media-left">
+        <p class="image is-32x32">
+          <img src="http://bulma.io/images/placeholders/128x128.png">
+        </p>
+      </div>
+      <div class="media-content">
+        <div class="content">
+          <table class="table">
+            <tr>
+              <td><i class="fa fa-phone-square"></i>&nbsp;Téléphone</td>
+              <td><%= c.phone %></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-id-card-o"></i>&nbsp;Immatriculation</td>
+              <td><%= c.immatriculation %></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-close"></i>&nbsp;Infraction</td>
+              <td><%= c.infraction.motif if !c.infraction_id.nil? %></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-dollar"></i>&nbsp;Montant infraction</td>
+              <td><%= c.infraction.montant if !c.infraction_id.nil? %></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-calendar"></i>&nbsp;Date creation</td>
+              <td><%= c.created_at %></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="media-right">
+        <span class="has-text-grey-light">
+          <%= link_to "/metropolis/detail/#{c.id}", class: 'button is-link is-outlined is-small' do %>
+            <i class="fa fa-plus"></i>
+            &nbsp;Detail
+          <% end %>
+          &nbsp;
+          <%= link_to "#", class: 'button is-link is-outlined is-small' do %>
+            <i class="fa fa-print"></i>
+            &nbsp;Imprimer
+          <% end %>
+        </span>
+      </div>
+    </div>
+  </article>
+<% end %>
+<hr style="background-color: #000000;">

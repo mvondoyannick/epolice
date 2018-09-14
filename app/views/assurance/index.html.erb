@@ -1,2 +1,10 @@
-<h1>Assurance#index</h1>
-<p>Find me in app/views/assurance/index.html.erb</p>
+<% content_for(:title, 'DASHBOARD ASSURANCE')%>
+<% Alerte.all.each do |s| %>
+  <blockquote>
+    <i class="fa fa-calendar"></i> <%= s.created_at %> <br>
+    <i class="fa fa-id-card"></i> <%= link_to s.code, "#" %> <br>
+    Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.
+    <br>
+
+  </blockquote>
+<% end %>

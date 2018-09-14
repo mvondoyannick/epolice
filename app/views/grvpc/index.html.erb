@@ -1,2 +1,168 @@
-<h1>Grvpc#index</h1>
-<p>Find me in app/views/grvpc/index.html.erb</p>
+<% content_for(:title, 'DASHBOARD GRVPC')%>
+<section class="hero is-info welcome is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Bonjour, <%= current_grvpc.email %>
+      </h1>
+      <h2 class="subtitle">
+        I hope you are having a great day!
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="info-tiles">
+  <div class="tile is-ancestor has-text-centered">
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title"><%= Alerte.all.count %></p>
+        <p class="subtitle">Alertes</p>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title"><%= Convocation.all.count %></p>
+        <p class="subtitle">Contraventions</p>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title"><%= Constat.all.count %></p>
+        <p class="subtitle">Constats</p>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title">19</p>
+        <p class="subtitle">Exceptions</p>
+      </article>
+    </div>
+  </div>
+</section>
+<div class="columns">
+  <div class="column is-6">
+    <div class="card events-card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Alertes (10)
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </a>
+      </header>
+      <div class="card-table">
+        <div class="content">
+          <table class="table is-fullwidth is-striped">
+            <tbody>
+            <% @alerte.each do |a| %>
+              <tr>
+                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                <td><strong><%= a.titre %></strong> à <%= a.ville.name %></td>
+                <td><a class="button is-small is-link is-outlined" href="#">Action</a></td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <%= link_to 'Voir tout', grvpc_all_alertes_path, class: 'card-footer-item' %>
+      </footer>
+    </div>
+    <div class="card events-card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Constats (10)
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </a>
+      </header>
+      <div class="card-table">
+        <div class="content">
+          <table class="table is-fullwidth is-striped">
+            <tbody>
+            <% if !@constat.nil? %>
+              <p class="has-text-centered">
+                Aucuns constats
+              </p>
+            <% else %>
+              <% @constat.each do |a| %>
+                <tr>
+                  <td width="5%"><i class="fa fa-bell-o"></i></td>
+                  <td><strong><%= a.immatriculation1 %></strong> et <strong><%= a.immatriculation2 %></strong></td>
+                  <td><a class="button is-small is-link is-outlined" href="#">Action</a></td>
+                </tr>
+              <% end %>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <%= link_to 'Voir tout', grvpc_all_constats_path, class: 'card-footer-item' %>
+      </footer>
+    </div>
+  </div>
+  <div class="column is-6">
+    <div class="card events-card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Contraventions (10)
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </a>
+      </header>
+      <div class="card-table">
+        <div class="content">
+          <table class="table is-fullwidth is-striped">
+            <tbody>
+            <% @contravention.each do |a| %>
+              <tr>
+                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                <td><strong><%= a.infraction.motif %></strong> sur <%= a.immatriculation %></td>
+                <td><a class="button is-small is-link is-outlined" href="#">Action</a></td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <%= link_to 'Voir tout', grvpc_all_contraventions_path, class: 'card-footer-item' %>
+      </footer>
+    </div>
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Inventory Search
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </a>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <div class="control has-icons-left has-icons-right">
+            <input class="input is-large" type="text" placeholder="">
+            <span class="icon is-medium is-left">
+              <i class="fa fa-search"></i>
+            </span>
+            <span class="icon is-medium is-right">
+              <i class="fa fa-check"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
