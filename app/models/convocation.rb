@@ -16,14 +16,14 @@ class Convocation < ApplicationRecord
 
     has_one_attached :fichier
 
-    private
+    public
     def set_status
         self.status = "Impayé"
     end
 
     def send_sms
         message = "Vous avez ete VERBALISE via le numero   pour les motif(s) ci-apres : . Le montant de l amende est de :  F CFA. Presenter ce code "
-        HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=691451189&message=#{message}")
+        HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{self.phone}&message=#{message}")
     end
 
 end
