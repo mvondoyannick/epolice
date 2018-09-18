@@ -90,7 +90,7 @@
       </footer>
     </div>
     <hr>
-    <% if current_user.role.id == 1 %>
+    <% if admin_signed_in? %>
     <div class="card">
       <header class="card-header">
         <p class="card-header-title">
