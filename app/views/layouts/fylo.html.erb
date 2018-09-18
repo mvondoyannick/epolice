@@ -4,7 +4,17 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><%= full_title(yield :title)%></title>
+  <%= javascript_include_tag 'jquery-3.2.1.min' %>
+  <%= javascript_include_tag 'jquery-ui.min' %>
   <%= stylesheet_link_tag 'bootstrap-4.1/bootstrap.min' %>
+  <%= javascript_include_tag 'bootstrap-4.1/bootstrap.min' %>
+  <%= javascript_include_tag 'bootstrap-4.1/popper.min' %>
+  <%= javascript_include_tag 'bootstrap-progressbar/bootstrap-progressbar.min' %>
+  <%=stylesheet_link_tag 'bootstrap-progressbar/bootstrap-progressbar-3.3.4.min' %>
+  <%= javascript_include_tag 'chartjs/Chart.bundle.min' %>
+  <%= javascript_include_tag 'circle-progress/circle-progress' %>
+  <%= javascript_include_tag 'countdown/*' %>
+  <%= stylesheet_link_tag Rails.root + "/vendor/bootstrap-4.1/bootstrap.min.css" %>
 </head>
   <body>
 
