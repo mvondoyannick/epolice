@@ -22,7 +22,7 @@ class Convocation < ApplicationRecord
     end
 
     def send_sms
-        message = "Vous avez ete VERBALISE via le numero #{self.phone} pour les motif(s) ci-apres : . Le montant de l amende est de :  F CFA. Presenter ce code pour paiement #{self.code} "
+        message = "Vous avez ete VERBALISE via le numero #{self.phone} pour les motif(s) ci-apres : . Le montant de l amende est de : #{self.infraction_id}  F CFA. Presenter ce code pour paiement #{self.code}.upcase "
         HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{self.phone}&message=#{message}")
     end
 
