@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/convocation.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/convocation.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
     </list>
@@ -84,6 +82,7 @@
           <entry key="css" value="2" />
           <entry key="dot" value="1" />
           <entry key="erb" value="276" />
+          <entry key="html" value="1" />
           <entry key="js" value="4" />
           <entry key="pid" value="1" />
           <entry key="rake" value="1" />
@@ -99,6 +98,7 @@
           <entry key="CSS" value="2" />
           <entry key="CoffeeScript" value="2" />
           <entry key="Database Element" value="3" />
+          <entry key="HTML" value="1" />
           <entry key="JavaScript" value="4" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RHTML" value="276" />
@@ -113,10 +113,10 @@
           <entry key="Gemfile" value="131" />
           <entry key="coffee" value="74" />
           <entry key="css" value="151" />
-          <entry key="erb" value="30622" />
+          <entry key="erb" value="30797" />
           <entry key="js" value="73" />
           <entry key="pid" value="1" />
-          <entry key="rb" value="17104" />
+          <entry key="rb" value="17323" />
           <entry key="txt" value="13" />
           <entry key="yml" value="145" />
         </counts>
@@ -127,8 +127,8 @@
           <entry key="CoffeeScript" value="74" />
           <entry key="JavaScript" value="73" />
           <entry key="PLAIN_TEXT" value="14" />
-          <entry key="RHTML" value="30622" />
-          <entry key="Ruby" value="17235" />
+          <entry key="RHTML" value="30797" />
+          <entry key="Ruby" value="17454" />
           <entry key="YAML" value="145" />
         </counts>
       </usages-collector>
@@ -157,8 +157,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/fylo.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+            <state relative-caret-position="286">
+              <caret line="37" column="73" selection-start-line="37" selection-start-column="73" selection-end-line="37" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/xampp/htdocs/monAppli/card.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="33" selection-end-column="60" />
+              <folding>
+                <element signature="n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,17 +178,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-133">
-              <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/agents/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+            <state relative-caret-position="195">
+              <caret line="33" column="81" selection-start-line="33" selection-start-column="81" selection-end-line="33" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -230,9 +233,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>token</find>
-      <find>partenaires</find>
-      <find>contro</find>
       <find>contr</find>
       <find>current_u</find>
       <find>fylo</find>
@@ -259,8 +259,15 @@
       <find>liste des</find>
       <find>render layout: 'fylo'</find>
       <find>liste de con</find>
+      <find>rel=&quot;stylesheet&quot; media=&quot;all&quot;</find>
+      <find>circle-progress.js</find>
+      <find>vendor/</find>
       <find>convocation.new</find>
     </findStrings>
+    <replaceStrings>
+      <replace>%=</replace>
+      <replace>*</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -316,9 +323,9 @@
         <option value="$PROJECT_DIR$/app/views/alertes/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" />
         <option value="$PROJECT_DIR$/app/views/access/admin.html.erb" />
-        <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" />
         <option value="$PROJECT_DIR$/app/models/convocation.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" />
+        <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
       </list>
     </option>
   </component>
@@ -532,6 +539,12 @@
               <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
               <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="animsition" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
               <item name="bootstrap-4.1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -556,7 +569,55 @@
               <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
               <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="countdown" type="462c0819:PsiDirectoryNode" />
+              <item name="mdi-font" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="perfect-scrollbar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="progressbar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="select2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="slick" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="smk-accordion" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetalert" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="vector-map" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="wow" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -707,12 +768,12 @@
       <workItem from="1536831539502" duration="32483000" />
       <workItem from="1536918071030" duration="29607000" />
       <workItem from="1537174968220" duration="29481000" />
-      <workItem from="1537270596928" duration="14872000" />
+      <workItem from="1537270596928" duration="17319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289178000" />
+    <option name="totallyTimeSpent" value="291625000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -731,7 +792,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.489154" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.4002169" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.47396964" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.3340564" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -788,13 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/member/registrations/create.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/member/registrations/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -1092,24 +1146,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/manage_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-133">
-          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="77" />
+        <state relative-caret-position="66">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp/htdocs/monAppli/card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="33" selection-end-column="60" />
+          <folding>
+            <element signature="n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/fylo.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        <state relative-caret-position="286">
+          <caret line="37" column="73" selection-start-line="37" selection-start-column="73" selection-end-line="37" selection-end-column="73" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/manage_controller.rb">
+    <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        <state relative-caret-position="195">
+          <caret line="33" column="81" selection-start-line="33" selection-start-column="81" selection-end-line="33" selection-end-column="81" />
         </state>
       </provider>
     </entry>
