@@ -30,14 +30,17 @@
               <%= f.input :password,
                           required: true,
                           hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                          input_html: { autocomplete: "new-password" } %>
+                          input_html: { autocomplete: "new-password" }, placeholder: 'Mot de passe' %>
               <%= f.input :password_confirmation,
                           required: true,
-                          input_html: { autocomplete: "new-password" } %>
+                          input_html: { autocomplete: "new-password" }, placeholder: 'Confirmer votre mot de passe' %>
+              <%= f.association :metropolisrole,
+                          required: true,
+                          input_html: { autocomplete: "new-password", style: 'margin-botton: 20px;' }, label: 'selectionner un role', prompt: 'Seletionner un role' %>
             </div>
 
-            <div class="form-actions">
-              <%= f.button :submit, "Sign up", class: 'button is-link is-outlined is-fullwidth is-block' %>
+            <div class="form-actions" style="margin-top: 60px;">
+              <%= f.button :submit, "Creer un agent", class: 'button is-link is-outlined is-fullwidth is-block' %>
             </div>
           <% end %>
         </div>

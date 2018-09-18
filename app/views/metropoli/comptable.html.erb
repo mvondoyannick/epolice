@@ -18,68 +18,58 @@
     </div>
   </article>
   <% else %>
-    <% @convocations.each do |c| %>
-      <article class="post">
-        <h4></h4>
-        <div class="media">
-          <div class="media-left">
-            <p class="image is-32x32">
-              <img src="http://bulma.io/images/placeholders/128x128.png">
+  <form action="#">
+    <div class="field">
+      <label class="label">Rechercher</label>
+      <div class="control">
+        <input class="input is-large" type="text" placeholder="Entrer vos criteres de recherche">
+      </div>
+    </div>
+    <div class="control">
+      <button class="button is-link is-outlined">Rechercher</button>
+    </div>
+  </form>
+  <hr style="background-color: #3c3f41;">
+  <div class="title is-4">
+    <i class="fa fa-list-alt"></i> Liste des contraventions
+  </div>
+    <div class="row columns is-multiline is-mobile">
+      <% @convocations.each_with_index do |c, index| %>
+      <div class="column is-one-third">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              <i class="fa fa-phone-square"></i>&nbsp;<%= c.phone %> | <i class="fa fa-car"></i>&nbsp;<%= c.immatriculation %>
             </p>
-          </div>
-          <div class="media-content">
+            <a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+      </span>
+            </a>
+          </header>
+          <div class="card-content">
             <div class="content">
-              <table class="table">
-                <tr>
-                  <td><i class="fa fa-phone-square"></i>&nbsp;Téléphone</td>
-                  <td><%= c.phone %></td>
-                </tr>
-                <tr>
-                  <td><i class="fa fa-id-card-o"></i>&nbsp;Immatriculation</td>
-                  <td><%= c.immatriculation %></td>
-                </tr>
-                <tr>
-                  <td><i class="fa fa-close"></i>&nbsp;Infraction</td>
-                  <td><%= c.infraction.motif if !c.infraction_id.nil? %></td>
-                </tr>
-                <tr>
-                  <td><i class="fa fa-dollar"></i>&nbsp;Montant infraction</td>
-                  <td><%= c.infraction.montant if !c.infraction_id.nil? %></td>
-                </tr>
-                <tr>
-                  <td><i class="fa fa-calendar"></i>&nbsp;Date creation</td>
-                  <td><%= c.created_at %></td>
-                </tr>
-                <tr>
-                  <td><i class="fa fa-calendar"></i>&nbsp;TRANSMISSION STATUS</td>
-                  <td><%= c.submit %></td>
-                </tr>
-                <tr>
-                  <td><i class="fa fa-calendar"></i>&nbsp;TRANSMITTED DATE</td>
-                  <td><%= c.updated_at %></td>
-                </tr>
-                <tr>
-                  <td><i class="fa fa-calendar"></i>&nbsp;TRANSMITTED BY</td>
-                  <td><%= c.transmittedby %></td>
-                </tr>
-              </table>
+              <i class="fa fa-list-alt"></i> Infraction : <%= c.infraction.motif if !c.infraction_id.nil? %>
+              <br>
+              <i class="fa fa-dollar"></i> Montant : <%= c.infraction.montant if !c.infraction_id.nil? %> F CFA
+              <br>
+              <i class="fa fa-calendar-plus-o"></i> Date : <%= c.created_at %>
+              <br>
+              <i class="fa fa-user"></i> Transmis par : <%= c.transmittedby %>
+              <br>
+              Paiement : <% if c.buy.nil? %> Impayé <%else %> Payé <% end %>
+              <br>
+              <br>
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
             </div>
           </div>
-          <div class="media-right">
-            <span class="has-text-grey-light">
-              <%= link_to "/metropolis/detail/#{c.id}", class: 'button is-danger is-outlined is-small' do %>
-                <i class="fa fa-money"></i>
-                &nbsp;Payer
-              <% end %>
-              &nbsp;
-              <%= link_to "#", class: 'button is-link is-outlined is-small' do %>
-                <i class="fa fa-print"></i>
-                &nbsp;Imprimer
-              <% end %>
-            </span>
-          </div>
+          <footer class="card-footer">
+            <a href="#" class="card-footer-item">Payé</a>
+            <a href="#" class="card-footer-item">Note</a>
+            <a href="#" class="card-footer-item">Imprimer</a>
+          </footer>
         </div>
-      </article>
-    <hr style="background-color: #000000;">
-    <% end %>
+      </div>
+      <% end %>
+    </div>
   <% end %>

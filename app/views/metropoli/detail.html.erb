@@ -1,6 +1,12 @@
 <% content_for(:title, "DETAIL DE #{@query.cni}")%>
 <br>
 <br>
+<div class="title is-3">
+  Detail de la contravention <%= @query.immatriculation %>
+</div>
+<div class="subtitle is-5">
+  Contravention correspondant à la pièce d'identité n° <%= link_to @query.cni, "#" %>
+</div>
 <table class="table">
   <tbody>
     <tr>
@@ -21,15 +27,15 @@
     </tr>
     <tr>
       <td><i class="fa fa-dashcube"></i> INFRACTION</td>
-      <td><%= @query.infraction.motif %></td>
+      <td><%= @query.infraction.motif if !@query.infraction_id.nil? %></td>
     </tr>
     <tr>
       <td><i class="fa fa-dollar"></i> MONTANT INFRACTION</td>
-      <td><%= @query.infraction.montant %> F CFA XAF</td>
+      <td><%= @query.infraction.montant if !@query.infraction_id.nil? %> F CFA XAF</td>
     </tr>
     <tr>
       <td><i class="fa fa-close"></i> PIECE RETENUE(S)</td>
-      <td><%= @query.pieceretenu.name %></td>
+      <td><%= @query.pieceretenu.name if !@query.pieceretenu_id.nil? %></td>
     </tr>
     <tr>
       <td><i class="fa fa-calendar"></i> DATE CREATION</td>

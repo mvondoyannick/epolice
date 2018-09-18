@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Postepolices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Agent</th>
+      <th>Commissariat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @postepolices.each do |postepolice| %>
+      <tr>
+        <td><%= postepolice.name %></td>
+        <td><%= postepolice.location %></td>
+        <td><%= postepolice.agent %></td>
+        <td><%= postepolice.commissariat %></td>
+        <td><%= link_to 'Show', postepolice %></td>
+        <td><%= link_to 'Edit', edit_postepolice_path(postepolice) %></td>
+        <td><%= link_to 'Destroy', postepolice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Postepolice', new_postepolice_path %>

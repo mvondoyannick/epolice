@@ -1,39 +1,66 @@
 <% content_for(:title, 'METROPOLIS ORDONANCEUR')%>
-<%= @convocations.each do |c| %>
-  <article class="post">
-    <h4></h4>
-    <div class="media">
-      <div class="media-left">
-        <p class="image is-32x32">
-          <img src="http://bulma.io/images/placeholders/128x128.png">
-        </p>
-      </div>
-      <div class="media-content">
-        <div class="content">
-          <table class="table">
-            <tr>
-              <td><i class="fa fa-phone-square"></i>&nbsp;Téléphone</td>
-              <td><%= c.phone %></td>
-            </tr>
-            <tr>
-              <td><i class="fa fa-id-card-o"></i>&nbsp;Immatriculation</td>
-              <td><%= c.immatriculation %></td>
-            </tr>
-            <tr>
-              <td><i class="fa fa-close"></i>&nbsp;Infraction</td>
-              <td><%= c.infraction.motif if !c.infraction_id.nil? %></td>
-            </tr>
-            <tr>
-              <td><i class="fa fa-dollar"></i>&nbsp;Montant infraction</td>
-              <td><%= c.infraction.montant if !c.infraction_id.nil? %></td>
-            </tr>
-            <tr>
-              <td><i class="fa fa-calendar"></i>&nbsp;Date creation</td>
-              <td><%= c.created_at %></td>
-            </tr>
-          </table>
+<form action="#">
+  <div class="field">
+    <label class="label">Rechercher</label>
+    <div class="control">
+      <input class="input is-large" type="text" placeholder="Entrer vos criteres de recherche">
+    </div>
+  </div>
+  <div class="control">
+    <button class="button is-link is-outlined">Rechercher</button>
+  </div>
+</form>
+<hr style="background-color: #3c3f41;">
+<div class="title is-4">
+  <i class="fa fa-list-alt"></i> Liste des contraventions
+</div>
+<%= @convocations.each do |c, index| %>
+  <div class="row columns is-multiline is-desktop">
+    <% @convocations.each_with_index do |c, index| %>
+      <div class="column is-one-third">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              <i class="fa fa-phone-square"></i>&nbsp;<%= c.phone %> | <i class="fa fa-car"></i>&nbsp;<%= c.immatriculation %>
+            </p>
+            <a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+      </span>
+            </a>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              Numéro d'ordre : <%= index+1 %>
+              <br>
+              Téléphone : <% c.phone %>
+              <br>
+              Immatriculation : <%= c.immatriculation %>
+              <br>
+              Infraction : <%= c.infraction.motif if !c.infraction_id.nil? %>
+              <br>
+              Montant : <%= c.infraction.montant if !c.infraction_id.nil? %> F CFA
+              <br>
+              Date : <%= c.created_at %>
+              <br>
+              <% if c.buy.nil? %> Impayé <%else %> Payé <% end %>
+              <br>
+              <br>
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+          <footer class="card-footer">
+            <%= link_to "Detail", "/metropolis/detail/#{c.id}", class: 'card-footer-item' %>
+            <%= link_to "Note", "#", class: 'card-footer-item' %>
+            <%= link_to "Imprimer", "#", class: 'card-footer-item' %>
+          </footer>
         </div>
       </div>
+    <% end %>
+  </div>
+  <article class="post">
+    <div class="media">
+
       <div class="media-right">
         <span class="has-text-grey-light">
           <%= link_to "/metropolis/detail/#{c.id}", class: 'button is-link is-outlined is-small' do %>

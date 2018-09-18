@@ -21,7 +21,7 @@
 
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="form-inputs has-text-left">
-              <%= f.input :matricule, required: true, autofocus: true, input_html: { autocomplete: "matricule" } %>
+              <%= f.input :email, required: true, autofocus: true, input_html: { autocomplete: "matricule" } %>
               <%= f.input :password, required: true, input_html: { autocomplete: "current-password" } %>
               <%= f.input :remember_me, label: 'Se souvenir de moi', as: :boolean if devise_mapping.rememberable? %>
             </div>

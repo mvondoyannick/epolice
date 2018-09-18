@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @postepolice.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @postepolice.location %>
+</p>
+
+<p>
+  <strong>Agent:</strong>
+  <%= @postepolice.agent %>
+</p>
+
+<p>
+  <strong>Commissariat:</strong>
+  <%= @postepolice.commissariat %>
+</p>
+
+<%= link_to 'Edit', edit_postepolice_path(@postepolice) %> |
+<%= link_to 'Back', postepolices_path %>

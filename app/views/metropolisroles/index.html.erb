@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Metropolisroles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @metropolisroles.each do |metropolisrole| %>
+      <tr>
+        <td><%= metropolisrole.name %></td>
+        <td><%= metropolisrole.description %></td>
+        <td><%= link_to 'Show', metropolisrole %></td>
+        <td><%= link_to 'Edit', edit_metropolisrole_path(metropolisrole) %></td>
+        <td><%= link_to 'Destroy', metropolisrole, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Metropolisrole', new_metropolisrole_path %>

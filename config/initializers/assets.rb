@@ -1,7 +1,7 @@
 # Be sure to restart your server when you modify this file.
 
 # Version of your assets, change this if you want to expire all your assets.
-Rails.application.config.assets.version = '1.1'
+Rails.application.config.assets.version = '1.0'
 
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path
@@ -30,3 +30,7 @@ Rails.application.config.assets.precompile += %w( fonts/fontawesome-webfont.woff
 Rails.application.config.assets.precompile += %w( fonts/fontawesome-webfont.woff2 )
 Rails.application.config.assets.precompile += %w( fonts/fontawesome-webfont.svg )
 Rails.application.config.assets.precompile += %w( gmaps.js )
+# ==================================================================================
+Rails.application.config.assets.precompile += %w( bootstrap-4.1/bootstrap.min.css )
+Rails.application.config.assets.precompile += %w( bootstrap-4.1/bootstrap.min.js )
+Rails.application.config.assets.precompile += %w( bootstrap-4.1/popper.min.js )

@@ -12,6 +12,9 @@
  *
  *= require font-awesome
  *= require leaflet
+ *= require bootstrap-4.1/bootstrap.min
+ *= require animsition/animsition.min
+ *= require bootstrap-progressbar/bootstrap-progressbar-3.3.4.min
  *= require_tree .
  *= require_self
  */

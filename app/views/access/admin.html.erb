@@ -115,11 +115,11 @@
         <div class="content">
           <table class="table is-fullwidth is-striped">
             <tbody>
-            <% @alerte_tmp = Alerte.order(created_at: :desc).limit(10) %>
-            <% if @alerte_tmp.nil? %>
+            <% @alerte_tmp = Constat.order(created_at: :desc).limit(10) %>
+            <% if !@alerte_tmp.nil? %>
               <tr>
                 <td width="5%"><i class="fa fa-bell-o"></i></td>
-                <td>Aucunes alertes publiées pour le moment.</td>
+                <td>Aucuns constats enregistrés moment.</td>
               </tr>
             <% else %>
               <% @alerte_tmp.each do |alerte| %>
@@ -142,7 +142,7 @@
         </div>
       </div>
       <footer class="card-footer">
-        <%= link_to  "Voir touts les constats", access_alertes_alerte_all_path, class: "card-footer-item" %>
+        <%= link_to  "Voir touts les constats", gestion_constat_all_path, class: "card-footer-item" %>
       </footer>
     </div>
   </div>

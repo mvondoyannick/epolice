@@ -1,1 +1,38 @@
-registration
+<% content_for(:title, 'DASHBOARD CREATION DE COMPTE PARTENAIRE')%>
+<% if flash[:notice] %>
+  <div class="notice is-desktop has-text-centered">
+    <div class="notification is-danger">
+      <button class="delete"></button>
+      <%= flash[:notice] %>
+    </div>
+  </div>
+<% end %>
+<section class="hero is-fullheight">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="column is-4 is-offset-4">
+        <p class="subtitle has-text-black has-text-weight-bold">
+          <i class="fa fa-user fa-5x"></i>
+        </p>
+        <p class="subtitle has-text-black is-6">Merci de fournir vos identifications de creation de compte.</p>
+        <div class="box" style="margin-top: -10px;">
+          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="form-inputs has-text-left">
+              <%= f.input :email, required: true, autofocus: true, placeholder: 'adresse email' %>
+              <%= f.input :password, required: true, placeholder: 'Votre mot de passe' %>
+              <%= f.input :phone, label: 'Numéro de téléphone principale', require: true, placeholder: 'Numéro de téléphone' %>
+              <%= f.association :service, label: 'Selectionner le service', require: true, prompt: 'Selectionner le service' %>
+            </div>
+
+            <div class="form-actions" style="margin-top: 50px;">
+              <%= f.button :submit, "Creer le compte", class: 'button is-link is-outlined is-fullwidth is-block' %>
+            </div>
+          <% end %>
+        </div>
+        <p class="has-text-grey">
+          <%= render "devise/shared/links" %>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

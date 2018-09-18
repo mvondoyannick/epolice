@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :postepolices
+  get 'manage/index'
+  get 'manage/admin'
+  get 'manage/grvpc'
+  get 'manage/assurance'
+  get 'manage/member'
+  get 'manage/metropolis'
+  resources :metropolisroles
   resources :constats
   resources :typeaccidents
   get 'metropoli/index'
@@ -20,6 +28,7 @@ Rails.application.routes.draw do
   get 'assurance/detail'
   get 'assurance/pay'
   get 'assurance/bilan'
+  get 'access/admin/manage', to: 'access#manage'
   #devise_for :metropolis
   #devise_for :assurances
   #devise_for :grvpcs

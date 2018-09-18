@@ -1,2 +1,30 @@
-bienvenue <%= current_metropoli.email %>
-<%= link_to "log out", destroy_metropoli_session_path, method: :delete, class: 'button is-danger is-outlined' %>
+<div class="container">
+  <section class="hero is-link">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Primary title
+        </h1>
+        <h2 class="subtitle">
+          Primary subtitle
+        </h2>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Bienvenue</h1>
+      <h2 class="subtitle">
+        Connecté en tantque : <%=current_metropoli.email %>, ayant pour role <%= current_metropoli.metropolisrole.name %>
+      </h2>
+      <br>
+      <% if current_metropoli.metropoli_id = 1 %>
+      Acceder au service <%= link_to 'Acceder au service', metropoli_index_path, method: :delete, class: 'button is-link is-outlined'  %>
+        <% else %>
+        Acceder au service <%= link_to 'Acceder au service', metropolis_comptable_index_path, method: :delete, class: 'button is-link is-outlined'  %>
+      <% end %>
+      <br>
+      <%= link_to 'Se déconnecter', destroy_metropoli_session_path, method: :delete , class: 'button is-danger is-outlined' %>
+    </div>
+  </section>
+</div>

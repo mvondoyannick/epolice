@@ -1,0 +1,40 @@
+<% content_for(:title, 'DASHBOARD COMMUNAUTE')%>
+<div class="title">
+  <i class="fa fa-list-alt noir"></i>&nbsp;Liste des utilisateurs du GRVPC
+</div>
+<div class="row columns is-multiline">
+  <% @user.each_with_index do |user, index| %>
+  <div class="column is-one-third">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Position : <%= index+1 %>
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+    <span class="icon">
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </span>
+        </a>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          Adresse email : <%= user.email %>
+          <br>
+          Date creation : <%= user.created_at %>
+          <br>
+          Nom & Prénom : <%= user.name %>
+          <br>
+          Téléphone : <%= user.phone %>
+          <br>
+          Role : <%= user.metropolisrole.name %>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <a href="#" class="card-footer-item">SMS</a>
+        <a href="#" class="card-footer-item">Modifier</a>
+        <a href="#" class="card-footer-item">Supprimer</a>
+      </footer>
+    </div>
+  </div>
+  <% end %>
+</div>

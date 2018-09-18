@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_14_171046) do
+ActiveRecord::Schema.define(version: 2018_09_17_165122) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -272,6 +272,13 @@ ActiveRecord::Schema.define(version: 2018_09_14_171046) do
     t.string "role"
   end
 
+  create_table "memberoles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -313,8 +320,17 @@ ActiveRecord::Schema.define(version: 2018_09_14_171046) do
     t.string "password_confirmation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "metropolisrole_id"
     t.index ["email"], name: "index_metropolis_on_email", unique: true
+    t.index ["metropolisrole_id"], name: "index_metropolis_on_metropolisrole_id"
     t.index ["reset_password_token"], name: "index_metropolis_on_reset_password_token", unique: true
+  end
+
+  create_table "metropolisroles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "paiements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -342,6 +358,17 @@ ActiveRecord::Schema.define(version: 2018_09_14_171046) do
     t.string "detail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "postepolices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.bigint "agent_id"
+    t.bigint "commissariat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["agent_id"], name: "index_postepolices_on_agent_id"
+    t.index ["commissariat_id"], name: "index_postepolices_on_commissariat_id"
   end
 
   create_table "roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

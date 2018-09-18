@@ -1,7 +1,7 @@
 class AccessController < ApplicationController
   #on verifie si l'utilisateur est connecter avant de donner acces aux ressource
   #before_action :confirm_logged_in, only: [:login, :attemp_login, :admin, :logout]
-  before_action :authenticate, only: :access_control
+  before_action :authenticate_admin!, except: [:login]
 
 
   def index
@@ -224,17 +224,5 @@ class AccessController < ApplicationController
 
   end
 
-  private
-
-  def authenticate
-    #on recupere la page en cours
-    current_page = request.original_url
-     p = authenticate_or_request_with_http_basic do |email, password|
-      email == current_user.email && password == current_user.password
-    end
-
-    puts " ========== #{p} "
-    puts "========#{current_page}"
-  end
 
 end

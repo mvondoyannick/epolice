@@ -6,7 +6,7 @@ class Admin::RegistrationsController < Devise::RegistrationsController
   before_action :authenticate_admin!, only: [:new, :create]
 
   # GET /resource/sign_up
-  def new
+  def   new
     super
   end
 

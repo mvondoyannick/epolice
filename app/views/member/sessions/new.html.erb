@@ -18,9 +18,9 @@
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="form-inputs has-text-left">
               <%= f.input :email, required: true, autofocus: true, placeholder: 'adresse email' %>
-              <%= f.input :matricule, required: true, autofocus: true, placeholder: 'Votre matricule', label: 'Matricule (Si disponible)' %>
               <%= f.input :password, required: true, placeholder: 'Votre mot de passe' %>
-              <%= f.association :service, prompt: 'Selectionner votre service', label: 'Service', label_html: {class: 'has-text-left'}, input_html: {class: 'is-fullwidth is-block'}, require: true %>
+              <%= f.input :phone, required: true, placeholder: 'Numéro de téléphone principal' %>
+              <%= f.association :service, label: 'Selectionner le service', require: true, prompt: 'Selectionner le service' %>
               <%= f.input :remember_me, label: 'Se souvenir de moi', input_html: {style: 'margin-top: 50px; margin-right: 10px;' }, as: :boolean if devise_mapping.rememberable? %>
             </div>
 
