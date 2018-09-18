@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/convocation.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/convocation.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -78,13 +78,14 @@
           <entry key="Gemfile" value="7" />
           <entry key="alertes" value="1" />
           <entry key="coffee" value="2" />
+          <entry key="convocations" value="1" />
           <entry key="css" value="2" />
           <entry key="dot" value="1" />
           <entry key="erb" value="271" />
           <entry key="js" value="4" />
           <entry key="pid" value="1" />
           <entry key="rake" value="1" />
-          <entry key="rb" value="192" />
+          <entry key="rb" value="193" />
           <entry key="rnc" value="1" />
           <entry key="sql" value="1" />
           <entry key="workflows" value="1" />
@@ -95,12 +96,12 @@
         <counts>
           <entry key="CSS" value="2" />
           <entry key="CoffeeScript" value="2" />
-          <entry key="Database Element" value="2" />
+          <entry key="Database Element" value="3" />
           <entry key="JavaScript" value="4" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RHTML" value="271" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="200" />
+          <entry key="Ruby" value="201" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="5" />
         </counts>
@@ -113,7 +114,7 @@
           <entry key="erb" value="30374" />
           <entry key="js" value="73" />
           <entry key="pid" value="1" />
-          <entry key="rb" value="16068" />
+          <entry key="rb" value="16288" />
           <entry key="txt" value="13" />
           <entry key="yml" value="145" />
         </counts>
@@ -125,7 +126,7 @@
           <entry key="JavaScript" value="73" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="RHTML" value="30374" />
-          <entry key="Ruby" value="16199" />
+          <entry key="Ruby" value="16419" />
           <entry key="YAML" value="145" />
         </counts>
       </usages-collector>
@@ -133,15 +134,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/manage_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/fylo.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -205,11 +197,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            <state relative-caret-position="101">
+              <caret line="137" column="7" selection-start-line="137" selection-start-column="7" selection-end-line="137" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/convocation.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="25" column="80" selection-start-line="25" selection-start-column="80" selection-end-line="25" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -270,7 +271,6 @@
         <option value="$PROJECT_DIR$/app/views/grvpc/registrations/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/grvpc/registrations_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/grvpc/_menu.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/convocation.rb" />
         <option value="$PROJECT_DIR$/app/views/metropoli/comptable.html.erb" />
         <option value="$PROJECT_DIR$/app/views/metropoli/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/metropoli/detail.html.erb" />
@@ -316,6 +316,7 @@
         <option value="$PROJECT_DIR$/app/views/agents/_form.html.erb" />
         <option value="$PROJECT_DIR$/sms.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/convocation.rb" />
       </list>
     </option>
   </component>
@@ -548,7 +549,7 @@
     <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
-    <property name="SearchEverywhereHistoryKey" value="sms.&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/sms.rb&#10;agent&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/agents_controller.rb&#10;application.css&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.css&#10;manage&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/manage_controller.rb&#10;asset&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb&#10;agentcon&#9;null&#9;null&#10;grvpc&#9;null&#9;null&#10;admin&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/admin.html.erb&#10;side&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_the_sidebar.html.erb&#10;poste&#9;null&#9;null&#10;post&#9;null&#9;null&#10;comp&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/metropoli/comptable.html.erb&#10;mana&#9;null&#9;null&#10;route&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;_side&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_the_sidebar.html.erb&#10;acce&#9;null&#9;null&#10;applic&#9;null&#9;null&#10;service&#9;null&#9;null&#10;add_role&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/db/migrate/20180917124309_add_role_to_member.rb&#10;metropoli&#9;null&#9;null&#10;convocation&#9;null&#9;null&#10;menu&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/grvpc/_menu.html.erb&#10;alerteCon&#9;null&#9;null&#10;all&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/grvpc/all.html.erb&#10;assu&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/assurance_controller.rb&#10;login&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/login.html.erb&#10;rout&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;assurance&#9;null&#9;null&#10;gemf&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;application&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/application_controller.rb&#10;routes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;other&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_menu_other.html.erb&#10;buy&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/buy_document.html.erb&#10;access&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/access_controller.rb&#10;rou&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;applica&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/application_controller.rb&#10;dgsn&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/dgsn&#10;acces&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/access_controller.rb&#10;_menu_oth&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_menu_other.html.erb&#10;help&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/helpers/application_helper.rb&#10;member&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/member.rb&#10;applicationcon&#9;null&#9;null&#10;partenai&#9;null&#9;null&#10;appli&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/helpers/application_helper.rb&#10;application.&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;affect&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/affectation.rb&#10;convo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/api/convocations_controller.rb&#10;affectat&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/affectations_controller.rb&#10;affecta&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/affectations_controller.rb&#10;agentphone&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="convocation&#9;null&#9;null&#10;convoca&#9;null&#9;null&#10;sms.&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/sms.rb&#10;agent&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/agents_controller.rb&#10;application.css&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.css&#10;manage&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/manage_controller.rb&#10;asset&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb&#10;agentcon&#9;null&#9;null&#10;grvpc&#9;null&#9;null&#10;admin&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/admin.html.erb&#10;side&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_the_sidebar.html.erb&#10;poste&#9;null&#9;null&#10;post&#9;null&#9;null&#10;comp&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/metropoli/comptable.html.erb&#10;mana&#9;null&#9;null&#10;route&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;_side&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_the_sidebar.html.erb&#10;acce&#9;null&#9;null&#10;applic&#9;null&#9;null&#10;service&#9;null&#9;null&#10;add_role&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/db/migrate/20180917124309_add_role_to_member.rb&#10;metropoli&#9;null&#9;null&#10;menu&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/grvpc/_menu.html.erb&#10;alerteCon&#9;null&#9;null&#10;all&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/grvpc/all.html.erb&#10;assu&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/assurance_controller.rb&#10;login&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/login.html.erb&#10;rout&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;assurance&#9;null&#9;null&#10;gemf&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;application&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/application_controller.rb&#10;routes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;other&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_menu_other.html.erb&#10;buy&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/buy_document.html.erb&#10;access&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/access_controller.rb&#10;rou&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;applica&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/application_controller.rb&#10;dgsn&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/dgsn&#10;acces&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/access_controller.rb&#10;_menu_oth&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_menu_other.html.erb&#10;help&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/helpers/application_helper.rb&#10;member&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/member.rb&#10;applicationcon&#9;null&#9;null&#10;partenai&#9;null&#9;null&#10;appli&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/helpers/application_helper.rb&#10;application.&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;affect&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/affectation.rb&#10;convo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/api/convocations_controller.rb&#10;affectat&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/affectations_controller.rb&#10;affecta&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/affectations_controller.rb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -686,12 +687,12 @@
       <workItem from="1536831539502" duration="32483000" />
       <workItem from="1536918071030" duration="29607000" />
       <workItem from="1537174968220" duration="29481000" />
-      <workItem from="1537270596928" duration="6478000" />
+      <workItem from="1537270596928" duration="6915000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280784000" />
+    <option name="totallyTimeSpent" value="281221000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -710,7 +711,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.489154" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.5835141" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" weight="0.5835141" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.3340564" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -767,20 +768,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/metropolis/registrations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/metropolis/registrations/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="35" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/metropolis/sessions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -1099,10 +1086,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://1ec92d36-b20a-435c-a181-26936ac32e35/schema/e_development/table/convocations">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        <state relative-caret-position="101">
+          <caret line="137" column="7" selection-start-line="137" selection-start-column="7" selection-end-line="137" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/convocation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="25" column="80" selection-start-line="25" selection-start-column="80" selection-end-line="25" selection-end-column="80" />
         </state>
       </provider>
     </entry>
