@@ -113,7 +113,7 @@
           <entry key="erb" value="30418" />
           <entry key="js" value="73" />
           <entry key="pid" value="1" />
-          <entry key="rb" value="16419" />
+          <entry key="rb" value="16743" />
           <entry key="txt" value="13" />
           <entry key="yml" value="145" />
         </counts>
@@ -125,7 +125,7 @@
           <entry key="JavaScript" value="73" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="RHTML" value="30418" />
-          <entry key="Ruby" value="16550" />
+          <entry key="Ruby" value="16874" />
           <entry key="YAML" value="145" />
         </counts>
       </usages-collector>
@@ -217,8 +217,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/convocation.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="154" selection-start-line="24" selection-start-column="154" selection-end-line="24" selection-end-column="154" />
+            <state relative-caret-position="442">
+              <caret line="28" column="243" selection-start-line="28" selection-start-column="243" selection-end-line="28" selection-end-column="243" />
             </state>
           </provider>
         </entry>
@@ -686,12 +686,12 @@
       <workItem from="1536831539502" duration="32483000" />
       <workItem from="1536918071030" duration="29607000" />
       <workItem from="1537174968220" duration="29481000" />
-      <workItem from="1537270596928" duration="10955000" />
+      <workItem from="1537270596928" duration="12062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285261000" />
+    <option name="totallyTimeSpent" value="286368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -710,7 +710,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.489154" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.29501083" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.27657267" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.3340564" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -1101,8 +1101,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/convocation.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="154" selection-start-line="24" selection-start-column="154" selection-end-line="24" selection-end-column="154" />
+        <state relative-caret-position="442">
+          <caret line="28" column="243" selection-start-line="28" selection-start-column="243" selection-end-line="28" selection-end-column="243" />
         </state>
       </provider>
     </entry>

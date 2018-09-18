@@ -1,6 +1,10 @@
 class Convocation < ApplicationRecord
     require 'httparty'
-    before_commit :send_sms
+    require 'active_record'
+    require 'active_record/associations'
+    require 'active_record/associations/association'
+    #before_commit :send_sms
+    after_commit :send_sms
     #before_commit :set_status
     #after_save :send_sms
     #on autorise le transfert via https avec HTTParty
@@ -22,7 +26,7 @@ class Convocation < ApplicationRecord
     end
 
     def send_sms
-        message = "Vous avez ete VERBALISE via le numero #{self.phone} pour les motif(s) ci-apres : . Le montant de l amende est de : #{self.infraction_id}  F CFA. Presenter ce code pour paiement #{self.code}.upcase "
+        message = "Le numero #{self.phone} enregistre à la Piece d identite #{self.cni} a ete VERBALISE pour des motifs de la voie publique: Plus d'information a l adresse http://pop-circulation.herokuapp.com/public/verbal/#{self.code}.upcase . Presenter ce code pour paiement #{self.code}.upcase "
         HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{self.phone}&message=#{message}")
     end
 
