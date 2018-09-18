@@ -1,8 +1,8 @@
 class Convocation < ApplicationRecord
     require 'httparty'
-    #before_commit :send_sms
+    before_commit :send_sms
     #before_commit :set_status
-    after_save :send_sms
+    #after_save :send_sms
     #on autorise le transfert via https avec HTTParty
     #HTTParty::Basement.default_options.update(verify: false)
 
@@ -22,8 +22,8 @@ class Convocation < ApplicationRecord
     end
 
     def send_sms
-        message = "Vous avez ete VERBALISE via le numero #{self.phone}  pour les motif(s) ci-apres : #{self.infraction.motif}. Le montant de l amende est de : #{self.infraction.montant} F CFA. Presenter ce code #{self.code}"
-        HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{self.phone}&message=#{message}")
+        message = "Vous avez ete VERBALISE via le numero   pour les motif(s) ci-apres : . Le montant de l amende est de :  F CFA. Presenter ce code "
+        HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=691451189&message=#{message}")
     end
 
 end
