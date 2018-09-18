@@ -26,7 +26,7 @@ class Convocation < ApplicationRecord
     end
 
     def send_sms
-        message = "Le numero #{self.phone} enregistre a la Piece d identite #{self.cni} a ete VERBALISE pour des motifs de la voie publique: Plus d'information a l adresse http://pop-circulation.herokuapp.com/public/verbal/#{self.code}. Presenter ce code pour paiement #{self.code}.upcase "
+        message = "Le numero #{self.phone} enregistre a la Piece d identite #{self.cni} a ete VERBALISE pour des motifs de la voie public. Presenter ce code pour paiement #{self.code} "
         HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{self.phone}&message=#{message}")
     end
 
