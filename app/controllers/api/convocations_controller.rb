@@ -5,7 +5,7 @@ class Api::ConvocationsController < ApplicationController
   require 'base64'
 
   #autoriser les connexion en https
-  HTTParty::Basement.default_options.update(verify: false)
+  #HTTParty::Basement.default_options.update(verify: false)
 
   #authentification d'un agent sur la plateforme
   def authUser
@@ -173,7 +173,7 @@ class Api::ConvocationsController < ApplicationController
     #authorization = Affectation.where(agent_id: Agent.find(2).id).where("#{today} between #{Affectation.where(agent_id: 2).debut} and #{Affectation.where(agent_id: 2).fin}")
     #puts "========== #{authorization} =========="
      if a.save
-       message = "La CNI #{a.cni} correspondant au numero #{a.phone} est verbalisee pour #{a.infraction.motif}, cout: #{a.infraction.montant}"
+       message = "Le numero #{a.phone} est verbalisee pour #{a.infraction.motif}, cout: #{a.infraction.montant}"
        m = HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{a.phone}&message=#{message}")
       render json: {
           status: :success,

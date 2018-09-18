@@ -2,43 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/manage/gestion_agent_grvpc.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/access_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/access_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/registrations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/registrations_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/grvpc/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/grvpc/sessions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/member/registrations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/member/registrations_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/member/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/member/sessions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/metropolis/registrations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/metropolis/registrations_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/convocation.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/convocation.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/metropoli.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/metropoli.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/access/admin.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/admin.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/registrations/create.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/registrations/create.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/registrations/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/sessions/create.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/sessions/create.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/agents/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/agents/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/agents/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/agents/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/agents/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/agents/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/grvpc/registrations/create.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/grvpc/registrations/create.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/grvpc/sessions/create.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/grvpc/sessions/create.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/grvpc/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/grvpc/sessions/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_the_sidebar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_the_sidebar.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/member/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/member/registrations/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/member/sessions/create.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/member/sessions/create.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/member/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/member/sessions/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/metropoli/comptable.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/metropoli/comptable.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/metropoli/detail.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/metropoli/detail.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/metropoli/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/metropoli/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/metropolis/registrations/create.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/metropolis/registrations/create.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/metropolis/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/metropolis/registrations/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/metropolis/sessions/create.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/metropolis/sessions/create.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms.rb" beforeDir="false" afterPath="$PROJECT_DIR$/sms.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -148,7 +113,7 @@
           <entry key="erb" value="30374" />
           <entry key="js" value="73" />
           <entry key="pid" value="1" />
-          <entry key="rb" value="16028" />
+          <entry key="rb" value="16068" />
           <entry key="txt" value="13" />
           <entry key="yml" value="145" />
         </counts>
@@ -160,7 +125,7 @@
           <entry key="JavaScript" value="73" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="RHTML" value="30374" />
-          <entry key="Ruby" value="16159" />
+          <entry key="Ruby" value="16199" />
           <entry key="YAML" value="145" />
         </counts>
       </usages-collector>
@@ -243,8 +208,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="138" column="6" selection-start-line="138" selection-start-column="6" selection-end-line="138" selection-end-column="6" />
+            <state relative-caret-position="154">
+              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -721,12 +686,12 @@
       <workItem from="1536831539502" duration="32483000" />
       <workItem from="1536918071030" duration="29607000" />
       <workItem from="1537174968220" duration="29481000" />
-      <workItem from="1537270596928" duration="5447000" />
+      <workItem from="1537270596928" duration="6478000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="279753000" />
+    <option name="totallyTimeSpent" value="280784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -745,7 +710,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.489154" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.2570499" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.5835141" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.3340564" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -1136,8 +1101,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="138" column="6" selection-start-line="138" selection-start-column="6" selection-end-line="138" selection-end-column="6" />
+        <state relative-caret-position="154">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
