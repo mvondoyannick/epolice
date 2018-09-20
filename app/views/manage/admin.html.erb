@@ -2,6 +2,8 @@
 <div class="title">
   <i class="fa fa-list-alt noir"></i>&nbsp;Liste des Administrateurs de la plateforme
 </div>
+<%= link_to 'Ajouter', '#', class: 'button is-link is-outline' %>
+<br>
 <div class="row columns is-multiline">
   <% @user.each_with_index do |user, index| %>
   <div class="column is-one-third">

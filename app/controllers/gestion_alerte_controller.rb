@@ -84,4 +84,8 @@ class GestionAlerteController < ApplicationController
       flash[:notice] = "Impossible d'archiver"
     end
   end
+
+  def all
+    
+  end
 end

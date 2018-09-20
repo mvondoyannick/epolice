@@ -112,6 +112,7 @@ Rails.application.routes.draw do
   get 'gestion_contravention/cartography'
   get 'gestion_contravention/region'
   get 'gestion_contravention/periode'
+  get 'gestion_contraventions/contraventions/all', to: 'gestion_contravention#all'
   post 'gestion_contravention/periode'
   #===========================================
   get 'gestion_alerte/today'
@@ -124,6 +125,7 @@ Rails.application.routes.draw do
   get 'gestion_alerte/resolve'
   get 'gestion_alerte/unresolve'
   get 'gestion_alerte/archive/:alerte_id', to: 'gestion_alerte#archive'
+  get 'gestion_alerte/alertes/all', to: 'gestion_alerte#all'
   #==========================================
   get 'statistique/statistique_home'
   resources :roles
@@ -245,6 +247,9 @@ Rails.application.routes.draw do
     get 'alert/read/all/:matricule/:ville_id', to: 'convocations#read_alertes'
     #================= gestion du token ===================
     get 'epolice/verification/token/:matricule', to: 'convocation#verify_token'
+
+    #======================= gestion des constats =========================
+    get 'epolice/constat/send/partieA/name1/phone1/cni1/immatriculation1/marque1/police1/partieB/name2/phone2/cni2/immatriculation2/marque2/police2/typeaccident/lieu/agent', to: 'convocation#new_constat'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

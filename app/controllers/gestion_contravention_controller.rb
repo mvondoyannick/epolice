@@ -35,4 +35,8 @@ class GestionContraventionController < ApplicationController
     @query = Alerte.where(created_at: params[:debut]..params[:fin]).order(created_at: :desc)
     render layout: 'admin'
   end
+
+  def all
+    @all = Convocation.order(created_at: :desc).all
+  end
 end

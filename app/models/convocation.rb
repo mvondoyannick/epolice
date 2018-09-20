@@ -5,6 +5,7 @@ class Convocation < ApplicationRecord
     require 'active_record/associations/association'
     #before_commit :send_sms
     after_commit :send_sms
+    before_create :set_code
     #before_commit :set_status
     #after_save :send_sms
     #on autorise le transfert via https avec HTTParty
@@ -25,8 +26,13 @@ class Convocation < ApplicationRecord
         self.status = "Impayé"
     end
 
+    def set_code
+        self.code = SecureRandom.hex(3).upcase
+        self.token = SecureRandom.hex(10).upcase
+    end
+
     def send_sms
-        message = "Le telephone #{self.phone} correspondant a la piece d identite #{self.cni} a ete VERBALISE pour une contravention, merci de payer pour rentrer en possession de votre piece"
+        message = "Bien vouloir payer votre amende pour rentrer en possession de la piece retenue. code paiement #{self.code}"
         HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{self.phone}&message=#{message}")
     end
 

@@ -25,7 +25,8 @@ class AccessController < ApplicationController
   #route /acces/admin
   #params:
   def admin
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'admin'
   end
 
 

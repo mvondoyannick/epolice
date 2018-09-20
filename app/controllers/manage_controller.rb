@@ -1,7 +1,8 @@
 class ManageController < ApplicationController
   before_action :authenticate_admin!
 
-  layout 'fylo'
+  layout 'admin'
+  #layout 'fylo'
 
   def index
 

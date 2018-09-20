@@ -4,14 +4,14 @@ class ArchiveController < ApplicationController
 
   def index
     #agent ayant le meme commissariat
-    @agent = Agent.where(commissariat_id: current_user.commissariat_id).order(created_at: :asc).all
+    @agent = Agent.order(created_at: :asc).all
     render layout: 'admin'
   end
 
   def get_contravention_from_agent
     current_agent = params[:agent_id]
     @archive = Convocation.new
-    @query = Convocation.where(agent_id: current_agent).all
+    @query = Convocation.where(agent_id: current_agent).order(created_at: :desc)
     render layout: 'admin'
   end
 

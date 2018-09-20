@@ -4,158 +4,59 @@
                 Général
             </p>
             <ul class="menu-list">
-                <li><a class="is-active"></i>Partenaires <strong>moi test</strong></a></li>
+                <!--li><a class="is-active"></i>Partenaires <strong>moi test</strong></a></li>
                 <li><a><i class="fa fa-bell" style="color: #000000;"></i>Alertes non consultées</a></li>
-                <li><a><i class="fa fa-bell-o" style="color: #000000;"></i>Alertes consultées</a></li>
+                <li><a><i class="fa fa-bell-o" style="color: #000000;"></i>Alertes consultées</a></li-->
             </ul>
             <p class="menu-label">
               Statistiques
             </p>
+          <ul class="menu-list">
+            <li>
+              <%= link_to  '#' do %>
+                <i class="fa fa-list noir"></i>
+                &nbsp;Statistiques alertes
+              <% end %>
+
+              <%= link_to  '#' do %>
+                <i class="fa fa-list noir"></i>
+                &nbsp;Statistiques contraventions
+              <% end %>
+
+              <%= link_to  '#' do %>
+                <i class="fa fa-list noir"></i>
+                &nbsp;Statistiques constats
+              <% end %>
+
+              <%= link_to '', '#' %>
+
+            </li>
+          </ul>
             <p class="menu-label">
                 Administration des alertes
             </p>
             <ul class="menu-list">
             <li>
-                <%= link_to  "Liste des alertes", '#' %>
-                <ul>
-                    <li>
-                      <%= link_to gestion_alerte_today_path do %>
-                        <i class="fa fa-bullseye noir"></i>
-                        De ce jour
-                      <% end %>
-                    <li>
-                        <%= link_to  gestion_alerte_week_path do %>
-                            <i class="fa fa-calendar" style="color: #000000;"></i>
-                            De la semaine
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= link_to  gestion_alerte_mounth_path do %>
-                            <i class="fa fa-calendar-check-o" style="color: #000000;"></i>
-                            Du mois
-                        <% end %>
-                    </li>
-                    <li>
-                      <%= link_to  gestion_alerte_periode_path do %>
-                        <i class="fa fa-calendar-check" style="color: #000000;"></i>
-                        Par periode
-                      <% end %>
-                    </li>
-                    <li>
-                      <%= link_to  gestion_alerte_region_path do %>
-                        <i class="fa fa-calendar-minus-o" style="color: #000000;"></i>
-                        Par region
-                      <% end %>
-                    </li>
-                    <li>
-                        <%= link_to  gestion_alerte_resolve_path do %>
-                            <i class="fa fa-map" style="color: #000000;"></i>
-                            Résolues
-                        <% end %>
-                    </li>
-                    <li>
-                      <%= link_to  gestion_alerte_unresolve_path do %>
-                        <i class="fa fa-calendar-check-o" style="color: #000000;"></i>
-                        Non résolues
-                      <% end %>
-                    </li>
-                    <li>
-                        <%= link_to  "#" do %>
-                            <i class="fa fa-map" style="color: #000000;"></i>
-                            Toutes les alertes
-                        <% end %>
-                    </li>
-                </ul>
-                <%= link_to  "Gestion des contraventions", '#' %>
-                <ul>
-                    <li>
-                        <%= link_to  gestion_contravention_today_path do %>
-                            <i class="fa fa-window-close" style="color: #000000;"></i>
-                            De ce jour
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= link_to  gestion_contravention_week_path do %>
-                            <i class="fa fa-window-close-o" style="color: #000000;"></i>
-                            De la semaine
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= link_to  gestion_contravention_mounth_path do %>
-                            <i class="fa fa-window-maximize" style="color: #000000;"></i>
-                            Du mois
-                        <% end %>
-                    </li>
-                    <li>
-                      <%= link_to  gestion_contravention_periode_path do %>
-                        <i class="fa fa-wpexplorer" style="color: #000000;"></i>
-                        Par période
-                      <% end %>
-                    </li>
-                    <li>
-                        <%= link_to  gestion_contravention_region_path do %>
-                            <i class="fa fa-wpexplorer" style="color: #000000;"></i>
-                            Par région
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= link_to  gestion_contravention_cartography_path do %>
-                            <i class="fa fa-map" style="color: #000000;"></i>
-                            Cartographie
-                        <% end %>
-                    </li>
-                </ul>
-              <%= link_to  "Gestion des constats de la circulation", '#' %>
-              <ul>
-                <li>
-                  <%= link_to  gestion_constat_all_path do %>
-                    <i class="fa fa-window-close" style="color: #000000;"></i>
-                    Tous les constats
-                  <% end %>
-                </li>
-                <li>
-                  <%= link_to  gestion_constat_today_path do %>
-                    <i class="fa fa-window-close" style="color: #000000;"></i>
-                    De ce jour
-                  <% end %>
-                </li>
-                <li>
-                  <%= link_to  gestion_constat_hier_path do %>
-                    <i class="fa fa-window-close" style="color: #000000;"></i>
-                    D'hier
-                  <% end %>
-                </li>
-                <li>
-                  <%= link_to  gestion_constat_week_path do %>
-                    <i class="fa fa-window-close-o" style="color: #000000;"></i>
-                    De la semaine
-                  <% end %>
-                </li>
-                <li>
-                  <%= link_to  gestion_constat_mounth_path do %>
-                    <i class="fa fa-window-maximize" style="color: #000000;"></i>
-                    Du mois
-                  <% end %>
-                </li>
-                <li>
-                  <%= link_to  gestion_contravention_periode_path do %>
-                    <i class="fa fa-wpexplorer" style="color: #000000;"></i>
-                    Par période
-                  <% end %>
-                </li>
-                <li>
-                  <%= link_to  "#" do %>
-                    <i class="fa fa-wpexplorer" style="color: #000000;"></i>
-                    Par région
-                  <% end %>
-                </li>
-                <li>
-                  <%= link_to  gestion_constat_assureur_path do %>
-                    <i class="fa fa-map" style="color: #000000;"></i>
-                    Par assureur
-                  <% end %>
-                </li>
-              </ul>
+                <%= link_to  gestion_alerte_alertes_all_path do %>
+                  <i class="fa fa-linkedin-square noir"></i>
+                  Liste des alertes
+                <% end %>
+
+              <%= link_to  gestion_contraventions_contraventions_all_path do %>
+                <i class="fa fa-code noir"></i>
+                Liste des contraventions
+              <% end %>
+
+              <%= link_to  gestion_constat_all_path do %>
+                <i class="fa fa-car noir"></i>
+                Liste des constats
+              <% end %>
+
+              <%= link_to  agents_path do %>
+                <i class="fa fa-user-circle noir"></i>
+                Gestion des agents
+              <% end %>
+
             </li>
             </ul>
             <p class="menu-label">

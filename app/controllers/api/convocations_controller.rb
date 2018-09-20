@@ -50,7 +50,7 @@ class Api::ConvocationsController < ApplicationController
     if @p.nil?
       render json: {
         status: :not_found,
-        message: "téléphone inconnu"
+        message: "code inconnu"
       }
     else
       if @p.status == "impaye"
@@ -131,9 +131,9 @@ class Api::ConvocationsController < ApplicationController
     status = "impaye"
     code = SecureRandom.hex(3)
 
-    #il faudra verifier si l'utilisateur et son téléphone sont authorisé
+    #il faudra verifier si l'utilisateur et son téléphone sont authorisé et sont programmés
 
-    a = Convocation.new(cni: params[:cni], phone: params[:phone], infraction_id: params[:motif], pieceretenu_id: params[:pieceretenue], agent_id: params[:agent], code: SecureRandom.hex(3), immatriculation: params[:immatriculation], status: "impayé")
+    a = Convocation.new(cni: params[:cni], phone: params[:phone], infraction_id: params[:motif], pieceretenu_id: params[:pieceretenue], agent_id: params[:agent], immatriculation: params[:immatriculation], status: "impayé")
     if a.save
       #message = "Le numero de telephone #{a.phone} ou le code #{a.code} est verbalise pour le(s) motif(s) ci-apres : #{a.infraction.motif}. Le montant de l amende est de : #{a.infraction.montant} F CFA."
       #HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{a.phone}&message=#{message}")
@@ -196,5 +196,10 @@ class Api::ConvocationsController < ApplicationController
     render json: {
         alerte: read
     }
+  end
+
+  #nouveau constat
+  def new_constat
+
   end
 end

@@ -46,10 +46,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci error, eum
           <% @agent.each do |agent| %>
             <tr>
               <td width="5%">
-                <% if !agent.avatar.attached? %>
+                <% if agent.avatar.attached? %>
                   <%= image_tag('https://bulma.io/images/placeholders/1280x960.png', size: 100) %>
                   <% else %>
-                  <%= image_tag(agent.avatar, size: 100) %>
+                  <%= image_tag('https://bulma.io/images/placeholders/1280x960.png', size: 100) %>
                 <% end %>
               <td>
                 <%= agent.name %>&nbsp;<%= agent.prenom %>
