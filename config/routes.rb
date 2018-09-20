@@ -246,11 +246,11 @@ Rails.application.routes.draw do
     #========== lire les alertes publiées =============
     get 'alert/read/all/:matricule/:ville_id', to: 'convocations#read_alertes'
     #================= gestion du token ===================
-    get 'epolice/verification/token/:matricule', to: 'convocation#verify_token'
+    get 'epolice/verification/token/:matricule', to: 'convocations#verify_token'
 
     #======================= gestion des constats =========================
-    get 'epolice/constat/send/partieA/name1/phone1/cni1/immatriculation1/marque1/police1/partieB/name2/phone2/cni2/immatriculation2/marque2/police2/typeaccident/lieu/agent', to: 'convocation#new_constat'
-    get 'document/find/:code', to: 'convocation#search_document'
+    get 'epolice/constat/send/partieA/name1/phone1/cni1/immatriculation1/marque1/police1/partieB/name2/phone2/cni2/immatriculation2/marque2/police2/typeaccident/lieu/agent', to: 'convocations#new_constat'
+    get 'document/find/:code', to: 'convocations#search_document'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
