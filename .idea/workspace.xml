@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -118,7 +118,7 @@
           <entry key="erb" value="32687" />
           <entry key="js" value="73" />
           <entry key="pid" value="1" />
-          <entry key="rb" value="19053" />
+          <entry key="rb" value="19070" />
           <entry key="txt" value="381" />
           <entry key="yml" value="145" />
         </counts>
@@ -130,7 +130,7 @@
           <entry key="JavaScript" value="73" />
           <entry key="PLAIN_TEXT" value="382" />
           <entry key="RHTML" value="32687" />
-          <entry key="Ruby" value="19212" />
+          <entry key="Ruby" value="19229" />
           <entry key="YAML" value="145" />
         </counts>
       </usages-collector>
@@ -192,19 +192,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="224" column="20" selection-start-line="224" selection-start-column="20" selection-end-line="224" selection-end-column="20" />
+            <state relative-caret-position="309">
+              <caret line="221" column="24" selection-start-line="221" selection-start-column="24" selection-end-line="221" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
+            <state relative-caret-position="146">
               <caret line="248" column="66" selection-start-line="248" selection-start-column="66" selection-end-line="248" selection-end-column="66" />
             </state>
           </provider>
@@ -321,8 +321,8 @@
         <option value="$PROJECT_DIR$/app/views/archive/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/archive_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/convocation.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" />
       </list>
     </option>
   </component>
@@ -684,12 +684,12 @@
       <workItem from="1537174968220" duration="29481000" />
       <workItem from="1537270596928" duration="17413000" />
       <workItem from="1537438841537" duration="3610000" />
-      <workItem from="1537443015506" duration="16882000" />
+      <workItem from="1537443015506" duration="18073000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="312211000" />
+    <option name="totallyTimeSpent" value="313402000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -708,7 +708,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.21908894" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.0813449" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.36550975" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -1129,17 +1129,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="224" column="20" selection-start-line="224" selection-start-column="20" selection-end-line="224" selection-end-column="20" />
+        <state relative-caret-position="146">
+          <caret line="248" column="66" selection-start-line="248" selection-start-column="66" selection-end-line="248" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="248" column="66" selection-start-line="248" selection-start-column="66" selection-end-line="248" selection-end-column="66" />
+        <state relative-caret-position="309">
+          <caret line="221" column="24" selection-start-line="221" selection-start-column="24" selection-end-line="221" selection-end-column="24" />
         </state>
       </provider>
     </entry>
