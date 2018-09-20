@@ -32,7 +32,7 @@ class Convocation < ApplicationRecord
     end
 
     def send_sms
-        message = "Bien vouloir payer votre amende pour rentrer en possession de la piece retenue. code paiement #{self.code}"
+        message = "Bien vouloir payer votre amende pour rentrer en possession de la piece retenue. Code contraveniton : 1111"
         HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{self.phone}&message=#{message}")
     end
 

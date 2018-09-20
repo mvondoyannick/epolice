@@ -202,4 +202,30 @@ class Api::ConvocationsController < ApplicationController
   def new_constat
 
   end
+
+  #rechercher une piece
+  def search_document
+    code = params[:code]
+    query = Convocation.where(code: code)
+    if query.nil?
+      render json: {
+          status: :error,
+          buy: :error,
+          message: 'Ce code est inexistant'
+      }
+      elsif query.buy.nil?
+        render json: {
+            status: :buy_befor_check,
+            buy: :no,
+            message: 'Merci de payer votre contravention'
+        }
+      elsif !query.buy.nil?
+        render json: {
+            status: :ok,
+            buy: :yes,
+            message: query.agent.phone,
+            commissariat: query.agent.commissariat.name
+        }
+    end
+  end
 end
