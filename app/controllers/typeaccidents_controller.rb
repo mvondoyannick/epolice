@@ -1,6 +1,8 @@
 class TypeaccidentsController < ApplicationController
   before_action :set_typeaccident, only: [:show, :edit, :update, :destroy]
 
+  layout 'admin'
+
   # GET /typeaccidents
   # GET /typeaccidents.json
   def index

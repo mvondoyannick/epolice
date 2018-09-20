@@ -201,8 +201,31 @@ class Api::ConvocationsController < ApplicationController
   #nouveau constat
   def new_constat
     query = Constat.new(
-
+                       name1: params[:name1],
+                       phone1: params[:phone1],
+                       cni1: params[:cni1],
+                       immatriculation1: params[:immatriculation1],
+                       marque1: params[:marque1],
+                       police1: params[:police1],
+                       name2: params[:name2],
+                       phone2: params[:phone2],
+                       cni2: params[:cni2],
+                       immatriculation2: params[:immatriculation2],
+                       marque2: params[:marque2],
+                       police2: params[:police2],
+                       typeaccident_id: params[:typeaccident],
+                       lieu: params[:lieu],
+                       agent_id: params[:agent]
     )
+    if query.save
+      render json: {
+          status: :accepte
+      }
+    else
+        render json: {
+        status: :rejete
+      }
+    end
   end
 
   #rechercher une piece
