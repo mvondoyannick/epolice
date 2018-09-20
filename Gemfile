@@ -57,6 +57,8 @@ gem 'jwt'
 gem 'mini_magick'
 #integration de leaflet from https://github.com/axyjo/leaflet-rails
 gem 'leaflet-rails'
+#integrating chartjs rails
+gem 'chart-js-rails'
 #pour le breadcrumb
 gem "breadcrumbs_on_rails"
 #gestion des charts pour les statistiques

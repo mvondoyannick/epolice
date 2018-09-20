@@ -1,7 +1,7 @@
 # Be sure to restart your server when you modify this file.
 
 # Version of your assets, change this if you want to expire all your assets.
-Rails.application.config.assets.version = '1.0'
+Rails.application.config.assets.version = '1.2'
 
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path
@@ -30,44 +30,3 @@ Rails.application.config.assets.precompile += %w( fonts/fontawesome-webfont.woff
 Rails.application.config.assets.precompile += %w( fonts/fontawesome-webfont.woff2 )
 Rails.application.config.assets.precompile += %w( fonts/fontawesome-webfont.svg )
 Rails.application.config.assets.precompile += %w( gmaps.js )
-# ==================================================================================
-Rails.application.config.assets.precompile += %w( animsition/animsition.min.css )
-Rails.application.config.assets.precompile += %w( bootstrap-4.1/bootstrap.min.css )
-Rails.application.config.assets.precompile += %w( bootstrap-4.1/bootstrap.min.js )
-Rails.application.config.assets.precompile += %w( bootstrap-4.1/popper.min.js )
-Rails.application.config.assets.precompile += %w( bootstrap-progressbar/bootstrap-progressbar.min.js )
-Rails.application.config.assets.precompile += %w( bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css )
-Rails.application.config.assets.precompile += %w( chartjs/Chart.bundle.min.js )
-Rails.application.config.assets.precompile += %w( circle-progress/circle-progress.js )
-Rails.application.config.assets.precompile += %w( countdown/countdowntime.js )
-Rails.application.config.assets.precompile += %w( countdown/jquery.countdown.min.js )
-Rails.application.config.assets.precompile += %w( countdown/moment.min.js )
-Rails.application.config.assets.precompile += %w( countdown/moment-timezone.min.js )
-Rails.application.config.assets.precompile += %w( countdown/moment-timezone-with-data.min.js )
-Rails.application.config.assets.precompile += %w( counter-up/jquery.counter.min.js )
-Rails.application.config.assets.precompile += %w( counter-up/jquery.waypoints.min.js )
-Rails.application.config.assets.precompile += %w( counter-up/jquery.waypoints.min.js )
-Rails.application.config.assets.precompile += %w( css-hamburgers/hamburgers.min.css )
-Rails.application.config.assets.precompile += %w( lightbox2/* )
-Rails.application.config.assets.precompile += %w( mdi-font/* )
-Rails.application.config.assets.precompile += %w( perfect-scrollbar/perfect-scrollbar.css )
-Rails.application.config.assets.precompile += %w( perfect-scrollbar/perfect-scrollbar.js )
-Rails.application.config.assets.precompile += %w( progressbar/progressbar.js )
-Rails.application.config.assets.precompile += %w( select2/select2.min.css )
-Rails.application.config.assets.precompile += %w( select2/select2.min.js )
-Rails.application.config.assets.precompile += %w( slick/slick.js )
-Rails.application.config.assets.precompile += %w( slick/slick.less )
-Rails.application.config.assets.precompile += %w( slick/slick.scss )
-Rails.application.config.assets.precompile += %w( slick/slick-theme.less )
-Rails.application.config.assets.precompile += %w( slick/slick-theme.scss )
-Rails.application.config.assets.precompile += %w( smk-accordion/smk-accordion.css )
-Rails.application.config.assets.precompile += %w( smk-accordion/smk-accordion.js )
-Rails.application.config.assets.precompile += %w( sweetalert/sweetalert.min.js )
-Rails.application.config.assets.precompile += %w( vector-map/jquery.vmap.france.js )
-Rails.application.config.assets.precompile += %w( vector-map/jqvmap.min.css )
-Rails.application.config.assets.precompile += %w( wow/animate.css )
-Rails.application.config.assets.precompile += %w( wow/wow.min.js )
-Rails.application.config.assets.precompile += %w( jquery-3.2.1.min.js )
-Rails.application.config.assets.precompile += %w( jquery-ui.min.js )
-Rails.application.config.assets.precompile += %w( font-awesome-5/css/fontawesome-all.min.css )
-Rails.application.config.assets.precompile += %w( font-awesome-4.7/css/font-awesome.min.css )
