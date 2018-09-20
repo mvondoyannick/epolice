@@ -200,26 +200,28 @@ class Api::ConvocationsController < ApplicationController
 
   #nouveau constat
   def new_constat
+    query = Constat.new(
 
+    )
   end
 
   #rechercher une piece
   def search_document
     code = params[:code]
-    query = Convocation.where(code: code)
+    query = Convocation.find_by_code(code)
     if query.nil?
       render json: {
           status: :error,
           buy: :error,
           message: 'Ce code est inexistant'
       }
-      elsif query.buy == nil
+      elsif (query.buy).nil?
         render json: {
             status: :buy_befor_check,
             buy: :no,
             message: 'Merci de payer votre contravention'
         }
-      elsif query.buy != nil
+      elsif !(query.buy).nil?
         render json: {
             status: :ok,
             buy: :yes,
