@@ -92,7 +92,7 @@
         <% Convocation.where(status: 'Impayé').order(created_at: :desc).limit(10).each do |c| %>
           <tr>
             <td><%= c.created_at %></td>
-            <td><%= c.infraction_id %></td>
+            <td><%= c.infraction.motif %></td>
             <td><%= c.immatriculation %></td>
             <td class="text-left"><%= c.phone %></td>
             <td class="text-left"><%= c.agent.name if !c.agent_id.nil? %>&nbsp;<%= c.agent.prenom if !c.agent_id.nil? %></td>
