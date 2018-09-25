@@ -10,10 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//
+//= require jquery
+//= require popper.min
+//= require bootstrap.min
+//= require main
 //= require Chart.bundle
 //= require chartkick
-//= require jquery
 //= require leaflet
 //= require underscore
 //= require rails-ujs
@@ -27,16 +29,7 @@ $("i").css('color','#000000');
 /* insertion de chart */
 var chart = Chartkick.charts['chart-id']
 
-Rails.ajax({
-    type: "GET",
-    url: "/alertes/1.json",
-    success: function(response){
-        console.log(response);
-    },
-    error: function(err){
-        console.log(err);
-    }
-})
+//dessin d'un chart
 
 //afficher le dropdown de bulma
 var dropdown = document.querySelector('.dropdown');

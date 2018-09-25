@@ -30,3 +30,4 @@ Rails.application.config.assets.precompile += %w( fonts/fontawesome-webfont.woff
 Rails.application.config.assets.precompile += %w( fonts/fontawesome-webfont.woff2 )
 Rails.application.config.assets.precompile += %w( fonts/fontawesome-webfont.svg )
 Rails.application.config.assets.precompile += %w( gmaps.js )
+Rails.application.config.assets.precompile += %w( theme.css )

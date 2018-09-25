@@ -1,15 +1,5 @@
-<% if flash[:notice] %>
-  <div class="notice is-desktop has-text-centered">
-    <div class="notification is-danger">
-      <button class="delete"></button>
-      <%= flash[:notice] %>
-    </div>
-  </div>
-<% end %>
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,6 +23,7 @@
 
   <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/css/font-face.css' %>
   <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/css/theme.css' %>
+  <%= stylesheet_link_tag 'theme', media: 'all' %>
 
 
   <!-- Main CSS-->
@@ -51,7 +42,6 @@
   <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/select2/select2.min.js' %>
   <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/js/main.js' %>
 </head>
-
 <body>
 <div class="page-wrapper">
   <div class="page-content--bge5">
@@ -60,45 +50,10 @@
         <div class="login-content">
           <div class="login-logo">
             <a href="#">
-              <img src="images/icon/logo.png" alt="CoolAdmin">
+              <%= image_tag("http://lequatriemepouvoir.com/wp-content/uploads/2018/08/download-5.jpeg", size: 100) %>
             </a>
           </div>
-          <div class="login-form">
-            <form action="" method="post">
-            <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-              <div class="form-group">
-                <%= f.input :email, required: true, autofocus: true, placeholder: 'adresse email', class: 'au-input au-input--full' %>
-              </div>
-
-              <div class="form-group">
-                <%= f.input :password, required: true, placeholder: 'Votre mot de passe', class: 'au-input au-input--full' %>
-              </div>
-
-              <div class="form-group">
-                <%= f.input :phone, required: true, placeholder: 'Numéro de téléphone principal', class: 'au-input au-input--full' %>
-              </div>
-
-              <div class="form-group">
-                <%= f.association :service, label: 'Selectionner le service', require: true, prompt: 'Selectionner le service', class: 'au-input au-input--full form-control' %>
-              </div>
-              <div class="login-checkbox">
-                <label>
-                  <%= f.input :remember_me, label: 'Se souvenir de moi', input_html: {style: 'margin-top: 50px; margin-right: 10px;' }, as: :boolean if devise_mapping.rememberable? %>
-                </label>
-                <label>
-                  <a href="#">Mot de passe oublié?</a>
-                </label>
-              </div>
-              <%= f.button :submit, "Se connecter", class: 'au-btn au-btn--block au-btn--green m-b-20' %>
-            <% end %>
-            </form>
-            <div class="register-link">
-              <p>
-                Don't you have account?
-                <a href="#">Sign Up Here</a>
-              </p>
-            </div>
-          </div>
+          <%= yield %>
         </div>
       </div>
     </div>
@@ -107,6 +62,4 @@
 </div>
 
 </body>
-
 </html>
-

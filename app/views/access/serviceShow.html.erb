@@ -1,0 +1,21 @@
+<h2 class="text-center">
+  Selectionner le service
+</h2>
+<br>
+<% if !@alertes.nil? %>
+  <% @alertes.each do |actors| %>
+    <%= link_to actors, new_member_session_path, class: 'btn btn-outline-primary btn-block btn-lg m-b-20' %>
+  <% end %>
+<% end %>
+
+<% if !@contraventions.nil? %>
+  <% @contraventions.each do |actors| %>
+    <%= link_to actors, new_metropoli_session_path, class: 'btn btn-outline-primary btn-block btn-lg m-b-20' %>
+  <% end %>
+<% end %>
+
+<% if !@constats.nil? %>
+  <% @constats.each do |actors| %>
+    <%= link_to actors, new_assurance_session_path, class: 'btn btn-outline-primary btn-block btn-lg'%>
+  <% end %>
+<% end %>

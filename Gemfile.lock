@@ -52,7 +52,7 @@ GEM
     breadcrumbs_on_rails (3.0.1)
     builder (3.2.3)
     byebug (10.0.2)
-    cancancan (2.2.0)
+    cancancan (2.3.0)
     capybara (2.18.0)
       addressable
       mini_mime (>= 0.1.3)
@@ -62,7 +62,6 @@ GEM
       xpath (>= 2.0, < 4.0)
     chart-js-rails (0.1.6)
       railties (> 3.1)
-    chartkick (3.0.1)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     choice (0.2.0)
@@ -112,11 +111,11 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
-    marcel (0.3.2)
+    marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (0.9.0)
     mimemagic (0.3.2)
-    mini_magick (4.8.0)
+    mini_magick (4.9.2)
     mini_mime (1.0.1)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
@@ -183,7 +182,7 @@ GEM
       railties (>= 4.2.0, < 5.3)
     ruby-graphviz (1.2.3)
     rubyzip (1.2.2)
-    sass (3.5.7)
+    sass (3.6.0)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -250,7 +249,6 @@ DEPENDENCIES
   cancancan (~> 2.0)
   capybara (~> 2.13)
   chart-js-rails
-  chartkick
   coffee-rails (~> 4.2)
   devise
   font-awesome-rails (~> 4.7, >= 4.7.0.4)

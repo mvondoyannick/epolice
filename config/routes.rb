@@ -192,6 +192,8 @@ Rails.application.routes.draw do
   #root 'welcome#home'
   root 'access#login'
 
+  get 'home/services/selected/:data_selected/www', to: 'access#serviceShow'
+
   resources :access do
   end
   #pour la gestion des carrefours

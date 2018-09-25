@@ -1,7 +1,7 @@
 class AccessController < ApplicationController
   #on verifie si l'utilisateur est connecter avant de donner acces aux ressource
   #before_action :confirm_logged_in, only: [:login, :attemp_login, :admin, :logout]
-  before_action :authenticate_admin!, except: [:login]
+  before_action :authenticate_admin!, except: [:login, :serviceShow]
 
 
   def index
@@ -12,8 +12,46 @@ class AccessController < ApplicationController
   end
 
   def login
-    render layout: 'login'
+    #render layout: 'login'
+    # vue de connexion principale
+    @container = %w[
+      Alertes
+      Contraventions
+      Constats
+    ]
+    render layout: 'template/login2'
   end
+
+  def login2
+  render layout: 'template/login2'
+  end
+
+  #les services de la plateforme
+  def serviceShow
+    service = params[:data_selected]
+    case service
+    when 'alertes'
+      @alertes = %w[
+        ENEO
+        CAMWATER
+        URGENCES
+        SAPEURS POMPIERS
+      ]
+    when 'contraventions'
+      @contraventions = %w[
+        COMMUNAUTE
+      ]
+    when 'constats'
+      @constats = %w[
+        ASSURANCE
+      ]
+    when 'help'
+      #redirect_to(action: 'about')
+      render access_about_path
+    end
+    render layout: 'template/login2'
+  end
+  # fin des services
 
   #pour la lecture des email 
   def email
@@ -25,8 +63,10 @@ class AccessController < ApplicationController
   #route /acces/admin
   #params:
   def admin
-    #render layout: 'fylo'
-    render layout: 'admin'
+    @top_infraction = Convocation.distinct.pluck(:infraction_id)
+    @top_alerte = Alerte.distinct.pluck(:type_id)
+    render layout: 'fylo'
+    #render layout: 'admin'
   end
 
 
