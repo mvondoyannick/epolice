@@ -63,6 +63,8 @@ gem 'chart-js-rails'
 gem "breadcrumbs_on_rails"
 #gestion des charts pour les statistiques
 gem "chartkick"
+#ajout de onesignal
+gem 'onsignal'
 #installation de groupdate
 gem "groupdate"
 #pour la gestion des SMS avec SMSAPI

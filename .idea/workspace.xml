@@ -2,116 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/access/login2.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/access/serviceShow.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/layouts/template/admin/admin.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/layouts/template/login2.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pop-circulation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pop-circulation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/access_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/access_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/manage_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/manage_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/admin.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/admin.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/access/about.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/about.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/access/admin.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/admin.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/access/login.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/login.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/member/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/member/sessions/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-892135209d1afa93cf76f8e4e6c1602c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/1-124bb27d482f138ad551bcf69559602f8d01fb1b00682c56933d17798c4881c9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/FontAwesome-444dd4366615ffc4a16d012b2fa90137065d3ccb410fa6fd5e4ddd7b5e4ffcd5.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/FontAwesome-444dd4366615ffc4a16d012b2fa90137065d3ccb410fa6fd5e4ddd7b5e4ffcd5.otf.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin-ecf02f28338db82281c72d65f57e1fb411fd0377fccb997d2a111fb82ffb00f1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin-ecf02f28338db82281c72d65f57e1fb411fd0377fccb997d2a111fb82ffb00f1.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/application-43819d6d25efa2b107a478c387037e8ede55a4657bdf230ed44c1d757c7a31a1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/application-43819d6d25efa2b107a478c387037e8ede55a4657bdf230ed44c1d757c7a31a1.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/application-d2816e7ea8c622c2df530c97267c15b3c3d9a61015f5186be10dd9426108e949.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/application-d2816e7ea8c622c2df530c97267c15b3c3d9a61015f5186be10dd9426108e949.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/background-06640ecd3a3b1298b677653b1e28f4aa6adb660e05b5d5c2b40e9732523f1dbf.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/bulma-dbdd862a33ff3633f493ae88f538bdf68b48aa3db75c4fff238b24730b3ffbb7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/bulma-dbdd862a33ff3633f493ae88f538bdf68b48aa3db75c4fff238b24730b3ffbb7.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/bulma.css-87c1007f61f401f2f08ac45786acf760b132c1032392a7b800561daa6872f830.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/bulma.min-99bb6965887ae468a49f4be7f699ea0ffc440e0111356c2496ef7b72691bd96c.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/bulma.min-99bb6965887ae468a49f4be7f699ea0ffc440e0111356c2496ef7b72691bd96c.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/camwater-d9d5577382116bd211dede1fad4f364b3970519e9a86fd930a1f9c848afcae1f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/cards-1d09319f6c4d7eb8ec3ec31527d17b99ae2b1f06668327017b102fbe104146cd.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/cards-1d09319f6c4d7eb8ec3ec31527d17b99ae2b1f06668327017b102fbe104146cd.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/cud-568ad4532200c251460b7b3868c8c5828a590a0fc6998f8bd29553d33c062287.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/dashboard/bootstrap.css-33d556e5388267da9fa37ac195f9b497bbd607cf1d6b50758dca05de1c4c9863.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/dashboard/bootstrap.min.css-240a32d675bdd02436859788cbf5eaf6cb480ecbf059751a272b9e6f30a8291d.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/dashboard/lib/chosen/chosen-sprite-8aa69ee6b2376505578d758bfbbc52aec88fa5e591f1a7cabd8adfa80a7b613a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/dashboard/lib/chosen/chosen-sprite@2x-1e349b80fba8c23b63656925fda8dfe3c5927b5d0d8a1672143416caacf460fb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/dashboard/style.css-5410286171e1f2e3630285e69d6695d7e7b8352ef24f4dbfc8bebef6938f2a3b.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/email-e429703f43fb0205d992f85bb561f22d5376becd8271a856f7fa635199bddd8b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/email-e429703f43fb0205d992f85bb561f22d5376becd8271a856f7fa635199bddd8b.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/eneo-665ee02a969fc41b75c104d32424d0c9ea66c3b4745679dff82802d4384edcd2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/faker.min-96db12474b35988f3cbe28bc1427a4c6995c58a18e980eb90608765bad7eb192.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/faker.min-96db12474b35988f3cbe28bc1427a4c6995c58a18e980eb90608765bad7eb192.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome.min-306130e6ba08a261d693df60443a670ca53a7a541654c4138090053ccf0a94a2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome.min-306130e6ba08a261d693df60443a670ca53a7a541654c4138090053ccf0a94a2.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c.svg.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/gmaps-0d9fa7bb9583db8572da3f0499c69876b0f39c72e73b6b1b1bff4362e1113dbb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/gmaps-0d9fa7bb9583db8572da3f0499c69876b0f39c72e73b6b1b1bff4362e1113dbb.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/avatar-e916c5b50814689dd22efc39d617036be62b5d6b64c0f7ae1af5ee8be09ac180.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/avatar04-27cc8e62b35c2564f01ad2c7a2cbf5231ab70c5d5e963de1ac2480713ae6eab2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/avatar2-22abff1f7b822dcfdd3ebd912cfaa336e06ec7ef6e388b688c640cceab6da387.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/avatar3-3d2e2ff748b8f96599325d531c7f7bf62957c8afb79e043a1d6892e0019c6063.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/avatar5-0c3701c76a732abe7038205bcc1edf57c0cc603a75ca3fd7533bf583d7ab8443.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/boxed-bg-5487391fa5db6155709522886beebc00fd7433ffb7ae5f63e585497cd5174ae5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/boxed-bg-9ed1309f8e468eda59c6742adcf195c8b305a5ea1b062cd6cc619ecc5acd6ecb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/credit/american-express-942be6f95764ef0e004700b98eabce8d3c60de5af4aae2581de588de91193587.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/credit/cirrus-29e378c87520cd00a32e20e82c296dbd3d311a7b893847b10fc64fb185c57647.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/credit/mastercard-f741b2319363663526161a9812c742c56fb3eada277f694b0e3b6c3e37109a53.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/credit/mestro-429482b3fda1a280060c148a80cfd34cdea23ea898b952e115193f095bb3e04a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/credit/paypal-07d9d5c825620a6a196fb53d5657d4941329cdc56db8cabe58fd8468967acc6b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/credit/paypal2-0774fe6f7bb4ca3ff13151a3a52c676e26fec153243b04e831b84ab4adc5aa53.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/credit/visa-c12e21fc8af89728aaf76f103dbb1277b3fd30af7b36d2d7c57393caf4e0e27a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/default-50x50-972578b9924766708c5cefd718e70f6f43854fee1e8c90845aa2717379b838a7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/icons-73282e3d1d286676c1411050d74cba8e6d018a94cf7a8786530edb193dc33207.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/photo1-0afde56a97d8739a97e93798a620872cc6365def8ac28bbbd05efc9f6e5817c4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/photo2-19209c7d51e36a6fd430456e963c42e2471313ea7e0a33d1350f4dd1f99a228e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/photo3-f8b7737df380ff96a32984697acc49d34a70ba724de19133b83d5d4fe04c20ec.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/photo4-0e40e35c2bf5eb8a4b80e9bd542725d7f0a01ca0d787bd3725b6b329768c5ba8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/user1-128x128-79c8317c419797abead22f54fcaa3dbf5ee30dcb167cc70ace82a725f3ffd78c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/user2-160x160-0569e2b43626f349943f5d72e660d400fee87db19566f54debc9b118deb0a1df.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/user3-128x128-e36d61d73e208222a89b72c365f490b466709fc442bc297a6b76156e6f39e1f2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/user4-128x128-afcda8a0bef6f3b6c3fe62623024f8bb9faa3d92b97f1d57543b8f952df244ec.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/user5-128x128-6e3d8ca21241d71f594cb0bf00643e5ef5b7033a5ae390f606c8693211f0ae28.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/user6-128x128-78b623d5daa3a43dc3a3e6bb2011dddc4daf9e5cbb0e48a46005f542e6dd0886.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/user7-128x128-60382b59545e71304717c0f0f91892ef71817241d25c257d58405ab16e48a321.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/user8-128x128-8ae5a917f533ffa2522471985a95636e70f7ccd339cded044d59fd6694aa05c9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/impaye-bd36dde05e45610286d259303723ef2d6ae30f26505a1e929a03546f67ee204f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/inbox-e1305c4ee4e0282c33069c39f8133aa1f323a6efc53df19ba165740646bce75d.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/inbox-e1305c4ee4e0282c33069c39f8133aa1f323a6efc53df19ba165740646bce75d.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/jquery-3.3.1.min-875821d1e3121b366b94ea86a07f3cbc5c76cb16a319bc62212c03a805ff20e9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/jquery-3.3.1.min-875821d1e3121b366b94ea86a07f3cbc5c76cb16a319bc62212c03a805ff20e9.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/layers-1dbbe9d028e292f36fcba8f8b3a28d5e8932754fc2215b9ac69e4cdecf5107c6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/layers-2x-066daca850d8ffbef007af00b06eac0015728dee279c51f3cb6c716df7c42edf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/leaflet-src.js-6eed528b5678ee4f34b8be267a8da5d14734d58d56baeea6a31e9819e6630775.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/login-e5b57038be56af67b8e15820a307b3fd0b1e3e723e53af724a9f94906331d505.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/login-e5b57038be56af67b8e15820a307b3fd0b1e3e723e53af724a9f94906331d505.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/logo-f8f48284c6fa472d4b4552bbb76a65e033972521caf9745fc0a6581593b95d4b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/marker-icon-2x-00179c4c1ee830d3a108412ae0d294f55776cfeb085c60129a39aa6fc4ae2528.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/marker-icon-574c3a5cca85f4114085b6841596d62f00d7c892c7b03f28cbfa301deb1dc437.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/marker-shadow-264f5c640339f042dd729062cfc04c17f8ea0f29882b538e3848ed8f10edb4da.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/moment.min-1d6af614879f3bfbc6a91313a248f0fbf8fd331734bdd63126aa1d68762e7855.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/moment.min-1d6af614879f3bfbc6a91313a248f0fbf8fd331734bdd63126aa1d68762e7855.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/police-3095658dc7132ffe37d6b3d06f36caf016b39e73231e16372254b298420aa66f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/user-727c0fd283f86772613f09c3837bcbf0a75c112badb738eda9ff9cb4df596629.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/vue.min-0bb96de4c8a8818ce89af9d87a409c81d8d0dadbfeec0c7f9e67632c963b471b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/vue.min-0bb96de4c8a8818ce89af9d87a409c81d8d0dadbfeec0c7f9e67632c963b471b.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -186,7 +77,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Gemfile" value="10" />
+          <entry key="Gemfile" value="11" />
           <entry key="alertes" value="1" />
           <entry key="coffee" value="2" />
           <entry key="convocations" value="1" />
@@ -215,14 +106,14 @@
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="RHTML" value="300" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="227" />
+          <entry key="Ruby" value="228" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Gemfile" value="160" />
+          <entry key="Gemfile" value="181" />
           <entry key="coffee" value="74" />
           <entry key="css" value="283" />
           <entry key="erb" value="34590" />
@@ -240,7 +131,7 @@
           <entry key="JavaScript" value="183" />
           <entry key="PLAIN_TEXT" value="382" />
           <entry key="RHTML" value="34590" />
-          <entry key="Ruby" value="20710" />
+          <entry key="Ruby" value="20731" />
           <entry key="YAML" value="145" />
         </counts>
       </usages-collector>
@@ -257,17 +148,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/access/admin.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+            <state relative-caret-position="293">
+              <caret line="37" column="19" lean-forward="true" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
               <folding>
                 <element signature="e#828#834#0#HTML" expanded="true" />
                 <element signature="e#3253#3259#0#HTML" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#3;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="66" column="14" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -407,12 +307,12 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/main.js" />
         <option value="$PROJECT_DIR$/app/models/admin.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/theme.css" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/controllers/access_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/access/admin.html.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -623,7 +523,7 @@
     <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
-    <property name="SearchEverywhereHistoryKey" value="application&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/javascripts/application.js&#10;gemf&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/fylo.html.erb&#10;admin&#9;null&#9;null&#10;applica&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/javascripts/application.js&#10;gem&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;application.js&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/javascripts/application.js&#10;side&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_the_sidebar.html.erb&#10;theme&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/theme.css&#10;asse&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb&#10;access&#9;null&#9;null&#10;manage&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/manage_controller.rb&#10;typeacc&#9;null&#9;null&#10;routes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;convoca&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/convocation.rb&#10;archive&#9;null&#9;null&#10;affect&#9;null&#9;null&#10;agent&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/agents_controller.rb&#10;brou&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/brouillons.txt&#10;gestion&#9;null&#9;null&#10;the&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_the_sidebar.html.erb&#10;gemfile&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;convo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/convocation.rb&#10;assets&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb&#10;adm&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/admin.html.erb&#10;menu&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_menu.html.erb&#10;convocation&#9;null&#9;null&#10;sms.&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/sms.rb&#10;application.css&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.css&#10;asset&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb&#10;agentcon&#9;null&#9;null&#10;grvpc&#9;null&#9;null&#10;poste&#9;null&#9;null&#10;post&#9;null&#9;null&#10;comp&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/metropoli/comptable.html.erb&#10;mana&#9;null&#9;null&#10;route&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;_side&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_the_sidebar.html.erb&#10;acce&#9;null&#9;null&#10;applic&#9;null&#9;null&#10;service&#9;null&#9;null&#10;add_role&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/db/migrate/20180917124309_add_role_to_member.rb&#10;metropoli&#9;null&#9;null&#10;alerteCon&#9;null&#9;null&#10;all&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/grvpc/all.html.erb&#10;assu&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/assurance_controller.rb&#10;login&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/login.html.erb&#10;rout&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;assurance&#9;null&#9;null&#10;other&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_menu_other.html.erb" />
+    <property name="SearchEverywhereHistoryKey" value="gem&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;application&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/javascripts/application.js&#10;gemf&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/fylo.html.erb&#10;admin&#9;null&#9;null&#10;applica&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/javascripts/application.js&#10;application.js&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/javascripts/application.js&#10;side&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_the_sidebar.html.erb&#10;theme&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/theme.css&#10;asse&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb&#10;access&#9;null&#9;null&#10;manage&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/manage_controller.rb&#10;typeacc&#9;null&#9;null&#10;routes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;convoca&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/convocation.rb&#10;archive&#9;null&#9;null&#10;affect&#9;null&#9;null&#10;agent&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/agents_controller.rb&#10;brou&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/brouillons.txt&#10;gestion&#9;null&#9;null&#10;the&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_the_sidebar.html.erb&#10;gemfile&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;convo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/convocation.rb&#10;assets&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb&#10;adm&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/admin.html.erb&#10;menu&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_menu.html.erb&#10;convocation&#9;null&#9;null&#10;sms.&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/sms.rb&#10;application.css&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.css&#10;asset&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb&#10;agentcon&#9;null&#9;null&#10;grvpc&#9;null&#9;null&#10;poste&#9;null&#9;null&#10;post&#9;null&#9;null&#10;comp&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/metropoli/comptable.html.erb&#10;mana&#9;null&#9;null&#10;route&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;_side&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_the_sidebar.html.erb&#10;acce&#9;null&#9;null&#10;applic&#9;null&#9;null&#10;service&#9;null&#9;null&#10;add_role&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/db/migrate/20180917124309_add_role_to_member.rb&#10;metropoli&#9;null&#9;null&#10;alerteCon&#9;null&#9;null&#10;all&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/grvpc/all.html.erb&#10;assu&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/assurance_controller.rb&#10;login&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/login.html.erb&#10;rout&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;assurance&#9;null&#9;null&#10;other&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_menu_other.html.erb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -764,12 +664,12 @@
       <workItem from="1537270596928" duration="17413000" />
       <workItem from="1537438841537" duration="3610000" />
       <workItem from="1537443015506" duration="20922000" />
-      <workItem from="1537868640645" duration="25333000" />
+      <workItem from="1537868640645" duration="25732000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="341584000" />
+    <option name="totallyTimeSpent" value="341983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1144,13 +1044,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36784">
@@ -1195,14 +1088,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/access/admin.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+        <state relative-caret-position="293">
+          <caret line="37" column="19" lean-forward="true" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
           <folding>
             <element signature="e#828#834#0#HTML" expanded="true" />
             <element signature="e#3253#3259#0#HTML" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#3;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="66" column="14" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
         </state>
       </provider>
     </entry>
