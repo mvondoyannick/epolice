@@ -2,8 +2,8 @@
 <!-- titre dans le Yield de application.html.erb -->
 <hr style="background-color: #4a4a4a;">
 <div class="row">
-  <div class="col-lg-9">
-    <h2 class="title-1 m-b-25">Gestion des alertes</h2>
+  <div class="col-lg-6">
+    <h3 class="title-1 m-b-25">Alertes nationale</h3>
     <div class="table-responsive table--no-card m-b-40">
       <table class="table table-borderless table-striped table-earning">
         <thead>
@@ -11,8 +11,6 @@
           <th>date</th>
           <th>order ID</th>
           <th>name</th>
-          <th class="text-right">price</th>
-          <th class="text-right">total</th>
         </tr>
         </thead>
         <tbody>
@@ -21,15 +19,36 @@
             <td><%= a.created_at %></td>
             <td><%= a.titre %> </td>
             <td><%= a.agent.name %>&nbsp;<%= a.agent.prenom %></td>
-            <td class="text-right">$999.00</td>
-            <td class="text-right">$999.00</td>
           </tr>
         <% end %>
         </tbody>
       </table>
     </div>
   </div>
-  <div class="col-lg-3">
+  <div class="col-lg-6">
+    <h3 class="title-1 m-b-25">Contravention Nationale</h3>
+    <div class="table-responsive table--no-card m-b-40">
+      <table class="table table-borderless table-striped table-earning">
+        <thead>
+        <tr>
+          <th>date</th>
+          <th>order ID</th>
+          <th>name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% Alerte.where(statu_id: Statu.last.id).order(created_at: :desc).limit(10).each  do |a| %>
+          <tr>
+            <td><%= a.created_at %></td>
+            <td><%= a.titre %> </td>
+            <td><%= a.agent.name %>&nbsp;<%= a.agent.prenom %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!--div class="col-lg-6">
     <h2 class="title-1 m-b-25">Top Alertes</h2>
     <div class="au-card au-card--bg-blue au-card-top-countries m-b-40">
       <div class="au-card-inner">
@@ -50,11 +69,11 @@
         </div>
       </div>
     </div>
-  </div>
+  </div-->
 </div>
 <div class="row">
-  <div class="col-lg-9">
-    <h2 class="title-1 m-b-25">Gestion des contraventions</h2>
+  <div class="col-lg-6">
+    <h2 class="title-1 m-b-25">Constats national</h2>
     <div class="table-responsive table--no-card m-b-40">
       <table class="table table-borderless table-striped table-earning">
         <thead>
@@ -62,8 +81,6 @@
           <th>date</th>
           <th>Infraction</th>
           <th>Imm..</th>
-          <th class="text-left">Phone</th>
-          <th class="text-left">Agent</th>
         </tr>
         </thead>
         <tbody>
@@ -72,15 +89,36 @@
             <td><%= c.created_at %></td>
             <td><%= c.infraction.motif if !c.infraction_id.nil? %></td>
             <td><%= c.immatriculation %></td>
-            <td class="text-left"><%= c.phone %></td>
-            <td class="text-left"><%= c.agent.name if !c.agent_id.nil? %>&nbsp;<%= c.agent.prenom if !c.agent_id.nil? %></td>
           </tr>
         <% end %>
         </tbody>
       </table>
     </div>
   </div>
-  <div class="col-lg-3">
+  <div class="col-lg-6">
+    <h2 class="title-1 m-b-25">Partenaires actifs</h2>
+    <div class="table-responsive table--no-card m-b-40">
+      <table class="table table-borderless table-striped table-earning">
+        <thead>
+        <tr>
+          <th>date</th>
+          <th>Email</th>
+          <th>Téléphone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% Member.all.limit(10).each do |c| %>
+          <tr>
+            <td><%= c.created_at %></td>
+            <td><%= c.email %></td>
+            <td><%= c.phone %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!--div class="col-lg-6">
     <h2 class="title-1 m-b-25">Top countries</h2>
     <div class="au-card au-card--bg-blue au-card-top-countries m-b-40">
       <div class="au-card-inner">
@@ -124,7 +162,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div-->
 </div>
 <div class="row">
   <div class="col-lg-9">

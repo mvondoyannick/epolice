@@ -71,6 +71,10 @@ gem "groupdate"
 gem 'smsapi-client-rails', '~> 0.1.0'
 #ajout de httparty
 gem 'httparty'
+#add popper gem
+gem 'popper_js', '~> 1.14.3'
+#add bootstrap gem
+gem 'bootstrap', '~> 4.1.3'
 #pour le drag and drop
 #gem 'draggable-rails'
 # Use Capistrano for deployment

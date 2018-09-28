@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><%= full_title(yield :title)%></title>
   <!-- Fontfaces CSS-->
+  <%= stylesheet_link_tag 'application' %>
   <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/font-awesome-5/css/fontawesome-all.min.css' %>
   <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/font-awesome-4.7/css/font-awesome.min.css' %>
   <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/mdi-font/css/material-design-iconic-font.min.css' %>
@@ -26,7 +27,9 @@
 
 
   <!-- Main CSS-->
+  <%= javascript_include_tag 'application.js' %>
   <%= javascript_include_tag 'jquery-3.3.1.min' %>
+  <%= javascript_include_tag 'main' %>
   <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/bootstrap-4.1/popper.min.js' %>
   <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/bootstrap-4.1/bootstrap.min.js' %>
   <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/slick/slick.min.js' %>
@@ -346,9 +349,11 @@
           <div class="row">
             <div class="col-md-12">
               <div class="overview-wrap">
-                <h2 class="title-1">Aperçu</h2>
-                <button class="au-btn au-btn-icon au-btn--blue">
-                  <i class="zmdi zmdi-chart"></i>Statistiques</button>
+                <h2 class="title-1">Aperçu Global</h2>
+                <%= link_to statistique_index_path, class: "au-btn au-btn-icon au-btn--blue" do %>
+                  <i class="zmdi zmdi-chart"></i>
+                  Statistiques
+                <% end %>
               </div>
             </div>
           </div>
@@ -367,6 +372,71 @@
                   </div>
                   <div class="overview-chart">
                     <canvas id="widgetChart1"></canvas>
+                    <script>
+                        var ctx = document.getElementById("widgetChart1");
+                        if (ctx) {
+                            ctx.height = 130;
+                            var myChart = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                                    type: 'line',
+                                    datasets: [{
+                                        data: [78, 81, 80, 45, 34, 12, 40],
+                                        label: 'Dataset',
+                                        backgroundColor: 'rgba(255,255,255,.1)',
+                                        borderColor: 'rgba(255,255,255,.55)',
+                                    },]
+                                },
+                                options: {
+                                    maintainAspectRatio: true,
+                                    legend: {
+                                        display: false
+                                    },
+                                    layout: {
+                                        padding: {
+                                            left: 0,
+                                            right: 0,
+                                            top: 0,
+                                            bottom: 0
+                                        }
+                                    },
+                                    responsive: true,
+                                    scales: {
+                                        xAxes: [{
+                                            gridLines: {
+                                                color: 'transparent',
+                                                zeroLineColor: 'transparent'
+                                            },
+                                            ticks: {
+                                                fontSize: 2,
+                                                fontColor: 'transparent'
+                                            }
+                                        }],
+                                        yAxes: [{
+                                            display: false,
+                                            ticks: {
+                                                display: false,
+                                            }
+                                        }]
+                                    },
+                                    title: {
+                                        display: false,
+                                    },
+                                    elements: {
+                                        line: {
+                                            borderWidth: 0
+                                        },
+                                        point: {
+                                            radius: 0,
+                                            hitRadius: 10,
+                                            hoverRadius: 4
+                                        }
+                                    }
+                                }
+                            });
+                        }
+                    </script>
                   </div>
                 </div>
               </div>
@@ -385,6 +455,76 @@
                   </div>
                   <div class="overview-chart">
                     <canvas id="widgetChart2"></canvas>
+                    <script>
+                        var ctx = document.getElementById("widgetChart2");
+                        if (ctx) {
+                            ctx.height = 130;
+                            var myChart = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                                    type: 'line',
+                                    datasets: [{
+                                        data: [1, 18, 9, 17, 34, 22],
+                                        label: 'Dataset',
+                                        backgroundColor: 'transparent',
+                                        borderColor: 'rgba(255,255,255,.55)',
+                                    },]
+                                },
+                                options: {
+
+                                    maintainAspectRatio: false,
+                                    legend: {
+                                        display: false
+                                    },
+                                    responsive: true,
+                                    tooltips: {
+                                        mode: 'index',
+                                        titleFontSize: 12,
+                                        titleFontColor: '#000',
+                                        bodyFontColor: '#000',
+                                        backgroundColor: '#fff',
+                                        titleFontFamily: 'Montserrat',
+                                        bodyFontFamily: 'Montserrat',
+                                        cornerRadius: 3,
+                                        intersect: false,
+                                    },
+                                    scales: {
+                                        xAxes: [{
+                                            gridLines: {
+                                                color: 'transparent',
+                                                zeroLineColor: 'transparent'
+                                            },
+                                            ticks: {
+                                                fontSize: 2,
+                                                fontColor: 'transparent'
+                                            }
+                                        }],
+                                        yAxes: [{
+                                            display: false,
+                                            ticks: {
+                                                display: false,
+                                            }
+                                        }]
+                                    },
+                                    title: {
+                                        display: false,
+                                    },
+                                    elements: {
+                                        line: {
+                                            tension: 0.00001,
+                                            borderWidth: 1
+                                        },
+                                        point: {
+                                            radius: 4,
+                                            hitRadius: 10,
+                                            hoverRadius: 4
+                                        }
+                                    }
+                                }
+                            });
+                        }
+                    </script>
                   </div>
                 </div>
               </div>
@@ -403,6 +543,75 @@
                   </div>
                   <div class="overview-chart">
                     <canvas id="widgetChart3"></canvas>
+                    <script>
+                        var ctx = document.getElementById("widgetChart3");
+                        if (ctx) {
+                            ctx.height = 130;
+                            var myChart = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                                    type: 'line',
+                                    datasets: [{
+                                        data: [65, 59, 84, 84, 51, 55],
+                                        label: 'Dataset',
+                                        backgroundColor: 'transparent',
+                                        borderColor: 'rgba(255,255,255,.55)',
+                                    },]
+                                },
+                                options: {
+
+                                    maintainAspectRatio: false,
+                                    legend: {
+                                        display: false
+                                    },
+                                    responsive: true,
+                                    tooltips: {
+                                        mode: 'index',
+                                        titleFontSize: 12,
+                                        titleFontColor: '#000',
+                                        bodyFontColor: '#000',
+                                        backgroundColor: '#fff',
+                                        titleFontFamily: 'Montserrat',
+                                        bodyFontFamily: 'Montserrat',
+                                        cornerRadius: 3,
+                                        intersect: false,
+                                    },
+                                    scales: {
+                                        xAxes: [{
+                                            gridLines: {
+                                                color: 'transparent',
+                                                zeroLineColor: 'transparent'
+                                            },
+                                            ticks: {
+                                                fontSize: 2,
+                                                fontColor: 'transparent'
+                                            }
+                                        }],
+                                        yAxes: [{
+                                            display: false,
+                                            ticks: {
+                                                display: false,
+                                            }
+                                        }]
+                                    },
+                                    title: {
+                                        display: false,
+                                    },
+                                    elements: {
+                                        line: {
+                                            borderWidth: 1
+                                        },
+                                        point: {
+                                            radius: 4,
+                                            hitRadius: 10,
+                                            hoverRadius: 4
+                                        }
+                                    }
+                                }
+                            });
+                        }
+                    </script>
                   </div>
                 </div>
               </div>
@@ -421,47 +630,42 @@
                   </div>
                   <div class="overview-chart">
                     <canvas id="agis" width="500" height="250"></canvas>
-                    <canvas id="widgetChart4" width="400" height="400"></canvas>
                       <script>
-                        var ctx = document.getElementById("agis").getContext('2d');
-                        //var ctx = $("#recent-rep-chart");
-                        //var ctx = Document.getElementById("agis");
-                        var widgetChart4 = new Chart(ctx, {
-                            type: 'bar',
-                            data: {
-                                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-                                datasets: [{
-                                    label: '# of Votes',
-                                    data: [12, 19, 3, 5, 2, 3],
-                                    backgroundColor: [
-                                        'rgba(255, 99, 132, 0.2)',
-                                        'rgba(54, 162, 235, 0.2)',
-                                        'rgba(255, 206, 86, 0.2)',
-                                        'rgba(75, 192, 192, 0.2)',
-                                        'rgba(153, 102, 255, 0.2)',
-                                        'rgba(255, 159, 64, 0.2)'
-                                    ],
-                                    borderColor: [
-                                        'rgba(255,99,132,1)',
-                                        'rgba(54, 162, 235, 1)',
-                                        'rgba(255, 206, 86, 1)',
-                                        'rgba(75, 192, 192, 1)',
-                                        'rgba(153, 102, 255, 1)',
-                                        'rgba(255, 159, 64, 1)'
-                                    ],
-                                    borderWidth: 1
-                                }]
-                            },
-                            options: {
-                                scales: {
-                                    yAxes: [{
-                                        ticks: {
-                                            beginAtZero:true
+                        var ctx = document.getElementById("agis");
+                        if (ctx) {
+                            ctx.height = 115;
+                            var myChart = new Chart(ctx, {
+                                type: 'bar',
+                                data: {
+                                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                                    datasets: [
+                                        {
+                                            label: "My First dataset",
+                                            data: [78, 81, 80, 65, 58, 75, 60, 75, 65, 60, 60, 75],
+                                            borderColor: "transparent",
+                                            borderWidth: "0",
+                                            backgroundColor: "rgba(255,255,255,.3)"
                                         }
-                                    }]
+                                    ]
+                                },
+                                options: {
+                                    maintainAspectRatio: true,
+                                    legend: {
+                                        display: false
+                                    },
+                                    scales: {
+                                        xAxes: [{
+                                            display: false,
+                                            categoryPercentage: 1,
+                                            barPercentage: 0.65
+                                        }],
+                                        yAxes: [{
+                                            display: false
+                                        }]
+                                    }
                                 }
-                            }
-                        });
+                            });
+                        }
                     </script>
                   </div>
                 </div>
@@ -469,66 +673,79 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-4">
               <div class="au-card recent-report">
                 <div class="au-card-inner">
-                  <h3 class="title-2">Raport recent</h3>
-                  <div class="chart-info">
-                    <div class="chart-info__left">
-                      <div class="chart-note">
-                        <span class="dot dot--blue"></span>
-                        <span>products</span>
-                      </div>
-                      <div class="chart-note mr-0">
-                        <span class="dot dot--green"></span>
-                        <span>services</span>
-                      </div>
-                    </div>
-                    <div class="chart-info__right">
-                      <div class="chart-statis">
-                        <span class="index incre">
-                            <i class="zmdi zmdi-long-arrow-up"></i>25%</span>
-                        <span class="label">products</span>
-                      </div>
-                      <div class="chart-statis mr-0">
-                        <span class="index decre">
-                            <i class="zmdi zmdi-long-arrow-down"></i>10%</span>
-                        <span class="label">services</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="recent-report__chart">
-                    <canvas id="recent-rep-chart"></canvas>
+                  <h4 class="title-2">Cartographie alertes</h4>
+                  <br>
+                  <div class="recent-report__chart" style="z-index: 0;">
+                    <%= map(:center => {
+                      :latlng => [51.52238797921441, -0.08366235665359283],
+                      :zoom => 15
+                    },
+                        :markers => [
+                          {
+                            :latlng => [20.25,10.548],
+                            :popup => '@alerte.description'
+                          }
+                        ]
+                      )
+                    %>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="au-card chart-percent-card">
+            <div class="col-lg-4">
+              <div class="au-card recent-report">
                 <div class="au-card-inner">
-                  <h3 class="title-2 tm-b-5">char by %</h3>
-                  <div class="row no-gutters">
-                    <div class="col-xl-6">
-                      <div class="chart-note-wrap">
-                        <div class="chart-note mr-0 d-block">
-                          <span class="dot dot--blue"></span>
-                          <span>products</span>
-                        </div>
-                        <div class="chart-note mr-0 d-block">
-                          <span class="dot dot--red"></span>
-                          <span>services</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6">
-                      <div class="percent-chart">
-                        <canvas id="percent-chart"></canvas>
-                      </div>
-                    </div>
+                  <h4 class="title-2">Cartographie contraventions</h4>
+                  <br>
+                  <div class="recent-report__chart" style="z-index: 0;">
+                    <%= map(:center => {
+                        :latlng => [51.52238797921441, -0.08366235665359283],
+                        :zoom => 15
+                    },
+                            :markers => [
+                                {
+                                    :latlng => [20.25,10.548],
+                                    :popup => '@alerte.description'
+                                }
+                            ]
+                        )
+                    %>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="col-lg-4">
+              <div class="au-card recent-report">
+                <div class="au-card-inner">
+                  <h4 class="title-2">Cartographie Constats</h4>
+                  <br>
+                  <div class="recent-report__chart" style="z-index: 0;">
+                    <%= map(:center => {
+                        :latlng => [51.52238797921441, -0.08366235665359283],
+                        :zoom => 15
+                    },
+                            :markers => [
+                                {
+                                    :latlng => [20.25,10.548],
+                                    :popup => '@alerte.description'
+                                }
+                            ]
+                        )
+                    %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="overview-wrap">
+            <h5 class="title-1"><i class="fa fa-rocket"></i> Statistiques</h5>
+            <%= link_to statistique_index_path, class: "au-btn au-btn-icon au-btn--blue" do %>
+              <i class="zmdi zmdi-chart"></i>
+              Statistiques
+            <% end %>
           </div>
           <%= yield %>
         </div>

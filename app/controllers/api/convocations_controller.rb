@@ -215,7 +215,10 @@ class Api::ConvocationsController < ApplicationController
                        police2: params[:police2],
                        typeaccident_id: params[:typeaccident],
                        lieu: params[:lieu],
-                       agent_id: params[:agent]
+                       agent_id: params[:agent],
+                       comment: params[:comment],
+                       latitude: params[:latitude],
+                       longitude: params[:longitude]
     )
     if query.save
       render json: {

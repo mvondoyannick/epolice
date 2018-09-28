@@ -25,6 +25,19 @@
 )
 %>
 
+<%= map(:center => {
+    :latlng => [20.214, 10.245],
+    :zoom => 6
+},
+        :markers => [
+            {
+                :latlng => [20.214, 10.245],
+                :popup => 'hello here position'
+            }
+        ]
+    )
+%>
+
 <br>
 <hr style="background-color: #000;">
 <div class="subtitle is-3">Details des informations</div>
