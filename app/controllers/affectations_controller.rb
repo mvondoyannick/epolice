@@ -5,7 +5,7 @@ class AffectationsController < ApplicationController
   # GET /affectations.json
   def index
     @affectations = Affectation.all
-    render layout: 'admin'
+    render layout: 'fylo'
   end
 
   def home
@@ -13,7 +13,7 @@ class AffectationsController < ApplicationController
     respond_to do |format|
       format.html do
         @affect
-        render layout: 'admin'
+        render layout: 'fylo'
       end
       format.json do
         render json: @affect
@@ -25,18 +25,18 @@ class AffectationsController < ApplicationController
   # GET /affectations/1
   # GET /affectations/1.json
   def show
-    render layout: 'admin'
+    render layout: 'fylo'
   end
 
   # GET /affectations/new
   def new
     @affectation = Affectation.new
-    render layout: 'admin'
+    render layout: 'fylo'
   end
 
   # GET /affectations/1/edit
   def edit
-    render layout: 'admin'
+    render layout: 'fylo'
   end
 
   # POST /affectations

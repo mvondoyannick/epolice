@@ -15,7 +15,7 @@ class AlertesController < ApplicationController
   # GET /alertes.json
   def index
     @alertes = Alerte.all
-    render layout: 'admin'
+    render layout: 'fylo'
   end
 
   # GET /alertes/1
@@ -30,7 +30,7 @@ class AlertesController < ApplicationController
         #send_data pdf.render, filename: "document_#{@alerte.code}.pdf", type: 'application/pdf', disposition: 'inline'
       end
     end
-    render layout: 'admin'
+    render layout: 'fylo'
   end
 
   # GET /alertes/new

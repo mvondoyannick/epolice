@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Member::RegistrationsController < Devise::RegistrationsController
+  before_action :authenticate_admin!
   before_action :configure_sign_up_params, only: [:create]
   after_action :after_sign_up_path_for, only: [:create]
   # before_action :configure_account_update_params, only: [:update]

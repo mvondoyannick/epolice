@@ -1,28 +1,28 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
-
+  layout 'fylo'
   # GET /services
   # GET /services.json
   def index
     @services = Service.all
-    render layout: 'admin'
+
   end
 
   # GET /services/1
   # GET /services/1.json
   def show
-    render layout: 'admin'
+
   end
 
   # GET /services/new
   def new
     @service = Service.new
-    render layout: 'admin'
+
   end
 
   # GET /services/1/edit
   def edit
-    render layout: 'admin'
+
   end
 
   # POST /services
@@ -32,7 +32,8 @@ class ServicesController < ApplicationController
 
     respond_to do |format|
       if @service.save
-        format.html { redirect_to @service, notice: 'Service was successfully created.' }
+        flash[:notice] = "Service was successfully created."
+        format.html { redirect_to controller: 'access', action: 'partner' }
         format.json { render :show, status: :created, location: @service }
       else
         format.html { render :new }

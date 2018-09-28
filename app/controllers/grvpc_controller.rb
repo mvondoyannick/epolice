@@ -1,10 +1,10 @@
 class GrvpcController < ApplicationController
-  before_action :authenticate_grvpc!, only: [:index]
+  #before_action :authenticate_grvpc!, only: [:index]
   def index
     @alerte = Alerte.order(created_at: :desc).limit(10)
     @contravention = Convocation.order(created_at: :desc).limit(10)
     @constat = Constat.order(created_at: :desc).limit(10)
-    render layout: 'grvpc/grvpc'
+    render layout: 'fylo'
   end
 
   def all_alertes

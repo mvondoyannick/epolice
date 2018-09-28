@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :postepolices
   get 'access/partner'
+  get 'access/partner_detail/:id/:jeton', to: 'access#partner_detail'
   get 'manage/index'
   get 'manage/admin'
   get 'manage/grvpc'

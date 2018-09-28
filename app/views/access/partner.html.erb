@@ -19,6 +19,15 @@
             content.
           </p>
         </div>
+        <div class="card-footer">
+          <div class="overview-wrap m-b-10">
+            <h5 class="title-1">&nbsp;</h5>
+            <%= link_to new_member_registration_path, class: "btn btn-primary" do %>
+              <i class="zmdi zmdi-plus"></i>
+              Ajouter un utilisateur
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
   <% end %>
@@ -53,4 +62,107 @@
     <i class="zmdi zmdi-plus"></i>
     Ajouter un service
   <% end %>
+</div>
+<hr style="background-color: #1b1e21;">
+<div class="row">
+  <div class="col-lg-6">
+    <h2 class="title-1 m-b-25"><i class="zmdi zmdi-alert-circle"></i> Partenaires</h2>
+    <div class="table-responsive table--no-card m-b-40">
+      <table class="table table-borderless table-striped table-earning">
+        <thead>
+        <tr>
+          <th>Email</th>
+          <th>Service</th>
+          <th>Statut</th>
+          <th>Code</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% Member.order(created_at: :desc).each do |c| %>
+          <tr>
+            <td><%= c.email %></td>
+            <td><%= c.service.name if !c.service_id.nil? %></td>
+            <td><%= c.status %></td>
+            <td><%= c.code %></td>
+            <td>
+              <%= link_to "/access/partner_detail/#{c.id}/member" do %>
+                <i class="zmdi zmdi-eye"></i>
+                Voir
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <h2 class="title-1 m-b-25"><i class="zmdi zmdi-home"></i> Commune urbaine</h2>
+    <div class="table-responsive table--no-card m-b-40">
+      <table class="table table-borderless table-striped table-earning">
+        <thead>
+        <tr>
+          <th>N°</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% Metropoli.order(created_at: :desc).each_with_index do |c, index| %>
+          <tr>
+            <td><%= index+1 %></td>
+            <td><%= c.email %></td>
+            <td><%= c.metropolisrole.name %></td>
+            <td>
+              <%= link_to "/access/partner_detail/#{c.id}/metropolis" do %>
+                <i class="zmdi zmdi-eye"></i>
+                Voir
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <h2 class="title-1 m-b-25"><i class="zmdi zmdi-polymer"></i> GRVPC</h2>
+    <div class="table-responsive table--no-card m-b-40">
+      <table class="table table-borderless table-striped table-earning">
+        <thead>
+        <tr>
+          <th>N°</th>
+          <th>Email</th>
+          <th>Date ajout</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% Grvpc.order(created_at: :desc).each_with_index do |c, index| %>
+          <tr>
+            <td><%= index+1 %></td>
+            <td><%= c.email %></td>
+            <td><%= c.created_at %></td>
+            <td>
+              <%= link_to "/access/partner_detail/#{c.id}/grvpc" do %>
+                <i class="zmdi zmdi-eye"></i>
+                Voir
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <br>
+      <div class="overview-wrap m-b-40">
+        <h2 class="title-1"></h2>
+        <%= link_to grvpc_index_path, class: "btn btn-primary" do %>
+          <i class="zmdi zmdi-plus"></i>
+          Gestion des RGVPC
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

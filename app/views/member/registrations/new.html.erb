@@ -7,32 +7,98 @@
     </div>
   </div>
 <% end %>
-<section class="hero is-fullheight">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <div class="column is-4 is-offset-4">
-        <p class="subtitle has-text-black has-text-weight-bold">
-          <i class="fa fa-user fa-5x"></i>
-        </p>
-        <p class="subtitle has-text-black is-6">Merci de fournir vos identifications de creation de compte.</p>
-        <div class="box" style="margin-top: -10px;">
-          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-            <div class="form-inputs has-text-left">
-              <%= f.input :email, required: true, autofocus: true, placeholder: 'adresse email' %>
-              <%= f.input :password, required: true, placeholder: 'Votre mot de passe' %>
-              <%= f.input :phone, label: 'Numéro de téléphone principale', require: true, placeholder: 'Numéro de téléphone' %>
-              <%= f.association :service, label: 'Selectionner le service', require: true, prompt: 'Selectionner le service' %>
-            </div>
 
-            <div class="form-actions" style="margin-top: 50px;">
-              <%= f.button :submit, "Creer le compte", class: 'button is-link is-outlined is-fullwidth is-block' %>
-            </div>
-          <% end %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><%= full_title(yield :title)%></title>
+  <!-- Fontfaces CSS-->
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/font-awesome-5/css/fontawesome-all.min.css' %>
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/font-awesome-4.7/css/font-awesome.min.css' %>
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/mdi-font/css/material-design-iconic-font.min.css' %>
+
+  <!-- Bootstrap CSS-->
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/bootstrap-4.1/bootstrap.min.css' %>
+
+  <!-- Vendor CSS-->
+  <%= stylesheet_link_tag  'https://colorlib.com/polygon/cooladmin/vendor/animsition/animsition.min.css' %>
+  <%= stylesheet_link_tag  'https://colorlib.com/polygon/cooladmin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css' %>
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/wow/animate.css' %>
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/css-hamburgers/hamburgers.min.css' %>
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/slick/slick.css' %>
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/select2/select2.min.css' %>
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/perfect-scrollbar/perfect-scrollbar.css' %>
+
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/css/font-face.css' %>
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/css/theme.css' %>
+
+
+  <!-- Main CSS-->
+  <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/jquery-3.2.1.min.js' %>
+  <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/bootstrap-4.1/popper.min.js' %>
+  <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/bootstrap-4.1/bootstrap.min.js' %>
+  <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/slick/slick.min.js' %>
+  <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/wow/wow.min.js' %>
+  <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/animsition/animsition.min.js' %>
+  <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js' %>
+  <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/counter-up/jquery.waypoints.min.js' %>
+  <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/counter-up/jquery.counterup.min.js' %>
+  <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/circle-progress/circle-progress.min.js' %>
+  <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/perfect-scrollbar/perfect-scrollbar.js' %>
+  <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/chartjs/Chart.bundle.min.js' %>
+  <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/select2/select2.min.js' %>
+  <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/js/main.js' %>
+</head>
+
+<body>
+<div class="page-wrapper">
+  <div class="page-content--bge5">
+    <div class="container">
+      <div class="login-wrap">
+        <div class="login-content">
+          <div class="login-logo">
+            <a href="#">
+              <img src="images/icon/logo.png" alt="CoolAdmin">
+            </a>
+          </div>
+          <div class="login-form">
+            <form action="" method="post">
+              <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                <div class="form-group">
+                  <%= f.input :email, required: true, autofocus: true, placeholder: 'adresse email', class: 'au-input au-input--full' %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.input :password, required: true, placeholder: 'Votre mot de passe', class: 'au-input au-input--full' %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.input :phone, required: true, placeholder: 'Numéro de téléphone principal', class: 'au-input au-input--full' %>
+                </div>
+
+                <div class="form-group m-b-40">
+                  <%= f.association :service, label: 'Selectionner le service', require: true, prompt: 'Selectionner le service', class: 'au-input au-input--full form-control' %>
+                </div>
+
+                <%= f.button :submit, "Ajouter utilisateur", class: 'au-btn au-btn--block au-btn--green m-b-20' %>
+                <%= link_to access_partner_path, class: 'btn btn-danger' do %>
+                  <i class="fa fa-arrow-left"></i>
+                  Retour
+                <% end %>
+              <% end %>
+            </form>
+
+          </div>
         </div>
-        <p class="has-text-grey">
-          <%= render "devise/shared/links" %>
-        </p>
       </div>
     </div>
   </div>
-</section>
+
+</div>
+
+</body>
+
+</html>

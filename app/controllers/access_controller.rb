@@ -270,5 +270,17 @@ class AccessController < ApplicationController
     render layout: 'fylo'
   end
 
+  #detail sur les partenaires
+  def partner_detail
+    if params[:jeton] == 'grvpc'
+      @query = Grvpc.find_by(id: params[:id])
+    elsif params[:jeton] == 'metropolis'
+      @query = Metropoli.find_by(id: params[:id])
+    elsif params[:jeton] == 'member'
+      @query = Member.find_by(id: params[:id])
+    end
+    render layout: 'fylo'
+  end
+
 
 end

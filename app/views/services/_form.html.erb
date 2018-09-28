@@ -2,13 +2,57 @@
 <%= simple_form_for(@service) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :name, placeholder: 'Nom du service à ajouter' %>
-    <%= f.input :detail, placeholder: 'Detail sur le service' %>
-    <%= f.association :type, prompt: 'Selectionner un type' %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="col-lg-10">
+    <div class="card">
+      <div class="card-header">
+        <strong>Ajouter un nouveau service</strong>
+      </div>
+      <div class="card-body card-block">
+        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label class=" form-control-label">Utilisateur</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <p class="form-control-static"><%= current_admin.email %></p>
+              <small class="help-block form-text">Utilisateur actuellement connecté</small>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label">Nom du service</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :name, placeholder: 'Nom du service à ajouter', input_html:{class: 'form-control'}, label: false %>
+              <small class="form-text text-muted">Ajouter un nom significatif au service à ajouter</small>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="email-input" class=" form-control-label">Detail su service</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :detail, placeholder: 'Detail sur le service', input_html:{class: 'form-control'}, label: false %>
+              <small class="help-block form-text">Ajouter une note de detail du service</small>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="email-input" class=" form-control-label">Type de service</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.association :type, prompt: 'Selectionner un type', label: false %>
+              <small class="help-block form-text">Selectionner le type de service</small>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <%= f.button(:submit, class: 'btn btn-primary') %>
+        <button type="reset" class="btn btn-danger">
+          <i class="fa fa-ban"></i> Reset
+        </button>
+      </div>
+    </div>
   </div>
 <% end %>

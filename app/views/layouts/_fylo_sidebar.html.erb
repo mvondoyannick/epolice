@@ -1,6 +1,6 @@
 <aside class="menu-sidebar2">
   <div class="logo">
-    <a href="#">
+    <a href="/acces/admin">
       <img src="https://colorlib.com/polygon/cooladmin/images/icon/logo-white.png" alt="Cool Admin" />
     </a>
   </div>
@@ -48,16 +48,16 @@
           <% end %>
         </li>
         <li>
-          <a href="#">
-            <i class="fas fa-shopping-basket"></i>Contraventions</a>
+          <%= link_to gestion_contraventions_contraventions_all_path do %>
+            <i class="fas fa-shopping-basket"></i>
+            Contraventions
+          <% end %>
         </li>
         <li class="has-sub">
-          <a class="js-arrow" href="#">
-            <i class="fas fa-trophy"></i>Constats
-            <span class="arrow">
-                <i class="fas fa-angle-down"></i>
-            </span>
-          </a>
+          <%= link_to gestion_constat_all_path, class: 'js-arrow' do %>
+            <i class="fas fa-trophy"></i>
+            Constats
+          <% end %>
           <ul class="list-unstyled navbar__sub-list js-sub-list">
             <li>
               <a href="table.html">

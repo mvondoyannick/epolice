@@ -3,6 +3,13 @@
   <i class="fa fa-arrow-left noir" ></i>
   Retour
 <% end %>
+<div class="overview-wrap m-b-40">
+  <h2 class="title-1">Alertes</h2>
+  <%= link_to "#", class: "btn btn-primary" do %>
+    <i class="zmdi zmdi-plus"></i>
+    Toutes les alertes
+  <% end %>
+</div>
 <div style="margin-bottom: 25px;" /></div>
 <div class="title is-4">
   Detail de l'alerte : <%= @alerte.titre %>

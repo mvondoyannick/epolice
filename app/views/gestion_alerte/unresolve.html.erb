@@ -1,56 +1,58 @@
-<h1 class="subtitle is-3"><i class="fa fa-bell-o noir"></i>Liste d'alertes non resolues </h1>
+<% content_for(:title, 'ALERTES NON RESOLUES')%>
+<!-- -->
+<div class="overview-wrap m-b-40">
+  <h2 class="title-1">Alertes non résolues</h2>
+  <%= link_to "#", class: "btn btn-primary" do %>
+    <i class="zmdi zmdi-chart-donut"></i>
+    Statistiques
+  <% end %>
+</div>
 <hr style="background-color: #b9b7b7;" />
-<div class="card">
-    <header class="card-header">
-    <p class="card-header-title">
-        <i class="fa fa-bell-o noir"></i>Liste d'alertes non resolues
-    </p>
-        <!--span class="icon">
-        <i class="fa fa-angle-down" aria-hidden="false" style="color: #000000;"></i>
-        </span-->
-        <% if @query.nil? %>
-        <%= link_to '#', class: 'button' do %>
-            <i class="fa fa-map" aria-hidden="false" style="color: #000000;"></i>
-            voir sur la carte
-        <% end %>
-        <% end %>
-    </header>
-    <div class="card-table">
-    <div class="content">
-        <table class="table is-fullwidth is-striped">
+<div class="row">
+  <div class="col-lg-12">
+    <div class="table-responsive table--no-card m-b-30">
+      <table class="table table-borderless table-striped table-earning">
+        <thead>
+        <tr>
+          <th>date</th>
+          <th>order ID</th>
+          <th>name</th>
+          <th class="text-right">price</th>
+          <th class="text-right">quantity</th>
+          <th class="text-right">total</th>
+        </tr>
+        </thead>
         <tbody>
-            <% if @query.nil? %>
-            <tr>
-                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                <td class="subtitle is-3"><i class="fa fa-bell-slash-o" style="color: #000000;"></i> Aucunes alertes non résolue.</td>
-            </tr>
-            <% else %>
-            <% @query.each do |alerte| %>
-                <tr>
-                <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
-                <td>
-                    <%= alerte.created_at.strftime("%B %d, %Y") %>
-                </td>
-                <td>
-                    <%= alerte.titre %>
-                </td>
-                <td>
-                    <%= alerte.agent.name %>&nbsp;<%= alerte.agent.prenom %>
-                </td>
-                <td>
-                    <%= alerte.ville.name %>
-                </td>
-                <td>
-                    <%= link_to  "Détail", alerte_path(alerte), class: "button is-small is-link is-outlined" %>
-                </td>
-                </tr>
-            <% end %>
-            <% end %>
+        <% @query.each do |alerte| %>
+          <tr>
+            <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
+            <td>
+              <%= alerte.created_at.strftime("%B %d, %Y") %>
+            </td>
+            <td>
+              <%= alerte.titre %>
+            </td>
+            <td>
+              <%= alerte.agent.name %>&nbsp;<%= alerte.agent.prenom %>
+            </td>
+            <td>
+              <%= alerte.ville.name %>
+            </td>
+            <td>
+              <%= link_to  "Détail", alerte_path(alerte), class: "button is-small is-link is-outlined" %>
+            </td>
+          </tr>
+        <% end %>
         </tbody>
-        </table>
+      </table>
     </div>
-    </div>
-    <footer class="card-footer">
-    <%= link_to  "Voir toutes les alertes", access_alertes_alerte_all_path, class: "card-footer-item" if @query.nil? %>
-    </footer>
+  </div>
+</div>
+
+<div class="overview-wrap m-b-40">
+  <h2 class="title-1">&nbsp;</h2>
+  <%= link_to "#", class: "btn btn-primary" do %>
+    <i class="zmdi zmdi-chart-donut"></i>
+    Statistiques
+  <% end %>
 </div>

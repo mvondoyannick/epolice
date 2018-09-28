@@ -5,24 +5,24 @@ class AgentsController < ApplicationController
   # GET /agents.json
   def index
     @agents = Agent.all
-    render layout: 'admin'
+    render layout: 'fylo'
   end
 
   # GET /agents/1
   # GET /agents/1.json
   def show
-    render layout: 'admin'
+    render layout: 'fylo'
   end
 
   # GET /agents/new
   def new
     @agent = Agent.new
-    render layout: 'admin'
+    render layout: 'fylo'
   end
 
   # GET /agents/1/edit
   def edit
-    render layout: 'admin'
+    render layout: 'fylo'
   end
 
   # POST /agents
