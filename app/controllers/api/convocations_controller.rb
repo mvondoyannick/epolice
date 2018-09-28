@@ -253,4 +253,10 @@ class Api::ConvocationsController < ApplicationController
         }
     end
   end
+
+  #data who comme from ussd data plateform
+  def ussd_data
+    data = params[:data]
+    render plain: "Voici les données #{data}" if !data.nil?
+  end
 end

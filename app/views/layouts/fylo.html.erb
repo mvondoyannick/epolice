@@ -420,10 +420,12 @@
                     </div>
                   </div>
                   <div class="overview-chart">
+                    <canvas id="agis" width="500" height="250"></canvas>
                     <canvas id="widgetChart4" width="400" height="400"></canvas>
                       <script>
-                        //var ctx = document.getElementById("widgetChart4").getContext('2d');
-                        var ctx = $("#widgetChart4");
+                        var ctx = document.getElementById("agis").getContext('2d');
+                        //var ctx = $("#recent-rep-chart");
+                        //var ctx = Document.getElementById("agis");
                         var widgetChart4 = new Chart(ctx, {
                             type: 'bar',
                             data: {
@@ -470,7 +472,7 @@
             <div class="col-lg-6">
               <div class="au-card recent-report">
                 <div class="au-card-inner">
-                  <h3 class="title-2">recent reports</h3>
+                  <h3 class="title-2">Raport recent</h3>
                   <div class="chart-info">
                     <div class="chart-info__left">
                       <div class="chart-note">
@@ -484,13 +486,13 @@
                     </div>
                     <div class="chart-info__right">
                       <div class="chart-statis">
-                                                    <span class="index incre">
-                                                        <i class="zmdi zmdi-long-arrow-up"></i>25%</span>
+                        <span class="index incre">
+                            <i class="zmdi zmdi-long-arrow-up"></i>25%</span>
                         <span class="label">products</span>
                       </div>
                       <div class="chart-statis mr-0">
-                                                    <span class="index decre">
-                                                        <i class="zmdi zmdi-long-arrow-down"></i>10%</span>
+                        <span class="index decre">
+                            <i class="zmdi zmdi-long-arrow-down"></i>10%</span>
                         <span class="label">services</span>
                       </div>
                     </div>

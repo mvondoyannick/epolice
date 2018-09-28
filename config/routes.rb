@@ -253,6 +253,8 @@ Rails.application.routes.draw do
     #======================= gestion des constats =========================
     get 'epolice/constat/send/partieA/name1/phone1/cni1/immatriculation1/marque1/police1/partieB/name2/phone2/cni2/immatriculation2/marque2/police2/typeaccident/lieu/agent', to: 'convocations#new_constat'
     get 'document/find/:code', to: 'convocations#search_document'
+    #injection des methodes provenantes de l'API
+    get 'ussd/1.1/datas/:data', to: 'convocations#ussd_data'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
