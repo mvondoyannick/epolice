@@ -1,0 +1,56 @@
+<% content_for(:title, 'PARTENAIRES')%>
+<!-- -->
+<div class="overview-wrap m-b-40">
+  <h2 class="title-1">Partenaires</h2>
+  <%= link_to new_service_path, class: "btn btn-primary" do %>
+    <i class="zmdi zmdi-plus"></i>
+    Ajouter un service
+  <% end %>
+</div>
+
+<div class="row">
+  <% Service.all.each do |service| %>
+    <div class="col-md-4">
+      <div class="card">
+        <%= link_to image_tag('bg-title-01.jpg', class: 'card-img-top', alt: 'Card image cap'), "#" %>
+        <div class="card-body">
+          <h4 class="card-title mb-3"><%= service.name %></h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <!--div class="col-md-4">
+    <div class="card">
+      <%= image_tag('bg-title-01.jpg', class: 'card-img-top', alt: 'Card image cap') %>
+      <div class="card-body">
+        <h4 class="card-title mb-3">Card Image Title</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <%= image_tag('bg-title-01.jpg', class: 'card-img-top', alt: 'Card image cap') %>
+      <div class="card-body">
+        <h4 class="card-title mb-3">Card Image Title</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.
+        </p>
+      </div>
+    </div>
+  </div-->
+</div>
+
+<div class="overview-wrap m-b-40">
+  <h2 class="title-1">&nbsp;</h2>
+  <%= link_to new_service_path, class: "btn btn-primary" do %>
+    <i class="zmdi zmdi-plus"></i>
+    Ajouter un service
+  <% end %>
+</div>

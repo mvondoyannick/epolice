@@ -265,5 +265,10 @@ class AccessController < ApplicationController
 
   end
 
+  #gestion des partenaires
+  def partner
+    render layout: 'fylo'
+  end
+
 
 end

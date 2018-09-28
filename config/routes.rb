@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :postepolices
+  get 'access/partner'
   get 'manage/index'
   get 'manage/admin'
   get 'manage/grvpc'
@@ -251,7 +252,7 @@ Rails.application.routes.draw do
     get 'epolice/verification/token/:matricule', to: 'convocations#verify_token'
 
     #======================= gestion des constats =========================
-    get 'epolice/constat/send/partieA/:name1/:phone1/:cni1/:immatriculation1/:marque1/:police1/partieB/:name2/:phone2/:cni2/:immatriculation2/:marque2/:police2/:typeaccident/:lieu/:agent/:comment/:latitude*:longitude', to: 'convocations#new_constat'
+    get 'epolice/constat/send/partieA/:name1/:phone1/:cni1/:immatriculation1/:marque1/:police1/partieB/:name2/:phone2/:cni2/:immatriculation2/:marque2/:police2/:typeaccident/:lieu/:agent/:comment/:latitude/:longitude', to: 'convocations#new_constat'
     #recherche du code
     get 'document/find/:code', to: 'convocations#search_document'
     #injection des methodes provenantes de l'API

@@ -78,26 +78,10 @@
           </ul>
         </li>
         <li class="has-sub">
-          <a class="js-arrow" href="#">
-            <i class="fas fa-copy"></i>Partenaires
-            <span class="arrow">
-              <i class="fas fa-angle-down"></i>
-            </span>
-          </a>
-          <ul class="list-unstyled navbar__sub-list js-sub-list">
-            <li>
-              <a href="login.html">
-                <i class="fas fa-sign-in-alt"></i>Login</a>
-            </li>
-            <li>
-              <a href="register.html">
-                <i class="fas fa-user"></i>Register</a>
-            </li>
-            <li>
-              <a href="forget-pass.html">
-                <i class="fas fa-unlock-alt"></i>Forget Password</a>
-            </li>
-          </ul>
+          <%= link_to access_partner_path, class: 'js-arrow' do  %>
+            <i class="fas fa-copy"></i>
+            Partenaires
+          <% end %>
         </li>
         <li class="has-sub">
           <a class="js-arrow" href="#">
