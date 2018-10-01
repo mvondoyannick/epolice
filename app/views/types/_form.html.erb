@@ -2,16 +2,28 @@
 <%= simple_form_for(@type) do |f| %>
   <%= f.error_notification %>
 
-  <div class="control">
-    <%= f.input :name, label: "Nom du type", input_html: {class: 'input is-large'} %>
-    <hr>
-    <%= f.input :description, as: :text, input_html: {class: 'input is-large', rows: '20' } %>
-    <hr>
-    <%= f.association :service, prompt: "Selectionner un service", input_html: {class: 'dropdown', style: 'margin-bottom: 80px;'} %>
-    <hr class="">
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, 'creer un type' %>
+  <div class="col-lg-8">
+    <div class="card">
+      <div class="card-header">
+        <strong>Ajout d'un nouveau commissariat</strong>
+      </div>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Nom type evenement</label>
+          <%= f.input :name, placeholder: 'Nom type evenement', label: false %>
+        </div>
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Description type évenement</label>
+          <%= f.input :description, as: :text, placeholder: 'Description type evenement', label: false %>
+        </div>
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Service rattaché a ce type d'evenement</label>
+          <%= f.association :service, prompt: 'Selectionner un service', label: false %>
+        </div>
+      </div>
+      <div class="card-footer">
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      </div>
+    </div>
   </div>
 <% end %>

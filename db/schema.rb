@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_28_121147) do
+ActiveRecord::Schema.define(version: 2018_10_01_163609) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -71,12 +71,14 @@ ActiveRecord::Schema.define(version: 2018_09_28_121147) do
     t.string "grade"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "commissariat_id"
     t.string "crypted"
     t.bigint "grade_id"
     t.bigint "ville_id"
-    t.index ["commissariat_id"], name: "index_agents_on_commissariat_id"
+    t.bigint "unite_id"
+    t.string "age"
+    t.string "sexe"
     t.index ["grade_id"], name: "index_agents_on_grade_id"
+    t.index ["unite_id"], name: "index_agents_on_unite_id"
     t.index ["ville_id"], name: "index_agents_on_ville_id"
   end
 
@@ -101,6 +103,16 @@ ActiveRecord::Schema.define(version: 2018_09_28_121147) do
     t.index ["statu_id"], name: "index_alertes_on_statu_id"
     t.index ["type_id"], name: "index_alertes_on_type_id"
     t.index ["ville_id"], name: "index_alertes_on_ville_id"
+  end
+
+  create_table "arrondissements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.bigint "region_id"
+    t.bigint "departement_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["departement_id"], name: "index_arrondissements_on_departement_id"
+    t.index ["region_id"], name: "index_arrondissements_on_region_id"
   end
 
   create_table "assurances", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -132,11 +144,15 @@ ActiveRecord::Schema.define(version: 2018_09_28_121147) do
   create_table "commissariats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "phone"
-    t.bigint "ville_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "quartier"
-    t.index ["ville_id"], name: "index_commissariats_on_ville_id"
+    t.bigint "region_id"
+    t.bigint "departement_id"
+    t.bigint "arrondissement_id"
+    t.string "email"
+    t.index ["arrondissement_id"], name: "index_commissariats_on_arrondissement_id"
+    t.index ["departement_id"], name: "index_commissariats_on_departement_id"
+    t.index ["region_id"], name: "index_commissariats_on_region_id"
   end
 
   create_table "constats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -215,6 +231,14 @@ ActiveRecord::Schema.define(version: 2018_09_28_121147) do
     t.bigint "infraction_id", null: false
   end
 
+  create_table "departements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.bigint "ville_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ville_id"], name: "index_departements_on_ville_id"
+  end
+
   create_table "fylos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "prenom"
@@ -240,6 +264,15 @@ ActiveRecord::Schema.define(version: 2018_09_28_121147) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "groupements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "phone"
+    t.bigint "region_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["region_id"], name: "index_groupements_on_region_id"
+  end
+
   create_table "grvpcs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email"
     t.string "encrypted_password", default: "", null: false
@@ -261,6 +294,11 @@ ActiveRecord::Schema.define(version: 2018_09_28_121147) do
     t.string "montant"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "source"
+    t.bigint "zonecouverturemotif_id"
+    t.bigint "ville_id"
+    t.index ["ville_id"], name: "index_infractions_on_ville_id"
+    t.index ["zonecouverturemotif_id"], name: "index_infractions_on_zonecouverturemotif_id"
   end
 
   create_table "logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -374,6 +412,12 @@ ActiveRecord::Schema.define(version: 2018_09_28_121147) do
     t.index ["commissariat_id"], name: "index_postepolices_on_commissariat_id"
   end
 
+  create_table "regions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "detail"
@@ -418,6 +462,12 @@ ActiveRecord::Schema.define(version: 2018_09_28_121147) do
     t.datetime "updated_at", null: false
     t.bigint "service_id"
     t.index ["service_id"], name: "index_types_on_service_id"
+  end
+
+  create_table "unites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "us", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

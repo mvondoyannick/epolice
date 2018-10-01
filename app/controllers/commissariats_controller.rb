@@ -1,11 +1,10 @@
 class CommissariatsController < ApplicationController
   before_action :set_commissariat, only: [:show, :edit, :update, :destroy]
-
+  layout 'fylo'
   # GET /commissariats
   # GET /commissariats.json
   def index
     @commissariats = Commissariat.all
-    render layout: 'admin'
   end
 
   # GET /commissariats/1
@@ -70,6 +69,6 @@ class CommissariatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def commissariat_params
-      params.require(:commissariat).permit(:name, :phone, :ville_id, :quartier)
+      params.require(:commissariat).permit(:name, :phone, :ville_id, :region_id, :departement_id, :arrondissement_id)
     end
 end

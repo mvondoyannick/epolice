@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @arrondissement.name %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @arrondissement.region %>
+</p>
+
+<p>
+  <strong>Departement:</strong>
+  <%= @arrondissement.departement %>
+</p>
+
+<%= link_to 'Edit', edit_arrondissement_path(@arrondissement) %> |
+<%= link_to 'Back', arrondissements_path %>

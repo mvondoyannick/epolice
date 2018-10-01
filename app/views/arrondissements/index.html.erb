@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+<%= link_to new_arrondissement_path, class: 'btn btn-primary m-b-40' do %>
+  <i class="fa fa-plus"></i>
+  Ajouter un arrondissement
+<% end %>
+<h1 class="m-b-40">Arrondissements</h1>
+
+<div class="row">
+  <div class="col-lg-9">
+    <div class="table-responsive table--no-card m-b-30">
+      <table class="table table-borderless table-striped table-earning">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Region</th>
+          <th>Departement</th>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @arrondissements.each do |arrondissement| %>
+          <tr>
+            <td><%= arrondissement.name %></td>
+            <td><%= arrondissement.region %></td>
+            <td><%= arrondissement.departement %></td>
+            <td><%= link_to 'Show', arrondissement %></td>
+            <td><%= link_to 'Edit', edit_arrondissement_path(arrondissement) %></td>
+            <td><%= link_to 'Destroy', arrondissement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<%= link_to new_arrondissement_path, class: 'btn btn-primary' do %>
+  <i class="fa fa-plus"></i>
+  Ajouter un arrondissement
+<% end %>

@@ -1,22 +1,56 @@
-<div class="columns">
-  <div class="column is-12">
-    <%= simple_form_for(@agent, html: {class: "field"}) do |f| %>
-      <%= f.error_notification %>
+  <%= simple_form_for(@agent, html: {class: "field"}) do |f| %>
+    <%= f.error_notification %>
 
-      <div class="control">
-        <%= f.input :name, label: "Nom", input_html: { class: 'input is-large', style: "margin-bottom: 30px;" }, label_html: {class: 'label subtitle is-4'}%>
-        <%= f.input :prenom, label: "Prénom", input_html: { class: 'input is-large', style: "margin-bottom: 30px;" }, label_html: {class: 'subtitle is-4'} %>
-        <%= f.input :phone, label: "Numéro de téléphone", input_html: { class: 'input is-large', style: "margin-bottom: 30px;" }, label_html: {class: 'subtitle is-4'} %>
-        <%= f.input :matricule, label: "Matricule", input_html: { class: 'input is-large', style: "margin-bottom: 30px;" }, label_html: {class: 'subtitle is-4'} %>
-        <%= f.input :avatar, label: "Image", label_html: {class: "subtitle is-4", style: "margin-right: 100px;"}, input_html: {class: "input "} %>
-        <%= f.association :grade, prompt: "Selectionner un grade", label: "Grade", input_html: { class: 'select is-large', style: "margin-bottom: 30px;"}, label_html: {class: 'subtitle is-4'} %>
-        <%= f.association :commissariat, prompt: "Selectionner commissariat d'affectation", label: "Commissariat", input_html: { class: 'select is-large', style: "margin-bottom: 30px;"}, label_html: {class: 'subtitle is-4'} %>
-        <%= f.association :ville, prompt: "Selectionner une ville", input_html: {class: 'select is-large'} %>
+    <div class="col-lg-8">
+      <div class="card">
+        <div class="card-header">
+          <strong>Ajout d'un nouvel agent</strong>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Matricule</label>
+            <%= f.input :matricule, placeholder: 'Matricule de l agent', label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Nom</label>
+            <%= f.input :name, placeholder: 'Nom de l agent', label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Prénom</label>
+            <%= f.input :prenom, placeholder: 'Prénom de l agent', label: false%>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Age agent</label>
+            <%= f.input :age, collection: 18..60, prompt: 'Selectionner l age', label: false, selected: 25 %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Sexe agent</label>
+            <%= f.input :sexe, collection: [['Feminin','Feminin'], ['Masculin', 'Masculin']], prompt: 'Selectionner l age', label: false, selected: 25 %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Numéro téléphone</label>
+            <%= f.input :phone, as: :tel, placeholder: 'Numéro téléphone agent', label: false%>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Image</label>
+            <%= f.input :avatar, as: :file, placeholder: 'Image agent', label: false%>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Grade</label>
+            <%= f.association :grade, prompt: "Selectionner un grade", label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Localisation</label>
+            <%= f.association :ville, prompt: "Selectionner une zone de localisation", label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Unité d'appartenance</label>
+            <%= f.association :unite, prompt: "Selectionner une unité", label: false %>
+          </div>
+        </div>
+        <div class="card-footer">
+          <%= f.button :submit, class: 'btn btn-primary' %>
+        </div>
       </div>
-
-      <div class="form-actions">
-        <%= f.button :submit, class: 'button is-primary' %>
-      </div>
-    <% end %>
-  </div>
-</div>
+    </div>
+  <% end %>

@@ -1,28 +1,24 @@
 class AgentsController < ApplicationController
   before_action :set_agent, only: [:show, :edit, :update, :destroy]
-
+  layout 'fylo'
   # GET /agents
   # GET /agents.json
   def index
     @agents = Agent.all
-    render layout: 'fylo'
   end
 
   # GET /agents/1
   # GET /agents/1.json
   def show
-    render layout: 'fylo'
   end
 
   # GET /agents/new
   def new
     @agent = Agent.new
-    render layout: 'fylo'
   end
 
   # GET /agents/1/edit
   def edit
-    render layout: 'fylo'
   end
 
   # POST /agents
@@ -73,6 +69,6 @@ class AgentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def agent_params
-      params.require(:agent).permit(:name, :prenom, :phone, :matricule, :grade, :commissariat_id, :grade_id, :avatar, :ville_id)
+      params.require(:agent).permit(:name, :prenom, :phone, :matricule, :grade, :grade_id, :avatar, :ville_id, :unite_id, :age, :sexe)
     end
 end

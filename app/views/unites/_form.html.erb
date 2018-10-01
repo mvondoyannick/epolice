@@ -1,0 +1,21 @@
+
+<%= simple_form_for(@unite) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-header">
+        <strong>Ajout d'une nouvelle unité</strong>
+      </div>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Unité</label>
+          <%= f.input :name, label: false, placeholder: 'Nom de la nouvelle unité' %>
+        </div>
+      </div>
+      <div class="card-footer">
+        <%= f.button :submit, class: 'btn btn-primary btn-sm' %>
+      </div>
+    </div>
+  </div>
+<% end %>

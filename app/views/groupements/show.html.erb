@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @groupement.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @groupement.phone %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @groupement.region %>
+</p>
+
+<%= link_to 'Edit', edit_groupement_path(@groupement) %> |
+<%= link_to 'Back', groupements_path %>

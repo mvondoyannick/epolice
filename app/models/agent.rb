@@ -7,7 +7,10 @@ class Agent < ApplicationRecord
 	has_many :alertes
 	has_many :affectations
 	belongs_to :grade
-	#belongs_to :agentphone
+	belongs_to :unite
+
+	validates_presence_of :name, presence: true
+	validates_presence_of :age, presence: true
 
 	#pour les villes d'affectations
 	belongs_to :ville

@@ -1,27 +1,39 @@
 <p id="notice"><%= notice %></p>
-
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th>Motif</th>
-      <th>Montant</th>
-      <th colspan="1"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @infractions.each do |infraction| %>
-      <tr>
-        <td><%= infraction.motif %></td>
-        <td><%= infraction.montant %></td>
-        <td><%= link_to 'Show', infraction %></td>
-        <!-- <td><%= link_to 'Edit', edit_infraction_path(infraction) %></td>
+<%= link_to new_infraction_path, class: 'btn btn-primary m-b-40' do %>
+  <i class="fa fa-plus"></i>
+  Nouvelle Motif d'infraction
+<% end %>
+<h1 class="m-b-40">Motifs d'infraction</h1>
+<div class="row">
+  <div class="col-lg-9">
+    <div class="table-responsive table--no-card m-b-30">
+      <table class="table table-borderless table-striped table-earning">
+        <thead>
+        <tr>
+          <th>Motif</th>
+          <th>Montant</th>
+          <th colspan="1"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @infractions.each do |infraction| %>
+          <tr>
+            <td><%= infraction.motif %></td>
+            <td><%= infraction.montant %></td>
+            <td><%= link_to 'Show', infraction %></td>
+            <!-- <td><%= link_to 'Edit', edit_infraction_path(infraction) %></td>
         <td><%= link_to 'Destroy', infraction, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
 <br>
 
-<%= link_to 'New Infraction', new_infraction_path %>
+<%= link_to new_infraction_path, class: 'btn btn-primary' do %>
+  <i class="fa fa-plus"></i>
+  Nouvelle Motif d'infraction
+<% end %>

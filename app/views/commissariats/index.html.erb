@@ -1,37 +1,27 @@
-<% @page_title = "Gestion des commissariats" %>
-<section class="hero">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
-        Gestion des commissariat
-      </h1>
-      <h2 class="subtitle">
-        Entrer vos données d'authentification
-      </h2>
-    </div>
-  </div>
-</section>
-
-<div class="card-table">
-  <div class="content">
-    <table class="table is-fullwidth is-striped">
+<p id="notice"><%= notice %></p>
+<%= link_to new_commissariat_path, class: 'btn btn-primary m-b-40' do %>
+  <i class="fa fa-plus"></i>
+  Ajouter un commissariat
+<% end %>
+<h1 class="m-b-40">Commissariats</h1>
+<div class="col-lg-12">
+  <div class="table-responsive table--no-card m-b-30">
+    <table class="table table-borderless table-striped table-earning">
       <thead>
-        <tr>
-          <th>Name</th>
-          <th>Phone</th>
-          <th>Ville</th>
-          <th>Quartier</th>
-          <th colspan="3"></th>
-        </tr>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Ville</th>
+        <th>Quartier</th>
+        <th colspan="3"></th>
+      </tr>
       </thead>
-
       <tbody>
         <% @commissariats.each do |commissariat| %>
           <tr>
             <td><%= commissariat.name %></td>
             <td><%= commissariat.phone %></td>
-            <td><%= commissariat.ville.name %></td>
-            <td><%= commissariat.quartier %></td>
+            <td><%= commissariat.email %></td>
             <td><%= link_to 'Show', commissariat %></td>
             <td><%= link_to 'Edit', edit_commissariat_path(commissariat) %></td>
             <td><%= link_to 'Destroy', commissariat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -41,3 +31,8 @@
     </table>
   </div>
 </div>
+<br>
+<%= link_to new_commissariat_path, class: 'btn btn-primary m-b-40' do %>
+  <i class="fa fa-plus"></i>
+  Ajouter un commissariat
+<% end %>

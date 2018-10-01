@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+<%= link_to new_zonecouverturemotif_path, class: 'btn btn-primary m-b-40' do %>
+  <i class="fa fa-plus"></i>
+  Ajouter d'un infraction
+<% end %>
+<h1 class="m-b-40">Infractions</h1>
+<p>
+  La zone de couverture permet de donner la couverture territoriale d'execution d'un motif.
+</p>
+<br>
+<div class="row">
+  <div class="col-lg-9">
+    <div class="table-responsive table--no-card m-b-30">
+      <table class="table table-borderless table-striped table-earning">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Detail</th>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @zonecouverturemotifs.each do |zonecouverturemotif| %>
+          <tr>
+            <td><%= zonecouverturemotif.name %></td>
+            <td><%= zonecouverturemotif.detail %></td>
+            <td><%= link_to 'Show', zonecouverturemotif %></td>
+            <td><%= link_to 'Edit', edit_zonecouverturemotif_path(zonecouverturemotif) %></td>
+            <td><%= link_to 'Destroy', zonecouverturemotif, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<%= link_to new_zonecouverturemotif_path, class: 'btn btn-primary' do %>
+  <i class="fa fa-plus"></i>
+  Ajouter d'un infraction
+<% end %>

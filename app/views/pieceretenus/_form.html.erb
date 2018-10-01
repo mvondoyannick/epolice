@@ -2,15 +2,24 @@
 <%= simple_form_for(@pieceretenu) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-
-    <%= f.input :name %>
-
-    <%= f.input :detail %>
-
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="col-lg-8">
+    <div class="card">
+      <div class="card-header">
+        <strong>Ajout d'une nouvel piece pouvant etre retenue</strong>
+      </div>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Nom de la pièce</label>
+          <%= f.input :name, placeholder: 'Nom de la pièce pouvant etre retenue', label: false %>
+        </div>
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Detail</label>
+          <%= f.input :detail, placeholder: 'Detail sur la piece pouvant etre retenue', label: false %>
+        </div>
+      </div>
+      <div class="card-footer">
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      </div>
+    </div>
   </div>
 <% end %>

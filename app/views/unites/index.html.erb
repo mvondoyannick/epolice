@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<%= link_to new_unite_path, class: 'btn btn-primary m-b-40' do %>
+  <i class="fa fa-plus"></i>
+  Ajouter une unité
+<% end %>
+<div class="row">
+  <div class="col-lg-9">
+    <div class="table-responsive table--no-card m-b-30">
+      <h1 class="m-b-40">Unites</h1>
+
+      <table class="table table-borderless table-striped table-earning">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @unites.each do |unite| %>
+          <tr>
+            <td><%= unite.name %></td>
+            <td><%= link_to 'Show', unite %></td>
+            <td><%= link_to 'Edit', edit_unite_path(unite) %></td>
+            <td><%= link_to 'Destroy', unite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<br>
+
+<%= link_to new_unite_path, class: 'btn btn-primary' do %>
+  <i class="fa fa-plus"></i>
+  Ajouter une unité
+<% end %>

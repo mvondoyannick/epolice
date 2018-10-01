@@ -1,6 +1,6 @@
 class VillesController < ApplicationController
   before_action :set_ville, only: [:show, :edit, :update, :destroy]
-
+  layout 'fylo'
   # GET /villes
   # GET /villes.json
   def index

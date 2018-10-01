@@ -1,29 +1,38 @@
 <p id="notice"><%= notice %></p>
+<%= link_to new_pieceretenu_path, class: 'btn btn-primary m-b-40' do %>
+  <i class="fa fa-plus"></i>
+  Ajouter une piece
+<% end %>
+<h1 class="m-b-40">Pieces pouvants etre retenus</h1>
 
-<h1>Pieceretenus</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Detail</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @pieceretenus.each do |pieceretenu| %>
+<div class="col-lg-9">
+  <div class="table-responsive table--no-card m-b-30">
+    <table class="table table-borderless table-striped table-earning">
+      <thead>
       <tr>
-        <td><%= pieceretenu.name %></td>
-        <td><%= pieceretenu.detail %></td>
-        <td><%= link_to 'Show', pieceretenu %></td>
-        <td><%= link_to 'Edit', edit_pieceretenu_path(pieceretenu) %></td>
-        <td><%= link_to 'Destroy', pieceretenu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Detail</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      </thead>
+      <tbody>
+        <% @pieceretenus.each do |pieceretenu| %>
+          <tr>
+            <td><%= pieceretenu.name %></td>
+            <td><%= pieceretenu.detail %></td>
+            <td><%= link_to 'Show', pieceretenu %></td>
+            <td><%= link_to 'Edit', edit_pieceretenu_path(pieceretenu) %></td>
+            <td><%= link_to 'Destroy', pieceretenu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 <br>
 
-<%= link_to 'New Pieceretenu', new_pieceretenu_path %>
+<%= link_to new_pieceretenu_path, class: 'btn btn-primary' do %>
+  <i class="fa fa-plus"></i>
+  Ajouter une piece
+<% end %>

@@ -1,28 +1,25 @@
 class TypesController < ApplicationController
   before_action :set_type, only: [:show, :edit, :update, :destroy]
 
+  layout 'fylo'
   # GET /types
   # GET /types.json
   def index
     @types = Type.all
-    render layout: 'admin'
   end
 
   # GET /types/1
   # GET /types/1.json
   def show
-    render layout: 'admin'
   end
 
   # GET /types/new
   def new
     @type = Type.new
-    render layout: 'admin'
   end
 
   # GET /types/1/edit
   def edit
-    render layout: 'admin'
   end
 
   # POST /types

@@ -2,12 +2,44 @@
 <%= simple_form_for(@infraction) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :motif %>
-    <%= f.input :montant %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-header">
+        <strong>Ajout d'un nouveau motif de contravention</strong>
+      </div>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Motif</label>
+          <%= f.input :motif, label: false, placeholder: 'Nom du motif a creer' %>
+        </div>
+      </div>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Montant</label>
+          <%= f.input :montant, label: false, placeholder: 'Cout du motif' %>
+        </div>
+      </div>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Source juridique</label>
+          <%= f.input :source, as: :text, label: false, placeholder: 'Source juridiqueCout du motif' %>
+        </div>
+      </div>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Zone de couverture</label>
+          <%= f.association :zonecouverturemotif, label: false, prompt: 'Selectionner la zone de couverture' %>
+        </div>
+      </div>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Territoire d'application</label>
+          <%= f.association :ville, label: false, prompt: 'Selectionner la zone d application' %>
+        </div>
+      </div>
+      <div class="card-footer">
+        <%= f.button :submit, class: 'btn btn-primary btn-sm' %>
+      </div>
+    </div>
   </div>
 <% end %>

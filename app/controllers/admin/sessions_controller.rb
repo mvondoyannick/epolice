@@ -31,6 +31,12 @@ class Admin::SessionsController < Devise::SessionsController
     devise_parameter_sanitizer.sanitize(:sign_in)
   end
 
+  # The path used after sign up.
+  def after_sign_in_path_for(resource)
+    #super(resource)
+    access_admin_path
+  end
+
 
   #def configure_sign_up_params
   #  devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:email, :password, :password_confirmation, :phone, :phone1, :name)}

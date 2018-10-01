@@ -1,23 +1,20 @@
 class PieceretenusController < ApplicationController
   before_action :set_pieceretenu, only: [:show, :edit, :update, :destroy]
-
+  layout 'fylo'
   # GET /pieceretenus
   # GET /pieceretenus.json
   def index
     @pieceretenus = Pieceretenu.all
-    render layout: 'admin'
   end
 
   # GET /pieceretenus/1
   # GET /pieceretenus/1.json
   def show
-    render layout: 'admin'
   end
 
   # GET /pieceretenus/new
   def new
     @pieceretenu = Pieceretenu.new
-    render layout: 'admin'
   end
 
   # GET /pieceretenus/1/edit

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<%= link_to new_departement_path, class: 'btn btn-primary m-b-40' do %>
+  <i class="fa fa-plus"></i>
+  Nouveau departement
+<% end %>
+<h1 class="m-b-40">Départements</h1>
+
+<div class="row">
+  <div class="col-lg-9">
+    <div class="table-responsive table--no-card m-b-30">
+      <table class="table table-borderless table-striped table-earning">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Ville</th>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @departements.each do |departement| %>
+          <tr>
+            <td><%= departement.name %></td>
+            <td><%= departement.ville.name %></td>
+            <td><%= link_to 'Show', departement %></td>
+            <td><%= link_to 'Edit', edit_departement_path(departement) %></td>
+            <td><%= link_to 'Destroy', departement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<%= link_to new_departement_path, class: 'btn btn-primary' do %>
+  <i class="fa fa-plus"></i>
+  Nouveau departement
+<% end %>

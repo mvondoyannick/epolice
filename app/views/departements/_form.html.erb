@@ -1,0 +1,28 @@
+
+<%= simple_form_for(@departement) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-header">
+        <strong>Ajout d'un nouveau département</strong>
+      </div>
+
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Selectionner la ville</label>
+          <%= f.association :ville, label: false, prompt: 'Selectionner une ville' %>
+        </div>
+      </div>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Nom du département</label>
+          <%= f.input :name, label: false, placeholder: 'Nom du departement a creer' %>
+        </div>
+      </div>
+      <div class="card-footer">
+        <%= f.button :submit, class: 'btn btn-primary btn-sm' %>
+      </div>
+    </div>
+  </div>
+<% end %>

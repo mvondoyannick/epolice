@@ -1,4 +1,66 @@
 <% content_for(:title, 'DASHBOARD GESTION DES AGENTS')%>
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-header">
+        <strong>Details de l'agent</strong>
+        <small> <%= @agent.name+' '+@agent.prenom %></small>
+      </div>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Photo</label>
+          <br>
+          <%= image_tag url_for(@agent.avatar), size: '150x150', class: 'img-thumbnail' %>
+        </div>
+        <div class="form-group">
+          <label for="vat" class=" form-control-label">Matricule</label>
+          <input type="text" id="vat" readonly class="form-control" value="<%= @agent.matricule %>">
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Nom</label>
+          <input type="text" id="street" value="<%= @agent.name %>" class="form-control">
+        </div>
+        <div class="row form-group">
+          <div class="col-8">
+            <div class="form-group">
+              <label for="city" class=" form-control-label">Prénom</label>
+              <input type="text" id="city" value="<%= @agent.prenom %>" class="form-control">
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="form-group">
+              <label for="postal-code" class=" form-control-label">Téléhpone</label>
+              <input type="text" id="postal-code" value="<%= @agent.phone %>" class="form-control">
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="form-group">
+              <label for="postal-code" class=" form-control-label">Grade</label>
+              <input type="text" id="postal-code" value="<%= @agent.grade.name %>" class="form-control">
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="form-group">
+              <label for="postal-code" class=" form-control-label">Commissariat service</label>
+              <input type="text" id="postal-code" value="<%= @agent.commissariat.name %>" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <%= link_to edit_agent_path(@agent.id), class: 'btn btn-primary btn-sm' do %>
+          <i class="fa fa-dot-circle-o"></i>
+          Mettre à jour
+        <% end %>
+        <%= link_to grvpc_index_path, class: 'btn btn-primary btn-sm' do %>
+          <i class="fa fa-arrow-left"></i>
+          Retour
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 <p id="notice" class="notification"><%= notice %></p>
 <%= link_to :back, class: 'button is-link is-outlined' do %>
   <i class="fa fa-arrow-left noir"></i>

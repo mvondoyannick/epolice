@@ -1,0 +1,29 @@
+
+<%= simple_form_for(@groupement) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="col-lg-8">
+    <div class="card">
+      <div class="card-header">
+        <strong>Ajout d'un nouveau commissariat</strong>
+      </div>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Nom du groupement</label>
+          <%= f.input :name, placeholder: 'Nom du commissariat', label: false %>
+        </div>
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Téléphone du groupement</label>
+          <%= f.input :phone, as: :tel, placeholder: 'Téléphone du commissariat', label: false %>
+        </div>
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Région de localisation du groupement</label>
+          <%= f.association :region, prompt: 'Selectionner une region', label: false, selected: "Littoral" %>
+        </div>
+      </div>
+      <div class="card-footer">
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+<% end %>

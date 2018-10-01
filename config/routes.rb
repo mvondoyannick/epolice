@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  resources :groupements
+  resources :arrondissements
+  resources :regions
+  resources :zonecouverturemotifs
+  resources :departements
+  get 'parametre/index'
+  get 'parametre/region'
+  get 'parametre/departement'
+  get 'parametre/arrondissement'
+  get 'parametre/localisation'
+  resources :unites
   resources :postepolices
   get 'access/partner'
   get 'access/partner_detail/:id/:jeton', to: 'access#partner_detail'

@@ -1,6 +1,8 @@
 class Commissariat < ApplicationRecord
   belongs_to :ville
-  has_many :agent
+  belongs_to :region
+  belongs_to :departement
+  belongs_to :arrondissement
   validates_presence_of :name, presence: true
   validates_uniqueness_of :name
   validates_presence_of :quartier, presence: true, uniquenes: true

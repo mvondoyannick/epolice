@@ -1,6 +1,6 @@
 class InfractionsController < ApplicationController
   before_action :set_infraction, only: [:show, :edit, :update, :destroy]
-
+  layout 'fylo'
   # GET /infractions
   # GET /infractions.json
   def index
@@ -71,6 +71,6 @@ class InfractionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def infraction_params
-      params.require(:infraction).permit(:motif, :montant)
+      params.require(:infraction).permit(:motif, :montant, :source, :zonecouverturemotif_id, :ville_id)
     end
 end
