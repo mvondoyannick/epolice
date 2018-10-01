@@ -2,44 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/parametre/localisation.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/sessions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/agents_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/agents_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/commissariats_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/commissariats_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/infractions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/infractions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pieceretenus_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pieceretenus_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/types_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/types_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/villes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/villes_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/agent.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/agent.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/commissariat.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/commissariat.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/infraction.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/infraction.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/ville.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/ville.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/agents/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/agents/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/agents/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/agents/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/agents/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/agents/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/agents/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/agents/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/commissariats/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/commissariats/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/commissariats/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/commissariats/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/commissariats/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/commissariats/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/infractions/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/infractions/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/infractions/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/infractions/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/infractions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/infractions/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pieceretenus/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pieceretenus/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pieceretenus/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pieceretenus/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pieceretenus/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pieceretenus/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/services/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/services/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/services/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/services/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/types/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/types/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/types/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/types/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/types/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/types/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/villes/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/villes/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/parametre/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/parametre/index.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -157,7 +120,7 @@
           <entry key="Gemfile" value="218" />
           <entry key="coffee" value="74" />
           <entry key="css" value="296" />
-          <entry key="erb" value="46370" />
+          <entry key="erb" value="46418" />
           <entry key="js" value="213" />
           <entry key="pid" value="1" />
           <entry key="rb" value="22283" />
@@ -172,7 +135,7 @@
           <entry key="CoffeeScript" value="74" />
           <entry key="JavaScript" value="213" />
           <entry key="PLAIN_TEXT" value="382" />
-          <entry key="RHTML" value="46370" />
+          <entry key="RHTML" value="46418" />
           <entry key="Ruby" value="22501" />
           <entry key="SCSS" value="42" />
           <entry key="YAML" value="145" />
@@ -233,8 +196,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/parametre/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            <state relative-caret-position="154">
+              <caret line="7" column="61" lean-forward="true" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
               <folding>
                 <element signature="n#div#2;n#div#0;n#!!top" />
               </folding>
@@ -745,12 +708,12 @@
       <workItem from="1538048619685" duration="722000" />
       <workItem from="1538126363115" duration="11679000" />
       <workItem from="1538139005127" duration="24350000" />
-      <workItem from="1538383269006" duration="30795000" />
+      <workItem from="1538383269006" duration="31381000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="412103000" />
+    <option name="totallyTimeSpent" value="412689000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -769,7 +732,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.08785249" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.36876357" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.3449024" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -1217,8 +1180,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/parametre/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        <state relative-caret-position="154">
+          <caret line="7" column="61" lean-forward="true" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
           <folding>
             <element signature="n#div#2;n#div#0;n#!!top" />
           </folding>
