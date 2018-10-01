@@ -120,7 +120,7 @@
           <entry key="Gemfile" value="218" />
           <entry key="coffee" value="74" />
           <entry key="css" value="296" />
-          <entry key="erb" value="46418" />
+          <entry key="erb" value="46420" />
           <entry key="js" value="213" />
           <entry key="pid" value="1" />
           <entry key="rb" value="22283" />
@@ -135,7 +135,7 @@
           <entry key="CoffeeScript" value="74" />
           <entry key="JavaScript" value="213" />
           <entry key="PLAIN_TEXT" value="382" />
-          <entry key="RHTML" value="46418" />
+          <entry key="RHTML" value="46420" />
           <entry key="Ruby" value="22501" />
           <entry key="SCSS" value="42" />
           <entry key="YAML" value="145" />
@@ -196,8 +196,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/parametre/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="61" lean-forward="true" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+            <state relative-caret-position="110">
+              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
               <folding>
                 <element signature="n#div#2;n#div#0;n#!!top" />
               </folding>
@@ -708,12 +708,12 @@
       <workItem from="1538048619685" duration="722000" />
       <workItem from="1538126363115" duration="11679000" />
       <workItem from="1538139005127" duration="24350000" />
-      <workItem from="1538383269006" duration="31381000" />
+      <workItem from="1538383269006" duration="31532000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="412689000" />
+    <option name="totallyTimeSpent" value="412840000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1180,8 +1180,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/parametre/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="61" lean-forward="true" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+        <state relative-caret-position="110">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
           <folding>
             <element signature="n#div#2;n#div#0;n#!!top" />
           </folding>
