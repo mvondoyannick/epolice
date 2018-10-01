@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/models/arrondissement.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/arrondissement.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/departement.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/departement.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/region.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/region.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/parametre_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/parametre_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/sessions/new.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -87,12 +86,12 @@
           <entry key="convocations" value="1" />
           <entry key="css" value="9" />
           <entry key="dot" value="1" />
-          <entry key="erb" value="389" />
+          <entry key="erb" value="391" />
           <entry key="html" value="11" />
           <entry key="js" value="13" />
           <entry key="pid" value="2" />
           <entry key="rake" value="1" />
-          <entry key="rb" value="306" />
+          <entry key="rb" value="308" />
           <entry key="rnc" value="1" />
           <entry key="scss" value="2" />
           <entry key="sql" value="1" />
@@ -109,9 +108,9 @@
           <entry key="HTML" value="11" />
           <entry key="JavaScript" value="13" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="RHTML" value="389" />
+          <entry key="RHTML" value="391" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="320" />
+          <entry key="Ruby" value="322" />
           <entry key="SCSS" value="2" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="5" />
@@ -122,10 +121,10 @@
           <entry key="Gemfile" value="218" />
           <entry key="coffee" value="74" />
           <entry key="css" value="296" />
-          <entry key="erb" value="46420" />
+          <entry key="erb" value="46568" />
           <entry key="js" value="213" />
           <entry key="pid" value="1" />
-          <entry key="rb" value="22859" />
+          <entry key="rb" value="22889" />
           <entry key="scss" value="42" />
           <entry key="txt" value="381" />
           <entry key="yml" value="145" />
@@ -137,8 +136,8 @@
           <entry key="CoffeeScript" value="74" />
           <entry key="JavaScript" value="213" />
           <entry key="PLAIN_TEXT" value="382" />
-          <entry key="RHTML" value="46420" />
-          <entry key="Ruby" value="23077" />
+          <entry key="RHTML" value="46568" />
+          <entry key="Ruby" value="23107" />
           <entry key="SCSS" value="42" />
           <entry key="YAML" value="145" />
         </counts>
@@ -168,8 +167,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/parametre_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="374">
+              <caret line="17" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/admin/sessions_controller.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/sessions/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="57" column="101" selection-start-line="57" selection-start-column="101" selection-end-line="57" selection-end-column="101" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/fylo.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" selection-start-line="2" selection-end-line="36" selection-end-column="7" />
+              <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/access_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="6" selection-start-column="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -194,42 +228,6 @@
               <folding>
                 <element signature="n#div#2;n#div#0;n#!!top" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/arrondissement.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="116" selection-start-line="5" selection-start-column="116" selection-end-line="5" selection-end-column="116" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/region.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/departement.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/commissariats/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -293,7 +291,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/regions/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/regions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/zonecouverturemotifs/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/zonecouverturemotifs/new.html.erb" />
@@ -337,13 +334,14 @@
         <option value="$PROJECT_DIR$/app/views/services/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/commissariats/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/commissariats/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/parametre_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/parametre/localisation.html.erb" />
         <option value="$PROJECT_DIR$/app/views/parametre/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/region.rb" />
         <option value="$PROJECT_DIR$/app/models/arrondissement.rb" />
         <option value="$PROJECT_DIR$/app/models/departement.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/parametre_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/admin/sessions/new.html.erb" />
       </list>
     </option>
   </component>
@@ -574,7 +572,7 @@
     <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
-    <property name="SearchEverywhereHistoryKey" value="departe&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/departement.rb&#10;region&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/region.rb&#10;arrond&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/arrondissement.rb&#10;routes*&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;routes&#9;null&#9;null&#10;parame&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;commi&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/commissariats_controller.rb&#10;service&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/service.rb&#10;type&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/type.rb&#10;typecontr&#9;null&#9;null&#10;groupe&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/groupements_controller.rb&#10;zone&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/zonecouverturemotifs_controller.rb&#10;comm&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/commissariats_controller.rb&#10;grou&#9;null&#9;null&#10;depa&#9;null&#9;null&#10;arrondi&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/arrondissement.rb&#10;commis&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/commissariats_controller.rb&#10;piece&#9;null&#9;null&#10;age&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/agent.rb&#10;agen&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/agent.rb&#10;agent&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/agents_controller.rb&#10;unite&#9;null&#9;null&#10;vill&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/ville.rb&#10;infr&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/infractions_controller.rb&#10;infra&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/infraction.rb&#10;infrac&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/infractions_controller.rb&#10;ville&#9;null&#9;null&#10;commissa&#9;null&#9;null&#10;application.sc&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.scss&#10;assets&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb&#10;application.&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/fylo.html.erb&#10;affect&#9;null&#9;null&#10;alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;grvpc&#9;null&#9;null&#10;gestioncontra&#9;null&#9;null&#10;gestion&#9;null&#9;null&#10;member&#9;null&#9;null&#10;acce&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/access_controller.rb&#10;login&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/template/login2.html.erb&#10;admin&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/admin.html.erb&#10;lea&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/leaflet.rb&#10;application&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.css&#10;gemfi&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;applica&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/javascripts/application.js&#10;gem&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;application.html&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;application.css&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.css&#10;the&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_the_sidebar.html.erb&#10;convocation&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/api/convocations_controller.rb" />
+    <property name="SearchEverywhereHistoryKey" value="fylo.html&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/fylo.html.erb&#10;acces&#9;null&#9;null&#10;departe&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/departement.rb&#10;region&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/region.rb&#10;arrond&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/arrondissement.rb&#10;routes*&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;routes&#9;null&#9;null&#10;parame&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;commi&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/commissariats_controller.rb&#10;service&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/service.rb&#10;type&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/type.rb&#10;typecontr&#9;null&#9;null&#10;groupe&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/groupements_controller.rb&#10;zone&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/zonecouverturemotifs_controller.rb&#10;comm&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/commissariats_controller.rb&#10;grou&#9;null&#9;null&#10;depa&#9;null&#9;null&#10;arrondi&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/arrondissement.rb&#10;commis&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/commissariats_controller.rb&#10;piece&#9;null&#9;null&#10;age&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/agent.rb&#10;agen&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/agent.rb&#10;agent&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/agents_controller.rb&#10;unite&#9;null&#9;null&#10;vill&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/ville.rb&#10;infr&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/infractions_controller.rb&#10;infra&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/infraction.rb&#10;infrac&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/infractions_controller.rb&#10;ville&#9;null&#9;null&#10;commissa&#9;null&#9;null&#10;application.sc&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.scss&#10;assets&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb&#10;application.&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/fylo.html.erb&#10;affect&#9;null&#9;null&#10;alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;grvpc&#9;null&#9;null&#10;gestioncontra&#9;null&#9;null&#10;gestion&#9;null&#9;null&#10;member&#9;null&#9;null&#10;acce&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/access_controller.rb&#10;login&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/template/login2.html.erb&#10;admin&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/admin.html.erb&#10;lea&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/leaflet.rb&#10;application&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.css&#10;gemfi&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;applica&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/javascripts/application.js&#10;gem&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;application.html&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;application.css&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.css" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -719,18 +717,18 @@
       <workItem from="1538048619685" duration="722000" />
       <workItem from="1538126363115" duration="11679000" />
       <workItem from="1538139005127" duration="24350000" />
-      <workItem from="1538383269006" duration="33377000" />
+      <workItem from="1538383269006" duration="34378000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="414685000" />
+    <option name="totallyTimeSpent" value="415686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18070363" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18070363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -743,7 +741,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.08785249" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.3167028" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.3167028" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -823,37 +821,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/infractions/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" selection-start-line="6" selection-end-line="31" selection-end-column="6" />
-          <folding>
-            <element signature="n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/infractions_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1606">
-          <caret line="73" column="102" selection-start-line="73" selection-start-column="102" selection-end-line="73" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/ville.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/arrondissements/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="82" selection-start-line="12" selection-start-column="82" selection-end-line="12" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/arrondissements/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1151,13 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/parametre_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/parametre/localisation.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
@@ -1165,6 +1125,27 @@
           <folding>
             <element signature="n#div#2;n#div#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/departement.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/region.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/arrondissement.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="116" selection-start-line="5" selection-start-column="116" selection-end-line="5" selection-end-column="116" />
         </state>
       </provider>
     </entry>
@@ -1178,24 +1159,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/arrondissement.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/access_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="116" selection-start-line="5" selection-start-column="116" selection-end-line="5" selection-end-column="116" />
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/region.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/parametre_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+        <state relative-caret-position="374">
+          <caret line="17" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/departement.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/fylo.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="36" selection-end-column="7" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/sessions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="57" column="101" selection-start-line="57" selection-start-column="101" selection-end-line="57" selection-end-column="101" />
         </state>
       </provider>
     </entry>

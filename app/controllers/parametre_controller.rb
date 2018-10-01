@@ -1,4 +1,5 @@
 class ParametreController < ApplicationController
+  before_action :authenticate_admin!
   layout 'fylo'
   def index
   end
