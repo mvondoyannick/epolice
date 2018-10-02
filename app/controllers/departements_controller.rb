@@ -69,6 +69,6 @@ class DepartementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def departement_params
-      params.require(:departement).permit(:name, :ville_id)
+      params.require(:departement).permit(:name, :region_id)
     end
 end

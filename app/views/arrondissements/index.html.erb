@@ -21,8 +21,8 @@
         <% @arrondissements.each do |arrondissement| %>
           <tr>
             <td><%= arrondissement.name %></td>
-            <td><%= arrondissement.region %></td>
-            <td><%= arrondissement.departement %></td>
+            <td><%= arrondissement.region.name %></td>
+            <td><%= arrondissement.departement.name %></td>
             <td><%= link_to 'Show', arrondissement %></td>
             <td><%= link_to 'Edit', edit_arrondissement_path(arrondissement) %></td>
             <td><%= link_to 'Destroy', arrondissement, method: :delete, data: { confirm: 'Are you sure?' } %></td>

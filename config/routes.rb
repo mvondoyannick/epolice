@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'parametre/departement'
   get 'parametre/arrondissement'
   get 'parametre/localisation'
+  get 'parametre/admin'
   resources :unites
   resources :postepolices
   get 'access/partner'

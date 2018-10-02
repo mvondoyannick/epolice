@@ -19,7 +19,7 @@
           <th>Prenom</th>
           <th>Phone</th>
           <th>Grade</th>
-          <th>Ville</th>
+          <th>Région</th>
           <th>Service</th>
           <th colspan="3"></th>
         </tr>
@@ -32,7 +32,7 @@
             <td><%= agent.prenom %></td>
             <td><%= agent.phone %></td>
             <td><%= agent.grade.name %></td>
-            <td><%= agent.ville.name if !agent.ville_id.nil? %></td>
+            <td><%= agent.region.name if !agent.ville_id.nil? %></td>
             <td><%= agent.grade.name %></td>
             <td><%= link_to 'Show', agent %></td>
             <td>

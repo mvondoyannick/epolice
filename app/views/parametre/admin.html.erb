@@ -1,0 +1,48 @@
+<% content_for(:title, 'DASHBOARD ADMIN EPOLICE')%>
+<p id="notice"><%= notice %></p>
+
+<h1 class="m-b-40">
+  <%= link_to parametre_index_path do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Administrateur e-Police Plateforme</h1>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="table-responsive table--no-card m-b-30">
+      <table class="table table-borderless table-striped table-earning">
+        <thead>
+        <tr>
+          <th width="2">#</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Mot de passe</th>
+          <th class="text-right">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @admin.each do |agent| %>
+          <tr>
+            <td width="2"><i class="fa fa-shield"></i></td>
+            <td><%= agent.phone %></td>
+            <td><%= agent.email %></td>
+            <td><%= agent.encrypted_password %></td>
+            <td class="text-right">
+              <div class="dropdown">
+                <%= link_to 'Action', "#", class: 'btn btn-primary dropdown-toggle', 'role':'button', 'id':'dropdownMenuLink', 'data-toggle':'dropdown', 'aria-haspopup': true, 'aria-expanded': false %>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="#">Modifier</a>
+                  <a class="dropdown-item" href="#">Bloquer</a>
+                  <a class="dropdown-item" href="#">Supprimer</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

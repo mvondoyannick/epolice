@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_01_163609) do
+ActiveRecord::Schema.define(version: 2018_10_02_185936) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -68,18 +68,17 @@ ActiveRecord::Schema.define(version: 2018_10_01_163609) do
     t.string "prenom"
     t.string "phone"
     t.string "matricule"
-    t.string "grade"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "crypted"
     t.bigint "grade_id"
-    t.bigint "ville_id"
     t.bigint "unite_id"
     t.string "age"
     t.string "sexe"
+    t.bigint "region_id"
     t.index ["grade_id"], name: "index_agents_on_grade_id"
+    t.index ["region_id"], name: "index_agents_on_region_id"
     t.index ["unite_id"], name: "index_agents_on_unite_id"
-    t.index ["ville_id"], name: "index_agents_on_ville_id"
   end
 
   create_table "alertes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -233,10 +232,10 @@ ActiveRecord::Schema.define(version: 2018_10_01_163609) do
 
   create_table "departements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.bigint "ville_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["ville_id"], name: "index_departements_on_ville_id"
+    t.bigint "region_id"
+    t.index ["region_id"], name: "index_departements_on_region_id"
   end
 
   create_table "fylos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -296,8 +295,12 @@ ActiveRecord::Schema.define(version: 2018_10_01_163609) do
     t.datetime "updated_at", null: false
     t.string "source"
     t.bigint "zonecouverturemotif_id"
-    t.bigint "ville_id"
-    t.index ["ville_id"], name: "index_infractions_on_ville_id"
+    t.bigint "region_id"
+    t.bigint "departement_id"
+    t.bigint "arrondissement_id"
+    t.index ["arrondissement_id"], name: "index_infractions_on_arrondissement_id"
+    t.index ["departement_id"], name: "index_infractions_on_departement_id"
+    t.index ["region_id"], name: "index_infractions_on_region_id"
     t.index ["zonecouverturemotif_id"], name: "index_infractions_on_zonecouverturemotif_id"
   end
 

@@ -27,6 +27,9 @@
     <div class="main-content">
       <div class="section__content section__content--p30">
         <div class="container-fluid">
+          <div class="alert alert-primary" role="alert">
+            Connecté en tant que &nbsp;<strong><%= link_to current_admin.email, "#" %></strong>
+          </div>
           <div class="row">
             <div class="col-md-4">
               <div class="card">
@@ -127,9 +130,20 @@
             </div>
             <div class="col-md-4">
               <div class="card">
-                <%= link_to image_tag('bg-title-01.jpg', class: 'card-img-top'), "#collapseConstats", 'data-toggle': 'collapse', 'aria-expanded': false, 'aria-controls': 'collapseConstats', 'role': 'button' %>
+                <%= link_to image_tag('bg-title-01.jpg', class: 'card-img-top'), "#collapseConstats" %>
                 <div class="card-body">
                   <h4 class="card-title mb-3">ReadMe</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <%= link_to image_tag('bg-title-01.jpg', class: 'card-img-top'), "#collapseConstats" %>
+                <div class="card-body">
+                  <h4 class="card-title mb-3">Signaler un problème</h4>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                     content.
                   </p>

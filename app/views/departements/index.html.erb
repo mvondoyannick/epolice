@@ -3,7 +3,11 @@
   <i class="fa fa-plus"></i>
   Nouveau departement
 <% end %>
-<h1 class="m-b-40">Départements</h1>
+<h1 class="m-b-40">
+  <%= link_to parametre_localisation_path do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Départements</h1>
 
 <div class="row">
   <div class="col-lg-9">
@@ -12,7 +16,7 @@
         <thead>
         <tr>
           <th>Name</th>
-          <th>Ville</th>
+          <th>Région</th>
           <th colspan="3"></th>
         </tr>
         </thead>
@@ -20,7 +24,7 @@
         <% @departements.each do |departement| %>
           <tr>
             <td><%= departement.name %></td>
-            <td><%= departement.ville.name %></td>
+            <td><%= departement.region.name %></td>
             <td><%= link_to 'Show', departement %></td>
             <td><%= link_to 'Edit', edit_departement_path(departement) %></td>
             <td><%= link_to 'Destroy', departement, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -19,4 +19,9 @@ class ParametreController < ApplicationController
   def arrondissement
 
   end
+
+  def admin
+    @admin = Admin.all
+    #pour afficher les administrateurs de la plateforme
+  end
 end

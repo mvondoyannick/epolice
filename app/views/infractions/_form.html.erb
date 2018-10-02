@@ -33,8 +33,20 @@
       </div>
       <div class="card-body card-block">
         <div class="form-group">
-          <label for="company" class=" form-control-label">Territoire d'application</label>
-          <%= f.association :ville, label: false, prompt: 'Selectionner la zone d application' %>
+          <label for="company" class=" form-control-label">Région d'application</label>
+          <%= f.association :region, label: false, prompt: 'Selectionner la zone/région d application', selected: 'Centre' %>
+        </div>
+      </div>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Departement d'application</label>
+          <%= f.association :departement, label: false, prompt: 'Selectionner la zone/département d application', selected: 'Mfoundi' %>
+        </div>
+      </div>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Arrondissement d'application</label>
+          <%= f.association :arrondissement, label: false, prompt: 'Selectionner la zone/arrondissement d application', selected: 'Yaounde V' %>
         </div>
       </div>
       <div class="card-footer">

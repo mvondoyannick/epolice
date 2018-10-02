@@ -1,5 +1,6 @@
 class Departement < ApplicationRecord
-  belongs_to :ville
   has_many :commissariat
-  validates :name, presence: true, uniqueness: true
+  has_many :infraction
+  belongs_to :region
+  validates :name, presence: true, uniqueness: {message: 'Erreur, %{value} existe déja.'}
 end

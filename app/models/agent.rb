@@ -11,9 +11,12 @@ class Agent < ApplicationRecord
 
 	validates_presence_of :name, presence: true
 	validates_presence_of :age, presence: true
+	validates :matricule, presence: {message: 'Merci de fournir un matricule'}, uniqueness: {message: '#{value} existe deja'}
+	validates :sexe, presence: {message: 'merci de selectionner un sexe'}
+	validates :phone, presence: {message: 'Merci de fournir le numéro de téléphone'}, uniqueness: {message: '#{} semble déja etre utilisé'}
 
 	#pour les villes d'affectations
-	belongs_to :ville
+	belongs_to :region
 
 
 	#ajout d'activeStorage pour une seule image
