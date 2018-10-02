@@ -1,99 +1,147 @@
 <% content_for(:title, 'DASHBOARD ADMINISTRATION')%>
-<div class="container">
-  <section class="hero is-danger">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          E-POLICE ADMIN 2.0
-        </h1>
-        <h2 class="subtitle">
-          Interface d'administration de la plateforme E-POLICE
-        </h2>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><%= full_title(yield :title)%></title>
+  <!-- Fontfaces CSS-->
+  <%= stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/font-awesome-5/css/fontawesome-all.min.css', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/font-awesome-4.7/css/font-awesome.min.css', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/mdi-font/css/material-design-iconic-font.min.css', 'data-turbolinks-track': 'reload' %>
+
+
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/css/font-face.css' %>
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/css/theme.css' %>
+
+
+  <!-- Main CSS-->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <div class="container">
+    <!-- MAIN CONTENT-->
+    <div class="main-content">
+      <div class="section__content section__content--p30">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <%= link_to image_tag('bg-title-01.jpg', class: 'card-img-top'), parametre_index_path %>
+                <div class="card-body">
+                  <h4 class="card-title mb-3">
+                    <%= fa_icon 'cogs' %>&nbsp;Parametrage de la plateforme
+                  </h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <%= link_to image_tag('bg-title-01.jpg', class: 'card-img-top'), "#collapseExample", 'data-toggle': 'collapse', 'aria-expanded': false, 'aria-controls': 'collapseExample', 'role': 'button' %>
+                <div class="card-body">
+                  <h4 class="card-title mb-3">Alertes</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                  </p>
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                      <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action active">
+                          Selectionner la région
+                        </button>
+                        <% Region.all.each do |region| %>
+                          <button type="button" class="list-group-item list-group-item-action">
+                            <%= fa_icon 'rocket' %>&nbsp;<%= link_to region.name, gestion_alerte_alertes_all_path %>
+                          </button>
+                        <% end %>
+                        <button type="button" class="list-group-item list-group-item-action">
+                          <%= fa_icon 'rocket' %>&nbsp;<%= link_to 'Toutes les régions', "#" %>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <%= link_to image_tag('bg-title-01.jpg', class: 'card-img-top'), "#collapseAlertes", 'data-toggle': 'collapse', 'aria-expanded': false, 'aria-controls': 'collapseAlertesConstats', 'role': 'button' %>
+                <div class="card-body">
+                  <h4 class="card-title mb-3">Contraventions</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                  </p>
+                  <div class="collapse" id="collapseAlertes">
+                    <div class="card card-body">
+                      <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action active">
+                          Selectionner la région
+                        </button>
+                        <% Region.all.each do |region| %>
+                          <button type="button" class="list-group-item list-group-item-action">
+                            <%= fa_icon 'rocket' %>&nbsp;<%= link_to region.name, gestion_constat_all_path %>
+                          </button>
+                        <% end %>
+                        <button type="button" class="list-group-item list-group-item-action">
+                          <%= fa_icon 'rocket' %>&nbsp;<%= link_to 'Toutes les régions', "#" %>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <%= link_to image_tag('bg-title-01.jpg', class: 'card-img-top'), "#collapseConstats", 'data-toggle': 'collapse', 'aria-expanded': false, 'aria-controls': 'collapseConstats', 'role': 'button' %>
+                <div class="card-body">
+                  <h4 class="card-title mb-3">Constats</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                  </p>
+                  <div class="collapse" id="collapseConstats">
+                    <div class="card card-body">
+                      <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action active">
+                          Selectionner la région
+                        </button>
+                        <% Region.all.each do |region| %>
+                          <button type="button" class="list-group-item list-group-item-action">
+                            <%= fa_icon 'rocket' %>&nbsp;<%= link_to region.name, gestion_alerte_alertes_all_path %>
+                          </button>
+                        <% end %>
+                        <button type="button" class="list-group-item list-group-item-action">
+                          <%= fa_icon 'rocket' %>&nbsp;<%= link_to 'Toutes les régions', "#" %>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <%= link_to image_tag('bg-title-01.jpg', class: 'card-img-top'), "#collapseConstats", 'data-toggle': 'collapse', 'aria-expanded': false, 'aria-controls': 'collapseConstats', 'role': 'button' %>
+                <div class="card-body">
+                  <h4 class="card-title mb-3">ReadMe</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">Bienvenue</h1>
-      <h2 class="subtitle">
-        Connecté en tantque : <%=current_admin.email %>.
-      </h2>
-      <br>
-      <br>
-      <div class="columns">
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <header class="card-header">
-              <p class="card-header-title">
-                <%= link_to 'Acceder au service', access_admin_path, class: 'button is-link is-outlined'  %>
-              </p>
-              <a href="#" class="card-header-icon" aria-label="more options">
-      <span class="icon">
-        <i class="fa fa-angle-down" aria-hidden="true"></i>
-      </span>
-              </a>
-            </header>
-            <div class="card-content">
-              <div class="content">
+  </div>
 
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <header class="card-header">
-              <p class="card-header-title">
-                <%= link_to 'Mon compte', nil, class: 'button is-link is-outlined' %>
-              </p>
-              <a href="#" class="card-header-icon" aria-label="more options">
-      <span class="icon">
-        <i class="fa fa-angle-down" aria-hidden="true"></i>
-      </span>
-              </a>
-            </header>
-            <div class="card-content">
-              <div class="content">
+</body>
 
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <header class="card-header">
-              <p class="card-header-title">
-                <%= link_to 'Se déconnecter du service', destroy_admin_session_path, method: :delete , class: 'button is-danger is-outlined' %>
-              </p>
-              <a href="#" class="card-header-icon" aria-label="more options">
-      <span class="icon">
-        <i class="fa fa-angle-down" aria-hidden="true"></i>
-      </span>
-              </a>
-            </header>
-            <div class="card-content">
-              <div class="content">
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
+</html>

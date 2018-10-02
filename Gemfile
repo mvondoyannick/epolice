@@ -34,7 +34,7 @@ gem 'simple_form'
 #Adding bootstrap
 #gem 'bootstrap', '~> 4.0'
 #adding jquery-rails
-gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'jquery-rails'
 #for xls generation file
 #gem 'axlsx_rails'
 # using PDF generate with prawn

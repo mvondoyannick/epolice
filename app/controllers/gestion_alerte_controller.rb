@@ -1,20 +1,17 @@
 class GestionAlerteController < ApplicationController
-
+  layout 'fylo'
   #retourne toutes les alertes de ce jour
   def today
     @today = Alerte.where(created_at: Time.now.beginning_of_day..Time.now.end_of_day).order(created_at: :desc).all
     #@today = Alerte.where(created_at: Time.now.beginning_of_day..Time.now.end_of_day, ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc).all
-    render layout: 'fylo'
   end
 
   def week
     @week = Alerte.where(created_at: 7.days.ago..Date.tomorrow).order(created_at: :desc)
-    render layout: 'fylo'
   end
 
   def mounth
     @mois = Alerte.where(created_at: 30.days.ago..Date.tomorrow).order(created_at: :desc)
-    render layout: 'fylo'
   end
 
   #Affiche touts les points sur une carte leafleft
@@ -27,8 +24,6 @@ class GestionAlerteController < ApplicationController
       @cartography = Alerte.where(created_at: id.days.ago..Date.today).order(created_at: :desc)
       #@cartography = Alerte.where(created_at: id.days.ago..Date.today, ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc)
     end
-    
-    render layout: 'fylo'
   end
 
   def region

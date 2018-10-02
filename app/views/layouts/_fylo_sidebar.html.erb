@@ -11,7 +11,7 @@
         <img src="https://colorlib.com/polygon/cooladmin/images/icon/avatar-big-01.jpg" alt="John Doe" />
       </div>
       <h4 class="name"><%= current_admin.email %></h4>
-      <a href="#"><%= link_to 'Se déconnecter', root_path %> </a>
+      <a href="#"><%= link_to 'Se déconnecter', destroy_admin_session_path, method: :delete %> </a>
     </div>
     <nav class="navbar-sidebar2">
       <ul class="list-unstyled navbar__list">

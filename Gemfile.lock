@@ -272,7 +272,7 @@ DEPENDENCIES
   groupdate
   httparty
   jbuilder (~> 2.5)
-  jquery-rails (~> 4.3, >= 4.3.1)
+  jquery-rails
   jwt
   leaflet-rails
   mini_magick
