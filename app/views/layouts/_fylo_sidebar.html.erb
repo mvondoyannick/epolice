@@ -15,32 +15,6 @@
     </div>
     <nav class="navbar-sidebar2">
       <ul class="list-unstyled navbar__list">
-        <li class="active has-sub">
-          <a class="js-arrow" href="#">
-            <i class="fas fa-tachometer-alt"></i>Administration
-            <span class="arrow">
-                  <i class="fas fa-angle-down"></i>
-              </span>
-          </a>
-          <ul class="list-unstyled navbar__sub-list js-sub-list">
-            <li>
-              <a href="index.html">
-                <i class="fas fa-tachometer-alt"></i>Dashboard 1</a>
-            </li>
-            <li>
-              <a href="index2.html">
-                <i class="fas fa-tachometer-alt"></i>Dashboard 2</a>
-            </li>
-            <li>
-              <a href="index3.html">
-                <i class="fas fa-tachometer-alt"></i>Dashboard 3</a>
-            </li>
-            <li>
-              <a href="index4.html">
-                <i class="fas fa-tachometer-alt"></i>Dashboard 4</a>
-            </li>
-          </ul>
-        </li>
         <li>
           <%= link_to gestion_alerte_unresolve_path do %>
             <i class="fas fa-chart-bar"></i>
@@ -78,69 +52,9 @@
           </ul>
         </li>
         <li class="has-sub">
-          <%= link_to access_partner_path, class: 'js-arrow' do  %>
-            <i class="fas fa-copy"></i>
-            Partenaires
-          <% end %>
-        </li>
-        <li class="has-sub">
-          <a class="js-arrow" href="#">
-            <i class="fas fa-desktop"></i>Statistiques et analyses
-            <span class="arrow">
-                <i class="fas fa-angle-down"></i>
-            </span>
-          </a>
-          <ul class="list-unstyled navbar__sub-list js-sub-list">
-            <li>
-              <a href="button.html">
-                <i class="fab fa-flickr"></i>Button</a>
-            </li>
-            <li>
-              <a href="badge.html">
-                <i class="fas fa-comment-alt"></i>Badges</a>
-            </li>
-            <li>
-              <a href="tab.html">
-                <i class="far fa-window-maximize"></i>Tabs</a>
-            </li>
-            <li>
-              <a href="card.html">
-                <i class="far fa-id-card"></i>Cards</a>
-            </li>
-            <li>
-              <a href="alert.html">
-                <i class="far fa-bell"></i>Alerts</a>
-            </li>
-            <li>
-              <a href="progress-bar.html">
-                <i class="fas fa-tasks"></i>Progress Bars</a>
-            </li>
-            <li>
-              <a href="modal.html">
-                <i class="far fa-window-restore"></i>Modals</a>
-            </li>
-            <li>
-              <a href="switch.html">
-                <i class="fas fa-toggle-on"></i>Switchs</a>
-            </li>
-            <li>
-              <a href="grid.html">
-                <i class="fas fa-th-large"></i>Grids</a>
-            </li>
-            <li>
-              <a href="fontawesome.html">
-                <i class="fab fa-font-awesome"></i>FontAwesome</a>
-            </li>
-            <li>
-              <a href="typo.html">
-                <i class="fas fa-font"></i>Typography</a>
-            </li>
-          </ul>
-        </li>
-        <li class="has-sub">
           <%= link_to parametre_index_path, class: 'js-arrow' do  %>
             <i class="fas fa-cogs"></i>
-            Parametres
+            Fichiers
           <% end %>
         </li>
       </ul>
