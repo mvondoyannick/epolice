@@ -24,8 +24,7 @@ class Api::ConvocationsController < ApplicationController
       render json: {
         status: :found,
         message: token,
-        ville: token[0].ville.name,
-        ville_id: token[0].ville_id,
+        ville_id: token[0].region_id,
         apikey: SecureRandom.hex(10),
         code: 200,
         cookies:  {value: SecureRandom.hex(10), expires: 1.hour.from_now }

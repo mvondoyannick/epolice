@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/agents/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/agents/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/agents/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/agents/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/parametre/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/parametre/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/roles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/roles_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/admin.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/admin.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/convocation.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/convocation.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/role.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/role.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/parametre/admin.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/parametre/admin.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/roles/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/roles/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -56,7 +61,7 @@
     <session id="-1861222213">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.112" value="1" />
@@ -65,6 +70,7 @@
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.47" value="2" />
+          <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.49" value="3" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.52" value="1" />
@@ -78,7 +84,7 @@
           <entry key="project.open.time.74" value="1" />
           <entry key="project.open.time.78" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="25" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -89,13 +95,13 @@
           <entry key="convocations" value="1" />
           <entry key="css" value="9" />
           <entry key="dot" value="1" />
-          <entry key="erb" value="415" />
+          <entry key="erb" value="416" />
           <entry key="html" value="11" />
           <entry key="infractions" value="1" />
           <entry key="js" value="15" />
           <entry key="pid" value="2" />
           <entry key="rake" value="1" />
-          <entry key="rb" value="330" />
+          <entry key="rb" value="337" />
           <entry key="rnc" value="1" />
           <entry key="scss" value="3" />
           <entry key="sql" value="1" />
@@ -112,9 +118,9 @@
           <entry key="HTML" value="11" />
           <entry key="JavaScript" value="15" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="RHTML" value="415" />
+          <entry key="RHTML" value="416" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="346" />
+          <entry key="Ruby" value="353" />
           <entry key="SCSS" value="3" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="5" />
@@ -125,10 +131,10 @@
           <entry key="Gemfile" value="250" />
           <entry key="coffee" value="74" />
           <entry key="css" value="296" />
-          <entry key="erb" value="48815" />
+          <entry key="erb" value="49283" />
           <entry key="js" value="225" />
           <entry key="pid" value="1" />
-          <entry key="rb" value="23759" />
+          <entry key="rb" value="23817" />
           <entry key="scss" value="52" />
           <entry key="txt" value="381" />
           <entry key="yml" value="145" />
@@ -140,8 +146,8 @@
           <entry key="CoffeeScript" value="74" />
           <entry key="JavaScript" value="225" />
           <entry key="PLAIN_TEXT" value="382" />
-          <entry key="RHTML" value="48815" />
-          <entry key="Ruby" value="24009" />
+          <entry key="RHTML" value="49283" />
+          <entry key="Ruby" value="24067" />
           <entry key="SCSS" value="52" />
           <entry key="YAML" value="145" />
         </counts>
@@ -153,35 +159,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/parametre/admin.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+            <state relative-caret-position="374">
+              <caret line="86" column="59" selection-start-line="86" selection-start-column="59" selection-end-line="86" selection-end-column="59" />
+              <folding>
+                <element signature="e#1984#1990#0#HTML" expanded="true" />
+                <element signature="n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/infractions_controller.rb">
+        <entry file="file://$PROJECT_DIR$/app/models/role.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="44">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/parametre_controller.rb">
+        <entry file="file://$PROJECT_DIR$/app/models/admin.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/agent.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="176">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -189,44 +190,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/agents_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="968">
+            <state relative-caret-position="500">
               <caret line="71" column="71" selection-start-line="71" selection-start-column="71" selection-end-line="71" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/agents/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/agents/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="47" column="70" selection-start-line="47" selection-start-column="70" selection-end-line="47" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/parametre/index.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="71" selection-start-column="71" selection-end-column="71" />
+            <state relative-caret-position="153">
+              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/controllers/roles_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1232">
-              <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+            <state relative-caret-position="44">
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/roles/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/parametre_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-71">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/convocation.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -234,7 +244,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/agents/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
+            <state relative-caret-position="748">
               <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
             </state>
           </provider>
@@ -244,7 +254,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ecentr</find>
       <find>top</find>
       <find>rapORT</find>
       <find>rap</find>
@@ -274,6 +283,7 @@
       <find>root</find>
       <find>service</find>
       <find>eve</find>
+      <find>render layout: 'admin'</find>
     </findStrings>
     <replaceStrings>
       <replace>%=</replace>
@@ -290,12 +300,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/pieceretenus_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/pieceretenus/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/pieceretenus/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/pieceretenus/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/commissariats/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/commissariat.rb" />
         <option value="$PROJECT_DIR$/app/controllers/commissariats_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/groupements_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/zonecouverturemotifs/index.html.erb" />
@@ -328,7 +332,6 @@
         <option value="$PROJECT_DIR$/app/views/agents/show.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/parametre_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/parametre/admin.html.erb" />
         <option value="$PROJECT_DIR$/app/models/departement.rb" />
         <option value="$PROJECT_DIR$/app/views/infractions/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/infractions_controller.rb" />
@@ -341,6 +344,13 @@
         <option value="$PROJECT_DIR$/app/views/agents/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" />
         <option value="$PROJECT_DIR$/app/views/parametre/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/convocation.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/roles_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/roles/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/parametre/admin.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/role.rb" />
+        <option value="$PROJECT_DIR$/app/models/admin.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" />
       </list>
     </option>
   </component>
@@ -373,7 +383,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -390,210 +399,20 @@
               <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
               <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="font-awesome-4.7" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
               <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="sessions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="devise" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="registrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="sessions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="migrate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="animsition" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap-4.1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap-progressbar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="chartjs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="circle-progress" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="mdi-font" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="perfect-scrollbar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="progressbar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="select2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="slick" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="smk-accordion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="sweetalert" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="vector-map" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="wow" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -601,7 +420,7 @@
     <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
-    <property name="SearchEverywhereHistoryKey" value="_fy&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_fylo_sidebar.html.erb&#10;agent&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/agents_controller.rb&#10;_fyl&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_fylo_sidebar.html.erb&#10;para&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;age,t&#9;null&#9;null&#10;infra&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/infraction.rb&#10;arrondi&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/arrondissement.rb&#10;infraction&#9;null&#9;null&#10;routes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;agentcon&#9;null&#9;null&#10;region&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/region.rb&#10;param&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;ville&#9;null&#9;null&#10;departe&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/departement.rb&#10;departem&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/departements_controller.rb&#10;login.html.erb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/template/login2.html.erb&#10;login.html&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/login.html.erb&#10;gestion_alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_alerte_controller.rb&#10;application.sc&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.scss&#10;gemf&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;gemfil&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;application.&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/javascripts/application.js&#10;fylo.html&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/fylo.html.erb&#10;acces&#9;null&#9;null&#10;arrond&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/arrondissement.rb&#10;routes*&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;parame&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;commi&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/commissariats_controller.rb&#10;service&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/service.rb&#10;type&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/type.rb&#10;typecontr&#9;null&#9;null&#10;groupe&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/groupements_controller.rb&#10;zone&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/zonecouverturemotifs_controller.rb&#10;comm&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/commissariats_controller.rb&#10;grou&#9;null&#9;null&#10;depa&#9;null&#9;null&#10;commis&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/commissariats_controller.rb&#10;piece&#9;null&#9;null&#10;age&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/agent.rb&#10;agen&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/agent.rb&#10;unite&#9;null&#9;null&#10;vill&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/ville.rb&#10;infr&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/infractions_controller.rb&#10;infrac&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/infractions_controller.rb&#10;commissa&#9;null&#9;null&#10;assets&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb&#10;fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/fylo.html.erb&#10;affect&#9;null&#9;null&#10;alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;grvpc&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="agent&#9;null&#9;null&#10;admin&#9;null&#9;null&#10;role&#9;null&#9;null&#10;parametr&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;convo&#9;null&#9;null&#10;_fy&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_fylo_sidebar.html.erb&#10;_fyl&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_fylo_sidebar.html.erb&#10;para&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;age,t&#9;null&#9;null&#10;infra&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/infraction.rb&#10;arrondi&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/arrondissement.rb&#10;infraction&#9;null&#9;null&#10;routes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;agentcon&#9;null&#9;null&#10;region&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/region.rb&#10;param&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;ville&#9;null&#9;null&#10;departe&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/departement.rb&#10;departem&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/departements_controller.rb&#10;login.html.erb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/template/login2.html.erb&#10;login.html&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/login.html.erb&#10;gestion_alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_alerte_controller.rb&#10;application.sc&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.scss&#10;gemf&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;gemfil&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;application.&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/javascripts/application.js&#10;fylo.html&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/fylo.html.erb&#10;acces&#9;null&#9;null&#10;arrond&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/arrondissement.rb&#10;routes*&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;parame&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;commi&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/commissariats_controller.rb&#10;service&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/service.rb&#10;type&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/type.rb&#10;typecontr&#9;null&#9;null&#10;groupe&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/groupements_controller.rb&#10;zone&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/zonecouverturemotifs_controller.rb&#10;comm&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/commissariats_controller.rb&#10;grou&#9;null&#9;null&#10;depa&#9;null&#9;null&#10;commis&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/commissariats_controller.rb&#10;piece&#9;null&#9;null&#10;age&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/agent.rb&#10;agen&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/agent.rb&#10;unite&#9;null&#9;null&#10;vill&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/ville.rb&#10;infr&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/infractions_controller.rb&#10;infrac&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/infractions_controller.rb&#10;commissa&#9;null&#9;null&#10;assets&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -747,18 +566,19 @@
       <workItem from="1538126363115" duration="11679000" />
       <workItem from="1538139005127" duration="24350000" />
       <workItem from="1538383269006" duration="36740000" />
-      <workItem from="1538492027523" duration="16805000" />
+      <workItem from="1538492027523" duration="17425000" />
+      <workItem from="1538557166064" duration="4387000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="434853000" />
+    <option name="totallyTimeSpent" value="439860000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1716418" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17324094" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -771,7 +591,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.08785249" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.1637744" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.37635574" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -851,48 +671,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/service.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/services/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/services/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" selection-start-column="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/commissariats_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1562">
-          <caret line="71" column="116" selection-start-line="71" selection-start-column="116" selection-end-line="71" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/commissariats/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/system/groupements_test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/commissariats/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -939,13 +717,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -992,18 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
           <caret line="145" column="64" selection-start-line="145" selection-start-column="64" selection-end-line="145" selection-end-column="64" />
-          <folding>
-            <element signature="e#1372#1378#0#HTML" expanded="true" />
-            <element signature="e#1567#1573#0#HTML" expanded="true" />
-            <element signature="e#2995#3001#0#HTML" expanded="true" />
-            <element signature="e#3276#3282#0#HTML" expanded="true" />
-            <element signature="e#4251#4257#0#HTML" expanded="true" />
-            <element signature="e#4885#4891#0#HTML" expanded="true" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#4744#4750#0#HTML" expanded="true" />
-            <element signature="e#6492#6498#0#HTML" expanded="true" />
-            <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1140,38 +900,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/agent.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/agents/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/infractions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
+        <state relative-caret-position="1672">
           <caret line="76" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/parametre/admin.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/agents/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="47" column="70" selection-start-line="47" selection-start-column="70" selection-end-line="47" selection-end-column="70" />
         </state>
       </provider>
     </entry>
@@ -1182,10 +914,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/agents_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/agents/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="968">
-          <caret line="71" column="71" selection-start-line="71" selection-start-column="71" selection-end-line="71" selection-end-column="71" />
+        <state relative-caret-position="1034">
+          <caret line="47" column="70" selection-start-line="47" selection-start-column="70" selection-end-line="47" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/parametre/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1196,17 +935,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/agents/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/convocation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/parametre_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
+        <state relative-caret-position="-71">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/parametre/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/roles/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="71" selection-start-column="71" selection-end-column="71" />
+        <state relative-caret-position="308">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/roles_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/parametre/admin.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="86" column="59" selection-start-line="86" selection-start-column="59" selection-end-line="86" selection-end-column="59" />
+          <folding>
+            <element signature="e#1984#1990#0#HTML" expanded="true" />
+            <element signature="n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/role.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/admin.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/agent.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/agents_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="71" column="71" selection-start-line="71" selection-start-column="71" selection-end-line="71" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
         </state>
       </provider>
     </entry>

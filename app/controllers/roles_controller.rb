@@ -1,28 +1,24 @@
 class RolesController < ApplicationController
   before_action :set_role, only: [:show, :edit, :update, :destroy]
-
+  layout 'fylo'
   # GET /roles
   # GET /roles.json
   def index
     @roles = Role.all
-    render layout: 'admin'
   end
 
   # GET /roles/1
   # GET /roles/1.json
   def show
-    render layout: 'admin'
   end
 
   # GET /roles/new
   def new
     @role = Role.new
-    render layout: 'admin'
   end
 
   # GET /roles/1/edit
   def edit
-    render layout: 'admin'
   end
 
   # POST /roles
