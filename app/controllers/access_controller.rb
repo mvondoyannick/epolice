@@ -282,5 +282,39 @@ class AccessController < ApplicationController
     render layout: 'fylo'
   end
 
+  #for test
+  def open
+
+  end
+
+  def systeme
+    render layout: 'fylo'
+  end
+
+  #module de gestion des langues
+  def lange
+    @langue = Langue.new
+    render layout: 'fylo'
+  end
+
+  def paiement
+
+  end
+
+  #importation des parametres
+  def importation
+    render layout: 'fylo'
+  end
+
+  #exportation des documents
+  def exportation
+    render layout: 'fylo'
+  end
+
+  #configuration des inportation-exportation
+  def setup_import_export
+    render layout: 'fylo'
+  end
+
 
 end

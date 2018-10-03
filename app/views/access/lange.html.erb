@@ -1,0 +1,87 @@
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Langues et communication
+</h1>
+<div class="row">
+  <div class="col-lg-6 m-b-40">
+    <div class="card">
+      <div class="card-header">
+        <strong>Selectionner la langue</strong>
+      </div>
+      <div class="card-body card-block">
+        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="select" class=" form-control-label">Selectionner la langue</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= collection_select(:post, :langue_id, Langue.all, :id, :name, {class: 'form-control'}) %>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal">
+        <i class="fa fa-save"></i>
+        &nbsp;Enregistrer
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top: 150px;">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Modifications enregistrées avec succes
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">&nbsp;</button>
+              <button type="button" class="btn btn-primary">Terminer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <!-- DATA TABLE -->
+    <h3 class="title-5 m-b-35">Langues actuellement activées</h3>
+    <div class="table-responsive table-responsive-data2">
+      <table class="table table-data2">
+        <thead>
+        <tr>
+          <th>
+            <label class="au-checkbox">
+              <input type="checkbox">
+              <span class="au-checkmark"></span>
+            </label>
+          </th>
+          <th>name</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% Langue.all.each do |lang| %>
+          <tr class="tr-shadow">
+            <td>
+              <label class="au-checkbox">
+                <input type="checkbox">
+                <span class="au-checkmark"></span>
+              </label>
+            </td>
+            <td><%= lang.name %></td>
+          </tr>
+          <tr class="spacer"></tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

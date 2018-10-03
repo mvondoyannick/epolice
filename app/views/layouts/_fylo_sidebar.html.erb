@@ -10,50 +10,32 @@
         <%= image_tag('img/avatar.png') %>
         <img src="https://colorlib.com/polygon/cooladmin/images/icon/avatar-big-01.jpg" alt="John Doe" />
       </div>
-      <h4 class="name"><%= current_admin.email %></h4>
+      <h4 class="name"><%= current_admin.name %>&nbsp;<%= current_admin.prenom %></h4>
       <a href="#"><%= link_to 'Se déconnecter', destroy_admin_session_path, method: :delete %> </a>
     </div>
     <nav class="navbar-sidebar2">
       <ul class="list-unstyled navbar__list">
         <li>
           <%= link_to gestion_alerte_unresolve_path do %>
-            <i class="fas fa-chart-bar"></i>
+            <%= fa_icon 'google' %>
             Alertes
           <% end %>
         </li>
         <li>
           <%= link_to gestion_contraventions_contraventions_all_path do %>
-            <i class="fas fa-shopping-basket"></i>
+            <%= fa_icon 'shopping-basket' %>
             Contraventions
           <% end %>
         </li>
-        <li class="has-sub">
-          <%= link_to gestion_constat_all_path, class: 'js-arrow' do %>
-            <i class="fas fa-trophy"></i>
+        <li>
+          <%= link_to gestion_constat_all_path do %>
+            <%= fa_icon 'car' %>
             Constats
           <% end %>
-          <ul class="list-unstyled navbar__sub-list js-sub-list">
-            <li>
-              <a href="table.html">
-                <i class="fas fa-table"></i>Partenaires</a>
-            </li>
-            <li>
-              <a href="form.html">
-                <i class="far fa-check-square"></i>Statistiques</a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fas fa-calendar-alt"></i>Calendar</a>
-            </li>
-            <li>
-              <a href="map.html">
-                <i class="fas fa-map-marker-alt"></i>Maps</a>
-            </li>
-          </ul>
         </li>
         <li class="has-sub">
           <%= link_to parametre_index_path, class: 'js-arrow' do  %>
-            <i class="fas fa-cogs"></i>
+            <%= fa_icon 'cogs' %>
             Fichiers
           <% end %>
         </li>

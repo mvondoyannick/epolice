@@ -2,11 +2,58 @@
 <p id="notice"><%= notice %></p>
 
 <h1 class="m-b-40">
-  <%= link_to parametre_index_path do %>
+  <%= link_to access_open_path do %>
     <i class="fa fa-arrow-left"></i>
   <% end %>
-  Administrateur e-Police Plateforme
+  Gestion des utilisateurs
 </h1>
+
+<div class="row">
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Administrateurs</h5>
+        <h6 class="card-subtitle mb-2 text-muted">ajouter un utilsateur administrateur</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Consulter', access_systeme_path, class: 'card-link' %>
+        <a href="#" class="card-link">Ajouter</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Partenaires</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Ajouter un utilisateur partenaire</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Consulter', access_systeme_path, class: 'card-link' %>
+        <a href="#" class="card-link">Ajouter</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Centre de recouvrement</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Ajouter un utilisateur de recouvremenet</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Consulter', access_systeme_path, class: 'card-link' %>
+        <a href="#" class="card-link">Ajouter</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Assurances</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Configuration des assurances</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Consulter', access_systeme_path, class: 'card-link' %>
+        <a href="#" class="card-link">Ajouter</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="row">
   <!-- USER DATA-->
@@ -70,7 +117,57 @@
               <%= admin.phone %>
             </td>
             <td>
-              <%= link_to admin.role_id, nil, class: 'role admin' %>
+              <%= link_to admin.role.name, nil, class: "role #{admin.role.name}" %>
+            </td>
+            <td>
+              <div class="rs-select2--trans rs-select2--sm">
+                <select class="js-select2" name="property">
+                  <option selected="selected">Full Control</option>
+                  <option value="">Post</option>
+                  <option value="">Watch</option>
+                </select>
+                <div class="dropDownSelect2"></div>
+              </div>
+            </td>
+            <td>
+              <div class="rs-select2--trans rs-select2--sm">
+                <select class="js-select2" name="property">
+                  <option selected="selected">Bloquer</option>
+                  <option value="">Changer MDP</option>
+                  <option value="">Envoyer un message</option>
+                  <option value="">Supprimer</option>
+                </select>
+                <div class="dropDownSelect2"></div>
+              </div>
+            </td>
+            <td>
+              <span class="more">
+                  <i class="zmdi zmdi-more"></i>
+              </span>
+            </td>
+          </tr>
+        <% end %>
+        <% Metropoli.all.each do |admin| %>
+          <tr>
+            <td>
+              <label class="au-checkbox">
+                <input type="checkbox">
+                <span class="au-checkmark"></span>
+              </label>
+            </td>
+            <td>
+              <div class="table-data__info">
+                <h6>No Names for now</h6>
+                <span>
+                    <%= link_to admin.email, nil %>
+                </span>
+              </div>
+            </td>
+            <td>
+              <%= admin.phone %>
+            </td>
+            <td>
+              <%= link_to 'Centre recouvrement', nil, class: "role user" %>
             </td>
             <td>
               <div class="rs-select2--trans rs-select2--sm">

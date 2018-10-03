@@ -24,4 +24,8 @@ class ParametreController < ApplicationController
     @admin = Admin.all
     #pour afficher les administrateurs de la plateforme
   end
+
+  def add_user
+    
+  end
 end

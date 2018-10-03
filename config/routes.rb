@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :paiementsolutions
+  resources :langues
   resources :groupements
   resources :arrondissements
   resources :regions
@@ -10,6 +12,14 @@ Rails.application.routes.draw do
   get 'parametre/arrondissement'
   get 'parametre/localisation'
   get 'parametre/admin'
+  get 'access/open'
+  get 'access/systeme'
+  get 'parametre/access/lange', to: 'access#lange' #pour la langue
+  get 'parametre/access/paiement', to: 'access#paiement' #pour les solution de paiement
+  get 'parametre/access/importer/import', to: 'access#importation' #pour importer les fichiers
+  get 'parametre/access/exporter/export', to: 'access#exportation' #pour exporter les fichiers
+  get 'parametre/access/setup/import_export', to: 'access#setup_import_export' #pour la configuration de import/export
+  get 'parametre/add_user'
   resources :unites
   resources :postepolices
   get 'access/partner'

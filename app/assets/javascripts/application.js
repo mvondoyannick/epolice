@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require jquery3
-//= require popper
 //= require bootstrap
+//= require popper
 //= require Chart.bundle
 //= require chartkick
 //= require leaflet

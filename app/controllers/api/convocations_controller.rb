@@ -26,6 +26,7 @@ class Api::ConvocationsController < ApplicationController
         message: token,
         #ville: token[0].region.name,
         #ville_id: token[0].region_id,
+        image: '',
         apikey: SecureRandom.hex(10),
         code: 200,
         cookies:  {value: SecureRandom.hex(10), expires: 1.hour.from_now }
@@ -39,8 +40,7 @@ class Api::ConvocationsController < ApplicationController
 
     #on recherche l'ID
 
-
-    #ensuite on recherche sont token et le status de ce token
+    #ensuite on recherche son token et le status de ce token
   end
 
   #permet de verifier une contravention

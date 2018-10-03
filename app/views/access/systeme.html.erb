@@ -1,0 +1,98 @@
+<h1 class="m-b-40">
+  <%= link_to access_open_path do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Configuration systeme
+</h1>
+
+<div class="row">
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Langue et communication</h5>
+        <h6 class="card-subtitle mb-2 text-muted">ajouter ou modifier les langues</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Langues', parametre_access_lange_path, class: 'card-link' %>
+        <a href="#" class="card-link">Ajouter</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Solution de paiement</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Ajouter des solutions de paiements</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Consulter', paiementsolutions_path, class: 'card-link' %>
+        <%= link_to 'Ajouter', new_paiementsolution_path, class: 'card-link' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Apparence et personnalisation</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Customize your interface theme</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Configurer', nil, class: 'card-link' %>
+        <a href="#" class="card-link">&nbsp;</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Importation/exportation des données</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Importer/exporter des parametres</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Configurer', parametre_access_setup_import_export_path, class: 'card-link' %>
+        <%= link_to 'Importer', parametre_access_importer_import_path, class: 'card-link' %>
+        <%= link_to 'Exporter', parametre_access_exporter_export_path, class: 'card-link' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Impression</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Configuration des imprimantes</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Congifurer', nil, class: 'card-link' %>
+        <a href="#" class="card-link">&nbsp;</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Sauvegarde et restauration</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Sauvegarde et restauration de la plateforme</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Acceder', access_systeme_path, class: 'card-link' %>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Systeme et securité</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Configuration de la sécurité de la plateforme</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Configurer', access_systeme_path, class: 'card-link' %>
+        <a href="#" class="card-link">&nbsp;</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Modules et authorisation</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Gestion des modules de la plateforme</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Acceder', access_systeme_path, class: 'card-link' %>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+  </div>
+</div>

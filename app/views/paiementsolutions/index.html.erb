@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="m-b-40">
+  <%= link_to access_open_path do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Paiementsolutions
+</h1>
+<div class="row">
+  <div class="col-lg-9">
+    <div class="table-responsive table--no-card m-b-30">
+      <table class="table table-borderless table-striped table-earning">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Operator</th>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @paiementsolutions.each do |paiementsolution| %>
+          <tr>
+            <td><%= paiementsolution.name %></td>
+            <td><%= paiementsolution.operator %></td>
+            <td><%= link_to 'Show', paiementsolution %></td>
+            <td><%= link_to 'Edit', edit_paiementsolution_path(paiementsolution) %></td>
+            <td><%= link_to 'Destroy', paiementsolution, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<br>
+
+<%= link_to new_paiementsolution_path, class: 'btn btn-primary' do %>
+  <i class="fa fa-plus"></i>
+  Nouvelle solution de paiement
+<% end %>
