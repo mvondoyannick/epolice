@@ -311,6 +311,19 @@ class AccessController < ApplicationController
     render layout: 'fylo'
   end
 
+  #pour les parametres de la table selectionnée
+  def export_detail
+    table = params[:table].capitalize!
+    table = table.singularize
+
+    #on converti la chaine pour activeRecorde
+    model = table.constantize
+    #on retourne les enregistrements provenant de cette table
+
+    @table = model.all
+    render layout: 'fylo'
+  end
+
   #configuration des inportation-exportation
   def setup_import_export
     render layout: 'fylo'

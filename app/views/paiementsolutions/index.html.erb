@@ -12,6 +12,7 @@
       <table class="table table-borderless table-striped table-earning">
         <thead>
         <tr>
+          <th>Logo</th>
           <th>Name</th>
           <th>Operator</th>
           <th colspan="3"></th>
@@ -20,6 +21,7 @@
         <tbody>
         <% @paiementsolutions.each do |paiementsolution| %>
           <tr>
+            <td><%= image_tag(url_for(paiementsolution.image), size: 50) if paiementsolution.image.attached? %></td>
             <td><%= paiementsolution.name %></td>
             <td><%= paiementsolution.operator %></td>
             <td><%= link_to 'Show', paiementsolution %></td>
