@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/access/export_detail.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/access_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/access_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/paiementsolution.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/paiementsolution.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/access/exportation.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/exportation.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/sessions/create.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/sessions/create.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/paiementsolutions/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/paiementsolutions/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-    </list>
+    <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -209,7 +199,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/admin/sessions/create.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="53">
               <caret line="118" column="7" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="7" />
             </state>
           </provider>
@@ -587,18 +577,17 @@
       <workItem from="1538492027523" duration="17425000" />
       <workItem from="1538557166064" duration="34039000" />
       <workItem from="1538641385077" duration="1347000" />
-      <workItem from="1538662812880" duration="6624000" />
+      <workItem from="1538662812880" duration="6956000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="477483000" />
+    <option name="totallyTimeSpent" value="477815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20895523" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20895523" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -611,7 +600,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.08785249" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.38394794" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.81670284" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -1041,7 +1030,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/sessions/create.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
+        <state relative-caret-position="53">
           <caret line="118" column="7" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="7" />
         </state>
       </provider>
