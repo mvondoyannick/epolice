@@ -16,6 +16,15 @@ class Alerte < ApplicationRecord
   #ajout de active storage pour les fichiers
   has_one_attached :alertes
 
+  def self.to_csv
+    CSV.generate do |csv|
+      csv << column_names
+      all.each do |alerte|
+        csv << alerte.attributes.values_at(*column_names)
+      end
+    end
+  end
+
   private
   def init
     self.statu_id = Statu.last.id

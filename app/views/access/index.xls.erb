@@ -1,0 +1,16 @@
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Titre</th>
+    <th>Date</th>
+    <th>Agent</th>
+    <% @table.each do |table| %>
+      <tr>
+        <td><%= table.id %></td>
+        <td><%= table.titre %></td>
+        <td><%= table.created_at %></td>
+        <td><%= table.agent_id %></td>
+      </tr>
+    <% end %>
+  </tr>
+</table>

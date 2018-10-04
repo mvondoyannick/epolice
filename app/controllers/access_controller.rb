@@ -319,9 +319,19 @@ class AccessController < ApplicationController
     #on converti la chaine pour activeRecorde
     model = table.constantize
     #on retourne les enregistrements provenant de cette table
-
     @table = model.all
-    render layout: 'fylo'
+    respond_to do |format|
+      format.html do
+        @table
+        render layout: 'fylo'
+      end
+      format.json do
+        render json: @table
+      end
+      format.xls
+      format.csv {send_data @table.to_csv}
+      format.xls
+    end
   end
 
   #configuration des inportation-exportation
