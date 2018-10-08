@@ -13,10 +13,10 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Administrateurs</h5>
-        <h6 class="card-subtitle mb-2 text-muted">ajouter un utilsateur administrateur</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Utilsateur administrateur</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Consulter', access_systeme_path, class: 'card-link' %>
-        <a href="#" class="card-link">Ajouter</a>
+        <%= link_to 'Consulter', parametre_admins_admin_show_path, class: 'card-link' %>
+        <%= link_to 'Ajouter', nil, class: 'card-link' %>
       </div>
     </div>
   </div>
@@ -24,9 +24,9 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Partenaires</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Ajouter un utilisateur partenaire</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Agents partenaire</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Consulter', access_systeme_path, class: 'card-link' %>
+        <%= link_to 'Consulter', parametre_admins_member_show_path, class: 'card-link' %>
         <a href="#" class="card-link">Ajouter</a>
       </div>
     </div>
@@ -34,10 +34,10 @@
   <div class="col-lg-3">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Centre de recouvrement</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Ajouter un utilisateur de recouvremenet</h6>
+        <h5 class="card-title">Agent recouvrement</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Agent de recouvremenet</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Consulter', access_systeme_path, class: 'card-link' %>
+        <%= link_to 'Consulter', parametre_admins_metropolis_show_path, class: 'card-link' %>
         <a href="#" class="card-link">Ajouter</a>
       </div>
     </div>
@@ -46,9 +46,9 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Assurances</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Configuration des assurances</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Agent assurances</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Consulter', access_systeme_path, class: 'card-link' %>
+        <%= link_to 'Consulter', parametre_admins_assurance_show_path, class: 'card-link' %>
         <a href="#" class="card-link">Ajouter</a>
       </div>
     </div>
@@ -59,25 +59,7 @@
   <!-- USER DATA-->
   <div class="user-data m-b-30 col-sm-12">
     <h3 class="title-3 m-b-30">
-      <i class="zmdi zmdi-account-calendar"></i>user data</h3>
-    <div class="filters m-b-45">
-      <div class="rs-select2--dark rs-select2--md m-r-10 rs-select2--border">
-        <select class="js-select2" name="property">
-          <option selected="selected">All Properties</option>
-          <option value="">Products</option>
-          <option value="">Services</option>
-        </select>
-        <div class="dropDownSelect2"></div>
-      </div>
-      <div class="rs-select2--dark rs-select2--sm rs-select2--border">
-        <select class="js-select2 au-select-dark" name="time">
-          <option selected="selected">All Time</option>
-          <option value="">By Month</option>
-          <option value="">By Day</option>
-        </select>
-        <div class="dropDownSelect2"></div>
-      </div>
-    </div>
+      <i class="zmdi zmdi-account-calendar"></i>Données utilisateurs</h3>
     <div class="table-responsive table-data">
       <table class="table">
         <thead>

@@ -339,5 +339,30 @@ class AccessController < ApplicationController
     render layout: 'fylo'
   end
 
+  #ajout des utilisateur administrateurs
+  def admin_show
+    @user = Admin.all
+    render layout: 'fylo'
+  end
+
+
+  #ajout despartenaires
+  def member_show
+    @user = Member.all
+    render layout: 'fylo'
+  end
+
+  #ajout du personnel de metropolis
+  def metropolis_show
+    @user = Metropoli.all
+    render layout: 'fylo'
+  end
+
+  #ajout des assurances
+  def assurance_show
+    @user = Assurance.all
+    render layout: 'fylo'
+  end
+
 
 end

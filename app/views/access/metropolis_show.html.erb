@@ -1,0 +1,42 @@
+<%= link_to new_admin_registration_path, class: 'btn btn-primary m-b-40' do %>
+  <i class="fa fa-plus"></i>
+  Ajouter un agent de recouvrement
+<% end %>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Utilisateurs Administrateur
+</h1>
+
+<div class="row">
+  <div class="col-lg-12">
+    <h2 class="title-1 m-b-25">Administrateur enregistré</h2>
+    <div class="table-responsive table--no-card m-b-40">
+      <table class="table table-borderless table-striped table-earning">
+        <thead>
+        <tr>
+          <th>Email</th>
+          <th>Date ajout</th>
+          <th>Date de mise à jour</th>
+          <th>Téléphone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @user.each do |user| %>
+          <tr>
+            <td><%= user.email %></td>
+            <td><%= user.created_at %></td>
+            <td><%= user.updated_at %></td>
+            <td><%= user.phone %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%= link_to nil, class: 'btn btn-primary' do %>
+  <i class="fa fa-plus"></i>
+  Ajouter un agent de recouvrement
+<% end %>

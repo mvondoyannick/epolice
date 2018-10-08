@@ -20,7 +20,11 @@ Rails.application.routes.draw do
   get 'parametre/access/exporter/export/detail/:table', to: 'access#export_detail' #pour les details d'exportation
   get 'parametre/access/exporter/export', to: 'access#exportation' #pour exporter les fichiers
   get 'parametre/access/setup/import_export', to: 'access#setup_import_export' #pour la configuration de import/export
-  get 'parametre/add_user'
+  get 'parametre/add_user' #non terminer, perte du fil
+  get 'parametre/admins/admin/show', to: 'access#admin_show'
+  get 'parametre/admins/member/show', to: 'access#member_show'
+  get 'parametre/admins/metropolis/show', to: 'access#metropolis_show'
+  get 'parametre/admins/assurance/show', to: 'access#assurance_show'
   resources :unites
   resources :postepolices
   get 'access/partner'

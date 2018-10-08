@@ -260,6 +260,9 @@ class Api::ConvocationsController < ApplicationController
   #data who comme from ussd data plateform
   def ussd_data
     data = params[:data]
-    render plain: "Voici les données #{data}" if !data.nil?
+
+    #on fait le decoupage de la chaine de caractere suivant le caractere de delimitation
+    splited = data.split('@')
+    render plain: "Voici les données #{splited}" if !splited.nil?
   end
 end
