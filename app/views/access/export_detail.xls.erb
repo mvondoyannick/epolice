@@ -4,12 +4,19 @@
     <th>Titre</th>
     <th>Date</th>
     <th>Agent</th>
+    <th>Matricule agent</th>
+    <th>Description</th>
+    <th>Statut</th>
     <% @table.each do |table| %>
     <tr>
       <td><%= table.id %></td>
       <td><%= table.titre %></td>
       <td><%= table.created_at %></td>
       <td><%= table.agent.name %>&nbsp;<%= table.agent.name %></td>
+      <td><%= table.matricule %></td>
+      <td><%= table.description %></td>
+      <td><%= table.longitude %>&nbsp;<%= table.latitude %></td>
+      <td><%= table.statu_id %></td>
     </tr>
   <% end %>
   </tr>

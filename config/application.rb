@@ -1,6 +1,8 @@
 require_relative 'boot'
 
 require 'csv'
+#require 'iconv'
+require 'faker'
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems

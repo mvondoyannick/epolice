@@ -31,7 +31,7 @@
       </div>
       <div class="table-data__tool-right">
         <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
-          <%= link_to 'Excel export', "parametre/access/exporter/export/detail/#{params[:table]}.xls", format: "xls", class: 'btn btn-primary' %>
+          <%= link_to 'Excel export', access_tested_path(format: :xls, table: params[:table]), class: 'btn btn-primary' %>
           <div class="dropDownSelect2"></div>
         </div>
       </div>
@@ -47,11 +47,9 @@
             </label>
           </th>
           <th>Nom</th>
-          <th>Date creation</th>
+          <th>Date&nbsp;creation</th>
           <th>description</th>
           <th>date creation</th>
-          <th>status</th>
-          <th>price</th>
           <th></th>
         </tr>
         </thead>
@@ -68,25 +66,18 @@
             <td>
               <span class="block-email"><%= table.created_at %></span>
             </td>
-            <td class="desc">Samsung S8 Black</td>
+            <td class="desc"><%= table.ville.name if !table.ville_id.nil? %></td>
             <td>2018-09-27 02:12</td>
-            <td>
-              <span class="status--process">Processed</span>
-            </td>
-            <td>$679.00</td>
             <td>
               <div class="table-data-feature">
                 <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                  <i class="zmdi zmdi-mail-send"></i>
+                  <i class="fa fa-file-excel"></i>
                 </button>
                 <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                  <i class="zmdi zmdi-edit"></i>
+                  <i class="fa fa-file-pdf"></i>
                 </button>
                 <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                  <i class="zmdi zmdi-delete"></i>
-                </button>
-                <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                  <i class="zmdi zmdi-more"></i>
+                  <i class="fa fa-file-archive"></i>
                 </button>
               </div>
             </td>

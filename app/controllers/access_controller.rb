@@ -311,6 +311,18 @@ class AccessController < ApplicationController
     render layout: 'fylo'
   end
 
+  def tested
+    respond_to do |format|
+      format.html do
+        Alerte.all
+        render layout: 'fylo'
+      end
+      format.xls
+      format.csv {send_data Alerte.all.to_csv}
+      format.xls
+    end
+  end
+
   #pour les parametres de la table selectionnée
   def export_detail
     table = params[:table].capitalize!

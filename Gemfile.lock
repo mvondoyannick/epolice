@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/stympy/faker.git
+  revision: c5ce80c27eb546227185560d032113d2cc42e94b
+  branch: master
+  specs:
+    faker (1.9.1)
+      i18n (>= 0.7)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -194,6 +202,9 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    roo (2.7.1)
+      nokogiri (~> 1)
+      rubyzip (~> 1.1, < 2.0.0)
     ruby-graphviz (1.2.3)
     rubyzip (1.2.2)
     sass (3.6.0)
@@ -267,6 +278,7 @@ DEPENDENCIES
   chartkick
   coffee-rails (~> 4.2)
   devise
+  faker!
   font-awesome-rails (~> 4.7, >= 4.7.0.4)
   gmaps4rails
   groupdate
@@ -285,6 +297,7 @@ DEPENDENCIES
   rails (~> 5.2)
   rails-erd
   redis (~> 4.0)
+  roo (~> 2.7.0)
   sass-rails (~> 5.0)
   selenium-webdriver
   simple_form

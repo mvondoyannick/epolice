@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'parametre/admin'
   get 'access/open'
   get 'access/systeme'
+  get 'access/tested' #c'est ici que ce fait le rendu xls
   get 'parametre/access/lange', to: 'access#lange' #pour la langue
   get 'parametre/access/paiement', to: 'access#paiement' #pour les solution de paiement
   get 'parametre/access/importer/import', to: 'access#importation' #pour importer les fichiers

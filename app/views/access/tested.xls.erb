@@ -1,0 +1,18 @@
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Titre</th>
+    <th>Description</th>
+    <th>Agent</th>
+    <th>Date&nbsp;creation</th>
+    <% Alerte.all.each do |table| %>
+    <tr>
+      <td><%= table.id %></td>
+      <td><%= table.titre %></td>
+      <td><%= table.description %></td>
+      <td><%= table.agent.name %>&nbsp;<%= table.agent.name %></td>
+      <td><%= table.created_at %></td>
+    </tr>
+  <% end %>
+  </tr>
+</table>
