@@ -71,6 +71,6 @@ class InfractionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def infraction_params
-      params.require(:infraction).permit(:motif, :montant, :source, :zonecouverturemotif_id, :region_id, :departement_id, :arrondissement_id)
+      params.require(:infraction).permit(:motif, :montant, :source, :zonecouverturemotif_id, :region_id, :departement_id, :arrondissement_id, :classe)
     end
 end

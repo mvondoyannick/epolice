@@ -2,12 +2,36 @@
 
 <p>
   <strong>Motif:</strong>
+  <%= @infraction.classe %>
+</p>
+<p>
+  <strong>Motif:</strong>
   <%= @infraction.motif %>
 </p>
 
 <p>
   <strong>Montant:</strong>
   <%= @infraction.montant %>
+</p>
+
+<p>
+  <strong>Motif:</strong>
+  <%= @infraction.source %>
+</p>
+
+<p>
+  <strong>Region application:</strong>
+  <%= @infraction.region.name if !@infranction.region_id.nil? %>
+</p>
+
+<p>
+  <strong>Departement application:</strong>
+  <%= @infraction.departement.name if !@infraction.departement_id.nil? %>
+</p>
+
+<p>
+  <strong>Arrondissement:</strong>
+  <%= @infraction.arrondissement.name if !@infraction.arrondissement_id.nil? %>
 </p>
 
 <%= link_to 'Edit', edit_infraction_path(@infraction) %> |

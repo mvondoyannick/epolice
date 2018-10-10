@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @centrerecouvrement.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @centrerecouvrement.phone %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @centrerecouvrement.region.name %>
+</p>
+
+<%= link_to 'Edit', edit_centrerecouvrement_path(@centrerecouvrement) %> |
+<%= link_to 'Back', centrerecouvrements_path %>

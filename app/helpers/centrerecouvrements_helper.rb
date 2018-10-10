@@ -1,0 +1,2 @@
+module CentrerecouvrementsHelper
+end

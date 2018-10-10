@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_03_174031) do
+ActiveRecord::Schema.define(version: 2018_10_10_122757) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -141,6 +141,15 @@ ActiveRecord::Schema.define(version: 2018_10_03_174031) do
     t.datetime "updated_at", null: false
     t.bigint "ville_id"
     t.index ["ville_id"], name: "index_carrefours_on_ville_id"
+  end
+
+  create_table "centrerecouvrements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "phone"
+    t.bigint "region_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["region_id"], name: "index_centrerecouvrements_on_region_id"
   end
 
   create_table "commissariats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -301,6 +310,7 @@ ActiveRecord::Schema.define(version: 2018_10_03_174031) do
     t.bigint "region_id"
     t.bigint "departement_id"
     t.bigint "arrondissement_id"
+    t.string "classe"
     t.index ["arrondissement_id"], name: "index_infractions_on_arrondissement_id"
     t.index ["departement_id"], name: "index_infractions_on_departement_id"
     t.index ["region_id"], name: "index_infractions_on_region_id"

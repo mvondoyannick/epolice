@@ -9,6 +9,12 @@
       </div>
       <div class="card-body card-block">
         <div class="form-group">
+          <label for="company" class=" form-control-label">Classe</label>
+          <%= f.input :classe, collection: [['Classe 1', 'Classe 1'], ['Classe 2', 'Classe 2']], label: false, prompt: 'Selectionner une classe' %>
+        </div>
+      </div>
+      <div class="card-body card-block">
+        <div class="form-group">
           <label for="company" class=" form-control-label">Motif</label>
           <%= f.input :motif, label: false, placeholder: 'Nom du motif a creer' %>
         </div>

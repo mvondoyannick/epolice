@@ -10,19 +10,32 @@
       <table class="table table-borderless table-striped table-earning">
         <thead>
         <tr>
+          <th>Classe</th>
           <th>Motif</th>
           <th>Montant</th>
-          <th colspan="1"></th>
+          <th>Source Juridique</th>
+          <th>Zone couverture</th>
+          <th>Region</th>
+          <th>Departement</th>
+          <th>Arrondissement</th>
+          <th colspan="3"></th>
         </tr>
         </thead>
         <tbody>
         <% @infractions.each do |infraction| %>
           <tr>
+            <td><%= infraction.classe %></td>
             <td><%= infraction.motif %></td>
             <td><%= infraction.montant %></td>
+            <td><%= infraction.source %></td>
+            <td><%= infraction.zonecouverturemotif_id %></td>
+            <td><%= infraction.region.name if !infraction.region_id.nil? %></td>
+            <td><%= infraction.departement.name if !infraction.departement_id.nil? %></td>
+            <td><%= infraction.arrondissement.name if !infraction.arrondissement_id.nil? %></td>
+
             <td><%= link_to 'Show', infraction %></td>
-            <!-- <td><%= link_to 'Edit', edit_infraction_path(infraction) %></td>
-        <td><%= link_to 'Destroy', infraction, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+            <td><%= link_to 'Edit', edit_infraction_path(infraction) %></td>
+            <td><%= link_to 'Destroy', infraction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
         </tbody>
