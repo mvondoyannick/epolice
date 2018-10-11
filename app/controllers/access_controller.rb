@@ -303,6 +303,9 @@ class AccessController < ApplicationController
 
   #importation des parametres
   def importation
+    file = params[:file]
+    Alerte.import(file)
+    flash[:notice] = "Fichier #{file} importé avec succes"
     render layout: 'fylo'
   end
 
@@ -362,6 +365,26 @@ class AccessController < ApplicationController
   def member_show
     @user = Member.all
     render layout: 'fylo'
+  end
+
+  #enregistrement d'un nouveau partenaire
+  def member_new
+    @member = Member.new
+
+    #retriving datas
+    member = Member.new(email: params[:email], password: params[:password], matricule: SecureRandom.hex(10).upcase, service_id: params[:service_id], phone: params[:phone], region_id: params[:region_id])
+    if member.save
+      flash[:notice] = "Membre ajouter avec succes"
+      redirect_to action: member_new
+    else
+      flash[:notice] = "Impossible d'enregistrer un partenaire: #{member.errors.messages}"
+      puts "====== #{member.errors.messages} ======="
+    end
+    render layout: 'fylo'
+  end
+
+  def admin_new
+
   end
 
   #ajout du personnel de metropolis

@@ -9,32 +9,35 @@
   <% end %>
   Centres de recouvrement
 </h1>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="table-responsive table--no-card m-b-30">
+      <table class="table table-borderless table-striped table-earning">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Region</th>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @centrerecouvrements.each do |centrerecouvrement| %>
+          <tr>
+            <td><%= centrerecouvrement.name %></td>
+            <td><%= centrerecouvrement.phone %></td>
+            <td><%= centrerecouvrement.region.name %></td>
+            <td><%= link_to 'Show', centrerecouvrement %></td>
+            <td><%= link_to 'Edit', edit_centrerecouvrement_path(centrerecouvrement) %></td>
+            <td><%= link_to 'Destroy', centrerecouvrement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
-<table class="table ">
-  <thead class="alert-danger">
-    <tr>
-      <th>Name</th>
-      <th>Phone</th>
-      <th>Region</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @centrerecouvrements.each do |centrerecouvrement| %>
-      <tr>
-        <td><%= centrerecouvrement.name %></td>
-        <td><%= centrerecouvrement.phone %></td>
-        <td><%= centrerecouvrement.region.name %></td>
-        <td><%= link_to 'Show', centrerecouvrement %></td>
-        <td><%= link_to 'Edit', edit_centrerecouvrement_path(centrerecouvrement) %></td>
-        <td><%= link_to 'Destroy', centrerecouvrement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
 
 <%= link_to new_centrerecouvrement_path, class: 'btn btn-primary m-b-40' do %>
   <i class="fa fa-plus"></i>

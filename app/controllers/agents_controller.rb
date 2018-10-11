@@ -4,7 +4,12 @@ class AgentsController < ApplicationController
   # GET /agents
   # GET /agents.json
   def index
-    @agents = Agent.all
+    respond_to do |format|
+      format.html do
+        @agents = Agent.all
+      end
+      format.xls
+    end
   end
 
   # GET /agents/1

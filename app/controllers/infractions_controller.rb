@@ -4,9 +4,14 @@ class InfractionsController < ApplicationController
   # GET /infractions
   # GET /infractions.json
   def index
-    @infractions = Infraction.all
-    @title = "Liste des infractions"
-    @compteur = Infraction.all.count
+    respond_to do |format|
+      format.html do
+        @infractions = Infraction.all
+      end
+      format.xls
+    end
+    #@title = "Liste des infractions"
+    #@compteur = Infraction.all.count
   end
 
   # GET /infractions/1

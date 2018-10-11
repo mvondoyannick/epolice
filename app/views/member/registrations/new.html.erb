@@ -66,7 +66,7 @@
           </div>
           <div class="login-form">
             <form action="" method="post">
-              <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), method: :get) do |f| %>
                 <div class="form-group">
                   <%= f.input :email, required: true, autofocus: true, placeholder: 'adresse email', class: 'au-input au-input--full' %>
                 </div>
@@ -81,6 +81,10 @@
 
                 <div class="form-group m-b-40">
                   <%= f.association :service, label: 'Selectionner le service', require: true, prompt: 'Selectionner le service', class: 'au-input au-input--full form-control' %>
+                </div>
+
+                <div class="form-group m-b-40">
+                  <%= f.association :region, label: 'Selectionner une region', require: true, prompt: 'Selectionner une region', class: 'au-input au-input--full form-control' %>
                 </div>
 
                 <%= f.button :submit, "Ajouter utilisateur", class: 'au-btn au-btn--block au-btn--green m-b-20' %>

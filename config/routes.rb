@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :regions
   resources :zonecouverturemotifs
   resources :departements
+  get 'access/member_new'
+  post 'access/member_new'
   get 'parametre/index'
   get 'parametre/region'
   get 'parametre/departement'
@@ -18,11 +20,13 @@ Rails.application.routes.draw do
   get 'access/tested' #c'est ici que ce fait le rendu xls
   get 'parametre/access/lange', to: 'access#lange' #pour la langue
   get 'parametre/access/paiement', to: 'access#paiement' #pour les solution de paiement
-  get 'parametre/access/importer/import', to: 'access#importation' #pour importer les fichiers
+
   get 'parametre/access/exporter/export/detail/:table', to: 'access#export_detail' #pour les details d'exportation
   get 'parametre/access/exporter/export', to: 'access#exportation' #pour exporter les fichiers
   get 'parametre/access/setup/import_export', to: 'access#setup_import_export' #pour la configuration de import/export
   get 'parametre/add_user' #non terminer, perte du fil
+  get 'parametre/access/importer/import', to: 'access#importation' #pour importer les fichiers
+  post 'parametre/access/importer/import', to: 'access#importation' #pour importer les fichiers
   get 'parametre/admins/admin/show', to: 'access#admin_show'
   get 'parametre/admins/member/show', to: 'access#member_show'
   get 'parametre/admins/metropolis/show', to: 'access#metropolis_show'

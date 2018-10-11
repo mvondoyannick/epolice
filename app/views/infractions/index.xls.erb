@@ -1,0 +1,28 @@
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Classe</th>
+    <th>Motif</th>
+    <th>Montant</th>
+    <th>Source</th>
+    <th>Zone couverture</th>
+    <th>Region</th>
+    <th>Département</th>
+    <th>Arrondissement</th>
+    <th>Date creation</th>
+    <% Infraction.all.each do |table| %>
+    <tr>
+      <td><%= table.id %></td>
+      <td><%= table.classe %></td>
+      <td><%= table.motif %></td>
+      <td><%= table.montant %></td>
+      <td><%= table.source %></td>
+      <td><%= table.zonecouverturemotif.name if !table.zonecouverturemotif_id.nil? %></td>
+      <td><%= table.region.name if !table.region_id.nil? %></td>
+      <td><%= table.departement.name if !table.departement_id.nil? %></td>
+      <td><%= table.arrondissement.name if !table.arrondissement_id.nil? %></td>
+      <td><%= table.created_at %></td>
+    </tr>
+  <% end %>
+  </tr>
+</table>

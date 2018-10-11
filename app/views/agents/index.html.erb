@@ -32,7 +32,7 @@
             <td><%= agent.prenom %></td>
             <td><%= agent.phone %></td>
             <td><%= agent.grade.name %></td>
-            <td><%= agent.region.name %></td>
+            <td><%= agent.region.name if !agent.region_id.nil? %></td>
             <td><%= agent.grade.name %></td>
             <td><%= link_to 'Show', agent %></td>
             <td>
@@ -55,7 +55,13 @@
 
 <br>
 
-<%= link_to new_agent_path, class: 'btn btn-primary' do %>
-  <i class="fa fa-plus"></i>
-  Ajouter un agent
+<div class="d-inline p-2">
+  <%= link_to new_agent_path, class: 'btn btn-primary' do %>
+    <i class="fa fa-plus"></i>
+    Ajouter un agent
+  <% end %>
+</div>
+<%= link_to agents_path(format: :xls), class: 'btn btn-success' do %>
+  <i class="fa fa-file-excel"></i>
+  Exporter les agents
 <% end %>

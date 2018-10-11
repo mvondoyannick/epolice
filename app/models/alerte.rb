@@ -25,6 +25,31 @@ class Alerte < ApplicationRecord
     end
   end
 
+  #pour importer les alertes provenant d'une source xls
+  def self.import(file)
+    spreadsheet = open_spreadsheet(file)
+    header = spreadsheet.row(1)
+    (2..spreadsheet.last_row).each do |i|
+      row = Hash[[header, spreadsheet.row(i)].transpose]
+      alerte = find_by_id(row["id"]) || new
+      alerte.attributes = row.to_hash.slice(*accessible_attributes)
+      alerte.save
+    end
+    CSV.foreach(file.path, headers: true) do |row|
+      Alerte.create! row.to_hash
+    end
+  end
+
+  def self.open_spreadsheet(file)
+    case File.extname(file.original_filename)
+    when ".csv" then Csv.new(file.path, nil, :ignore)
+    when '.xls' then Excel.new(file.path, nil, :ignore)
+    when ".xlsx" then Excelx.new(file.path, nil, :ignore)
+    else raise "Type de fichier inconnu : #{file.original_filename}"
+    end
+  end
+
+
   private
   def init
     self.statu_id = Statu.last.id

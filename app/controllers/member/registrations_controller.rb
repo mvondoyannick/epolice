@@ -9,6 +9,7 @@ class Member::RegistrationsController < Devise::RegistrationsController
   # GET /resource/sign_up
   def new
     super
+    #render layout: 'fylo'
   end
 
   # POST /resource
@@ -44,19 +45,17 @@ class Member::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password, :phone, :service_id])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password, :phone, :service_id, :region_id])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
-  # def configure_account_update_params
-  #   devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
-  # end
+  def configure_account_update_params
+    devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
+  end
 
   # The path used after sign up.
   def after_sign_up_path_for(resource)
-    #super(resource)
-    flash[:notice] = "creation effectuée"
-    root_path
+    super(resource)
   end
 
   # The path used after sign up for inactive accounts.

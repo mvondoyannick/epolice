@@ -1,6 +1,6 @@
-<%= link_to new_admin_registration_path, class: 'btn btn-primary m-b-40' do %>
+<%= link_to new_member_registration_path, class: 'btn btn-primary m-b-40' do %>
   <i class="fa fa-plus"></i>
-  Ajouter un administrateur
+  Ajouter un partenaire
 <% end %>
 <h1 class="m-b-40">
   <%= link_to :back do %>
@@ -16,7 +16,6 @@
       <table class="table table-borderless table-striped table-earning">
         <thead>
         <tr>
-          <th>Photo</th>
           <th>Email</th>
           <th>Date ajout</th>
           <th>Date de mise à jour</th>
@@ -26,7 +25,6 @@
         <tbody>
         <% @user.each do |user| %>
           <tr>
-            <th><%= image_tag(user.avatar) if user.avatar.attached? %></th>
             <td><%= user.email %></td>
             <td><%= user.created_at %></td>
             <td><%= user.updated_at %></td>
@@ -38,7 +36,7 @@
     </div>
   </div>
 </div>
-<%= link_to nil, class: 'btn btn-primary' do %>
+<%= link_to access_member_new_path, class: 'btn btn-primary' do %>
   <i class="fa fa-plus"></i>
-  Ajouter un administrateur
+  Ajouter un partenaire
 <% end %>

@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Importer un fichier
+</h1>
+<div class="row">
+  <%= form_tag parametre_access_importer_import_path, multipart: true do %>
+    <%= label_tag('Selectionner une source de données') %> <br> <br>
+    <%= file_field_tag(:q, class: 'm-b-40') %>
+    <br>
+    <%= submit_tag('Importer un fichier', class: 'btn btn-primary') %>
+  <% end %>
+</div>
+
