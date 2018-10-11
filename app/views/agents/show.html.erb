@@ -37,13 +37,13 @@
           <div class="col-8">
             <div class="form-group">
               <label for="postal-code" class=" form-control-label">Grade</label>
-              <input type="text" id="postal-code" value="<%= @agent.grade.name %>" class="form-control">
+              <input type="text" id="postal-code" value="<%= @agent.grade.name if !@agent.grade_id.nil? %>" class="form-control">
             </div>
           </div>
           <div class="col-8">
             <div class="form-group">
               <label for="postal-code" class=" form-control-label">Région de localisationCommissariat service</label>
-              <input type="text" id="postal-code" value="<%= @agent.region.name %>" class="form-control">
+              <input type="text" id="postal-code" value="<%= @agent.region.name if !@agent.region_id.nil? %>" class="form-control">
             </div>
           </div>
         </div>
