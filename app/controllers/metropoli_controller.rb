@@ -1,15 +1,13 @@
 class MetropoliController < ApplicationController
   before_action :authenticate_metropoli!, only: [:index, :detail, :comptable, :submit]
-
+  layout 'fylo'
   def index
     @convocations = Convocation.order(created_at: :desc).where(submit: nil)
-    render layout: 'metropolis/metropolis'
   end
 
   def detail
     index = params[:index]
     @query = Convocation.find(index)
-    render layout: 'metropolis/metropolis'
   end
 
   def submit
@@ -48,6 +46,5 @@ class MetropoliController < ApplicationController
 
   def comptable
     @convocations = Convocation.where(submit: 'transmitted', buy: nil).order(created_at: :desc).all
-    render layout: 'metropolis/metropolis'
   end
 end
