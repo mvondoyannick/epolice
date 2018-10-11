@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/metropoli_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/metropoli_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/access/setup_import_export.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/setup_import_export.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/gestion_contravention/all.xls.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestion_contravention/all.xls.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -127,7 +126,7 @@
           <entry key="Gemfile" value="360" />
           <entry key="coffee" value="74" />
           <entry key="css" value="296" />
-          <entry key="erb" value="62637" />
+          <entry key="erb" value="62639" />
           <entry key="js" value="227" />
           <entry key="pid" value="1" />
           <entry key="rb" value="29844" />
@@ -142,7 +141,7 @@
           <entry key="CoffeeScript" value="74" />
           <entry key="JavaScript" value="227" />
           <entry key="PLAIN_TEXT" value="382" />
-          <entry key="RHTML" value="62637" />
+          <entry key="RHTML" value="62639" />
           <entry key="Ruby" value="30204" />
           <entry key="SCSS" value="76" />
           <entry key="YAML" value="145" />
@@ -161,10 +160,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/access/setup_import_export.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
+            <state relative-caret-position="79">
               <caret line="36" column="127" selection-start-line="36" selection-start-column="127" selection-end-line="36" selection-end-column="127" />
             </state>
           </provider>
@@ -209,11 +208,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/gestion_contravention/all.xls.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            <state relative-caret-position="232">
+              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -340,12 +339,12 @@
         <option value="$PROJECT_DIR$/app/controllers/convocations_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/convocations/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/gestion_contravention_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/gestion_contravention/all.xls.erb" />
         <option value="$PROJECT_DIR$/app/views/gestion_contravention/all.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/agents_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/metropoli_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" />
         <option value="$PROJECT_DIR$/app/views/access/setup_import_export.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/gestion_contravention/all.xls.erb" />
       </list>
     </option>
   </component>
@@ -585,12 +584,12 @@
       <workItem from="1538641385077" duration="1347000" />
       <workItem from="1538662812880" duration="24077000" />
       <workItem from="1539091870246" duration="13906000" />
-      <workItem from="1539174005119" duration="40481000" />
+      <workItem from="1539174005119" duration="41627000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="549323000" />
+    <option name="totallyTimeSpent" value="550469000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -609,7 +608,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.08785249" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.23644252" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.43383947" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -944,13 +943,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/gestion_contravention/all.xls.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/gestion_contravention/all.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1015,8 +1007,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/access/setup_import_export.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
+        <state relative-caret-position="79">
           <caret line="36" column="127" selection-start-line="36" selection-start-column="127" selection-end-line="36" selection-end-column="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/gestion_contravention/all.xls.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
         </state>
       </provider>
     </entry>

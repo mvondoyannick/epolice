@@ -15,8 +15,8 @@
       <td><%= table.phone %></td>
       <td><%= table.immatriculation %></td>
       <td><%= table.pieceretenu.name if !table.pieceretenu_id.nil? %></td>
-      <td><%= table.infraction.motif if table.infraction_id.nil? %></td>
-      <td><%= table.infraction.montant if table.infraction_id.nil? %></td>
+      <td><%= table.infraction.motif if !table.infraction_id.nil? %></td>
+      <td><%= table.infraction.montant if !table.infraction_id.nil? %></td>
       <td><%= table.created_at %></td>
     </tr>
   <% end %>
