@@ -38,7 +38,14 @@ class GestionContraventionController < ApplicationController
   end
 
   def all
-    @all = Convocation.order(created_at: :desc).all
-    render layout: 'fylo'
+    respond_to do |format|
+      format.html do
+        @all = Convocation.order(created_at: :desc)
+        render layout: 'fylo'
+      end
+      format.xls
+    end
+
+
   end
 end

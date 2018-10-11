@@ -2,35 +2,98 @@
 <%= simple_form_for(@convocation) do |f| %>
   <%= f.error_notification %>
 
-  <div class="row">
-    <div class="col-md-6">
-      <div class="form-inputs">
-        <%= f.input :code, label: "Code de creation", input_html: { value: @code, readonly: true } %>
-        <%= f.input :cni, label: "Numero CNI" %>
-        <%= f.input :phone, label: "Numéro de téléphone" %>
-        <%= f.input :name, label: "Nom" %>
-        <%= f.input :prenom, label: "Prénom" %> 
-        <%= f.input :an, label: "Année de naissance", as: :date, html5: true, placeholder: "Selectionner année naissance" %>
-        <%= f.input :sexe, collection: ["Feminin", "Masculin"], prompt: "Selectionner un sexe" %>
-        <%= f.input :immatriculation, label: "N° Immatriulation", placeholder: "Numéro d'immatriculation" %>
-        <%= f.input :ville, label: "Ville", collection: ["Douala", "Yaoundé", "Garoua", "Maroua", "Bafoussam"], prompt: "Selectionner une ville" %>
-        <%= f.input :quartier, label: "Quartier" %>
-        <%= f.input :rue, label: "N° rue ou description", as: :text %>
-        <%= f.input :residence, label: "Lieu dit", as: :text %>
-        <%= f.input :emploi, label: "Emploi occupé", as: :text %>
-
-        <%= f.input :observation, label: "Observation sur le conducteur", as: :text %>
-        <%= f.input :pieceretenue, label: "Pieces retenue", collection: ["Permis de conduire", "Carte Grise", "Aucune"], prompt: "Selctionner une piece retenue" %>
-        <%= f.input :infraction_id, collection: [["Vol de véhicule",1.to_i], ["Pas d'extincteur",2.to_i]], label: "Infraction",  prompt: "Selectionner une infraction" %>
-        <%= f.input :status, label: "Statut", collection: [["Impayé","impaye"], ["Payé","paye"]], prompt: "Selectionner un statut" %>
-        <%= f.association :agent, label: "Agent verbaliseur ", prompt: "Selectionner l'agent" %>
+  <div class="col-lg-8">
+    <div class="card">
+      <div class="card-header">
+        <strong>Modification d'une contravention</strong>
       </div>
-
-      <div class="form-actions">
-        <%= f.button :submit %>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Code contravention</label>
+          <%= f.input :code, label: false, input_html: { value: @code, readonly: true } %>
+        </div>
+        <div class="form-group">
+          <label for="vat" class=" form-control-label">Numéro CNI</label>
+          <%= f.input :cni, label: false %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Numéro téléphone</label>
+          <%= f.input :phone, label: false %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Nom contrevenant</label>
+          <%= f.input :name, label: false %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Prénom contrevenant</label>
+          <%= f.input :prenom, label: false %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Date Naissance</label>
+          <%= f.input :an, label: false, as: :date, html5: true, placeholder: "Selectionner année naissance" %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Sexe</label>
+          <%= f.input :sexe, label: false, collection: ["Feminin", "Masculin"], prompt: "Selectionner un sexe" %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Immatriculation</label>
+          <%= f.input :immatriculation, label: false, placeholder: "Numéro d'immatriculation" %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Ville</label>
+          <%= f.input :ville, label: false, collection: ["Douala", "Yaoundé", "Garoua", "Maroua", "Bafoussam"], prompt: "Selectionner une ville" %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Quartier</label>
+          <%= f.input :quartier, label: false %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Rue</label>
+          <%= f.input :rue, label: false, as: :text %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Résidence</label>
+          <%= f.input :residence, label: false, as: :text %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Ville</label>
+          <%= f.input :ville, label: false, collection: ["Douala", "Yaoundé", "Garoua", "Maroua", "Bafoussam"], prompt: "Selectionner une ville" %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Emploi</label>
+          <%= f.input :emploi, label: false, as: :text %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Infraction</label>
+          <%= f.input :infraction_id, collection: [["Vol de véhicule",1.to_i], ["Pas d'extincteur",2.to_i]], label: false,  prompt: "Selectionner une infraction" %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Pieces retenues</label>
+          <%= f.input :pieceretenue, label: false, collection: ["Permis de conduire", "Carte Grise", "Aucune"], prompt: "Selctionner une piece retenue" %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Agent verbaliseur</label>
+          <%= f.association :agent, label: false, prompt: "Selectionner l'agent" %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Observation sur le contreveant</label>
+          <%= f.input :observation, label: false, as: :text %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Observation sur le contreveant</label>
+          <%= f.input :status, label: false, collection: [["Impayé","impaye"], ["Payé","paye"]], prompt: "Selectionner un statut" %>
+        </div>
+        <div class="form-group">
+          <label for="country" class=" form-control-label">Statut</label>
+          <%= f.input :status, label: false, collection: [["Impayé","impaye"], ["Payé","paye"]], prompt: "Selectionner un statut" %>
+        </div>
+      </div>
+      <div class="card-footer">
+        <%= f.button :submit, 'Enregistrer', class: 'btn btn-primary btn-sm' %>
+        <%= link_to 'Annuler', :back, class: 'btn btn-danger btn-sm' %>
       </div>
     </div>
-    <div class="col-md-6"></div>
   </div>
 
 <% end %>

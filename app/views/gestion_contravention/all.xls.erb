@@ -1,0 +1,24 @@
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Cni</th>
+    <th>Phone</th>
+    <th>Immatriculation</th>
+    <th>Piece retenue</th>
+    <th>Infraction</th>
+    <th>Montant infraction</th>
+    <th>Date</th>
+    <% Convocation.all.each do |table| %>
+    <tr>
+      <td><%= table.id %></td>
+      <td><%= table.cni %></td>
+      <td><%= table.phone %></td>
+      <td><%= table.immatriculation %></td>
+      <td><%= table.pieceretenu.name if !table.pieceretenu_id.nil? %></td>
+      <td><%= table.infraction.motif if table.infraction_id.nil? %></td>
+      <td><%= table.infraction.montant if table.infraction_id.nil? %></td>
+      <td><%= table.created_at %></td>
+    </tr>
+  <% end %>
+  </tr>
+</table>

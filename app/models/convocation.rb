@@ -4,12 +4,12 @@ class Convocation < ApplicationRecord
     require 'active_record/associations'
     require 'active_record/associations/association'
     #before_commit :send_sms
-    after_commit :send_sms
+    after_create :send_sms
     before_create :set_code
     #before_commit :set_status
     #after_save :send_sms
     #on autorise le transfert via https avec HTTParty
-    #HTTParty::Basement.default_options.update(verify: false)
+    HTTParty::Basement.default_options.update(verify: false)
 
     has_secure_token :token
 
@@ -29,6 +29,10 @@ class Convocation < ApplicationRecord
     def set_code
         self.code = SecureRandom.hex(3).upcase
         self.token = SecureRandom.hex(10).upcase
+    end
+
+    def self.send_email
+      UserMailer.with(user: @user).welcome_email.deliver_later
     end
 
     def send_sms

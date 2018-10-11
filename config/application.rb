@@ -3,6 +3,7 @@ require_relative 'boot'
 require 'csv'
 #require 'iconv'
 require 'roo'
+require 'prawn'
 require 'faker'
 require 'rails/all'
 

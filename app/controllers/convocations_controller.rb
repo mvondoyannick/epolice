@@ -1,7 +1,10 @@
 class ConvocationsController < ApplicationController
   before_action :set_convocation, only: [:show, :edit, :update, :destroy]
   before_action :basic_auth, only: [:new, :update, :destroy]
-  require 'prawn'
+  skip_before_action :verify_authenticity_token, only: [:destroy]
+
+
+  layout 'fylo'
 
   # GET /convocations
   # GET /convocations.json
@@ -9,13 +12,12 @@ class ConvocationsController < ApplicationController
     @convocations = Convocation.all.order(created_at: :desc)
     @title = "Toutes les convocations"
     @compteur = @convocations.count
-    render layout: 'admin'
   end
 
   # GET /convocations/1
   # GET /convocations/1.json
   def show
-    render layout: 'admin'
+
   end
 
   def home
@@ -51,7 +53,6 @@ class ConvocationsController < ApplicationController
 
   # GET /convocations/1/edit
   def edit
-    render layout: 'admin'
   end
 
   # le paiement
@@ -160,7 +161,11 @@ class ConvocationsController < ApplicationController
   def destroy
     @convocation.destroy
     respond_to do |format|
-      format.html { redirect_to convocations_url, notice: 'Convocation was successfully destroyed.' }
+      format.html do
+        UserMailer.with(user: 'mvondoyannick@gmail.com').welcome_email.deliver_later
+        flash[:notice] = "Enregistrement supprimer"
+        redirect_to gestion_contraventions_contraventions_all_path
+      end
       format.json { head :no_content }
     end
   end

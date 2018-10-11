@@ -1,9 +1,12 @@
 
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-<h1>Editing Convocation</h1>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Editing Convocation
+</h1>
 
 <%= render 'form', convocation: @convocation %>
 
 <%= link_to 'Show', @convocation %> |
 <%= link_to 'Back', convocations_path %>
-</main>

@@ -1,5 +1,6 @@
 class AgentsController < ApplicationController
   before_action :set_agent, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token, only: [:destroy]
   layout 'fylo'
   # GET /agents
   # GET /agents.json
