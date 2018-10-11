@@ -4,6 +4,10 @@ class ParametreController < ApplicationController
   def index
   end
 
+  def gestion_sturcture_partenaire
+
+  end
+
   def localisation
 
   end

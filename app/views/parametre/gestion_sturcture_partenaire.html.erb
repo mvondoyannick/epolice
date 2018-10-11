@@ -1,0 +1,41 @@
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Gestion de la structure
+</h1>
+
+<div class="row">
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Structure partenaire</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Acceder/ajouter la structure des partenaires</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Acceder', structures_path, class: 'card-link' %>
+        <%= link_to 'Ajouter', new_structure_path, class: 'card-link' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Comptes utilisateur partenaires</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Lister, ajouter ou supprimer des comptes</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Acceder', parametre_admins_member_show_path, class: 'card-link' %>
+        <%= link_to 'Ajouter', new_member_registration_path, class: 'card-link' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Exportation des données</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Importer/exporter des parametres</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Exporter', parametre_access_exporter_export_path, class: 'card-link' %>
+      </div>
+    </div>
+  </div>
+</div>

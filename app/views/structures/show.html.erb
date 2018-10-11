@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @structure.name %>
+</p>
+
+<p>
+  <strong>Raison:</strong>
+  <%= @structure.raison %>
+</p>
+
+<p>
+  <strong>Adresse:</strong>
+  <%= @structure.adresse %>
+</p>
+
+<p>
+  <strong>Contactname:</strong>
+  <%= @structure.contactname %>
+</p>
+
+<p>
+  <strong>Contantprenom:</strong>
+  <%= @structure.contantprenom %>
+</p>
+
+<p>
+  <strong>Contactphone:</strong>
+  <%= @structure.contactphone %>
+</p>
+
+<p>
+  <strong>Contactemail:</strong>
+  <%= @structure.contactemail %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @structure.region %>
+</p>
+
+<%= link_to 'Edit', edit_structure_path(@structure) %> |
+<%= link_to 'Back', structures_path %>

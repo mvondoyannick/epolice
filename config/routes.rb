@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :structures
   resources :centrerecouvrements
   resources :paiementsolutions
   resources :langues
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   resources :regions
   resources :zonecouverturemotifs
   resources :departements
+  get 'parametre/gestion_sturcture_partenaire'
   get 'access/member_new'
   post 'access/member_new'
   get 'parametre/index'
