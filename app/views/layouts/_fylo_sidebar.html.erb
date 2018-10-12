@@ -40,12 +40,6 @@
           <% end %>
         </li>
         <li class="has-sub">
-          <%= link_to parametre_index_path, class: 'js-arrow' do  %>
-            <%= fa_icon 'file' %>
-            Système
-          <% end %>
-        </li>
-        <li class="has-sub">
           <%= link_to parametre_access_setup_import_export_path, class: 'js-arrow' do  %>
             <%= fa_icon 'download' %>
             Import/Export
@@ -55,6 +49,12 @@
           <%= link_to access_open_path, method: :get, class: 'js-arrow' do  %>
             <%= fa_icon 'cog' %>
             Configurations
+          <% end %>
+        </li>
+        <li class="has-sub">
+          <%= link_to access_open_path, method: :get, class: 'js-arrow' do  %>
+            <%= fa_icon 'yelp' %>
+            Aide
           <% end %>
         </li>
         <li class="has-sub">

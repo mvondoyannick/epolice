@@ -2,27 +2,56 @@
 <%= simple_form_for(@structure) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-
-    <%= f.input :name %>
-
-    <%= f.input :raison %>
-
-    <%= f.input :adresse %>
-
-    <%= f.input :contactname %>
-
-    <%= f.input :contantprenom %>
-
-    <%= f.input :contactphone %>
-
-    <%= f.input :contactemail %>
-
-    <%= f.association :region %>
-
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="col-lg-8">
+    <div class="card">
+      <div class="card-header">
+        <strong>Ajout d'une nouvelle structure partenaire</strong>
+      </div>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Nom de la structure</label>
+          <%= f.input :name, label: false, placeholder: 'Nom de la strcuture partenaire' %>
+        </div>
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Raison sociale</label>
+          <%= f.input :raison, label: false, placeholder: 'Raison sociale de la structure' %>
+        </div>
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Adresse de la structure</label>
+          <%= f.input :adresse, label: false, placeholder: 'Adresse de la structure' %>
+        </div>
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Nom du contact responsable</label>
+          <%= f.input :contactname, label: false %>
+        </div>
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Prénom du contact responsable</label>
+          <%= f.input :contantprenom, label: false %>
+        </div>
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Numé telephone du responsable</label>
+          <%= f.input :contactphone, as: :tel, label: false, placeholder: 'Téléphone du responsable' %>
+        </div>
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Prénom du contact responsable</label>
+          <%= f.input :contactemail, label: false, placeholder: 'Adresse email reponsable' %>
+        </div>
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Region de localisation de la structure</label>
+          <%= f.association :region, label: false, prompt: 'Selectionner une Région' %>
+        </div>
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Logo de la structure partenaire</label>
+          <%= f.input :logo, label: false, as: :file %>
+        </div>
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Document adminstratif de la structure</label>
+          <%= f.input :document, label: false, as: :file %>
+        </div>
+      </div>
+      <div class="card-footer">
+        <%= f.button :submit, 'Ajouter cette structure', class: 'btn btn-primary' %>
+      </div>
+    </div>
   </div>
 <% end %>
