@@ -399,5 +399,10 @@ class AccessController < ApplicationController
     render layout: 'fylo'
   end
 
+  #pour la gestion de l'aide sur l'application
+  def yelp
+    render layout: 'fylo'
+  end
+
 
 end

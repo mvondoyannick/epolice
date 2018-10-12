@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :departements
   get 'parametre/gestion_sturcture_partenaire'
   get 'access/member_new'
+  #pour l'aide
+  get 'access/yelp'
   post 'access/member_new'
   get 'parametre/index'
   get 'parametre/region'

@@ -1,139 +1,125 @@
 <h1 class="m-b-40"><i class="fa fa-cogs"></i> Fichiers de configuration</h1>
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-lg-3">
     <div class="card">
-      <%= image_tag('bg-title-01.jpg', class: 'card-img-top') %>
       <div class="card-body">
-        <h4 class="card-title mb-3">Localisation</h4>
-        <p class="card-text">
-        </p>
-      </div>
-      <div class="card-footer text-right">
-        <%= link_to 'Configurer', parametre_localisation_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <h5 class="card-title">Localisation</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Region, departement et arrondissement</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Configurer', parametre_localisation_path, class: 'card-link' %>
       </div>
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-lg-3">
     <div class="card">
-      <%= image_tag('https://images.pexels.com/photos/532001/pexels-photo-532001.jpeg', class: 'card-img-top') %>
       <div class="card-body">
-        <h4 class="card-title mb-3">Services de la police</h4>
-        <p class="card-text">
-        </p>
-      </div>
-      <div class="card-footer text-right">
-        <%= link_to 'Aperçu', unites_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <h5 class="card-title">Services de la police</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Les services de la police</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Aperçu', unites_path, class: 'card-link' %>
         &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_unite_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <%= link_to 'Ajouter', new_unite_path, class: 'card-link' %>
       </div>
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-lg-3">
     <div class="card">
-      <%= image_tag('https://images.pexels.com/photos/270220/pexels-photo-270220.jpeg', class: 'card-img-top') %>
       <div class="card-body">
-        <h4 class="card-title mb-3">Effectifs de la police</h4>
-        <p class="card-text">
-        </p>
-      </div>
-      <div class="card-footer text-right">
-        <%= link_to 'Aperçu', agents_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <h5 class="card-title">Effectif de la police</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Ensemble du personnel de la police</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Aperçu', agents_path, class: 'card-link' %>
         &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_agent_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <%= link_to 'Ajouter', new_agent_path, class: 'card-link' %>
       </div>
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-lg-3">
     <div class="card">
-      <%= image_tag('bg-title-01.jpg', class: 'card-img-top') %>
       <div class="card-body">
-        <h4 class="card-title mb-3">Types d'infractions</h4>
-        <p class="card-text">
-        </p>
-      </div>
-      <div class="card-footer text-right">
-        <%= link_to 'Aperçu', infractions_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <h5 class="card-title">Types d'infractions</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Liste des types d'infractions de la circulation</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Aperçu', infractions_path, class: 'card-link' %>
         &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_infraction_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <%= link_to 'Ajouter', new_infraction_path, class: 'card-link' %>
       </div>
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-lg-3">
     <div class="card">
-      <%= image_tag('bg-title-01.jpg', class: 'card-img-top') %>
       <div class="card-body">
-        <h4 class="card-title mb-3">Elements à retenir</h4>
-        <p class="card-text">
-        </p>
-      </div>
-      <div class="card-footer text-right">
-        <%= link_to 'Aperçu', pieceretenus_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <h5 class="card-title">Elements à retenir</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Elements pouvants etre retenus</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Aperçu', pieceretenus_path, class: 'card-link' %>
         &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_pieceretenu_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <%= link_to 'Ajouter', new_pieceretenu_path, class: 'card-link' %>
       </div>
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-lg-3">
     <div class="card">
-      <%= image_tag('bg-title-01.jpg', class: 'card-img-top') %>
       <div class="card-body">
-        <h4 class="card-title mb-3">Structure Partenaires</h4>
-        <p class="card-text">
-        </p>
-      </div>
-      <div class="card-footer text-right">
-        <%= link_to 'Aperçu', parametre_gestion_sturcture_partenaire_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <h5 class="card-title">Partenaires</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Gestion de la structure des partenaires</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Aperçu', parametre_gestion_sturcture_partenaire_path, class: 'card-link' %>
         &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_service_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <%= link_to 'Ajouter', new_service_path, class: 'card-link' %>
       </div>
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-lg-3">
     <div class="card">
-      <%= link_to image_tag('bg-title-01.jpg', class: 'card-img-top'), "#" %>
       <div class="card-body">
-        <h4 class="card-title mb-3">Commissariats</h4>
-        <p class="card-text">
-        </p>
-      </div>
-      <div class="card-footer text-right">
-        <%= link_to 'Aperçu', commissariats_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <h5 class="card-title">Commissariats</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Gestion des commissariats et des postes de police</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Aperçu', commissariats_path, class: 'card-link' %>
         &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_commissariat_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <%= link_to 'Ajouter', new_commissariat_path, class: 'card-link' %>
       </div>
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-lg-3">
     <div class="card">
-      <%= image_tag('bg-title-01.jpg', class: 'card-img-top') %>
       <div class="card-body">
-        <h4 class="card-title mb-3">GRVPC</h4>
-        <p class="card-text">
-        </p>
-      </div>
-      <div class="card-footer text-right">
-        <%= link_to 'Aperçu', groupements_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <h5 class="card-title">Groupement Regionaux de la Voie Publique et de la Circulation</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Gestion des GRVPC</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Aperçu', groupements_path, class: 'card-link' %>
         &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_groupement_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <%= link_to 'Ajouter', new_groupement_path, class: 'card-link' %>
       </div>
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-lg-3">
     <div class="card">
-      <%= image_tag('bg-title-01.jpg', class: 'card-img-top') %>
       <div class="card-body">
-        <h4 class="card-title mb-3">Types d'evenements</h4>
-        <p class="card-text">
-        </p>
-      </div>
-      <div class="card-footer text-right">
-        <%= link_to 'Aperçu', types_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <h5 class="card-title">Types d'evenements</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Tous les evenements</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Aperçu', types_path, class: 'card-link' %>
         &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_type_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <%= link_to 'Ajouter', new_type_path, class: 'card-link' %>
       </div>
     </div>
   </div>
-  <div class="col-md-3">
+  <!--div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Administration de la plateforme EPOLICE</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Tous les evenements</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Aperçu', parametre_admin_path, class: 'card-link' %>
+        &nbsp;&nbsp;
+        <%= link_to 'Ajouter', new_admin_registration_path, class: 'card-link' %>
+      </div>
+    </div>
+  </div-->
+
+  <!--div class="col-md-3">
     <div class="card">
       <%= image_tag('bg-title-01.jpg', class: 'card-img-top') %>
       <div class="card-body">
@@ -142,24 +128,21 @@
         </p>
       </div>
       <div class="card-footer text-right">
-        <%= link_to 'Aperçu', parametre_admin_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <%= link_to 'Aperçu', parametre_admin_path, class: 'card-link' %>
         &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_admin_registration_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <%= link_to 'Ajouter', new_admin_registration_path, class: 'card-link' %>
       </div>
     </div>
-  </div>
-  <div class="col-md-3">
+  </div-->
+  <div class="col-lg-3">
     <div class="card">
-      <%= image_tag('https://images.pexels.com/photos/242124/pexels-photo-242124.jpeg', class: 'card-img-top') %>
       <div class="card-body">
-        <h4 class="card-title mb-3">Centres de recouvrement</h4>
-        <p class="card-text">
-        </p>
-      </div>
-      <div class="card-footer text-right">
-        <%= link_to 'Aperçu', centrerecouvrements_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <h5 class="card-title">Centre de recouvrement</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Gestion des centres de recouvrements</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Aperçu', centrerecouvrements_path, class: 'card-link' %>
         &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_centrerecouvrement_path, class: 'card-title mb-3 btn btn-outline-primary' %>
+        <%= link_to 'Ajouter', new_centrerecouvrement_path, class: 'card-link' %>
       </div>
     </div>
   </div>
