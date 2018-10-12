@@ -20,6 +20,17 @@
   <div class="col-lg-3">
     <div class="card">
       <div class="card-body">
+        <h5 class="card-title">Compte et utilisateurs</h5>
+        <h6 class="card-subtitle mb-2 text-muted">ajouter ou modifier les langues</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Langues', parametre_access_lange_path, class: 'card-link' %>
+        <a href="#" class="card-link">Ajouter</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
         <h5 class="card-title">Solution de paiement</h5>
         <h6 class="card-subtitle mb-2 text-muted">Ajouter des solutions de paiements</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -36,18 +47,6 @@
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         <%= link_to 'Configurer', nil, class: 'card-link' %>
         <a href="#" class="card-link">&nbsp;</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Importation/exportation des données</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Importer/exporter des parametres</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Configurer', parametre_access_setup_import_export_path, class: 'card-link' %>
-        <%= link_to 'Importer', parametre_access_importer_import_path, class: 'card-link' %>
-        <%= link_to 'Exporter', parametre_access_exporter_export_path, class: 'card-link' %>
       </div>
     </div>
   </div>
