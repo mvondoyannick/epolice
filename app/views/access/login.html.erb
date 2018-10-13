@@ -29,9 +29,7 @@
                 <% elsif assurance_signed_in? %>*
                 <%= link_to "Se déconnecter", destroy_assurance_session_path, method: :delete, class: 'button is-outlined is-danger is-fullwidth is-block is-large' %>
                 <% else %>
-                <% @container.each_with_index  do |data, index| %>
-                  <%= link_to data, "/home/services/selected/#{data.downcase}/www" , class: 'btn btn-outline-primary btn-block btn-lg m-b-20' %>
-                <% end %>
+                <%= link_to 'Indentifiez-vous pour acceder à e-Police', nil, class: 'btn btn-outline-primary btn-block btn-lg m-b-20' %>
                 <%= link_to 'About', access_about_path , class: 'btn btn-outline-primary btn-block btn-lg m-b-20' %>
                 </div>
                 </div>

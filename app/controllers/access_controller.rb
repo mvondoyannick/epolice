@@ -28,27 +28,6 @@ class AccessController < ApplicationController
 
   #les services de la plateforme
   def serviceShow
-    service = params[:data_selected]
-    case service
-    when 'alertes'
-      @alertes = %w[
-        ENEO
-        CAMWATER
-        URGENCES
-        SAPEURS POMPIERS
-      ]
-    when 'contraventions'
-      @contraventions = %w[
-        COMMUNAUTE
-      ]
-    when 'constats'
-      @constats = %w[
-        ASSURANCE
-      ]
-    when 'help'
-      #redirect_to(action: 'about')
-      render access_about_path
-    end
     render layout: 'template/login2'
   end
   # fin des services
