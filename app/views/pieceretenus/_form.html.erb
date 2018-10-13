@@ -5,20 +5,20 @@
   <div class="col-lg-8">
     <div class="card">
       <div class="card-header">
-        <strong>Ajout d'une nouvel piece pouvant etre retenue</strong>
+        <strong>&nbsp;</strong>
       </div>
       <div class="card-body card-block">
         <div class="form-group">
-          <label for="company" class=" form-control-label">Nom de la pièce</label>
-          <%= f.input :name, placeholder: 'Nom de la pièce pouvant etre retenue', label: false %>
+          <label for="company" class=" form-control-label">Nom de l'élément</label>
+          <%= f.input :name, placeholder: "Nom de l'élément pouvant etre retenu", label: false %>
         </div>
         <div class="form-group">
-          <label for="company" class=" form-control-label">Detail</label>
-          <%= f.input :detail, placeholder: 'Detail sur la piece pouvant etre retenue', label: false %>
+          <label for="company" class=" form-control-label">Detail de l'élément</label>
+          <%= f.input :detail, placeholder: "Detail sur l'élément pouvant etre retenu", label: false %>
         </div>
       </div>
       <div class="card-footer">
-        <%= f.button :submit, class: 'btn btn-primary' %>
+        <%= f.button :submit, 'Ajouter', class: 'btn btn-primary' %>
       </div>
     </div>
   </div>

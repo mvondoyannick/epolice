@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_12_170822) do
+ActiveRecord::Schema.define(version: 2018_10_13_174219) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -143,6 +143,26 @@ ActiveRecord::Schema.define(version: 2018_10_12_170822) do
     t.index ["ville_id"], name: "index_carrefours_on_ville_id"
   end
 
+  create_table "centrepartenaires", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.bigint "structure_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "region_id"
+    t.bigint "departement_id"
+    t.bigint "arrondissement_id"
+    t.string "localisation"
+    t.string "nom"
+    t.string "prenom"
+    t.string "fonction"
+    t.string "phone"
+    t.string "email"
+    t.index ["arrondissement_id"], name: "index_centrepartenaires_on_arrondissement_id"
+    t.index ["departement_id"], name: "index_centrepartenaires_on_departement_id"
+    t.index ["region_id"], name: "index_centrepartenaires_on_region_id"
+    t.index ["structure_id"], name: "index_centrepartenaires_on_structure_id"
+  end
+
   create_table "centrerecouvrements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "phone"
@@ -161,6 +181,11 @@ ActiveRecord::Schema.define(version: 2018_10_12_170822) do
     t.bigint "departement_id"
     t.bigint "arrondissement_id"
     t.string "email"
+    t.string "localisation"
+    t.string "phonecommissaire"
+    t.bigint "agent_id"
+    t.string "emailcommissaire"
+    t.index ["agent_id"], name: "index_commissariats_on_agent_id"
     t.index ["arrondissement_id"], name: "index_commissariats_on_arrondissement_id"
     t.index ["departement_id"], name: "index_commissariats_on_departement_id"
     t.index ["region_id"], name: "index_commissariats_on_region_id"
@@ -281,6 +306,12 @@ ActiveRecord::Schema.define(version: 2018_10_12_170822) do
     t.bigint "region_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "agent_id"
+    t.string "phonecommandant"
+    t.string "emailcommandant"
+    t.string "localisation"
+    t.string "email"
+    t.index ["agent_id"], name: "index_groupements_on_agent_id"
     t.index ["region_id"], name: "index_groupements_on_region_id"
   end
 
@@ -507,8 +538,7 @@ ActiveRecord::Schema.define(version: 2018_10_12_170822) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "service_id"
-    t.index ["service_id"], name: "index_types_on_service_id"
+    t.string "entity"
   end
 
   create_table "unites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

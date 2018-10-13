@@ -1,0 +1,76 @@
+
+<%= simple_form_for(@centrepartenaire) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>&nbsp;</strong>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Selectionner le partenaire</label>
+            <%= f.association :structure, label: false, prompt: 'Selectionner le partenaire' %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Selectionner la region</label>
+            <%= f.association :region, label: false, prompt: 'Selectionner la region' %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Selectionner le departement</label>
+            <%= f.association :departement, label: false, prompt: 'Selectionner le departement' %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Selectionner l'arrondissement</label>
+            <%= f.association :arrondissement, label: false, prompt: 'Selectionner l arrondissement' %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Selectionner la localisation</label>
+            <%= f.input :localisation, as: :text, label: false %>
+          </div>
+        </div>
+        <!-- div class="card-footer">
+            <%= f.button :submit, 'Ajouter ce partenaire', class: 'btn btn-primary btn-sm' %>
+          </div -->
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>&nbsp;</strong>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Nom du responsable</label>
+            <%= f.input :name, label: false, placeholder: 'Nom du responsable du centre', require: true %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Prenom du responsable</label>
+            <%= f.input :prenom, label: false, placeholder: 'Prenom' %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Fonction</label>
+            <%= f.input :fonction, label: false, require: true, placeholder: 'Fonction' %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Numéro de téléphone</label>
+            <%= f.input :phone, as: :tel, label: false, require: true, placeholder: 'Numéor de téléphone' %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Adresse email</label>
+            <%= f.input :email, as: :email, label: false, require: true, placeholder: 'Adress email' %>
+          </div>
+        </div>
+        <!-- div class="card-footer">
+            <%= f.button :submit, 'Ajouter ce partenaire', class: 'btn btn-primary btn-sm' %>
+          </div -->
+      </div>
+      <div class="text-right">
+        <%= f.button :submit, 'Ajouter', class: 'btn btn-primary btn-sm' %>
+        <%= link_to 'Annuler', :back, class: 'btn btn-danger btn-sm' %>
+      </div>
+    </div>
+  </div>
+
+<% end %>

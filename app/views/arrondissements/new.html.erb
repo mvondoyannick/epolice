@@ -1,5 +1,10 @@
-<h1 class="m-b-40">Nouvel arrondissement</h1>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Nouvel arrondissement
+</h1>
 
 <%= render 'form', arrondissement: @arrondissement %>
 
-<%= link_to 'Back', arrondissements_path %>
+<!--%= link_to 'Back', arrondissements_path % -->

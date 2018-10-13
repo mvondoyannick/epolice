@@ -1,9 +1,14 @@
 <p id="notice"><%= notice %></p>
-<%= link_to new_groupement_path, class: 'btn btn-primary m-b-40' do %>*
+<%= link_to new_groupement_path, class: 'btn btn-primary m-b-40' do %>
   <i class="fa fa-plus"></i>
   Ajouter un groupement
 <% end %>
-<h1 class="m-b-40"><i class="fa fa-code-branch"></i> Groupements régionaux</h1>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Groupements régionaux
+</h1>
 
 <div class="col-lg-9">
   <div class="table-responsive table--no-card m-b-30">
@@ -34,7 +39,7 @@
 
 <br>
 
-<%= link_to new_groupement_path, class: 'btn btn-primary' do %>*
+<%= link_to new_groupement_path, class: 'btn btn-primary' do %>
   <i class="fa fa-plus"></i>
   Ajouter un groupement
 <% end %>

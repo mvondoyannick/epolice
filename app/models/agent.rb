@@ -7,6 +7,7 @@ class Agent < ApplicationRecord
 	has_many :affectations
 	belongs_to :grade
 	belongs_to :unite
+	#belongs_to :commissariat
 
 	validates_presence_of :name, presence: true
 	validates_presence_of :age, presence: true

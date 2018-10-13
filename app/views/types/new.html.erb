@@ -1,5 +1,10 @@
-<h1 class="m-b-40">Nouveau type d'évenement</h1>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Nouveau type d'évenement
+</h1>
 
 <%= render 'form', type: @type %>
 
-<%= link_to 'Back', types_path %>
+<!-- %= link_to 'Back', types_path %-- >

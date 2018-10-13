@@ -1,4 +1,9 @@
-<h1 class="m-b-40">Ajouter un agent</h1>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+   <% end %>
+  Ajouter un agent
+</h1>
 <%= render 'form', agent: @agent %>
 
-<%= link_to 'Back', agents_path %>
+<!--%= link_to 'Back', agents_path % -->

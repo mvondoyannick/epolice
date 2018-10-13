@@ -1,39 +1,72 @@
 <%= simple_form_for(@commissariat) do |f| %>
   <%= f.error_notification %>
 
-  <div class="col-lg-8">
-    <div class="card">
-      <div class="card-header">
-        <strong>Ajout d'un nouveau commissariat</strong>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>&nbsp;</strong>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Region du commissariat</label>
+            <%= f.association :region, prompt: 'Selectionner une region', label: false, selected: "Centre" %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Département du commissariat</label>
+            <%= f.association :departement, prompt: 'Selectionner un département', label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Arrondissement du commissariat</label>
+            <%= f.association :arrondissement, prompt: 'Selectionner un arrondissement', label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Localisation du commissariat</label>
+            <%= f.input :localisation, as: :text, placeholder: 'Localisation du commissariat', label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Nom du commissariat</label>
+            <%= f.input :name, placeholder: 'Nom du commissariat', label: false %>
+          </div>
+        </div>
+        <!-- div class="card-footer">
+        </div -->
       </div>
-      <div class="card-body card-block">
-        <div class="form-group">
-          <label for="company" class=" form-control-label">Nom du commissariat</label>
-          <%= f.input :name, placeholder: 'Nom du commissariat', label: false %>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>&nbsp;</strong>
         </div>
-        <div class="form-group">
-          <label for="company" class=" form-control-label">Téléphone du commissariat</label>
-          <%= f.input :phone, as: :tel, placeholder: 'Téléphone du commissariat', label: false %>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Téléphone du commissariat</label>
+            <%= f.input :phone, as: :tel, placeholder: 'Téléphone du commissariat', label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Adresse email commissariat</label>
+            <%= f.input :email, as: :email, placeholder: 'Adresse email commissariat', label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Nom du commissaire</label>
+            <%= f.association :agent, prompt: 'Selectionner un agent commissaire', label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Téléphone du commissaire</label>
+            <%= f.input :phonecommissaire, as: :tel, placeholder: 'Téléphone du commissaire', label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Adresse email commissaire</label>
+            <%= f.input :emailcommissaire, as: :email, placeholder: 'Adresse email du commissaire', label: false %>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="company" class=" form-control-label">Adresse email commissariat</label>
-          <%= f.input :email, as: :email, placeholder: 'Adresse email commissariat', label: false %>
-        </div>
-        <div class="form-group">
-          <label for="company" class=" form-control-label">Region du commissariat</label>
-          <%= f.association :region, prompt: 'Selectionner une region', label: false, selected: "Centre" %>
-        </div>
-        <div class="form-group">
-          <label for="company" class=" form-control-label">Département du commissariat</label>
-          <%= f.association :departement, prompt: 'Selectionner un département', label: false %>
-        </div>
-        <div class="form-group">
-          <label for="company" class=" form-control-label">Arrondissement du commussariat</label>
-          <%= f.association :arrondissement, prompt: 'Selectionner un arrondissement', label: false %>
-        </div>
+        <!-- div class="card-footer">
+          <%= f.button :submit, class: 'btn btn-primary' %>
+        </div -->
       </div>
-      <div class="card-footer">
-        <%= f.button :submit, class: 'btn btn-primary' %>
+      <div class="text-right">
+        <%= f.button :submit, 'Ajouter', class: 'btn btn-primary btn-sm' %>
+        <%= link_to 'Annuler', :back, class: 'btn btn-danger btn-sm' %>
       </div>
     </div>
   </div>

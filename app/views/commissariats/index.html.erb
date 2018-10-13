@@ -3,16 +3,22 @@
   <i class="fa fa-plus"></i>
   Ajouter un commissariat
 <% end %>
-<h1 class="m-b-40">Commissariats</h1>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Commissariats
+</h1>
 <div class="col-lg-12">
   <div class="table-responsive table--no-card m-b-30">
     <table class="table table-borderless table-striped table-earning">
       <thead>
       <tr>
-        <th>Name</th>
-        <th>Phone</th>
-        <th>Ville</th>
-        <th>Quartier</th>
+        <th>Nom</th>
+        <th>Téléphone</th>
+        <th>Region</th>
+        <th>Departement</th>
+        <th>Arrondissement</th>
         <th colspan="3"></th>
       </tr>
       </thead>
@@ -21,7 +27,9 @@
           <tr>
             <td><%= commissariat.name %></td>
             <td><%= commissariat.phone %></td>
-            <td><%= commissariat.email %></td>
+            <td><%= commissariat.region.name if !commissariat.region_id.nil? %></td>
+            <td><%= commissariat.departement.name if !commissariat.departement_id.nil? %></td>
+            <td><%= commissariat.arrondissement.name if !commissariat.arrondissement_id.nil? %></td>
             <td><%= link_to 'Show', commissariat %></td>
             <td><%= link_to 'Edit', edit_commissariat_path(commissariat) %></td>
             <td><%= link_to 'Destroy', commissariat, method: :delete, data: { confirm: 'Are you sure?' } %></td>

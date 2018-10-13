@@ -5,7 +5,7 @@
   <div class="col-lg-8">
     <div class="card">
       <div class="card-header">
-        <strong>Ajout d'un nouveau commissariat</strong>
+        <strong>&nbsp;</strong>
       </div>
       <div class="card-body card-block">
         <div class="form-group">
@@ -17,8 +17,8 @@
           <%= f.input :description, as: :text, placeholder: 'Description type evenement', label: false %>
         </div>
         <div class="form-group">
-          <label for="company" class=" form-control-label">Service rattaché a ce type d'evenement</label>
-          <%= f.association :service, prompt: 'Selectionner un service', label: false %>
+          <label for="company" class=" form-control-label">Partenaires concernés</label>
+          <%= f.input :entity, collection: Structure.all.collect { |x| [x.name, x.id]}, as: :check_boxes, label: false, input_html: {style: 'margin: 20px;', checked: "checked"}, include_blank: false, multiple: true %> <br>
         </div>
       </div>
       <div class="card-footer">

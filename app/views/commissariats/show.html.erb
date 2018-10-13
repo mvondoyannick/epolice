@@ -1,4 +1,3 @@
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -12,10 +11,44 @@
 </p>
 
 <p>
-  <strong>Ville:</strong>
-  <%= @commissariat.ville.name %>
+  <strong>Region:</strong>
+  <%= @commissariat.region.name if !@commissariat.region_id.nil? %>
+</p>
+
+<p>
+  <strong>Departement:</strong>
+  <%= @commissariat.departement.name if !@commissariat.departement_id.nil? %>
+</p>
+
+<p>
+  <strong>Arrondissement:</strong>
+  <%= @commissariat.arrondissement.name if !@commissariat.arrondissement_id.nil? %>
+</p>
+
+<p>
+  <strong>Adress email:</strong>
+  <%= @commissariat.email %>
+</p>
+
+<p>
+  <strong>Localisation:</strong>
+  <%= @commissariat.localisation %>
+</p>
+
+<p>
+  <strong>Commissaire:</strong>
+  <%= @commissariat.agent.name if !@commissariat.agent_id.nil? %>&nbsp;<%= @commissariat.agent.prenom if !@commissariat.agent_id.nil? %>
+</p>
+
+<p>
+  <strong>Téléphone commissaire:</strong>
+  <%= @commissariat.phonecommissaire %>
+</p>
+
+<p>
+  <strong>Téléphone commissaire:</strong>
+  <%= @commissariat.emailcommissaire %>
 </p>
 
 <%= link_to 'Edit', edit_commissariat_path(@commissariat) %> |
 <%= link_to 'Back', commissariats_path %>
-</main>

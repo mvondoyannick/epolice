@@ -1,5 +1,10 @@
-<h1 class="m-b-40">Nouvelle unité</h1>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Nouveau service
+</h1>
 
 <%= render 'form', unite: @unite %>
 
-<%= link_to 'Back', unites_path %>
+<!-- %= link_to 'Back', unites_path % -->

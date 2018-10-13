@@ -17,7 +17,7 @@ class Structure < ApplicationRecord
   private
 
   def set_data
-    self.email = self.name.delete(' ').downcase+'@epolice.cm'
+    self.email = self.name.delete(' ').downcase+'-'+SecureRandom.hex(2)+'@epolice.cm'
     self.pwd = SecureRandom.hex(4).upcase
   end
 

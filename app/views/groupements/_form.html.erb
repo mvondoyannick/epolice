@@ -2,28 +2,64 @@
 <%= simple_form_for(@groupement) do |f| %>
   <%= f.error_notification %>
 
-  <div class="col-lg-8">
-    <div class="card">
-      <div class="card-header">
-        <strong>Ajout d'un nouveau commissariat</strong>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>&nbsp;</strong>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Région du groupement</label>
+            <%= f.association :region, prompt: 'Selectionner une region', label: false, selected: "Littoral" %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Localisation groupement</label>
+            <%= f.input :localisation, as: :text, placeholder: 'Localisation groupement', label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Nom du groupement</label>
+            <%= f.input :name, placeholder: 'Nom du groupement', label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Téléphone du groupement</label>
+            <%= f.input :phone, as: :tel, placeholder: 'Téléphone du groupement', label: false %>
+          </div>
+        </div>
       </div>
-      <div class="card-body card-block">
-        <div class="form-group">
-          <label for="company" class=" form-control-label">Nom du groupement</label>
-          <%= f.input :name, placeholder: 'Nom du commissariat', label: false %>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>&nbsp;</strong>
         </div>
-        <div class="form-group">
-          <label for="company" class=" form-control-label">Téléphone du groupement</label>
-          <%= f.input :phone, as: :tel, placeholder: 'Téléphone du commissariat', label: false %>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Adresse email du groupement</label>
+            <%= f.input :email, as: :email, placeholder: 'Adresse email du groupement', label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Selectionner le commandant</label>
+            <%= f.association :agent, prompt: 'Selectionner une agent', label: false, selected: "Littoral" %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Téléphone du commandant</label>
+            <%= f.input :phonecommandant, as: :tel, placeholder: 'Téléphone du commandant', label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Adresse email commandant</label>
+            <%= f.input :emailcommandant, as: :email, placeholder: 'Adresse email commadant', label: false %>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="company" class=" form-control-label">Région de localisation du groupement</label>
-          <%= f.association :region, prompt: 'Selectionner une region', label: false, selected: "Littoral" %>
-        </div>
+        <!--div class="card-footer">
+          <%= f.button :submit, class: 'btn btn-primary' %>
+        </div -->
       </div>
-      <div class="card-footer">
-        <%= f.button :submit, class: 'btn btn-primary' %>
+      <div class="text-right">
+        <%= f.button :submit, 'Ajouter', class: 'btn btn-primary btn-sm' %>
+        <%= link_to 'Annuller', :back, class: ' btn btn-danger btn-sm' %>
       </div>
     </div>
   </div>
+
 <% end %>

@@ -1,5 +1,10 @@
-<h1 class="m-b-40">Nouveau Groupement (GRVPC)</h1>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Nouveau Groupement (GRVPC)
+</h1>
 
 <%= render 'form', groupement: @groupement %>
 
-<%= link_to 'Back', groupements_path %>
+<!-- %= link_to 'Back', groupements_path % -->

@@ -4,14 +4,13 @@
   <div class="col-lg-6">
     <div class="card">
       <div class="card-header">
-        <strong>Details de l'agent</strong>
-        <small> <%= @agent.name+' '+@agent.prenom %></small>
+        <strong>Details de l'agent <%= @agent.name.upcase+' '+@agent.prenom.upcase %></strong>
       </div>
       <div class="card-body card-block">
         <div class="form-group">
           <label for="company" class=" form-control-label">Photo</label>
           <br>
-          <%=  %>
+          <%= image_tag(@agent.avatar, size: 200) if @agent.avatar.attached? %>
         </div>
         <div class="form-group">
           <label for="vat" class=" form-control-label">Matricule</label>
@@ -49,13 +48,13 @@
         </div>
       </div>
       <div class="card-footer">
-        <%= link_to edit_agent_path(@agent.id), class: 'btn btn-primary btn-sm' do %>
-          <i class="fa fa-dot-circle-o"></i>
-          Mettre à jour
-        <% end %>
-        <%= link_to grvpc_index_path, class: 'btn btn-primary btn-sm' do %>
+        <%= link_to agents_path, class: 'btn btn-primary btn-sm' do %>
           <i class="fa fa-arrow-left"></i>
           Retour
+        <% end %>
+        <%= link_to edit_agent_path(@agent.id), class: 'btn btn-primary btn-sm' do %>
+          <i class="fa fa-edit"></i>
+          Mettre à jour
         <% end %>
       </div>
     </div>
@@ -66,71 +65,4 @@
   <i class="fa fa-arrow-left noir"></i>
   Retourner à la vue precedente
 <% end %>
-<div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          Information sur l'agent
-        </p>
-        <%= link_to 'Modifier', edit_agent_path(@agent), class: 'button is-link is-outlined' %>
-      <%= link_to 'Retour', agents_path %>
-      </header>
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <% if @agent.avatar.attached? %>
-            <%= image_tag(@agent.avatar, size: 250) %>
-          <% else %>
-            <%= image_tag 'https://bulma.io/images/placeholders/1280x960.png' %>
-          <% end %>
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="content">
-          <div class="subtitle is-4">
-            Identifiants de l'agent de police
-          </div>
-          <table class="table">
-            <tr>
-              <td><strong>1</strong></td>
-              <td><strong>Matricule</strong></td>
-              <td><%= @agent.matricule %></td>
-            </tr>
-            <tr>
-              <td><strong>2</strong></td>
-              <td><strong>Nom</strong></td>
-              <td><%= @agent.name %></td>
-            </tr>
-            <tr>
-              <td><strong>1</strong></td>
-              <td><strong>Prénom</strong></td>
-              <td><%= @agent.prenom %></td>
-            </tr>
-            <tr>
-              <td><strong>1</strong></td>
-              <td><strong>Téléphone</strong></td>
-              <td><%= @agent.phone %></td>
-            </tr>
-            <tr>
-              <td><strong>1</strong></td>
-              <td><strong>Grade</strong></td>
-              <td><%= @agent.grade.name %></td>
-            </tr>
-            <tr>
-              <td><strong>1</strong></td>
-              <td><strong>Ville</strong></td>
-              <td><%= @agent.matricule %></td>
-            </tr>
-            <tr>
-              <td><strong>1</strong></td>
-              <td><strong>Identifiant</strong></td>
-              <td><%= rand(@agent.id) %></td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <footer class="card-footer">
-        <a href="#" class="card-footer-item">Save</a>
-        <a href="#" class="card-footer-item">Edit</a>
-        <a href="#" class="card-footer-item">Delete</a>
-      </footer>
-    </div>
 </p>

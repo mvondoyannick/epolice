@@ -1,6 +1,12 @@
 class Type < ApplicationRecord
-  has_many :alerte
-  has_many :service
-  validates_presence_of :name, presence: true
-  validates_uniqueness_of :name
+  before_save :empty_array
+  validates :name, presence: true, uniqueness: true
+
+  private
+
+  def empty_array
+    self.entity = Array.new #eval
+    self.entity = self.entity
+
+  end
 end

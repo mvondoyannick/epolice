@@ -2,7 +2,7 @@
   <%= link_to :back do %>
     <i class="fa fa-arrow-left"></i>
   <% end %>
-  Gestion de la structure
+  Gestion du partenaire
 </h1>
 
 <div class="row">
@@ -20,11 +20,22 @@
   <div class="col-lg-3">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Comptes utilisateur partenaires</h5>
+        <h5 class="card-title">Centres du partenaire</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Lister, ajouter ou supprimer des comptes</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Acceder', centrepartenaires_path, class: 'card-link' %>
+        <%= link_to 'Ajouter', new_centrepartenaire_path, class: 'card-link' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Comptes du centre</h5>
         <h6 class="card-subtitle mb-2 text-muted">Lister, ajouter ou supprimer des comptes</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         <%= link_to 'Acceder', parametre_admins_member_show_path, class: 'card-link' %>
-        <%= link_to 'Ajouter', new_member_registration_path, class: 'card-link' %>
+        <%= link_to 'Ajouter', access_member_new_path, class: 'card-link' %>
       </div>
     </div>
   </div>

@@ -4,18 +4,18 @@
   <%= link_to :back do %>
     <i class="fa fa-arrow-left"></i>
   <% end %>
-  Structures
+  Partenaires
 </h1>
 
 <table class="table table-borderless table-striped table-earning">
   <thead>
     <tr>
-      <th>Photo</th>
-      <th>Name</th>
-      <th>Raison</th>
+      <th>Logo</th>
+      <th>Raison sociale</th>
+      <th>Activité</th>
+      <th>Region</th>
       <th>Adresse</th>
       <th>Email</th>
-      <th>Region</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,9 +26,9 @@
         <td><%= image_tag url_for(structure.logo), size: '75x75' %></td>
         <td><%= structure.name %></td>
         <td><%= structure.raison %></td>
+        <td><%= structure.region.name %></td>
         <td><%= structure.adresse %></td>
         <td><%= structure.email %></td>
-        <td><%= structure.region.name %></td>
         <td><%= link_to 'Show', structure %></td>
         <td><%= link_to 'Edit', edit_structure_path(structure) %></td>
         <td><%= link_to 'Destroy', structure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -41,5 +41,5 @@
 
 <%= link_to new_structure_path, class: 'btn btn-primary' do %>
   <%= fa_icon 'plus' %>
-  Ajouter une structure partenaire
+  Ajouter un partenaire
 <% end %>

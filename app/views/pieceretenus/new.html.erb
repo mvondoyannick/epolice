@@ -1,5 +1,10 @@
-<h1 class="m-b-40">New Pieceretenu</h1>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Nouvel élément
+</h1>
 
 <%= render 'form', pieceretenu: @pieceretenu %>
 
-<%= link_to 'Back', pieceretenus_path %>
+<!-- %= link_to 'Back', pieceretenus_path %-->

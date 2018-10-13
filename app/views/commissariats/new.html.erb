@@ -1,5 +1,10 @@
-<h1 class="m-b-40">Nouveau Commissariat</h1>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Nouveau Commissariat
+</h1>
 
 <%= render 'form', commissariat: @commissariat %>
 
-<%= link_to 'Retour', commissariats_path %>
+<!-- %= link_to 'Retour', commissariats_path % -->

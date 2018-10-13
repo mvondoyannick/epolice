@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Centres du partenaire
+</h1>
+
+<table class="table table-borderless table-striped table-earning">
+  <thead>
+    <tr>
+      <th>Libellé centre</th>
+      <th>Structure</th>
+      <th>Region</th>
+      <th>Localisation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @centrepartenaires.each do |centrepartenaire| %>
+      <tr>
+        <td><%= centrepartenaire.name %></td>
+        <td><%= centrepartenaire.structure.name %></td>
+        <td><%= centrepartenaire.region.name %></td>
+        <td><%= centrepartenaire.localisation %></td>
+        <td><%= link_to 'Show', centrepartenaire %></td>
+        <td><%= link_to 'Edit', edit_centrepartenaire_path(centrepartenaire) %></td>
+        <td><%= link_to 'Destroy', centrepartenaire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to new_centrepartenaire_path, class: 'btn btn-primary' do %>
+  <i class="fa fa-plus"></i>
+  Ajouter un centre
+<% end %>

@@ -3,7 +3,11 @@
   <i class="fa fa-plus"></i>
   Nouveau Motif d'infraction
 <% end %>
-<h1 class="m-b-40">Motifs d'infraction</h1>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Motifs d'infraction</h1>
 <div class="row">
   <div class="col-lg-12">
     <div class="table-responsive table--no-card m-b-30">
@@ -48,7 +52,7 @@
 
 <%= link_to new_infraction_path, class: 'btn btn-primary' do %>
   <i class="fa fa-plus"></i>
-  Nouvelle Motif d'infraction
+  Nouveau Motif d'infraction
 <% end %>
 &nbsp;&nbsp;
 <%= link_to infractions_path(format: :xls), class: 'btn btn-success' do %>

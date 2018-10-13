@@ -5,14 +5,7 @@
   <div class="col-lg-6">
     <div class="card">
       <div class="card-header">
-        <strong>Ajout d'un nouveau département</strong>
-      </div>
-
-      <div class="card-body card-block">
-        <div class="form-group">
-          <label for="company" class=" form-control-label">Nom de l'arrondissement</label>
-          <%= f.input :name, label: false, placeholder: 'Nom de l arrondissement' %>
-        </div>
+        <strong>&nbsp;</strong>
       </div>
       <div class="card-body card-block">
         <div class="form-group">
@@ -26,8 +19,15 @@
           <%= f.association :departement, label: false, prompt: 'Selectionner un département' %>
         </div>
       </div>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Nom de l'arrondissement</label>
+          <%= f.input :name, label: false, placeholder: 'Nom de l arrondissement' %>
+        </div>
+      </div>
+
       <div class="card-footer">
-        <%= f.button :submit, class: 'btn btn-primary btn-sm' %>
+        <%= f.button :submit,'Ajouter', class: 'btn btn-primary btn-sm' %>
       </div>
     </div>
   </div>

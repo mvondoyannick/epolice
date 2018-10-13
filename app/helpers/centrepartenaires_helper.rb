@@ -1,0 +1,2 @@
+module CentrepartenairesHelper
+end

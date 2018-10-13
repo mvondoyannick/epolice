@@ -5,7 +5,7 @@
   <%= link_to :back do %>
     <i class="fa fa-arrow-left"></i>
   <% end %>
-  Ajout d'un nouveau partenaire
+  Nouveau compte
 </h1>
 
 <% if flash[:notice] %>
@@ -18,72 +18,106 @@
 <% end %>
 
 <%= simple_form_for access_member_new_path do |f| %>
-  <%= f.error_notification %>
+  <% f.error_notification %>
   <div class="row">
-      <div class="col-lg-6">
+    <div class="col-lg-4">
         <div class="card">
           <div class="card-header">
-            <strong>Ajout d'un nouveau motif de contravention</strong>
+            <strong>&nbsp;</strong>
           </div>
           <div class="card-body card-block">
             <div class="form-group">
-              <label for="company" class=" form-control-label">Adresse email</label>
-              <%= f.input :email, label: false, placeholder: 'Adresse email partenaires', require: true %>
+              <label for="company" class=" form-control-label">Selectionner le partenaire</label>
+              <%= f.input :service_id, collection: Structure.all, label: false, prompt: 'Selectionner le partenaire', require: true %>
             </div>
           </div>
           <div class="card-body card-block">
             <div class="form-group">
-              <label for="company" class=" form-control-label">Numéro de téléphone</label>
-              <%= f.input :phone, as: :tel, label: false, placeholder: 'Numéro de téléphone principal', require: true %>
-            </div>
-          </div>
-
-          <div class="card-body card-block">
-            <div class="form-group">
-              <label for="company" class=" form-control-label">Numéro de téléphone 2</label>
-              <%= f.input :phone1, as: :tel, label: false, placeholder: 'Numéro de téléphone secondaire 1', require: false %>
+              <label for="company" class=" form-control-label">Selectionner le centre</label>
+              <%= f.input :service_id, collection: Centrepartenaire.all, label: false, prompt: 'Selectionner le centre', require: true %>
             </div>
           </div>
 
           <div class="card-body card-block">
             <div class="form-group">
-              <label for="company" class=" form-control-label">Numéro de téléphone 3</label>
-              <%= f.input :phone2, as: :tel, label: false, placeholder: 'Numéro de téléphone secondaire 2', require: false %>
-            </div>
-          </div>
-          <div class="card-body card-block">
-            <div class="form-group">
-              <label for="company" class=" form-control-label">Mot de passe</label>
-              <%= f.input :password, as: :password, label: false, placeholder: 'Mot de passe de connexion', require: true %>
-            </div>
-          </div>
-
-          <div class="card-body card-block">
-            <div class="form-group">
-              <label for="company" class=" form-control-label">Confirmer mot de passe</label>
-              <%= f.input :password_confirmation, as: :password, label: false, placeholder: 'Confirmer le mot de passe', require: true %>
-            </div>
-          </div>
-
-          <div class="card-body card-block">
-            <div class="form-group">
-              <label for="company" class=" form-control-label">Selectionner le service</label>
-              <%= f.input :service_id, collection: Service.all, label: false, prompt: 'Selectionner le service', require: true %>
-            </div>
-          </div>
-
-          <div class="card-body card-block">
-            <div class="form-group">
-              <label for="company" class=" form-control-label">Selectionner la region</label>
-              <%= f.input :region_id, collection: Region.all, label: false, prompt: 'Selectionner la region du partenaire', require: true %>
+              <label for="company" class=" form-control-label">Localisation du centre</label>
+              <%= f.input :service_id, collection: Centrepartenaire.pluck(:localisation), label: false, prompt: 'Selectionner le partenaire', readonly: true %>
             </div>
           </div>
 
 
-          <div class="card-footer">
+          <!-- div class="card-footer">
             <%= f.button :submit, 'Ajouter ce partenaire', class: 'btn btn-primary btn-sm' %>
-          </div>
+          </div -->
         </div>
       </div>
+    <div class="col-lg-4">
+      <div class="card">
+        <div class="card-header">
+          <strong>&nbsp;</strong>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Matricule</label>
+            <%= f.input :matricule, label: false, placeholder: 'Adresse email partenaires', require: true %>
+          </div>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Nom</label>
+            <%= f.input :nom, label: false, placeholder: 'Adresse email partenaires', require: true %>
+          </div>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Prénom</label>
+            <%= f.input :prenom, label: false, placeholder: 'Adresse email partenaires', require: true %>
+          </div>
+        </div>
+
+
+        <!--div class="card-footer">
+          <%= f.button :submit, 'Ajouter ce partenaire', class: 'btn btn-primary btn-sm' %>
+        </div-->
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card">
+        <div class="card-header">
+          <strong>&nbsp;</strong>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Fonction</label>
+            <%= f.input :fonction, label: false, placeholder: 'Adresse email partenaires', require: true %>
+          </div>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Numéro de téléphone</label>
+            <%= f.input :phone, as: :tel, label: false, placeholder: 'Numéro de téléphone principal', require: true %>
+          </div>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Adresse email</label>
+            <%= f.input :email, as: :email, label: false, placeholder: 'Adress email', require: true %>
+          </div>
+        </div>
+
+
+        <!--div class="card-footer">
+          <%= f.button :submit, 'Ajouter ce partenaire', class: 'btn btn-primary btn-sm' %>
+        </div-->
+      </div>
+      <div class="text-right">
+        <%= f.button :submit, 'creer', class: 'btn btn-primary btn-sm' %>
+        <%= link_to 'Annuler', :back, class: 'btn btn-danger btn-sm' %>
+      </div>
+      <br>
+      <div class="text-right">
+        <%= link_to 'Ajouter un utilisateur', nil, class: 'btn btn-success btn-sm' %>
+      </div>
+    </div>
   </div>
 <% end %>

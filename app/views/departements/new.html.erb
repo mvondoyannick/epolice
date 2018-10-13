@@ -1,5 +1,10 @@
-<h1 class="m-b-40">Nouveau département</h1>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Nouveau département
+</h1>
 
 <%= render 'form', departement: @departement %>
 
-<%= link_to 'Back', departements_path %>
+<!-- %= link_to 'Back', departements_path % -->

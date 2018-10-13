@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :centrepartenaires
   resources :structures
   resources :centrerecouvrements
   resources :paiementsolutions
