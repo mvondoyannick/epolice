@@ -1,25 +1,21 @@
 <table border="1">
   <tr>
     <th>ID</th>
-    <th>Matricule</th>
+    <th>Region</th>
+    <th>Service</th>
+    <th>Grade</th>
     <th>Name</th>
     <th>Prenom</th>
     <th>Phone</th>
-    <th>Grade</th>
-    <th>Region</th>
-    <th>Unite</th>
-    <th>Date creation</th>
-    <% Agent.all.each do |table| %>
+    <% Agent.order(name: :asc).each do |table| %>
     <tr>
       <td><%= table.id %></td>
-      <td><%= table.matricule %></td>
+      <td><%= table.region.name if !table.region_id.nil? %></td>
+      <td><%= table.unite.name if !table.unite_id.nil? %></td>
+      <td><%= table.grade.name if !table.grade_id.nil? %></td>
       <td><%= table.name %></td>
       <td><%= table.prenom %></td>
       <td><%= table.phone %></td>
-      <td><%= table.grade.name if !table.grade_id.nil? %></td>
-      <td><%= table.region.name if !table.region_id.nil? %></td>
-      <td><%= table.unite.name if !table.unite_id.nil? %></td>
-      <td><%= table.created_at %></td>
     </tr>
   <% end %>
   </tr>

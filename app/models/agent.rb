@@ -3,7 +3,6 @@ class Agent < ApplicationRecord
 	before_save :generate_hash
 
 	has_many :convocation
-	belongs_to :commissariat
 	has_many :alertes
 	has_many :affectations
 	belongs_to :grade

@@ -11,7 +11,7 @@
         <div class="form-group">
           <label for="company" class=" form-control-label">Photo</label>
           <br>
-          <%= image_tag url_for(@agent.avatar), size: '150x150', class: 'img-thumbnail' %>
+          <%=  %>
         </div>
         <div class="form-group">
           <label for="vat" class=" form-control-label">Matricule</label>
@@ -113,11 +113,6 @@
               <td><strong>1</strong></td>
               <td><strong>Grade</strong></td>
               <td><%= @agent.grade.name %></td>
-            </tr>
-            <tr>
-              <td><strong>1</strong></td>
-              <td><strong>Commissariat</strong></td>
-              <td><%= @agent.commissariat.name %></td>
             </tr>
             <tr>
               <td><strong>1</strong></td>
