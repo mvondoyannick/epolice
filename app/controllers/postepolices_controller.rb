@@ -1,8 +1,8 @@
 class PostepolicesController < ApplicationController
   before_action :set_postepolice, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_grvpc!, only: [:new, :update, :destroy]
+  #before_action :authenticate_grvpc!, only: [:new, :update, :destroy]
 
-  layout 'admin'
+  layout 'fylo'
 
   # GET /postepolices
   # GET /postepolices.json
@@ -72,6 +72,6 @@ class PostepolicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def postepolice_params
-      params.require(:postepolice).permit(:name, :location, :agent_id, :commissariat_id)
+      params.require(:postepolice).permit(:name, :location, :agent_id, :commissariat_id, :region_id, :grade_id, :phone, :email)
     end
 end

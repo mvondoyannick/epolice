@@ -1,6 +1,7 @@
 class ParametreController < ApplicationController
   before_action :authenticate_admin!
   layout 'fylo'
+
   def index
   end
 
@@ -31,5 +32,10 @@ class ParametreController < ApplicationController
 
   def add_user
     
+  end
+
+  #pour la gestion des GRVPC
+  def grvpc
+
   end
 end

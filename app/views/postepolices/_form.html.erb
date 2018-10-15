@@ -2,19 +2,68 @@
 <%= simple_form_for(@postepolice) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-
-    <%= f.input :name %>
-
-    <%= f.input :location %>
-
-    <%= f.association :agent %>
-
-    <%= f.association :commissariat %>
-
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>&nbsp;</strong>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Region d'appartenance</label>
+            <%= f.association :region, label: false, prompt: 'Region du poste de police' %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Commissariat d'appartenance</label>
+            <%= f.association :commissariat, label: false, prompt: 'Commissariat appartenance' %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Nom du poste de police</label>
+            <%= f.input :name, placeholder: 'Nom du poste de police', label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Localisation poste de police</label>
+            <%= f.input :location, as: :text, placeholder: 'Localisation du poste de police', label: false %>
+          </div>
+        </div>
+        <!--div class="card-footer text-right">
+          <%= f.button :submit, 'Ajouter', class: 'btn btn-primary' %>
+          <%= link_to 'Annuler', :back, class: 'btn btn-danger' %>
+        </div-->
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>&nbsp;</strong>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Responsable poste policePartenaires concernés</label>
+            <%= f.input :agent_id, collection: Agent.where(unite_id: 1).collect { |x| [x.name, x.id]}, label: false, include_blank: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Grade</label>
+            <%= f.association :grade, prompt: 'Selectionner le grade', label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Téléphone commissaire</label>
+            <%= f.input :phone, as: :tel, placeholder: 'Numéro téléphone commissaire', label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Adresse email</label>
+            <%= f.input :email, as: :text, placeholder: 'Adresse email commissaire', label: false %>
+          </div>
+        </div>
+        <!--div class="card-footer text-right">
+          <%= f.button :submit, 'Ajouter', class: 'btn btn-primary' %>
+          <%= link_to 'Annuler', :back, class: 'btn btn-danger' %>
+        </div-->
+      </div>
+      <div class="text-right">
+        <%= f.button :submit, 'Ajouter', class: 'btn btn-primary btn-sm' %>
+        <%= link_to 'Annuler', :back, class: 'btn btn-danger btn-sm' %>
+      </div>
+    </div>
   </div>
 <% end %>

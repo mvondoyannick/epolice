@@ -1,7 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Region:</strong>
+  <%= @postepolice.region.name %>
+</p>
+
+<p>
+  <strong>Nom poste police:</strong>
   <%= @postepolice.name %>
 </p>
 
@@ -11,13 +16,28 @@
 </p>
 
 <p>
-  <strong>Agent:</strong>
-  <%= @postepolice.agent %>
+  <strong>Agent responsable:</strong>
+  <%= @postepolice.agent.complete_name %>
 </p>
 
 <p>
   <strong>Commissariat:</strong>
-  <%= @postepolice.commissariat %>
+  <%= @postepolice.commissariat.name %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @postepolice.grade.name %>
+</p>
+
+<p>
+  <strong>Téléphone:</strong>
+  <%= @postepolice.phone %>
+</p>
+
+<p>
+  <strong>Adresse email:</strong>
+  <%= @postepolice.email %>
 </p>
 
 <%= link_to 'Edit', edit_postepolice_path(@postepolice) %> |

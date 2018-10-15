@@ -1,13 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Postepolices</h1>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Postes de police
+</h1>
 
-<table>
+<table class="table table-borderless table-striped table-earning m-b-40">
   <thead>
     <tr>
       <th>Name</th>
       <th>Location</th>
       <th>Agent</th>
+      <th>Region</th>
       <th>Commissariat</th>
       <th colspan="3"></th>
     </tr>
@@ -18,8 +24,9 @@
       <tr>
         <td><%= postepolice.name %></td>
         <td><%= postepolice.location %></td>
-        <td><%= postepolice.agent %></td>
-        <td><%= postepolice.commissariat %></td>
+        <td><%= postepolice.agent.complete_name %></td>
+        <td><%= postepolice.region.name %></td>
+        <td><%= postepolice.commissariat.name %></td>
         <td><%= link_to 'Show', postepolice %></td>
         <td><%= link_to 'Edit', edit_postepolice_path(postepolice) %></td>
         <td><%= link_to 'Destroy', postepolice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -30,4 +37,7 @@
 
 <br>
 
-<%= link_to 'New Postepolice', new_postepolice_path %>
+<%= link_to new_postepolice_path, class: 'btn btn-primary' do %>
+  <%= fa_icon 'plus' %>
+  Nouveau poste de police
+<% end %>

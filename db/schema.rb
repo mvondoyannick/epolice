@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_13_174219) do
+ActiveRecord::Schema.define(version: 2018_10_15_105127) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -470,8 +470,14 @@ ActiveRecord::Schema.define(version: 2018_10_13_174219) do
     t.bigint "commissariat_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "region_id"
+    t.string "phone"
+    t.string "email"
+    t.bigint "grade_id"
     t.index ["agent_id"], name: "index_postepolices_on_agent_id"
     t.index ["commissariat_id"], name: "index_postepolices_on_commissariat_id"
+    t.index ["grade_id"], name: "index_postepolices_on_grade_id"
+    t.index ["region_id"], name: "index_postepolices_on_region_id"
   end
 
   create_table "regions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

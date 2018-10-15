@@ -24,8 +24,13 @@ class Api::ConvocationsController < ApplicationController
       render json: {
         status: :found,
         message: token,
-        #ville: token[0].region.name,
-        #ville_id: token[0].region_id,
+        region: token[0].region.name,
+        region_id: token[0].region_id,
+        grade: token[0].grade.name,
+        grade_id: token[0].grade_id,
+        unite: token[0].unite.name,
+        unite_id: token[0].unite_id,
+        affectation: Affectation.find(5).fin.to_date >= Date.today.to_date, #a mettre a jour de facon dynamique
         image: '',
         apikey: SecureRandom.hex(10),
         code: 200,
