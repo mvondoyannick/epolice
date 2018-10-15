@@ -10,8 +10,10 @@
 <table class="table table-borderless table-striped table-earning m-b-40">
   <thead>
   <tr>
+    <th>N° Bulletin</th>
     <th>Agent</th>
-    <th>Carrefours</th>
+    <th>Commissariat</th>
+    <th>Poste de police</th>
     <th>Date debut</th>
     <th>Date fin</th>
     <th colspan="3"></th>
@@ -21,8 +23,10 @@
   <tbody>
   <% @affectations.each do |affectations| %>
     <tr>
+      <td><%= affectations.id %></td>
       <td><%= affectations.agent.complete_name %></td>
-      <td><%= affectations.carrefour.name if !affectations.carrefour_id.nil? %></td>
+      <td><%= affectations.commissariat.name if !affectations.commissariat_id.nil? %></td>
+      <td><%= affectations.postepolice.name if !affectations.postepolice_id.nil? %></td>
       <td><%= affectations.debut %></td>
       <td><%= affectations.fin %></td>
       <td><%= link_to 'Show', affectations %></td>
@@ -35,7 +39,7 @@
 
 <br>
 
-<%= link_to new_postepolice_path, class: 'btn btn-primary' do %>
+<%= link_to new_affectation_path, class: 'btn btn-primary' do %>
   <%= fa_icon 'plus' %>
   Nouveau bulletin
 <% end %>

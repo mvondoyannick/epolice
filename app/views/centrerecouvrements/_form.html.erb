@@ -2,17 +2,40 @@
 <%= simple_form_for(@centrerecouvrement) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>&nbsp;</strong>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <div class="form-group">
+              <label for="company" class=" form-control-label">Selectionner la region</label>
+              <%= f.association :region, label: false, prompt: 'Selectionner la region' %>
+            </div>
+            <label for="company" class=" form-control-label">Nom du centre</label>
+            <%= f.input :name, label: false, placeholder: 'Nom du centre de recouvrement' %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Numéro de téléphone</label>
+            <%= f.input :phone, label: false, placeholder: 'Numéro de téléphone' %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Adresse email</label>
+            <%= f.input :email, label: false, placeholder: 'Adresse email' %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Centre de recouvrement</label>
+            <%= f.input :localisation, label: false, placeholder: 'Lieu dit du centre de recouvrement', as: :text %>
+          </div>
 
-    <%= f.input :name %>
-
-    <%= f.input :phone %>
-
-    <%= f.association :region %>
-
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+        </div>
+      </div>
+      <div class="text-right">
+        <%= f.button :submit, 'Ajouter', class: "btn btn-primary btn-sm" %>
+        <%= link_to 'Annuler', :back, class: 'btn btn-danger btn-sm' %>
+      </div>
+    </div>
   </div>
 <% end %>

@@ -70,6 +70,6 @@ class CentrerecouvrementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def centrerecouvrement_params
-      params.require(:centrerecouvrement).permit(:name, :phone, :region_id)
+      params.require(:centrerecouvrement).permit(:name, :phone, :region_id, :email, :localisation, :region_id)
     end
 end

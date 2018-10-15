@@ -1,9 +1,12 @@
 
-<h3 class="title is-2 has-text-grey">Nouvelle affectation</h3>
-<h3 class="subtitle is-5 has-text-grey">Les nouvelles affectations permettent de positionner des agents du GRVPC au niveau des carrefours dans le zone d'affectation</h3>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Nouveau bulletin
+</h1>
 <hr style="background-color: #000000;">
 
 <%= render 'form', affectation: @affectation %>
 
-<hr style="background-color: #000000;">
-<%= link_to 'Retour', affectations_path, class: 'button is-link is-outlined' %>
+<!-- %= link_to 'Retour', affectations_path, class: 'button is-link is-outlined' %-->

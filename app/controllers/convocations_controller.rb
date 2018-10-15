@@ -9,7 +9,10 @@ class ConvocationsController < ApplicationController
   # GET /convocations
   # GET /convocations.json
   def index
-    @convocations = Convocation.all.order(created_at: :desc)
+    @search = Convocation.search do
+      fulltext params[:search]
+    end
+    @convocations = @search.results #Convocation.all.order(created_at: :desc)
     @title = "Toutes les convocations"
     @compteur = @convocations.count
   end

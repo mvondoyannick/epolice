@@ -52,6 +52,8 @@ gem 'gmaps4rails'
 gem 'devise'
 #Ajout de cancancan
 gem 'cancancan', '~> 2.0'
+#ajout de sunspot
+gem 'sunspot_rails'
 #using underscore js
 gem 'underscore-rails', '~> 1.8', '>= 1.8.3'
 #user JSON Web Token
@@ -95,7 +97,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-
+  gem 'sunspot_solr'
   #gestionnaire des graphique du modele
   #gem 'rails-erd'
 end

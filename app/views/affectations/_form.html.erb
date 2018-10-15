@@ -1,15 +1,56 @@
 
 <%= simple_form_for(@affectation) do |f| %>
   <%= f.error_notification %>
-
-  <div class="field">
-    <%= f.association :agent, prompt: "Selectionner un agent", html_input: {class: "input is-large"} %>
-    <%= f.association :carrefour, prompt: "Selectionner un carrefour", html_input: {class: "input is-large"}  %>
-    <%= f.input :debut, as: :date, html5: true, html_input: {class: "input is-large"}, label: "Date de debut" %>
-    <%= f.input :fin, as: :date, html5: true, html_input: {class: "input is-large"}, label: "Date de fin" %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, class: "button is-primary" %>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>&nbsp;</strong>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Region d'affectation</label>
+            <%= f.association :region, prompt: "Selectionner la region", label: false  %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Commissariat d'affectation</label>
+            <%= f.association :commissariat, prompt: "Selectionner un commissariat", label: false  %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Poste de police</label>
+            <%= f.association :postepolice, label: false, prompt: 'Selectionner un poste de police' %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Localisation</label>
+            <%= f.input :localisation, as: :text, placeholder: 'Selectionner la localisation', label: false %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>&nbsp;</strong>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Nom de l'Agent</label>
+            <%= f.association :agent, prompt: "Selectionner un agent", label: false, input_html: {style: 'margin: 20px;'}, multiple: true %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Date deDebut</label>
+            <%= f.input :debut, as: :datetime, html5: true, html_input: {class: "input is-large"}, label: false %>
+          </div>
+          <div class="form-group">
+            <label for="company" class=" form-control-label">Date de fin</label>
+            <%= f.input :fin, as: :datetime, html5: true, html_input: {class: "input is-large"}, label: false %>
+          </div>
+        </div>
+      </div>
+      <div class="text-right">
+        <%= f.button :submit, 'Ajouter', class: "btn btn-primary btn-sm" %>
+        <%= link_to 'Annuler', :back, class: 'btn btn-danger btn-sm' %>
+      </div>
+    </div>
   </div>
 <% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_15_105127) do
+ActiveRecord::Schema.define(version: 2018_10_15_170737) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -57,13 +57,18 @@ ActiveRecord::Schema.define(version: 2018_10_15_105127) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "agent_id"
-    t.bigint "carrefour_id"
     t.string "fin"
     t.string "debut"
     t.string "token"
     t.string "status"
+    t.bigint "commissariat_id"
+    t.bigint "postepolice_id"
+    t.string "localisation"
+    t.bigint "region_id"
     t.index ["agent_id"], name: "index_affectations_on_agent_id"
-    t.index ["carrefour_id"], name: "index_affectations_on_carrefour_id"
+    t.index ["commissariat_id"], name: "index_affectations_on_commissariat_id"
+    t.index ["postepolice_id"], name: "index_affectations_on_postepolice_id"
+    t.index ["region_id"], name: "index_affectations_on_region_id"
   end
 
   create_table "agents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -169,6 +174,8 @@ ActiveRecord::Schema.define(version: 2018_10_15_105127) do
     t.bigint "region_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email"
+    t.string "localisation"
     t.index ["region_id"], name: "index_centrerecouvrements_on_region_id"
   end
 

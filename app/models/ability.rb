@@ -2,9 +2,6 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    user ||= Fylo.new
-
-    can :manage, Alerte
 
     # Define abilities for the passed in user here. For example:
     #

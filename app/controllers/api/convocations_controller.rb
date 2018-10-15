@@ -45,7 +45,7 @@ class Api::ConvocationsController < ApplicationController
 
     #on recherche l'ID
 
-    #ensuite on recherche son token et le status de ce token
+    #ensuite on recherche son token egt le status de ce token
   end
 
   #permet de verifier une contravention
