@@ -307,25 +307,20 @@ class AccessController < ApplicationController
 
   #pour les parametres de la table selectionnée
   def export_detail
-    table = params[:table].capitalize!
-    table = table.singularize
+    puts params[:table]
+    redirect_to controller: :access, action: "#{params[:table]}", data: params[:table]
+  end
 
-    #on converti la chaine pour activeRecorde
-    model = table.constantize
-    #on retourne les enregistrements provenant de cette table
-    @table = model.all
-    respond_to do |format|
-      format.html do
-        @table
-        render layout: 'fylo'
-      end
-      format.json do
-        render json: @table
-      end
-      format.xls
-      format.csv {send_data @table.to_csv}
-      format.xls
-    end
+  def constat
+    render layout: 'fylo'
+  end
+
+  def convocation
+    render layout: 'fylo'
+  end
+
+  def alerte
+    render layout: 'fylo'
   end
 
   #configuration des inportation-exportation

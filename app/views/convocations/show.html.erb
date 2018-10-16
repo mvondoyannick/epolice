@@ -1,83 +1,138 @@
 <p id="notice"><%= notice %></p>
   <%  @agent = Agent.find(@convocation.agent_id) %>
-  <h2 class="title is-3">
+  <h1 class="m-b-40">
     <%= link_to :back do %>
       <i class="fa fa-arrow-left"></i>
     <% end %>
     Infraction du <%= @convocation.created_at.strftime("%B %d, %Y") %>
-  </h2>
-  <hr>
+  </h1>
 
-<div class="col-lg-8">
-  <div class="au-card au-card--bg-blue m-b-30">
-    <div class="au-card-inner">
-      <div class="table-responsive">
-        <table class="table text-black-50">
-          <tbody>
-          <tr>
-            <td>Piece d'identité (CNI)</td>
-            <td class="text-right"><%= @convocation.cni %></td>
-          </tr>
-          <tr>
-            <td>Numéro de téléphone</td>
-            <td class="text-right"><%= @convocation.phone %></td>
-          </tr>
-          <tr>
-            <td>Nom</td>
-            <td class="text-right"><%= @convocation.name %></td>
-          </tr>
-          <tr>
-            <td>Prenom</td>
-            <td class="text-right"><%= @convocation.prenom %></td>
-          </tr>
-          <tr>
-            <td>Immatriculation</td>
-            <td class="text-right"><%= @convocation.immatriculation %></td>
-          </tr>
-          <tr>
-            <td>Residence</td>
-            <td class="text-right"><%= @convocation.residence %></td>
-          </tr>
-          <tr>
-            <td>Emploi</td>
-            <td class="text-right"><%= @convocation.emploi %></td>
-          </tr>
-          <tr>
-            <td>Motif</td>
-            <td class="text-right"><%= @convocation.motif %></td>
-          </tr>
-          <tr>
-            <td>Piece retuenue</td>
-            <td class="text-right"><%= @convocation.pieceretenu.name if !@convocation.pieceretenu_id.nil? %></td>
-          </tr>
-          <tr>
-            <td>Infraction</td>
-            <td class="text-right"><%= @convocation.infraction.motif if !@convocation.infraction_id.nil? %></td>
-          </tr>
-          <tr>
-            <td>Montant infraction (F CFA)</td>
-            <td class="text-right"><%= @convocation.infraction.montant if !@convocation.infraction_id.nil? %></td>
-          </tr>
-          <tr>
-            <td>Date enregistrement</td>
-            <td class="text-right"><%= @convocation.created_at %></td>
-          </tr>
-          <tr>
-            <td>Derniere mise à jour</td>
-            <td class="text-right"><%= @convocation.updated_at %></td>
-          </tr>
-          <tr>
-            <td>Observation</td>
-            <td class="text-right"><%= @convocation.observation %></td>
-          </tr>
-          <tr>
-            <td>Agent verbaliseur (matricule)</td>
-            <td class="text-right"><%= link_to @convocation.agent.matricule, agent_url(@convocation.agent) %></td>
-          </tr>
-          </tbody>
-        </table>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="au-card au-card--bg-blue m-b-30">
+      <div class="au-card-inner">
+        <div class="table-responsive">
+          <table class="table text-black-50">
+            <tbody>
+            <tr>
+              <td>Piece d'identité (CNI)</td>
+              <td class="text-right"><%= @convocation.cni %></td>
+            </tr>
+            <tr>
+              <td>Numéro de téléphone</td>
+              <td class="text-right"><%= @convocation.phone %></td>
+            </tr>
+            <tr>
+              <td>Nom</td>
+              <td class="text-right"><%= @convocation.name %></td>
+            </tr>
+            <tr>
+              <td>Prenom</td>
+              <td class="text-right"><%= @convocation.prenom %></td>
+            </tr>
+            <tr>
+              <td>Immatriculation</td>
+              <td class="text-right"><%= @convocation.immatriculation %></td>
+            </tr>
+            <tr>
+              <td>Residence</td>
+              <td class="text-right"><%= @convocation.residence %></td>
+            </tr>
+            <tr>
+              <td>Emploi</td>
+              <td class="text-right"><%= @convocation.emploi %></td>
+            </tr>
+            <tr>
+              <td>Motif</td>
+              <td class="text-right"><%= @convocation.motif %></td>
+            </tr>
+            <tr>
+              <td>Piece retuenue</td>
+              <td class="text-right"><%= @convocation.pieceretenu.name if !@convocation.pieceretenu_id.nil? %></td>
+            </tr>
+            <tr>
+              <td>Infraction</td>
+              <td class="text-right"><%= @convocation.infraction.motif if !@convocation.infraction_id.nil? %></td>
+            </tr>
+            <tr>
+              <td>Montant infraction (F CFA)</td>
+              <td class="text-right"><%= @convocation.infraction.montant if !@convocation.infraction_id.nil? %></td>
+            </tr>
+            <tr>
+              <td>Date enregistrement</td>
+              <td class="text-right"><%= @convocation.created_at %></td>
+            </tr>
+            <tr>
+              <td>Derniere mise à jour</td>
+              <td class="text-right"><%= @convocation.updated_at %></td>
+            </tr>
+            <tr>
+              <td>Observation</td>
+              <td class="text-right"><%= @convocation.observation %></td>
+            </tr>
+            <tr>
+              <td>Agent verbaliseur (matricule)</td>
+              <td class="text-right"><%= link_to @convocation.agent.matricule, agent_url(@convocation.agent) %></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
+  <div class="col-lg-6">
+    <div class="au-card au-card--bg-blue m-b-30">
+      <div class="au-card-inner">
+        <div class="table-responsive">
+          <table class="table text-black-50">
+            <tbody>
+            <tr>
+              <td>Carte de Localisation</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <%= map(:center => {
+                    :latlng => [51.52238797921441, -0.08366235665359283],
+                    :zoom => 18
+                },
+                        :markers => [
+                            {
+                                :latlng => [51.52238797921441, -0.08366235665359283],
+                            }
+                        ]
+                    ) %>
+              </td>
+            </tr>
+            <tr>
+              <td>Montant infraction (F CFA)</td>
+              <td class="text-right"><%= @convocation.infraction.montant if !@convocation.infraction_id.nil? %></td>
+            </tr>
+            <tr>
+              <td>Date enregistrement</td>
+              <td class="text-right"><%= @convocation.created_at %></td>
+            </tr>
+            <tr>
+              <td>Derniere mise à jour</td>
+              <td class="text-right"><%= @convocation.updated_at %></td>
+            </tr>
+            <tr>
+              <td>Observation</td>
+              <td class="text-right"><%= @convocation.observation %></td>
+            </tr>
+            <tr>
+              <td>Agent verbaliseur (matricule)</td>
+              <td class="text-right"><%= link_to @convocation.agent.matricule, agent_url(@convocation.agent) %></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="text-right">
+      <%= link_to 'Retour', :back, class: 'btn btn-primary btn-sm' %>
+    </div>
+  </div>
 </div>
+
 </div>

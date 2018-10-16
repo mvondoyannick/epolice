@@ -1,15 +1,30 @@
-<% content_for(:title, 'ALERTES NON RESOLUES')%>
-<!-- -->
-<div class="overview-wrap m-b-40">
+<% content_for(:title, 'CONTRAVENTIONS')%>
+<%= form_tag gestion_contraventions_contraventions_all_path, method: :get, class: 'form-inline m-b-40' do %>
+  <div class="form-group mb-2">
+    <label for="staticEmail2">Terme de recherche</label>
+  </div>
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="inputPassword2" class="sr-only">Password</label>
+    <%= text_field_tag :search, nil, class: 'form-control', placeholder: 'Recherche' %>
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Rechercher</button>
+<% end %>
+<div class="m-b-40">
   <h2 class="title-1">
     <%= link_to :back do %>
       <i class="fa fa-arrow-left"></i>
     <% end %>
     Liste des Infractions</h2>
-  <%= link_to gestion_contraventions_contraventions_all_path(format: :xls), class: "btn btn-success" do %>
-    <i class="zmdi zmdi-chart-donut"></i>
-    Exporter (xls)
-  <% end %>
+  <div class="text-right">
+    <%= link_to gestion_contraventions_contraventions_all_path(format: :xls), class: "btn btn-success" do %>
+      <i class="fa fa-file-excel"></i>
+      &nbsp;XLS export
+    <% end %>
+    <%= link_to gestion_contraventions_contraventions_all_path(format: :pdf), class: "btn btn-danger" do %>
+      <i class="fa fa-file-pdf"></i>
+      &nbsp;PDF export
+    <% end %>
+  </div>
 </div>
 
 <div class="row">
@@ -23,6 +38,7 @@
           <th>Phone</th>
           <th >Agent</th>
           <th >Pieces retenues</th>
+          <th>Montant</th>
           <th colspan="3">&nbsp;</th>
         </tr>
         </thead>
@@ -41,6 +57,9 @@
             </td>
             <td>
               <%= alerte.pieceretenu.name if !alerte.pieceretenu_id.nil? %>
+            </td>
+            <td>
+              <%= alerte.infraction.montant if !alerte.infraction_id.nil? %>
             </td>
             <td>
               <%= link_to "Show", convocation_path(alerte) %>

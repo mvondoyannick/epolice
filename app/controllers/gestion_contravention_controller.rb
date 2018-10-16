@@ -44,6 +44,10 @@ class GestionContraventionController < ApplicationController
         render layout: 'fylo'
       end
       format.xls
+      format.pdf do
+        pdf = PrintPdf.new
+        send_data pdf.render, filename: "all_contravention.pdf", type: 'application/pdf', disposition: 'inline'
+      end
     end
 
 

@@ -1,0 +1,20 @@
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Titre</th>
+    <th>Ville</th>
+    <th>description</th>
+    <th>Typer alerte</th>
+    <th>Statut</th>
+    <% Alerte.order(created_at: :asc).each do |table| %>
+    <tr>
+      <td><%= table.id %></td>
+      <td><%= table.titre %></td>
+      <td><%= table.ville.name if !table.ville_id.nil? %></td>
+      <td><%= table.description %></td>
+      <td><%= table.type.name if !table.type_id.nil? %></td>
+      <td><%= table.statu.name if !table.statu_id.nil? %></td>
+    </tr>
+  <% end %>
+  </tr>
+</table>

@@ -1,270 +1,106 @@
 <p id="notice"><%= notice %></p>
-<%= link_to :back, class: 'button is-link is-outlined' do %>
-  <i class="fa fa-arrow-left noir" ></i>
-  Retour
-<% end %>
-<div class="overview-wrap m-b-40">
-  <h2 class="title-1">Alertes</h2>
-  <%= link_to "#", class: "btn btn-primary" do %>
-    <i class="zmdi zmdi-plus"></i>
-    Toutes les alertes
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
   <% end %>
-</div>
-<div style="margin-bottom: 25px;" /></div>
-<div class="title is-4">
-  Detail de l'alerte : <%= @alerte.titre %>
-</div>
-<br>
-<div class="subtitle is-5">
-  Carte de localisation en date du <%= @alerte.created_at %>
-</div>
-
-<%= map(:center => {
-  :latlng => [@alerte.latitude, @alerte.longitude],
-  :zoom => 15
-},
-:markers => [
-    {
-       :latlng => [@alerte.latitude, @alerte.longitude],
-       :popup => @alerte.description
-    }
-  ]
-)
-%>
-
-<%= map(:center => {
-    :latlng => [20.214, 10.245],
-    :zoom => 6
-},
-        :markers => [
-            {
-                :latlng => [20.214, 10.245],
-                :popup => 'hello here position'
-            }
-        ]
-    )
-%>
-
-<br>
-<hr style="background-color: #000;">
-<div class="subtitle is-3">Details des informations</div>
-<div class="columns">
-  <div class="column">
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          Informations sur l'alerte
-        </p>
-        <!--a href="#" class="card-header-icon" aria-label="more options">
-          <span class="icon">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
-          </span>
-        </a-->
-        <%= link_to @alerte.statu.name, '#', class: 'button is-outlined is-danger' %>
-      </header>
-      <div class="card-content">
-        <div class="content">
-          <div class="subtitle is-4"><%= @alerte.titre %></div>
-          <%= @alerte.description %>
-          <hr>
-          <br>
-          Alerte publiée le : <time datetime="2016-1-1"><%= @alerte.created_at %></time>
-        </div>
-      </div>
-      <footer class="card-footer">
-        <a href="#" class="card-footer-item">Save</a>
-        <a href="#" class="card-footer-item">Edit</a>
-        <%= link_to  "Imprimer (PDF)", alerte_path(@alerte, format: "pdf"), class: 'card-footer-item' %>
-      </footer>
-    </div>
-    <hr>
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          Image du braquage
-        </p>
-        <a href="#" class="card-header-icon" aria-label="more options">
-          <span class="icon">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
-          </span>
-        </a>
-      </header>
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <% if @alerte.alertes.attached? %>
-            <%= image_tag  "https://bulma.io/images/placeholders/1280x960.png" %>
-          <% else %>
-            <%= image_tag  "https://bulma.io/images/placeholders/1280x960.png" %>
-          <% end %>
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="content">
-          <% @agent = Agent.find(@alerte.agent_id) %>
-        </div>
-      </div>
-      <footer class="card-footer">
-        <a href="#" class="card-footer-item">Agrandir</a>
-        <a href="#" class="card-footer-item">Imprimer</a>
-        <a href="#" class="card-footer-item">Transmettre à un autre service</a>
-      </footer>
-    </div>
-    <hr>
-    <% if admin_signed_in? %>
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          Information sur l'agent
-        </p>
-        <a href="#" class="card-header-icon" aria-label="more options">
-          <span class="icon">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
-          </span>
-        </a>
-      </header>
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <% if @alerte.agent.avatar.attached? %>
-            <%= image_tag  "https://bulma.io/images/placeholders/1280x960.png" %>
-            <% else %>
-            <%= image_tag  "https://bulma.io/images/placeholders/1280x960.png", resize: 250 %>
-          <% end %>
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="content">
-          <div class="subtitle is-4">
-            Identifiants de l'agent de police
-          </div>
-          <% @agent = Agent.find(@alerte.agent_id) %>
-          <% debug @agent  %>
-          <table class="table">
-            <tr>
-              <td><strong>1</strong></td>
-              <td><strong>Matricule</strong></td>
-              <td><%= @agent.matricule %></td>
-            </tr>
-            <tr>
-              <td><strong>2</strong></td>
-              <td><strong>Nom</strong></td>
-              <td><%= @agent.name %></td>
-            </tr>
-            <tr>
-              <td><strong>1</strong></td>
-              <td><strong>Prénom</strong></td>
-              <td><%= @agent.prenom %></td>
-            </tr>
-            <tr>
-              <td><strong>1</strong></td>
-              <td><strong>Téléphone</strong></td>
-              <td><%= @agent.phone %></td>
-            </tr>
-            <tr>
-              <td><strong>1</strong></td>
-              <td><strong>Grade</strong></td>
-              <td><%= @agent.grade.name %></td>
-            </tr>
-            <tr>
-              <td><strong>1</strong></td>
-              <td><strong>Commissariat</strong></td>
-              <td><%= @agent.commissariat.name %></td>
-            </tr>
-            <tr>
-              <td><strong>1</strong></td>
-              <td><strong>Ville</strong></td>
-              <td><%= @agent.matricule %></td>
-            </tr>
-            <tr>
-              <td><strong>1</strong></td>
-              <td><strong>Identifiant</strong></td>
-              <td><%= rand(@agent.id) %></td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <footer class="card-footer">
-        <a href="#" class="card-footer-item">Save</a>
-        <a href="#" class="card-footer-item">Edit</a>
-        <a href="#" class="card-footer-item">Delete</a>
-      </footer>
-    </div>
-      <% end %>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          Informations complementaires
-        </p>
-        <a href="#" class="card-header-icon" aria-label="more options">
-          <span class="icon">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
-          </span>
-        </a>
-      </header>
-      <div class="card-content">
-        <div class="content">
-          <table class="table is-3">
+  Detail alerte
+</h1>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="au-card au-card--bg-blue m-b-30">
+      <div class="au-card-inner">
+        <div class="table-responsive">
+          <table class="table text-black-50">
             <tbody>
-              <tr>
-                <td><i class="fa fa-map-marker noir"></i> &nbsp;Longitude</td>
-                <td><%= @alerte.longitude %></td>
-              </tr>
-              <tr>
-                <td><i class="fa fa-map-marker noir"></i> &nbsp;Latitude</td>
-                <td><%= @alerte.latitude %></td>
-              </tr>
-              <tr>
-                <td><i class="fa fa-mobile-phone noir"></i> &nbsp;Mode d'envoi</td>
-                <td>Mobile</td>
-              </tr>
-              <tr>
-                <td><i class="fa fa-flag noir"></i> &nbsp;Pays</td>
-                <td>Cameroun</td>
-              </tr>
-              <tr>
-                <td><i class="fa fa-internet-explorer noir"></i> &nbsp;Latitude</td>
-                <td><%= @alerte.longitude %></td>
-              </tr>
-              <tr>
-                <td><i class="fa fa-google-wallet noir"></i> &nbsp;Latitude</td>
-                <td><%= @alerte.latitude %></td>
-              </tr>
+            <tr>
+              <td>Date creation</td>
+              <td class="text-right"><%= @alerte.created_at %></td>
+            </tr>
+            <tr>
+              <td>Titre</td>
+              <td class="text-right"><%= @alerte.titre %></td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td class="text-right"><%= @alerte.description %></td>
+            </tr>
+            <tr>
+              <td>Ville</td>
+              <td class="text-right"><%= @alerte.ville.name if !@alerte.ville_id.nil? %></td>
+            </tr>
+            <tr>
+              <td>Type alerte</td>
+              <td class="text-right"><%= @alerte.type.name if !@alerte.type_id.nil? %></td>
+            </tr>
+            <tr>
+              <td>Longitude</td>
+              <td class="text-right"><%= @alerte.longitude %></td>
+            </tr>
+            <tr>
+              <td>Latitude</td>
+              <td class="text-right"><%= @alerte.latitude %></td>
+            </tr>
+            <tr>
+              <td>Statut</td>
+              <td class="text-right"><%= @alerte.statu.name if !@alerte.statu_id.nil? %></td>
+            </tr>
             </tbody>
           </table>
         </div>
       </div>
-      <footer class="card-footer">
-        <a href="#" class="card-footer-item">Save</a>
-        <a href="#" class="card-footer-item">Edit</a>
-        <a href="#" class="card-footer-item">Delete</a>
-      </footer>
     </div>
-
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          Partenaires concernés
-        </p>
-        <a href="#" class="card-header-icon" aria-label="more options">
-          <span class="icon">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
-          </span>
-        </a>
-      </header>
-      <div class="card-content">
-        <div class="content">
-          <div class="subtitle is-4"><%= @alerte.type %></div>
-          <%= Service.find_by(type_id: @alerte.type_id) %>
-
+  </div>
+  <div class="col-lg-6">
+    <div class="au-card au-card--bg-blue m-b-30">
+      <div class="au-card-inner">
+        <div class="table-responsive">
+          <table class="table text-black-50">
+            <tbody>
+            <tr>
+              <td>Carte de Localisation</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <%= map(:center => {
+                    :latlng => [@alerte.latitude, @alerte.longitude],
+                    :zoom => 18
+                },
+                        :markers => [
+                            {
+                                :latlng => [@alerte.latitude, @alerte.longitude],
+                            }
+                        ]
+                    ) %>
+              </td>
+            </tr>
+            <tr>
+              <td>Agent emeteru</td>
+              <td class="text-right"><%= @alerte.agent.name+' '+@alerte.agent.prenom if !@alerte.agent_id.nil? %></td>
+            </tr>
+            <tr>
+              <td>Date enregistrement</td>
+              <td class="text-right"><%= @alerte.created_at %></td>
+            </tr>
+            <tr>
+              <td>Derniere mise à jour</td>
+              <td class="text-right"><%= @alerte.updated_at %></td>
+            </tr>
+            <tr>
+              <td>Observation</td>
+              <td class="text-right"><%=  %></td>
+            </tr>
+            <tr>
+              <td>Agent verbaliseur (matricule)</td>
+              <td class="text-right"><%=  %></td>
+            </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <footer class="card-footer">
-        <a href="#" class="card-footer-item">Save</a>
-        <a href="#" class="card-footer-item">Edit</a>
-        <a href="#" class="card-footer-item">Delete</a>
-      </footer>
+    </div>
+    <div class="text-right">
+      <%= link_to 'Retour', :back, class: 'btn btn-primary btn-sm' %>
     </div>
   </div>
 </div>

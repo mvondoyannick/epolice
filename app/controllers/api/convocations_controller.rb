@@ -30,6 +30,7 @@ class Api::ConvocationsController < ApplicationController
         grade_id: token[0].grade_id,
         unite: token[0].unite.name,
         unite_id: token[0].unite_id,
+        data: rails_blob_path(Agent.avatar, disposition: "attachment", only_path: true),
         affectation: Affectation.find(5).fin.to_date >= Date.today.to_date, #a mettre a jour de facon dynamique
         image: '',
         apikey: SecureRandom.hex(10),
