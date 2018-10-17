@@ -13,11 +13,6 @@ class Convocation < ApplicationRecord
 
     has_secure_token :token
 
-    #travail avec sunspot
-    searchable do
-      text :cni, :phone, :immatriculation, :code
-    end
-
     belongs_to :agent
     belongs_to :infraction
     belongs_to :pieceretenu
