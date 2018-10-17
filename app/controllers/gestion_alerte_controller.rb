@@ -81,6 +81,6 @@ class GestionAlerteController < ApplicationController
   end
 
   def all
-    
+    @alertes = Alerte.order(created_at: :desc)
   end
 end

@@ -16,7 +16,7 @@
 
   <p>
     <strong>Grade:</strong>
-    <%= @affectation.agent.grade %>
+    <%= @affectation.agent.grade if !@affectation.agent.grade.name.nil? %>
   </p>
 
   <p>

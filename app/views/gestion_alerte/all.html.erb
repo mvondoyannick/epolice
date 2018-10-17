@@ -24,7 +24,7 @@
         </tr>
         </thead>
         <tbody>
-        <% Alerte.order(created_at: :desc).each do |alerte| %>
+        <% @alertes.each do |alerte| %>
           <tr>
             <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
             <td>
