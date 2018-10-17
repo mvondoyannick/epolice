@@ -25,8 +25,23 @@
   </p>
 
   <p>
+    <strong>Region:</strong>
+    <%= @affectation.region.name if !@affectations.region_id.nil? %>
+  </p>
+
+  <p>
     <strong>Carrefour:</strong>
-    <%= @affectation.carrefour.name %>
+    <%= @affectation.commissariat.name if !@affectations.commissariat_id.nil? %>
+  </p>
+
+  <p>
+    <strong>Poste de police:</strong>
+    <%= @affectation.postepolice.name if !@affectations.postepolice_id.nil? %>
+  </p>
+
+  <p>
+    <strong>Localisation:</strong>
+    <%= @affectation.localisation %>
   </p>
 
   <p>
