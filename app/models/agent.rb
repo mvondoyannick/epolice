@@ -11,9 +11,9 @@ class Agent < ApplicationRecord
 
 	validates_presence_of :name, presence: true
 	validates_presence_of :age, presence: true
-	#validates :matricule, presence: {message: 'Merci de fournir un matricule'}, uniqueness: {message: '%{value} existe deja'}
+	validates :matricule, presence: {message: 'Merci de fournir un matricule'}
 	validates :sexe, presence: {message: 'merci de selectionner un sexe'}
-	validates :phone, presence: {message: 'Merci de fournir le numéro de téléphone'}, uniqueness: {message: '%{value} semble déja etre utilisé'}
+	validates :phone, presence: {message: 'Merci de fournir le numéro de téléphone'}
 
 	#pour les villes d'affectations
 	belongs_to :region
