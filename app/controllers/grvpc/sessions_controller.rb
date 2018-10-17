@@ -24,4 +24,10 @@ class Grvpc::SessionsController < Devise::SessionsController
   def configure_sign_in_params
     devise_parameter_sanitizer.permit(:sign_in, keys: [:email, :password, :remember_me])
   end
+
+  # The path used after sign in.
+  def after_sign_in_path_for(resource)
+    super(resource)
+    grvpc_index_path
+  end
 end

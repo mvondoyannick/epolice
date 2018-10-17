@@ -2,32 +2,73 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><%= full_title(yield :title)%></title>
-  <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
-  <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' %>
-  <!-- Bulma Version 0.7.1-->
-  <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css' %>
-  <%= stylesheet_link_tag 'https://dansup.github.io/bulma-templates/css/admin.css' %>
-  <%= javascript_include_tag 'https://dansup.github.io/bulma-templates/js/bulma.js' %>
+  <!-- Fontfaces CSS-->
+  <%= stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/font-awesome-5/css/fontawesome-all.min.css' %>
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/font-awesome-4.7/css/font-awesome.min.css' %>
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/mdi-font/css/material-design-iconic-font.min.css' %>
+
+  <!-- Vendor CSS-->
+
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/css/font-face.css' %>
+
+
+  <!-- Main CSS-->
+  <%= javascript_include_tag 'application.js', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'main', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
 
-<%= render 'layouts/grvpc/menu' %>
-<div class="container">
-  <div class="columns">
-    <div class="column is-3">
-      <%= render 'layouts/grvpc/left_menu' %>
-    </div>
-    <div class="column is-9">
-      <%= render 'layouts/grvpc/breadcrumb' %>
-      <%= yield %>
-    </div>
+<div class="page-wrapper">
+  <!-- HEADER DESKTOP-->
+  <%= render 'layouts/grvpc/menu' %>
+  <!-- END HEADER DESKTOP -->
+
+
+
+  <!-- PAGE CONTENT-->
+  <div class="page-container3">
+    <section class="alert-wrap p-t-70 p-b-70">
+      <div class="container">
+        <!-- ALERT-->
+        <div class="alert au-alert-success alert-dismissible fade show au-alert au-alert--70per" role="alert">
+          <i class="zmdi zmdi-check-circle"></i>
+          <span class="content">You successfully read this important alert message.</span>
+          <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">
+                <i class="zmdi zmdi-close-circle"></i>
+            </span>
+          </button>
+        </div>
+        <!-- END ALERT-->
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3">
+            <!-- MENU SIDEBAR-->
+            <%= render 'layouts/grvpc/left_menu' %>
+            <!-- END MENU SIDEBAR-->
+          </div>
+          <div class="col-xl-9">
+            <!-- PAGE CONTENT-->
+            <div class="page-content">
+              <%= yield %>
+            </div>
+            <!-- END PAGE CONTENT-->
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
+  <!-- END PAGE CONTENT  -->
 </div>
+
 </body>
 
 </html>

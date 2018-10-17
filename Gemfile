@@ -62,6 +62,8 @@ gem 'jwt'
 gem 'mini_magick'
 #integration de leaflet from https://github.com/axyjo/leaflet-rails
 gem 'leaflet-rails'
+#Ajout de la lib D3
+gem "d3-rails"
 #integrating chartjs rails
 gem 'chart-js-rails'
 #pour le breadcrumb

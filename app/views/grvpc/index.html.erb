@@ -1,124 +1,17 @@
 <% content_for(:title, 'DASHBOARD GRVPC')%>
 
-<!-- -->
-<div class="overview-wrap m-b-40">
-  <h2 class="title-1">Groupement</h2>
-  <%= link_to "#", class: "btn btn-primary" do %>
-    <i class="zmdi zmdi-plus"></i>
-    Ajouter un groupement
-  <% end %>
-</div>
 <div class="row">
-  <div class="col-lg-6">
-    <h2 class="title-1 m-b-25"><i class="zmdi zmdi-polymer"></i> Commissariats</h2>
-    <div class="table-responsive table--no-card m-b-40">
-      <table class="table table-borderless table-striped table-earning">
-        <thead>
-        <tr>
-          <th>Name</th>
-          <th>Phone</th>
-          <th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        <% Commissariat.order(created_at: :desc).each_with_index do |c, index| %>
-          <tr>
-            <td><%= c.name %></td>
-            <td><%= c.phone %></td>
-            <td>
-              <%= link_to "/access/partner_detail/#{c.id}/grvpc" do %>
-                <i class="zmdi zmdi-eye"></i>
-                Voir
-              <% end %>
-            </td>
-          </tr>
-        <% end %>
-        </tbody>
-      </table>
-      <br>
-      <div class="overview-wrap m-b-40">
-        <h2 class="title-1"></h2>
-        <%= link_to new_commissariat_path, class: "btn btn-primary" do %>
-          <i class="zmdi zmdi-plus"></i>
-          Ajouter un commissariat
-        <% end %>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-6">
-    <h2 class="title-1 m-b-25"><i class="zmdi zmdi-polymer"></i> Agents affectés aux GRVPC</h2>
-    <div class="table-responsive table--no-card m-b-40">
-      <table class="table table-borderless table-striped table-earning">
-        <thead>
-        <tr>
-          <th>Name</th>
-          <th>Phone</th>
-          <th>Matricule</th>
-          <th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        <% Agent.order(created_at: :desc).each_with_index do |c, index| %>
-          <tr>
-            <td><%= c.name %>&nbsp;<%= c.prenom %></td>
-            <td><%= c.phone %></td>
-            <td><%= c.matricule %></td>
-            <td>
-              <%= link_to "/access/partner_detail/#{c.id}/grvpc" do %>
-                <i class="zmdi zmdi-eye"></i>
-                Voir
-              <% end %>
-            </td>
-          </tr>
-        <% end %>
-        </tbody>
-      </table>
-      <br>
-      <div class="overview-wrap m-b-40">
-        <h2 class="title-1"></h2>
-        <%= link_to new_agent_path, class: "btn btn-primary" do %>
-          <i class="zmdi zmdi-plus"></i>
-          Ajouter un Agents
-        <% end %>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-6">
-    <h2 class="title-1 m-b-25"><i class="zmdi zmdi-polymer"></i> Affectation des agents</h2>
-    <div class="table-responsive table--no-card m-b-40">
-      <table class="table table-borderless table-striped table-earning">
-        <thead>
-        <tr>
-          <th>Agent</th>
-          <th>Date debut</th>
-          <th>Date fin</th>
-          <th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        <% Affectation.order(created_at: :desc).each_with_index do |c, index| %>
-          <tr>
-            <td><%= c.agent.name if !c.agent_id.nil?  %>&nbsp;<%= c.agent.prenom if !c.agent_id.nil? %></td>
-            <td><%= c.debut %></td>
-            <td><%= c.fin %></td>
-            <td>
-              <%= link_to "/access/partner_detail/#{c.id}/grvpc" do %>
-                <i class="zmdi zmdi-eye"></i>
-                Voir
-              <% end %>
-            </td>
-          </tr>
-        <% end %>
-        </tbody>
-      </table>
-      <br>
-      <div class="overview-wrap m-b-40">
-        <h2 class="title-1"></h2>
-        <%= link_to new_affectation_path, class: "btn btn-primary" do %>
-          <i class="zmdi zmdi-plus"></i>
-          Affecter un nouvel agent
-        <% end %>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Poste de police</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Acceder', nil, class: 'card-link' %>
+        <%= link_to 'Ajouter', new_postepolice_path, class: 'card-link' %>
       </div>
     </div>
   </div>
 </div>
+
+<%= render partial: "postepolices/form", layout: "grvpc/menu" %>

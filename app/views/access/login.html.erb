@@ -15,7 +15,7 @@
     <div class="container has-text-centered">
       <div class="column is-4 is-offset-4">
         <h3 class="title has-text-grey"></h3>
-          <p class="subtitle has-text-grey">Plateforme de gestion des contraventions, alertes et constats d'accident de la circulation</p>
+          <p class="subtitle has-text-grey">Plateforme de gestion des contraventions, <br>des alertes et des constats d'accident de la circulation</p>
           <p class="subtitle has-text-grey is-6 m-b-30"></p>
             <div class="box" style="margin-top: -10px;">
               <% if member_signed_in? %>
@@ -29,8 +29,19 @@
                 <% elsif assurance_signed_in? %>*
                 <%= link_to "Se déconnecter", destroy_assurance_session_path, method: :delete, class: 'button is-outlined is-danger is-fullwidth is-block is-large' %>
                 <% else %>
-                <%= link_to 'Indentifiez-vous pour acceder à e-Police', new_admin_session_path, class: 'btn btn-outline-primary btn-block btn-lg m-b-20' %>
-                <%= link_to 'About', access_about_path , class: 'btn btn-outline-primary btn-block btn-lg m-b-20' %>
+                Pour acceder à e-Police, <%= link_to 'cliquez ici', new_admin_session_path, class: 'm-b-20' %> <br>
+                Pour en savoir plus sur e-Police, <%= link_to 'cliquez ici', access_about_path , class: 'm-b-20' %>
+                  <div class="row">
+                    <div class="col text-center">
+                      <%= link_to new_grvpc_session_path, class: 'noir' do %>
+                        <i class="fa fa-podcast"></i>
+                      <% end %>
+                    </div>
+                    <div class="col text-center">2</div>
+                    <div class="col text-center">3</div>
+                    <div class="col text-center">4</div>
+                    <div class="col text-center">5</div>
+                  </div>
                 </div>
                 </div>
                 </div>

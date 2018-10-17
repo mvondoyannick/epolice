@@ -29,6 +29,7 @@ Rails.application.routes.draw do
 
   get 'access/constat'
   get 'access/convocation'
+  get 'access/application'
   get 'access/alerte'
   get 'parametre/access/exporter/export/detail', to: 'access#export_detail' #pour les details d'exportation
   get 'parametre/access/exporter/export', to: 'access#exportation' #pour exporter les fichiers

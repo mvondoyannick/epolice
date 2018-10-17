@@ -1,0 +1,44 @@
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Applications
+</h1>
+
+<div class="row">
+  <div class="col-lg-3">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= link_to 'Alertes', gestion_alerte_alertes_all_path, class: 'noir' %></h5>
+      <h6 class="card-subtitle mb-2 text-muted">Alertes de la cité Etat</h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <%= link_to 'Acceder', gestion_alerte_alertes_all_path, class: 'card-link' %>
+      &nbsp;&nbsp;
+      <%= link_to 'Ajouter', new_alerte_path, class: 'card-link' %>
+    </div>
+  </div>
+</div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to 'Infractions', gestion_contraventions_contraventions_all_path, class: 'noir' %></h5>
+        <h6 class="card-subtitle mb-2 text-muted">Infractions de la voie publique</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Aperçu', gestion_contraventions_contraventions_all_path, class: 'card-link' %>
+        &nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to 'Constats', gestion_constat_all_path, class: 'noir' %></h5>
+        <h6 class="card-subtitle mb-2 text-muted">Constats de la circulation</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Aperçu', gestion_constat_all_path, class: 'card-link' %>
+        &nbsp;&nbsp;
+        <!-- %= link_to 'Ajouter', new_groupement_path, class: 'card-link' %-->
+      </div>
+    </div>
+  </div>
+</div>

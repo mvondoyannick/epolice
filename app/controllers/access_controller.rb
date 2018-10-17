@@ -14,11 +14,6 @@ class AccessController < ApplicationController
   def login
     #render layout: 'login'
     # vue de connexion principale
-    @container = %w[
-      Alertes
-      Contraventions
-      Constats
-    ]
     render layout: 'template/login2'
   end
 
@@ -264,6 +259,10 @@ class AccessController < ApplicationController
   #for test
   def open
 
+  end
+
+  def application
+    render layout: 'fylo'
   end
 
   def systeme

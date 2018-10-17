@@ -4,7 +4,7 @@ class GrvpcController < ApplicationController
     @alerte = Alerte.order(created_at: :desc).limit(10)
     @contravention = Convocation.order(created_at: :desc).limit(10)
     @constat = Constat.order(created_at: :desc).limit(10)
-    render layout: 'fylo'
+    render layout: 'grvpc/grvpc'
   end
 
   def all_alertes

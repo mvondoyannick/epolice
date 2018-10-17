@@ -35,7 +35,7 @@ class Admin::SessionsController < Devise::SessionsController
   # The path used after sign up.
   def after_sign_in_path_for(resource)
     super(resource)
-    access_admin_path
+    #access_admin_path
   end
 
 

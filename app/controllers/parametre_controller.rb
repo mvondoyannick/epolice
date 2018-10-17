@@ -3,6 +3,7 @@ class ParametreController < ApplicationController
   layout 'fylo'
 
   def index
+
   end
 
   def gestion_sturcture_partenaire

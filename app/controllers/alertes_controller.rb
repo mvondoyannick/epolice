@@ -36,7 +36,7 @@ class AlertesController < ApplicationController
   # GET /alertes/new
   def new
     @alerte = Alerte.new
-    render layout: 'admin'
+    render layout: 'fylo'
   end
 
   # GET /alertes/1/edit
