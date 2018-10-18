@@ -21,7 +21,8 @@
               <% if member_signed_in? %>
                 <%= link_to "Se déconnecter", destroy_member_session_path, method: :delete, class: 'button is-outlined is-danger is-fullwidth is-block is-large' %>
                 <% elsif admin_signed_in? %>
-                <%= link_to "Se déconnecter", destroy_admin_session_path, method: :delete, class: 'button is-outlined is-danger is-fullwidth is-block is-large' %>
+                <%= link_to "Se déconnecter", destroy_admin_session_path, method: :delete, class: 'card-link' %>
+                <%= link_to "Accueil", nil, class: 'card-link text-right' %>
                 <% elsif  metropoli_signed_in? %>
                 <%= link_to "Se déconnecter", destroy_metropoli_session_path, method: :delete, class: 'button is-outlined is-danger is-fullwidth is-block is-large' %>
                 <% elsif grvpc_signed_in? %>

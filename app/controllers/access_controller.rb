@@ -262,7 +262,7 @@ class AccessController < ApplicationController
   end
 
   def application
-    render layout: 'fylo'
+    render layout: 'fyloskip_before_action :verify_authenticity_token, only: [:destroy]'
   end
 
   def systeme
