@@ -323,9 +323,7 @@ section {
 
 .page-content--bge5 {
     #background: #e5e5e5;
-    /*background-image: url("https://images.unsplash.com/photo-1527153818091-1a9638521e2a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5fce4ce8856a711cc50a14e03e58783a&auto=format&fit=crop&w=2058&q=80");*/
-    background-image: url("back.jpg");
-    /*max-height: 100%;*/
+    background-image: url("https://images.unsplash.com/photo-1527153818091-1a9638521e2a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5fce4ce8856a711cc50a14e03e58783a&auto=format&fit=crop&w=2058&q=80");
     background-size: cover;
     height: 100vh;
 }
