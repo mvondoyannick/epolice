@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/access_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/access_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/access/login.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/login.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -134,7 +132,7 @@
           <entry key="Gemfile" value="474" />
           <entry key="coffee" value="390" />
           <entry key="css" value="354" />
-          <entry key="erb" value="81689" />
+          <entry key="erb" value="81705" />
           <entry key="js" value="306" />
           <entry key="pid" value="1" />
           <entry key="rb" value="34757" />
@@ -149,7 +147,7 @@
           <entry key="CoffeeScript" value="390" />
           <entry key="JavaScript" value="306" />
           <entry key="PLAIN_TEXT" value="382" />
-          <entry key="RHTML" value="81689" />
+          <entry key="RHTML" value="81705" />
           <entry key="Ruby" value="35231" />
           <entry key="SCSS" value="154" />
           <entry key="YAML" value="145" />
@@ -168,11 +166,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/access/login.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+            <state relative-caret-position="308">
+              <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -186,11 +184,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="327" column="25" selection-start-line="327" selection-start-column="25" selection-end-line="327" selection-end-column="25" />
+            <state relative-caret-position="418">
+              <caret line="330" column="1" lean-forward="true" selection-start-line="330" selection-start-column="1" selection-end-line="330" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -350,8 +348,8 @@
         <option value="$PROJECT_DIR$/app/controllers/types_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/access_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/access.scss" />
-        <option value="$PROJECT_DIR$/app/views/access/login.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/theme.css" />
+        <option value="$PROJECT_DIR$/app/views/access/login.html.erb" />
       </list>
     </option>
   </component>
@@ -582,7 +580,7 @@
       <workItem from="1539591701997" duration="27491000" />
       <workItem from="1539684535003" duration="23420000" />
       <workItem from="1539771450474" duration="14961000" />
-      <workItem from="1539793727933" duration="6380000" />
+      <workItem from="1539793727933" duration="7612000" />
     </task>
     <servers />
   </component>
@@ -592,13 +590,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="664673000" />
+    <option name="totallyTimeSpent" value="665905000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7567185" visible="true" weight="0.15191898" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7567185" visible="true" weight="0.15191898" />
       <window_info id="Structure" order="1" sideWeight="0.24328147" side_tool="true" weight="0.22707888" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -611,7 +609,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.08785249" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.37744033" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.22451194" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -957,13 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/access/login.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/images/background.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -976,8 +967,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="327" column="25" selection-start-line="327" selection-start-column="25" selection-end-line="327" selection-end-column="25" />
+        <state relative-caret-position="418">
+          <caret line="330" column="1" lean-forward="true" selection-start-line="330" selection-start-column="1" selection-end-line="330" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/access/login.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
         </state>
       </provider>
     </entry>
