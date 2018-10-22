@@ -25,6 +25,9 @@
         <thead>
         <tr>
           <th>Date creation</th>
+          <th>CNI</th>
+          <th>Immatriculation.</th>
+          <th>Téléphone</th>
           <th>Document retenu</th>
           <th colspan="3"></th>
         </tr>
@@ -33,10 +36,13 @@
         <% @query.each do |query| %>
           <tr>
             <td><%= query.created_at %></td>
+            <td><%= query.cni %></td>
+            <td><%= query.immatriculation %></td>
+            <td><%= query.phone %></td>
             <td><%= query.pieceretenu.name if !query.pieceretenu_id.nil? %></td>
-            <td><%= link_to 'Show', convocation_path(query) %></td>
-            <td><%= link_to 'Edit', edit_convocation_path(query) %></td>
-            <td><%= link_to 'Scan QR code', nil, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Detail', convocation_path(query) %></td>
+            <td><%= link_to 'MAJ', edit_convocation_path(query) %></td>
+            <td><%= link_to 'Start process', nil, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
           </tr>
         <% end %>
         </tbody>

@@ -80,6 +80,7 @@ GEM
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     choice (0.2.0)
+    chunky_png (1.3.10)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -211,6 +212,8 @@ GEM
     roo (2.7.1)
       nokogiri (~> 1)
       rubyzip (~> 1.1, < 2.0.0)
+    rqrcode (0.10.1)
+      chunky_png (~> 1.0)
     rsolr (2.2.1)
       builder (>= 2.1.2)
       faraday (>= 0.9.0)
@@ -315,6 +318,7 @@ DEPENDENCIES
   rails-erd
   redis (~> 4.0)
   roo (~> 2.7.0)
+  rqrcode
   sass-rails (~> 5.0)
   selenium-webdriver
   simple_form

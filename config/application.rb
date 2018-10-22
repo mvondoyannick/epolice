@@ -2,6 +2,7 @@ require_relative 'boot'
 
 require 'csv'
 #require 'iconv'
+require 'rqrcode'
 require 'roo'
 require 'prawn'
 require 'faker'
