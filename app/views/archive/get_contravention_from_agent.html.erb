@@ -34,9 +34,9 @@
           <tr>
             <td><%= query.created_at %></td>
             <td><%= query.pieceretenu.name if !query.pieceretenu_id.nil? %></td>
-            <td><%= link_to 'Show', departement %></td>
-            <td><%= link_to 'Edit', edit_departement_path(departement) %></td>
-            <td><%= link_to 'Destroy', departement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Show', convocation_path(query) %></td>
+            <td><%= link_to 'Edit', edit_convocation_path(query) %></td>
+            <td><%= link_to 'Scan QR code', nil, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
         </tbody>
