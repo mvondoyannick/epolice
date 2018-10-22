@@ -10,8 +10,16 @@
         <%= image_tag('img/avatar.png') %>
         <img src="https://colorlib.com/polygon/cooladmin/images/icon/avatar-big-01.jpg" alt="John Doe" />
       </div>
-      <h4 class="name"><%= current_admin.name %>&nbsp;<%= current_admin.prenom %></h4>
-      <a href="#"><%= link_to 'Se déconnecter', destroy_admin_session_path, method: :delete %> </a>
+      <% if admin_signed_in? %>
+        <h4 class="name"><%= current_admin.email %></h4>
+        <%= link_to 'Se déconnecter', destroy_admin_session_path, method: :delete %>
+        <% elsif member_signed_in %>
+          <h4 class="name"><%= current_member.email %></h4>
+          <%= link_to 'Se déconnecter', destroy_member_session_path, method: :delete %>
+        <% elsif metropoli_signed_in %>
+          <h4 class="name"><%= current_metropoli.email %></h4>
+          <%= link_to 'Se déconnecter', destroy_metropoli_session_path, method: :delete %>
+      <% end %>
     </div>
     <nav class="navbar-sidebar2">
       <ul class="list-unstyled navbar__list">
