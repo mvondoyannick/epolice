@@ -193,7 +193,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/archive/get_contravention_from_agent.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
-              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+              <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -574,7 +574,7 @@
       <workItem from="1539771450474" duration="14961000" />
       <workItem from="1539793727933" duration="12566000" />
       <workItem from="1539869763304" duration="8864000" />
-      <workItem from="1540201326241" duration="15798000" />
+      <workItem from="1540201326241" duration="15929000" />
     </task>
     <servers />
   </component>
@@ -584,7 +584,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="695521000" />
+    <option name="totallyTimeSpent" value="695652000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1002,7 +1002,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/archive/get_contravention_from_agent.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
         </state>
       </provider>
     </entry>
