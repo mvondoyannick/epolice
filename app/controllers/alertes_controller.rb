@@ -1,5 +1,6 @@
 class AlertesController < ApplicationController
   before_action :set_alerte, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token, only: [:destroy, :create]
   require 'net/http'
   require 'json'
 

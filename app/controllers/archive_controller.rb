@@ -2,24 +2,23 @@ class ArchiveController < ApplicationController
   require 'base64'
   require 'httparty'
 
+  layout 'fylo'
+
   def index
     #agent ayant le meme commissariat
     @agent = Agent.order(created_at: :asc).all
-    render layout: 'admin'
   end
 
   def get_contravention_from_agent
     current_agent = params[:agent_id]
     @archive = Convocation.new
     @query = Convocation.where(agent_id: current_agent).order(created_at: :desc)
-    render layout: 'admin'
   end
 
   #permet de confirmer la reception du document recu
   def confirm_get_document
     code = params[:code]
     @request = Convocation.all.where(code: code)
-    render layout: 'admin'
   end
 
   def merci
@@ -48,7 +47,6 @@ class ArchiveController < ApplicationController
       puts convocation.errors.messages
       HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{convocation.phone}&message=#{convocation.errors.messages}")
     end
-    #render layout: 'admin'
   end
 
 end

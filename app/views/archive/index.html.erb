@@ -1,61 +1,65 @@
-<p class="title is-3">
-  <i class="fa fa-list-alt noir"></i> Archivage et transmission des documents
-</p>
-<p class="subtitle has-text-grey is-6">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci error, eum fuga inventore iste itaque molestiae neque perferendis! Animi distinctio enim laboriosam nisi optio quasi repellendus saepe tenetur voluptatibus?
-</p>
-<div class="card">
-  <header class="card-header">
-    <p class="card-header-title">
-      Liste des 10 dernieres d'alertes
-    </p>
-    <a href="#" class="card-header-icon" aria-label="more options">
-      <span class="icon">
-        <i class="fa fa-angle-down" aria-hidden="false" style="color: #000000;"></i>
-      </span>
-    </a>
-  </header>
-  <div class="card-table">
-    <div class="content">
-      <table class="table is-fullwidth is-striped">
+
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Archivage des documents
+</h1>
+<div class="row">
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to 'Archiver des documents', parametre_localisation_path, class: 'noir' %></h5>
+        <h6 class="card-subtitle mb-2 text-muted">Processus d'archivage/transmission</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Configurer', parametre_localisation_path, class: 'card-link' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to 'Transmettre un rapport', parametre_localisation_path, class: 'noir' %></h5>
+        <h6 class="card-subtitle mb-2 text-muted">Pieces/documents perdu, irretrouvable</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Configurer', parametre_localisation_path, class: 'card-link' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="table-responsive table--no-card m-b-30">
+      <table class="table table-borderless table-striped table-earning">
         <tbody>
         <% if @agent.nil? %>
           <tr>
             <td width="5%"><i class="fa fa-bell-o"></i></td>
             <td>Aucunes alertes publiées pour le moment.</td>
           </tr>
+          </tbody>
         <% else %>
           <thead>
             <tr>
-              <td>#</td>
               <td>Nom & Prénom</td>
-              <td>Commissariat de rattachement</td>
+              <td>Unité de rattachement</td>
+              <td>region</td>
               <td>Grade</td>
               <td>Action</td>
             </tr>
           </thead>
-          <tfoot>
-            <tr>
-              <td>#</td>
-              <td>Nom & Prénom</td>
-              <td>Commissariat de rattachement</td>
-              <td>Grade</td>
-              <td>Action</td>
-            </tr>
-          </tfoot>
+          <tbody>
           <% @agent.each do |agent| %>
             <tr>
-              <td width="5%">
-                <% if agent.avatar.attached? %>
-                  <%= image_tag('https://bulma.io/images/placeholders/1280x960.png', size: 100) %>
-                  <% else %>
-                  <%= image_tag('https://bulma.io/images/placeholders/1280x960.png', size: 100) %>
-                <% end %>
               <td>
-                <%= agent.name %>&nbsp;<%= agent.prenom %>
+                <%= agent.complete_name %>
               </td>
               <td>
-                <%= agent.commissariat.name if !agent.commissariat_id.nil? %>
+                <%= agent.unite.name if !agent.unite_id.nil? %>
+              </td>
+              <td>
+                <%= agent.region.name if !agent.region_id.nil? %>
               </td>
               <td>
                 <%= agent.grade.name if !agent.grade_id.nil? %>
@@ -67,10 +71,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci error, eum
           <% end %>
         <% end %>
         </tbody>
-      </table>
+        </table>
     </div>
   </div>
-  <footer class="card-footer">
-    <%= link_to  "", "#", class: "card-footer-item" %>
-  </footer>
 </div>

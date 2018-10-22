@@ -25,10 +25,6 @@
               <td class="text-right"><%= @alerte.description %></td>
             </tr>
             <tr>
-              <td>Ville</td>
-              <td class="text-right"><%= @alerte.ville.name if !@alerte.ville_id.nil? %></td>
-            </tr>
-            <tr>
               <td>Type alerte</td>
               <td class="text-right"><%= @alerte.type.name if !@alerte.type_id.nil? %></td>
             </tr>
@@ -87,12 +83,13 @@
               <td class="text-right"><%= @alerte.updated_at %></td>
             </tr>
             <tr>
-              <td>Observation</td>
-              <td class="text-right"><%=  %></td>
+              <td>Photo capturée</td>
+              <td class="text-right">&nbsp;</td>
             </tr>
             <tr>
-              <td>Agent verbaliseur (matricule)</td>
-              <td class="text-right"><%=  %></td>
+              <td colspan="2">
+                <%= image_tag url_for(@alerte.alertes), size: '250', class: 'img-thumbnail' if @alerte.alertes.attached?  %>
+              </td>
             </tr>
             </tbody>
           </table>

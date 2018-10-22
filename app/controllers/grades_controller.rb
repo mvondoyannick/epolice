@@ -1,11 +1,12 @@
 class GradesController < ApplicationController
   before_action :set_grade, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token, only: [:destroy]
+  layout 'fylo'
 
   # GET /grades
   # GET /grades.json
   def index
     @grades = Grade.all
-    render layout: 'admin'
   end
 
   # GET /grades/1
@@ -16,12 +17,10 @@ class GradesController < ApplicationController
   # GET /grades/new
   def new
     @grade = Grade.new
-    render layout: 'admin'
   end
 
   # GET /grades/1/edit
   def edit
-    render layout: 'admin'
   end
 
   # POST /grades

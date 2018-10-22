@@ -1,4 +1,5 @@
 class Api::ConvocationsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:new_alerte]
   require 'net/http'
   require 'uri'
   require 'httparty'
@@ -163,22 +164,30 @@ class Api::ConvocationsController < ApplicationController
     #ip = request.env['REMOTE_ADDR']
     #info = HTTParty.get("https://ipapi.co/#{ip}/json/")
     #puts "======= #{info} ========"
-    quartier = params[:ville]
+    #quartier = params[:ville]
     #coordonnee = params[:coordonnees]
-    lon = params[:lon]
-    lat = params[:lat]
-    description = params[:description]
-    photo = params[:photo]
-    type = params[:type]
-    agent = params[:matricule]
+    #lon = params[:lon]
+    #lat = params[:lat]
+    #description = params[:description]
+    #photo = Base64.decode64(params[:photo])
+    #type = params[:type]
+    #agent = params[:matricule]
 
-     a = Alerte.new(agent_id: agent, type_id: type, longitude: lon.to_s, latitude: lat.to_s, description: description, ville_id: quartier, statu_id: 1, titre: Type.find(type).name)
-    #a.alertes.attach(Base64.decode64(photo))
+    #gestion des photos avec activeRecord
+
+
+     #a = Alerte.new(agent_id: agent, type_id: type, longitude: lon.to_s, latitude: lat.to_s, description: description, ville_id: quartier, statu_id: 1, titre: Type.find(type).name)
+
+    @alerte = Alerte.new(alerte_params)
+
+
+    status = @alerte.alertes.attach(params[:alertes])
+    puts "======= #{status} ======="
     #recherche des autorisations
     today = Date.today
     #authorization = Affectation.where(agent_id: Agent.find(2).id).where("#{today} between #{Affectation.where(agent_id: 2).debut} and #{Affectation.where(agent_id: 2).fin}")
     #puts "========== #{authorization} =========="
-     if a.save
+     if @alerte.save
        #message = "Le numero #{a.phone} est verbalisee pour #{a.infraction.motif}, cout: #{a.infraction.montant}"
        #m = HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{a.phone}&message=#{message}")
       render json: {
@@ -186,7 +195,7 @@ class Api::ConvocationsController < ApplicationController
           date: Date.today
       }
      else
-      render json: {'errro': a.errors.messages}
+      render json: {'errro': @alerte.errors.messages}
      end
   end
 
@@ -271,4 +280,10 @@ class Api::ConvocationsController < ApplicationController
     splited = data.split('@')
     render plain: "Voici les données #{splited}" if !splited.nil?
   end
+
+  private
+
+    def alerte_params
+      params.permit(:titre, :description, :date, :type_id, :agent_id, :action, :lieu, :statu_id, :longitude, :latitude, :alertes, :ville_id)
+    end
 end

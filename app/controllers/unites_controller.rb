@@ -1,5 +1,6 @@
 class UnitesController < ApplicationController
   before_action :set_unite, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token, only: [:destroy]
   layout 'fylo'
   # GET /unites
   # GET /unites.json

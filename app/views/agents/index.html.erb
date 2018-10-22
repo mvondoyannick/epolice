@@ -1,7 +1,6 @@
 <% content_for(:title, 'DASHBOARD GESTION DES AGENTS')%>
 <p id="notice"><%= notice %></p>
 
-<p id="notice"><%= notice %></p>
 <%= link_to new_agent_path, class: 'btn btn-primary m-b-40' do %>
   <i class="fa fa-plus"></i>
   Ajouter un agent
@@ -21,7 +20,6 @@
           <th>Grade</th>
           <th>Région</th>
           <th>Unité</th>
-          <th>Grade</th>
           <th colspan="3"></th>
         </tr>
         </thead>
@@ -35,7 +33,6 @@
             <td><%= agent.grade.name %></td>
             <td><%= agent.region.name if !agent.region_id.nil? %></td>
             <td><%= agent.unite.name if !agent.unite_id.nil? %></td>
-            <td><%= agent.grade.name if !agent.grade_id.nil? %></td>
             <td><%= link_to 'Show', agent %></td>
             <td>
               <%= link_to edit_agent_path(agent) do %>

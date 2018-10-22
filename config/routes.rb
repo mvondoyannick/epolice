@@ -289,7 +289,7 @@ Rails.application.routes.draw do
     #============================== retourner le type d'infraction ===============================
     get 'alert/types/type', to: 'convocations#api_type'
     #----------------------sending alert and return status----------------------------------
-    get 'alert/new/:matricule/:type/:lon/:lat/:photo/:description/:ville', to: 'convocations#new_alerte'
+    post 'alert/new/:agent_id/:type_id/:longitude/:latitude/:alertes/:description/:ville_id', to: 'convocations#new_alerte'
     #========== lire les alertes publiées =============
     get 'alert/read/all/:matricule/:ville_id', to: 'convocations#read_alertes'
     #================= gestion du token ===================
