@@ -12,7 +12,7 @@
 </div>
 
 <div class="row">
-  <% if @query.inspect %>
+  <% if @query.nil? %>
   <div class="col-sm-6">
     <div class="alert alert-danger" role="alert">
       <i class="fa fa-exclamation-circle fa-1x"></i>  Impossible de trouver des documents pour l'agent <strong><%= link_to Agent.find(params[:agent_id]).complete_name, agent_path(Agent.find(params[:agent_id]).id) %></strong>
