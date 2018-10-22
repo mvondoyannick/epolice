@@ -190,8 +190,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/fylo.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="178" column="74" selection-start-line="178" selection-start-column="74" selection-end-line="178" selection-end-column="74" />
+            <state relative-caret-position="182">
+              <caret line="178" column="68" selection-start-line="178" selection-start-column="68" selection-end-line="178" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -583,7 +583,7 @@
       <workItem from="1539771450474" duration="14961000" />
       <workItem from="1539793727933" duration="12566000" />
       <workItem from="1539869763304" duration="8864000" />
-      <workItem from="1540201326241" duration="18757000" />
+      <workItem from="1540201326241" duration="18908000" />
     </task>
     <servers />
   </component>
@@ -593,7 +593,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="698480000" />
+    <option name="totallyTimeSpent" value="698631000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1008,8 +1008,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/fylo.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="178" column="74" selection-start-line="178" selection-start-column="74" selection-end-line="178" selection-end-column="74" />
+        <state relative-caret-position="182">
+          <caret line="178" column="68" selection-start-line="178" selection-start-column="68" selection-end-line="178" selection-end-column="68" />
         </state>
       </provider>
     </entry>
