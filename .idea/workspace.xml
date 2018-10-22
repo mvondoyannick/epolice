@@ -136,7 +136,7 @@
           <entry key="Gemfile" value="474" />
           <entry key="coffee" value="390" />
           <entry key="css" value="354" />
-          <entry key="erb" value="83979" />
+          <entry key="erb" value="84109" />
           <entry key="jbuilder" value="1" />
           <entry key="js" value="306" />
           <entry key="pid" value="1" />
@@ -152,7 +152,7 @@
           <entry key="CoffeeScript" value="390" />
           <entry key="JavaScript" value="306" />
           <entry key="PLAIN_TEXT" value="382" />
-          <entry key="RHTML" value="83979" />
+          <entry key="RHTML" value="84109" />
           <entry key="Ruby" value="36287" />
           <entry key="SCSS" value="154" />
           <entry key="YAML" value="145" />
@@ -192,8 +192,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/archive/get_contravention_from_agent.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+            <state relative-caret-position="396">
+              <caret line="17" column="215" selection-start-line="17" selection-start-column="215" selection-end-line="17" selection-end-column="224" />
             </state>
           </provider>
         </entry>
@@ -574,7 +574,7 @@
       <workItem from="1539771450474" duration="14961000" />
       <workItem from="1539793727933" duration="12566000" />
       <workItem from="1539869763304" duration="8864000" />
-      <workItem from="1540201326241" duration="14600000" />
+      <workItem from="1540201326241" duration="15377000" />
     </task>
     <servers />
   </component>
@@ -584,7 +584,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="694323000" />
+    <option name="totallyTimeSpent" value="695100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -603,7 +603,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.08785249" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.20715836" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.30151844" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -1001,8 +1001,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/archive/get_contravention_from_agent.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+        <state relative-caret-position="396">
+          <caret line="17" column="215" selection-start-line="17" selection-start-column="215" selection-end-line="17" selection-end-column="224" />
         </state>
       </provider>
     </entry>
