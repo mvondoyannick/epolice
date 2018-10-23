@@ -57,6 +57,18 @@ class ArchiveController < ApplicationController
     end
   end
 
+  #pour la transmission d'un document par un agent
+  def send_document
+    phone = params[:phone]
+    #email = params[:email]
+
+    #recherche à authentifier l'agent
+    @agent = Agent.where(phone: phone).first
+    if !@agent.nil?
+      @con = Convocation.where(agent_id: @agent.id).where('pieceretenu_id > 0').where(created_at: Date.today.beginning_of_year..Date.today.end_of_year)
+    end
+  end
+
   def set_transmission
     code = params[:code]
 

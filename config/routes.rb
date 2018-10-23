@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :departements
   get 'parametre/gestion_sturcture_partenaire'
   get 'access/member_new'
+  #transmission des documents par un agent
+  get 'archive/send_document'
   #pour l'aide
   get 'access/yelp'
   post 'access/member_new'

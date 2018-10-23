@@ -1,0 +1,48 @@
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Recherchez vos documents
+</h1>
+
+<div class="row m-b-40">
+  <div class="col-sm-12 m-b-40">
+    <%= form_tag archive_send_document_path, method: :get, class: 'form-inline' do %>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Numéro de téléphone</label>
+        <%= text_field_tag :phone, nil, placeholder: 'Numéro de téléphone', class: 'form-control form-control-lg' %>
+      </div>
+      <br>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Numéro de téléphone</label>
+        <%= text_field_tag :matricule, nil, placeholder: 'Matricule agent', class: 'form-control form-control-lg' %>
+      </div>
+
+      <%= submit_tag 'Rechecher mes contraventions', class: 'btn btn-primary mb-2' %>
+
+    <% end %>
+  </div>
+  <div class="col-sm-6">
+    <table class="table">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @con.each do |data| %>
+      <tr>
+        <th scope="row">1</th>
+        <td><%= data.created_at %></td>
+        <td><%= data.infraction.motif %></td>
+        <td><%= data.infraction.montant %></td>
+      </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-sm-6"></div>
+</div>

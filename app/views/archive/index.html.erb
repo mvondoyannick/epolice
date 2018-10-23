@@ -3,7 +3,7 @@
   <%= link_to :back do %>
     <i class="fa fa-arrow-left"></i>
   <% end %>
-  Archivage des documents
+  Archivage/transmission des documents
 </h1>
 <div class="row m-b-40">
   <div class="col-lg-3">
@@ -23,6 +23,16 @@
         <h6 class="card-subtitle mb-2 text-muted">Pieces/documents perdu, irretrouvable</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         <%= link_to 'Configurer', parametre_localisation_path, class: 'card-link' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to 'Transmettre document', archive_send_document_path, class: 'noir' %></h5>
+        <h6 class="card-subtitle mb-2 text-muted">Pieces/documents perdu, irretrouvable</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Démarrer', archive_send_document_path, class: 'card-link' %>
       </div>
     </div>
   </div>

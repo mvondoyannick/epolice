@@ -1,5 +1,6 @@
 class AffectationsController < ApplicationController
   before_action :set_affectation, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token, only: [:destroy]
 
   # GET /affectations
   # GET /affectations.json

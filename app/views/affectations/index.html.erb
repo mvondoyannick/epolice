@@ -7,39 +7,40 @@
   Bulletin de patrouille
 </h1>
 
-<table class="table table-borderless table-striped table-earning m-b-40">
-  <thead>
-  <tr>
-    <th>N° Bulletin</th>
-    <th>Agent</th>
-    <th>Commissariat</th>
-    <th>Poste de police</th>
-    <th>Date debut</th>
-    <th>Date fin</th>
-    <th colspan="3"></th>
-  </tr>
-  </thead>
+<div class="row">
+  <div class="col-sm-12">
+    <table class="table table-borderless table-striped table-earning m-b-40">
+      <thead>
+        <th>Agent</th>
+        <th>Commissariat</th>
+        <th>Poste de police</th>
+        <th>Date debut</th>
+        <th>Date fin</th>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
 
-  <tbody>
-  <% @affectations.each do |affectations| %>
-    <tr>
-      <td><%= affectations.id %></td>
-      <td><%= affectations.agent.complete_name %></td>
-      <td><%= affectations.commissariat.name if !affectations.commissariat_id.nil? %></td>
-      <td><%= affectations.postepolice.name if !affectations.postepolice_id.nil? %></td>
-      <td><%= affectations.debut %></td>
-      <td><%= affectations.fin %></td>
-      <td><%= link_to 'Show', affectations %></td>
-      <td><%= link_to 'Edit', edit_affectation_path(affectations) %></td>
-      <td><%= link_to 'Destroy', affectations, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+      <tbody>
+      <% @affectations.each do |affectations| %>
+        <tr>
+          <td><%= affectations.agent.complete_name %></td>
+          <td><%= affectations.commissariat.name if !affectations.commissariat_id.nil? %></td>
+          <td><%= affectations.postepolice.name if !affectations.postepolice_id.nil? %></td>
+          <td><%= affectations.debut %></td>
+          <td><%= affectations.fin %></td>
+          <td><%= link_to 'Show', affectations %></td>
+          <td><%= link_to 'Edit', edit_affectation_path(affectations) %></td>
+          <td><%= link_to 'Destroy', affectations, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
 
-<br>
+    <br>
 
-<%= link_to new_affectation_path, class: 'btn btn-primary' do %>
-  <%= fa_icon 'plus' %>
-  Nouveau bulletin
-<% end %>
+    <%= link_to new_affectation_path, class: 'btn btn-primary' do %>
+      <%= fa_icon 'plus' %>
+      Nouveau bulletin
+    <% end %>
+  </div>
+</div>

@@ -165,7 +165,8 @@ class Api::ConvocationsController < ApplicationController
     #recherche et verification de l'agent
     @agent = Agent.where(matricule: matricule, phone: phone).first
     if @agent
-      con = Convocation.where(agent_id: @agent.id).where('pieceretenu_id > 0')
+      con = Convocation.where(agent_id: @agent.id).where('pieceretenu_id > 0').where(created_at: Date.today.beginning_of_day..Date.today.end_of_day)
+      #affectation = Affectation.where(agent_id: @agent.id).where('fin >= ?', Date.today).last
       render json: {
           status: 'success',
           data: con.map do |p|
