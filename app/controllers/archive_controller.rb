@@ -12,7 +12,8 @@ class ArchiveController < ApplicationController
   def get_contravention_from_agent
     current_agent = params[:agent_id]
     @archive = Convocation.new
-    @query = Convocation.where(agent_id: current_agent).order(created_at: :desc).where(created_at: Date.today.beginning_of_day..Date.today.end_of_day)
+    #@affectation = Affectation.where(agent_id: current_agent).where('fin >= ?', Date.today)
+    @query = Convocation.where(agent_id: current_agent).order(created_at: :desc).where(created_at: Date.today.beginning_of_year..Date.today.end_of_year).where('pieceretenu_id > 0')
   end
 
   #permet de confirmer la reception du document recu

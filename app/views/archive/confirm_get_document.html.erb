@@ -1,7 +1,10 @@
-<%= link_to :back, class: 'button is-link is-outlined' do %>
-  <i class="fa fa-arrow-left noir"></i>
-  Retour
-<% end %>
+<% content_for(:title, 'ARCHIVAGE DES DONNEES')%>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Confirmation Documents agent <%= Agent.find(params[:agent]).complete_name %>
+</h1>
 <p class="title is-3 has-text-grey">
   Confirmer la reception des pieces
 </p>
@@ -10,37 +13,166 @@
     La confirmation de la reception des documents de contravention est irreversible, il est donc important de clairement identifier les documents que l'on recoi
 </p>
 <hr class="has-background-grey">
-<div class="columns">
-  <div class="column">
-    <i class="fa fa-paperclip fa-5x noir has-text-centered"></i>
-  </div>
-  <div class="column">
+<div class="row">
+  <div class="col-lg-6">
     <div class="card">
-      <table class="table">
-        <% @request.each do |f| %>
-          <tr height="40">
-            <td><i class="fa fa-paperclip fa-2x noir"></i></td>
-            <td>Document</td>
-            <td><%= f.pieceretenue %></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-calendar noir"></i></td>
-            <td>Date creation</td>
-            <td><%= f.created_at %></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-calendar noir"></i></td>
-            <td>Agent emeteur </td>
-            <td><%= f.agent.name %>&nbsp;<%= f.agent.prenom %></td>
-          </tr>
-        <% end %>
-        <tr>
-          <td>&nbsp;</td>
-          <td>
-            <%= link_to "Terminer", "/archive/end_transaction/#{params[:code]}/fallback/end", class: "button is-link is-small is-outlined text-right" %>
-          </td>
-        </tr>
-      </table>
+      <div class="card-header">
+        <strong>Information sur les documents</strong>
+      </div>
+      <div class="card-body card-block">
+        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label">Date</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+              <small class="form-text text-muted">This is a help text</small>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="email-input" class=" form-control-label">Piece retenue</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <input type="email" id="email-input" name="email-input" placeholder="Enter Email" class="form-control">
+              <small class="help-block form-text">Please enter your email</small>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="password-input" class=" form-control-label">CNI</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <input type="password" id="password-input" name="password-input" placeholder="Password" class="form-control">
+              <small class="help-block form-text">Please enter a complex password</small>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="disabled-input" class=" form-control-label">Immatriculation</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <p class="form-control-static">
+                <%= Convocation.find(params[:contravention]).immatriculation %>
+              </p>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="textarea-input" class=" form-control-label">Motifs de contravention</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <input type="password" id="password-input" name="password-input" placeholder="Password" class="form-control">
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="textarea-input" class=" form-control-label">Montant contravention</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <input type="password" id="password-input" name="password-input" placeholder="Password" class="form-control">
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="textarea-input" class=" form-control-label">Code QR (Scan)</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= image_tag("http://api.qrserver.com/v1/create-qr-code/?data=#{SecureRandom.hex(50)}!&size=100x100", size: '200') %>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-primary btn-sm">
+          <i class="fa fa-dot-circle-o"></i> Recevoir les documents
+        </button>
+        <button type="reset" class="btn btn-danger btn-sm">
+          <i class="fa fa-ban"></i> Annuller le transfert
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-header">
+        <strong>Information sur l'Agent</strong>
+      </div>
+      <div class="card-body card-block">
+        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label class=" form-control-label">Static</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <p class="form-control-static"><%= Convocation.find(params[:contravention]).immatriculation %></p>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label">Text Input</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+              <small class="form-text text-muted">This is a help text</small>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="email-input" class=" form-control-label">Email Input</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <input type="email" id="email-input" name="email-input" placeholder="Enter Email" class="form-control">
+              <small class="help-block form-text">Please enter your email</small>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="password-input" class=" form-control-label">Password</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <input type="password" id="password-input" name="password-input" placeholder="Password" class="form-control">
+              <small class="help-block form-text">Please enter a complex password</small>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="disabled-input" class=" form-control-label">Disabled Input</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <input type="text" id="disabled-input" name="disabled-input" placeholder="Disabled" disabled="" class="form-control">
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="textarea-input" class=" form-control-label">Textarea</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Content..." class="form-control"></textarea>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="file-input" class=" form-control-label">File input</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <input type="file" id="file-input" name="file-input" class="form-control-file">
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="file-multiple-input" class=" form-control-label">Multiple File input</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <input type="file" id="file-multiple-input" name="file-multiple-input" multiple="" class="form-control-file">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+
+      </div>
     </div>
   </div>
 </div>

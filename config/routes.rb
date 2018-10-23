@@ -116,7 +116,7 @@ Rails.application.routes.draw do
   get 'archive/validate'
   post 'archive/validate'
   get 'archive/get_contravention_from_agent/:agent_id', to: 'archive#get_contravention_from_agent'
-  get 'archive/confirm_contravention_document/:agent_id/:code/fallback', to: 'archive#confirm_get_document'
+  get 'archive/confirm_contravention_document/fallback', to: 'archive#confirm_get_document'
   get 'archive/end_transaction/:code/fallback/end', to: 'archive#set_transmission'
   get 'compte/index'
   get 'compte/validate'
