@@ -167,8 +167,15 @@ class Api::ConvocationsController < ApplicationController
     if @agent
       con = Convocation.where(agent_id: @agent.id).where('pieceretenu_id > 0')
       render json: {
-          status: 'succes',
-          data: con
+          status: 'success',
+          data: con.map do |p|
+            {
+                id: p.id,
+                date: p.created_at,
+                piece: p.pieceretenu.name,
+                motif: p.infraction.motif
+            }
+          end
       }
     end
   end
