@@ -1,6 +1,8 @@
 class ArchiveController < ApplicationController
   require 'base64'
   require 'httparty'
+  require 'rqrcode'
+  #HTTParty::Basement.default_options.update(verify: false)
 
   layout 'fylo'
 
@@ -18,12 +20,23 @@ class ArchiveController < ApplicationController
 
   #permet de confirmer la reception du document recu
   def confirm_get_document
-    code = params[:code]
-    @request = Convocation.all.where(code: code)
+    c = Base64.decode64(params[:contravention])
+    a = Base64.decode64(params[:agent])
+    @request = Convocation.find(c)
+    @agent = Agent.find(a)
+    @qrcode = Base64.encode64(@request.pieceretenu_id.to_s)
+
   end
 
   def merci
+    @agent  = params[:agent]
+    @data   = params[:data]
 
+    #demarrage du processus de notification via SMS
+    phone = Agent.find(@agent).phone
+    current_convocation = Convocation.find(@data)
+    message = "Valider la transmission du documents #{current_convocation.pieceretenu.name} correspondant a l infraction du #{current_convocation.created_at} faites par vous (#{Agent.find(@agent).complete_name}) a l agent #{current_admin.email}."
+    HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{phone}&message=#{message}")
   end
 
   def validate
