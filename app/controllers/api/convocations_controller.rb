@@ -158,6 +158,21 @@ class Api::ConvocationsController < ApplicationController
     end
   end
 
+  def archive_generate_qr
+    phone = params[:phone]
+    matricule = params[:matricule]
+
+    #recherche et verification de l'agent
+    @agent = Agent.where(matricule: matricule, phone: phone).first
+    if @agent
+      con = Convocation.where(agent_id: @agent.id).where('pieceretenu_id > 0')
+      render json: {
+          status: 'succes',
+          data: con
+      }
+    end
+  end
+
   #GET ALERTS 
   #permet de creer une nouvelle alerte
   def new_alerte

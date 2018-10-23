@@ -26,6 +26,18 @@ class ArchiveController < ApplicationController
     @agent = Agent.find(a)
     @qrcode = Base64.encode64(@request.pieceretenu_id.to_s)
 
+    qrcode = RQRCode::QRCode.new('http://github.com/')
+    @png = qrcode.as_png(
+        resize_gte_to: false,
+        resize_exactly_to: false,
+        fill: 'white',
+        color: 'black',
+        size: 120,
+        border_modules: 4,
+        module_px_size: 6,
+        file: '.app/assets/images/test.png'
+    )
+
   end
 
   def merci

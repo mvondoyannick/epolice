@@ -2,7 +2,7 @@
   <%= link_to :back do %>
     <i class="fa fa-arrow-left"></i>
     <% end %>
-  Fichiers de configuration
+  Fichiers de données
 </h1>
 <div class="row">
   <div class="col-lg-3">
@@ -124,21 +124,16 @@
     </div>
   </div-->
 
-  <!--div class="col-md-3">
+  <div class="col-lg-3">
     <div class="card">
-      <%= image_tag('bg-title-01.jpg', class: 'card-img-top') %>
       <div class="card-body">
-        <h4 class="card-title mb-3">Administrateurs e-Police</h4>
-        <p class="card-text">
-        </p>
-      </div>
-      <div class="card-footer text-right">
-        <%= link_to 'Aperçu', parametre_admin_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_admin_registration_path, class: 'card-link' %>
+        <h5 class="card-title"><%= link_to 'Import/Export', parametre_access_setup_import_export_path, class: 'noir' %></h5>
+        <h6 class="card-subtitle mb-2 text-muted">Administration des grades</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Acceder', parametre_access_setup_import_export_path, class: 'card-link' %>
       </div>
     </div>
-  </div-->
+  </div>
   <div class="col-lg-3">
     <div class="card">
       <div class="card-body">
