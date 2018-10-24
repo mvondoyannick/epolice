@@ -51,10 +51,10 @@ class ArchiveController < ApplicationController
   #pour la transmission d'un document par un agent
   def send_document
     phone = params[:phone]
-    #email = params[:email]
+    matricule = params[:matricule]
 
     #recherche à authentifier l'agent
-    @agent = Agent.where(phone: phone).first
+    @agent = Agent.where(phone: phone, matricule: matricule).first
     if !@agent.nil?
       @con = Convocation.where(agent_id: @agent.id).where('pieceretenu_id > 0').where(created_at: Date.today.beginning_of_year..Date.today.end_of_year)
     end

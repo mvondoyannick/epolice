@@ -2,14 +2,13 @@
   <%= link_to :back do %>
     <i class="fa fa-arrow-left"></i>
   <% end %>
-  Recherchez vos documents
 </h1>
 
 <div class="row m-b-40">
   <div class="col-sm-12 m-b-40">
     <%= form_tag archive_send_document_path, method: :get, class: 'form-inline' do %>
-      <div class="form-group mx-sm-3 mb-2">
-        <label for="inputPassword2" class="sr-only">Numéro de téléphone</label>
+      <div class="form-group mx-sm-3 mb-2 m-b-40">
+        <label for="inputPassword2" class="sr-only m-b-40">Numéro de téléphone</label>
         <%= text_field_tag :phone, nil, placeholder: 'Numéro de téléphone', class: 'form-control form-control-lg' %>
       </div>
       <br>
@@ -22,34 +21,26 @@
 
     <% end %>
   </div>
-  <div class="col-sm-6">
+  <br>
+
+  <div class="col-sm-12">
     <% if @con.nil? %>
-      <p>
+      <p class="noir">
         Document introuvable
       </p>
       <% else %>
-        <table class="table">
-          <thead class="thead-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Date</th>
-            <th scope="col">Infraction</th>
-            <th scope="col">Montant</th>
-          </tr>
-          </thead>
-          <tbody>
-          <% @con.each do |data| %>
-          <tr draggable="true" ondragstart="drag(event)" id="drag1">
-            <th scope="row">
-              <%= check_box_tag 'id', data.id, false, class: '' %>
-            </th>
-            <td><%= data.created_at %></td>
-            <td><%= data.infraction.motif %></td>
-            <td><%= data.infraction.montant %></td>
-          </tr>
-            <% end %>
-          </tbody>
-        </table>
+      <% @con.each do |data| %>
+        <div class="media text-muted pt-3">
+          <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
+          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark"><%= data.infraction.motif if !data.infraction_id.nil? %></strong>
+            infraction en date du <strong><%= data.created_at %></strong>, ayant pour montant  <%= data.infraction.montant if !data.infraction_id.nil?  %> F et dont le concerné repond au téléphone <%= data.phone %>
+            <div class="text-right">
+              <%= link_to 'transmettre', nil, class: 'btn btn-danger btn-sm' %>
+            </div>
+          </p>
+        </div>
       <% end %>
+    <% end %>
   </div>
 </div>

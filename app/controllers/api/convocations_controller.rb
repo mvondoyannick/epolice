@@ -174,6 +174,13 @@ class Api::ConvocationsController < ApplicationController
     render json: {types: Type.all}
   end
 
+  #retourne tous les types d'infractions
+  def api_infraction
+    render json: {
+        infractions: Infraction.all
+    }
+  end
+
   # GET /convocations/new
   # permet la creation d'une convocation
   def conv

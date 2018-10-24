@@ -290,6 +290,9 @@ Rails.application.routes.draw do
     get 'convocations/protectCode/:code', to: 'convocations#protectCode'
     #============================== retourner le type d'infraction ===============================
     get 'alert/types/type', to: 'convocations#api_type'
+
+    #retourn toutes les infraction
+    get 'epolice/infractions/infration', to: 'convocations#api_infraction'
     #----------------------sending alert and return status----------------------------------
     post 'alert/new/:agent_id/:type_id/:longitude/:latitude/:alertes/:description/:ville_id', to: 'convocations#new_alerte'
     #========== lire les alertes publiées =============
