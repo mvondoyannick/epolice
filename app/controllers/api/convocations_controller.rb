@@ -26,7 +26,7 @@ class Api::ConvocationsController < ApplicationController
         status: :found,
         message: token.map do |data|
           {
-              nom: data.complete_name,
+              name: data.complete_name,
               region: data.region.name,
               region_id: data.region_id,
               grade: data.grade.name,

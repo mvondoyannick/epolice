@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/layouts/template/archive/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/archive_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/archive_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/access/login.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/login.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/archive/send_document.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archive/send_document.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -149,7 +143,7 @@
           <entry key="jbuilder" value="1" />
           <entry key="js" value="341" />
           <entry key="pid" value="1" />
-          <entry key="rb" value="40484" />
+          <entry key="rb" value="40488" />
           <entry key="scss" value="202" />
           <entry key="txt" value="381" />
           <entry key="yml" value="145" />
@@ -162,7 +156,7 @@
           <entry key="JavaScript" value="341" />
           <entry key="PLAIN_TEXT" value="382" />
           <entry key="RHTML" value="88178" />
-          <entry key="Ruby" value="41003" />
+          <entry key="Ruby" value="41007" />
           <entry key="SCSS" value="202" />
           <entry key="YAML" value="145" />
         </counts>
@@ -231,8 +225,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+            <state relative-caret-position="110">
+              <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -640,7 +634,7 @@
       <workItem from="1540201326241" duration="27117000" />
       <workItem from="1540288317902" duration="751000" />
       <workItem from="1540291781218" duration="24046000" />
-      <workItem from="1540371154901" duration="20927000" />
+      <workItem from="1540371154901" duration="21001000" />
     </task>
     <servers />
   </component>
@@ -650,7 +644,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="752564000" />
+    <option name="totallyTimeSpent" value="752638000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1045,8 +1039,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        <state relative-caret-position="110">
+          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
         </state>
       </provider>
     </entry>
