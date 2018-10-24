@@ -31,15 +31,17 @@
             <td><%= agent.grade.name %></td>
             <td><%= agent.region.name if !agent.region_id.nil? %></td>
             <td><%= agent.unite.name if !agent.unite_id.nil? %></td>
-            <td><%= link_to 'Show', agent %></td>
+            <td><%= link_to 'Voir', agent %></td>
             <td>
               <%= link_to edit_agent_path(agent) do %>
                 <i class="fa fa-edit"></i>
+                Modifier
               <% end %>
              </td>
             <td>
-              <%= link_to agent, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <%= link_to agent, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' do %>
                 <i class="fa fa-eraser"></i>
+                Supprimer
               <% end %>
             </td>
           </tr>
