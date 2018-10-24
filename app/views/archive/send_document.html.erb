@@ -23,26 +23,38 @@
     <% end %>
   </div>
   <div class="col-sm-6">
-    <table class="table">
-      <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-      </thead>
-      <tbody>
-      <% @con.each do |data| %>
-      <tr>
-        <th scope="row">1</th>
-        <td><%= data.created_at %></td>
-        <td><%= data.infraction.motif %></td>
-        <td><%= data.infraction.montant %></td>
-      </tr>
-        <% end %>
-      </tbody>
-    </table>
+    <% if @con.nil? %>
+      <p>
+        Document introuvable
+      </p>
+      <% else %>
+        <table class="table">
+          <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Date</th>
+            <th scope="col">Infraction</th>
+            <th scope="col">Montant</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @con.each do |data| %>
+          <tr draggable="true" ondragstart="drag(event)" id="drag1">
+            <th scope="row">
+              <%= check_box_tag 'id', data.id, false, class: '' %>
+            </th>
+            <td><%= data.created_at %></td>
+            <td><%= data.infraction.motif %></td>
+            <td><%= data.infraction.montant %></td>
+          </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% end %>
   </div>
-  <div class="col-sm-6"></div>
+  <div class="col-sm-6">
+    <div class="card" style="height: 40rem; width: 100%;" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+    </div>
+  </div>
 </div>

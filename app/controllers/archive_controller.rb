@@ -2,7 +2,7 @@ class ArchiveController < ApplicationController
   require 'base64'
   require 'httparty'
   require 'rqrcode'
-  #HTTParty::Basement.default_options.update(verify: false)
+  HTTParty::Basement.default_options.update(verify: false)
 
   layout 'fylo'
 
@@ -27,16 +27,7 @@ class ArchiveController < ApplicationController
     @qrcode = Base64.encode64(@request.pieceretenu_id.to_s)
 
     qrcode = RQRCode::QRCode.new('http://github.com/')
-    @png = qrcode.as_png(
-        resize_gte_to: false,
-        resize_exactly_to: false,
-        fill: 'white',
-        color: 'black',
-        size: 120,
-        border_modules: 4,
-        module_px_size: 6,
-        file: '.app/assets/images/test.png'
-    )
+
 
   end
 

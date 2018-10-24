@@ -26,6 +26,7 @@ class Api::ConvocationsController < ApplicationController
         status: :found,
         message: token.map do |data|
           {
+              name: data.complete_name,
               region: data.region.name,
               region_id: data.region_id,
               grade: data.grade.name,
@@ -35,7 +36,8 @@ class Api::ConvocationsController < ApplicationController
               apikey: SecureRandom.hex(10),
               cookies: {
                   value: SecureRandom.hex(10),
-                  expires: 1.hour.from_now
+                  expires: 72.hour.from_now,
+                  cookies_status: 1.hour.from_now > DateTime.now
               }
           }
         end

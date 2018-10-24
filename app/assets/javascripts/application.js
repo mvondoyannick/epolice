@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery3
+//= require archive
 //= require bootstrap
 //= require popper
 //= require Chart.bundle
