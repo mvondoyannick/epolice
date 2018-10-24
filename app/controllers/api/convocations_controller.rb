@@ -27,6 +27,7 @@ class Api::ConvocationsController < ApplicationController
         message: token.map do |data|
           {
               name: data.complete_name,
+              id: data.id,
               region: data.region.name,
               region_id: data.region_id,
               grade: data.grade.name,
