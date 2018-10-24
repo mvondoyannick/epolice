@@ -4,7 +4,7 @@ class ArchiveController < ApplicationController
   require 'rqrcode'
   HTTParty::Basement.default_options.update(verify: false)
 
-  layout 'fylo'
+  layout 'fylo', except: [:send_document]
 
   def index
     #agent ayant le meme commissariat
@@ -58,6 +58,7 @@ class ArchiveController < ApplicationController
     if !@agent.nil?
       @con = Convocation.where(agent_id: @agent.id).where('pieceretenu_id > 0').where(created_at: Date.today.beginning_of_year..Date.today.end_of_year)
     end
+    render layout: 'template/archive/index'
   end
 
   def set_transmission
