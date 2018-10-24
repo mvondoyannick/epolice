@@ -5,7 +5,12 @@
   <i class="fa fa-plus"></i>
   Ajouter un agent
 <% end %>
-<h1 class="m-b-40">Agents de police</h1>
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Agent de police
+</h1>
 
 <div class="row">
   <div class="col-lg-12">
@@ -33,16 +38,10 @@
             <td><%= agent.unite.name if !agent.unite_id.nil? %></td>
             <td><%= link_to 'Voir', agent %></td>
             <td>
-              <%= link_to edit_agent_path(agent) do %>
-                <i class="fa fa-edit"></i>
-                Modifier
-              <% end %>
-             </td>
+              <%= link_to 'Modifier', edit_agent_path(agent) %>
+            </td>
             <td>
-              <%= link_to agent, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' do %>
-                <i class="fa fa-eraser"></i>
-                Supprimer
-              <% end %>
+              <%= link_to 'Supprimer', agent, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
             </td>
           </tr>
         <% end %>

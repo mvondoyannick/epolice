@@ -303,7 +303,14 @@ Rails.application.routes.draw do
     get 'document/find/:code', to: 'convocations#search_document'
     #injection des methodes provenantes de l'API
     get 'ussd/1.1/datas/:data', to: 'convocations#ussd_data'
+
+    #renvoi des données pour generer le QR code
     get 'epolice/qr/generate/:phone/:matricule', to: 'convocations#archive_generate_qr'
+
+    #verification de l'affectation d'un agent
+    get 'epolice/affectation/verify/:matricule', to: 'convocations#set_affectation'
+
+    #
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

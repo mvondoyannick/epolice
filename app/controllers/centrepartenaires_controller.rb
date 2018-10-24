@@ -1,5 +1,6 @@
 class CentrepartenairesController < ApplicationController
   before_action :set_centrepartenaire, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token, only: [:destroy]
   layout 'fylo'
 
   # GET /centrepartenaires

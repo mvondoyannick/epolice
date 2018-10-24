@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_22_161531) do
+ActiveRecord::Schema.define(version: 2018_10_24_113621) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -86,6 +86,8 @@ ActiveRecord::Schema.define(version: 2018_10_22_161531) do
     t.bigint "region_id"
     t.string "statusaffectation"
     t.string "bloque"
+    t.string "tokenagent"
+    t.string "expire"
     t.index ["grade_id"], name: "index_agents_on_grade_id"
     t.index ["region_id"], name: "index_agents_on_region_id"
     t.index ["unite_id"], name: "index_agents_on_unite_id"

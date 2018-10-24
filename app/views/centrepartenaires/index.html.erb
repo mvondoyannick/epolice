@@ -27,7 +27,7 @@
         <td><%= centrepartenaire.localisation %></td>
         <td><%= link_to 'Show', centrepartenaire %></td>
         <td><%= link_to 'Edit', edit_centrepartenaire_path(centrepartenaire) %></td>
-        <td><%= link_to 'Destroy', centrepartenaire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Supprimer', centrepartenaire, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
       </tr>
     <% end %>
   </tbody>

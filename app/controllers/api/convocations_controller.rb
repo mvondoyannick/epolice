@@ -56,13 +56,43 @@ class Api::ConvocationsController < ApplicationController
     end
   end
 
-  #permet de verifier le token
+  #permet de verifier le token d'un agent
   def verify_token
     matricule = params[:matricule]
 
-    #on recherche l'ID
+    #on recherche l'ID de cette agent
+    @agent = Agent.where(matricule: matricule).last
 
     #ensuite on recherche son token egt le status de ce token
+    if !@agent.tokenagent.nil?
+      if @agent.expire > DateTime.now
+        #si son token est encore a jour
+        render json: {
+            status: :success,
+            token: @agent.tokenagent,
+            expire: @agent.expire
+        }
+      else
+        #dans ce cas son token n'est plus a jour, on le remet à jour
+        current_agent = Agent.where(matricule: matricule).first
+        current_agent.tokenagent  = SecureRandom.hex(3)
+        current_agent.expire      = 3.hour.from_now
+
+        #on fait persister les données
+        current_agent.save
+      end
+    else #
+      render json: {
+          status: :not_found,
+          message: 'Pas de token trouvé'
+      }
+    end
+
+  end
+
+  #verification du token via le canal USSD
+  def ussd_token_verify
+
   end
 
   #permet de verifier une contravention
@@ -317,6 +347,32 @@ class Api::ConvocationsController < ApplicationController
     #on fait le decoupage de la chaine de caractere suivant le caractere de delimitation
     splited = data.split('@')
     render plain: "Voici les données #{splited}" if !splited.nil?
+  end
+
+  #permet de verifier la programmation d'un agent, l'affectation
+  def set_affectation
+    matricule = params[:matricule]
+
+    #on recherche l'agent
+    @agent = Agent.where(matricule: matricule).first
+
+    #rechercher l'affectation de cet agent
+    @affectation = Affectation.where(agent_id: @agent.id).where('fin >= ?', Date.today).last
+
+    if @affectation
+      render json: {
+        data:
+          {
+              token: @affectation.token,
+              affectation_status: @affectation.fin >= DateTime.now,
+              expire_at: @affectation.fin,
+              commissariat: @affectation.commissariat.name,
+              postepolice: @affectation.postepolice.name,
+              localisation: @affectation.localisation
+          }
+      }
+    end
+
   end
 
   private

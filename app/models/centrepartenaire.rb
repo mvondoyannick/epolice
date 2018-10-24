@@ -8,4 +8,8 @@ class Centrepartenaire < ApplicationRecord
   validates :name, presence: {message: 'Le nom du responsable est obliatoire.'}
   validates :fonction, presence: {message: 'La fontion est obligatoire.'}
   validates :phone, presence: {message: 'Le numéro de téléphone est obligatoire.'}, uniqueness: {message: '%{value} a deja été utilisé'}, length: {is: 9, message: 'Le numero doit comporter 9 chiffres'}
+
+  def custom_email
+
+  end
 end

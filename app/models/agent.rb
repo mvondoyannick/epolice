@@ -1,6 +1,7 @@
 class Agent < ApplicationRecord
 
 	before_save :generate_hash
+  before_save :set_token
 
 	has_many :convocation
 	has_many :alertes
@@ -16,7 +17,7 @@ class Agent < ApplicationRecord
 
 	validates :name, presence: {message: 'Merci de fournir le nom.'}
 	validates :age, presence: {message: 'Merci de selectionner age.'}
-	validates :matricule, presence: {message: 'Merci de fournir un matricule'}, uniqueness: {message: '%{value} existe deja.'}
+	validates :matricule, presence: {message: 'Merci de fournir un matricule'}#, uniqueness: {message: '%{value} existe deja.'}
 	validates :sexe, presence: {message: 'merci de selectionner un sexe'}
 	validates :phone, presence: {message: 'Merci de fournir le numéro de téléphone'}
 	validates :grade, presence: {message: 'Merci de selectionner le grade.'}
@@ -33,6 +34,12 @@ class Agent < ApplicationRecord
 	#retourn ne nom et le prenom de l'agent
 	def complete_name
 		self.name+' '+self.prenom
+	end
+
+	#on genere le token à l'enregistrement de l'agent
+	def set_token
+		self.tokenagent = SecureRandom.hex(3)
+		self.expire = 3.hour.from_now
 	end
 
 	private
