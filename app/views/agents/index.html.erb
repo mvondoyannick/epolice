@@ -14,8 +14,7 @@
         <thead>
         <tr>
           <th>Matricule</th>
-          <th>Name</th>
-          <th>Prenom</th>
+          <th>Nom & prénom</th>
           <th>Phone</th>
           <th>Grade</th>
           <th>Région</th>
@@ -27,8 +26,7 @@
         <% @agents.each do |agent| %>
           <tr>
             <td><%= agent.matricule %></td>
-            <td><%= agent.name %></td>
-            <td><%= agent.prenom %></td>
+            <td><%= agent.complete_name %></td>
             <td><%= agent.phone %></td>
             <td><%= agent.grade.name %></td>
             <td><%= agent.region.name if !agent.region_id.nil? %></td>

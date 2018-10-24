@@ -24,19 +24,34 @@ class Api::ConvocationsController < ApplicationController
     else
       render json: {
         status: :found,
-        message: token,
-        region: token[0].region.name,
-        region_id: token[0].region_id,
-        grade: token[0].grade.name,
-        grade_id: token[0].grade_id,
-        unite: token[0].unite.name,
-        unite_id: token[0].unite_id,
+        message: token.map do |data|
+          {
+              region: data.region.name,
+              region_id: data.region_id,
+              grade: data.grade.name,
+              grade_id: data.grade_id,
+              unite: data.unite.name,
+              unite_id: data.unite_id,
+              apikey: SecureRandom.hex(10),
+              cookies: {
+                  value: SecureRandom.hex(10),
+                  expires: 1.hour.from_now
+              }
+          }
+        end
+        #message: token,
+        #region: token[0].region.name,
+        #region_id: token[0].region_id,
+        #grade: token[0].grade.name,
+        #grade_id: token[0].grade_id,
+        #unite: token[0].unite.name,
+        #unite_id: token[0].unite_id,
         #data: rails_blob_path(Agent.avatar, disposition: "attachment", only_path: true),
-        affectation: Affectation.find(5).fin.to_date >= Date.today.to_date, #a mettre a jour de facon dynamique
-        image: '',
-        apikey: SecureRandom.hex(10),
-        code: 200,
-        cookies:  {value: SecureRandom.hex(10), expires: 1.hour.from_now }
+        #affectation: Affectation.find(5).fin.to_date >= Date.today.to_date, #a mettre a jour de facon dynamique
+        #image: '',
+        #apikey: SecureRandom.hex(10),
+        #code: 200,
+        #cookies:  {value: SecureRandom.hex(10), expires: 1.hour.from_now }
       }
     end
   end
@@ -168,15 +183,15 @@ class Api::ConvocationsController < ApplicationController
       con = Convocation.where(agent_id: @agent.id).where('pieceretenu_id > 0').where(created_at: Date.today.beginning_of_day..Date.today.end_of_day)
       #affectation = Affectation.where(agent_id: @agent.id).where('fin >= ?', Date.today).last
       render json: {
-          status: 'success',
-          data: con.map do |p|
-            {
-                id: p.id,
-                date: p.created_at,
-                piece: p.pieceretenu.name,
-                motif: p.infraction.motif
-            }
-          end
+        status: 'success',
+        data: con.map do |p|
+          {
+              id: p.id,
+              date: p.created_at,
+              piece: p.pieceretenu.name,
+              motif: p.infraction.motif
+          }
+        end
       }
     end
   end
@@ -239,24 +254,24 @@ class Api::ConvocationsController < ApplicationController
   #nouveau constat
   def new_constat
     query = Constat.new(
-                       name1: params[:name1],
-                       phone1: params[:phone1],
-                       cni1: params[:cni1],
-                       immatriculation1: params[:immatriculation1],
-                       marque1: params[:marque1],
-                       police1: params[:police1],
-                       name2: params[:name2],
-                       phone2: params[:phone2],
-                       cni2: params[:cni2],
-                       immatriculation2: params[:immatriculation2],
-                       marque2: params[:marque2],
-                       police2: params[:police2],
-                       typeaccident_id: params[:typeaccident],
-                       lieu: params[:lieu],
-                       agent_id: params[:agent],
-                       comment: params[:comment],
-                       latitude: params[:latitude],
-                       longitude: params[:longitude]
+       name1: params[:name1],
+       phone1: params[:phone1],
+       cni1: params[:cni1],
+       immatriculation1: params[:immatriculation1],
+       marque1: params[:marque1],
+       police1: params[:police1],
+       name2: params[:name2],
+       phone2: params[:phone2],
+       cni2: params[:cni2],
+       immatriculation2: params[:immatriculation2],
+       marque2: params[:marque2],
+       police2: params[:police2],
+       typeaccident_id: params[:typeaccident],
+       lieu: params[:lieu],
+       agent_id: params[:agent],
+       comment: params[:comment],
+       latitude: params[:latitude],
+       longitude: params[:longitude]
     )
     if query.save
       render json: {
