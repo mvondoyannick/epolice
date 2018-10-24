@@ -39,4 +39,8 @@ class ParametreController < ApplicationController
   def grvpc
 
   end
+
+  def bulletin_patrouille
+    render layout: 'fylo'
+  end
 end

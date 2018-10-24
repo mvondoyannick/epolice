@@ -1,0 +1,32 @@
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Bulletin de patrouille
+</h1>
+<div class="row">
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Bulletin de patrouille</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Region, departement et arrondissement</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Aperçu', bulletins_path, class: 'card-link' %>
+        &nbsp;
+        <%= link_to 'Ajouter', new_bulletin_path, class: 'card-link' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Affecter des agents à un bulletin</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Gestion des postes de police</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to 'Aperçu', affectations_path, class: 'card-link' %>
+        &nbsp;
+        <%= link_to 'Ajouter', new_affectation_path, class: 'card-link' %>
+      </div>
+    </div>
+  </div>
+</div>

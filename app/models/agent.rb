@@ -39,7 +39,7 @@ class Agent < ApplicationRecord
 	#on genere le token à l'enregistrement de l'agent
 	def set_token
 		self.tokenagent = SecureRandom.hex(3)
-		self.expire = 3.hour.from_now
+		self.expire = 45.minute.from_now
 	end
 
 	private

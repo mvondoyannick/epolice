@@ -1,0 +1,33 @@
+
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Bulletins
+</h1>
+
+<table class="responsive nowrap table table-hover" id="dttb-bulletins" data-sort="true" data-source="<%= url_for(format: :json)%>">
+  <thead>
+    <tr>
+      <th data-data="order">Order</th>
+      <th data-data="debut">Debut</th>
+      <th data-data="fin">Fin</th>
+      <th data-data="commissariat">Commissariat</th>
+      <th data-data="url" data-orderable="false" data-class-name="all" data-searchable="false" class="skip-export" width="100px"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bulletins.each do |bulletin| %>
+    <tr>
+      <th data-data="order"><%= bulletin.order %></th>
+      <th data-data="order"><%= bulletin.debut %></th>
+      <th data-data="order"><%= bulletin.fin %></th>
+      <th data-data="order"><%= bulletin.commissariat.name %></th>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bulletin', new_bulletin_path, class: 'btn btn-primary btn-sm' %>

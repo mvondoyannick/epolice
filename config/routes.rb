@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :bulletins
   resources :centrepartenaires
   resources :structures
   resources :centrerecouvrements
@@ -33,6 +34,7 @@ Rails.application.routes.draw do
   get 'access/convocation'
   get 'access/application'
   get 'access/alerte'
+  get 'parametre/bulletin_patrouille'
   get 'parametre/access/exporter/export/detail', to: 'access#export_detail' #pour les details d'exportation
   get 'parametre/access/exporter/export', to: 'access#exportation' #pour exporter les fichiers
   get 'parametre/access/setup/import_export', to: 'access#setup_import_export' #pour la configuration de import/export

@@ -79,10 +79,15 @@ class Api::ConvocationsController < ApplicationController
         #dans ce cas son token n'est plus a jour, on le remet à jour
         current_agent = Agent.where(matricule: matricule).first
         current_agent.tokenagent  = SecureRandom.hex(3)
-        current_agent.expire      = 3.hour.from_now
-
+        current_agent.expire      = 45.minute.from_now
         #on fait persister les données
-        current_agent.save
+        if current_agent.save
+          render json: {
+              message: :updated
+          }
+        else
+          puts "==== #{current_agent.errors.messages}"
+        end
       end
     else #
       render json: {
@@ -373,13 +378,18 @@ class Api::ConvocationsController < ApplicationController
       render json: {
         data:
           {
-              token: @affectation.token,
-              affectation_status: @affectation.fin >= DateTime.now,
-              expire_at: @affectation.fin,
-              commissariat: @affectation.commissariat.name,
-              postepolice: @affectation.postepolice.name,
-              localisation: @affectation.localisation
+            token: @affectation.token,
+            affectation_status: @affectation.fin >= DateTime.now,
+            expire_at: @affectation.fin,
+            commissariat: @affectation.commissariat.name,
+            postepolice: @affectation.postepolice.name,
+            localisation: @affectation.localisation
           }
+      }
+    else
+      render json: {
+          status: :no_data_found,
+          message: 'Aucune affectation trouvée'
       }
     end
 
