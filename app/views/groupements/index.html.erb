@@ -10,7 +10,7 @@
   Groupements régionaux
 </h1>
 
-<div class="col-lg-9">
+<div class="col-lg-12">
   <div class="table-responsive table--no-card m-b-30">
     <table class="table table-borderless table-striped table-earning">
       <thead>
@@ -29,7 +29,7 @@
           <td><%= groupement.region.name %></td>
           <td><%= link_to 'Show', groupement %></td>
           <td><%= link_to 'Edit', edit_groupement_path(groupement) %></td>
-          <td><%= link_to 'Destroy', groupement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Destroy', groupement, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
         </tr>
       <% end %>
       </tbody>

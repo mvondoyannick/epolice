@@ -12,7 +12,32 @@
 
 <p>
   <strong>Region:</strong>
-  <%= @groupement.region %>
+  <%= @groupement.region.name %>
+</p>
+
+<p>
+  <strong>localisation:</strong>
+  <%= @groupement.localisation %>
+</p>
+
+<p>
+  <strong>email groupement:</strong>
+  <%= @groupement.email %>
+</p>
+
+<p>
+  <strong>Commandant:</strong>
+  <%= @groupement.agent.name+' '+@groupement.agent.prenom %>
+</p>
+
+<p>
+  <strong>Téléphone commandant:</strong>
+  <%= @groupement.phonecommandant %>
+</p>
+
+<p>
+  <strong>Email commande:</strong>
+  <%= @groupement.emailcommandant %>
 </p>
 
 <%= link_to 'Edit', edit_groupement_path(@groupement) %> |

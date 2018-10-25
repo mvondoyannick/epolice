@@ -7,7 +7,7 @@ class AgentsController < ApplicationController
   def index
     respond_to do |format|
       format.html do
-        @agents = Agent.all
+        @agents = Agent.order(name: :asc).all
       end
       format.xls
     end

@@ -1,10 +1,11 @@
 class RegionsController < ApplicationController
   before_action :set_region, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!
   layout 'fylo'
   # GET /regions
   # GET /regions.json
   def index
-    @regions = Region.all
+    @regions = Region.order(name: :asc).all
   end
 
   # GET /regions/1

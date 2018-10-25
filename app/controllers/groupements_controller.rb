@@ -1,10 +1,11 @@
 class GroupementsController < ApplicationController
   before_action :set_groupement, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token, only: [:destroy]
   layout 'fylo'
   # GET /groupements
   # GET /groupements.json
   def index
-    @groupements = Groupement.all
+    @groupements = Groupement.order(name: :asc).all
   end
 
   # GET /groupements/1
@@ -69,6 +70,6 @@ class GroupementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def groupement_params
-      params.require(:groupement).permit(:name, :phone, :region_id)
+      params.require(:groupement).permit(:name, :phone, :region_id, :agent_id, :phonecommandant, :emailcommandant, :localisation)
     end
 end

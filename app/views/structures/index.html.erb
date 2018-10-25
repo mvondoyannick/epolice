@@ -10,7 +10,6 @@
 <table class="table table-borderless table-striped table-earning">
   <thead>
     <tr>
-      <th>Logo</th>
       <th>Raison sociale</th>
       <th>Activité</th>
       <th>Region</th>
@@ -23,7 +22,6 @@
   <tbody>
     <% @structures.each do |structure| %>
       <tr>
-        <td><%= image_tag url_for(structure.logo), size: '75x75' %></td>
         <td><%= structure.name %></td>
         <td><%= structure.raison %></td>
         <td><%= structure.region.name %></td>

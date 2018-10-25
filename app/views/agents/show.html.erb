@@ -8,13 +8,21 @@
       </div>
       <div class="card-body card-block">
         <div class="form-group">
-          <label for="company" class=" form-control-label">Photo</label>
+          <label for="company" class=" form-control-label">Photo/avatar</label>
           <br>
-          <%= image_tag(@agent.avatar, size: 200) if !@agent.avatar.attached? %>
+          <%= image_tag(@agent.avatar, size: 200) if @agent.avatar.attached? %>
         </div>
         <div class="form-group">
           <label for="vat" class=" form-control-label">Matricule</label>
           <input type="text" id="vat" readonly class="form-control" value="<%= @agent.matricule %>">
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Date naissance</label>
+          <input type="text" id="street" value="<%= @agent.age.to_date %>" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Age (ans)</label>
+          <input type="text" id="street" value="<%= Date.today.year - @agent.age.to_date.year %> ans" class="form-control">
         </div>
         <div class="form-group">
           <label for="street" class=" form-control-label">Nom</label>

@@ -5,7 +5,7 @@ class UnitesController < ApplicationController
   # GET /unites
   # GET /unites.json
   def index
-    @unites = Unite.all
+    @unites = Unite.order(name: :asc).all
   end
 
   # GET /unites/1
@@ -70,6 +70,6 @@ class UnitesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def unite_params
-      params.require(:unite).permit(:name)
+      params.require(:unite).permit(:name, :description)
     end
 end

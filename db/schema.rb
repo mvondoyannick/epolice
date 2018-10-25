@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_24_185906) do
+ActiveRecord::Schema.define(version: 2018_10_25_132035) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(version: 2018_10_24_185906) do
     t.string "matricule"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "commissariat_id"
     t.string "crypted"
     t.bigint "grade_id"
     t.bigint "unite_id"
@@ -88,6 +89,7 @@ ActiveRecord::Schema.define(version: 2018_10_24_185906) do
     t.string "bloque"
     t.string "tokenagent"
     t.string "expire"
+    t.index ["commissariat_id"], name: "index_agents_on_commissariat_id"
     t.index ["grade_id"], name: "index_agents_on_grade_id"
     t.index ["region_id"], name: "index_agents_on_region_id"
     t.index ["unite_id"], name: "index_agents_on_unite_id"
@@ -201,7 +203,6 @@ ActiveRecord::Schema.define(version: 2018_10_24_185906) do
     t.bigint "departement_id"
     t.bigint "arrondissement_id"
     t.string "email"
-    t.string "localisation"
     t.string "phonecommissaire"
     t.bigint "agent_id"
     t.string "emailcommissaire"
@@ -234,19 +235,6 @@ ActiveRecord::Schema.define(version: 2018_10_24_185906) do
     t.string "longitude"
     t.index ["agent_id"], name: "index_constats_on_agent_id"
     t.index ["typeaccident_id"], name: "index_constats_on_typeaccident_id"
-  end
-
-  create_table "contravetions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "token"
-    t.string "motif"
-    t.string "status"
-    t.bigint "Agent_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "User_id"
-    t.string "description"
-    t.index ["Agent_id"], name: "index_contravetions_on_Agent_id"
-    t.index ["User_id"], name: "index_contravetions_on_User_id"
   end
 
   create_table "convocations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -386,13 +374,6 @@ ActiveRecord::Schema.define(version: 2018_10_24_185906) do
     t.string "role"
   end
 
-  create_table "memberoles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -408,11 +389,11 @@ ActiveRecord::Schema.define(version: 2018_10_24_185906) do
     t.string "unlock_token"
     t.datetime "locked_at"
     t.string "matricule"
+    t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "service_id"
     t.string "status"
-    t.string "phone"
     t.string "phone1"
     t.string "phone2"
     t.string "code"
@@ -460,18 +441,6 @@ ActiveRecord::Schema.define(version: 2018_10_24_185906) do
   create_table "paiementsolutions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "operator"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "partenaires", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "nom"
-    t.string "phone"
-    t.string "phone1"
-    t.string "phone2"
-    t.string "email"
-    t.string "password"
-    t.string "password_confirmation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -571,48 +540,7 @@ ActiveRecord::Schema.define(version: 2018_10_24_185906) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "us", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "name", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string "current_sign_in_ip"
-    t.string "last_sign_in_ip"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_us_on_email", unique: true
-    t.index ["name"], name: "index_us_on_name", unique: true
-    t.index ["reset_password_token"], name: "index_us_on_reset_password_token", unique: true
-  end
-
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.string "prenom"
-    t.string "sexe"
-    t.string "cartegrise"
-    t.string "immatriculation"
-    t.string "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string "current_sign_in_ip"
-    t.string "last_sign_in_ip"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.string "description"
   end
 
   create_table "villes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -623,3 +551,60 @@ ActiveRecord::Schema.define(version: 2018_10_24_185906) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "zonecouverturemotifs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "detail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "admins", "roles"
+  add_foreign_key "affectations", "agents"
+  add_foreign_key "affectations", "commissariats"
+  add_foreign_key "affectations", "postepolices"
+  add_foreign_key "affectations", "regions"
+  add_foreign_key "agents", "commissariats"
+  add_foreign_key "agents", "grades"
+  add_foreign_key "agents", "regions"
+  add_foreign_key "agents", "unites"
+  add_foreign_key "alertes", "agents"
+  add_foreign_key "alertes", "status", column: "statu_id"
+  add_foreign_key "alertes", "types"
+  add_foreign_key "arrondissements", "departements"
+  add_foreign_key "arrondissements", "regions"
+  add_foreign_key "bulletins", "commissariats"
+  add_foreign_key "carrefours", "villes"
+  add_foreign_key "centrepartenaires", "arrondissements"
+  add_foreign_key "centrepartenaires", "departements"
+  add_foreign_key "centrepartenaires", "regions"
+  add_foreign_key "centrepartenaires", "structures"
+  add_foreign_key "centrerecouvrements", "regions"
+  add_foreign_key "commissariats", "agents"
+  add_foreign_key "commissariats", "arrondissements"
+  add_foreign_key "commissariats", "departements"
+  add_foreign_key "commissariats", "regions"
+  add_foreign_key "constats", "agents"
+  add_foreign_key "constats", "typeaccidents"
+  add_foreign_key "convocations", "agents"
+  add_foreign_key "convocations", "infractions"
+  add_foreign_key "convocations", "pieceretenus"
+  add_foreign_key "departements", "regions"
+  add_foreign_key "fylos", "commissariats"
+  add_foreign_key "fylos", "roles"
+  add_foreign_key "groupements", "agents"
+  add_foreign_key "groupements", "regions"
+  add_foreign_key "infractions", "arrondissements"
+  add_foreign_key "infractions", "departements"
+  add_foreign_key "infractions", "regions"
+  add_foreign_key "infractions", "zonecouverturemotifs"
+  add_foreign_key "members", "regions"
+  add_foreign_key "members", "services"
+  add_foreign_key "metropolis", "metropolisroles"
+  add_foreign_key "paiements", "convocations"
+  add_foreign_key "postepolices", "agents"
+  add_foreign_key "postepolices", "commissariats"
+  add_foreign_key "postepolices", "grades"
+  add_foreign_key "postepolices", "regions"
+  add_foreign_key "services", "types"
+  add_foreign_key "structures", "regions"
+end

@@ -12,6 +12,10 @@
           <label for="company" class=" form-control-label">Nom du service</label>
           <%= f.input :name, label: false, placeholder: 'Nom du service' %>
         </div>
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Description</label>
+          <%= f.input :description, label: false, placeholder: 'Description du service' %>
+        </div>
       </div>
       <div class="card-footer">
         <%= f.button :submit, 'Ajouter', class: 'btn btn-primary btn-sm' %>
