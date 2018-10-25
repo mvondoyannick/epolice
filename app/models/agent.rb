@@ -17,9 +17,9 @@ class Agent < ApplicationRecord
 
 	validates :name, presence: {message: 'Merci de fournir le nom.'}
 	validates :age, presence: {message: 'Merci de selectionner age.'}
-	validates :matricule, presence: {message: 'Merci de fournir un matricule'}#, uniqueness: {message: '%{value} existe deja.'}
+	validates :matricule, presence: {message: 'Merci de fournir un matricule'}, uniqueness: {message: '%{value} existe deja.'}
 	validates :sexe, presence: {message: 'merci de selectionner un sexe'}
-	validates :phone, presence: {message: 'Merci de fournir le numéro de téléphone'}
+	validates :phone, presence: {message: 'Merci de fournir le numéro de téléphone'}, uniqueness: {message: '%{value} existe deja.'}
 	validates :grade, presence: {message: 'Merci de selectionner le grade.'}
 	validates :region, presence: {message: 'Merci de selectionner la région.'}
 	validates :unite, presence: {message: 'Merci de selectionner le service.'}
