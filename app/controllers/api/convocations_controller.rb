@@ -61,10 +61,10 @@ class Api::ConvocationsController < ApplicationController
 
   #permet de verifier le token d'un agent
   def verify_token
-    matricule = params[:matricule]
+    matricule = params[:id]
 
     #on recherche l'ID de cette agent
-    @agent = Agent.where(matricule: matricule).last
+    @agent = Agent.find(matricule)
 
     #ensuite on recherche son token egt le status de ce token
     if !@agent.tokenagent.nil?
@@ -366,10 +366,10 @@ class Api::ConvocationsController < ApplicationController
 
   #permet de verifier la programmation d'un agent, l'affectation
   def set_affectation
-    matricule = params[:matricule]
+    matricule = params[:id]
 
     #on recherche l'agent
-    @agent = Agent.where(matricule: matricule).first
+    @agent = Agent.find(matricule)
 
     #rechercher l'affectation de cet agent
     @affectation = Affectation.where(agent_id: @agent.id).where('fin >= ?', Date.today).last
