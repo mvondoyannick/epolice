@@ -22,6 +22,7 @@
   <tbody>
     <% @structures.each do |structure| %>
       <tr>
+        <td><%= image_tag(structure.logo, size: '75x75') if structure.logo.attached? %></td>
         <td><%= structure.name %></td>
         <td><%= structure.raison %></td>
         <td><%= structure.region.name %></td>
