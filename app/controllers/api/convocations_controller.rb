@@ -244,17 +244,6 @@ class Api::ConvocationsController < ApplicationController
   #GET ALERTS 
   #permet de creer une nouvelle alerte
   def new_alerte
-    #ip = request.env['REMOTE_ADDR']
-    #info = HTTParty.get("https://ipapi.co/#{ip}/json/")
-    #puts "======= #{info} ========"
-    #quartier = params[:ville]
-    #coordonnee = params[:coordonnees]
-    #lon = params[:lon]
-    #lat = params[:lat]
-    #description = params[:description]
-    #photo = Base64.decode64(params[:photo])
-    #type = params[:type]
-    #agent = params[:matricule]
 
     #gestion des photos avec activeRecord
 
@@ -371,27 +360,37 @@ class Api::ConvocationsController < ApplicationController
     #on recherche l'agent
     @agent = Agent.find(matricule)
 
-    #rechercher l'affectation de cet agent
-    @affectation = Affectation.where(agent_id: @agent.id).where('fin >= ?', Date.today).last
+    if @agent
+      #rechercher l'affectation de cet agent
+      @affectation = Affectation.where(agent_id: @agent.id).where('fin >= ?', Date.today).last
 
-    if @affectation
-      render json: {
-        data:
-          {
-            token: @affectation.token,
-            affectation_status: @affectation.fin >= DateTime.now,
-            expire_at: @affectation.fin,
-            commissariat: @affectation.commissariat.name,
-            postepolice: @affectation.postepolice.name,
-            localisation: @affectation.localisation
-          }
-      }
+      if @affectation
+        render json: {
+            data:
+                {
+                    token: @affectation.token,
+                    affectation_status: @affectation.fin >= DateTime.now,
+                    expire_at: @affectation.fin,
+                    commissariat: @affectation.commissariat.name,
+                    postepolice: @affectation.postepolice.name,
+                    localisation: @affectation.localisation
+                }
+        }
+      else
+        render json: {
+            status: :no_data_found,
+            message: 'Aucune affectation trouvée'
+        }
+      end
     else
       render json: {
-          status: :no_data_found,
-          message: 'Aucune affectation trouvée'
+          status: :not_found,
+          message: 'Aucun agent trouvé',
+          code: '404'
       }
     end
+
+
 
   end
 
