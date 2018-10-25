@@ -61,7 +61,7 @@ class Api::ConvocationsController < ApplicationController
 
   #permet de verifier le token d'un agent
   def verify_token
-    matricule = params[:id]
+    matricule = params[:matricule]
 
     #on recherche l'ID de cette agent
     @agent = Agent.find(matricule)
@@ -355,26 +355,26 @@ class Api::ConvocationsController < ApplicationController
 
   #permet de verifier la programmation d'un agent, l'affectation
   def set_affectation
-    matricule = params[:id]
+    matricule = params[:matricule]
 
     #on recherche l'agent
-    @agent = Agent.find(matricule)
+    @agent = Agent.find(matricule).id
 
     if @agent
       #rechercher l'affectation de cet agent
-      @affectation = Affectation.where(agent_id: @agent.id).where('fin >= ?', Date.today).last
+      @affectation = Affectation.where(agent_id: @agent).where('fin >= ?', Date.today).last
 
       if @affectation
         render json: {
-            data:
-                {
-                    token: @affectation.token,
-                    affectation_status: @affectation.fin >= DateTime.now,
-                    expire_at: @affectation.fin,
-                    commissariat: @affectation.commissariat.name,
-                    postepolice: @affectation.postepolice.name,
-                    localisation: @affectation.localisation
-                }
+          data:
+            {
+              token: @affectation.token,
+              affectation_status: @affectation.fin >= DateTime.now,
+              expire_at: @affectation.fin,
+              commissariat: @affectation.commissariat.name,
+              postepolice: @affectation.postepolice.name,
+              localisation: @affectation.localisation
+            }
         }
       else
         render json: {
@@ -389,10 +389,9 @@ class Api::ConvocationsController < ApplicationController
           code: '404'
       }
     end
-
-
-
   end
+
+
 
   private
 
