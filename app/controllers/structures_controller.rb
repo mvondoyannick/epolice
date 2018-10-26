@@ -70,6 +70,6 @@ class StructuresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def structure_params
-      params.require(:structure).permit(:name, :raison, :adresse, :contactname, :contantprenom, :contactphone, :contactemail, :region_id, :logo, :document, :email, :pwd)
+      params.require(:structure).permit(:name, :raison, :contactname, :contantprenom, :contactphone, :contactemail, :region_id, :logo, :document, :email, :pwd, :rue, :bp, :phonestructure, :fonction)
     end
 end

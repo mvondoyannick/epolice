@@ -15,7 +15,7 @@
 <div class="row">
   <div class="col-lg-12">
     <div class="table-responsive table--no-card m-b-30">
-      <table class="table table-borderless table-striped table-earning">
+      <table class="table table-borderless table-striped table-earning table-borderless table-active">
         <thead>
         <tr>
           <th>Matricule</th>
@@ -39,7 +39,7 @@
               <%= link_to 'Modifier', edit_agent_path(agent) %>
             </td>
             <td>
-              <%= link_to 'Supprimer', agent, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+              <%= link_to 'Supprimer', agent, method: :delete, data: { confirm: "Supprimer l'agent #{agent.complete_name}?" }, class: 'btn btn-danger btn-sm' %>
             </td>
           </tr>
         <% end %>

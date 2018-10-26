@@ -7,7 +7,7 @@ class AgentsController < ApplicationController
   def index
     respond_to do |format|
       format.html do
-        @agents = Agent.order(name: :asc).all
+        @agents = Agent.order(name: :asc).where(statusdeleted: false)
       end
       format.xls
     end
@@ -64,6 +64,18 @@ class AgentsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to agents_url, notice: 'Agent was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def delete_agent
+    @agent.statusdeleted = true
+    if @agent.save
+      respond_to do |format|
+        format.html do
+          redirect_to agents_url, notice: 'Agent a été correctement supprimé.'
+        end
+        format.json { head :no_content}
+      end
     end
   end
 

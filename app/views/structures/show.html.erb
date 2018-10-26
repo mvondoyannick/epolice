@@ -1,3 +1,4 @@
+<% content_for(:title, 'DETAIL STRUCTURE')%>
 <p id="notice"><%= notice %></p>
 <h1 class="m-b-40">
   <%= link_to :back do %>
@@ -6,67 +7,125 @@
   Detail structure <%= @structure.name %>
 </h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @structure.name %>
-</p>
+<div class="row">
+  <div class="col-md-4 order-md-2 mb-4">
+    <h4 class="d-flex justify-content-between align-items-center mb-3">
+      <span class="text-muted"><%= @structure.name %> | <%= @structure.raison %></span>
+      <!--span class="badge badge-secondary badge-pill">&nbsp;</span-->
+    </h4>
+    <ul class="list-group mb-3">
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>
+          <h6 class="my-0">Nom partenaire</h6>
+          <small class="text-muted"><%= @structure.name %></small>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>
+          <h6 class="my-0">Raison</h6>
+          <small class="text-muted"><%= @structure.raison %></small>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>
+          <h6 class="my-0">Email structure</h6>
+          <small class="text-muted"><%= @structure.email %></small>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>
+          <h6 class="my-0">Boite postale</h6>
+          <small class="text-muted"><%= @structure.bp %></small>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>
+          <h6 class="my-0">Numéro de téléphone</h6>
+          <small class="text-muted"><%= @structure.phonestructure %></small>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-4 order-md-2 mb-4">
+    <h4 class="d-flex justify-content-between align-items-center mb-3">
+      <span class="text-muted">&nbsp;</span>
+    </h4>
+    <ul class="list-group mb-3">
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>
+          <h6 class="my-0">Rue/Localisation</h6>
+          <small class="text-muted"><%= @structure.rue %></small>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>
+          <h6 class="my-0">Nom Responsable</h6>
+          <small class="text-muted"><%= @structure.contactname %></small>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>
+          <h6 class="my-0">Prenom Responsable</h6>
+          <small class="text-muted"><%= @structure.contantprenom %></small>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>
+          <h6 class="my-0">Fonction responsable</h6>
+          <small class="text-muted"><%= @structure.fonction %></small>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>
+          <h6 class="my-0">Téléphone Responsable</h6>
+          <small class="text-muted"><%= @structure.contactphone %></small>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>
+          <h6 class="my-0">Adresse email responsable</h6>
+          <small class="text-muted"><%= @structure.contactemail %></small>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-4 order-md-2 mb-4">
+    <h4 class="d-flex justify-content-between align-items-center mb-3">
+      <span class="text-muted"></span>
+      <span class="badge badge-secondary badge-pill">&nbsp;</span>
+    </h4>
+    <ul class="list-group mb-3">
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>
+          <h6 class="my-0">Logo structure</h6>
+          <small class="text-muted">
+            <%= image_tag(@structure.logo, size: 150) if @structure.logo.attached? %>
+          </small>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>
+          <h6 class="my-0">Document de references</h6>
+          <small class="text-muted">
+            <%= link_to 'Telecharger le fichier', rails_blob_path(@structure.document, disposition: "attachment") %>
+          </small>
+          <div class="text-left">
+            <object width="350" height="150" data="<%= rails_blob_path(@structure.document) %>"></object>
+          </div>
+        </div>
+      </li>
+    </ul>
 
-<p>
-  <strong>Raison:</strong>
-  <%= @structure.raison %>
-</p>
+    <div class="text-right">
+      <%= link_to structures_path, class: 'btn btn-primary btn-sm' do %>
+        <i class="fa fa-arrow-left"></i>
+        Retour
+      <% end %>
 
-<p>
-  <strong>Email structure:</strong>
-  <%= @structure.email %>
-</p>
-
-<p>
-  <strong>Adresse:</strong>
-  <%= @structure.adresse %>
-</p>
-
-<p>
-  <strong>Contactname:</strong>
-  <%= @structure.contactname %>
-</p>
-
-<p>
-  <strong>Contantprenom:</strong>
-  <%= @structure.contantprenom %>
-</p>
-
-<p>
-  <strong>Contactphone:</strong>
-  <%= @structure.contactphone %>
-</p>
-
-<p>
-  <strong>Contactemail:</strong>
-  <%= @structure.contactemail %>
-</p>
-
-<p>
-  <strong>Region:</strong>
-  <%= @structure.region.name %>
-</p>
-
-<p class="m-b-40">
-  <strong>Mot de passe:</strong>
-  <%= @structure.pwd %>
-</p>
-
-<p class="m-b-40">
-  <strong>Logo:</strong>
-
-</p>
-
-<%= link_to structures_path, class: 'btn btn-primary' do %>
-  <i class="fa fa-arrow-left"></i>
-  Retour
-<% end %>
- |
-<%= link_to edit_structure_path(@structure), class: 'btn btn-primary' do %>
-  <i class="fa fa-edit"></i>
-  Modifier
-<% end %>
+      <%= link_to edit_structure_path(@structure), class: 'btn btn-primary btn-sm' do %>
+        <i class="fa fa-edit"></i>
+        Modifier
+      <% end %>
+    </div>
+  </div>
+</div>

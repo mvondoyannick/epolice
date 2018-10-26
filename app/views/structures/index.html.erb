@@ -7,13 +7,13 @@
   Partenaires
 </h1>
 
-<table class="table table-borderless table-striped table-earning">
+<table class="table table-borderless table-striped table-earning" id="table">
   <thead>
     <tr>
       <th>Raison sociale</th>
       <th>Activité</th>
       <th>Region</th>
-      <th>Adresse</th>
+      <th>Téléphone</th>
       <th>Email</th>
       <th colspan="3"></th>
     </tr>
@@ -26,7 +26,7 @@
         <td><%= structure.name %></td>
         <td><%= structure.raison %></td>
         <td><%= structure.region.name %></td>
-        <td><%= structure.adresse %></td>
+        <td><%= structure.phonestructure %></td>
         <td><%= structure.email %></td>
         <td><%= link_to 'Show', structure %></td>
         <td><%= link_to 'Edit', edit_structure_path(structure) %></td>
