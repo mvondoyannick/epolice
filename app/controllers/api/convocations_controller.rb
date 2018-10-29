@@ -248,9 +248,9 @@ class Api::ConvocationsController < ApplicationController
     #gestion des photos avec activeRecord
 
 
-     #a = Alerte.new(agent_id: agent, type_id: type, longitude: lon.to_s, latitude: lat.to_s, description: description, ville_id: quartier, statu_id: 1, titre: Type.find(type).name)
+     @alerte = Alerte.new(agent_id: agent, type_id: type, longitude: lon.to_s, latitude: lat.to_s, description: description, ville_id: quartier, statu_id: 1, titre: Type.find(type).name)
 
-    @alerte = Alerte.new(alerte_params)
+    #@alerte = Alerte.new(alerte_params)
 
 
     status = @alerte.alertes.attach(params[:alertes])
