@@ -369,7 +369,7 @@ class Api::ConvocationsController < ApplicationController
           data:
             {
               token: @affectation.token,
-              affectation_status: @affectation.fin >= DateTime.now,
+              affectationStatus: @affectation.fin >= DateTime.now,
               expire_at: @affectation.fin,
               commissariat: @affectation.commissariat.name,
               postepolice: @affectation.postepolice.name,
