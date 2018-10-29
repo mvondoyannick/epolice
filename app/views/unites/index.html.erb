@@ -29,7 +29,7 @@
             <td><%= unite.description %></td>
             <td><%= link_to 'Show', unite %></td>
             <td><%= link_to 'Edit', edit_unite_path(unite) %></td>
-            <td><%= link_to 'Destroy', unite, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
+            <td><%= link_to 'Supprimer', unite, method: :delete, data: { confirm: "Voulez-vous supprimer le service : #{unite.name} ?" }, class: 'btn btn-danger btn-sm' %></td>
           </tr>
         <% end %>
         </tbody>

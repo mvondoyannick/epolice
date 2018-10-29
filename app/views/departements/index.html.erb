@@ -10,7 +10,7 @@
   Départements</h1>
 
 <div class="row">
-  <div class="col-lg-9">
+  <div class="col-lg-12">
     <div class="table-responsive table--no-card m-b-30">
       <table class="table table-borderless table-striped table-earning">
         <thead>
@@ -27,7 +27,7 @@
             <td><%= departement.region.name %></td>
             <td><%= link_to 'Show', departement %></td>
             <td><%= link_to 'Edit', edit_departement_path(departement) %></td>
-            <td><%= link_to 'Destroy', departement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Supprimer', departement, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %></td>
           </tr>
         <% end %>
         </tbody>

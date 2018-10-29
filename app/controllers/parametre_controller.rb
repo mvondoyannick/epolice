@@ -29,6 +29,14 @@ class ParametreController < ApplicationController
   def admin
     @admin = Admin.all
     #pour afficher les administrateurs de la plateforme
+
+    @grvpc = Grvpc.all
+
+    @member = Member.all
+
+    @metropolis = Metropoli.all
+
+    @agent = Agent.all
   end
 
   def add_user

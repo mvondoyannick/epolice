@@ -15,39 +15,50 @@
     </div>
     <nav class="navbar-sidebar2">
       <ul class="list-unstyled navbar__list">
-        <li>
-          <%= link_to access_application_path do %>
-            <%= fa_icon 'rocket' %>
-            Applications
-          <% end %>
-        </li>
         <li class="has-sub">
           <%= link_to parametre_index_path, class: 'js-arrow' do  %>
-            <%= fa_icon 'file-o' %>
+            <%= fa_icon 'file 2x' %>
             Fichiers
           <% end %>
         </li>
+        <li class="has-sub">
+          <%= link_to parametre_admin_path, class: 'js-arrow' do  %>
+            <%= fa_icon 'users 2x' %>
+            Utilisateurs
+          <% end %>
+        </li>
+        <li class="has-sub">
+          <%= link_to access_systeme_path, method: :get, class: 'js-arrow' do  %>
+            <%= fa_icon 'cog 2x' %>
+            Parametres
+          <% end %>
+        </li>
+        <li>
+          <%= link_to access_application_path do %>
+            <%= fa_icon 'rocket 2x' %>
+            Applications
+          <% end %>
+          <ul class="list-unstyled navbar__sub-list js-sub-list">
+            <li>
+              <a href="index.html">Dashboard 1</a>
+            </li>
+          </ul>
+        </li>
         <!--li class="has-sub">
           <%= link_to parametre_access_setup_import_export_path, class: 'js-arrow' do  %>
-            <%= fa_icon 'download' %>
+            <%= fa_icon 'download 2x' %>
             Import/Export
           <% end %>
         </li-->
         <li class="has-sub">
-          <%= link_to access_systeme_path, method: :get, class: 'js-arrow' do  %>
-            <%= fa_icon 'cog' %>
-            Parametres
-          <% end %>
-        </li>
-        <li class="has-sub">
           <%= link_to access_yelp_path, method: :get, class: 'js-arrow' do  %>
-            <%= fa_icon 'yelp' %>
+            <%= fa_icon 'question-circle 2x' %>
             Aide
           <% end %>
         </li>
         <li class="has-sub">
           <%= link_to parametre_index_path, class: 'js-arrow' do  %>
-            <%= fa_icon 'close' %>
+            <%= fa_icon 'close 2x' %>
             Quitter
           <% end %>
         </li>

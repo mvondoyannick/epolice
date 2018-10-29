@@ -369,7 +369,7 @@ class Api::ConvocationsController < ApplicationController
           data:
             {
               token: @affectation.token,
-              affectationStatus: @affectation.fin >= DateTime.now,
+              affectation_status: @affectation.fin >= DateTime.now,
               expire_at: @affectation.fin,
               commissariat: @affectation.commissariat.name,
               postepolice: @affectation.postepolice.name,
@@ -392,8 +392,10 @@ class Api::ConvocationsController < ApplicationController
   end
 
 
-
   private
+    def no_sens
+
+    end
 
     def alerte_params
       params.permit(:titre, :description, :date, :type_id, :agent_id, :action, :lieu, :statu_id, :longitude, :latitude, :alertes, :ville_id)

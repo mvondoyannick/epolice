@@ -43,7 +43,7 @@ class StructuresController < ApplicationController
   def update
     respond_to do |format|
       if @structure.update(structure_params)
-        format.html { redirect_to @structure, notice: 'Structure was successfully updated.' }
+        format.html { redirect_to @structure, notice: 'Structure a été correctement mise à jour.' }
         format.json { render :show, status: :ok, location: @structure }
       else
         format.html { render :edit }

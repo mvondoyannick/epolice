@@ -1,5 +1,4 @@
-<% content_for(:title, 'DASHBOARD ADMIN EPOLICE')%>
-<p id="notice"><%= notice %></p>
+<% content_for(:title, 'GESTION UTILISATEURS')%>
 
 <h1 class="m-b-40">
   <%= link_to access_open_path do %>
@@ -9,47 +8,41 @@
 </h1>
 
 <div class="row">
-  <div class="col-lg-3">
+  <div class="col-lg-3 col-sm-4 col-md-4">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Administrateurs</h5>
+        <h5 class="card-title">Administrateurs & décideurs</h5>
         <h6 class="card-subtitle mb-2 text-muted">Utilsateur administrateur</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Consulter', parametre_admins_admin_show_path, class: 'card-link' %>
-        <%= link_to 'Ajouter', nil, class: 'card-link' %>
+      </div>
+      <div class="card-footer text-mutted">
+        <%= link_to 'Consulter', parametre_admins_admin_show_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', nil, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
-  <div class="col-lg-3">
+  <!--div class="col-lg-3 col-sm-4 col-md-4">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Partenaires</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Agents partenaire</h6>
+        <h6 class="card-subtitle mb-2 text-muted">comptes partenaires</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Consulter', parametre_admins_member_show_path, class: 'card-link' %>
-        <%= link_to 'Ajouter', access_member_new_path, class: 'card-link' %>
+      </div>
+      <div class="card-footer text-mutted">
+        <%= link_to 'Consulter', parametre_admins_member_show_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', access_member_new_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
-  </div>
-  <div class="col-lg-3">
+  </div -->
+  <div class="col-lg-3 col-sm-4 col-md-4">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Agent recouvrement</h5>
+        <h5 class="card-title">Acces spéciaux</h5>
         <h6 class="card-subtitle mb-2 text-muted">Agent de recouvremenet</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Consulter', parametre_admins_metropolis_show_path, class: 'card-link' %>
-        <a href="#" class="card-link">Ajouter</a>
       </div>
-    </div>
-  </div>
-  <div class="col-lg-3">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Assurances</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Agent assurances</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Consulter', parametre_admins_assurance_show_path, class: 'card-link' %>
-        <a href="#" class="card-link">Ajouter</a>
+      <div class="card-footer text-mutted">
+        <%= link_to 'Consulter', parametre_admins_metropolis_show_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
@@ -59,7 +52,7 @@
   <!-- USER DATA-->
   <div class="user-data m-b-30 col-sm-12">
     <h3 class="title-3 m-b-30">
-      <i class="zmdi zmdi-account-calendar"></i>Données utilisateurs</h3>
+      <i class="zmdi zmdi-account-calendar"></i>Administrateurs & decideurs</h3>
     <div class="table-responsive table-data">
       <table class="table">
         <thead>
@@ -73,7 +66,6 @@
           <td>name</td>
           <td>phone</td>
           <td>role</td>
-          <td>type</td>
           <td>action</td>
           <td></td>
         </tr>
@@ -100,6 +92,79 @@
             </td>
             <td>
               <%= link_to admin.role.name, nil, class: "role #{admin.role.name}" %>
+            </td>
+            <td>
+              <div class="rs-select2--trans rs-select2--sm">
+                <select class="js-select2" name="property">
+                  <option selected="selected">Bloquer</option>
+                  <option value="">Changer MDP</option>
+                  <option value="">Envoyer un message</option>
+                  <option value="">Supprimer</option>
+                </select>
+                <div class="dropDownSelect2"></div>
+              </div>
+            </td>
+            <td>
+              <span class="more">
+                  <i class="zmdi zmdi-more"></i>
+              </span>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div class="user-data__footer">
+      <button class="au-btn au-btn-load">Afficher d'avantage</button>
+    </div>
+  </div>
+  <!-- END USER DATA-->
+</div>
+<div class="row">
+  <!-- USER DATA-->
+  <div class="user-data m-b-30 col-sm-12">
+    <h3 class="title-3 m-b-30">
+      <i class="zmdi zmdi-account-calendar"></i>Comptes partenaires sur le plateforme</h3>
+    <div class="table-responsive table-data">
+      <table class="table">
+        <thead>
+        <tr>
+          <td>
+            <label class="au-checkbox">
+              <input type="checkbox">
+              <span class="au-checkmark"></span>
+            </label>
+          </td>
+          <td>name</td>
+          <td>phone</td>
+          <td>role</td>
+          <td>type</td>
+          <td>action</td>
+          <td></td>
+        </tr>
+        </thead>
+        <tbody>
+        <% @grvpc.each do |grvpc| %>
+          <tr>
+            <td>
+              <label class="au-checkbox">
+                <input type="checkbox">
+                <span class="au-checkmark"></span>
+              </label>
+            </td>
+            <td>
+              <div class="table-data__info">
+                <h6>Nom inconnu</h6>
+                <span>
+                    <%= link_to grvpc.email, nil %>
+                </span>
+              </div>
+            </td>
+            <td>
+              <%= grvpc.phone %>
+            </td>
+            <td>
+              <%= link_to grvpc.role.name, nil, class: "role #{grvpc.role.name}" %>
             </td>
             <td>
               <div class="rs-select2--trans rs-select2--sm">
@@ -183,7 +248,83 @@
       </table>
     </div>
     <div class="user-data__footer">
-      <button class="au-btn au-btn-load">load more</button>
+      <button class="au-btn au-btn-load">Afficher d'avantage</button>
+    </div>
+  </div>
+  <!-- END USER DATA-->
+</div>
+<div class="row">
+  <!-- USER DATA-->
+  <div class="user-data m-b-30 col-sm-12">
+    <h3 class="title-3 m-b-30">
+      <i class="zmdi zmdi-account-calendar"></i>Utilisateurs/Agents mobile</h3>
+    <div class="table-responsive table-data">
+      <table class="table">
+        <thead>
+        <tr>
+          <td>
+            <label class="au-checkbox">
+              <input type="checkbox">
+              <span class="au-checkmark"></span>
+            </label>
+          </td>
+          <td>name</td>
+          <td>phone</td>
+          <td>role</td>
+          <td>Region</td>
+          <td>action</td>
+          <td></td>
+        </tr>
+        </thead>
+        <tbody>
+        <% @agent.each do |agent| %>
+          <tr>
+            <td>
+              <label class="au-checkbox">
+                <input type="checkbox">
+                <span class="au-checkmark"></span>
+              </label>
+            </td>
+            <td>
+              <div class="table-data__info">
+                <h6><%= agent.complete_name %></h6>
+                <span>
+                    <%= link_to agent.matricule, nil %>
+                </span>
+              </div>
+            </td>
+            <td>
+              <%= agent.phone %>
+            </td>
+            <td>
+              <%= link_to agent.unite.name, nil, class: "role user" %>
+            </td>
+            <td>
+              <%= agent.region.name %>
+            </td>
+            <td>
+              <div class="rs-select2--trans rs-select2--sm">
+                <select class="js-select2" name="property">
+                  <option selected="selected">Bloquer</option>
+                  <option value="">Changer MDP</option>
+                  <option value="">Envoyer un message</option>
+                  <option value="">Supprimer</option>
+                </select>
+                <div class="dropDownSelect2"></div>
+              </div>
+            </td>
+            <td>
+              <span class="more">
+                  <i class="zmdi zmdi-more"></i>
+              </span>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div class="user-data__footer">
+      <button class="au-btn au-btn-load">Afficher d'avantage</button>
     </div>
   </div>
   <!-- END USER DATA-->

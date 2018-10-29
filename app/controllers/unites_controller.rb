@@ -29,7 +29,7 @@ class UnitesController < ApplicationController
 
     respond_to do |format|
       if @unite.save
-        format.html { redirect_to @unite, notice: 'Unite was successfully created.' }
+        format.html { redirect_to @unite, notice: 'Le service a été supprimé.' }
         format.json { render :show, status: :created, location: @unite }
       else
         format.html { render :new }

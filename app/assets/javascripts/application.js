@@ -105,7 +105,3 @@ if (ctx) {
         }
     });
 }
-
-$(document).ready(function() {
-    $('#example').DataTable();
-} );

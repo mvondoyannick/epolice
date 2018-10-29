@@ -6,8 +6,6 @@ class Alerte < ApplicationRecord
   belongs_to :statu
   validates_presence_of :titre, presence: true
   validates_presence_of :description, presence: true
-  validates_presence_of :type, presence: true
-  validates_presence_of :agent, presence: true
   validates_presence_of :longitude, presence: true
   validates_presence_of :latitude, presence: true
 

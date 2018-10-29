@@ -4,7 +4,7 @@ class DepartementsController < ApplicationController
   # GET /departements
   # GET /departements.json
   def index
-    @departements = Departement.all
+    @departements = Departement.order(region_id: :asc)
   end
 
   # GET /departements/1

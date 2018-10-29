@@ -9,18 +9,16 @@
   <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/font-awesome-5/css/fontawesome-all.min.css' %>
   <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/font-awesome-4.7/css/font-awesome.min.css' %>
   <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/mdi-font/css/material-design-iconic-font.min.css' %>
-  <%= stylesheet_link_tag 'https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css', 'data-turbolinks-track': 'reload' %>
 
   <!-- Vendor CSS-->
 
-  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/css/font-face.css', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/css/font-face.css' %>
+  <%= stylesheet_link_tag 'https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css' %>
 
 
   <!-- Main CSS-->
   <%= javascript_include_tag 'application.js', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'main', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js' %>
-  <%= javascript_include_tag 'https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js' %>
 </head>
 <body>
 <div class="page-wrapper">
@@ -50,7 +48,7 @@
   <!-- PAGE CONTAINER-->
   <div class="page-container">
     <!-- HEADER DESKTOP-->
-    <header class="header-desktop">
+    <header class="header-desktop m-b-10">
       <div class="section__content section__content--p30">
         <div class="container-fluid">
           <div class="header-wrap">
@@ -221,6 +219,57 @@
         </div>
       </div>
     </header>
+    <div style="margin-top: 75px; margin-left: 10px;" class="noir">
+      <ul class="nav nav-pills">
+        <li class="nav-item dropdown">
+          <%= link_to 'Fichiers', parametre_index_path, class: 'nav-link dropdown-toggle noir', data: {toggle: 'dropdown'}, aria: {haspopup: true, expanded: false} %>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <%= link_to 'Utilisateurs', parametre_index_path, class: 'nav-link dropdown-toggle noir', data: {toggle: 'dropdown'}, aria: {haspopup: true, expanded: false} %>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <%= link_to 'Parametres', parametre_index_path, class: 'nav-link dropdown-toggle noir', data: {toggle: 'dropdown'}, aria: {haspopup: true, expanded: false} %>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <%= link_to 'Applications', parametre_index_path, class: 'nav-link dropdown-toggle noir', data: {toggle: 'dropdown'}, aria: {haspopup: true, expanded: false} %>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Aide', access_yelp_path, class: 'nav-link noir' %>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link noir" href="#">Quitter</a>
+        </li>
+
+      </ul>
+    </div>
     <!-- HEADER DESKTOP-->
 
     <!-- MAIN CONTENT-->

@@ -2,7 +2,7 @@
   <%= link_to :back do %>
     <i class="fa fa-arrow-left"></i>
     <% end %>
-  Fichiers de données
+  Gestion des données
 </h1>
 <div class="row">
   <div class="col-lg-3">
@@ -11,7 +11,10 @@
         <h5 class="card-title"><%= link_to 'Localisation', parametre_localisation_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Regions, departements et arrondissements</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Configurer', parametre_localisation_path, class: 'card-link' %>
+
+      </div>
+      <div class="card-footer text-muted">
+        <%= link_to 'Configurer', parametre_localisation_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
@@ -21,9 +24,10 @@
         <h5 class="card-title"><%= link_to 'Services', unites_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Services de la police</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Aperçu', unites_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_unite_path, class: 'card-link' %>
+      </div>
+      <div class="card-footer text-muted">
+        <%= link_to 'Aperçu', unites_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', new_unite_path, class: 'card-link btn btn-sm btn-primary text-right' %>
       </div>
     </div>
   </div>
@@ -33,9 +37,10 @@
         <h5 class="card-title"><%= link_to 'Grade', grades_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Grades de la police</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Aperçu', grades_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_grade_path, class: 'card-link' %>
+      </div>
+      <div class="card-footer text-mutted">
+        <%= link_to 'Aperçu', grades_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', new_grade_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
@@ -45,9 +50,9 @@
         <h5 class="card-title"><%= link_to 'GRVPC', parametre_grvpc_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Gestion des GRVPC et de postes de polices</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Aperçu', parametre_grvpc_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <!-- %= link_to 'Ajouter', new_groupement_path, class: 'card-link' %-->
+      </div>
+      <div class="card-footer text-mutted">
+        <%= link_to 'Aperçu', parametre_grvpc_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
@@ -57,9 +62,10 @@
         <h5 class="card-title"><%= link_to 'Commissariats', commissariats_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Commissariats de police</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Aperçu', commissariats_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_commissariat_path, class: 'card-link' %>
+      </div>
+      <div class="card-footer text-mutted">
+        <%= link_to 'Aperçu', commissariats_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', new_commissariat_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
@@ -69,9 +75,10 @@
         <h5 class="card-title"><%= link_to 'Effectifs', agents_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Personnel de la police</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Aperçu', agents_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_agent_path, class: 'card-link' %>
+      </div>
+      <div class="card-footer text-mutted">
+        <%= link_to 'Aperçu', agents_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', new_agent_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
@@ -81,9 +88,10 @@
         <h5 class="card-title"><%= link_to 'Partenaires', parametre_gestion_sturcture_partenaire_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Organisations destinataires des alertes</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Aperçu', parametre_gestion_sturcture_partenaire_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_structure_path, class: 'card-link' %>
+      </div>
+      <div class="card-footer text-mutted">
+        <%= link_to 'Aperçu', parametre_gestion_sturcture_partenaire_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', new_structure_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
@@ -93,9 +101,10 @@
         <h5 class="card-title"><%= link_to 'Centres de recouvrement', centrerecouvrements_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Centre de recouvrement des amendes aux infractions du code de la route</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Aperçu', centrerecouvrements_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_centrerecouvrement_path, class: 'card-link' %>
+      </div>
+      <div class="card-footer text-muted">
+        <%= link_to 'Aperçu', centrerecouvrements_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', new_centrerecouvrement_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
@@ -105,9 +114,10 @@
         <h5 class="card-title"><%= link_to "Types d'infractions", infractions_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Liste des motifs aux infractions du code de la route</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Aperçu', infractions_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_infraction_path, class: 'card-link' %>
+      </div>
+      <div class="card-footer text-mutted">
+        <%= link_to 'Aperçu', infractions_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', new_infraction_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
@@ -117,9 +127,10 @@
         <h5 class="card-title"><%= link_to 'Elements à retenir', pieceretenus_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Documents et/ou objets d'identification du contrevenant ou de l'engin roulant susceptible d'etre retenus</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Aperçu', pieceretenus_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_pieceretenu_path, class: 'card-link' %>
+      </div>
+      <div class="card-footer text-mutted">
+        <%= link_to 'Aperçu', pieceretenus_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', new_pieceretenu_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
@@ -132,9 +143,10 @@
         <h5 class="card-title"><%= link_to "Types d'evenements", types_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Evénements survenant dans la cité susceptibles de faire l’objet d’une alerte</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Aperçu', types_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_type_path, class: 'card-link' %>
+      </div>
+      <div class="card-footer text-mutted">
+        <%= link_to 'Aperçu', types_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', new_type_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
@@ -157,7 +169,9 @@
         <h5 class="card-title"><%= link_to 'Import/Export', parametre_access_setup_import_export_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Importation et/ou exportation des données</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Acceder', parametre_access_setup_import_export_path, class: 'card-link' %>
+      </div>
+      <div class="card-footer text-mutted">
+        <%= link_to 'Acceder', parametre_access_setup_import_export_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>

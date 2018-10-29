@@ -16,6 +16,14 @@
     <ul class="list-group mb-3">
       <li class="list-group-item d-flex justify-content-between lh-condensed">
         <div>
+          <h6 class="my-0">Logo structure</h6>
+          <small class="text-muted">
+            <%= image_tag(@structure.logo, size: 150) if @structure.logo.attached? %>
+          </small>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>
           <h6 class="my-0">Nom partenaire</h6>
           <small class="text-muted"><%= @structure.name %></small>
         </div>
@@ -97,20 +105,12 @@
     <ul class="list-group mb-3">
       <li class="list-group-item d-flex justify-content-between lh-condensed">
         <div>
-          <h6 class="my-0">Logo structure</h6>
-          <small class="text-muted">
-            <%= image_tag(@structure.logo, size: 150) if @structure.logo.attached? %>
-          </small>
-        </div>
-      </li>
-      <li class="list-group-item d-flex justify-content-between lh-condensed">
-        <div>
           <h6 class="my-0">Document de references</h6>
           <small class="text-muted">
             <%= link_to 'Telecharger le fichier', rails_blob_path(@structure.document, disposition: "attachment") %>
           </small>
           <div class="text-left">
-            <object width="350" height="150" data="<%= rails_blob_path(@structure.document) %>"></object>
+            <object width="350" height="400" data="<%= rails_blob_path(@structure.document) %>"></object>
           </div>
         </div>
       </li>
