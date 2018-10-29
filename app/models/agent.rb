@@ -1,7 +1,7 @@
 class Agent < ApplicationRecord
 
 	before_save :generate_hash
-  before_save :set_token
+  #before_save :set_token
 
 	has_many :convocation
 	has_many :alertes
