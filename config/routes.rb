@@ -48,6 +48,7 @@ Rails.application.routes.draw do
   resources :unites
   resources :postepolices
   get 'access/partner'
+  post 'access/admin_new'
   get 'access/partner_detail/:id/:jeton', to: 'access#partner_detail'
   get 'manage/index'
   get 'manage/admin'
@@ -296,7 +297,7 @@ Rails.application.routes.draw do
     #retourn toutes les infraction
     get 'epolice/infractions/infration', to: 'convocations#api_infraction'
     #----------------------sending alert and return status----------------------------------
-    post 'alert/new/:agent_id/:type_id/:longitude/:latitude/:alertes/:description/:ville_id', to: 'convocations#new_alerte'
+    post 'alert/new/:agent_id/:type_id/:longitude/:latitude/:description/:ville_id', to: 'convocations#new_alerte'
     #========== lire les alertes publiées =============
     get 'alert/read/all/:matricule/:ville_id', to: 'convocations#read_alertes'
     #================= gestion du token ===================
