@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'access/yelp'
   post 'access/member_new'
   get 'parametre/index'
+  get 'parametre/phone_user'
   get 'parametre/grvpc'
   get 'parametre/region'
   get 'parametre/departement'
