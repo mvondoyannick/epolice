@@ -272,9 +272,17 @@ class Api::ConvocationsController < ApplicationController
      #else
       #render json: {'errro': @alerte.errors.messages}
      #end
+     @alerte = Alerte.new(alert_params)
+    if @alerte.save
       render json: {
-          data: data
+          data: @alerte
       }
+    else
+      render json: {
+          error: 'erreur',
+          message: 'Impossible de creer les alertes'
+      }
+    end
   end
 
   #get stored alertes on plateforme
@@ -410,5 +418,9 @@ class Api::ConvocationsController < ApplicationController
 
     def alerte_params
       params.permit(:titre, :description, :date, :type_id, :agent_id, :action, :lieu, :statu_id, :longitude, :latitude, :alertes, :ville_id)
+    end
+
+    def alert_params
+      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :photo)
     end
 end

@@ -10,7 +10,7 @@ class Alerte < ApplicationRecord
   validates_presence_of :latitude, presence: true
 
   #ajout de active storage pour les fichiers
-  has_one_attached :alertes
+  has_one_attached :photo
 
   def self.to_csv
     CSV.generate do |csv|
