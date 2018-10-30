@@ -39,6 +39,11 @@ class ParametreController < ApplicationController
     @agent = Agent.all
   end
 
+
+  def phone_user
+    @agent = Agent.all
+  end
+
   def add_user
     
   end

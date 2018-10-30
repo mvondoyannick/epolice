@@ -378,8 +378,13 @@ class Api::ConvocationsController < ApplicationController
         }
       else
         render json: {
-            status: :no_data_found,
-            message: 'Aucune affectation trouvée'
+          data:
+            {
+                token: nil,
+                affectation_status: false,
+                status: :no_data_found,
+                message: 'Aucune affectation trouvée'
+            }
         }
       end
     else
