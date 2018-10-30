@@ -27,7 +27,7 @@
           <tr>
             <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
             <td>
-              <%= alerte.typeaccident.to_i %>
+              <%= alerte.typeaccident.name %>
             </td>
             <td>
               <%= alerte.comment %>
@@ -36,7 +36,7 @@
               <%= Agent.find(alerte.agent_id).complete_name %>
             </td>
             <td>
-              <%= link_to "Detail", nil %>
+              <%= link_to "Detail", gestion_constat_detail_path(data: "#{alerte.id}") %>
             </td>
             <td>
               <%= link_to "Transferer", nil, class: 'btn btn-sm btn-danger' %>

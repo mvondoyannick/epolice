@@ -156,6 +156,7 @@ Rails.application.routes.draw do
   get 'gestion_constat/cartography'
   get 'gestion_constat/region'
   get 'gestion_constat/assureur'
+  get 'gestion_constat/detail'
   #=========================================
   get 'gestion_contravention/today'
   get 'gestion_contravention/week'

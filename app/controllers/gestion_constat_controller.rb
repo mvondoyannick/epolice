@@ -16,6 +16,10 @@ class GestionConstatController < ApplicationController
     @constats = Constat.order(created_at: :asc)
   end
 
+  def detail
+    detail = params[:id]
+  end
+
   def cartography
   end
 
