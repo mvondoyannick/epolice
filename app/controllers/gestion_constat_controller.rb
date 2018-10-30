@@ -1,4 +1,5 @@
 class GestionConstatController < ApplicationController
+  layout 'fylo'
   def today
   end
 
@@ -12,6 +13,7 @@ class GestionConstatController < ApplicationController
   end
 
   def all
+    @constats = Constat.order(created_at: :asc)
   end
 
   def cartography
