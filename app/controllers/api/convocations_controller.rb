@@ -246,29 +246,35 @@ class Api::ConvocationsController < ApplicationController
   def new_alerte
 
     #gestion des photos avec activeRecord
+    data = params
+
+    puts "====#{data} ======="
 
 
-     @alerte = Alerte.new(agent_id: agent, type_id: type, longitude: lon.to_s, latitude: lat.to_s, description: description, ville_id: quartier, statu_id: 1, titre: Type.find(type).name)
+     #@alerte = Alerte.new(agent_id: agent, type_id: type, longitude: lon.to_s, latitude: lat.to_s, description: description, ville_id: quartier, statu_id: 1, titre: Type.find(type).name)
 
     #@alerte = Alerte.new(alerte_params)
 
 
-    status = @alerte.alertes.attach(params[:alertes])
-    puts "======= #{status} ======="
+    #status = @alerte.alertes.attach(params[:alertes])
+    #puts "======= #{status} ======="
     #recherche des autorisations
-    today = Date.today
+    #today = Date.today
     #authorization = Affectation.where(agent_id: Agent.find(2).id).where("#{today} between #{Affectation.where(agent_id: 2).debut} and #{Affectation.where(agent_id: 2).fin}")
     #puts "========== #{authorization} =========="
-     if @alerte.save
+     #if @alerte.save
        #message = "Le numero #{a.phone} est verbalisee pour #{a.infraction.motif}, cout: #{a.infraction.montant}"
        #m = HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{a.phone}&message=#{message}")
+      #render json: {
+          #status: :success,
+          #date: Date.today
+      #}
+     #else
+      #render json: {'errro': @alerte.errors.messages}
+     #end
       render json: {
-          status: :success,
-          date: Date.today
+          data: data
       }
-     else
-      render json: {'errro': @alerte.errors.messages}
-     end
   end
 
   #get stored alertes on plateforme
