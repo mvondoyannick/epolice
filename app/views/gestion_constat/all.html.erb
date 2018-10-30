@@ -27,19 +27,19 @@
           <tr>
             <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
             <td>
-              <%= alerte.typeaccident %>
+              <%= alerte.typeaccident.to_i %>
             </td>
             <td>
               <%= alerte.comment %>
             </td>
             <td>
-              <%= alerte.agent_id %>
+              <%= Agent.find(alerte.agent_id).complete_name %>
             </td>
             <td>
               <%= link_to "Detail", nil %>
             </td>
             <td>
-              <%= link_to "Transferer", nil %>
+              <%= link_to "Transferer", nil, class: 'btn btn-sm btn-danger' %>
             </td>
           </tr>
         <% end %>
