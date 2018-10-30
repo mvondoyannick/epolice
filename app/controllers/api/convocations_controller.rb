@@ -272,17 +272,6 @@ class Api::ConvocationsController < ApplicationController
      #else
       #render json: {'errro': @alerte.errors.messages}
      #end
-     @alerte = Alerte.new(alert_params)
-    if @alerte.save
-      render json: {
-          data: @alerte
-      }
-    else
-      render json: {
-          error: 'erreur',
-          message: 'Impossible de creer les alertes'
-      }
-    end
   end
 
   #get stored alertes on plateforme
