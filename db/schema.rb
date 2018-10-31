@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_29_130929) do
+ActiveRecord::Schema.define(version: 2018_10_31_092756) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -113,7 +113,9 @@ ActiveRecord::Schema.define(version: 2018_10_29_130929) do
     t.string "latitude"
     t.bigint "statu_id"
     t.string "archive"
+    t.bigint "region_id"
     t.index ["agent_id"], name: "index_alertes_on_agent_id"
+    t.index ["region_id"], name: "index_alertes_on_region_id"
     t.index ["statu_id"], name: "index_alertes_on_statu_id"
     t.index ["type_id"], name: "index_alertes_on_type_id"
   end
@@ -573,6 +575,7 @@ ActiveRecord::Schema.define(version: 2018_10_29_130929) do
   add_foreign_key "agents", "regions"
   add_foreign_key "agents", "unites"
   add_foreign_key "alertes", "agents"
+  add_foreign_key "alertes", "regions"
   add_foreign_key "alertes", "status", column: "statu_id"
   add_foreign_key "alertes", "types"
   add_foreign_key "arrondissements", "departements"

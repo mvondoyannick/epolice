@@ -26,20 +26,20 @@ class Api::ConvocationsController < ApplicationController
         status: :found,
         message: token.map do |data|
           {
-              name: data.complete_name,
-              id: data.id,
-              region: data.region.name,
-              region_id: data.region_id,
-              grade: data.grade.name,
-              grade_id: data.grade_id,
-              unite: data.unite.name,
-              unite_id: data.unite_id,
-              apikey: SecureRandom.hex(10),
-              cookies: {
-                  value: SecureRandom.hex(10),
-                  expires: 72.hour.from_now,
-                  cookies_status: 1.hour.from_now > DateTime.now
-              }
+            name: data.complete_name,
+            id: data.id,
+            region: data.region.name,
+            region_id: data.region_id,
+            grade: data.grade.name,
+            grade_id: data.grade_id,
+            unite: data.unite.name,
+            unite_id: data.unite_id,
+            apikey: SecureRandom.hex(10),
+            cookies: {
+                value: SecureRandom.hex(10),
+                expires: 72.hour.from_now,
+                cookies_status: 1.hour.from_now > DateTime.now
+            }
           }
         end
         #message: token,
@@ -253,7 +253,16 @@ class Api::ConvocationsController < ApplicationController
 
      #@alerte = Alerte.new(agent_id: agent, type_id: type, longitude: lon.to_s, latitude: lat.to_s, description: description, ville_id: quartier, statu_id: 1, titre: Type.find(type).name)
 
-    #@alerte = Alerte.new(alerte_params)
+    @alerte = Alerte.new(alert_params)
+    @alerte.photo.attach(params[:photo]) #on persiste les données
+    if @alerte.save
+      puts "========= saved ======="
+    else
+      puts "==== #{@alerte.errors.messages} ====="
+    end
+
+    #on enregistre l'information dans la base de données
+
 
 
     #status = @alerte.alertes.attach(params[:alertes])
@@ -410,6 +419,6 @@ class Api::ConvocationsController < ApplicationController
     end
 
     def alert_params
-      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :photo)
+      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :photo, :region_id)
     end
 end
