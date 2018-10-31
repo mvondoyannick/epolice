@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" afterDir="false" />
-    </list>
+    <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -207,8 +205,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="424" column="17" selection-start-line="424" selection-start-column="17" selection-end-line="424" selection-end-column="17" />
+            <state relative-caret-position="267">
+              <caret line="427" column="20" selection-start-line="427" selection-start-column="20" selection-end-line="427" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -682,7 +680,7 @@
       <workItem from="1540919040349" duration="9297000" />
       <workItem from="1540990220860" duration="3291000" />
       <workItem from="1540994564238" duration="174000" />
-      <workItem from="1540999833463" duration="7592000" />
+      <workItem from="1540999833463" duration="7848000" />
     </task>
     <servers />
   </component>
@@ -692,7 +690,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="847050000" />
+    <option name="totallyTimeSpent" value="847306000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1131,8 +1129,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="424" column="17" selection-start-line="424" selection-start-column="17" selection-end-line="424" selection-end-column="17" />
+        <state relative-caret-position="267">
+          <caret line="427" column="20" selection-start-line="427" selection-start-column="20" selection-end-line="427" selection-end-column="20" />
         </state>
       </provider>
     </entry>

@@ -425,8 +425,8 @@ class Api::ConvocationsController < ApplicationController
           datas:
             {
               message: 'Contraventions impayées, en cours',
-              code: response.code,
-              infraction: response.infraction.name
+              code: code,
+              infraction: infraction.name
             }
         }
       else
