@@ -198,8 +198,6 @@ class Api::ConvocationsController < ApplicationController
     status = "impaye"
     code = SecureRandom.hex(3)
 
-    #on verifie si le gar a deja été verbalisé
-    query = verif_contrevenant_verbalise.new(cni)
 
     #il faudra verifier si l'utilisateur et son téléphone sont authorisé et sont programmés
 
@@ -416,9 +414,30 @@ class Api::ConvocationsController < ApplicationController
   end
 
   #permet de verifier si un contrevenant a deja été verbalisé
-  def verif_contrevenant_verbalise(cni)
-    def initialize(cni)
-      @data = cni
+  def verif_contrevenant_verbalise
+    @cni = params[:cni]
+
+    #recherche contravention de la cni
+    query = Convocation.where(cni: @cni).where('created_at <= ?', created_at+3.day).where(status: 'Impayé')
+
+    #retourner le resultat
+    if query
+      render json: {
+        data: query.map do |response|
+          {
+            message: 'Contraventions impayées, en cours',
+            code: response.code,
+            infraction: response.infraction.name
+          }
+        end
+      }
+    else
+      render json:
+        {
+          message: 'aucune contravention',
+          code: nil,
+          infraction: nil
+        }
     end
 
   end

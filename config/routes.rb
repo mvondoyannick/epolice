@@ -305,6 +305,9 @@ Rails.application.routes.draw do
     #================= gestion du token ===================
     get 'epolice/verification/token/:matricule', to: 'convocations#verify_token'
 
+    #on verifie que le gar n'est pas sous une contravention
+    get 'epolice/verifications/contravention/check/:cni', to: 'convocations#verif_contrevenant_verbalise'
+
     #======================= gestion des constats =========================
     get 'epolice/constat/send/partieA/:name1/:phone1/:cni1/:immatriculation1/:marque1/:police1/partieB/:name2/:phone2/:cni2/:immatriculation2/:marque2/:police2/:typeaccident/:lieu/:agent/:comment/:latitude/:longitude', to: 'convocations#new_constat'
     #recherche du code
