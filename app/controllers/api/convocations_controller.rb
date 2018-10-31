@@ -249,13 +249,11 @@ class Api::ConvocationsController < ApplicationController
     #gestion des photos avec activeRecord
     data = params
 
-    puts "====#{data} ======="
-
 
      #@alerte = Alerte.new(agent_id: agent, type_id: type, longitude: lon.to_s, latitude: lat.to_s, description: description, ville_id: quartier, statu_id: 1, titre: Type.find(type).name)
 
     @alerte = Alerte.new(alert_params)
-    @alerte.photo.attach(alert_params[:photo]) #on persiste les données
+    #@alerte.photo.attach(alert_params[:photo]) #on persiste les données
     if @alerte.save
       render json: {
           response: 'saved'
@@ -415,29 +413,35 @@ class Api::ConvocationsController < ApplicationController
 
   #permet de verifier si un contrevenant a deja été verbalisé
   def verif_contrevenant_verbalise
-    @cni = params[:cni]
+    @cni = params[:cni].html_safe
 
     #recherche contravention de la cni
-    query = Convocation.where(cni: @cni).where('created_at <= ?', created_at+3.day).where(status: 'Impayé')
-
-    #retourner le resultat
-    if query
-      render json: {
-        data: query.map do |response|
-          {
-            message: 'Contraventions impayées, en cours',
-            code: response.code,
-            infraction: response.infraction.name
-          }
-        end
-      }
-    else
-      render json:
-        {
-          message: 'aucune contravention',
-          code: nil,
-          infraction: nil
+    @query = Convocation.where(cni: @cni).where(status: 'Impayé').last
+    if @query
+      query = @query.created_at+3.day
+      #retourner le resultat
+      if query.nil?
+        render json: {
+          datas: query.map do |response|
+            {
+              message: 'Contraventions impayées, en cours',
+              code: response.code,
+              infraction: response.infraction.name
+            }
+          end
         }
+      else
+        render json:
+         {
+             message: 'aucune contravention',
+             code: nil,
+             infraction: nil
+         }
+      end
+    else
+      render json: {
+          message: :rien
+      }
     end
 
   end
