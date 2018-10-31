@@ -39,7 +39,7 @@
               <%= alerte.titre %>
             </td>
             <td>
-              <%= alerte.description.html_safe %>
+              <%= truncate(alerte.description.html_safe, lenght: 10) %>
             </td>
             <td>
               <%= alerte.created_at %>
