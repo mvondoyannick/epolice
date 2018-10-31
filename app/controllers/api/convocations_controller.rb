@@ -420,7 +420,7 @@ class Api::ConvocationsController < ApplicationController
     if @query
       query = @query.created_at+3.day
       #retourner le resultat
-      if query.nil?
+      if query
         render json: {
           datas: query.map do |response|
             {
@@ -457,6 +457,6 @@ class Api::ConvocationsController < ApplicationController
     end
 
     def alert_params
-      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :photo, :statu_id, :titre)
+      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre)
     end
 end
