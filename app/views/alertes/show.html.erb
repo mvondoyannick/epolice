@@ -38,7 +38,13 @@
             </tr>
             <tr>
               <td>Statut</td>
-              <td class="text-right"><%= @alerte.statu.name if !@alerte.statu_id.nil? %></td>
+              <td class="text-right"><%= link_to @alerte.statu.name, nil, class: 'btn btn-sm btn-danger' if !@alerte.statu_id.nil? %></td>
+            </tr>
+            <tr>
+              <td>Partenaires concernés</td>
+              <td class="text-right">
+                <%= Type.find(@alerte.type_id).entity.inspect  %>
+              </td>
             </tr>
             </tbody>
           </table>
@@ -88,7 +94,7 @@
             </tr>
             <tr>
               <td colspan="2">
-                <%= image_tag url_for(@alerte.alertes), size: '250', class: 'img-thumbnail' if @alerte.alertes.attached?  %>
+                <%= image_tag url_for(@alerte.photo), size: '250', class: 'img-thumbnail' if @alerte.photo.attached?  %>
               </td>
             </tr>
             </tbody>

@@ -198,6 +198,9 @@ class Api::ConvocationsController < ApplicationController
     status = "impaye"
     code = SecureRandom.hex(3)
 
+    #on verifie si le gar a deja été verbalisé
+    query = verif_contrevenant_verbalise.new(cni)
+
     #il faudra verifier si l'utilisateur et son téléphone sont authorisé et sont programmés
 
     a = Convocation.new(cni: params[:cni], phone: params[:phone], infraction_id: params[:motif], pieceretenu_id: params[:pieceretenue], agent_id: params[:agent], immatriculation: params[:immatriculation], status: "impayé")
@@ -256,9 +259,13 @@ class Api::ConvocationsController < ApplicationController
     @alerte = Alerte.new(alert_params)
     @alerte.photo.attach(alert_params[:photo]) #on persiste les données
     if @alerte.save
-      puts "========= saved ======="
+      render json: {
+          response: 'saved'
+      }
     else
-      puts "==== #{@alerte.errors.messages} ====="
+      render json: {
+          status: :failed,
+          message: @alerte.errors.messages}
     end
 
     #on enregistre l'information dans la base de données
@@ -406,6 +413,14 @@ class Api::ConvocationsController < ApplicationController
           code: '404'
       }
     end
+  end
+
+  #permet de verifier si un contrevenant a deja été verbalisé
+  def verif_contrevenant_verbalise(cni)
+    def initialize(cni)
+      @data = cni
+    end
+
   end
 
 
