@@ -425,7 +425,7 @@ class Api::ConvocationsController < ApplicationController
           datas:
             {
               message: 'Contraventions impayées, en cours',
-              code: code,
+              code: token,
               infraction: infraction.name
             }
         }
