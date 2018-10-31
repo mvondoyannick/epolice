@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml___jb_tmp___" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml___jb_tmp___" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" afterDir="false" />
-    </list>
+    <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -668,7 +665,7 @@
       <workItem from="1540803063104" duration="26429000" />
       <workItem from="1540901599346" duration="3109000" />
       <workItem from="1540919040349" duration="9297000" />
-      <workItem from="1540976562631" duration="3548000" />
+      <workItem from="1540976562631" duration="3792000" />
     </task>
     <servers />
   </component>
@@ -678,11 +675,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="839541000" />
+    <option name="totallyTimeSpent" value="839785000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7567185" visible="true" weight="0.17270789" />
       <window_info id="Structure" order="1" sideWeight="0.24328147" side_tool="true" weight="0.22707888" />

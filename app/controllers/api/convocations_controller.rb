@@ -419,6 +419,6 @@ class Api::ConvocationsController < ApplicationController
     end
 
     def alert_params
-      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :photo, :region_id)
+      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :photo)
     end
 end
