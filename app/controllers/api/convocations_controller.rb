@@ -422,13 +422,12 @@ class Api::ConvocationsController < ApplicationController
       #retourner le resultat
       if query
         render json: {
-          datas: query.map do |response|
+          datas:
             {
               message: 'Contraventions impayées, en cours',
               code: response.code,
               infraction: response.infraction.name
             }
-          end
         }
       else
         render json:
