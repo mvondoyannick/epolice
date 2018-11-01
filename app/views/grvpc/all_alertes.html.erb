@@ -18,8 +18,8 @@
       </header>
       <div class="card-table">
         <div class="content">
-          <table class="table is-fullwidth is-striped" id="table">
-            <theader>
+          <table class="table table-hover table-striped" id="table">
+            <thead class="thead-dark">
               <tr height="50">
                 <td>#</td>
                 <td>Date création</td>
@@ -27,7 +27,7 @@
                 <td>Agent</td>
                 <td>Action</td>
               </tr>
-            </theader>
+            </thead>
             <tbody>
             <% @alerte.each do |a| %>
               <tr>
@@ -58,3 +58,9 @@
     </div>
   </div>
 </div>
+
+<script>
+    $(document).ready( function () {
+        $('#table').DataTable();
+    } );
+</script>
