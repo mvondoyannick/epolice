@@ -35,7 +35,7 @@
                       <%= link_to 'Detail', "/grvpc/alertes/#{a.id}/detail", class: 'dropdown-item' %>
                       <a class="dropdown-item" href="#">Commenter</a>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Supprimer</a>
+                      <a class="dropdown-item" href="#" id="delete">Supprimer</a>
                     </div>
                   </div>
                 </td>
@@ -52,5 +52,23 @@
 <script>
     $(document).ready( function () {
         $('#table').DataTable();
+        $('#delete').onclick(function(){
+            swal({
+                title: "Are you sure?",
+                text: "Once deleted, you will not be able to recover this imaginary file!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        swal("Poof! Your imaginary file has been deleted!", {
+                            icon: "success",
+                        });
+                    } else {
+                        swal("Your imaginary file is safe!");
+                    }
+                });
+        })
     } );
 </script>
