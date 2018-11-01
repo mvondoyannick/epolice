@@ -144,7 +144,7 @@
           <entry key="Gemfile" value="533" />
           <entry key="coffee" value="468" />
           <entry key="css" value="354" />
-          <entry key="erb" value="99009" />
+          <entry key="erb" value="99011" />
           <entry key="jbuilder" value="1" />
           <entry key="js" value="348" />
           <entry key="pid" value="1" />
@@ -160,7 +160,7 @@
           <entry key="CoffeeScript" value="468" />
           <entry key="JavaScript" value="348" />
           <entry key="PLAIN_TEXT" value="382" />
-          <entry key="RHTML" value="99009" />
+          <entry key="RHTML" value="99011" />
           <entry key="Ruby" value="45525" />
           <entry key="SCSS" value="202" />
           <entry key="YAML" value="145" />
@@ -263,7 +263,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="248">
-              <caret line="44" column="121" selection-start-line="44" selection-start-column="121" selection-end-line="44" selection-end-column="121" />
+              <caret line="44" column="85" selection-start-line="44" selection-start-column="85" selection-end-line="44" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -657,7 +657,7 @@
       <workItem from="1540994564238" duration="174000" />
       <workItem from="1540999833463" duration="8337000" />
       <workItem from="1541082168117" duration="94000" />
-      <workItem from="1541083610295" duration="15973000" />
+      <workItem from="1541083610295" duration="16402000" />
     </task>
     <servers />
   </component>
@@ -667,7 +667,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="863862000" />
+    <option name="totallyTimeSpent" value="864291000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="996" extended-state="6" />
@@ -686,7 +686,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3295964" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.29718006" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49840087" visible="true" weight="0.35034803" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49840087" visible="true" weight="0.2737819" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50159913" side_tool="true" weight="0.37527114" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -1118,7 +1118,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
-          <caret line="44" column="121" selection-start-line="44" selection-start-column="121" selection-end-line="44" selection-end-column="121" />
+          <caret line="44" column="85" selection-start-line="44" selection-start-column="85" selection-end-line="44" selection-end-column="85" />
         </state>
       </provider>
     </entry>
