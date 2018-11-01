@@ -1,74 +1,91 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <%= favicon_link_tag 'http://getbootstrap.com/favicon.ico' %>
+
   <title><%= full_title(yield :title)%></title>
-  <!-- Fontfaces CSS-->
-  <%= stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/font-awesome-5/css/fontawesome-all.min.css' %>
-  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/font-awesome-4.7/css/font-awesome.min.css' %>
-  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/mdi-font/css/material-design-iconic-font.min.css' %>
 
-  <!-- Vendor CSS-->
+  <!-- Bootstrap core CSS -->
+  <%= stylesheet_link_tag 'http://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css' %>
 
-  <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/css/font-face.css' %>
+  <!-- Custom styles for this template -->
+  <%= stylesheet_link_tag 'http://getbootstrap.com/docs/4.1/examples/dashboard/dashboard.css' %>
 
-
-  <!-- Main CSS-->
-  <%= javascript_include_tag 'application.js', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'main', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'https://code.jquery.com/jquery-3.3.1.slim.min.js' %>
+  <%= javascript_include_tag 'http://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js' %>
+  <%= javascript_include_tag 'http://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js' %>
+  <%= javascript_include_tag 'https://unpkg.com/feather-icons/dist/feather.min.js' %>
+  <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js' %>
 </head>
 
 <body>
-
-<div class="page-wrapper">
-  <!-- HEADER DESKTOP-->
+  <!-- navbar render here -->
   <%= render 'layouts/grvpc/menu' %>
-  <!-- END HEADER DESKTOP -->
 
+<div class="container-fluid">
+  <div class="row">
+    <!-- side bar -->
+    <%= render 'layouts/grvpc/left_menu' %>
 
-
-  <!-- PAGE CONTENT-->
-  <div class="page-container3">
-    <section class="alert-wrap p-t-70 p-b-70">
-      <div class="container">
-        <!-- ALERT-->
-        <div class="alert au-alert-success alert-dismissible fade show au-alert au-alert--70per" role="alert">
-          <i class="zmdi zmdi-check-circle"></i>
-          <span class="content">You successfully read this important alert message.</span>
-          <button class="close" type="button" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">
-                <i class="zmdi zmdi-close-circle"></i>
-            </span>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <nav aria-label="breadcrumb" style="margin-top: 20px;">
+        <ol class="breadcrumb">
+          <%= render_breadcrumbs :tag => :li, :separator => "/" %>
+        </ol>
+      </nav>
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard GRVPC</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+          </div>
+          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+            <span data-feather="calendar"></span>
+            This week
           </button>
         </div>
-        <!-- END ALERT-->
       </div>
-    </section>
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-3">
-            <!-- MENU SIDEBAR-->
-            <%= render 'layouts/grvpc/left_menu' %>
-            <!-- END MENU SIDEBAR-->
-          </div>
-          <div class="col-xl-9">
-            <!-- PAGE CONTENT-->
-            <div class="page-content">
-              <%= yield %>
-            </div>
-            <!-- END PAGE CONTENT-->
-          </div>
-        </div>
-      </div>
-    </section>
+      <%= yield %>
+    </main>
   </div>
-  <!-- END PAGE CONTENT  -->
 </div>
+<script>
+    feather.replace()
+</script>
 
+<script>
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            datasets: [{
+                data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+                lineTension: 0,
+                backgroundColor: 'transparent',
+                borderColor: '#007bff',
+                borderWidth: 4,
+                pointBackgroundColor: '#007bff'
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
+            },
+            legend: {
+                display: false,
+            }
+        }
+    });
+</script>
 </body>
-
 </html>

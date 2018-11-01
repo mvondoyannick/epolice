@@ -1,17 +1,135 @@
-<% content_for(:title, 'DASHBOARD GRVPC')%>
+  <% content_for(:title, 'DASHBOARD GRVPC')%>
 
-<div class="row">
-  <div class="col-lg-4">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Poste de police</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Acceder', nil, class: 'card-link' %>
-        <%= link_to 'Ajouter', new_postepolice_path, class: 'card-link' %>
+  <div class="row m-b-40">
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Alertes</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <div class="card-footer text-muted">
+          <%= link_to 'Acceder', grvpc_all_alertes_path, class: 'card-link' %>
+          <%= link_to 'Nouvelle Alerte', new_alerte_path, class: 'card-link' %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Constats circulation</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <div class="card-footer text-muted">
+          <%= link_to 'Acceder', grvpc_all_constats_path, class: 'card-link' %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Contravention</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <div class="card-footer text-muted">
+          <%= link_to 'Acceder', grvpc_all_contraventions_path, class: 'card-link' %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Commissariats</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <div class="card-footer text-muted">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<%= render partial: "postepolices/form", layout: "grvpc/menu" %>
+  <br>
+  <br>
+  <div class="row m-b-40">
+    <div class="col-sm">
+      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+    </div>
+    <div class="col-sm">
+      <%= map(:center => {
+          :latlng => [4.0254, 9.2541],
+          :zoom => 18
+      },
+          :markers => [
+            {
+                :latlng => [4.0254, 9.2541],
+            }
+          ]
+        )
+      %>
+    </div>
+  </div>
+  <br>
+  <br>
+  <h2 class="m-b-40">Informations generales</h2>
+  <br>
+  <div class="row">
+    <div class="col-sm">
+      <h4>Alertes (10)</h4>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Date</th>
+            <th>Titre</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+            <% @alerte.each do |alerte| %>
+              <tr>
+                <td><i class="fa fa-bell"></i></td>
+                <td><%= alerte.created_at %></td>
+                <td><%= alerte.titre %></td>
+                <td>
+                  <%= link_to 'Voir', grvpc_alertes_detail_path(index: alerte.id), class: 'btn btn-sm btn-danger' %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-sm">
+      <h4>Constats (10)</h4>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Titre</th>
+            <th>description</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @constat.each do |constat| %>
+            <tr>
+              <td>*</td>
+              <td><%= constat.typeaccident.name if !constat.typeaccident_id.nil? %>></td>
+              <td><%= constat.comment %></td>
+              <td>
+                <%= link_to 'Voir', nil, class: 'btn btn-sm btn-danger' %>
+              </td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

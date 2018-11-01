@@ -69,7 +69,7 @@ Rails.application.routes.draw do
   get 'grvpc/all/alertes', to: 'grvpc#all_alertes'
   get 'grvpc/alertes/today', to: 'grvpc#alerte_today'
   get 'grvpc/alertes/week', to: 'grvpc#alerte_week'
-  get 'grvpc/alertes/:index/detail', to: 'grvpc#detail_alerte'
+  get 'grvpc/alertes/detail', to: 'grvpc#detail_alerte'
   get 'grvpc/alertes/resolue/all', to: 'grvpc#alerte_resolue'
   get 'grvpc/alertes/not/resolue/all', to: 'grvpc#alerte_not_resolue'
   get 'grvpc/transmission/documents', to: 'grvpc#transmission_document'

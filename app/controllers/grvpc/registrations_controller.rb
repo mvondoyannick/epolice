@@ -4,6 +4,10 @@ class Grvpc::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: [:create]
   before_action :configure_account_update_params, only: [:update]
 
+  add_breadcrumb "Dashboard", :grvpc_index_path
+
+  layout 'grvpc/grvpc', except: [:new, :create]
+
   # GET /resource/sign_up
   def new
     super
@@ -17,6 +21,7 @@ class Grvpc::RegistrationsController < Devise::RegistrationsController
   # GET /resource/edit
   def edit
     super
+    add_breadcrumb "Edit account", edit_grvpc_registration_path
   end
 
   # PUT /resource
