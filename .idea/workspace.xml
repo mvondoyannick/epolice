@@ -144,7 +144,7 @@
           <entry key="Gemfile" value="533" />
           <entry key="coffee" value="468" />
           <entry key="css" value="354" />
-          <entry key="erb" value="98225" />
+          <entry key="erb" value="98242" />
           <entry key="jbuilder" value="1" />
           <entry key="js" value="348" />
           <entry key="pid" value="1" />
@@ -160,7 +160,7 @@
           <entry key="CoffeeScript" value="468" />
           <entry key="JavaScript" value="348" />
           <entry key="PLAIN_TEXT" value="382" />
-          <entry key="RHTML" value="98225" />
+          <entry key="RHTML" value="98242" />
           <entry key="Ruby" value="45271" />
           <entry key="SCSS" value="202" />
           <entry key="YAML" value="145" />
@@ -225,8 +225,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/grvpc/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="95" column="42" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
+            <state relative-caret-position="228">
+              <caret line="83" column="53" selection-start-line="83" selection-start-column="53" selection-end-line="83" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -647,7 +647,7 @@
       <workItem from="1540994564238" duration="174000" />
       <workItem from="1540999833463" duration="8337000" />
       <workItem from="1541082168117" duration="94000" />
-      <workItem from="1541083610295" duration="11153000" />
+      <workItem from="1541083610295" duration="11321000" />
     </task>
     <servers />
   </component>
@@ -657,7 +657,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="859042000" />
+    <option name="totallyTimeSpent" value="859210000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="996" extended-state="6" />
@@ -1099,8 +1099,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/grvpc/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="95" column="42" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
+        <state relative-caret-position="228">
+          <caret line="83" column="53" selection-start-line="83" selection-start-column="53" selection-end-line="83" selection-end-column="53" />
         </state>
       </provider>
     </entry>
