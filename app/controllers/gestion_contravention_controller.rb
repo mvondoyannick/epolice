@@ -50,6 +50,5 @@ class GestionContraventionController < ApplicationController
       end
     end
 
-
   end
 end

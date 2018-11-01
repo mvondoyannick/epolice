@@ -16,11 +16,13 @@
   <!-- Custom styles for this template -->
   <%= stylesheet_link_tag 'http://getbootstrap.com/docs/4.1/examples/dashboard/dashboard.css' %>
   <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css' %>
+  <%= stylesheet_link_tag 'https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css' %>
+
 
   <%= javascript_include_tag 'https://code.jquery.com/jquery-3.3.1.slim.min.js' %>
   <%= javascript_include_tag 'http://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js' %>
   <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js' %>
-
+  <%= javascript_include_tag 'https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js' %>
   <%= javascript_include_tag 'http://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js' %>
   <%= javascript_include_tag 'https://unpkg.com/feather-icons/dist/feather.min.js' %>
   <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js' %>
@@ -96,5 +98,11 @@
         }
     });
 </script>
+  <script>
+      $(document).ready( function () {
+          $('#table').DataTable();
+          $('#table-constat').DataTable();
+      } );
+  </script>
 </body>
 </html>

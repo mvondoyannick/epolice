@@ -14,11 +14,13 @@
 
   <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/css/font-face.css' %>
   <%= stylesheet_link_tag 'https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css' %>
+  <%= stylesheet_link_tag 'https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css' %>
 
 
   <!-- Main CSS-->
   <%= javascript_include_tag 'application.js', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'main', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js' %>
 </head>
 <body>
 <div class="page-wrapper">
@@ -287,4 +289,9 @@
 </div>
 
 </body>
+<script>
+    $(document).ready( function () {
+        $('#table').DataTable();
+    } );
+</script>
 </html>
