@@ -66,6 +66,7 @@ Rails.application.routes.draw do
   get 'metropolis/comptable/index', to: 'metropoli#comptable'
   get 'member/index'
   get 'grvpc/index'
+  get 'grvpc/detail_constat'
   get 'grvpc/all/alertes', to: 'grvpc#all_alertes'
   get 'grvpc/alertes/today', to: 'grvpc#alerte_today'
   get 'grvpc/alertes/week', to: 'grvpc#alerte_week'

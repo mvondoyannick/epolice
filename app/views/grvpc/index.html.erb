@@ -1,7 +1,7 @@
   <% content_for(:title, 'DASHBOARD GRVPC')%>
 
   <div class="row m-b-40">
-    <div class="col-sm">
+    <div class="col-sm-3">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Alertes</h5>
@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-    <div class="col-sm">
+    <div class="col-sm-3">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Constats circulation</h5>
@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <div class="col-sm">
+    <div class="col-sm-3">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Contravention</h5>
@@ -38,7 +38,46 @@
         </div>
       </div>
     </div>
-    <div class="col-sm">
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Commissariats</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <div class="card-footer text-muted">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Agents</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <div class="card-footer text-muted">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Commissariats</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <div class="card-footer text-muted">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Commissariats</h5>
@@ -124,7 +163,7 @@
               <td><%= constat.typeaccident.name if !constat.typeaccident_id.nil? %>></td>
               <td><%= constat.comment %></td>
               <td>
-                <%= link_to 'Voir', nil, class: 'btn btn-sm btn-danger' %>
+                <%= link_to 'Voir', grvpc_detail_constat_path(index: constat.id), class: 'btn btn-sm btn-danger' %>
               </td>
             </tr>
           <% end %>

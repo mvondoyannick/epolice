@@ -28,7 +28,7 @@ class GrvpcController < ApplicationController
   def detail_alerte
     index = params[:index]
     @alerte = Alerte.find(index)
-    add_breadcrumb "Detail #{@alerte.titre}", grvpc_alertes_detail_path
+    add_breadcrumb "détail de : #{@alerte.titre}", grvpc_alertes_detail_path
   end
 
   def alerte_resolue
@@ -46,9 +46,18 @@ class GrvpcController < ApplicationController
 
   def all_constats
     @constat = Constat.order(created_at: :desc)
+    add_breadcrumb "tous les constats", grvpc_all_constats_path
   end
 
   def transmission_document
     @agent = Agent.order(created_at: :desc)
+  end
+
+  def detail_constat
+    #retourn le detail des constats
+    index = params[:index]
+
+    @constat = Constat.find(index)
+    add_breadcrumb "detail #{@constat.typeaccident.name}", grvpc_detail_constat_path
   end
 end
