@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/gestion_contravention_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/gestion_contravention_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gestion_alerte/all.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestion_alerte/all.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gestion_contravention/all.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gestion_contravention/all.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/grvpc/all_constats.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/grvpc/all_constats.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/grvpc/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/grvpc/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/grvpc/grvpc.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/grvpc/grvpc.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -107,7 +101,7 @@
           <entry key="convocations" value="1" />
           <entry key="css" value="11" />
           <entry key="dot" value="1" />
-          <entry key="erb" value="816" />
+          <entry key="erb" value="817" />
           <entry key="html" value="12" />
           <entry key="infractions" value="1" />
           <entry key="jbuilder" value="1" />
@@ -137,7 +131,7 @@
           <entry key="Image" value="2" />
           <entry key="JavaScript" value="26" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="RHTML" value="816" />
+          <entry key="RHTML" value="817" />
           <entry key="RNG Compact" value="1" />
           <entry key="Ruby" value="677" />
           <entry key="SCSS" value="13" />
@@ -150,7 +144,7 @@
           <entry key="Gemfile" value="533" />
           <entry key="coffee" value="468" />
           <entry key="css" value="354" />
-          <entry key="erb" value="98915" />
+          <entry key="erb" value="98995" />
           <entry key="jbuilder" value="1" />
           <entry key="js" value="348" />
           <entry key="pid" value="1" />
@@ -166,7 +160,7 @@
           <entry key="CoffeeScript" value="468" />
           <entry key="JavaScript" value="348" />
           <entry key="PLAIN_TEXT" value="382" />
-          <entry key="RHTML" value="98915" />
+          <entry key="RHTML" value="98995" />
           <entry key="Ruby" value="45525" />
           <entry key="SCSS" value="202" />
           <entry key="YAML" value="145" />
@@ -256,7 +250,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/gestion_contravention/all.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
@@ -265,11 +259,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/grvpc/index.html.erb">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="149" column="32" selection-start-line="149" selection-start-column="32" selection-end-line="149" selection-end-column="32" />
+            <state relative-caret-position="270">
+              <caret line="45" column="65" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -360,7 +354,6 @@
         <option value="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/template/grvpc/index.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/grvpc/sessions_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/grvpc/registrations_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/grvpc/registrations/edit.html.erb" />
@@ -377,6 +370,7 @@
         <option value="$PROJECT_DIR$/app/views/gestion_alerte/all.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/gestion_contravention_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/gestion_contravention/all.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb" />
       </list>
     </option>
   </component>
@@ -663,7 +657,7 @@
       <workItem from="1540994564238" duration="174000" />
       <workItem from="1540999833463" duration="8337000" />
       <workItem from="1541082168117" duration="94000" />
-      <workItem from="1541083610295" duration="15405000" />
+      <workItem from="1541083610295" duration="15795000" />
     </task>
     <servers />
   </component>
@@ -673,7 +667,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="863294000" />
+    <option name="totallyTimeSpent" value="863684000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="996" extended-state="6" />
@@ -692,7 +686,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3295964" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.29718006" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49840087" visible="true" weight="0.10208817" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49840087" visible="true" weight="0.35034803" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50159913" side_tool="true" weight="0.37527114" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -953,13 +947,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/access/application.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="56" selection-start-column="56" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -1125,6 +1112,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="45" column="65" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
         </state>
       </provider>
     </entry>

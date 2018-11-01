@@ -24,7 +24,6 @@
                 <td>#</td>
                 <td>Date création</td>
                 <td>Titre</td>
-                <td>Ville</td>
                 <td>Agent</td>
                 <td>Action</td>
               </tr>
@@ -35,10 +34,20 @@
                 <td width="5%"><i class="fa fa-bell-o"></i></td>
                 <td><%= a.created_at %></td>
                 <td><%= a.titre %></td>
-                <td><%= a.region.name if !a.region_id.nil? %></td>
                 <td><%= a.agent.name %>&nbsp,<%= a.agent.prenom %></td>
                 <td>
-                  <%= link_to 'Action', "/grvpc/alertes/#{a.id}/detail", class: 'button is-small is-link is-outlined' %>
+                  <div class="dropdown show">
+                    <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Actions
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <%= link_to 'Detail', "/grvpc/alertes/#{a.id}/detail", class: 'btn btn-sm btn-primary' %>
+                      <a class="dropdown-item" href="#">Commenter</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Supprimer</a>
+                    </div>
+                  </div>
                 </td>
               </tr>
             <% end %>
