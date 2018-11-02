@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_31_092756) do
+ActiveRecord::Schema.define(version: 2018_11_02_120355) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -196,6 +196,16 @@ ActiveRecord::Schema.define(version: 2018_10_31_092756) do
     t.string "email"
     t.string "localisation"
     t.index ["region_id"], name: "index_centrerecouvrements_on_region_id"
+  end
+
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.bigint "alerte_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "publisher"
+    t.index ["alerte_id"], name: "index_comments_on_alerte_id"
   end
 
   create_table "commissariats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -587,6 +597,7 @@ ActiveRecord::Schema.define(version: 2018_10_31_092756) do
   add_foreign_key "centrepartenaires", "regions"
   add_foreign_key "centrepartenaires", "structures"
   add_foreign_key "centrerecouvrements", "regions"
+  add_foreign_key "comments", "alertes"
   add_foreign_key "commissariats", "agents"
   add_foreign_key "commissariats", "arrondissements"
   add_foreign_key "commissariats", "departements"

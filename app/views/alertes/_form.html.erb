@@ -7,12 +7,10 @@
     <%= f.input :titre, label_html: {class: 'label is-3', style: 'margin-bottom: 20px; margin-top: 100px;'}, input_html: {class: 'input is-large'} %>
     <%= f.input :description, as: :text, placeholder: "Decrivez l'alerte ici", label_html: {class: 'label is-3', style: 'margin-bottom: 20px; margin-top: 30px;'}, input_html: {class: 'input is-large'} %>
     <%= f.input :date, placeholder: "#{Date.today}", readonly: true, label_html: {class: 'label is-3', style: 'margin-bottom: 20px; margin-top: 30px;'}, input_html: {value: "#{Time.now}", class: 'input is-large'} %>
-    <%= f.association :ville, prompt: "Selectionner une ville" %>
     <%= f.input :lieu, label: "Decrire le lieu", as: :text, label_html: {class: 'label is-3', style: 'margin-bottom: 20px; margin-top: 70px;'}, input_html: {class: 'input is-large'} %>
     <%= f.input :action, label: "Action opérée pour la resolution de l'alerte", placeholder: "Qu'avez vous fait pour solutionner cette alert?", as: :text, label_html: {class: 'label is-3', style: 'margin-bottom: 20px; margin-top: 30px;'}, input_html: {class: 'input is-large'} %>
     <%= f.association :agent, prompt: "Selectionner un agent", label_html: {class: 'label is-3', style: 'margin-bottom: 20px;'}, input_html: {class: 'input is-large'} %>
     <%= f.input :status, label: "Statut de cette alerte", label_html: {class: 'label is-3', style: 'margin-bottom: 20px; margin-top: 100px;'}, input_html: {class: 'input is-large', style: 'margin-bottom: 25px;'} %>
-    <%= f.input :alertes, input_html: {class: 'input is-large', style: 'margin-bottom: 25px;'}, label_html: {class: 'label is-3', style: 'margin-right: 50px;'} %>
     <%= f.input :longitude, placeholder: "entrer la longitude", input_html: {class: 'input is-large', style: 'margin-bottom: 25px;'}, label_html: {class: 'label is-3', style: ''} %>
     <%= f.input :latitude, placeholder: "Entrer la latitude", input_html: {class: 'input is-large', style: 'margin-bottom: 25px;'}, label_html: {class: 'label is-3', style: ''} %>
   </div>

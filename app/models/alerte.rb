@@ -4,6 +4,7 @@ class Alerte < ApplicationRecord
   belongs_to :type
   belongs_to :agent
   belongs_to :statu
+  has_many :comment
   #validates_presence_of :titre, presence: true
   validates_presence_of :description, presence: true
   validates_presence_of :longitude, presence: true

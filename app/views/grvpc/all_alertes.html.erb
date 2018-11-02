@@ -29,7 +29,8 @@
               </a>
 
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <%= link_to 'Detail', "/grvpc/alertes/#{a.id}/detail", class: 'dropdown-item' %>
+                <%= link_to 'Detail', grvpc_alertes_detail_path(index: a.id), class: 'dropdown-item' %>
+                <%= link_to 'Commenter', new_comment_path, class: 'dropdown-item' %>
                 <a class="dropdown-item" href="#">Commenter</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" id="delete">Supprimer</a>

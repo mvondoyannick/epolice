@@ -1,0 +1,31 @@
+<h1>Comments</h1>
+
+<table class="responsive nowrap table table-hover" id="dttb-comments" data-sort="true" data-source="<%= url_for(format: :json)%>">
+  <thead class="thead-dark">
+    <tr>
+      <th data-data="title">Title</th>
+      <th data-data="content">Content</th>
+      <th data-data="alerte">Alerte</th>
+      <th data-data="url" data-orderable="false" data-class-name="all" data-searchable="false" class="skip-export" colspan="3" width="100px"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.title %></td>
+        <td><%= comment.content %></td>
+        <td><%= comment.alerte.titre %></td>
+        <td>
+          <%= link_to 'Voir', comment_path(comment) %>
+          <%= link_to 'Voir', comment_path(comment) %>
+          <%= link_to 'Supprimer', comment_path(comment) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<br>
+
+<%= link_to 'New Comment', new_comment_path, class: 'btn btn-sm btn-primary' %>

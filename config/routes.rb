@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   resources :bulletins
   resources :centrepartenaires
   resources :structures
@@ -235,7 +236,9 @@ Rails.application.routes.draw do
   get 'affectations/agent/home', to: 'affectations#home'
   resources :statuses
   resources :types
-  resources :alertes
+  resources :alertes do
+    resources :comments
+  end
   resources :commissariats
   resources :villes
   resources :infractions
