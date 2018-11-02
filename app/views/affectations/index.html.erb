@@ -27,7 +27,13 @@
           <td><%= affectations.commissariat.name if !affectations.commissariat_id.nil? %></td>
           <td><%= affectations.postepolice.name if !affectations.postepolice_id.nil? %></td>
           <td><%= affectations.debut %></td>
-          <td><%= affectations.fin %></td>
+          <td>
+            <% if affectations.fin > DateTime.today %>
+              <%= link_to affectations.fin, nil, class: 'btn btn-sm btn-primary' %>
+            <% else %>
+              <%= affectations.fin %>
+            <% end %>
+          </td>
           <td><%= link_to 'Show', affectations %></td>
           <td><%= link_to 'Edit', edit_affectation_path(affectations) %></td>
           <td><%= link_to 'Destroy', affectations, method: :delete, data: { confirm: 'Are you sure?' } %></td>

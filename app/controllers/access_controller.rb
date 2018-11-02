@@ -372,6 +372,16 @@ class AccessController < ApplicationController
     end
   end
 
+  #liste de tous les GRVPC
+  def grvpc_show
+    @grvpc = Grvpc.order(email: :asc)
+  end
+
+  #Ajout d'un nouveau compte GRVPC
+  def grvpc_new
+    @data = Grvpc.new(grvpc_params)
+  end
+
   #ajout du personnel de metropolis
   def metropolis_show
     @user = Metropoli.all
@@ -393,6 +403,10 @@ class AccessController < ApplicationController
 
   def admin_params
     params.permit(:name, :prenom, :email, :password, :password_confirmation, :role_id)
+  end
+
+  def grvpc_params
+    params.permit(:email, )
   end
 
 
