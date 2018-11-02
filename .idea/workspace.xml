@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/grvpc/detail_alerte.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/grvpc/detail_alerte.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -198,11 +198,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/grvpc/detail_alerte.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="19" column="90" selection-start-line="19" selection-start-column="90" selection-end-line="19" selection-end-column="90" />
+            <state relative-caret-position="544">
+              <caret line="61" column="6" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
               <folding>
                 <element signature="e#60#88#0#HTML" expanded="true" />
                 <element signature="e#132#138#0#HTML" expanded="true" />
@@ -259,14 +259,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
+            <state relative-caret-position="616">
               <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
-              <folding>
-                <element signature="n#table#0;n#div#0;n#div#1;n#!!top" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -364,7 +361,6 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/grvpc/detail_constat.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/grvpc_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/grvpc/detail_alerte.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/grvpc/_menu.html.erb" />
         <option value="$PROJECT_DIR$/app/views/grvpc/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/grvpc/all_constats.html.erb" />
@@ -374,6 +370,7 @@
         <option value="$PROJECT_DIR$/app/views/gestion_contravention/all.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/grvpc/grvpc.html.erb" />
         <option value="$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/grvpc/detail_alerte.html.erb" />
       </list>
     </option>
   </component>
@@ -660,7 +657,7 @@
       <workItem from="1540994564238" duration="174000" />
       <workItem from="1540999833463" duration="8337000" />
       <workItem from="1541082168117" duration="94000" />
-      <workItem from="1541083610295" duration="18516000" />
+      <workItem from="1541083610295" duration="18868000" />
     </task>
     <servers />
   </component>
@@ -670,7 +667,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="866405000" />
+    <option name="totallyTimeSpent" value="866757000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="996" extended-state="6" />
@@ -689,7 +686,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3295964" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.29718006" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49840087" visible="true" weight="0.24013922" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49840087" visible="true" weight="0.1600928" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50159913" side_tool="true" weight="0.37527114" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
@@ -1040,17 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/grvpc/detail_alerte.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="19" column="90" selection-start-line="19" selection-start-column="90" selection-end-line="19" selection-end-column="90" />
-          <folding>
-            <element signature="e#60#88#0#HTML" expanded="true" />
-            <element signature="e#132#138#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/grvpc/detail_constat.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1120,10 +1106,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
+        <state relative-caret-position="616">
           <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/grvpc/detail_alerte.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="61" column="6" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
           <folding>
-            <element signature="n#table#0;n#div#0;n#div#1;n#!!top" />
+            <element signature="e#60#88#0#HTML" expanded="true" />
+            <element signature="e#132#138#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

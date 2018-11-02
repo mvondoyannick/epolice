@@ -60,15 +60,3 @@
     </div>
   </div>
 </div>
-<%= map(:center => {
-    :latlng => [@alerte.latitude, @alerte.longitude],
-    :zoom => 15
-},
-        :markers => [
-            {
-                :latlng => [@alerte.latitude, @alerte.longitude],
-                :popup => @alerte.description
-            }
-        ]
-    )
-%>
