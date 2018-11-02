@@ -13,11 +13,51 @@
       <div class="card-body card-block">
           <div class="form-group">
             <label for="nf-email" class=" form-control-label">Date creation</label>
-            <input type="text" readonly value="<%= @alerte.created_at %>" class="form-control">
+            <p class="lead">
+              <%= @alerte.created_at %>
+            </p>
           </div>
           <div class="form-group">
             <label for="nf-password" class=" form-control-label">Titre</label>
-            <input type="text" class="form-control" value="<%= @alerte.titre %>" readonly>
+            <p class="lead">
+              <%= @alerte.titre %>
+            </p>
+          </div>
+          <div class="form-group">
+            <label for="nf-password" class=" form-control-label">Description</label>
+            <p class="lead">
+              <%= @alerte.description %>
+            </p>
+          </div>
+          <div class="form-group">
+            <label for="nf-password" class=" form-control-label">Région</label>
+            <p class="lead">
+              <%= @alerte.region.name || 'Inconnue' if !@alerte.region_id.nil? %>
+            </p>
+          </div>
+          <div class="form-group">
+            <label for="nf-password" class=" form-control-label">Coordonnées</label>
+            <p class="lead">
+              <%= @alerte.longitude %>
+            </p>
+          </div>
+          <div class="form-group">
+            <label for="nf-password" class=" form-control-label">statut</label>
+            <p class="lead">
+              <%= @alerte.statu.name %>
+            </p>
+          </div>
+          <div class="form-group">
+            <label for="nf-password" class=" form-control-label">Partenaires</label>
+            <p class="lead">
+              <%= @alerte.type.entity %>
+            </p>
+          </div>
+          <div class="form-group">
+            <label for="nf-password" class=" form-control-label">Agent emeteur</label>
+            <p class="lead">
+              <%= link_to @alerte.agent.complete_name, agent_path(@alerte.agent_id) %>
+            </p>
           </div>
       </div>
       <div class="card-footer">

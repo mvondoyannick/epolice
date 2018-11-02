@@ -19,9 +19,9 @@
           Applications
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Alertes</a>
-          <a class="dropdown-item" href="#">Constats</a>
-          <a class="dropdown-item" href="#">Convocations</a>
+          <%= link_to 'Alertes', grvpc_all_alertes_path, class: 'dropdown-item' %>
+          <%= link_to 'Constats', grvpc_all_constats_path, class: 'dropdown-item' %>
+          <%= link_to 'Contraventions', grvpc_all_contraventions_path, class: 'dropdown-item' %>
         </div>
       </li>
       <li class="nav-item dropdown">

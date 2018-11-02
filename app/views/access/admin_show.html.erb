@@ -16,23 +16,25 @@
       <table class="table table-borderless table-striped table-earning">
         <thead>
         <tr>
-          <th>Photo</th>
           <th>Email</th>
           <th>Date ajout</th>
-          <th>Date de mise à jour</th>
           <th>Role</th>
           <th>Téléphone</th>
+          <th colspan="3">Action</th>
         </tr>
         </thead>
         <tbody>
         <% @user.each do |user| %>
           <tr>
-            <th><%= image_tag(user.avatar) if user.avatar.attached? %></th>
             <td><%= user.email %></td>
             <td><%= user.created_at %></td>
-            <td><%= user.updated_at %></td>
             <td><%= user.role.name %></td>
             <td><%= user.phone %></td>
+            <td>
+              <%= link_to 'Bloquer', nil, class: 'btn btn-sm btn-primary' %>
+              <%= link_to 'Editer', nil, class: 'btn btn-sm btn-primary' %>
+              <%= link_to 'Supprimer', nil, class: 'btn btn-sm btn-danger' %>
+            </td>
           </tr>
         <% end %>
         </tbody>
@@ -54,33 +56,33 @@
       <div class="card-body card-block">
         <div class="form-group">
           <label for="company" class=" form-control-label">Nom</label>
-          <input type="text" id="company" placeholder="Enter your company name" class="form-control">
-          <%= text_field_tag :name, nil, class: 'form-control' %>
+          <%= text_field_tag :name, nil, class: 'form-control', placeholder: 'Nom' %>
         </div>
         <div class="form-group">
           <label for="vat" class=" form-control-label">Prenom</label>
-          <input type="text" id="vat" placeholder="DE1234567890" class="form-control">
+          <%= text_field_tag :prenom, nil, class: 'form-control', placeholder: 'Prénom' %>
+        </div>
+        <div class="form-group">
+          <label for="vat" class=" form-control-label">Numéro de téléphone</label>
+          <%= telephone_field_tag :phone, nil, class: 'form-control', placeholder: 'Prénom' %>
         </div>
         <div class="form-group">
           <label for="street" class=" form-control-label">adresse email</label>
-          <input type="text" id="street" placeholder="Enter street name" class="form-control">
-        </div>
-        <div class="row form-group">
-          <div class="col-8">
-            <div class="form-group">
-              <label for="city" class=" form-control-label">Mot de passe</label>
-              <input type="text" id="city" placeholder="Enter your city" class="form-control">
-            </div>
-          </div>
-          <div class="col-8">
-            <div class="form-group">
-              <label for="postal-code" class=" form-control-label">Confirmer mot de passe</label>
-              <input type="text" id="postal-code" placeholder="Postal Code" class="form-control">
-            </div>
-          </div>
+          <%= email_field_tag :email, nil, class: 'form-control', placeholder: 'Adresse email' %>
         </div>
         <div class="form-group">
-          <label for="country" class=" form-control-label">Role</label>
+          <label for="street" class=" form-control-label">Mot de passe</label>
+          <%= password_field_tag :password, nil, class: 'form-control', placeholder: 'Mot de passe' %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Confirmer mot de passe</label>
+          <%= password_field_tag :password_confirmation, nil, class: 'form-control', placeholder: 'Confirmer le mot de passe' %>
+        </div>
+        <div class="form-group">
+          <div class="form-group">
+            <label for="street" class=" form-control-label">role</label>
+            <%= select_tag :role_id, options_from_collection_for_select(Role.all, 'id', 'name') , class: 'form-control', prompt: 'Selectionner un role', include_blank: false %>
+          </div>
         </div>
       </div>
     </div>

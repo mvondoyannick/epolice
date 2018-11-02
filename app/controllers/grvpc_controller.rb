@@ -1,5 +1,5 @@
 class GrvpcController < ApplicationController
-  #before_action :authenticate_grvpc!, only: [:index]
+  before_action :authenticate_grvpc!, only: [:index]
   add_breadcrumb "Dashboard", :grvpc_index_path
   layout 'grvpc/grvpc'
 

@@ -1,7 +1,9 @@
 class AccessController < ApplicationController
   #on verifie si l'utilisateur est connecter avant de donner acces aux ressource
   #before_action :confirm_logged_in, only: [:login, :attemp_login, :admin, :logout]
+  skip_before_action :verify_authenticity_token, only: [:admin_new]
   before_action :authenticate_admin!, except: [:login, :serviceShow]
+  HTTParty::Basement.default_options.update(verify: false)
 
 
   def index
@@ -357,7 +359,17 @@ class AccessController < ApplicationController
   end
 
   def admin_new
+    @data = Admin.new(admin_params)
+    puts @data
 
+    if @data.save
+      #on envoi le sms
+      message = "Mr/Mme #{@data.name} vous avez un compte sur la plateforme. EPOLICE"
+      HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{@data.phone}&message=#{message}")
+      redirect_to action: :admin_show
+    else
+      render :admin_show
+    end
   end
 
   #ajout du personnel de metropolis
@@ -375,6 +387,12 @@ class AccessController < ApplicationController
   #pour la gestion de l'aide sur l'application
   def yelp
     render layout: 'fylo'
+  end
+
+  private
+
+  def admin_params
+    params.permit(:name, :prenom, :email, :password, :password_confirmation, :role_id)
   end
 
 
