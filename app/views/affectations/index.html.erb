@@ -28,7 +28,7 @@
           <td><%= affectations.postepolice.name if !affectations.postepolice_id.nil? %></td>
           <td><%= affectations.debut %></td>
           <td>
-            <% if affectations.fin > Date.today %>
+            <% if affectations.fin.to_date > Date.today %>
               <%= link_to affectations.fin, nil, class: 'btn btn-sm btn-primary' %>
             <% else %>
               <%= affectations.fin %>
