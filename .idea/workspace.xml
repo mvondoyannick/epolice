@@ -144,7 +144,7 @@
           <entry key="Gemfile" value="533" />
           <entry key="coffee" value="468" />
           <entry key="css" value="354" />
-          <entry key="erb" value="99085" />
+          <entry key="erb" value="99112" />
           <entry key="jbuilder" value="1" />
           <entry key="js" value="348" />
           <entry key="pid" value="1" />
@@ -160,7 +160,7 @@
           <entry key="CoffeeScript" value="468" />
           <entry key="JavaScript" value="348" />
           <entry key="PLAIN_TEXT" value="382" />
-          <entry key="RHTML" value="99085" />
+          <entry key="RHTML" value="99112" />
           <entry key="Ruby" value="45525" />
           <entry key="SCSS" value="202" />
           <entry key="YAML" value="145" />
@@ -262,8 +262,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+            <state relative-caret-position="154">
+              <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+              <folding>
+                <element signature="n#table#0;n#div#0;n#div#1;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -657,7 +660,7 @@
       <workItem from="1540994564238" duration="174000" />
       <workItem from="1540999833463" duration="8337000" />
       <workItem from="1541082168117" duration="94000" />
-      <workItem from="1541083610295" duration="17811000" />
+      <workItem from="1541083610295" duration="18516000" />
     </task>
     <servers />
   </component>
@@ -667,7 +670,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="865700000" />
+    <option name="totallyTimeSpent" value="866405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="996" extended-state="6" />
@@ -1117,8 +1120,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+        <state relative-caret-position="154">
+          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+          <folding>
+            <element signature="n#table#0;n#div#0;n#div#1;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

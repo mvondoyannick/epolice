@@ -3,49 +3,43 @@
   Liste de toutes les alertes
 </div>
 <br>
-<div class="columns">
-  <div class="column is-12">
-    <div class="card">
-      <div class="card-table">
-        <div class="content">
-          <table class="table table-hover table-striped" id="table">
-            <thead class="thead-dark">
-              <tr height="50">
-                <td>#</td>
-                <td>Date création</td>
-                <td>Titre</td>
-                <td>Agent</td>
-                <td>Action</td>
-              </tr>
-            </thead>
-            <tbody>
-            <% @alerte.each do |a| %>
-              <tr>
-                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                <td><%= a.created_at %></td>
-                <td><%= a.titre %></td>
-                <td><%= a.agent.name %>&nbsp,<%= a.agent.prenom %></td>
-                <td>
-                  <div class="dropdown show">
-                    <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Actions
-                    </a>
+<div class="row">
+  <div class="col-sm">
+    <table class="table table-hover table-striped" id="table">
+      <thead class="thead-dark">
+      <tr height="50">
+        <td>#</td>
+        <td>Date création</td>
+        <td>Titre</td>
+        <td>Agent</td>
+        <td>Action</td>
+      </tr>
+      </thead>
+      <tbody>
+      <% @alerte.each do |a| %>
+        <tr>
+          <td width="5%"><i class="fa fa-bell-o"></i></td>
+          <td><%= a.created_at %></td>
+          <td><%= a.titre %></td>
+          <td><%= a.agent.name %>&nbsp,<%= a.agent.prenom %></td>
+          <td>
+            <div class="dropdown show">
+              <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Actions
+              </a>
 
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <%= link_to 'Detail', "/grvpc/alertes/#{a.id}/detail", class: 'dropdown-item' %>
-                      <a class="dropdown-item" href="#">Commenter</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#" id="delete">Supprimer</a>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            <% end %>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <%= link_to 'Detail', "/grvpc/alertes/#{a.id}/detail", class: 'dropdown-item' %>
+                <a class="dropdown-item" href="#">Commenter</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" id="delete">Supprimer</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
   </div>
 </div>
 
