@@ -29,8 +29,8 @@
           Bulletin de patrouille
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Liste</a>
-          <a class="dropdown-item" href="#">Nouveau</a>
+          <%= link_to 'Liste', affectations_path, class: 'dropdown-item' %>
+          <%= link_to 'Nouveau', new_affectation_path, class: 'dropdown-item' %>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
@@ -39,6 +39,9 @@
         <a class="nav-link" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vous avez 04 notification(s) en attente." title="Notifications e-Police">
           Notifications <span class="badge badge-light">4</span>
         </a>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Archivage & transmission', archive_index_path, class: 'nav-link' %>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

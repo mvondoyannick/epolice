@@ -3,12 +3,14 @@ class ArchiveController < ApplicationController
   require 'httparty'
   require 'rqrcode'
   HTTParty::Basement.default_options.update(verify: false)
+  add_breadcrumb "Dashboard", :grvpc_index_path
 
-  layout 'fylo', except: [:send_document]
+  layout 'grvpc/grvpc', except: [:send_document]
 
   def index
     #agent ayant le meme commissariat
     @agent = Agent.order(created_at: :asc).all
+    add_breadcrumb "Acceuil", archive_index_path
   end
 
   def get_contravention_from_agent
@@ -16,6 +18,7 @@ class ArchiveController < ApplicationController
     @archive = Convocation.new
     #@affectation = Affectation.where(agent_id: current_agent).where('fin >= ?', Date.today)
     @query = Convocation.where(agent_id: current_agent).order(created_at: :desc).where(created_at: Date.today.beginning_of_year..Date.today.end_of_year).where('pieceretenu_id > 0')
+    add_breadcrumb "liste contravention", nil
   end
 
   #permet de confirmer la reception du document recu

@@ -1,9 +1,6 @@
 <% content_for(:title, 'ARCHIVAGE DES DONNEES')%>
 <p id="notice"><%= notice %></p>
 <h1 class="m-b-40">
-  <%= link_to :back do %>
-    <i class="fa fa-arrow-left"></i>
-  <% end %>
   Documents de l'agent <%= Agent.find(params[:agent_id]).complete_name %>
 </h1>
 

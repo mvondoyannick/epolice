@@ -375,11 +375,19 @@ class AccessController < ApplicationController
   #liste de tous les GRVPC
   def grvpc_show
     @grvpc = Grvpc.order(email: :asc)
+    render layout: 'fylo'
   end
 
   #Ajout d'un nouveau compte GRVPC
   def grvpc_new
     @data = Grvpc.new(grvpc_params)
+    #on sauvegarde les informations
+    if @data.save
+
+    else
+
+    end
+    render layout: 'fylo'
   end
 
   #ajout du personnel de metropolis
@@ -406,7 +414,7 @@ class AccessController < ApplicationController
   end
 
   def grvpc_params
-    params.permit(:email, )
+    params.permit(:email, :password, :password_confirmation, :matricule, :phone)
   end
 
 

@@ -1,6 +1,6 @@
   <% content_for(:title, 'DASHBOARD GRVPC')%>
 
-  <div class="row m-b-40">
+  <div class="row">
     <div class="col-sm-3">
       <div class="card">
         <div class="card-body">
@@ -9,11 +9,12 @@
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
         <div class="card-footer text-muted">
-          <%= link_to 'Acceder', grvpc_all_alertes_path, class: 'card-link' %>
-          <%= link_to 'Nouvelle Alerte', new_alerte_path, class: 'card-link' %>
+          <%= link_to 'Acceder', grvpc_all_alertes_path, class: 'card-link btn btn-sm btn-primary' %>
+          <%= link_to 'Nouvelle Alerte', new_alerte_path, class: 'card-link btn btn-sm btn-primary' %>
         </div>
       </div>
     </div>
+    <br>
     <div class="col-sm-3">
       <div class="card">
         <div class="card-body">
@@ -22,10 +23,11 @@
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
         <div class="card-footer text-muted">
-          <%= link_to 'Acceder', grvpc_all_constats_path, class: 'card-link' %>
+          <%= link_to 'Acceder', grvpc_all_constats_path, class: 'card-link btn btn-sm btn-primary' %>
         </div>
       </div>
     </div>
+    <br>
     <div class="col-sm-3">
       <div class="card">
         <div class="card-body">
@@ -34,10 +36,11 @@
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
         <div class="card-footer text-muted">
-          <%= link_to 'Acceder', grvpc_all_contraventions_path, class: 'card-link' %>
+          <%= link_to 'Acceder', grvpc_all_contraventions_path, class: 'card-link btn btn-sm btn-primary' %>
         </div>
       </div>
     </div>
+    <br>
     <div class="col-sm-3">
       <div class="card">
         <div class="card-body">
@@ -46,21 +49,20 @@
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
         <div class="card-footer text-muted">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+          <%= link_to 'Aperçu', commissariats_path, class: 'card-link btn btn-sm btn-primary' %>
         </div>
       </div>
     </div>
     <div class="col-sm-3">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Agents</h5>
+          <h5 class="card-title">Bulletin d'affectation</h5>
           <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
         <div class="card-footer text-muted">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+          <%= link_to 'Apercu', affectations_path, class: 'card-link btn btn-sm btn-primary' %>
+          <%= link_to 'Ajouter', new_affectation_path, class: 'card-link btn btn-sm btn-primary' %>
         </div>
       </div>
     </div>

@@ -2,11 +2,13 @@ class AffectationsController < ApplicationController
   before_action :set_affectation, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
 
+  layout 'grvpc/grvpc'
+
   # GET /affectations
   # GET /affectations.json
   def index
     @affectations = Affectation.all
-    render layout: 'fylo'
+    #render layout: 'fylo'
   end
 
   def home
@@ -14,7 +16,7 @@ class AffectationsController < ApplicationController
     respond_to do |format|
       format.html do
         @affect
-        render layout: 'fylo'
+        #render layout: 'fylo'
       end
       format.json do
         render json: @affect
@@ -26,18 +28,15 @@ class AffectationsController < ApplicationController
   # GET /affectations/1
   # GET /affectations/1.json
   def show
-    render layout: 'fylo'
   end
 
   # GET /affectations/new
   def new
     @affectation = Affectation.new
-    render layout: 'fylo'
   end
 
   # GET /affectations/1/edit
   def edit
-    render layout: 'fylo'
   end
 
   # POST /affectations

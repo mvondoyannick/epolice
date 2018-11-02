@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="m-b-40">
+  <%= link_to :back do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+  Compte utilisateur GRVPC
+</h1>
+
+<%= form_tag controller: :access, action: :grvpc_new, method: :post do %>
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-header">
+        <strong>Nouveau compte GRVPC</strong>
+      </div>
+      <div class="card-body card-block">
+        <div class="form-group">
+          <label for="company" class=" form-control-label">Nom</label>
+          <%= text_field_tag :name, nil, class: 'form-control', placeholder: 'Nom' %>
+        </div>
+        <div class="form-group">
+          <label for="vat" class=" form-control-label">Prenom</label>
+          <%= text_field_tag :prenom, nil, class: 'form-control', placeholder: 'Prénom' %>
+        </div>
+        <div class="form-group">
+          <label for="vat" class=" form-control-label">Numéro de téléphone</label>
+          <%= telephone_field_tag :phone, nil, class: 'form-control', placeholder: 'Prénom' %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">adresse email</label>
+          <%= email_field_tag :email, nil, class: 'form-control', placeholder: 'Adresse email' %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Mot de passe</label>
+          <%= password_field_tag :password, nil, class: 'form-control', placeholder: 'Mot de passe' %>
+        </div>
+        <div class="form-group">
+          <label for="street" class=" form-control-label">Confirmer mot de passe</label>
+          <%= password_field_tag :password_confirmation, nil, class: 'form-control', placeholder: 'Confirmer le mot de passe' %>
+        </div>
+        <div class="form-group">
+          <div class="form-group">
+            <label for="street" class=" form-control-label">role</label>
+            <%= select_tag :agent_id, options_from_collection_for_select(Agent.all, 'id', 'name') , class: 'form-control', prompt: 'Selectionner un agent', include_blank: false %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <%= submit_tag 'Creer compte', class: 'btn btn-sm btn-primary' %>
+<% end %>
