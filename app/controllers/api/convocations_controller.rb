@@ -108,16 +108,9 @@ class Api::ConvocationsController < ApplicationController
     code = params[:code]
     @p = Convocation.where(phone: code, status: 'impayé').last
     if @p.nil?
-      render json: {
-        status: :not_found,
-        message: "aucune reponse sur #{code}"
-      }
+      render plain: "Le néméro #{code} n'est lié à aucune contravention. Merci"
     else
-      render json: {
-          status: :found,
-          message: @p,
-          created_at: Date.today
-      }
+      render plain: "le montant de la contravention du N° #{code} est de #{@p.infraction.montant} "
     end
   end
 
