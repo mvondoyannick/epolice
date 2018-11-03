@@ -22,7 +22,7 @@
           <th>Nom & prénom</th>
           <th>Phone</th>
           <th>Région</th>
-          <th>Service</th>
+          <th>GRVPC</th>
           <th colspan="3"></th>
         </tr>
         </thead>
@@ -33,7 +33,7 @@
             <td><%= agent.complete_name %></td>
             <td><%= agent.phone %></td>
             <td><%= agent.region.name if !agent.region_id.nil? %></td>
-            <td><%= agent.unite.name if !agent.unite_id.nil? %></td>
+            <td><%= agent.groupement.name if !agent.groupement_id.nil? %></td>
             <td><%= link_to 'Voir', agent %></td>
             <td>
               <%= link_to 'Modifier', edit_agent_path(agent) %>
