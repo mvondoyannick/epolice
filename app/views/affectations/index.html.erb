@@ -29,14 +29,14 @@
           <td><%= affectations.debut %></td>
           <td>
             <% if affectations.fin.to_date > Date.today %>
-              <%= link_to affectations.fin, nil, class: 'btn btn-sm btn-primary' %>
+              <%= link_to affectations.fin, nil, class: 'btn btn-sm btn-danger' %>
             <% else %>
               <%= affectations.fin %>
             <% end %>
           </td>
           <td><%= link_to 'Show', affectations %></td>
           <td><%= link_to 'Edit', edit_affectation_path(affectations) %></td>
-          <td><%= link_to 'Destroy', affectations, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Destroy', affectations, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %></td>
         </tr>
       <% end %>
       </tbody>
