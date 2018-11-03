@@ -7,11 +7,11 @@
         <strong>Details de l'agent <%= @agent.name.upcase+' '+@agent.prenom.upcase %></strong>
       </div>
       <div class="card-body card-block">
-        <div class="form-group">
+        <!--div class="form-group">
           <label for="company" class=" form-control-label">Photo/avatar</label>
           <br>
           <%= image_tag(@agent.avatar, size: 200) if !@agent.avatar.attached? %>
-        </div>
+        </div-->
         <div class="form-group">
           <label for="vat" class=" form-control-label">Matricule</label>
           <input type="text" id="vat" readonly class="form-control" value="<%= @agent.matricule %>">
