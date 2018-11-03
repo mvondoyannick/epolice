@@ -25,35 +25,11 @@
             <label for="company" class=" form-control-label">Téléphone du groupement</label>
             <%= f.input :phone, as: :tel, placeholder: 'Téléphone du groupement', label: false %>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-6">
-      <div class="card">
-        <div class="card-header">
-          <strong>&nbsp;</strong>
-        </div>
-        <div class="card-body card-block">
           <div class="form-group">
             <label for="company" class=" form-control-label">Adresse email du groupement</label>
             <%= f.input :email, as: :email, placeholder: '(auto generate)', label: false, readonly: true %>
           </div>
-          <div class="form-group">
-            <label for="company" class=" form-control-label">Selectionner le commandant</label>
-            <%= f.association :agent, prompt: 'Selectionner une agent', label: false, selected: "Littoral" %>
-          </div>
-          <div class="form-group">
-            <label for="company" class=" form-control-label">Téléphone du commandant</label>
-            <%= f.input :phonecommandant, as: :tel, placeholder: 'Téléphone du commandant', label: false %>
-          </div>
-          <div class="form-group">
-            <label for="company" class=" form-control-label">Adresse email commandant</label>
-            <%= f.input :emailcommandant, as: :email, placeholder: 'Adresse email commadant', label: false %>
-          </div>
         </div>
-        <!--div class="card-footer">
-          <%= f.button :submit, class: 'btn btn-primary' %>
-        </div -->
       </div>
       <div class="text-right">
         <%= f.button :submit, 'Ajouter', class: 'btn btn-primary btn-sm' %>

@@ -31,8 +31,12 @@
           <%= link_to 'Annuler', :back, class: 'btn btn-danger' %>
         </div-->
       </div>
+      <div class="text-right">
+        <%= f.button :submit, 'Ajouter', class: 'btn btn-primary btn-sm' %>
+        <input type="reset", class="btn btn-danger btn-sm" value="Annuler" />
+      </div>
     </div>
-    <div class="col-lg-6">
+    <!--div class="col-lg-6">
       <div class="card">
         <div class="card-header">
           <strong>&nbsp;</strong>
@@ -40,7 +44,7 @@
         <div class="card-body card-block">
           <div class="form-group">
             <label for="company" class=" form-control-label">Responsable poste policePartenaires concernés</label>
-            <%= f.input :agent_id, collection: Agent.where(unite_id: 1).collect { |x| [x.name, x.id]}, label: false, include_blank: false %>
+            <%= f.input :agent_id, collection: Agent.all.collect { |x| [x.name, x.id]}, label: false, include_blank: false %>
           </div>
           <div class="form-group">
             <label for="company" class=" form-control-label">Grade</label>
@@ -60,10 +64,7 @@
           <%= link_to 'Annuler', :back, class: 'btn btn-danger' %>
         </div-->
       </div>
-      <div class="text-right">
-        <%= f.button :submit, 'Ajouter', class: 'btn btn-primary btn-sm' %>
-        <input type="reset", class="btn btn-danger btn-sm" value="Annuler" />
-      </div>
+
     </div>
   </div>
 <% end %>

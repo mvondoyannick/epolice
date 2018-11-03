@@ -70,6 +70,6 @@ class GroupementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def groupement_params
-      params.require(:groupement).permit(:name, :phone, :region_id, :agent_id, :phonecommandant, :emailcommandant, :localisation)
+      params.require(:groupement).permit(:name, :phone, :region_id, :localisation, :email)
     end
 end

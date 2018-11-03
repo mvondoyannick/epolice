@@ -7,6 +7,11 @@
         <strong>Details de l'agent <%= @agent.name.upcase+' '+@agent.prenom.upcase %></strong>
       </div>
       <div class="card-body card-block">
+        <div class="col-8">
+          <div class="form-group form-inline">
+            <label for="postal-code" class=" form-control-label">Region du <%= @agent.groupement.name.split[1] if !@agent.groupement_id.nil? %></label>
+          </div>
+        </div>
         <div class="form-group">
           <label for="vat" class=" form-control-label">Matricule</label>
           <input type="text" id="vat" readonly class="form-control" value="<%= @agent.matricule %>">
@@ -39,13 +44,7 @@
           <div class="col-8">
             <div class="form-group">
               <label for="postal-code" class=" form-control-label">Grade</label>
-              <input type="text" id="postal-code" value="<%= @agent.grade.name if !@agent.grade_id.nil? %>" class="form-control">
-            </div>
-          </div>
-          <div class="col-8">
-            <div class="form-group">
-              <label for="postal-code" class=" form-control-label">Région de localisation</label>
-              <input type="text" id="postal-code" value="<%= @agent.region.name if !@agent.region_id.nil? %>" class="form-control">
+              <input type="text" id="postal-code" readonly value="<%= @agent.grade.name if !@agent.grade_id.nil? %>" class="form-control">
             </div>
           </div>
           <div class="col-8">
@@ -54,6 +53,13 @@
               <input type="text" id="postal-code" value="<%= @agent.groupement.name if !@agent.groupement_id.nil? %>" class="form-control">
             </div>
           </div>
+          <div class="col-8">
+            <div class="form-group">
+              <label for="postal-code" class=" form-control-label">Commissariat</label>
+              <input type="text" id="postal-code" value="<%= @agent.commissariat.name if !@agent.commissariat_id.nil? %>" class="form-control">
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="card-footer">

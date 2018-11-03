@@ -35,20 +35,5 @@
   <%= @commissariat.localisation %>
 </p>
 
-<p>
-  <strong>Commissaire:</strong>
-  <%= @commissariat.agent.name if !@commissariat.agent_id.nil? %>&nbsp;<%= @commissariat.agent.prenom if !@commissariat.agent_id.nil? %>
-</p>
-
-<p>
-  <strong>Téléphone commissaire:</strong>
-  <%= @commissariat.phonecommissaire %>
-</p>
-
-<p>
-  <strong>Téléphone commissaire:</strong>
-  <%= @commissariat.emailcommissaire %>
-</p>
-
 <%= link_to 'Edit', edit_commissariat_path(@commissariat) %> |
 <%= link_to 'Back', commissariats_path %>

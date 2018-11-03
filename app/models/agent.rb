@@ -7,14 +7,13 @@ class Agent < ApplicationRecord
 	has_many :alertes
 	has_many :affectations
 	belongs_to :grade
-	#belongs_to :unite
 	belongs_to :groupement
 	belongs_to :commissariat
 
 
 	#pour la photo de l'agent
 
-	has_one_attached :avatar
+	#has_one_attached :avatar
 
 	validates :name, presence: {message: 'Merci de fournir le nom.'}
 	validates :age, presence: {message: 'Merci de selectionner age.'}
@@ -22,15 +21,14 @@ class Agent < ApplicationRecord
 	validates :sexe, presence: {message: 'merci de selectionner un sexe'}
 	validates :phone, presence: {message: 'Merci de fournir le numéro de téléphone'}, uniqueness: {message: '%{value} existe deja.'}
 	validates :grade, presence: {message: 'Merci de selectionner le grade.'}
-	validates :region, presence: {message: 'Merci de selectionner la région.'}
-	validates :unite, presence: {message: 'Merci de selectionner le service.'}
+	#validates :region, presence: {message: 'Merci de selectionner la région.'}
 
 	#pour les villes d'affectations
-	belongs_to :region
+	#belongs_to :region
 
 
 	#ajout d'activeStorage pour une seule image
-	has_one_attached :avatar
+	#has_one_attached :avatar
 
 	#retourn ne nom et le prenom de l'agent
 	def complete_name

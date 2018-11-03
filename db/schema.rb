@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_03_151310) do
+ActiveRecord::Schema.define(version: 2018_11_03_162351) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -217,10 +217,7 @@ ActiveRecord::Schema.define(version: 2018_11_03_151310) do
     t.bigint "departement_id"
     t.bigint "arrondissement_id"
     t.string "email"
-    t.string "phonecommissaire"
-    t.bigint "agent_id"
-    t.string "emailcommissaire"
-    t.index ["agent_id"], name: "index_commissariats_on_agent_id"
+    t.string "localisation"
     t.index ["arrondissement_id"], name: "index_commissariats_on_arrondissement_id"
     t.index ["departement_id"], name: "index_commissariats_on_departement_id"
     t.index ["region_id"], name: "index_commissariats_on_region_id"
@@ -328,12 +325,9 @@ ActiveRecord::Schema.define(version: 2018_11_03_151310) do
     t.bigint "region_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "agent_id"
     t.string "phonecommandant"
-    t.string "emailcommandant"
     t.string "localisation"
     t.string "email"
-    t.index ["agent_id"], name: "index_groupements_on_agent_id"
     t.index ["region_id"], name: "index_groupements_on_region_id"
   end
 
@@ -598,7 +592,6 @@ ActiveRecord::Schema.define(version: 2018_11_03_151310) do
   add_foreign_key "centrepartenaires", "structures"
   add_foreign_key "centrerecouvrements", "regions"
   add_foreign_key "comments", "alertes"
-  add_foreign_key "commissariats", "agents"
   add_foreign_key "commissariats", "arrondissements"
   add_foreign_key "commissariats", "departements"
   add_foreign_key "commissariats", "regions"
@@ -610,7 +603,6 @@ ActiveRecord::Schema.define(version: 2018_11_03_151310) do
   add_foreign_key "departements", "regions"
   add_foreign_key "fylos", "commissariats"
   add_foreign_key "fylos", "roles"
-  add_foreign_key "groupements", "agents"
   add_foreign_key "groupements", "regions"
   add_foreign_key "infractions", "arrondissements"
   add_foreign_key "infractions", "departements"

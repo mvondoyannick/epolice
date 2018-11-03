@@ -10,17 +10,16 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery3
-//= require archive
-//= require bootstrap
-//= require popper
+// require jquery3
+// require archive
+//require bootstrap
+// require popper
 //= require Chart.bundle
 //= require chartkick
 //= require leaflet
 //= require underscore
 //= require rails-ujs
 //= require turbolinks
-//= require gmaps
 //= require_tree .
 
 /* on recherche la classe .fa et on lui ajoute la couleur noire  */
@@ -31,12 +30,6 @@ var chart = Chartkick.charts['chart-id']
 
 //dessin d'un chart
 
-//afficher le dropdown de bulma
-var dropdown = document.querySelector('.dropdown');
-dropdown.addEventListener('click', function(event) {
-    event.stopPropagation();
-    dropdown.classList.toggle('is-active');
-});
 
 var ctx = document.getElementById("widgetChart3");
 if (ctx) {

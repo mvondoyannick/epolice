@@ -5,8 +5,6 @@ class Groupement < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
   validates :phone, presence: true, uniqueness: true
-  validates :phonecommandant, presence: true, uniqueness: true
-  validates :emailcommandant, presence: true, uniqueness: true
 
   def set_email
     self.email = self.name.delete(' ').downcase+'-'+SecureRandom.hex(2)+'@epolice.cm'

@@ -53,7 +53,8 @@
         <p class="card-text"></p>
       </div>
       <div class="card-footer text-mutted">
-        <%= link_to 'Aperçu', parametre_grvpc_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Aperçu', groupements_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', new_groupement_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
@@ -67,6 +68,20 @@
       <div class="card-footer text-mutted">
         <%= link_to 'Aperçu', commissariats_path, class: 'card-link btn btn-sm btn-primary' %>
         <%= link_to 'Ajouter', new_commissariat_path, class: 'card-link btn btn-sm btn-primary' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Postes de polices</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Gestion des postes de police</h6>
+        <p class="card-text"></p>
+
+      </div>
+      <div class="card-footer text-muted">
+        <%= link_to 'Aperçu', postepolices_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', new_postepolice_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>

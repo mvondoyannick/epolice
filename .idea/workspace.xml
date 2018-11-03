@@ -3,7 +3,297 @@
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/email.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/gmaps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery-3.3.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/vue.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/bootstrap-select.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/cs-skin-elastic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/flag-icon.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/lib/chosen/chosen-sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/lib/chosen/chosen-sprite@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/lib/chosen/chosen.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/lib/chosen/chosen.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/lib/datatable/buttons.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/lib/datatable/buttons.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/lib/datatable/dataTables.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/lib/vector-map/jqvmap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/style.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/themify-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboard/variables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/inbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/starter-template.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/u.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/workflows.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/animsition/animsition.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/animsition/animsition.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/bootstrap-4.1/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/bootstrap-4.1/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/bootstrap-4.1/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/chartjs/Chart.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/circle-progress/circle-progress.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/circle-progress/circle-progress.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/countdown/countdowntime.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/countdown/jquery.countdown.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/countdown/moment-timezone-with-data.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/countdown/moment-timezone.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/countdown/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/counter-up/jquery.counterup.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/counter-up/jquery.waypoints.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/counter-up/waypoints.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/css-hamburgers/hamburgers.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/css-hamburgers/hamburgers.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-4.7/HELP-US-OUT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-4.7/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-4.7/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-4.7/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-4.7/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-4.7/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-4.7/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-4.7/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-4.7/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-5/css/fontawesome-all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-5/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-5/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-5/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-5/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-5/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-5/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-5/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-5/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-5/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-5/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-5/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-5/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-5/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-5/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/font-awesome-5/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/jquery-3.2.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/dist/css/lightbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/dist/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/dist/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/dist/images/next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/dist/images/prev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/dist/js/lightbox-plus-jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/dist/js/lightbox-plus-jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/dist/js/lightbox-plus-jquery.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/dist/js/lightbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/dist/js/lightbox.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/dist/js/lightbox.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/src/css/lightbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/src/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/src/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/src/images/next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/src/images/prev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/lightbox2/src/js/lightbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/mdi-font/css/material-design-iconic-font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/mdi-font/css/material-design-iconic-font.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/mdi-font/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/mdi-font/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/mdi-font/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/mdi-font/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/mdi-font/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/perfect-scrollbar/perfect-scrollbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/perfect-scrollbar/perfect-scrollbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/perfect-scrollbar/perfect-scrollbar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/progressbar/progressbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/progressbar/progressbar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/select2/select2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/select2/select2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/slick/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/slick/config.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/slick/fonts/slick.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/slick/fonts/slick.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/slick/fonts/slick.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/slick/fonts/slick.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/slick/slick-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/slick/slick-theme.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/slick/slick-theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/slick/slick.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/slick/slick.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/slick/slick.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/slick/slick.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/slick/slick.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/smk-accordion/accordion.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/smk-accordion/accordion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/smk-accordion/accordion.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/sweetalert/sweetalert.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/vector-map/jquery.vmap.brazil.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/vector-map/jquery.vmap.europe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/vector-map/jquery.vmap.france.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/vector-map/jquery.vmap.germany.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/vector-map/jquery.vmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/vector-map/jquery.vmap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/vector-map/jquery.vmap.russia.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/vector-map/jquery.vmap.sampledata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/vector-map/jquery.vmap.usa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/vector-map/jquery.vmap.world.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/vector-map/jqvmap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/wow/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/vendor/wow/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/agents_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/agents_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/commissariats_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/commissariats_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/groupements_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/groupements_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/agent.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/agent.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/commissariat.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/commissariat.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/groupement.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/groupement.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/zonecouverturemotif.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/zonecouverturemotif.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/agents/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/agents/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/agents/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/agents/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/commissariats/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/commissariats/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/commissariats/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/commissariats/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/groupements/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/groupements/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/groupements/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/groupements/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/infractions/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/infractions/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/parametre/grvpc.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/parametre/grvpc.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/parametre/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/parametre/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/postepolices/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/postepolices/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/structures/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/structures/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-30fcf0afa94d7f52e3ceb35c95b98a14.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-030a2eb6cfbeb9aee872a295d26802f7667b57216968cbc0234041cd8f34c65e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-030a2eb6cfbeb9aee872a295d26802f7667b57216968cbc0234041cd8f34c65e.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-282f2fc909d4c62e58796b85e40d14e3e2d11e4762d732ef63201a5bc4566289.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-282f2fc909d4c62e58796b85e40d14e3e2d11e4762d732ef63201a5bc4566289.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-2b033c793c7cf325391bd88a23321351bc874ca7b22d0d0d32a61df121407b7c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-2b033c793c7cf325391bd88a23321351bc874ca7b22d0d0d32a61df121407b7c.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-74bbcd10086fd69236e4815c5e8e80b351065507f717e9d54bb2e505453dbd03.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-74bbcd10086fd69236e4815c5e8e80b351065507f717e9d54bb2e505453dbd03.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-78032c8d6ce38166bd2708956c22e36f3232c514b72e188383ad92a6ac822df3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-78032c8d6ce38166bd2708956c22e36f3232c514b72e188383ad92a6ac822df3.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-852f2bfb318925d57685f05a2c677a60f5a725eae5194a75c442c53a2f78935f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-852f2bfb318925d57685f05a2c677a60f5a725eae5194a75c442c53a2f78935f.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-92947e7e061c5d18bb07627af362e48d392f8f1a78bad1ee5feb3a3dcc420f8c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-92947e7e061c5d18bb07627af362e48d392f8f1a78bad1ee5feb3a3dcc420f8c.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-aca3585e055db06a921a9ac0cd518ee621456de520cf98edc5fb88e45510119d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-aca3585e055db06a921a9ac0cd518ee621456de520cf98edc5fb88e45510119d.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-d7e0461d24be5204b231a45b7d5992497b7ddc207b540463461ec2fd04c02cf6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-d7e0461d24be5204b231a45b7d5992497b7ddc207b540463461ec2fd04c02cf6.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-e03e8572aebf87bcd9e4522351886676fff37fa47c0ef61e0ad8357c18cd3cb9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/application-e03e8572aebf87bcd9e4522351886676fff37fa47c0ef61e0ad8357c18cd3cb9.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dashboard/bootstrap.css-33d556e5388267da9fa37ac195f9b497bbd607cf1d6b50758dca05de1c4c9863.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dashboard/bootstrap.min.css-240a32d675bdd02436859788cbf5eaf6cb480ecbf059751a272b9e6f30a8291d.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dashboard/lib/chosen/chosen-sprite-8aa69ee6b2376505578d758bfbbc52aec88fa5e591f1a7cabd8adfa80a7b613a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dashboard/lib/chosen/chosen-sprite@2x-1e349b80fba8c23b63656925fda8dfe3c5927b5d0d8a1672143416caacf460fb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dashboard/style.css-5410286171e1f2e3630285e69d6695d7e7b8352ef24f4dbfc8bebef6938f2a3b.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/email-e429703f43fb0205d992f85bb561f22d5376becd8271a856f7fa635199bddd8b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/email-e429703f43fb0205d992f85bb561f22d5376becd8271a856f7fa635199bddd8b.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/faker.min-96db12474b35988f3cbe28bc1427a4c6995c58a18e980eb90608765bad7eb192.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/faker.min-96db12474b35988f3cbe28bc1427a4c6995c58a18e980eb90608765bad7eb192.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-4.7/HELP-US-OUT-3034ebb0f7c42896648f5303e3499cd7dfe4db010f9578ff45fb42af2884ed6b.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-4.7/HELP-US-OUT-3034ebb0f7c42896648f5303e3499cd7dfe4db010f9578ff45fb42af2884ed6b.txt.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-4.7/fonts/FontAwesome-444dd4366615ffc4a16d012b2fa90137065d3ccb410fa6fd5e4ddd7b5e4ffcd5.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-4.7/fonts/FontAwesome-444dd4366615ffc4a16d012b2fa90137065d3ccb410fa6fd5e4ddd7b5e4ffcd5.otf.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-4.7/fonts/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-4.7/fonts/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-4.7/fonts/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-4.7/fonts/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-4.7/fonts/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-4.7/fonts/fontawesome-webfont-ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-4.7/fonts/fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-4.7/fonts/fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c.svg.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-brands-400-21c4d3029c3a96e156e3ccf488fbd6c5b0ff2e90506016883792c61489eb7e95.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-brands-400-21c4d3029c3a96e156e3ccf488fbd6c5b0ff2e90506016883792c61489eb7e95.svg.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-brands-400-42e369dc8c372973ba77a826b62d2c7a2070532313df832a23288ddb76974158.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-brands-400-42e369dc8c372973ba77a826b62d2c7a2070532313df832a23288ddb76974158.ttf.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-brands-400-9fafd6c3e7bfc145db42a906e5fa68fe6a6f97221f013d3e833fc3231b992c44.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-brands-400-d023c55fde220495f13a87b72995e0df98c8d2893577299d199da5bbf5b4fe02.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-brands-400-d023c55fde220495f13a87b72995e0df98c8d2893577299d199da5bbf5b4fe02.eot.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-brands-400-e7d4d5340bbe57a01d8f7992142e2763d438d5783890c76748306eebfa056a69.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-regular-400-4537fa06340ee62c264e9d7a4d8aabcab3de7bda2c5cc334010f46b683106fcb.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-regular-400-4537fa06340ee62c264e9d7a4d8aabcab3de7bda2c5cc334010f46b683106fcb.eot.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-regular-400-4bc359c27057b3ed0baca66d6c5349a5d4a605096fbc7875061ba2d91a3d6d05.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-regular-400-4d2883443b24e424527f6a0a7aa2897b3df71f239db40373c4ff760e48147801.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-regular-400-4f8fd1712dbc9763dae7b60d4c7debca0ff8df7b45add37aa4306dd2218bd731.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-regular-400-4f8fd1712dbc9763dae7b60d4c7debca0ff8df7b45add37aa4306dd2218bd731.svg.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-regular-400-67172172eafce4563725e661043d5db854b86768a9e8bd39758dbe81c4796935.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-regular-400-67172172eafce4563725e661043d5db854b86768a9e8bd39758dbe81c4796935.ttf.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-solid-900-1b36363c2fc2c6282303b6a8e4f9b8e5cf3e983dfc7121ca7a889a80a0be900e.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-solid-900-1b36363c2fc2c6282303b6a8e4f9b8e5cf3e983dfc7121ca7a889a80a0be900e.svg.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-solid-900-434466b59545a8a1cac6ddb38197cdc6b35995a98c3f3812fb88d61b1c300dd3.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-solid-900-8b4e1b847e22233d4f467d34faefe7bcbfebce6fa9bbbee560c45cd894868751.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-solid-900-8b4e1b847e22233d4f467d34faefe7bcbfebce6fa9bbbee560c45cd894868751.eot.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-solid-900-95b6a4840f8711ecab427bc236eb86098db7e5c782bafb139c8c30805aa5ffe1.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-solid-900-cb7f81f542f5c418a3bbb9ad3f9fbe784151d13b04cec50ecedec6013324a3da.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome-5/webfonts/fa-solid-900-cb7f81f542f5c418a3bbb9ad3f9fbe784151d13b04cec50ecedec6013324a3da.ttf.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome.min-3fbe6fcbf12899af4f1f2fbf7843ed4652fa0299e50f6fe1fb0da38881dc2843.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/font-awesome.min-3fbe6fcbf12899af4f1f2fbf7843ed4652fa0299e50f6fe1fb0da38881dc2843.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/gmaps-0d9fa7bb9583db8572da3f0499c69876b0f39c72e73b6b1b1bff4362e1113dbb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/gmaps-0d9fa7bb9583db8572da3f0499c69876b0f39c72e73b6b1b1bff4362e1113dbb.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/inbox-e1305c4ee4e0282c33069c39f8133aa1f323a6efc53df19ba165740646bce75d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/inbox-e1305c4ee4e0282c33069c39f8133aa1f323a6efc53df19ba165740646bce75d.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/jquery-3.3.1.min-875821d1e3121b366b94ea86a07f3cbc5c76cb16a319bc62212c03a805ff20e9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/jquery-3.3.1.min-875821d1e3121b366b94ea86a07f3cbc5c76cb16a319bc62212c03a805ff20e9.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/lightbox2/dist/images/close-5d62e6c90005bfb71f6abb440f9e4753681cb23bbd5e60477ab6f442d2f0e69c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/lightbox2/dist/images/loading-225aa88b6ab02c06222ec9468d62e15fa188e39cdb9431d1f55401ad380753ed.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/lightbox2/dist/images/next-15b869b02c6fbaa8c6c26445a2dd2d9bad80fd27b1409f8179e5dd89dc89d90a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/lightbox2/dist/images/prev-7fd9273f20fdb1229c224341271a119020a5eee74ccf6b4605730917c864caf2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/lightbox2/dist/js/lightbox-plus-jquery.min-5aad69c1f05be620bead28d1b9731da59c5afc3c65b6e14d455d39016dfbc5f0.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/lightbox2/dist/js/lightbox.min-2962a65972a0dc0d1110fbda1410a891e22f358984a1fec2c967e4179e49dfc6.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/lightbox2/src/images/close-5d62e6c90005bfb71f6abb440f9e4753681cb23bbd5e60477ab6f442d2f0e69c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/lightbox2/src/images/loading-225aa88b6ab02c06222ec9468d62e15fa188e39cdb9431d1f55401ad380753ed.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/lightbox2/src/images/next-15b869b02c6fbaa8c6c26445a2dd2d9bad80fd27b1409f8179e5dd89dc89d90a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/lightbox2/src/images/prev-7fd9273f20fdb1229c224341271a119020a5eee74ccf6b4605730917c864caf2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login-f02d1e897e040f5e53f1a3b06a45cd1ccfd98a6bf6f8cdd1b9d3bffcdf270798.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login-f02d1e897e040f5e53f1a3b06a45cd1ccfd98a6bf6f8cdd1b9d3bffcdf270798.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/main-a47bad21f0b1b46609d8ee87277c00022b51aac83aaaf537341f7921cff1a7f1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/main-a47bad21f0b1b46609d8ee87277c00022b51aac83aaaf537341f7921cff1a7f1.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/main-b00866fbe768f5b59ce1f33075db619055a8bf364a7e88ab668f2b2795cf9530.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/main-b00866fbe768f5b59ce1f33075db619055a8bf364a7e88ab668f2b2795cf9530.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/mdi-font/fonts/Material-Design-Iconic-Font-18a45be2ecb66ce217c3bbccf219f8bdc05dc76d61a6e63673186efd1c7cda1a.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/mdi-font/fonts/Material-Design-Iconic-Font-18a45be2ecb66ce217c3bbccf219f8bdc05dc76d61a6e63673186efd1c7cda1a.ttf.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/mdi-font/fonts/Material-Design-Iconic-Font-7c74c136895350e927bf69fe9fcb9f33fe9fae6340709d6ec4f8cb838a9470a3.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/mdi-font/fonts/Material-Design-Iconic-Font-dcb3de1ca419903bcee5322ca91f2895b9c6482919423e0cce263d62bbe171ea.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/mdi-font/fonts/Material-Design-Iconic-Font-dcb3de1ca419903bcee5322ca91f2895b9c6482919423e0cce263d62bbe171ea.svg.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/mdi-font/fonts/Material-Design-Iconic-Font-e8eea96e29a7c0a72612ab85ca3229979666467a28349642c2176e7189a1a39c.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/mdi-font/fonts/Material-Design-Iconic-Font-fb37e1e79a43463400e850747a5c32e0b116a7b2bba3335a600e12fd4bd9d47a.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/mdi-font/fonts/Material-Design-Iconic-Font-fb37e1e79a43463400e850747a5c32e0b116a7b2bba3335a600e12fd4bd9d47a.eot.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/moment.min-1d6af614879f3bfbc6a91313a248f0fbf8fd331734bdd63126aa1d68762e7855.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/moment.min-1d6af614879f3bfbc6a91313a248f0fbf8fd331734bdd63126aa1d68762e7855.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/slick/ajax-loader-e7b44c86b050fca766a96ddac2d0932af0126da6f2305280342d909168dcce6b.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/slick/config-7a38551c927b2b0176ea605e6aba339c64d494a79e4f392ed52f54c84c1b7759.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/slick/fonts/slick-06d80cf01250132fd1068701108453feee68854b750d22c344ffc0de395e1dcb.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/slick/fonts/slick-06d80cf01250132fd1068701108453feee68854b750d22c344ffc0de395e1dcb.eot.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/slick/fonts/slick-26726bac4060abb1226e6ceebc1336e84930fe7a7af1b3895a109d067f5b5dcc.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/slick/fonts/slick-37bc99cfdbbc046193a26396787374d00e7b10d3a758a36045c07bd8886360d2.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/slick/fonts/slick-37bc99cfdbbc046193a26396787374d00e7b10d3a758a36045c07bd8886360d2.ttf.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/slick/fonts/slick-8ca11b5fcbff92ee6378017cf6832dddfa745253202d7c8d01f42d5d17c4cb5c.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/slick/fonts/slick-8ca11b5fcbff92ee6378017cf6832dddfa745253202d7c8d01f42d5d17c4cb5c.svg.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/slick/slick-1277d15b981f42dcb6b60d760e05104f5da6cd239b30f087c248f56513b9546c.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/slick/slick-theme-659a287cd6e02f4e7cedcdd47b44f1b1913b91425bc26e776429ef2b32143756.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/starter-template-9cc1558c664a1c4272982538f57bffc220092da85637de6a9142a16669d267d8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/starter-template-9cc1558c664a1c4272982538f57bffc220092da85637de6a9142a16669d267d8.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/theme-4fd882d4ca967ed34ada6f9d680231d6ee35487e3faaa19e2a32a47d345fe558.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/theme-4fd882d4ca967ed34ada6f9d680231d6ee35487e3faaa19e2a32a47d345fe558.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/theme-bf14c04ba8a3132084dad449ae175ffb0394549a9c37a3bbee4a15bb11aedd45.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/theme-bf14c04ba8a3132084dad449ae175ffb0394549a9c37a3bbee4a15bb11aedd45.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/theme-ea2176b30ff906e9302b2ac100aa4f4d0b5470d5cc930d3f7cef5aed6706a88a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/theme-ea2176b30ff906e9302b2ac100aa4f4d0b5470d5cc930d3f7cef5aed6706a88a.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vue.min-0bb96de4c8a8818ce89af9d87a409c81d8d0dadbfeec0c7f9e67632c963b471b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vue.min-0bb96de4c8a8818ce89af9d87a409c81d8d0dadbfeec0c7f9e67632c963b471b.js.gz" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -101,21 +391,21 @@
           <entry key="alertes" value="1" />
           <entry key="coffee" value="8" />
           <entry key="convocations" value="1" />
-          <entry key="css" value="11" />
+          <entry key="css" value="13" />
           <entry key="dot" value="1" />
-          <entry key="erb" value="857" />
+          <entry key="erb" value="877" />
           <entry key="html" value="12" />
           <entry key="infractions" value="1" />
           <entry key="jbuilder" value="1" />
           <entry key="jpeg" value="1" />
-          <entry key="js" value="26" />
+          <entry key="js" value="28" />
           <entry key="pid" value="3" />
           <entry key="png" value="1" />
           <entry key="rails" value="1" />
           <entry key="rake" value="2" />
-          <entry key="rb" value="679" />
+          <entry key="rb" value="689" />
           <entry key="rnc" value="1" />
-          <entry key="scss" value="13" />
+          <entry key="scss" value="14" />
           <entry key="setup" value="1" />
           <entry key="sql" value="1" />
           <entry key="txt" value="1" />
@@ -126,17 +416,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="11" />
+          <entry key="CSS" value="13" />
           <entry key="CoffeeScript" value="8" />
           <entry key="Database Element" value="4" />
           <entry key="HTML" value="12" />
           <entry key="Image" value="2" />
-          <entry key="JavaScript" value="26" />
+          <entry key="JavaScript" value="28" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="RHTML" value="857" />
+          <entry key="RHTML" value="877" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="711" />
-          <entry key="SCSS" value="13" />
+          <entry key="Ruby" value="721" />
+          <entry key="SCSS" value="14" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="9" />
         </counts>
@@ -145,26 +435,26 @@
         <counts>
           <entry key="Gemfile" value="533" />
           <entry key="coffee" value="468" />
-          <entry key="css" value="354" />
-          <entry key="erb" value="104012" />
+          <entry key="css" value="398" />
+          <entry key="erb" value="104645" />
           <entry key="jbuilder" value="1" />
-          <entry key="js" value="348" />
+          <entry key="js" value="352" />
           <entry key="pid" value="1" />
-          <entry key="rb" value="47954" />
-          <entry key="scss" value="202" />
+          <entry key="rb" value="48026" />
+          <entry key="scss" value="204" />
           <entry key="txt" value="381" />
           <entry key="yml" value="145" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="354" />
+          <entry key="CSS" value="398" />
           <entry key="CoffeeScript" value="468" />
-          <entry key="JavaScript" value="348" />
+          <entry key="JavaScript" value="352" />
           <entry key="PLAIN_TEXT" value="382" />
-          <entry key="RHTML" value="104012" />
-          <entry key="Ruby" value="48488" />
-          <entry key="SCSS" value="202" />
+          <entry key="RHTML" value="104645" />
+          <entry key="Ruby" value="48560" />
+          <entry key="SCSS" value="204" />
           <entry key="YAML" value="145" />
         </counts>
       </usages-collector>
@@ -173,25 +463,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/agents_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1848">
-              <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/agent.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/groupement.rb">
+        <entry file="file://$PROJECT_DIR$/app/controllers/infractions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="6" selection-start-column="6" selection-end-column="6" />
@@ -200,68 +472,83 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/agents/new.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/infractions/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+            <state relative-caret-position="286">
+              <caret line="13" column="87" selection-start-line="13" selection-start-column="87" selection-end-line="13" selection-end-column="87" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/agents/_form.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/models/zonecouverturemotif.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="59" column="56" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
+            <state relative-caret-position="88">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/parametre_controller.rb">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/fylo.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1012">
-              <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/parametre/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+            <state relative-caret-position="379">
+              <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
               <folding>
-                <element signature="n#div#3;n#div#0;n#!!top" />
-                <element signature="n#div#4;n#div#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
+        <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/agents/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="35" column="62" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
+            <state relative-caret-position="66">
+              <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/agents/show.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="53" column="105" selection-start-line="53" selection-start-column="105" selection-end-line="53" selection-end-column="105" />
+            <state relative-caret-position="110">
+              <caret line="5" column="103" selection-start-line="5" selection-start-column="103" selection-end-line="5" selection-end-column="103" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+              <folding>
+                <element signature="e#537#543#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -270,13 +557,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>parametre/admins</find>
-      <find>admin_</find>
-      <find>affectation</find>
-      <find>affectation_</find>
-      <find>new_al</find>
       <find>affectationS</find>
-      <find>recherche</find>
       <find>new/</find>
       <find>login</find>
       <find>conv</find>
@@ -300,6 +581,12 @@
       <find>verification</find>
       <find>verif</find>
       <find>ussd</find>
+      <find>logo-</find>
+      <find>.logo</find>
+      <find>email</find>
+      <find>notif</find>
+      <find>recherche</find>
+      <find>the</find>
     </findStrings>
     <replaceStrings>
       <replace>%=</replace>
@@ -318,24 +605,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/controllers/grvpc/sessions_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/grvpc/registrations_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/grvpc/registrations/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/grvpc/detail_constat.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/grvpc/all_constats.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/gestion_alerte/all.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/gestion_contravention_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/gestion_contravention/all.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/grvpc/grvpc.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/alertes/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/alerte.rb" />
-        <option value="$PROJECT_DIR$/app/models/comment.rb" />
-        <option value="$PROJECT_DIR$/app/views/comments/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/comments/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/comments/_new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/comments/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/grvpc/detail_alerte.html.erb" />
@@ -343,14 +612,12 @@
         <option value="$PROJECT_DIR$/app/controllers/grvpc_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/grvpc/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/access/admin_show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/commissariats/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/parametre/admin.html.erb" />
         <option value="$PROJECT_DIR$/app/views/access/grvpc_show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/access_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/access/grvpc_new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/access/systeme.html.erb" />
         <option value="$PROJECT_DIR$/app/views/access/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/affectations_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/grvpc/_left_menu.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/grvpc/_menu.html.erb" />
@@ -362,13 +629,33 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/sms.rb" />
         <option value="$PROJECT_DIR$/app/models/convocation.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/agents_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/agents/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/agent.rb" />
         <option value="$PROJECT_DIR$/app/views/agents/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/parametre/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/groupement.rb" />
+        <option value="$PROJECT_DIR$/app/views/groupements/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/groupements/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/groupements_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/commissariats_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/commissariat.rb" />
+        <option value="$PROJECT_DIR$/app/views/commissariats/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/commissariats/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/agent.rb" />
+        <option value="$PROJECT_DIR$/app/views/agents/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/agents_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/agents/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/structures/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/postepolices/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/parametre/grvpc.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/parametre/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/infractions/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/zonecouverturemotif.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/theme.css" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" />
+        <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
       </list>
     </option>
   </component>
@@ -427,28 +714,8 @@
               <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
               <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="grvpc" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
@@ -486,6 +753,11 @@
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -497,7 +769,7 @@
     <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
-    <property name="SearchEverywhereHistoryKey" value="con&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/api/convocations_controller.rb&#10;para&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;gro&#9;null&#9;null&#10;agent&#9;null&#9;null&#10;routes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;convoca&#9;null&#9;null&#10;sms&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/sms.rb&#10;affectation&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/affectations_controller.rb&#10;affecta&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/affectations_controller.rb&#10;arc&#9;null&#9;null&#10;grvpc&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;_fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_fylo_sidebar.html.erb&#10;commis&#9;null&#9;null&#10;parametre&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;sms.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/sms.rb&#10;comment&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/comments_controller.rb&#10;access&#9;null&#9;null&#10;detail&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/grvpc/detail_alerte.html.erb&#10;comment.r&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/comment.rb&#10;alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/alerte.rb&#10;alertes_con&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;grvp&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;gestion_contra&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_contravention_controller.rb&#10;gestion_alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_alerte_controller.rb&#10;fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/fylo.html.erb&#10;alertes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;application&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;route&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;alertes_contr&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;application.html.erb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;application.h&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/application.html.erb&#10;grvpc_&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;convoc&#9;null&#9;null&#10;gestion_alert&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_alerte_controller.rb&#10;conv&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/api/convocations_controller.rb&#10;typ&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/type.rb&#10;type.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/type.rb&#10;typescon&#9;null&#9;null&#10;gestion&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_alerte_controller.rb&#10;typea&#9;null&#9;null&#10;gestion_aler&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_alerte_controller.rb&#10;gestion_con&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_constat_controller.rb&#10;fylo_&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_fylo_sidebar.html.erb&#10;acces&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/access_controller.rb&#10;convo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/api/convocations_controller.rb&#10;struct&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/structures_controller.rb&#10;unite&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/unites_controller.rb&#10;bulle&#9;null&#9;null&#10;application.js&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/javascripts/application.js&#10;param&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb" />
+    <property name="SearchEverywhereHistoryKey" value="assets.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb&#10;application.sc&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.scss&#10;application.js&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/javascripts/application.js&#10;menu&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_menu.html.erb&#10;theme.css&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/theme.css&#10;fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/fylo.html.erb&#10;zonecou&#9;null&#9;null&#10;infr&#9;null&#9;null&#10;parame&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;poste&#9;null&#9;null&#10;struc&#9;null&#9;null&#10;agent&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/agent.rb&#10;commissa&#9;null&#9;null&#10;groupeme&#9;null&#9;null&#10;con&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/api/convocations_controller.rb&#10;para&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;gro&#9;null&#9;null&#10;routes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;convoca&#9;null&#9;null&#10;sms&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/sms.rb&#10;affectation&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/affectations_controller.rb&#10;affecta&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/affectations_controller.rb&#10;arc&#9;null&#9;null&#10;grvpc&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;_fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_fylo_sidebar.html.erb&#10;commis&#9;null&#9;null&#10;parametre&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;sms.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/sms.rb&#10;comment&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/comments_controller.rb&#10;access&#9;null&#9;null&#10;detail&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/grvpc/detail_alerte.html.erb&#10;comment.r&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/comment.rb&#10;alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/alerte.rb&#10;alertes_con&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;grvp&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;gestion_contra&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_contravention_controller.rb&#10;gestion_alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_alerte_controller.rb&#10;alertes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;application&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;route&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;alertes_contr&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;application.html.erb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;application.h&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/application.html.erb&#10;grvpc_&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;convoc&#9;null&#9;null&#10;gestion_alert&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_alerte_controller.rb&#10;conv&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/api/convocations_controller.rb&#10;typ&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/type.rb&#10;type.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/type.rb&#10;typescon&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -671,7 +943,7 @@
       <workItem from="1541082168117" duration="94000" />
       <workItem from="1541083610295" duration="22411000" />
       <workItem from="1541158467791" duration="9076000" />
-      <workItem from="1541168678228" duration="25720000" />
+      <workItem from="1541168678228" duration="36119000" />
     </task>
     <servers />
   </component>
@@ -681,13 +953,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="905096000" />
+    <option name="totallyTimeSpent" value="915495000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7567185" visible="true" weight="0.01589242" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7567185" visible="true" weight="0.1589242" />
       <window_info id="Structure" order="1" sideWeight="0.24328147" side_tool="true" weight="0.22707888" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -700,10 +971,10 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3295964" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.29718006" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49840087" visible="true" weight="0.34192824" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50159913" side_tool="true" weight="0.37527114" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4989339" weight="0.329718" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.37527114" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4989339" weight="0.329718" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49840087" side_tool="true" visible="true" weight="0.5807175" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -780,209 +1051,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/alertes/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/alertes_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/comments/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/comments/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/alerte.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/comments/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20181102120355_add_publisher_to_comment.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/comments/_new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="3" column="62" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/comments/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/grvpc/detail_alerte.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="58" column="82" selection-start-line="58" selection-start-column="82" selection-end-line="58" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/grvpc/sessions_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/parametre/add_user.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/grvpc/sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
-          <caret line="53" column="106" selection-start-line="53" selection-start-column="106" selection-end-line="53" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="64" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/grvpc/all_contraventions.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/grvpc/all_alertes.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/commissariats_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/access/admin.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/access/grvpc_show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/commissariats/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/commissariats/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="38" selection-end-column="10" />
-          <folding>
-            <element signature="e#100#1703#0#HTML" />
-            <element signature="e#1368#1604#0#HTML" />
-            <element signature="e#1615#1855#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/access/admin_show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="49" column="68" lean-forward="true" selection-start-line="49" selection-start-column="68" selection-end-line="49" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/parametre/admin.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-286">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/access/grvpc_new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/access/systeme.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="54" column="83" selection-start-line="54" selection-start-column="83" selection-end-line="54" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/access_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="269" column="11" selection-start-line="269" selection-start-column="11" selection-end-line="269" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="48" lean-forward="true" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-          <folding>
-            <element signature="e#532#538#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/access/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="45" column="96" selection-start-line="45" selection-start-column="96" selection-end-line="45" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/grvpc/_left_menu.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -1074,31 +1142,160 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/agents/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="59" column="56" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/groupements/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/groupements/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/groupements/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/groupements/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/groupements_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="72" column="89" selection-start-line="72" selection-start-column="89" selection-end-line="72" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/groupement.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/commissariat.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/commissariats/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/commissariats/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/commissariats_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1430">
+          <caret line="71" column="107" selection-start-line="71" selection-start-column="107" selection-end-line="71" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/commissariats/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/commissariats/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/agent.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/agents/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="143" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/agents_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/agents/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/structures_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/agents/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/structures/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="53" column="105" selection-start-line="53" selection-start-column="105" selection-end-line="53" selection-end-column="105" />
+        <state relative-caret-position="179">
+          <caret line="103" column="9" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/agent.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/postepolices_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        <state relative-caret-position="-198">
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/agents/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/postepolices/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="59" column="56" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
+        <state relative-caret-position="154">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/postepolices/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1109,35 +1306,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/parametre/grvpc.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        <state relative-caret-position="133">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="25" selection-end-column="8" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/parametre/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        <state relative-caret-position="400">
+          <caret line="83" column="93" selection-start-line="83" selection-start-column="93" selection-end-line="83" selection-end-column="93" />
           <folding>
             <element signature="n#div#3;n#div#0;n#!!top" />
-            <element signature="n#div#4;n#div#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/agents_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/infractions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1848">
-          <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/agents/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/infractions/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="35" column="62" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
+        <state relative-caret-position="286">
+          <caret line="13" column="87" selection-start-line="13" selection-start-column="87" selection-end-line="13" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/zonecouverturemotif.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/theme-4fd882d4ca967ed34ada6f9d680231d6ee35487e3faaa19e2a32a47d345fe558.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="1826" column="5" selection-start-line="1826" selection-start-column="5" selection-end-line="1826" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="2119" column="30" selection-start-line="2119" selection-start-column="30" selection-end-line="2119" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_menu.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding>
+            <element signature="e#537#543#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="103" selection-start-line="5" selection-start-column="103" selection-end-line="5" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/fylo.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
         </state>
       </provider>
     </entry>

@@ -25,20 +25,5 @@
   <%= @groupement.email %>
 </p>
 
-<p>
-  <strong>Commandant:</strong>
-  <%= @groupement.agent.name+' '+@groupement.agent.prenom %>
-</p>
-
-<p>
-  <strong>Téléphone commandant:</strong>
-  <%= @groupement.phonecommandant %>
-</p>
-
-<p>
-  <strong>Email commande:</strong>
-  <%= @groupement.emailcommandant %>
-</p>
-
 <%= link_to 'Edit', edit_groupement_path(@groupement) %> |
 <%= link_to 'Back', groupements_path %>
