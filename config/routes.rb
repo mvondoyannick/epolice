@@ -297,7 +297,7 @@ Rails.application.routes.draw do
     get 'convocations/create/:cni/:phone/:immatriculation/:motif/:pieceretenue/:agent', to: 'convocations#conv'
     #connexion d'un utilisateur, return matricule
     get 'convocations/authUser/:phone/:matricule', to: 'convocations#authUser'
-    get 'convocations/verify/:code', to: 'convocations#verifyContravention'
+    get 'convocations/verify/:code/:lang', to: 'convocations#verifyContravention'
     get 'convocations/protectCode/:code', to: 'convocations#protectCode'
     #============================== retourner le type d'infraction ===============================
     get 'alert/types/type', to: 'convocations#api_type'
