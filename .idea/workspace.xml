@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/template/login2.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/template/login2.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/grvpc/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/grvpc/sessions/new.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -102,7 +102,7 @@
           <entry key="convocations" value="1" />
           <entry key="css" value="13" />
           <entry key="dot" value="1" />
-          <entry key="erb" value="878" />
+          <entry key="erb" value="879" />
           <entry key="html" value="12" />
           <entry key="infractions" value="1" />
           <entry key="jbuilder" value="1" />
@@ -112,7 +112,7 @@
           <entry key="png" value="1" />
           <entry key="rails" value="1" />
           <entry key="rake" value="2" />
-          <entry key="rb" value="689" />
+          <entry key="rb" value="690" />
           <entry key="rnc" value="1" />
           <entry key="scss" value="14" />
           <entry key="setup" value="1" />
@@ -132,9 +132,9 @@
           <entry key="Image" value="2" />
           <entry key="JavaScript" value="28" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="RHTML" value="878" />
+          <entry key="RHTML" value="879" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="721" />
+          <entry key="Ruby" value="722" />
           <entry key="SCSS" value="14" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="9" />
@@ -171,20 +171,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/infractions_controller.rb">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/grvpc/sessions/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="6" selection-start-column="6" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/infractions/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="87" selection-start-line="13" selection-start-column="87" selection-end-line="13" selection-end-column="87" />
+            <state relative-caret-position="396">
+              <caret line="30" column="83" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -211,13 +202,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/template/login2.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
               <caret line="24" column="83" selection-start-line="24" selection-start-column="83" selection-end-line="24" selection-end-column="83" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/grvpc/sessions_controller.rb">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -327,7 +323,6 @@
         <option value="$PROJECT_DIR$/app/views/grvpc/detail_alerte.html.erb" />
         <option value="$PROJECT_DIR$/app/views/grvpc/all_contraventions.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/grvpc_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/grvpc/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/access/admin_show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/parametre/admin.html.erb" />
         <option value="$PROJECT_DIR$/app/views/access/grvpc_show.html.erb" />
@@ -374,6 +369,7 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/template/login2.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/grvpc/sessions/new.html.erb" />
       </list>
     </option>
   </component>
@@ -432,8 +428,14 @@
               <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
               <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="grvpc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
@@ -661,7 +663,7 @@
       <workItem from="1541082168117" duration="94000" />
       <workItem from="1541083610295" duration="22411000" />
       <workItem from="1541158467791" duration="9076000" />
-      <workItem from="1541168678228" duration="36414000" />
+      <workItem from="1541168678228" duration="36774000" />
     </task>
     <servers />
   </component>
@@ -671,7 +673,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="915790000" />
+    <option name="totallyTimeSpent" value="916150000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -770,20 +772,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/grvpc/_menu.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/archive/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="51" column="111" selection-start-line="51" selection-start-column="111" selection-end-line="51" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/archive/get_contravention_from_agent.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -1132,6 +1120,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="24" column="83" selection-start-line="24" selection-start-column="83" selection-end-line="24" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/grvpc/sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/grvpc/sessions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="30" column="83" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
         </state>
       </provider>
     </entry>
