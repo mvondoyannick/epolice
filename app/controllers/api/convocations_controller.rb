@@ -106,11 +106,12 @@ class Api::ConvocationsController < ApplicationController
   #permet de verifier une contravention
   def verifyContravention
     code = params[:code]
+    lang = params[:lang]
     @p = Convocation.where(phone: code, status: 'impayé').last
     if @p.nil?
-      render plain: "Le néméro #{code} n'est lié à aucune contravention. Merci"
+      render plain: "Le numéro #{code} n'est lié à aucune contravention. Merci"
     else
-      render plain: "le montant de la contravention du N° #{code} est de #{@p.infraction.montant} "
+      render plain: "Le numéro de téléphone  #{code} : le montant de l'amende à payer est de #{@p.infraction.montant} FCFA"
     end
   end
 
