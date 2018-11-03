@@ -106,7 +106,7 @@ class Api::ConvocationsController < ApplicationController
   #permet de verifier une contravention
   def verifyContravention
     code = params[:code]
-    @p = Convocation.where(phone: code, status: 0).last
+    @p = Convocation.where(phone: code, status: 'impayé').last
     if @p.nil?
       render json: {
         status: :not_found,
