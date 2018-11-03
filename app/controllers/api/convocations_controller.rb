@@ -106,37 +106,18 @@ class Api::ConvocationsController < ApplicationController
   #permet de verifier une contravention
   def verifyContravention
     code = params[:code]
-    @p = Convocation.find_by_code(code.upcase)
+    @p = Convocation.where(phone: code, status: 0).last
     if @p.nil?
       render json: {
         status: :not_found,
-        message: "code inconnu"
+        message: "aucune reponse sur #{code}"
       }
     else
-      if @p.status == "impaye"
-        render json: {
-            status: "code_unused",
-            message: "Ce code est impayé"
-        }
-      else
-        if @p.used == "utilise"
-          render json: {
-              status: :code_used,
-              message: "Ce code est deja utilisé"
-          }
-        else
-          #mise ajour de l'information avant affichage
-          data = Convocation.find_by_code(@p.code)
-          data.update(used: "utilise")
-          render json: {
-              status: :found,
-              message: @p.status,
-              phone: @p.phone,
-              cni: @p.cni,
-              immatriculation: @p.immatriculation
-          }
-        end
-      end
+      render json: {
+          status: :found,
+          message: @p,
+          created_at: Date.today
+      }
     end
   end
 

@@ -23,7 +23,9 @@ class Convocation < ApplicationRecord
 
     public
     def set_status
-        self.status = "Impayé"
+        # 0 = impayé
+        # 1 = payé
+        self.status = 0
     end
 
     def set_code
@@ -36,7 +38,7 @@ class Convocation < ApplicationRecord
     end
 
     def send_sms
-        message = "Bien vouloir payer votre amende pour rentrer en possession de la piece retenue. Code contraveniton : #{self.code}"
+        message = "Mr N° #{self.phone},bien vouloir payer votre amende pour rentrer en possession de la piece retenue. Code contraveniton : #{self.code}, montant: #{infraction.montant} ou rendez-vous sur https://goo.gl/3hm3ke"
         HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{self.phone}&message=#{message}")
     end
 
