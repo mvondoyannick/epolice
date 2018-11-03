@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_02_120355) do
+ActiveRecord::Schema.define(version: 2018_11_03_151310) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -81,7 +81,6 @@ ActiveRecord::Schema.define(version: 2018_11_02_120355) do
     t.bigint "commissariat_id"
     t.string "crypted"
     t.bigint "grade_id"
-    t.bigint "unite_id"
     t.string "age"
     t.string "sexe"
     t.bigint "region_id"
@@ -91,10 +90,11 @@ ActiveRecord::Schema.define(version: 2018_11_02_120355) do
     t.string "expire"
     t.boolean "statusdeleted"
     t.string "lastseenat"
+    t.bigint "groupement_id"
     t.index ["commissariat_id"], name: "index_agents_on_commissariat_id"
     t.index ["grade_id"], name: "index_agents_on_grade_id"
+    t.index ["groupement_id"], name: "index_agents_on_groupement_id"
     t.index ["region_id"], name: "index_agents_on_region_id"
-    t.index ["unite_id"], name: "index_agents_on_unite_id"
   end
 
   create_table "alertes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -582,8 +582,8 @@ ActiveRecord::Schema.define(version: 2018_11_02_120355) do
   add_foreign_key "affectations", "regions"
   add_foreign_key "agents", "commissariats"
   add_foreign_key "agents", "grades"
+  add_foreign_key "agents", "groupements"
   add_foreign_key "agents", "regions"
-  add_foreign_key "agents", "unites"
   add_foreign_key "alertes", "agents"
   add_foreign_key "alertes", "regions"
   add_foreign_key "alertes", "status", column: "statu_id"

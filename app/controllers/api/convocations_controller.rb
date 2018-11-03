@@ -28,12 +28,14 @@ class Api::ConvocationsController < ApplicationController
           {
             name: data.complete_name,
             id: data.id,
-            region: data.region.name,
-            region_id: data.region_id,
+            #region: data.region.name,
+            #region_id: data.region_id,
             grade: data.grade.name,
             grade_id: data.grade_id,
-            unite: data.unite.name,
-            unite_id: data.unite_id,
+            #unite: data.unite.name,
+            #unite_id: data.unite_id,
+            unite: data.groupement.split[0],
+            region: data.groupement.split[1],
             apikey: SecureRandom.hex(10),
             cookies: {
                 value: SecureRandom.hex(10),

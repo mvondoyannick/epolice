@@ -48,6 +48,12 @@
               <input type="text" id="postal-code" value="<%= @agent.region.name if !@agent.region_id.nil? %>" class="form-control">
             </div>
           </div>
+          <div class="col-8">
+            <div class="form-group">
+              <label for="postal-code" class=" form-control-label">GRVPC</label>
+              <input type="text" id="postal-code" value="<%= @agent.groupement.name if !@agent.groupement_id.nil? %>" class="form-control">
+            </div>
+          </div>
         </div>
       </div>
       <div class="card-footer">

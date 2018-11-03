@@ -7,8 +7,9 @@ class Agent < ApplicationRecord
 	has_many :alertes
 	has_many :affectations
 	belongs_to :grade
-	belongs_to :unite
-	#belongs_to :commissariat
+	#belongs_to :unite
+	belongs_to :groupement
+	belongs_to :commissariat
 
 
 	#pour la photo de l'agent
