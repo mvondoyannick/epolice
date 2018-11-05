@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/models/postepolice.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/postepolice.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/postepolices/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/postepolices/_form.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -104,7 +105,7 @@
           <entry key="convocations" value="1" />
           <entry key="css" value="13" />
           <entry key="dot" value="1" />
-          <entry key="erb" value="880" />
+          <entry key="erb" value="881" />
           <entry key="html" value="12" />
           <entry key="infractions" value="1" />
           <entry key="jbuilder" value="1" />
@@ -134,7 +135,7 @@
           <entry key="Image" value="2" />
           <entry key="JavaScript" value="28" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="RHTML" value="880" />
+          <entry key="RHTML" value="881" />
           <entry key="RNG Compact" value="1" />
           <entry key="Ruby" value="724" />
           <entry key="SCSS" value="14" />
@@ -147,7 +148,7 @@
           <entry key="Gemfile" value="533" />
           <entry key="coffee" value="468" />
           <entry key="css" value="398" />
-          <entry key="erb" value="104689" />
+          <entry key="erb" value="104693" />
           <entry key="jbuilder" value="1" />
           <entry key="js" value="352" />
           <entry key="pid" value="1" />
@@ -163,7 +164,7 @@
           <entry key="CoffeeScript" value="468" />
           <entry key="JavaScript" value="352" />
           <entry key="PLAIN_TEXT" value="382" />
-          <entry key="RHTML" value="104689" />
+          <entry key="RHTML" value="104693" />
           <entry key="Ruby" value="48695" />
           <entry key="SCSS" value="204" />
           <entry key="YAML" value="145" />
@@ -173,15 +174,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/template/login2.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/sessions/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -200,11 +192,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/postepolice.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
               <caret line="11" column="104" selection-start-line="11" selection-start-column="104" selection-end-line="11" selection-end-column="104" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/postepolices/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="97">
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -345,7 +346,6 @@
         <option value="$PROJECT_DIR$/app/controllers/agents_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/agents/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/structures/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/postepolices/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/parametre/grvpc.html.erb" />
         <option value="$PROJECT_DIR$/app/views/parametre/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/infractions/index.html.erb" />
@@ -362,6 +362,7 @@
         <option value="$PROJECT_DIR$/app/views/admin/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/postepolices_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/postepolice.rb" />
+        <option value="$PROJECT_DIR$/app/views/postepolices/_form.html.erb" />
       </list>
     </option>
   </component>
@@ -672,7 +673,7 @@
       <workItem from="1541158467791" duration="9076000" />
       <workItem from="1541168678228" duration="37604000" />
       <workItem from="1541408224551" duration="859000" />
-      <workItem from="1541422336947" duration="1244000" />
+      <workItem from="1541422336947" duration="2043000" />
     </task>
     <servers />
   </component>
@@ -682,7 +683,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="919083000" />
+    <option name="totallyTimeSpent" value="919882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -704,7 +705,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.37527114" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49840087" side_tool="true" visible="true" weight="0.5759219" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49840087" side_tool="true" visible="true" weight="0.46095446" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -980,13 +981,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/postepolices/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/parametre_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1012">
@@ -1111,6 +1105,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="11" column="104" selection-start-line="11" selection-start-column="104" selection-end-line="11" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/postepolices/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
         </state>
       </provider>
     </entry>
