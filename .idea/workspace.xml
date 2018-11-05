@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/postepolices/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/postepolices/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -114,7 +114,7 @@
           <entry key="png" value="1" />
           <entry key="rails" value="1" />
           <entry key="rake" value="2" />
-          <entry key="rb" value="692" />
+          <entry key="rb" value="693" />
           <entry key="rnc" value="1" />
           <entry key="scss" value="14" />
           <entry key="setup" value="1" />
@@ -136,7 +136,7 @@
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="RHTML" value="882" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="724" />
+          <entry key="Ruby" value="725" />
           <entry key="SCSS" value="14" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="9" />
@@ -151,7 +151,7 @@
           <entry key="jbuilder" value="1" />
           <entry key="js" value="352" />
           <entry key="pid" value="1" />
-          <entry key="rb" value="48161" />
+          <entry key="rb" value="48163" />
           <entry key="scss" value="204" />
           <entry key="txt" value="381" />
           <entry key="yml" value="145" />
@@ -164,7 +164,7 @@
           <entry key="JavaScript" value="352" />
           <entry key="PLAIN_TEXT" value="382" />
           <entry key="RHTML" value="104754" />
-          <entry key="Ruby" value="48695" />
+          <entry key="Ruby" value="48697" />
           <entry key="SCSS" value="204" />
           <entry key="YAML" value="145" />
         </counts>
@@ -200,11 +200,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/postepolices/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
               <caret line="14" column="74" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -214,15 +223,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -334,7 +334,6 @@
         <option value="$PROJECT_DIR$/sms.rb" />
         <option value="$PROJECT_DIR$/app/models/convocation.rb" />
         <option value="$PROJECT_DIR$/app/views/agents/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/groupement.rb" />
         <option value="$PROJECT_DIR$/app/views/groupements/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/groupements/_form.html.erb" />
@@ -366,6 +365,7 @@
         <option value="$PROJECT_DIR$/app/views/postepolices/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/postepolice.rb" />
         <option value="$PROJECT_DIR$/app/views/postepolices/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" />
       </list>
     </option>
   </component>
@@ -676,7 +676,7 @@
       <workItem from="1541158467791" duration="9076000" />
       <workItem from="1541168678228" duration="37604000" />
       <workItem from="1541408224551" duration="859000" />
-      <workItem from="1541422336947" duration="3991000" />
+      <workItem from="1541422336947" duration="4626000" />
     </task>
     <servers />
   </component>
@@ -686,7 +686,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="921830000" />
+    <option name="totallyTimeSpent" value="922465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -708,7 +708,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.37527114" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49840087" side_tool="true" visible="true" weight="0.46095446" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49840087" side_tool="true" visible="true" weight="0.4284165" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -838,13 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
           <caret line="59" column="56" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1115,6 +1108,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="14" column="74" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
         </state>
       </provider>
     </entry>

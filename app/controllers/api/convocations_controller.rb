@@ -34,8 +34,8 @@ class Api::ConvocationsController < ApplicationController
             grade_id: data.grade_id,
             #unite: data.unite.name,
             #unite_id: data.unite_id,
-            unite: data.groupement.split[0],
-            region: data.groupement.split[1],
+            #unite: data.groupement.split[0],
+            #region: data.groupement.split[1],
             apikey: SecureRandom.hex(10),
             cookies: {
                 value: SecureRandom.hex(10),
