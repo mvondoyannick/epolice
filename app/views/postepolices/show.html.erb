@@ -11,34 +11,15 @@
 </p>
 
 <p>
+  <strong>Commissariat</strong>
+  <%= @postepolice.commissariat.name if !@postepolice.commissariat_id.nil? %>
+</p>
+
+<p>
   <strong>Location:</strong>
   <%= @postepolice.location %>
 </p>
 
-<p>
-  <strong>Agent responsable:</strong>
-  <%= @postepolice.agent.complete_name %>
-</p>
-
-<p>
-  <strong>Commissariat:</strong>
-  <%= @postepolice.commissariat.name %>
-</p>
-
-<p>
-  <strong>Grade:</strong>
-  <%= @postepolice.grade.name %>
-</p>
-
-<p>
-  <strong>Téléphone:</strong>
-  <%= @postepolice.phone %>
-</p>
-
-<p>
-  <strong>Adresse email:</strong>
-  <%= @postepolice.email %>
-</p>
 
 <%= link_to 'Edit', edit_postepolice_path(@postepolice) %> |
 <%= link_to 'Back', postepolices_path %>
