@@ -16,6 +16,8 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 #breadcrumb
 gem 'breadcrumbs_on_rails'
+#adding carrierwave
+gem 'carrierwave', '~> 1.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -73,7 +75,7 @@ gem "d3-rails"
 #integrating chartjs rails
 gem 'chart-js-rails'
 #pour le breadcrumb
-gem "breadcrumbs_on_rails"
+#gem "breadcrumbs_on_rails"
 #gestion des charts pour les statistiques
 gem "chartkick"
 #ajout de onesignal

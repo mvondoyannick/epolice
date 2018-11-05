@@ -11,7 +11,8 @@ class Alerte < ApplicationRecord
   validates_presence_of :latitude, presence: true
 
   #ajout de active storage pour les fichiers
-  has_one_attached :photo
+  #has_one_attached :photo
+  mount_uploader :photo, PhotoUploader
 
   def self.to_csv
     CSV.generate do |csv|

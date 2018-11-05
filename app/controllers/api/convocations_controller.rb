@@ -4,6 +4,7 @@ class Api::ConvocationsController < ApplicationController
   require 'uri'
   require 'httparty'
   require 'base64'
+  require 'carrierwave/orm/activerecord'
 
   #autoriser les connexion en https
   #HTTParty::Basement.default_options.update(verify: false)
@@ -34,6 +35,9 @@ class Api::ConvocationsController < ApplicationController
             grade_id: data.grade_id,
             #unite: data.unite.name,
             #unite_id: data.unite_id,
+            unite: Groupement.find(data.groupement_id).name.split[0],
+            unite_id: data.groupement_id,
+            region: Groupement.find(data.groupement_id).name.split[1],
             #unite: data.groupement.split[0],
             #region: data.groupement.split[1],
             apikey: SecureRandom.hex(10),
@@ -130,6 +134,9 @@ class Api::ConvocationsController < ApplicationController
     agent = params[:agent_id]
     status = "unresolve"
 
+    #introcduction de la photo
+
+
     #creation d'une alerte
     query = Alerte.new(
         titre: titre,
@@ -140,6 +147,12 @@ class Api::ConvocationsController < ApplicationController
         agent_id: agent,
         status: status
     )
+
+    #on joint la photo
+    query.photo = params[:photo]
+
+    #on enregistre les données
+
     if query.save
       render json: {
           status: :created,
@@ -375,10 +388,10 @@ class Api::ConvocationsController < ApplicationController
         render json: {
           data:
             {
-                token: nil,
-                affectation_status: false,
-                status: :no_data_found,
-                message: 'Aucune affectation trouvée'
+              token: nil,
+              affectation_status: false,
+              status: :no_data_found,
+              message: 'Aucune affectation trouvée'
             }
         }
       end
