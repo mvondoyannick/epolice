@@ -72,6 +72,6 @@ class PostepolicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def postepolice_params
-      params.require(:postepolice).permit(:name, :location, :agent_id, :commissariat_id, :region_id, :grade_id, :phone, :email)
+      params.require(:postepolice).permit(:name, :location, :commissariat_id, :region_id)
     end
 end
