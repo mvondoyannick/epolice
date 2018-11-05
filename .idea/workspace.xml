@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/postepolices_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/postepolices_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/sessions/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/postepolice.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/postepolice.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -116,7 +114,7 @@
           <entry key="png" value="1" />
           <entry key="rails" value="1" />
           <entry key="rake" value="2" />
-          <entry key="rb" value="691" />
+          <entry key="rb" value="692" />
           <entry key="rnc" value="1" />
           <entry key="scss" value="14" />
           <entry key="setup" value="1" />
@@ -138,7 +136,7 @@
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="RHTML" value="880" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="723" />
+          <entry key="Ruby" value="724" />
           <entry key="SCSS" value="14" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="9" />
@@ -153,7 +151,7 @@
           <entry key="jbuilder" value="1" />
           <entry key="js" value="352" />
           <entry key="pid" value="1" />
-          <entry key="rb" value="48042" />
+          <entry key="rb" value="48161" />
           <entry key="scss" value="204" />
           <entry key="txt" value="381" />
           <entry key="yml" value="145" />
@@ -166,7 +164,7 @@
           <entry key="JavaScript" value="352" />
           <entry key="PLAIN_TEXT" value="382" />
           <entry key="RHTML" value="104689" />
-          <entry key="Ruby" value="48576" />
+          <entry key="Ruby" value="48695" />
           <entry key="SCSS" value="204" />
           <entry key="YAML" value="145" />
         </counts>
@@ -175,15 +173,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/fylo.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="25" selection-end-column="91" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/template/login2.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -202,11 +191,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/postepolices_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="145">
               <caret line="74" column="60" lean-forward="true" selection-start-line="74" selection-start-column="60" selection-end-line="74" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/postepolice.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="104" selection-start-line="11" selection-start-column="104" selection-end-line="11" selection-end-column="104" />
             </state>
           </provider>
         </entry>
@@ -313,7 +311,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/grvpc/all_contraventions.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/grvpc_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/access/admin_show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/parametre/admin.html.erb" />
@@ -364,6 +361,7 @@
         <option value="$PROJECT_DIR$/app/views/grvpc/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/postepolices_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/postepolice.rb" />
       </list>
     </option>
   </component>
@@ -498,7 +496,7 @@
     <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
-    <property name="SearchEverywhereHistoryKey" value="poste&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/postepolices_controller.rb&#10;assets.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb&#10;application.sc&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.scss&#10;application.js&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/javascripts/application.js&#10;menu&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_menu.html.erb&#10;theme.css&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/theme.css&#10;fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/fylo.html.erb&#10;zonecou&#9;null&#9;null&#10;infr&#9;null&#9;null&#10;parame&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;struc&#9;null&#9;null&#10;agent&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/agent.rb&#10;commissa&#9;null&#9;null&#10;groupeme&#9;null&#9;null&#10;con&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/api/convocations_controller.rb&#10;para&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;gro&#9;null&#9;null&#10;routes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;convoca&#9;null&#9;null&#10;sms&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/sms.rb&#10;affectation&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/affectations_controller.rb&#10;affecta&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/affectations_controller.rb&#10;arc&#9;null&#9;null&#10;grvpc&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;_fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_fylo_sidebar.html.erb&#10;commis&#9;null&#9;null&#10;parametre&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;sms.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/sms.rb&#10;comment&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/comments_controller.rb&#10;access&#9;null&#9;null&#10;detail&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/grvpc/detail_alerte.html.erb&#10;comment.r&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/comment.rb&#10;alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/alerte.rb&#10;alertes_con&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;grvp&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;gestion_contra&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_contravention_controller.rb&#10;gestion_alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_alerte_controller.rb&#10;alertes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;application&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;route&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;alertes_contr&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;application.html.erb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;application.h&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/application.html.erb&#10;grvpc_&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;convoc&#9;null&#9;null&#10;gestion_alert&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_alerte_controller.rb&#10;conv&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/api/convocations_controller.rb&#10;typ&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/type.rb&#10;type.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/type.rb&#10;typescon&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="postepolice&#9;null&#9;null&#10;poste&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/postepolices_controller.rb&#10;assets.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb&#10;application.sc&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.scss&#10;application.js&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/javascripts/application.js&#10;menu&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_menu.html.erb&#10;theme.css&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/theme.css&#10;fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/fylo.html.erb&#10;zonecou&#9;null&#9;null&#10;infr&#9;null&#9;null&#10;parame&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;struc&#9;null&#9;null&#10;agent&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/agent.rb&#10;commissa&#9;null&#9;null&#10;groupeme&#9;null&#9;null&#10;con&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/api/convocations_controller.rb&#10;para&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;gro&#9;null&#9;null&#10;routes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;convoca&#9;null&#9;null&#10;sms&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/sms.rb&#10;affectation&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/affectations_controller.rb&#10;affecta&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/affectations_controller.rb&#10;arc&#9;null&#9;null&#10;grvpc&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;_fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_fylo_sidebar.html.erb&#10;commis&#9;null&#9;null&#10;parametre&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;sms.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/sms.rb&#10;comment&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/comments_controller.rb&#10;access&#9;null&#9;null&#10;detail&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/grvpc/detail_alerte.html.erb&#10;comment.r&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/comment.rb&#10;alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/alerte.rb&#10;alertes_con&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;grvp&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;gestion_contra&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_contravention_controller.rb&#10;gestion_alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_alerte_controller.rb&#10;alertes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;application&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;route&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;alertes_contr&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;application.html.erb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;application.h&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/application.html.erb&#10;grvpc_&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;convoc&#9;null&#9;null&#10;gestion_alert&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_alerte_controller.rb&#10;conv&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/api/convocations_controller.rb&#10;typ&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/type.rb&#10;type.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/type.rb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -674,7 +672,7 @@
       <workItem from="1541158467791" duration="9076000" />
       <workItem from="1541168678228" duration="37604000" />
       <workItem from="1541408224551" duration="859000" />
-      <workItem from="1541422336947" duration="329000" />
+      <workItem from="1541422336947" duration="1244000" />
     </task>
     <servers />
   </component>
@@ -684,7 +682,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="918168000" />
+    <option name="totallyTimeSpent" value="919083000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -783,13 +781,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/archive_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/grvpc/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -1113,6 +1104,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="74" column="60" lean-forward="true" selection-start-line="74" selection-start-column="60" selection-end-line="74" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/postepolice.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="104" selection-start-line="11" selection-start-column="104" selection-end-line="11" selection-end-column="104" />
         </state>
       </provider>
     </entry>
