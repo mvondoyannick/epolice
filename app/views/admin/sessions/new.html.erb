@@ -5,23 +5,31 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><%= full_title(yield :title)%></title>
+
     <!-- Fontfaces CSS-->
-    <%= stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/font-awesome-5/css/fontawesome-all.min.css' %>
-    <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/font-awesome-4.7/css/font-awesome.min.css' %>
-    <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/vendor/mdi-font/css/material-design-iconic-font.min.css' %>
+    <link href="https://colorlib.com/polygon/cooladmin/css/font-face.css" rel="stylesheet" media="all">
+    <link href="https://colorlib.com/polygon/cooladmin/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://colorlib.com/polygon/cooladmin/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="https://colorlib.com/polygon/cooladmin/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
+    <!-- Bootstrap CSS-->
+    <link href="https://colorlib.com/polygon/cooladmin/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
 
-    <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/css/font-face.css' %>
-    <%= stylesheet_link_tag 'https://colorlib.com/polygon/cooladmin/css/theme.css' %>
-
+    <!-- Vendor CSS-->
+    <link href="https://colorlib.com/polygon/cooladmin/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="https://colorlib.com/polygon/cooladmin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="https://colorlib.com/polygon/cooladmin/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="https://colorlib.com/polygon/cooladmin/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="https://colorlib.com/polygon/cooladmin/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="https://colorlib.com/polygon/cooladmin/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="https://colorlib.com/polygon/cooladmin/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
-    <%= javascript_include_tag 'application.js', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/js/main.js', media: ':all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://colorlib.com/polygon/cooladmin/css/theme.css" rel="stylesheet" media="all">
+
   </head>
 
-  <body class="">
+  <body class="animsition" style="animation-duration: 900ms; opacity: 1;">
   <div class="page-wrapper">
     <div class="page-content--bge5">
       <div class="container">
@@ -48,14 +56,18 @@
                     <%= f.input :remember_me, label: 'Se souvenir de moi', as: :boolean if devise_mapping.rememberable? %>
                   </label>
                 </div>
-                <%= f.button :submit, "Se connecter", class: 'btn btn-primary' %>
+                <div class="text-right">
+                  <%= f.button :submit, "Se connecter", class: 'btn btn-primary' %>
+                </div>
               <% end %>
-              <div class="register-link">
-                <p>
-                  Don't you have account?
-                  <%= link_to "request account", new_admin_registration_path %>
-                </p>
-              </div>
+              <% if Admin.nil? %>
+                <div class="register-link">
+                  <p>
+                    Don't you have account?
+                    <%= link_to "request account", new_admin_registration_path %>
+                  </p>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>
@@ -64,7 +76,25 @@
 
   </div>
   </body>
-
+  <!-- Jquery JS-->
+  <script src="https://colorlib.com/polygon/cooladmin/vendor/jquery-3.2.1.min.js"></script>
+  <!-- Bootstrap JS-->
+  <script src="https://colorlib.com/polygon/cooladmin/vendor/bootstrap-4.1/popper.min.js"></script>
+  <script src="https://colorlib.com/polygon/cooladmin/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+  <!-- Vendor JS       -->
+  <script src="https://colorlib.com/polygon/cooladmin/vendor/slick/slick.min.js">
+  </script>
+  <script src="https://colorlib.com/polygon/cooladmin/vendor/wow/wow.min.js"></script>
+  <script src="https://colorlib.com/polygon/cooladmin/vendor/animsition/animsition.min.js"></script>
+  <script src="https://colorlib.com/polygon/cooladmin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+  </script>
+  <script src="https://colorlib.com/polygon/cooladmin/vendor/counter-up/jquery.waypoints.min.js"></script>
+  <script src="https://colorlib.com/polygon/cooladmin/vendor/counter-up/jquery.counterup.min.js">
+  </script>
+  <script src="https://colorlib.com/polygon/cooladmin/vendor/circle-progress/circle-progress.min.js"></script>
+  <script src="https://colorlib.com/polygon/cooladmin/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="https://colorlib.com/polygon/cooladmin/vendor/chartjs/Chart.bundle.min.js"></script>
+  <script src="https://colorlib.com/polygon/cooladmin/vendor/select2/select2.min.js"></script>
   </html>
   <!-- end document-->
 

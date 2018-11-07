@@ -194,7 +194,8 @@ class Api::ConvocationsController < ApplicationController
 
     #il faudra verifier si l'utilisateur et son téléphone sont authorisé et sont programmés
 
-    a = Convocation.new(cni: params[:cni], phone: params[:phone], infraction_id: params[:motif], pieceretenu_id: params[:pieceretenue], agent_id: params[:agent], immatriculation: params[:immatriculation], status: "impayé")
+    #a = Convocation.new(cni: params[:cni], phone: params[:phone], infraction_id: params[:motif], pieceretenu_id: params[:pieceretenue], agent_id: params[:agent], immatriculation: params[:immatriculation], status: "impayé")
+    a = Convocation.new(infraction_params)
     if a.save
       #message = "Le numero de telephone #{a.phone} ou le code #{a.code} est verbalise pour le(s) motif(s) ci-apres : #{a.infraction.motif}. Le montant de l amende est de : #{a.infraction.montant} F CFA."
       #HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{a.phone}&message=#{message}")
@@ -206,7 +207,6 @@ class Api::ConvocationsController < ApplicationController
     else
       render json: {
         status: :unprocessable_entity,
-        message: a.errors,
         data: a.errors.messages
       }.to_json    
     end
@@ -450,5 +450,9 @@ class Api::ConvocationsController < ApplicationController
 
     def alert_params
       params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre)
+    end
+
+    def infraction_params
+      params.permit(:infraction_id, :pieceretenu_id, :agent_id, :phone, :cni, :immatriculation)
     end
 end

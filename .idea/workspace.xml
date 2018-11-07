@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/sessions/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -78,7 +82,7 @@
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.54" value="2" />
           <entry key="project.open.time.56" value="1" />
-          <entry key="project.open.time.57" value="1" />
+          <entry key="project.open.time.57" value="2" />
           <entry key="project.open.time.58" value="4" />
           <entry key="project.open.time.59" value="1" />
           <entry key="project.open.time.61" value="1" />
@@ -93,7 +97,7 @@
           <entry key="project.open.time.78" value="1" />
           <entry key="project.open.time.9" value="1" />
           <entry key="project.open.time.98" value="1" />
-          <entry key="project.opened" value="55" />
+          <entry key="project.opened" value="56" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -104,12 +108,12 @@
           <entry key="convocations" value="1" />
           <entry key="css" value="13" />
           <entry key="dot" value="1" />
-          <entry key="erb" value="883" />
+          <entry key="erb" value="886" />
           <entry key="html" value="12" />
           <entry key="infractions" value="1" />
           <entry key="jbuilder" value="1" />
           <entry key="jpeg" value="1" />
-          <entry key="js" value="28" />
+          <entry key="js" value="29" />
           <entry key="pid" value="3" />
           <entry key="png" value="1" />
           <entry key="rails" value="1" />
@@ -132,9 +136,9 @@
           <entry key="Database Element" value="4" />
           <entry key="HTML" value="12" />
           <entry key="Image" value="2" />
-          <entry key="JavaScript" value="28" />
+          <entry key="JavaScript" value="29" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="RHTML" value="883" />
+          <entry key="RHTML" value="886" />
           <entry key="RNG Compact" value="1" />
           <entry key="Ruby" value="731" />
           <entry key="SCSS" value="14" />
@@ -147,11 +151,11 @@
           <entry key="Gemfile" value="555" />
           <entry key="coffee" value="468" />
           <entry key="css" value="398" />
-          <entry key="erb" value="104761" />
+          <entry key="erb" value="104882" />
           <entry key="jbuilder" value="1" />
           <entry key="js" value="352" />
           <entry key="pid" value="1" />
-          <entry key="rb" value="48471" />
+          <entry key="rb" value="48609" />
           <entry key="scss" value="204" />
           <entry key="txt" value="381" />
           <entry key="yml" value="145" />
@@ -163,8 +167,8 @@
           <entry key="CoffeeScript" value="468" />
           <entry key="JavaScript" value="352" />
           <entry key="PLAIN_TEXT" value="382" />
-          <entry key="RHTML" value="104761" />
-          <entry key="Ruby" value="49027" />
+          <entry key="RHTML" value="104882" />
+          <entry key="Ruby" value="49165" />
           <entry key="SCSS" value="204" />
           <entry key="YAML" value="145" />
         </counts>
@@ -173,11 +177,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="209" column="31" lean-forward="true" selection-start-line="209" selection-start-column="31" selection-end-line="209" selection-end-column="31" />
+            <state relative-caret-position="352">
+              <caret line="208" column="38" selection-start-line="208" selection-start-column="38" selection-end-line="208" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/template/login2.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-506">
+              <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/fylo.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -194,8 +216,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/sessions/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="20" column="91" selection-start-line="20" selection-start-column="91" selection-end-line="20" selection-end-column="91" />
+            <state relative-caret-position="176">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="27" selection-end-column="99" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="498">
+              <caret line="25" column="99" selection-start-line="25" selection-start-column="99" selection-end-line="25" selection-end-column="99" />
             </state>
           </provider>
         </entry>
@@ -212,7 +246,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="1694">
               <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
             </state>
           </provider>
@@ -315,8 +349,6 @@
         <option value="$PROJECT_DIR$/app/models/zonecouverturemotif.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/theme.css" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" />
         <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
@@ -326,10 +358,12 @@
         <option value="$PROJECT_DIR$/app/views/postepolices/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/postepolice.rb" />
         <option value="$PROJECT_DIR$/app/views/postepolices/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/admin/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/models/alerte.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admin/sessions/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" />
       </list>
     </option>
   </component>
@@ -366,6 +400,7 @@
     </navigator>
     <panes>
       <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -444,14 +479,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
-    <property name="SearchEverywhereHistoryKey" value="alerte.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/alerte.rb&#10;gemfil&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;archiv&#9;null&#9;null&#10;postepolice&#9;null&#9;null&#10;poste&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/postepolices_controller.rb&#10;assets.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb&#10;application.sc&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.scss&#10;application.js&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/javascripts/application.js&#10;menu&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_menu.html.erb&#10;theme.css&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/theme.css&#10;fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/fylo.html.erb&#10;zonecou&#9;null&#9;null&#10;infr&#9;null&#9;null&#10;parame&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;struc&#9;null&#9;null&#10;agent&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/agent.rb&#10;commissa&#9;null&#9;null&#10;groupeme&#9;null&#9;null&#10;con&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/api/convocations_controller.rb&#10;para&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;gro&#9;null&#9;null&#10;routes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;convoca&#9;null&#9;null&#10;sms&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/sms.rb&#10;affectation&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/affectations_controller.rb&#10;affecta&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/affectations_controller.rb&#10;arc&#9;null&#9;null&#10;grvpc&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;_fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_fylo_sidebar.html.erb&#10;commis&#9;null&#9;null&#10;parametre&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;sms.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/sms.rb&#10;comment&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/comments_controller.rb&#10;access&#9;null&#9;null&#10;detail&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/grvpc/detail_alerte.html.erb&#10;comment.r&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/comment.rb&#10;alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/alerte.rb&#10;alertes_con&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;grvp&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;gestion_contra&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_contravention_controller.rb&#10;gestion_alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_alerte_controller.rb&#10;alertes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;application&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;route&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;alertes_contr&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;application.html.erb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;application.h&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/application.html.erb&#10;grvpc_&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;convoc&#9;null&#9;null&#10;gestion_alert&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_alerte_controller.rb" />
+    <property name="SearchEverywhereHistoryKey" value="fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/fylo.html.erb&#10;application&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;login2&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/template/login2.html.erb&#10;alerte.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/alerte.rb&#10;gemfil&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/Gemfile&#10;archiv&#9;null&#9;null&#10;postepolice&#9;null&#9;null&#10;poste&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/postepolices_controller.rb&#10;assets.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/initializers/assets.rb&#10;application.sc&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/application.scss&#10;application.js&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/javascripts/application.js&#10;menu&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_menu.html.erb&#10;theme.css&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/assets/stylesheets/theme.css&#10;zonecou&#9;null&#9;null&#10;infr&#9;null&#9;null&#10;parame&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;struc&#9;null&#9;null&#10;agent&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/agent.rb&#10;commissa&#9;null&#9;null&#10;groupeme&#9;null&#9;null&#10;con&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/api/convocations_controller.rb&#10;para&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;gro&#9;null&#9;null&#10;routes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;convoca&#9;null&#9;null&#10;sms&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/sms.rb&#10;affectation&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/affectations_controller.rb&#10;affecta&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/affectations_controller.rb&#10;arc&#9;null&#9;null&#10;grvpc&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;_fylo&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/_fylo_sidebar.html.erb&#10;commis&#9;null&#9;null&#10;parametre&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/parametre_controller.rb&#10;sms.rb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/sms.rb&#10;comment&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/comments_controller.rb&#10;access&#9;null&#9;null&#10;detail&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/grvpc/detail_alerte.html.erb&#10;comment.r&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/comment.rb&#10;alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/models/alerte.rb&#10;alertes_con&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;grvp&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;gestion_contra&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_contravention_controller.rb&#10;gestion_alerte&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/gestion_alerte_controller.rb&#10;alertes&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;route&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/config/routes.rb&#10;alertes_contr&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/alertes_controller.rb&#10;application.html.erb&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/layouts/application.html.erb&#10;application.h&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/views/access/application.html.erb&#10;grvpc_&#9;FILE&#9;file://C:/Users/agis/Desktop/pop-circulation/app/controllers/grvpc_controller.rb&#10;convoc&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -627,7 +661,8 @@
       <workItem from="1541158467791" duration="9076000" />
       <workItem from="1541168678228" duration="37604000" />
       <workItem from="1541408224551" duration="859000" />
-      <workItem from="1541422336947" duration="9662000" />
+      <workItem from="1541422336947" duration="10354000" />
+      <workItem from="1541580606476" duration="1877000" />
     </task>
     <servers />
   </component>
@@ -637,13 +672,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="927501000" />
+    <option name="totallyTimeSpent" value="930070000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7567185" visible="true" weight="0.14072494" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7567185" visible="true" weight="0.14232409" />
       <window_info id="Structure" order="1" sideWeight="0.24328147" side_tool="true" weight="0.22707888" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -659,7 +694,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.37527114" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49840087" side_tool="true" visible="true" weight="0.30477223" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49840087" side_tool="true" visible="true" weight="0.26898047" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -940,20 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/fylo.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="25" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/template/login2.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/grvpc/sessions_controller.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -961,13 +982,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1006,17 +1020,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+    <entry file="file://$PROJECT_DIR$/app/uploaders/photo_uploader.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20181105163141_add_photo_to_alerte.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        <state relative-caret-position="352">
+          <caret line="208" column="38" selection-start-line="208" selection-start-column="38" selection-end-line="208" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/sessions/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/alerte.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="20" column="91" selection-start-line="20" selection-start-column="91" selection-end-line="20" selection-end-column="91" />
+        <state relative-caret-position="308">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1029,35 +1049,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="1694">
           <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/uploaders/photo_uploader.rb">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_fylo_sidebar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20181105163141_add_photo_to_alerte.rb">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        <state relative-caret-position="498">
+          <caret line="25" column="99" selection-start-line="25" selection-start-column="99" selection-end-line="25" selection-end-column="99" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/alerte.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/admin/sessions/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        <state relative-caret-position="176">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="27" selection-end-column="99" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/template/login2.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="209" column="31" lean-forward="true" selection-start-line="209" selection-start-column="31" selection-end-line="209" selection-end-column="31" />
+        <state relative-caret-position="-506">
+          <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/fylo.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
         </state>
       </provider>
     </entry>
