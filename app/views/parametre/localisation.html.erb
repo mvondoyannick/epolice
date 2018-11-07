@@ -1,8 +1,5 @@
 <h1 class="m-b-40">
-  <%= link_to :back do %>
-    <i class="fa fa-arrow-left"></i>
-  <% end %>
-  Configuration de la localisation
+  Découpage administratif
 </h1>
 <div class="row">
   <div class="col-lg-3">
@@ -44,19 +41,6 @@
       <div class="card-footer text-muted">
         <%= link_to 'Aperçu', arrondissements_path, class: 'card-link btn btn-sm btn-primary' %>
         <%= link_to 'Ajouter', new_arrondissement_path, class: 'card-link btn btn-sm btn-primary' %>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3">
-    <div class="card" style="height: 13rem;">
-      <div class="card-body">
-        <h5 class="card-title"><%= link_to "Types d'evenements", types_path, class: 'noir' %></h5>
-        <h6 class="card-subtitle mb-2 text-muted"></h6>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer text-mutted">
-        <%= link_to 'Aperçu', types_path, class: 'card-link btn btn-sm btn-primary' %>
-        <%= link_to 'Ajouter', new_type_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>

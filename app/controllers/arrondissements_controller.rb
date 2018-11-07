@@ -2,6 +2,7 @@ class ArrondissementsController < ApplicationController
   before_action :set_arrondissement, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
   add_breadcrumb "Acceuil", :parametre_index_path
+  add_breadcrumb "découpage administratif", :parametre_localisation_path
   add_breadcrumb "gestion des arrondissements", :arrondissements_path
   layout 'fylo'
   # GET /arrondissements

@@ -1,11 +1,12 @@
 class ParametreController < ApplicationController
   before_action :authenticate_admin!
   layout 'fylo'
-  add_breadcrumb "home", :parametre_index_path
+  add_breadcrumb "accueil", :parametre_index_path
+
 
   def index
 
-    add_breadcrumb "index", :parametre_index_path
+    add_breadcrumb "fichiers de données", :parametre_index_path
   end
 
   def gestion_sturcture_partenaire
@@ -13,7 +14,7 @@ class ParametreController < ApplicationController
   end
 
   def localisation
-    add_breadcrumb "localisation", :parametre_localisation_path
+    add_breadcrumb "découpage administratif", :parametre_localisation_path
   end
 
   def region
@@ -39,7 +40,7 @@ class ParametreController < ApplicationController
     @metropolis = Metropoli.all
 
     @agent = Agent.all
-    add_breadcrumb "localisation", :parametre_localisation_path
+    add_breadcrumb "comptes utilisateurs", :parametre_admin_path
   end
 
 

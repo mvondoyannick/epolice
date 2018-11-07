@@ -2,6 +2,7 @@ class DepartementsController < ApplicationController
   before_action :set_departement, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
   add_breadcrumb "Acceuil", :parametre_index_path
+  add_breadcrumb "découpage administratif", :parametre_localisation_path
   add_breadcrumb "gestion des departements", :departements_path
   layout 'fylo'
   # GET /departements
