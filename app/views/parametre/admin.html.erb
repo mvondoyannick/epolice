@@ -297,10 +297,10 @@
               <%= agent.phone %>
             </td>
             <td>
-              <%= link_to agent.unite.name, nil, class: "role user" %>
+              <%= link_to agent.groupement.name.split[0], nil, class: "role user" %>
             </td>
             <td>
-              <%= agent.region.name %>
+              <%= agent.groupement.name.split[1] %>
             </td>
             <td>
               <div class="rs-select2--trans rs-select2--sm">

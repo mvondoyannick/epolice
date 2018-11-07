@@ -15,12 +15,14 @@ class Agent < ApplicationRecord
 
 	#has_one_attached :avatar
 
-	validates :name, presence: {message: 'Merci de fournir le nom.'}
+	validates :name, presence: {message: 'Merci de fournir le nom.'}, uniqueness: {message: '%{value} existe deja.'}
 	validates :age, presence: {message: 'Merci de selectionner age.'}
 	validates :matricule, presence: {message: 'Merci de fournir un matricule'}, uniqueness: {message: '%{value} existe deja.'}
 	validates :sexe, presence: {message: 'merci de selectionner un sexe'}
-	validates :phone, presence: {message: 'Merci de fournir le numéro de téléphone'}, uniqueness: {message: '%{value} existe deja.'}
-	validates :grade, presence: {message: 'Merci de selectionner le grade.'}
+	validates :phone, presence: {message: 'Merci de fournir le numéro de téléphone'}, uniqueness: {message: '%{value} existe deja.', case_sensitive: false}, length: {is: 9, message: '%{value} doit contenir 9 chiffres'}, numericality: { only_integer: true }
+	validates :grade_id, presence: {message: 'Merci de selectionner le grade.'}
+	validates :groupement_id, presence: {message: 'Merci de selectionner le groupement.'}
+	validates :commissariat_id, presence: {message: 'Merci de selectionner le commissariat.'}
 	#validates :region, presence: {message: 'Merci de selectionner la région.'}
 
 	#pour les villes d'affectations

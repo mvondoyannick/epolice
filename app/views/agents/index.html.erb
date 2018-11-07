@@ -1,19 +1,16 @@
 <% content_for(:title, 'DASHBOARD GESTION DES AGENTS')%>
 <p id="notice"><%= notice %></p>
 
-<%= link_to new_agent_path, class: 'btn btn-primary m-b-40' do %>
+<%= link_to new_agent_path, class: 'btn btn-primary m-b-40 btn-sm' do %>
   <i class="fa fa-plus"></i>
   Ajouter un agent
 <% end %>
 <h1 class="m-b-40">
-  <%= link_to :back do %>
-    <i class="fa fa-arrow-left"></i>
-  <% end %>
-  Agent de police
+  Agents de police
 </h1>
 
 <div class="row">
-  <div class="col-lg-12">
+  <div class="col-lg-12 col-xl-12 col-sm-12 table-responsive">
     <div class="table-responsive table--no-card m-b-30">
       <table class="table table-borderless table-striped table-earning table-borderless table-active">
         <thead>
@@ -23,7 +20,6 @@
           <th>Phone</th>
           <th>Région</th>
           <th>GRVPC</th>
-          <th>Commissariat</th>
           <th colspan="3"></th>
         </tr>
         </thead>
@@ -35,7 +31,6 @@
             <td><%= agent.phone %></td>
             <td><%= agent.groupement.name.split[1] if !agent.groupement_id.nil? %></td>
             <td><%= agent.groupement.name if !agent.groupement_id.nil? %></td>
-            <td><%= agent.commissariat.name if !agent.commissariat_id.nil? %></td>
             <td><%= link_to 'Voir', agent %></td>
             <td>
               <%= link_to 'Modifier', edit_agent_path(agent) %>

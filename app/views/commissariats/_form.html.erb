@@ -10,11 +10,12 @@
         <div class="card-body card-block">
           <div class="form-group">
             <label for="company" class=" form-control-label">Region du commissariat</label>
-            <%= f.association :region, prompt: 'Selectionner une region', label: false, selected: "Centre" %>
+            <%= f.association :region, prompt: 'Selectionner une region', label: false %>
           </div>
           <div class="form-group">
             <label for="company" class=" form-control-label">Département du commissariat</label>
             <%= f.grouped_collection_select :departement_id, Region.order(:name), :departement, :name, :id, :name, include_blank: false, label: false, input_html: {class: 'form-control'} %>
+            <%= f.association :departement, label: false, prompt: 'Selectionner un département' %>
           </div>
           <div class="form-group">
             <label for="company" class=" form-control-label">Arrondissement du commissariat</label>
@@ -41,14 +42,14 @@
           </div>
           <div class="form-group">
             <label for="company" class=" form-control-label">Adresse email commissariat</label>
-            <%= f.input :email, as: :email, placeholder: 'Adresse email commissariat', label: false %>
+            <%= f.input :email, as: :email, placeholder: '(Auto generate)', label: false, readonly: true %>
           </div>
         </div>
         <!-- div class="card-footer">
         </div -->
       </div>
       <div class="text-right">
-        <%= f.button :submit, 'Ajouter', class: 'btn btn-primary btn-sm' %>
+        <%= f.button :submit, 'Valider', class: 'btn btn-primary btn-sm' %>
         <input type="reset", class="btn btn-danger btn-sm" value="Annuler" />
       </div>
     </div>

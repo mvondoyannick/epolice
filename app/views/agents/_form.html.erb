@@ -57,7 +57,7 @@
           </div>
           <div class="form-group">
             <label for="company" class=" form-control-label">Commissariat</label>
-            <%= f.association :commissariat, prompt: "Sélectionner le commissariat", label: false %>
+            <%= f.association :commissariat, prompt: "Sélectionner le commissariat", label: false, selected: "AUCUN" %>
           </div>
         </div>
         <!--div class="card-footer text-right">
@@ -65,7 +65,7 @@
         </div-->
       </div>
       <div class="text-right">
-        <%= f.button :submit, 'Ajouter', class: 'btn btn-primary btn-sm' %>
+        <%= f.button :submit, 'Valider', class: 'btn btn-primary btn-sm' %>
         <input type="reset", class="btn btn-danger btn-sm" value="Annuler" />
       </div>
 

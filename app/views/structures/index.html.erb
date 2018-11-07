@@ -1,18 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <h1 class="m-b-40">
-  <%= link_to :back do %>
-    <i class="fa fa-arrow-left"></i>
-  <% end %>
   Partenaires
 </h1>
 
-<table class="table table-borderless table-striped table-earning table-hover table-sm" id="table">
+<table class="table table-borderless table-striped table-earning table-hover table-sm">
   <thead>
     <tr>
       <th>Logo</th>
-      <th>Raison sociale</th>
       <th>Region</th>
+      <th>Nom partenaire</th>
       <th>Téléphone</th>
       <th>Email</th>
       <th colspan="3"></th>
@@ -24,11 +21,12 @@
       <tr>
         <td><%= image_tag(structure.logo, size: '75x75') if structure.logo.attached? %></td>
         <td><%= structure.region.name %></td>
+        <td><%= structure.name %></td>
         <td><%= structure.phonestructure %></td>
         <td><%= structure.email %></td>
-        <td><%= link_to 'Show', structure %></td>
-        <td><%= link_to 'Edit', edit_structure_path(structure) %></td>
-        <td><%= link_to 'Destroy', structure, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
+        <td><%= link_to 'Voir', structure %></td>
+        <td><%= link_to 'Editer', edit_structure_path(structure) %></td>
+        <td><%= link_to 'Supprimer', structure, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,7 +34,7 @@
 
 <br>
 
-<%= link_to new_structure_path, class: 'btn btn-primary' do %>
+<%= link_to new_structure_path, class: 'btn btn-primary btn-sm' do %>
   <%= fa_icon 'plus' %>
   Ajouter un partenaire
 <% end %>

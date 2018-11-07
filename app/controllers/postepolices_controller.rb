@@ -1,6 +1,9 @@
 class PostepolicesController < ApplicationController
   before_action :set_postepolice, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token, only: [:destroy]
   #before_action :authenticate_grvpc!, only: [:new, :update, :destroy]
+  add_breadcrumb "Acceuil", :parametre_index_path
+  add_breadcrumb "gestion des postes de police", :postepolices_path
 
   layout 'fylo'
 
@@ -8,6 +11,7 @@ class PostepolicesController < ApplicationController
   # GET /postepolices.json
   def index
     @postepolices = Postepolice.all
+    add_breadcrumb 'postes de police', :postepolices_path
   end
 
   # GET /postepolices/1
@@ -18,6 +22,7 @@ class PostepolicesController < ApplicationController
   # GET /postepolices/new
   def new
     @postepolice = Postepolice.new
+    add_breadcrumb 'nouveau poste de police', new_postepolice_path
   end
 
   # GET /postepolices/1/edit
@@ -31,7 +36,7 @@ class PostepolicesController < ApplicationController
 
     respond_to do |format|
       if @postepolice.save
-        format.html { redirect_to @postepolice, notice: 'Postepolice was successfully created.' }
+        format.html { redirect_to postepolices_path, notice: 'Postepolice was successfully created.' }
         format.json { render :show, status: :created, location: @postepolice }
       else
         format.html { render :new }

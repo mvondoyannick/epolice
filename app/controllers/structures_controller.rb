@@ -1,25 +1,31 @@
 class StructuresController < ApplicationController
   before_action :set_structure, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
+  add_breadcrumb "Acceuil", :parametre_index_path
+  add_breadcrumb "gestion des partenaires", :structures_path
   layout 'fylo'
   # GET /structures
   # GET /structures.json
   def index
     @structures = Structure.all
+    add_breadcrumb 'partenaires', structures_path
   end
 
   # GET /structures/1
   # GET /structures/1.json
   def show
+    add_breadcrumb 'details', structure_path
   end
 
   # GET /structures/new
   def new
     @structure = Structure.new
+    add_breadcrumb 'nouveau partenaire', new_structure_path
   end
 
   # GET /structures/1/edit
   def edit
+    add_breadcrumb 'edition', structure_path
   end
 
   # POST /structures
@@ -29,7 +35,7 @@ class StructuresController < ApplicationController
 
     respond_to do |format|
       if @structure.save
-        format.html { redirect_to @structure, notice: 'Structure was successfully created.' }
+        format.html { redirect_to structures_path, notice: 'Structure was successfully created.' }
         format.json { render :show, status: :created, location: @structure }
       else
         format.html { render :new }

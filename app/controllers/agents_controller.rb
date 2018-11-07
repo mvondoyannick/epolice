@@ -1,6 +1,8 @@
 class AgentsController < ApplicationController
   before_action :set_agent, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
+  add_breadcrumb "Acceuil", :parametre_index_path
+  add_breadcrumb "gestion des agents", :agents_path
   layout 'fylo'
   # GET /agents
   # GET /agents.json
@@ -11,20 +13,24 @@ class AgentsController < ApplicationController
       end
       format.xls
     end
+    add_breadcrumb 'agents', :agents_path
   end
 
   # GET /agents/1
   # GET /agents/1.json
   def show
+    add_breadcrumb 'details', :agent_path
   end
 
   # GET /agents/new
   def new
     @agent = Agent.new
+    add_breadcrumb 'nouvel agent', :new_agent_path
   end
 
   # GET /agents/1/edit
   def edit
+    add_breadcrumb 'mise à jour agent', :agent_path
   end
 
   # POST /agents
@@ -34,7 +40,7 @@ class AgentsController < ApplicationController
 
     respond_to do |format|
       if @agent.save
-        format.html { redirect_to action: :index, notice: 'Agent was successfully created.' }
+        format.html { redirect_to agents_path: :index, notice: 'Agent was successfully created.' }
         format.json { render :show, status: :created, location: @agent }
       else
         format.html { render :new }

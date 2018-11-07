@@ -8,11 +8,11 @@ class Structure < ApplicationRecord
 
   #active validation
   validates :name, presence: {message: "Merci de fournir de nom de la structure"}, uniqueness: {message: "%{value} existe deja."}, length: {minimum: 4, maximum: 50, message: "le nombre de caractere nest pas correcte"}
-  validates :raison, presence: {message: "La raison est obligatoire"}
-  validates :rue, presence: {message: "Merci de fournir une adresse"}
-  validates :bp, presence: {message: "Merci de fournir une boite postale correcte"}, uniqueness: true
-  validates :phonestructure, presence: {message: "Merci de fournir le numéro de téléphone de la structure"}, uniqueness: true
-  validates :contactname, :contactphone, :contactemail, presence: {message: "Merci de fournir cette information"}
+  validates :raison, presence: {message: "La raison est obligatoire"}, uniqueness: {message: '%{value} existe deja.', case_sensitive: false}
+  validates :rue, presence: {message: "Merci de fournir une adresse"}, uniqueness: {message: '%{value} existe deja.', case_sensitive: false}
+  validates :bp, presence: {message: "Merci de fournir une boite postale correcte"}, uniqueness: {message: '%{value} existe deja.', case_sensitive: false}
+  validates :phonestructure, presence: {message: "Merci de fournir le numéro de téléphone de la structure"}, uniqueness: {message: '%{value} existe deja.', case_sensitive: false}, length: {is: 9, message: '%{value} doit contenir 9 chiffres'}, numericality: { only_integer: true }
+  validates :contactname, :contactphone, :contactemail, presence: {message: "Merci de fournir cette information"}, uniqueness: {message: '%{value} existe deja.', case_sensitive: false}
   validates :contactphone, presence: {message: "Numéro de téléphone obligatoire"}, length: {is: 9, message: "Doit avoir 9 chiffres"}, numericality: {only_integer: true, message: "Ce numéro n'est pas valide, uniquement des chiffres"}
   validates :logo, presence: {message: "Merci de fournir un logo."}
   validates :document, presence: {message: 'Merci de fournir le dossier de reference.'}

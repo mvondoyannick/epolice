@@ -47,7 +47,7 @@
       <div class="card-body card-block">
         <form action="" method="post" class="form-horizontal">
           <div class="form-group">
-            <label for="company" class=" form-control-label">Numéro  téléphone</label>
+            <label for="company" class=" form-control-label">Numéro  téléphone partenaire</label>
             <%= f.input :phonestructure, label: false, placeholder: 'Numéro téléphone' %>
           </div>
           <div class="form-group">
@@ -55,15 +55,15 @@
             <%= f.input :rue, as: :text, label: false, placeholder: 'Rue/localisation' %>
           </div>
           <div class="form-group">
-            <label for="company" class=" form-control-label">Nom du contact responsable</label>
+            <label for="company" class=" form-control-label">Nom de la personne à contacter</label>
             <%= f.input :contactname, label: false, placeholder: 'Nom du responsable' %>
           </div>
           <div class="form-group">
-            <label for="company" class=" form-control-label">Prénom du contact responsable</label>
+            <label for="company" class=" form-control-label">Prénom de la personne à contacter</label>
             <%= f.input :contantprenom, label: false, placeholder: 'Prenom du responsable' %>
           </div>
           <div class="form-group">
-            <label for="company" class=" form-control-label">Fontion</label>
+            <label for="company" class=" form-control-label">Fonction</label>
             <%= f.input :fonction, label: false, placeholder: 'Fonction du responsable' %>
           </div>
           <div class="form-group">
@@ -86,7 +86,7 @@
       </div-->
     </div>
     <div class="text-right">
-      <%= f.button :submit, 'Ajouter', class: 'btn btn-primary btn-sm' %>
+      <%= f.button :submit, 'Valider', class: 'btn btn-primary btn-sm' %>
       <input type="reset", class="btn btn-danger btn-sm" value="Annuler" />
     </div>
   </div>

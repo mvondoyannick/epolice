@@ -1,10 +1,14 @@
 class CommissariatsController < ApplicationController
   before_action :set_commissariat, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token, only: [:destroy]
   layout 'fylo'
+  add_breadcrumb "Acceuil", :parametre_index_path
+  add_breadcrumb "gestion des commissariats", :commissariats_path
   # GET /commissariats
   # GET /commissariats.json
   def index
     @commissariats = Commissariat.all
+    add_breadcrumb 'commissariats', :commissariats_path
   end
 
   # GET /commissariats/1
@@ -15,6 +19,7 @@ class CommissariatsController < ApplicationController
   # GET /commissariats/new
   def new
     @commissariat = Commissariat.new
+    add_breadcrumb 'nouveau commissariat', :new_commissariat_path
   end
 
   # GET /commissariats/1/edit
@@ -28,7 +33,7 @@ class CommissariatsController < ApplicationController
 
     respond_to do |format|
       if @commissariat.save
-        format.html { redirect_to @commissariat, notice: 'Commissariat was successfully created.' }
+        format.html { redirect_to commissariats_path, notice: 'Commissariat was successfully created.' }
         format.json { render :show, status: :created, location: @commissariat }
       else
         format.html { render :new }

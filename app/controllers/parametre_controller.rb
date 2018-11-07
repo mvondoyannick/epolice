@@ -5,7 +5,7 @@ class ParametreController < ApplicationController
 
   def index
 
-    add_breadcrumb "index", root_path
+    add_breadcrumb "index", :parametre_index_path
   end
 
   def gestion_sturcture_partenaire
@@ -39,11 +39,13 @@ class ParametreController < ApplicationController
     @metropolis = Metropoli.all
 
     @agent = Agent.all
+    add_breadcrumb "localisation", :parametre_localisation_path
   end
 
 
   def phone_user
     @agent = Agent.all
+    add_breadcrumb "localisation", :parametre_localisation_path
   end
 
   def add_user
