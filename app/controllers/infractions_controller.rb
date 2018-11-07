@@ -1,5 +1,8 @@
 class InfractionsController < ApplicationController
   before_action :set_infraction, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token, only: [:destroy]
+  add_breadcrumb "Acceuil", :parametre_index_path
+  add_breadcrumb "gestion des infractions", :infractions_path
   layout 'fylo'
   # GET /infractions
   # GET /infractions.json
@@ -10,6 +13,7 @@ class InfractionsController < ApplicationController
       end
       format.xls
     end
+    add_breadcrumb "infractions", :infractions_path
     #@title = "Liste des infractions"
     #@compteur = Infraction.all.count
   end
@@ -17,15 +21,18 @@ class InfractionsController < ApplicationController
   # GET /infractions/1
   # GET /infractions/1.json
   def show
+    add_breadcrumb "details", :infractions_path
   end
 
   # GET /infractions/new
   def new
     @infraction = Infraction.new
+    add_breadcrumb "nouvelle infraction", :infractions_path
   end
 
   # GET /infractions/1/edit
   def edit
+    add_breadcrumb "editer", :infraction_path
   end
 
   # POST /infractions

@@ -1,16 +1,13 @@
 <p id="notice"><%= notice %></p>
-<%= link_to new_pieceretenu_path, class: 'btn btn-primary m-b-40' do %>
+<%= link_to new_pieceretenu_path, class: 'btn btn-primary m-b-40 btn-sm' do %>
   <i class="fa fa-plus"></i>
   Ajouter un element
 <% end %>
 <h1 class="m-b-40">
-  <%= link_to :back do %>
-    <i class="fa fa-arrow-left"></i>
-  <% end %>
-  Elements à retenir
+  Pièce pouvants etre retenue
 </h1>
 
-<div class="col-lg-9">
+<div class="col-lg-12">
   <div class="table-responsive table--no-card m-b-30">
     <table class="table table-borderless table-striped table-earning">
       <thead>
@@ -37,7 +34,7 @@
 
 <br>
 
-<%= link_to new_pieceretenu_path, class: 'btn btn-primary' do %>
+<%= link_to new_pieceretenu_path, class: 'btn btn-primary btn-sm' do %>
   <i class="fa fa-plus"></i>
   Ajouter un element
 <% end %>

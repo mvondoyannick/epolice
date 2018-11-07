@@ -1,26 +1,32 @@
 class TypesController < ApplicationController
   before_action :set_type, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
+  add_breadcrumb "accueil", :parametre_index_path
+  add_breadcrumb "gestion des types d'evenement", :types_path
 
   layout 'fylo'
   # GET /types
   # GET /types.json
   def index
     @types = Type.all
+    add_breadcrumb "types d'évenement", :types_path
   end
 
   # GET /types/1
   # GET /types/1.json
   def show
+    add_breadcrumb "details", :type_path
   end
 
   # GET /types/new
   def new
     @type = Type.new
+    add_breadcrumb "nouveau type", :new_type_path
   end
 
   # GET /types/1/edit
   def edit
+    add_breadcrumb "editer", :type_path
   end
 
   # POST /types

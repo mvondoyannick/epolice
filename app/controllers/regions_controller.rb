@@ -8,22 +8,24 @@ class RegionsController < ApplicationController
   # GET /regions.json
   def index
     @regions = Region.order(name: :asc).all
-    add_breadcrumb "regions", regions_path
+    add_breadcrumb "regions", :regions_path
   end
 
   # GET /regions/1
   # GET /regions/1.json
   def show
+    add_breadcrumb "details", :region_path
   end
 
   # GET /regions/new
   def new
     @region = Region.new
-    add_breadcrumb "nouvelle région", new_region_path
+    add_breadcrumb "nouvelle région", :new_region_path
   end
 
   # GET /regions/1/edit
   def edit
+    add_breadcrumb 'editer', :arrondissement_path
   end
 
   # POST /regions

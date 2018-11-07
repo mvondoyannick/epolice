@@ -1,13 +1,10 @@
 <% content_for(:title, 'TYPE EVENEMENTS')%>
 <p id="notice"><%= notice %></p>
-<%= link_to new_type_path, class: 'btn btn-primary m-b-40' do %>
+<%= link_to new_type_path, class: 'btn btn-primary m-b-40 btn-sm' do %>
   <i class="fa fa-plus"></i>
   Ajouter un type d'evenement
 <% end %>
 <h1 class="m-b-40">
-  <%= link_to :back do %>
-    <i class="fa fa-arrow-left"></i>
-  <% end %>
   Types d'évenements
 </h1>
 
@@ -31,7 +28,7 @@
             <%= p = type.entity %></td>
           <td><%= link_to 'Show', type %></td>
           <td><%= link_to 'Edit', edit_type_path(type) %></td>
-          <td><%= link_to 'Destroy', type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Supprimer', type, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
         </tr>
       <% end %>
       </tbody>
@@ -41,7 +38,7 @@
 
 <br>
 
-<%= link_to new_type_path, class: 'btn btn-primary' do %>
+<%= link_to new_type_path, class: 'btn btn-primary btn-sm' do %>
   <i class="fa fa-plus"></i>
   Ajouter un type d'evenement
 <% end %>

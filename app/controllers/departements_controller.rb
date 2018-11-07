@@ -1,24 +1,31 @@
 class DepartementsController < ApplicationController
   before_action :set_departement, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token, only: [:destroy]
+  add_breadcrumb "Acceuil", :parametre_index_path
+  add_breadcrumb "gestion des departements", :departements_path
   layout 'fylo'
   # GET /departements
   # GET /departements.json
   def index
     @departements = Departement.order(region_id: :asc)
+    add_breadcrumb 'departements', departements_path
   end
 
   # GET /departements/1
   # GET /departements/1.json
   def show
+    add_breadcrumb 'details', departements_path
   end
 
   # GET /departements/new
   def new
     @departement = Departement.new
+    add_breadcrumb 'nouveau département', departement_path
   end
 
   # GET /departements/1/edit
   def edit
+    add_breadcrumb 'editer', departement_path
   end
 
   # POST /departements
@@ -28,7 +35,7 @@ class DepartementsController < ApplicationController
 
     respond_to do |format|
       if @departement.save
-        format.html { redirect_to @departement, notice: 'Departement was successfully created.' }
+        format.html { redirect_to departements_path, notice: 'Departement was successfully created.' }
         format.json { render :show, status: :created, location: @departement }
       else
         format.html { render :new }

@@ -1,24 +1,31 @@
 class PieceretenusController < ApplicationController
   before_action :set_pieceretenu, only: [:show, :edit, :update, :destroy]
+
+  add_breadcrumb "accueil", :parametre_index_path
+  add_breadcrumb "gestion des pièces pouvants etre retenue", :pieceretenus_path
   layout 'fylo'
   # GET /pieceretenus
   # GET /pieceretenus.json
   def index
     @pieceretenus = Pieceretenu.all
+    add_breadcrumb "pièces retenables", :pieceretenus_path
   end
 
   # GET /pieceretenus/1
   # GET /pieceretenus/1.json
   def show
+    add_breadcrumb "details", :pieceretenus_path
   end
 
   # GET /pieceretenus/new
   def new
     @pieceretenu = Pieceretenu.new
+    add_breadcrumb "nouvelle piece pouvant etre retenue", :new_pieceretenu_path
   end
 
   # GET /pieceretenus/1/edit
   def edit
+    add_breadcrumb "editer", :pieceretenus_path
   end
 
   # POST /pieceretenus
