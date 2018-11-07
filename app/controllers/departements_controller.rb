@@ -1,15 +1,14 @@
 class DepartementsController < ApplicationController
   before_action :set_departement, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
-  add_breadcrumb "Acceuil", :parametre_index_path
+  add_breadcrumb "Fichiers", :parametre_index_path
   add_breadcrumb "découpage administratif", :parametre_localisation_path
-  add_breadcrumb "gestion des departements", :departements_path
   layout 'fylo'
   # GET /departements
   # GET /departements.json
   def index
     @departements = Departement.order(region_id: :asc)
-    add_breadcrumb 'departements', departements_path
+    add_breadcrumb 'départements', departements_path
   end
 
   # GET /departements/1

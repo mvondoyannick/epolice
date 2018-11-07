@@ -3,7 +3,7 @@ class RegionsController < ApplicationController
   before_action :authenticate_admin!
   add_breadcrumb "Acceuil", :parametre_index_path
   add_breadcrumb "découpage administratif", :parametre_localisation_path
-  add_breadcrumb "gestion des region", :regions_path
+  #add_breadcrumb "gestion des region", :regions_path
   layout 'fylo'
   # GET /regions
   # GET /regions.json

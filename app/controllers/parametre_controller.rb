@@ -1,12 +1,11 @@
 class ParametreController < ApplicationController
   before_action :authenticate_admin!
   layout 'fylo'
-  add_breadcrumb "accueil", :parametre_index_path
+  add_breadcrumb "fichiers", :parametre_index_path
 
 
   def index
 
-    add_breadcrumb "fichiers de données", :parametre_index_path
   end
 
   def gestion_sturcture_partenaire
