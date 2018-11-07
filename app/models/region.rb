@@ -4,5 +4,5 @@ class Region < ApplicationRecord
   has_many :departement
   has_many :agent
 
-  validates :name, presence: {message: "La valeur de la région ne peut etre vide"}, uniqueness: {message: "Erreur, La valeure %{value} est déja present."}
+  validates :name, presence: {message: "Le nom de la région ne peut etre vide"}, uniqueness: {message: "%{value} existe deja."}
 end

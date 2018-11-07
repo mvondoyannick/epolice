@@ -1,21 +1,27 @@
 class GroupementsController < ApplicationController
   before_action :set_groupement, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
+  add_breadcrumb "Acceuil", :parametre_index_path
+  add_breadcrumb "gestion des GRVPC", :groupements_path
+
   layout 'fylo'
   # GET /groupements
   # GET /groupements.json
   def index
-    @groupements = Groupement.order(name: :asc).all
+    @groupements = Groupement.order(name: :asc)
+    add_breadcrumb 'GRVPC', :groupements_path
   end
 
   # GET /groupements/1
   # GET /groupements/1.json
   def show
+    add_breadcrumb 'detail', groupement_path
   end
 
   # GET /groupements/new
   def new
     @groupement = Groupement.new
+    add_breadcrumb 'nouveau GRVPC', :new_groupement_path
   end
 
   # GET /groupements/1/edit
@@ -29,7 +35,7 @@ class GroupementsController < ApplicationController
 
     respond_to do |format|
       if @groupement.save
-        format.html { redirect_to @groupement, notice: 'Groupement was successfully created.' }
+        format.html { redirect_to groupements_path, notice: 'Groupement was successfully created.' }
         format.json { render :show, status: :created, location: @groupement }
       else
         format.html { render :new }

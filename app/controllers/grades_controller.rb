@@ -1,12 +1,15 @@
 class GradesController < ApplicationController
   before_action :set_grade, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
+  add_breadcrumb "Acceuil", :parametre_index_path
+  add_breadcrumb "gestion des grades", :grades_path
   layout 'fylo'
 
   # GET /grades
   # GET /grades.json
   def index
     @grades = Grade.order(name: :asc).all
+    add_breadcrumb "grade", grades_path
   end
 
   # GET /grades/1

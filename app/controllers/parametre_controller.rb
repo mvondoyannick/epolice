@@ -1,9 +1,11 @@
 class ParametreController < ApplicationController
   before_action :authenticate_admin!
   layout 'fylo'
+  add_breadcrumb "home", :parametre_index_path
 
   def index
 
+    add_breadcrumb "index", root_path
   end
 
   def gestion_sturcture_partenaire
@@ -11,7 +13,7 @@ class ParametreController < ApplicationController
   end
 
   def localisation
-
+    add_breadcrumb "localisation", :parametre_localisation_path
   end
 
   def region

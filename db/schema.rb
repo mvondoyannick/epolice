@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_05_163141) do
+ActiveRecord::Schema.define(version: 2018_11_07_130417) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -326,7 +326,6 @@ ActiveRecord::Schema.define(version: 2018_11_05_163141) do
     t.bigint "region_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "phonecommandant"
     t.string "localisation"
     t.string "email"
     t.index ["region_id"], name: "index_groupements_on_region_id"

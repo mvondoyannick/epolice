@@ -1,11 +1,14 @@
 class RegionsController < ApplicationController
   before_action :set_region, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!
+  add_breadcrumb "Acceuil", :parametre_index_path
+  add_breadcrumb "gestion des region", :regions_path
   layout 'fylo'
   # GET /regions
   # GET /regions.json
   def index
     @regions = Region.order(name: :asc).all
+    add_breadcrumb "regions", regions_path
   end
 
   # GET /regions/1
@@ -16,6 +19,7 @@ class RegionsController < ApplicationController
   # GET /regions/new
   def new
     @region = Region.new
+    add_breadcrumb "nouvelle région", new_region_path
   end
 
   # GET /regions/1/edit
@@ -29,7 +33,7 @@ class RegionsController < ApplicationController
 
     respond_to do |format|
       if @region.save
-        format.html { redirect_to @region, notice: 'Region was successfully created.' }
+        format.html { redirect_to regions_path, notice: 'Region was successfully created.' }
         format.json { render :show, status: :created, location: @region }
       else
         format.html { render :new }

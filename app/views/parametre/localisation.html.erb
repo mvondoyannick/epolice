@@ -6,50 +6,57 @@
 </h1>
 <div class="row">
   <div class="col-lg-3">
-    <div class="card">
+    <div class="card" style="height: 13rem;">
       <div class="card-body">
         <h5 class="card-title"><%= link_to 'Regions', regions_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Regions</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Aperçu', regions_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_region_path, class: 'card-link' %>
+        <p class="card-text"></p>
+
+      </div>
+      <div class="card-footer">
+        <%= link_to 'Aperçu', regions_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', new_region_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
   <div class="col-lg-3">
-    <div class="card">
+    <div class="card" style="height: 13rem;">
       <div class="card-body">
         <h5 class="card-title"><%= link_to 'Departements', departements_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Departements dans les régions</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Aperçu', departements_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_departement_path, class: 'card-link' %>
+        <p class="card-text"></p>
+
+      </div>
+      <div class="card-footer">
+        <%= link_to 'Aperçu', departements_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', new_departement_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
   <div class="col-lg-3">
-    <div class="card">
+    <div class="card" style="height: 13rem;">
       <div class="card-body">
         <h5 class="card-title"><%= link_to 'Arrondissement', arrondissements_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Arrondissements des departements</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Aperçu', arrondissements_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_arrondissement_path, class: 'card-link' %>
+        <p class="card-text"></p>
+
+      </div>
+      <div class="card-footer text-muted">
+        <%= link_to 'Aperçu', arrondissements_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', new_arrondissement_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
   <div class="col-lg-3">
-    <div class="card">
+    <div class="card" style="height: 13rem;">
       <div class="card-body">
-        <h5 class="card-title"><%= link_to 'Zone de couverture', zonecouverturemotifs_path, class: 'noir' %></h5>
-        <h6 class="card-subtitle mb-2 text-muted">Regions, departements et arrondissements</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Acceder', zonecouverturemotifs_path, class: 'card-link' %>
-        &nbsp;
-        <%= link_to 'Ajouter', new_zonecouverturemotif_path, class: 'card-link' %>
+        <h5 class="card-title"><%= link_to "Types d'evenements", types_path, class: 'noir' %></h5>
+        <h6 class="card-subtitle mb-2 text-muted"></h6>
+        <p class="card-text"></p>
+      </div>
+      <div class="card-footer text-mutted">
+        <%= link_to 'Aperçu', types_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', new_type_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>

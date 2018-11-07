@@ -9,12 +9,13 @@
       </div>
       <div class="card-body card-block">
         <div class="form-group">
-          <label for="company" class=" form-control-label">Région</label>
+          <label for="company" class=" form-control-label">Libellé de la Région</label>
           <%= f.input :name, label: false , placeholder: 'Nom de la région a creer', class: 'form-control' %>
+          <small id="emailHelp" class="form-text text-muted">Nom de la region suivant le découpage administratif.</small>
         </div>
       </div>
-      <div class="card-footer">
-        <%= f.button :submit, 'Ajouter', class: 'btn btn-primary btn-sm' %>
+      <div class="card-footer text-right">
+        <%= f.button :submit, 'valider', class: 'btn btn-primary btn-sm' %>
         <input type="reset", class="btn btn-danger btn-sm" value="Annuler" />
       </div>
     </div>

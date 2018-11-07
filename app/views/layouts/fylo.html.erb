@@ -12,8 +12,7 @@
   <%= javascript_include_tag 'https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js' %>
   <%= javascript_include_tag 'https://colorlib.com/polygon/cooladmin/vendor/animsition/animsition.min.js' %>
 
-  <%= stylesheet_link_tag 'https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css' %>
-  <%= stylesheet_link_tag 'https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css' %>
+
 
   <!-- Fontfaces CSS-->
   <link href="https://colorlib.com/polygon/cooladmin/css/font-face.css" rel="stylesheet" media="all">
@@ -23,6 +22,7 @@
 
   <!-- Bootstrap CSS-->
   <link href="https://colorlib.com/polygon/cooladmin/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
   <!-- Vendor CSS-->
   <link href="https://colorlib.com/polygon/cooladmin/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
@@ -35,6 +35,8 @@
 
   <!-- Main CSS-->
   <link href="https://colorlib.com/polygon/cooladmin/css/theme.css" rel="stylesheet" media="all">
+  <%= stylesheet_link_tag 'https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css' %>
+  <%= stylesheet_link_tag 'https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css' %>
 
 </head>
 <body>
@@ -225,62 +227,14 @@
         </div>
       </div>
     </header>
-    <div style="margin-top: 75px; margin-left: 0px; background-color: #FFF;" class="noir">
-      <ul class="nav nav-pills">
-        <li class="nav-item dropdown">
-          <%= link_to 'Fichiers', parametre_index_path, class: 'nav-link dropdown-toggle noir', data: {toggle: 'dropdown'}, aria: {haspopup: true, expanded: false} %>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <%= link_to 'Utilisateurs', parametre_index_path, class: 'nav-link dropdown-toggle noir', data: {toggle: 'dropdown'}, aria: {haspopup: true, expanded: false} %>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <%= link_to 'Parametres', parametre_index_path, class: 'nav-link dropdown-toggle noir', data: {toggle: 'dropdown'}, aria: {haspopup: true, expanded: false} %>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <%= link_to 'Applications', parametre_index_path, class: 'nav-link dropdown-toggle noir', data: {toggle: 'dropdown'}, aria: {haspopup: true, expanded: false} %>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Aide', access_yelp_path, class: 'nav-link noir' %>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link noir" href="#">Quitter</a>
-        </li>
-
-      </ul>
-    </div>
     <!-- HEADER DESKTOP-->
 
     <!-- MAIN CONTENT-->
     <div class="main-content">
       <div class="section__content section__content--p30">
+        <ol class="breadcrumb">
+          <%= render_breadcrumbs :tag => :li, :separator => " / " %>
+        </ol>
         <div class="container-fluid">
           <!-- -->
           <%= yield %>
@@ -291,7 +245,83 @@
   <!-- END PAGE CONTAINER-->
 
 </div>
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Ajouter un enregistrement administratif</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Selectionner une action
+        </p>
+        <p class="lead">
+          <%= link_to new_region_path do %>
+            <%= fa_icon 'globe' %>
+            Régions
+          <% end %>
+        </p>
+        <p class="lead">
+          <%= link_to new_departement_path do %>
+            <%= fa_icon 'asterisk' %>
+            Département
+          <% end %>
+        </p>
+        <p class="lead">
+          <%= link_to new_arrondissement_path do %>
+            <%= fa_icon ' thumb-tack noir' %>
+            Arrondissement
+          <% end %>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="decoupageadmin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Ajouter un enregistrement administratif</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Selectionner une action
+        </p>
+        <p class="lead">
+          <%= link_to new_region_path do %>
+            <%= fa_icon 'globe' %>
+            Régions
+          <% end %>
+        </p>
+        <p class="lead">
+          <%= link_to new_departement_path do %>
+            <%= fa_icon 'asterisk' %>
+            Département
+          <% end %>
+        </p>
+        <p class="lead">
+          <%= link_to new_arrondissement_path do %>
+            <%= fa_icon ' thumb-tack noir' %>
+            Arrondissement
+          <% end %>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 <script>
     $(document).ready( function () {
