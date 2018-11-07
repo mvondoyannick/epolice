@@ -17,6 +17,7 @@ class Structure < ApplicationRecord
   validates :logo, presence: {message: "Merci de fournir un logo."}
   validates :document, presence: {message: 'Merci de fournir le dossier de reference.'}
   validates :fonction, presence: {message: 'Merci de fournir la fonction'}
+  validates :category, presence: {message: 'Selectinner la catégorie'}
 
   private
 

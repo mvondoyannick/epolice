@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_07_130417) do
+ActiveRecord::Schema.define(version: 2018_11_07_154725) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -529,6 +529,7 @@ ActiveRecord::Schema.define(version: 2018_11_07_130417) do
     t.string "bp"
     t.string "phonestructure"
     t.string "fonction"
+    t.string "category"
     t.index ["region_id"], name: "index_structures_on_region_id"
   end
 

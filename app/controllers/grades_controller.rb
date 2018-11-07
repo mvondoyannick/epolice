@@ -15,15 +15,18 @@ class GradesController < ApplicationController
   # GET /grades/1
   # GET /grades/1.json
   def show
+    add_breadcrumb "grade", grade_path
   end
 
   # GET /grades/new
   def new
     @grade = Grade.new
+    add_breadcrumb "nouveau grade", new_grade_path
   end
 
   # GET /grades/1/edit
   def edit
+    add_breadcrumb "edition", grade_path
   end
 
   # POST /grades
@@ -33,7 +36,7 @@ class GradesController < ApplicationController
 
     respond_to do |format|
       if @grade.save
-        format.html { redirect_to @grade, notice: 'Grade was successfully created.' }
+        format.html { redirect_to grades_path, notice: 'Grade was successfully created.' }
         format.json { render :show, status: :created, location: @grade }
       else
         format.html { render :new }
