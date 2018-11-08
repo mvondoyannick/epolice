@@ -2,13 +2,12 @@ class CommissariatsController < ApplicationController
   before_action :set_commissariat, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
   layout 'fylo'
-  add_breadcrumb "Acceuil", :parametre_index_path
-  add_breadcrumb "gestion des commissariats", :commissariats_path
+  add_breadcrumb "Fichiers", :parametre_index_path
+  add_breadcrumb "commissariats", :commissariats_path
   # GET /commissariats
   # GET /commissariats.json
   def index
     @commissariats = Commissariat.all
-    add_breadcrumb 'commissariats', :commissariats_path
   end
 
   # GET /commissariats/1
