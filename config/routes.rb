@@ -294,7 +294,7 @@ Rails.application.routes.draw do
 
   #route de l'API pour l'application mobile
   namespace :api, defaults: {format: :json} do
-    get 'convocations/create/:cni/:phone/:immatriculation/:motif/:pieceretenue/:agent', to: 'convocations#conv'
+    get 'convocations/create/:cni/:phone/:immatriculation/:infraction_id/:pieceretenu_id/:agent_id', to: 'convocations#conv'
     #connexion d'un utilisateur, return matricule
     get 'convocations/authUser/:phone/:matricule', to: 'convocations#authUser'
     get 'convocations/verify/:code/:lang', to: 'convocations#verifyContravention'

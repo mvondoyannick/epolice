@@ -2,8 +2,7 @@ class PostepolicesController < ApplicationController
   before_action :set_postepolice, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
   #before_action :authenticate_grvpc!, only: [:new, :update, :destroy]
-  add_breadcrumb "Acceuil", :parametre_index_path
-  add_breadcrumb "gestion des postes de police", :postepolices_path
+  add_breadcrumb "Fichiers", :parametre_index_path
 
   layout 'fylo'
 
@@ -17,16 +16,21 @@ class PostepolicesController < ApplicationController
   # GET /postepolices/1
   # GET /postepolices/1.json
   def show
+    add_breadcrumb 'postes de police', :postepolices_path
+    add_breadcrumb 'details', :postepolice_path
   end
 
   # GET /postepolices/new
   def new
     @postepolice = Postepolice.new
+    add_breadcrumb 'postes de police', :postepolices_path
     add_breadcrumb 'nouveau poste de police', new_postepolice_path
   end
 
   # GET /postepolices/1/edit
   def edit
+    add_breadcrumb 'postes de police', :postepolices_path
+    add_breadcrumb 'editer', :postepolice_path
   end
 
   # POST /postepolices

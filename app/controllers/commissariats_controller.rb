@@ -3,16 +3,18 @@ class CommissariatsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:destroy]
   layout 'fylo'
   add_breadcrumb "Fichiers", :parametre_index_path
-  add_breadcrumb "commissariats", :commissariats_path
   # GET /commissariats
   # GET /commissariats.json
   def index
     @commissariats = Commissariat.all
+    add_breadcrumb "commissariats", :commissariats_path
   end
 
   # GET /commissariats/1
   # GET /commissariats/1.json
   def show
+    add_breadcrumb "commissariats", :commissariats_path
+    add_breadcrumb "details", :commissariat_path
   end
 
   # GET /commissariats/new
@@ -23,6 +25,8 @@ class CommissariatsController < ApplicationController
 
   # GET /commissariats/1/edit
   def edit
+    add_breadcrumb "commissariats", :commissariats_path
+    add_breadcrumb "editer", :commissariat_path
   end
 
   # POST /commissariats

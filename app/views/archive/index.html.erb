@@ -74,10 +74,10 @@
                 <%= agent.complete_name %>
               </td>
               <td>
-                <%= agent.unite.name if !agent.unite_id.nil? %>
+                <%= agent.groupement_id.name.split[0] if !agent.groupement_id.nil? %>
               </td>
               <td>
-                <%= agent.region.name if !agent.region_id.nil? %>
+                <%= agent.groupement_id.name.split[1] if !agent.groupement_id.nil? %>
               </td>
               <td>
                 <%= agent.grade.name if !agent.grade_id.nil? %>

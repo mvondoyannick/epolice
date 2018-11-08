@@ -1,31 +1,34 @@
 class GroupementsController < ApplicationController
   before_action :set_groupement, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
-  add_breadcrumb "Acceuil", :parametre_index_path
-  add_breadcrumb "gestion des GRVPC", :groupements_path
+  add_breadcrumb "Fichiers", :parametre_index_path
 
   layout 'fylo'
   # GET /groupements
   # GET /groupements.json
   def index
     @groupements = Groupement.order(name: :asc)
-    add_breadcrumb 'GRVPC', :groupements_path
+    add_breadcrumb "groupements régionaux", :groupements_path
   end
 
   # GET /groupements/1
   # GET /groupements/1.json
   def show
+    add_breadcrumb "groupements régionaux", :groupements_path
     add_breadcrumb 'detail', groupement_path
   end
 
   # GET /groupements/new
   def new
     @groupement = Groupement.new
+    add_breadcrumb "groupements régionaux", :groupements_path
     add_breadcrumb 'nouveau GRVPC', :new_groupement_path
   end
 
   # GET /groupements/1/edit
   def edit
+    add_breadcrumb "groupements régionaux", :groupements_path
+    add_breadcrumb 'editer', :new_groupement_path
   end
 
   # POST /groupements
