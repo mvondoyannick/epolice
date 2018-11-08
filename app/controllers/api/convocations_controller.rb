@@ -128,7 +128,7 @@ class Api::ConvocationsController < ApplicationController
   def verifyContraventionFromMobile
     cni = params[:cni]
 
-    query = Convocation.where(cni: cni, status: 'impayé').last
+    query = Convocation.where(cni: cni, status: '0').last
     if query.nil?
       render json: {
           status: :false,

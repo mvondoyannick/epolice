@@ -25,7 +25,7 @@ class Convocation < ApplicationRecord
     def set_status
         # 0 = impayé
         # 1 = payé
-        self.status = 0
+        self.status = '0'
     end
 
     def set_code
