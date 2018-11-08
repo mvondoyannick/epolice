@@ -17,7 +17,7 @@
         <thead>
         <tr>
           <th>Email</th>
-          <th>Date ajout</th>
+          <th>Nom</th>
           <th>Role</th>
           <th>Téléphone</th>
           <th colspan="3">Action</th>
@@ -27,7 +27,7 @@
         <% @user.each do |user| %>
           <tr>
             <td><%= user.email %></td>
-            <td><%= user.created_at %></td>
+            <td><%= user.name %></td>
             <td><%= user.role.name %></td>
             <td><%= user.phone %></td>
             <td>
@@ -48,46 +48,61 @@
 <% end %>
 
 <%= form_tag controller: :access, action: :admin_new, method: :post do %>
-  <div class="col-lg-6">
-    <div class="card">
-      <div class="card-header">
-        <strong>Nouvel administrateur/décideur</strong>
-      </div>
-      <div class="card-body card-block">
-        <div class="form-group">
-          <label for="company" class=" form-control-label">Nom</label>
-          <%= text_field_tag :name, nil, class: 'form-control', placeholder: 'Nom' %>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>Nouvel administrateur/décideur</strong>
         </div>
-        <div class="form-group">
-          <label for="vat" class=" form-control-label">Prenom</label>
-          <%= text_field_tag :prenom, nil, class: 'form-control', placeholder: 'Prénom' %>
-        </div>
-        <div class="form-group">
-          <label for="vat" class=" form-control-label">Numéro de téléphone</label>
-          <%= telephone_field_tag :phone, nil, class: 'form-control', placeholder: 'Prénom' %>
-        </div>
-        <div class="form-group">
-          <label for="street" class=" form-control-label">adresse email</label>
-          <%= email_field_tag :email, nil, class: 'form-control', placeholder: 'Adresse email' %>
-        </div>
-        <div class="form-group">
-          <label for="street" class=" form-control-label">Mot de passe</label>
-          <%= password_field_tag :password, nil, class: 'form-control', placeholder: 'Mot de passe' %>
-        </div>
-        <div class="form-group">
-          <label for="street" class=" form-control-label">Confirmer mot de passe</label>
-          <%= password_field_tag :password_confirmation, nil, class: 'form-control', placeholder: 'Confirmer le mot de passe' %>
-        </div>
-        <div class="form-group">
+        <div class="card-body card-block">
           <div class="form-group">
-            <label for="street" class=" form-control-label">role</label>
-            <%= select_tag :role_id, options_from_collection_for_select(Role.all, 'id', 'name') , class: 'form-control', prompt: 'Selectionner un role', include_blank: false %>
+            <label for="company" class=" form-control-label">Nom</label>
+            <%= text_field_tag :name, nil, class: 'form-control', placeholder: 'Nom' %>
+          </div>
+          <div class="form-group">
+            <label for="vat" class=" form-control-label">Prenom</label>
+            <%= text_field_tag :prenom, nil, class: 'form-control', placeholder: 'Prénom' %>
+          </div>
+          <div class="form-group">
+            <label for="vat" class=" form-control-label">Numéro de téléphone</label>
+            <%= telephone_field_tag :phone, nil, class: 'form-control', placeholder: 'Prénom' %>
+          </div>
+          <div class="form-group">
+            <label for="street" class=" form-control-label">adresse email</label>
+            <%= email_field_tag :email, nil, class: 'form-control', placeholder: 'Adresse email' %>
           </div>
         </div>
       </div>
     </div>
+    <hr>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>&nbsp;</strong>
+        </div>
+        <div class="card-body card-block">
+          <div class="form-group">
+            <label for="street" class=" form-control-label">Mot de passe</label>
+            <%= password_field_tag :password, nil, class: 'form-control', placeholder: 'Mot de passe' %>
+          </div>
+          <div class="form-group">
+            <label for="street" class=" form-control-label">Confirmer mot de passe</label>
+            <%= password_field_tag :password_confirmation, nil, class: 'form-control', placeholder: 'Confirmer le mot de passe' %>
+          </div>
+          <div class="form-group">
+            <div class="form-group">
+              <label for="street" class=" form-control-label">role</label>
+              <%= select_tag :role_id, options_from_collection_for_select(Role.all, 'id', 'name') , class: 'form-control', prompt: 'Selectionner un role', include_blank: false %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-right">
+        <%= submit_tag 'Enregistrer', class: 'btn btn-sm btn-primary' %>
+        <input type="reset" class="btn btn-sm btn-danger" value="Annuler">
+      </div>
+
+    </div>
   </div>
 
-
-  <%= submit_tag 'Enregistrer', class: 'btn btn-sm btn-primary' %>
 <% end %>

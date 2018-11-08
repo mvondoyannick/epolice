@@ -3,6 +3,9 @@ class AccessController < ApplicationController
   #before_action :confirm_logged_in, only: [:login, :attemp_login, :admin, :logout]
   skip_before_action :verify_authenticity_token, only: [:admin_new]
   before_action :authenticate_admin!, except: [:login, :serviceShow]
+
+  add_breadcrumb "Fichiers", :parametre_index_path
+  add_breadcrumb "découpage administratif", :parametre_localisation_path
   HTTParty::Basement.default_options.update(verify: false)
 
 

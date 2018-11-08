@@ -10,10 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+// require jquery
 //= require archive
-//= require bootstrap
-//= require popper
+// require bootstrap
+// require popper
 //= require Chart.bundle
 //= require chartkick
 //= require leaflet
