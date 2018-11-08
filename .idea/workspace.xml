@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/access_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/access_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/access/admin_show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/admin_show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/parametre/admin.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/parametre/admin.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/affectations/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/affectations/show.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -111,7 +107,7 @@
           <entry key="convocations" value="1" />
           <entry key="css" value="13" />
           <entry key="dot" value="1" />
-          <entry key="erb" value="954" />
+          <entry key="erb" value="955" />
           <entry key="html" value="12" />
           <entry key="infractions" value="1" />
           <entry key="jbuilder" value="1" />
@@ -142,7 +138,7 @@
           <entry key="Image" value="2" />
           <entry key="JavaScript" value="37" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="RHTML" value="954" />
+          <entry key="RHTML" value="955" />
           <entry key="RNG Compact" value="1" />
           <entry key="Ruby" value="773" />
           <entry key="SCSS" value="16" />
@@ -155,7 +151,7 @@
           <entry key="Gemfile" value="587" />
           <entry key="coffee" value="672" />
           <entry key="css" value="398" />
-          <entry key="erb" value="107370" />
+          <entry key="erb" value="107416" />
           <entry key="jbuilder" value="1" />
           <entry key="js" value="421" />
           <entry key="pid" value="1" />
@@ -171,7 +167,7 @@
           <entry key="CoffeeScript" value="672" />
           <entry key="JavaScript" value="421" />
           <entry key="PLAIN_TEXT" value="382" />
-          <entry key="RHTML" value="107370" />
+          <entry key="RHTML" value="107416" />
           <entry key="Ruby" value="51710" />
           <entry key="SCSS" value="223" />
           <entry key="YAML" value="386" />
@@ -240,11 +236,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
               <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/affectations/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -325,7 +330,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/commissariats/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/commissariat.rb" />
         <option value="$PROJECT_DIR$/app/controllers/postepolices_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/postepolices/_form.html.erb" />
@@ -376,6 +380,7 @@
         <option value="$PROJECT_DIR$/app/views/layouts/fylo.html.erb" />
         <option value="$PROJECT_DIR$/app/views/access/admin_show.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/views/affectations/show.html.erb" />
       </list>
     </option>
   </component>
@@ -397,7 +402,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1281" />
@@ -632,7 +637,7 @@
       <workItem from="1541580606476" duration="30347000" />
       <workItem from="1541668890848" duration="11000" />
       <workItem from="1541669222973" duration="501000" />
-      <workItem from="1541679127251" duration="4516000" />
+      <workItem from="1541679127251" duration="5141000" />
     </task>
     <servers />
   </component>
@@ -642,7 +647,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="963568000" />
+    <option name="totallyTimeSpent" value="964193000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -664,7 +669,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.37527114" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49840087" side_tool="true" visible="true" weight="0.46420825" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49840087" side_tool="true" visible="true" weight="0.54013014" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -741,13 +746,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/structures_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1408">
-          <caret line="78" column="208" selection-start-line="78" selection-start-column="208" selection-end-line="78" selection-end-column="208" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/structures/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -1067,6 +1065,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/affectations/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
         </state>
       </provider>
     </entry>
