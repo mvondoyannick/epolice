@@ -2,6 +2,9 @@ class AffectationsController < ApplicationController
   before_action :set_affectation, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
 
+  add_breadcrumb "Index", :grvpc_index_path
+
+
   layout 'grvpc/grvpc'
 
   # GET /affectations
@@ -9,6 +12,7 @@ class AffectationsController < ApplicationController
   def index
     @affectations = Affectation.all
     #render layout: 'fylo'
+    add_breadcrumb "affectations", :parametre_localisation_path
   end
 
   def home

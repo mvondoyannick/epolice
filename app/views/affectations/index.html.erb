@@ -26,7 +26,7 @@
           <td><%= affectations.debut %></td>
           <td>
             <% if affectations.fin.to_date > Date.today %>
-              <%= link_to affectations.fin, nil, class: 'btn btn-sm btn-danger' %>
+              <%= link_to affectations.fin, nil, class: 'btn btn-sm btn-primary' %>
             <% else %>
               <%= affectations.fin %>
             <% end %>
@@ -41,7 +41,7 @@
 
     <br>
 
-    <%= link_to new_affectation_path, class: 'btn btn-primary' do %>
+    <%= link_to new_affectation_path, class: 'btn btn-primary btn-sm' do %>
       <%= fa_icon 'plus' %>
       Nouveau bulletin
     <% end %>
