@@ -124,6 +124,24 @@ class Api::ConvocationsController < ApplicationController
     end
   end
 
+  #perme de verifier une contravention provenant du mobile
+  def verifyContraventionFromMobile
+    cni = params[:cni]
+
+    query = Convocation.where(cni: cni, status: 'impayé').last
+    if query.nil?
+      render json: {
+          status: :false,
+          message: "La CNI #{cni} n'est liée à aucune contravention. merci"
+      }
+    else
+      render json: {
+          status: :true,
+          data: query
+      }
+    end
+  end
+
   #gestion des alertes
   def alerteReq
     titre = params[:titre]
