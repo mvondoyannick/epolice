@@ -258,14 +258,24 @@ class Api::ConvocationsController < ApplicationController
   #permet de creer une nouvelle alerte
   def new_alerte
 
-    #gestion des photos avec activeRecord
-    data = params
+    #recuperation des parametres
+    agent_id = params[:agent_id]
+    type_id = params[:type_id]
+    longitude = params[:longitude]
+    latitude = params[:latitude]
+    description = params[:description]
+    statu_id = params[:statu_id]
+    titre = Type.find(params[:type_id]).name
+    #:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre, :photo
 
 
-     #@alerte = Alerte.new(agent_id: agent, type_id: type, longitude: lon.to_s, latitude: lat.to_s, description: description, ville_id: quartier, statu_id: 1, titre: Type.find(type).name)
+     @alerte = Alerte.new(agent_id: agent_id, type_id: type_id, longitude: longitude.to_s, latitude: latitude.to_s, description: description, statu_id: statu_id, titre: titre)
 
-    @alerte = Alerte.new(alert_params)
+    #@alerte = Alerte.new(alert_params)
+
     #@alerte.photo.attach(alert_params[:photo]) #on persiste les données
+    # with carriewave
+    @alerte.photo = params[:photo]
     if @alerte.save
       p = Type.find(@alerte.type_id).entity
       a = JSON.parse p
@@ -275,7 +285,9 @@ class Api::ConvocationsController < ApplicationController
       puts b
       render json: {
           status: :created,
-          partner: w
+          partner: w, #on retourne un tableau contenant les partenaires
+          photo: @alerte.photo.url,
+          photo_identifier: @alerte.photo_identifier
       }
     else
       render json: {
@@ -475,7 +487,7 @@ class Api::ConvocationsController < ApplicationController
     end
 
     def alert_params
-      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre)
+      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre, :photo)
     end
 
     def infraction_params

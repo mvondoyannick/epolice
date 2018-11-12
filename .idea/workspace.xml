@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/types_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/types_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/type.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/parametre/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/parametre/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/types/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/types/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -124,7 +118,7 @@
           <entry key="png" value="1" />
           <entry key="rails" value="1" />
           <entry key="rake" value="2" />
-          <entry key="rb" value="750" />
+          <entry key="rb" value="751" />
           <entry key="rnc" value="1" />
           <entry key="scss" value="16" />
           <entry key="setup" value="1" />
@@ -146,7 +140,7 @@
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="RHTML" value="962" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="785" />
+          <entry key="Ruby" value="786" />
           <entry key="SCSS" value="16" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="17" />
@@ -161,7 +155,7 @@
           <entry key="jbuilder" value="1" />
           <entry key="js" value="421" />
           <entry key="pid" value="1" />
-          <entry key="rb" value="52577" />
+          <entry key="rb" value="53059" />
           <entry key="scss" value="223" />
           <entry key="txt" value="381" />
           <entry key="yml" value="386" />
@@ -174,7 +168,7 @@
           <entry key="JavaScript" value="421" />
           <entry key="PLAIN_TEXT" value="382" />
           <entry key="RHTML" value="107937" />
-          <entry key="Ruby" value="53165" />
+          <entry key="Ruby" value="53647" />
           <entry key="SCSS" value="223" />
           <entry key="YAML" value="386" />
         </counts>
@@ -186,8 +180,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="277" column="20" selection-start-line="277" selection-start-column="20" selection-end-line="277" selection-end-column="20" />
+            <state relative-caret-position="205">
+              <caret line="271" column="174" selection-start-line="271" selection-start-column="174" selection-end-line="271" selection-end-column="174" />
             </state>
           </provider>
         </entry>
@@ -250,7 +244,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/parametre/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="550">
-              <caret line="46" column="33" lean-forward="true" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+              <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="e#241#247#0#HTML" expanded="true" />
@@ -427,6 +421,12 @@
               <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pop-circulation" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="uploaders" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pop-circulation" type="b2602c69:ProjectViewProjectNode" />
@@ -630,7 +630,7 @@
       <workItem from="1541668890848" duration="11000" />
       <workItem from="1541669222973" duration="501000" />
       <workItem from="1541679127251" duration="14160000" />
-      <workItem from="1542017679463" duration="12379000" />
+      <workItem from="1542017679463" duration="17631000" />
     </task>
     <servers />
   </component>
@@ -640,7 +640,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="985591000" />
+    <option name="totallyTimeSpent" value="990843000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -662,7 +662,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.37527114" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49840087" side_tool="true" visible="true" weight="0.38503253" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49840087" side_tool="true" visible="true" weight="0.34273317" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -739,13 +739,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/regions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/arrondissements/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -1047,7 +1040,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/parametre/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
-          <caret line="46" column="33" lean-forward="true" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#241#247#0#HTML" expanded="true" />
@@ -1087,10 +1080,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/uploaders/photo_uploader.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="277" column="20" selection-start-line="277" selection-start-column="20" selection-end-line="277" selection-end-column="20" />
+        <state relative-caret-position="205">
+          <caret line="271" column="174" selection-start-line="271" selection-start-column="174" selection-end-line="271" selection-end-column="174" />
         </state>
       </provider>
     </entry>
