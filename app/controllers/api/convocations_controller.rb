@@ -5,6 +5,7 @@ class Api::ConvocationsController < ApplicationController
   require 'httparty'
   require 'base64'
   require 'carrierwave/orm/activerecord'
+  require 'json'
 
   #autoriser les connexion en https
   #HTTParty::Basement.default_options.update(verify: false)
@@ -266,8 +267,15 @@ class Api::ConvocationsController < ApplicationController
     @alerte = Alerte.new(alert_params)
     #@alerte.photo.attach(alert_params[:photo]) #on persiste les données
     if @alerte.save
+      p = Type.find(@alerte.type_id).entity
+      a = JSON.parse p
+      b = a.reject(&:empty?)
+      w = []
+      query = b.each {|content| w.push(Structure.find(content).name)}
+      puts b
       render json: {
-          response: 'saved'
+          status: :created,
+          partner: w
       }
     else
       render json: {

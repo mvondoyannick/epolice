@@ -15,7 +15,7 @@
       <tr>
         <th>Name</th>
         <th>Description</th>
-        <th>Partenaires</th>
+        <th>Partenaires concerné(s)</th>
         <th colspan="3"></th>
       </tr>
       </thead>
@@ -25,7 +25,13 @@
           <td><%= type.name %></td>
           <td><%= type.description %></td>
           <td>
-            <%= p = type.entity %></td>
+            <% p = JSON.parse type.entity %>
+            <% p.is_a?(Array) %>
+            <% a = p.reject(&:empty?) %>
+            <% a.each do |data| %>
+              <%= Structure.find(data).name %>,
+            <% end %>
+          </td>
           <td><%= link_to 'Show', type %></td>
           <td><%= link_to 'Edit', edit_type_path(type) %></td>
           <td><%= link_to 'Supprimer', type, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>

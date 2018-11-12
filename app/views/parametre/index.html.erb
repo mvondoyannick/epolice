@@ -1,19 +1,24 @@
-<h1 class="m-b-40">
+<h1>
   Gestion des données
 </h1>
+  <p class="m-b-40">
+    Gestion du fichier de données de base de la plateforme
+  </p>
 
 <div class="row">
   <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 13rem;">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header bg-danger text-dark">
+        <i class="fa fa-map"></i>&nbsp;<%= link_to 'Découpage administratif', parametre_localisation_path, class: 'noir' %></div>
       <div class="card-body">
-        <h5 class="card-title"><%= link_to 'Découpage administratif', parametre_localisation_path, class: 'noir' %></h5>
+        <h5 class="card-title">Présentation</h5>
         <h6 class="card-subtitle mb-2 text-muted">Regions, departements et arrondissements</h6>
         <p class="card-text"></p>
 
       </div>
       <div class="card-footer text-muted">
-        <%= link_to 'Aperçu', parametre_localisation_path, class: 'card-link btn btn-sm btn-primary' %>
-        <%= link_to 'Ajouter', nil, class: 'card-link btn btn-sm btn-primary', data: { toggle: 'modal', target: '#exampleModalLong'} %>
+        <%= link_to 'Aperçu', parametre_localisation_path, class: 'card-link btn btn-sm btn-outline-primary' %>
+        <%= link_to 'Ajouter', nil, class: 'card-link btn btn-sm btn-outline-primary', data: { toggle: 'modal', target: '#exampleModalLong'} %>
       </div>
     </div>
   </div>
@@ -31,9 +36,13 @@
     </div>
   </div-->
   <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 13rem;">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header bg-warning">
+        <i class="fa fa"></i>
+        <%= link_to 'Grade', grades_path, class: 'noir' %>
+      </div>
       <div class="card-body">
-        <h5 class="card-title"><%= link_to 'Grade', grades_path, class: 'noir' %></h5>
+        <h5 class="card-title"></h5>
         <h6 class="card-subtitle mb-2 text-muted">Grades de la police</h6>
         <p class="card-text"></p>
       </div>
@@ -44,7 +53,8 @@
     </div>
   </div>
   <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 13rem;">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header bg-danger">Header</div>
       <div class="card-body">
         <h5 class="card-title"><%= link_to 'GRVPC', parametre_grvpc_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Gestion des GRVPC et de postes de polices</h6>
@@ -57,7 +67,8 @@
     </div>
   </div>
   <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 13rem;">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header bg-danger">Header</div>
       <div class="card-body">
         <h5 class="card-title"><%= link_to 'Commissariats', commissariats_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Commissariats de police</h6>
@@ -70,7 +81,8 @@
     </div>
   </div>
   <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 13rem;">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header bg-danger">Header</div>
       <div class="card-body">
         <h5 class="card-title">Postes de polices</h5>
         <h6 class="card-subtitle mb-2 text-muted">Gestion des postes de police</h6>
@@ -84,7 +96,8 @@
     </div>
   </div>
   <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 13rem;">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header bg-danger">Header</div>
       <div class="card-body">
         <h5 class="card-title"><%= link_to 'Effectifs', agents_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Personnel de la police</h6>
@@ -97,7 +110,8 @@
     </div>
   </div>
   <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 13rem;">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header bg-danger">Header</div>
       <div class="card-body">
         <h5 class="card-title"><%= link_to 'Partenaires', parametre_gestion_sturcture_partenaire_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Organisations destinataires des alertes</h6>
@@ -123,7 +137,8 @@
     </div>
   </div -->
   <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 13rem;">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header bg-danger">Header</div>
       <div class="card-body">
         <h5 class="card-title"><%= link_to "Types d'infractions", infractions_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Liste des motifs aux infractions du code de la route</h6>
@@ -136,7 +151,8 @@
     </div>
   </div>
   <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 13rem;">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header bg-danger">Header</div>
       <div class="card-body">
         <h5 class="card-title"><%= link_to 'Elements à retenir', pieceretenus_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Documents et/ou objets d'identification du contrevenant ou de l'engin roulant susceptible d'etre retenus</h6>
@@ -152,7 +168,8 @@
 
 
   <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 13rem;">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header bg-danger">Header</div>
       <div class="card-body">
         <h5 class="card-title"><%= link_to "Types d'evenements", types_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Evénements survenant dans la cité susceptibles de faire l’objet d’une alerte</h6>
@@ -178,15 +195,24 @@
   </div-->
 
   <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 13rem;">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header bg-primary text-dark">
+        <i class="fa fa-download"></i>&nbsp;Import/export
+      </div>
       <div class="card-body">
-        <h5 class="card-title">Import/export</h5>
+        <h5 class="card-title"></h5>
         <h6 class="card-subtitle mb-2 text-muted">Importation et/ou exportation des données</h6>
         <p class="card-text"></p>
       </div>
       <div class="card-footer text-mutted">
-        <%= link_to 'Exporter', parametre_access_setup_import_export_path, class: 'card-link btn btn-sm btn-primary' %>
-        <%= link_to 'Importer', parametre_access_importer_import_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to parametre_access_setup_import_export_path, class: 'card-link btn btn-sm btn-outline-primary' do %>
+          <i class="fa fa-download"></i>
+          Exporter
+        <% end %>
+        <%= link_to parametre_access_importer_import_path, class: 'card-link btn btn-sm btn-outline-primary' do %>
+          <i class="fa fa-upload"></i>
+          Importer
+        <% end %>
       </div>
     </div>
   </div>

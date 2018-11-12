@@ -328,7 +328,8 @@ Rails.application.routes.draw do
     #verification de l'affectation d'un agent
     get 'epolice/affectation/verify/:matricule', to: 'convocations#set_affectation'
 
-    #
+    #send contravention datas to USSD
+    #match 'epolice/contravention/ussd', to 'api#', via: [:post, :options]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
