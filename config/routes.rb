@@ -306,7 +306,7 @@ Rails.application.routes.draw do
     #retourn toutes les infraction
     get 'epolice/infractions/infration', to: 'convocations#api_infraction'
     #----------------------sending alert and return status----------------------------------
-    match 'alert/new', to: 'convocations#new_alerte', via: [:post, :options]
+    match 'alert/new', to: 'convocations#new_alerte', via: [:post, :options, :get]
     #========== lire les alertes publiées =============
     get 'alert/read/all/:matricule/:ville_id', to: 'convocations#read_alertes'
     #================= gestion du token ===================
