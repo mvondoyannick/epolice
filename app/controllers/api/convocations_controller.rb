@@ -287,6 +287,8 @@ class Api::ConvocationsController < ApplicationController
           status: :created,
           partner: w, #on retourne un tableau contenant les partenaires,
           ip: request.remote_ip,
+          ip_geolocation: JSON.parse(Net::HTTP.get(URI('https://ipapi.co/'+request.remote_ip+'/json/'))),
+          session: request.reset_session,
           photo: @alerte.photo.url,
           photo_identifier: @alerte.photo_identifier
       }
@@ -488,7 +490,7 @@ class Api::ConvocationsController < ApplicationController
     end
 
     def alert_params
-      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre)
+      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre, :photo)
     end
 
     def infraction_params

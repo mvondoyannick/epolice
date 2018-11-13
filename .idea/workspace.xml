@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -156,7 +155,7 @@
           <entry key="jbuilder" value="1" />
           <entry key="js" value="421" />
           <entry key="pid" value="1" />
-          <entry key="rb" value="53237" />
+          <entry key="rb" value="53335" />
           <entry key="scss" value="223" />
           <entry key="txt" value="381" />
           <entry key="yml" value="386" />
@@ -169,7 +168,7 @@
           <entry key="JavaScript" value="421" />
           <entry key="PLAIN_TEXT" value="382" />
           <entry key="RHTML" value="108633" />
-          <entry key="Ruby" value="53902" />
+          <entry key="Ruby" value="54000" />
           <entry key="SCSS" value="223" />
           <entry key="YAML" value="386" />
         </counts>
@@ -181,8 +180,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="288" column="31" selection-start-line="288" selection-start-column="31" selection-end-line="288" selection-end-column="31" />
+            <state relative-caret-position="329">
+              <caret line="289" column="92" selection-start-line="289" selection-start-column="92" selection-end-line="289" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -632,7 +631,7 @@
       <workItem from="1541669222973" duration="501000" />
       <workItem from="1541679127251" duration="14160000" />
       <workItem from="1542017679463" duration="18517000" />
-      <workItem from="1542103108358" duration="12456000" />
+      <workItem from="1542103108358" duration="12888000" />
     </task>
     <servers />
   </component>
@@ -642,7 +641,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1004185000" />
+    <option name="totallyTimeSpent" value="1004617000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1086,8 +1085,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/convocations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="288" column="31" selection-start-line="288" selection-start-column="31" selection-end-line="288" selection-end-column="31" />
+        <state relative-caret-position="329">
+          <caret line="289" column="92" selection-start-line="289" selection-start-column="92" selection-end-line="289" selection-end-column="92" />
         </state>
       </provider>
     </entry>
