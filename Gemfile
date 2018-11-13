@@ -26,6 +26,8 @@ gem 'uglifier', '>= 1.3.0'
 gem "roo", "~> 2.7.0"
 #gestion du qrcode https://github.com/whomwah/rqrcode
 gem 'rqrcode'
+#for pagination https://github.com/kaminari/kaminari
+gem 'kaminari'
 #generation des enregistrements aleatoires
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 # Use CoffeeScript for .coffee assets and views
