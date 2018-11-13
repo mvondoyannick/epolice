@@ -259,13 +259,13 @@ class Api::ConvocationsController < ApplicationController
   def new_alerte
 
     #recuperation des parametres
-    agent_id = params[:agent_id]
-    type_id = params[:type_id]
-    longitude = params[:longitude]
-    latitude = params[:latitude]
-    description = params[:description]
-    statu_id = params[:statu_id]
-    titre = Type.find(params[:type_id]).name
+    #agent_id = params[:agent_id]
+    #type_id = params[:type_id]
+    #longitude = params[:longitude]
+    #latitude = params[:latitude]
+    #description = params[:description]
+    #statu_id = params[:statu_id]
+    #titre = Type.find(params[:type_id]).name
     #:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre, :photo
 
 
