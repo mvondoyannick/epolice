@@ -13,6 +13,7 @@ class Alerte < ApplicationRecord
   #ajout de active storage pour les fichiers
   #has_one_attached :photo
   mount_uploader :photo, PhotoUploader
+  #mount_base64_uploader :photo, PhotoUploader
 
   def self.to_csv
     CSV.generate do |csv|

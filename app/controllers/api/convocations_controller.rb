@@ -275,7 +275,7 @@ class Api::ConvocationsController < ApplicationController
 
     #@alerte.photo.attach(alert_params[:photo]) #on persiste les données
     # with carriewave
-    #@alerte.photo = params[:photo]
+    @alerte.photo = params[:photo]
     if @alerte.save
       p = Type.find(@alerte.type_id).entity
       a = JSON.parse p
@@ -285,7 +285,8 @@ class Api::ConvocationsController < ApplicationController
       puts b
       render json: {
           status: :created,
-          partner: w, #on retourne un tableau contenant les partenaires
+          partner: w, #on retourne un tableau contenant les partenaires,
+          ip: request.env['REMOTE_ADDR'],
           photo: @alerte.photo.url,
           photo_identifier: @alerte.photo_identifier
       }

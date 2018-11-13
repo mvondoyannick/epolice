@@ -12,7 +12,8 @@ class GrvpcController < ApplicationController
 
   def all_alertes
     @alerte = Alerte.order(created_at: :desc)
-    add_breadcrumb "Alertes", grvpc_all_alertes_path
+    add_breadcrumb "applications", grvpc_all_alertes_path
+    add_breadcrumb "alertes", grvpc_all_alertes_path
   end
 
   def alerte_today
@@ -41,12 +42,14 @@ class GrvpcController < ApplicationController
 
   def all_contraventions
     @contravention = Convocation.order(created_at: :desc)
+    add_breadcrumb "applications", grvpc_index_path
     add_breadcrumb "contraventions", grvpc_all_contraventions_path
   end
 
   def all_constats
     @constat = Constat.order(created_at: :desc)
-    add_breadcrumb "tous les constats", grvpc_all_constats_path
+    add_breadcrumb "applications", grvpc_index_path
+    add_breadcrumb "constats circulation", grvpc_all_constats_path
   end
 
   def transmission_document

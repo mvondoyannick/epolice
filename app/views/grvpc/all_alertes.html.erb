@@ -5,26 +5,39 @@
 <br>
 <div class="row">
   <div class="col-sm">
-    <table class="table table-hover table-striped" id="table">
+    <table class="table table-hover table-striped table-bordered" id="table">
       <thead class="thead-dark">
       <tr height="50">
         <td>#</td>
         <td>Date création</td>
         <td>Titre</td>
+        <td>Detail</td>
         <td>Agent</td>
+        <td>Région</td>
+        <td>Partenaires</td>
         <td>Action</td>
       </tr>
       </thead>
       <tbody>
       <% @alerte.each do |a| %>
         <tr>
-          <td width="5%"><i class="fa fa-bell-o"></i></td>
+          <td width="5%"><i class="fa fa-bell"></i></td>
           <td><%= a.created_at %></td>
           <td><%= a.titre %></td>
-          <td><%= a.agent.name %>&nbsp,<%= a.agent.prenom %></td>
+          <td title="<%= a.description %>"><%= a.description.truncate(10) %></td>
+          <td><i class="fa fa-user"></i>&nbsp;&nbsp;<%= a.agent.name %>&nbsp,<%= a.agent.prenom %></td>
+          <td><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Région</td>
+          <td>
+            <% p = Type.find(a.type_id).entity %>
+            <% data = JSON.parse p %>
+            <% result = data.reject(&:empty?) %>
+            <% result.each do |query| %>
+              <%= highlight(Structure.find(query).name,  /eneo|camwater/) %> <br>
+            <% end %>
+          </td>
           <td>
             <div class="dropdown show">
-              <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="btn btn-light dropdown-toggle btn-sm" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Actions
               </a>
 
