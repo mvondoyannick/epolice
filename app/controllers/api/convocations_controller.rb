@@ -286,7 +286,7 @@ class Api::ConvocationsController < ApplicationController
       render json: {
           status: :created,
           partner: w, #on retourne un tableau contenant les partenaires,
-          ip: request.env['REMOTE_ADDR'],
+          ip: request.remote_ip,
           photo: @alerte.photo.url,
           photo_identifier: @alerte.photo_identifier
       }
