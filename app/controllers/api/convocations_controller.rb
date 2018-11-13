@@ -40,7 +40,8 @@ class Api::ConvocationsController < ApplicationController
             unite_id: data.groupement_id,
             region: Groupement.find(data.groupement_id).name.split[1],
             #unite: data.groupement.split[0],
-            #region: data.groupement.split[1],
+            region: data.region.name,
+            ip_geolocation: JSON.parse(Net::HTTP.get(URI('https://ipapi.co/'+request.remote_ip+'/json/'))),
             apikey: SecureRandom.hex(10),
             cookies: {
                 value: SecureRandom.hex(10),

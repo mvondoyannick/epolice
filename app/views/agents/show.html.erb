@@ -9,7 +9,7 @@
       <div class="card-body card-block">
         <div class="col-8">
           <div class="form-group form-inline">
-            <label for="postal-code" class=" form-control-label">Region du <%= @agent.groupement.name.split[1] if !@agent.groupement_id.nil? %></label>
+            <label for="postal-code" class=" form-control-label">Region du <%= @agent.region if !@agent.region_id.nil? %></label>
           </div>
         </div>
         <div class="form-group">

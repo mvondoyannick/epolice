@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
     #permet de journaliser toutes les action dans la plateforme
     log = Log.new
     log.browser = request.env['HTTP_USER_AGENT']
-    log.address = request.env['REMOTE_ADDR']
+    log.address = request.remote_ip#request.env['REMOTE_ADDR']
     log.controller = params[:controller]
     log.action = params[:action]
     log.date = Time.now

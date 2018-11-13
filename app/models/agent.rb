@@ -9,6 +9,7 @@ class Agent < ApplicationRecord
 	belongs_to :grade
 	belongs_to :groupement
 	belongs_to :commissariat
+	belongs_to :region
 
 
 	#pour la photo de l'agent

@@ -40,6 +40,10 @@
         </div>
         <div class="card-body card-block">
           <div class="form-group">
+            <label for="company" class=" form-control-label">Region d'affectation</label>
+            <%= f.association :region, prompt: 'Région d affection', label: false%>
+          </div>
+          <div class="form-group">
             <label for="company" class=" form-control-label">Numéro téléphone</label>
             <%= f.input :phone, as: :tel, placeholder: 'Numéro téléphone agent', label: false%>
           </div>
