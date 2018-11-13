@@ -480,10 +480,30 @@ class Api::ConvocationsController < ApplicationController
 
   end
 
+  #gestion de la decharge
+  # @detail : permet de gerer la decharge d'un document sur la base d'un N° de CNI et de la photo
+  # @routes
+  # @verb : http post, http options
+  # @params : CNI=>string, photo=>file_uri
+  # @format result : JSON
+  # @developer : mvondoyannick@gmail.com
+  def decharge
+    cni = params[:cni].to_string.html_safe
+    photo = params[:photo]
+
+    #on recherche les information
+    SearchDecharge.new(cni)
+
+  end
+
 
   private
     def no_sens
 
+    end
+
+    def decharge_params
+      params.permit(:cni, :photo)
     end
 
     def alerte_params
