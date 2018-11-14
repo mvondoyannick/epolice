@@ -1,7 +1,7 @@
 class ParametreController < ApplicationController
   before_action :authenticate_admin!
   layout 'fylo'
-  add_breadcrumb "fichiers", :parametre_index_path
+  add_breadcrumb "Fichiers", :parametre_index_path
 
 
   def index
@@ -39,7 +39,7 @@ class ParametreController < ApplicationController
     @metropolis = Metropoli.all
 
     @agent = Agent.all
-    add_breadcrumb "comptes utilisateurs", :parametre_admin_path
+    add_breadcrumb "utilisateurs", :parametre_admin_path
   end
 
 
