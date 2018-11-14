@@ -33,7 +33,7 @@
           <tr>
             <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
             <td>
-              <%= Type.find(alerte.titre).name %>
+              <%= alerte.titre %>
             </td>
             <td>
               <%= truncate(alerte.description.html_safe, lenght: 10) %>

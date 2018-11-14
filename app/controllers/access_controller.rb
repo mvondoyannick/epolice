@@ -5,7 +5,7 @@ class AccessController < ApplicationController
   before_action :authenticate_admin!, except: [:login, :serviceShow]
 
   add_breadcrumb "Fichiers", :parametre_index_path
-  add_breadcrumb "découpage administratif", :parametre_localisation_path
+  #add_breadcrumb "découpage administratif", :parametre_localisation_path
   HTTParty::Basement.default_options.update(verify: false)
 
 
@@ -268,6 +268,7 @@ class AccessController < ApplicationController
 
   def application
     render layout: 'fylo'
+    add_breadcrumb "modules", access_application_path
   end
 
   def systeme

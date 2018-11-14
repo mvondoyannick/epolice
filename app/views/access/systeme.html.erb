@@ -7,9 +7,10 @@
 
 <div class="row">
   <div class="col-lg-3">
-    <div class="card">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header text-dark bg-danger"><%= link_to 'Langue et communication', parametre_access_lange_path, class: 'noir' %></div>
       <div class="card-body">
-        <h5 class="card-title"><%= link_to 'Langue et communication', parametre_access_lange_path, class: 'noir' %></h5>
+        <h5 class="card-title"></h5>
         <h6 class="card-subtitle mb-2 text-muted">ajouter ou modifier les langues</h6>
         <p class="card-text"></p>
       </div>
@@ -31,7 +32,8 @@
     </div>
   </div-->
   <div class="col-lg-3">
-    <div class="card">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header text-dark"></div>
       <div class="card-body">
         <h5 class="card-title"><%= link_to 'Solution de paiement', paiementsolutions_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Ajouter des solutions de paiements</h6>
@@ -44,7 +46,8 @@
     </div>
   </div>
   <div class="col-lg-3">
-    <div class="card">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header text-dark"></div>
       <div class="card-body">
         <h5 class="card-title"><%= link_to 'Apparence et personnalisation', nil, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Customize your interface theme</h6>
@@ -57,7 +60,8 @@
     </div>
   </div>
   <div class="col-lg-3">
-    <div class="card">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header text-dark"></div>
       <div class="card-body">
         <h5 class="card-title"><%= link_to 'Impression', nil, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Configuration des imprimantes</h6>
@@ -69,7 +73,8 @@
     </div>
   </div>
   <div class="col-lg-3">
-    <div class="card">
+    <div class="card"style="height: 17rem;">
+      <div class="card-header text-dark"></div>
       <div class="card-body">
         <h5 class="card-title"><%= link_to 'Sauvegarde et restauration', access_systeme_path, class: 'noir' %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Sauvegarde et restauration de la plateforme</h6>
@@ -82,7 +87,8 @@
     </div>
   </div>
   <div class="col-lg-3">
-    <div class="card">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header text-dark"></div>
       <div class="card-body">
         <h5 class="card-title">Systeme et securité</h5>
         <h6 class="card-subtitle mb-2 text-muted">Configuration de la sécurité de la plateforme</h6>
@@ -95,9 +101,10 @@
     </div>
   </div>
   <div class="col-lg-3">
-    <div class="card">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header bg-primary text-dark">Roles et droits</div>
       <div class="card-body">
-        <h5 class="card-title">Roles et droits</h5>
+        <h5 class="card-title">Présentation</h5>
         <h6 class="card-subtitle mb-2 text-muted">Gestion des modules de la plateforme</h6>
         <p class="card-text"></p>
 
@@ -105,6 +112,21 @@
       <div class="card-footer text-muted">
         <%= link_to 'Acceder', nil, class: 'card-link btn btn-sm btn-primary' %>
         <a href="#" class="card-link btn btn-sm btn-primary">Another link</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header bg-danger text-dark"><%= link_to 'Export/Import', gestion_alerte_alertes_all_path, class: 'noir' %></div>
+      <div class="card-body">
+        <h5 class="card-title">Présentation</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Alertes de la cité Etat</h6>
+        <p class="card-text"></p>
+
+      </div>
+      <div class="card-footer text-muted">
+        <%= link_to 'Acceder', gestion_alerte_alertes_all_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Ajouter', new_alerte_path, class: 'card-link btn btn-sm btn-primary' %>
       </div>
     </div>
   </div>
