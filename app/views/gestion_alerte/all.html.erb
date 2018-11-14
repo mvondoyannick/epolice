@@ -1,8 +1,5 @@
 
 <h1 class="m-b-40">
-  <%= link_to :back do %>
-    <i class="fa fa-arrow-left"></i>
-  <% end %>
   Liste des alertes
 </h1>
 
@@ -36,7 +33,7 @@
           <tr>
             <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
             <td>
-              <%= alerte.titre %>
+              <%= Type.find(alerte.titre).name %>
             </td>
             <td>
               <%= truncate(alerte.description.html_safe, lenght: 10) %>

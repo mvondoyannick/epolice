@@ -258,6 +258,7 @@ class Api::ConvocationsController < ApplicationController
 
   #GET ALERTS 
   #permet de creer une nouvelle alerte
+  # @developer: mailto:mvondoyannick@gmail.com
   def new_alerte
 
     #recuperation des parametres
