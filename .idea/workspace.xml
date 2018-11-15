@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d162b2-5b75-4c0e-8b3b-c46c598e87e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/pdfs/localise_piece.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pdfs/verifier_paiement.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/access/solution_paiement.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/access/type_paiement.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/access_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/access_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/convocations_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/paiementsolutions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/paiementsolutions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/paiementsolution.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/paiementsolution.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pdfs/search_decharge.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/pdfs/search_decharge.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/access/paiement.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/paiement.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/access/systeme.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/systeme.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/paiementsolutions/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/paiementsolutions/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/paiementsolutions/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/paiementsolutions/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/paiementsolutions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/paiementsolutions/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/paiementsolutions/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/paiementsolutions/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/parametre/admin.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/parametre/admin.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -176,7 +157,7 @@
           <entry key="jbuilder" value="1" />
           <entry key="js" value="421" />
           <entry key="pid" value="1" />
-          <entry key="rb" value="56197" />
+          <entry key="rb" value="56307" />
           <entry key="scss" value="223" />
           <entry key="txt" value="381" />
           <entry key="yml" value="386" />
@@ -189,7 +170,7 @@
           <entry key="JavaScript" value="421" />
           <entry key="PLAIN_TEXT" value="382" />
           <entry key="RHTML" value="110594" />
-          <entry key="Ruby" value="56862" />
+          <entry key="Ruby" value="56972" />
           <entry key="SCSS" value="223" />
           <entry key="YAML" value="386" />
         </counts>
@@ -215,8 +196,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/access_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="292" column="60" selection-start-line="292" selection-start-column="60" selection-end-line="292" selection-end-column="60" />
+            <state relative-caret-position="288">
+              <caret line="301" column="46" selection-start-line="301" selection-start-column="46" selection-end-line="301" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -675,7 +656,7 @@
       <workItem from="1542196122199" duration="4926000" />
       <workItem from="1542209441311" duration="2260000" />
       <workItem from="1542214177773" duration="279000" />
-      <workItem from="1542272540587" duration="5785000" />
+      <workItem from="1542272540587" duration="6873000" />
     </task>
     <servers />
   </component>
@@ -685,7 +666,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1021672000" />
+    <option name="totallyTimeSpent" value="1022760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -707,7 +688,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.37527114" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49840087" side_tool="true" visible="true" weight="0.29718006" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49840087" side_tool="true" visible="true" weight="0.55748373" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1134,8 +1115,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/access_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="292" column="60" selection-start-line="292" selection-start-column="60" selection-end-line="292" selection-end-column="60" />
+        <state relative-caret-position="288">
+          <caret line="301" column="46" selection-start-line="301" selection-start-column="46" selection-end-line="301" selection-end-column="46" />
         </state>
       </provider>
     </entry>

@@ -297,6 +297,9 @@ class AccessController < ApplicationController
   end
 
   #module de gestion des langues
+  # @detail: retourne les langues disponible sur le systeme
+  # @route:
+  # @developer: mailto:mvondoyannick@gmail.com
   def lange
     @langue = Langue.new
     render layout: 'fylo'
