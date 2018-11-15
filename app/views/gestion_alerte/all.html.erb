@@ -17,7 +17,7 @@
 <div class="row">
   <div class="col-lg-12">
     <div class="table-responsive table--no-card m-b-30">
-      <table id="table" class="table table-borderless table-striped table-earning">
+      <table class="table table-borderless table-striped table-earning table-bordered">
         <thead>
         <tr>
           <th>#</th>
@@ -25,13 +25,16 @@
           <th>Description</th>
           <th>Date</th>
           <th>Statut</th>
+          <th>Services</th>
           <th colspan="3">&nbsp;</th>
         </tr>
         </thead>
         <tbody>
         <% @alertes.each do |alerte| %>
           <tr>
-            <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
+            <td>
+              <%= alerte.id %>
+            </td>
             <td>
               <%= alerte.titre %>
             </td>
@@ -45,10 +48,17 @@
               <%= link_to alerte.statu.name, nil, class: 'btn btn-sm btn-danger disabled' if !alerte.statu_id.nil? %>
             </td>
             <td>
-              <%= link_to "Voir", alerte_path(alerte) %>
+              <% p = JSON.parse alerte.type.entity if !alerte.type_id.nil? %>
+              <% a = p.reject(&:empty?) %>
+              <% a.each do |data| %>
+                <%= link_to Structure.find(data).name, structure_path(data) %>, <br>
+              <% end %>
             </td>
             <td>
-              <%= link_to "Supprimer", alerte, method: :delete, data: {confirm: "Supprimer cette alerte : #{alerte.code}"}, class: 'btn btn-sm btn-danger disabled' %>
+              <%= link_to "Voir", alerte_path(alerte), class: 'btn btn-sm btn-primary' %>
+            </td>
+            <td>
+              <%= link_to "Supprimer", alerte, method: :delete, data: {confirm: "Supprimer cette alerte : #{alerte.code}"}, class: 'btn btn-sm btn-danger disabled' if !current_admin.role.name = 'decideur' %>
             </td>
           </tr>
         <% end %>
@@ -57,3 +67,9 @@
     </div>
   </div>
 </div>
+
+<script>
+    $(document).ready( function () {
+        $('#table').DataTable();
+    } );
+</script>

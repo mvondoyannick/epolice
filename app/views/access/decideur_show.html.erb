@@ -1,8 +1,8 @@
 <h1 class="m-b-10">
-  Administrateur & décideurs
+  Décideurs
 </h1>
 <p class="m-b-40">
-  Liste des administrateurs et des decideurs enregistrés sur la plateforme
+  Liste des décideurs de la plateforme
 </p>
 
 <div class="row">
@@ -28,7 +28,7 @@
             <td><%= user.phone %></td>
             <td>
               <%= link_to 'Bloquer', nil, class: 'btn btn-sm btn-primary' %>
-              <%= link_to 'Editer', parametre_admin_edit_path(data: user.id), class: 'btn btn-sm btn-primary' %>
+              <%= link_to 'Editer', nil, class: 'btn btn-sm btn-primary' %>
               <%= link_to 'Supprimer', nil, class: 'btn btn-sm btn-danger' %>
             </td>
           </tr>
@@ -51,7 +51,7 @@
     <div class="col-lg-6">
       <div class="card">
         <div class="card-header">
-          <strong>Nouvel administrateur/décideur</strong>
+          <strong>Nouveau décideur</strong>
         </div>
         <div class="card-body card-block">
           <div class="form-group">

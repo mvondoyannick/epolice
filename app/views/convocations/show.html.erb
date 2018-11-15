@@ -1,15 +1,12 @@
 <p id="notice"><%= notice %></p>
   <%  @agent = Agent.find(@convocation.agent_id) %>
   <h1 class="m-b-40">
-    <%= link_to :back do %>
-      <i class="fa fa-arrow-left"></i>
-    <% end %>
     Infraction du <%= @convocation.created_at.strftime("%B %d, %Y") %>
   </h1>
 
 <div class="row">
   <div class="col-lg-6">
-    <div class="au-card au-card--bg-blue m-b-30">
+    <div class="au-card m-b-30">
       <div class="au-card-inner">
         <div class="table-responsive">
           <table class="table text-black-50">
@@ -81,7 +78,7 @@
     </div>
   </div>
   <div class="col-lg-6">
-    <div class="au-card au-card--bg-blue m-b-30">
+    <div class="au-card m-b-30">
       <div class="au-card-inner">
         <div class="table-responsive">
           <table class="table text-black-50">
@@ -123,6 +120,14 @@
             <tr>
               <td>Agent verbaliseur (matricule)</td>
               <td class="text-right"><%= link_to @convocation.agent.matricule, agent_url(@convocation.agent) %></td>
+            </tr>
+            <tr>
+              <td>Téléphone</td>
+              <td class="text-right"><%= link_to @convocation.agent.phone %></td>
+            </tr>
+            <tr>
+              <td>Photo profile</td>
+              <td class="text-right"><%= image_tag(@convocation.agent.avatar.url, size: 150) %></td>
             </tr>
             </tbody>
           </table>

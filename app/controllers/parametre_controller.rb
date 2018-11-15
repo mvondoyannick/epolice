@@ -45,7 +45,7 @@ class ParametreController < ApplicationController
 
   def phone_user
     @agent = Agent.all
-    add_breadcrumb "localisation", :parametre_localisation_path
+    add_breadcrumb "utilisateur", :parametre_localisation_path
   end
 
   def add_user

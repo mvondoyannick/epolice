@@ -9,6 +9,7 @@
       <table class="table table-borderless table-striped table-earning">
         <thead>
         <tr>
+          <th>#</th>
           <th>Nom grade</th>
           <th>Description</th>
           <th colspan="3"></th>
@@ -17,11 +18,12 @@
         <tbody>
           <% @grades.each do |grade| %>
             <tr>
+              <td><%= grade.id %></td>
               <td><%= grade.name %></td>
               <td><%= grade.detail %></td>
-              <td class="text-right"><%= link_to 'Show', grade %></td>
-              <td class="text-right"><%= link_to 'Edit', edit_grade_path(grade) %></td>
-              <td class="text-right" ><%= link_to 'Destroy', grade, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
+              <td class="text-right"><%= link_to 'Voir', grade %></td>
+              <td class="text-right"><%= link_to 'Editer', edit_grade_path(grade) %></td>
+              <td class="text-right" ><%= link_to 'Supprimer', grade, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm'%></td>
             </tr>
           <% end %>
         </tbody>
@@ -30,9 +32,10 @@
   </div>
 </div>
 
-<br>
+<div class="text-right">
+  <%= link_to new_grade_path, class: 'btn btn-primary' do %>
+    <i class="fa fa-plus"></i>
+    &nbsp;Ajouter
+  <% end %>
+</div>
 
-<%= link_to new_grade_path, class: 'btn btn-sm btn-primary' do %>
-  <i class="fa fa-plus"></i>
-  Ajouter un grade
-<% end %>

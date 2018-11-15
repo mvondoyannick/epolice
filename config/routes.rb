@@ -275,6 +275,15 @@ Rails.application.routes.draw do
   #pour les types de paiement a afficher
   get 'parametre/type_paiement', to: 'access#type_paiement'
 
+  #pour les etats de la plateforme
+  get 'parametre/etat', to: 'access#edition'
+
+  #pour afficher les decideurs de la plateforme
+  get 'parametre/decideurs', to: 'access#decideur_show'
+
+  #edition d'un administrateur
+  get 'parametre/admin_edit', to: 'access#admin_edit'
+
   #voir toutes les alertes
   get 'access/alertes/alerte/all', to: 'access#alerte_all'
 

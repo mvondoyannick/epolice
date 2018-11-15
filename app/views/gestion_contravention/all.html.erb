@@ -9,12 +9,13 @@
   </div>
   <button type="submit" class="btn btn-primary mb-2">Rechercher</button>
 <% end %>
-<div class="m-b-40">
-  <h2 class="title-1">
-    <%= link_to :back do %>
-      <i class="fa fa-arrow-left"></i>
-    <% end %>
-    Liste des Infractions</h2>
+<div class="m-b-10">
+  <h1 class="title-1">
+    Liste des Infractions
+  </h1>
+  <p class="m-b-10">
+    Infractions commisent
+  </p>
   <div class="text-right">
     <%= link_to gestion_contraventions_contraventions_all_path(format: :xls), class: "btn btn-success" do %>
       <i class="fa fa-file-excel"></i>
@@ -30,7 +31,7 @@
 <div class="row">
   <div class="col-lg-12">
     <div class="table-responsive table--no-card m-b-30">
-      <table id="table" class="table table-borderless table-striped table-earning">
+      <table class="table table-borderless table-striped table-earning">
         <thead>
         <tr>
           <th>#</th>
@@ -45,9 +46,9 @@
         <tbody>
         <% @all.each do |alerte| %>
           <tr>
-            <td width="5%"><i class="fa fa-bell-o" style="color: #000000;"></i></td>
+            <td width="5%"><%= alerte.id %></td>
             <td>
-              <%= alerte.created_at.strftime("%B %d, %Y") %>
+              <%= alerte.created_at.strftime("%d %b, %Y, %H:%M:%S") %>
             </td>
             <td>
               <%= alerte.phone %>
@@ -62,13 +63,13 @@
               <%= alerte.infraction.montant if !alerte.infraction_id.nil? %>
             </td>
             <td>
-              <%= link_to "Show", convocation_path(alerte) %>
+              <%= link_to "Voir", convocation_path(alerte) %>
             </td>
-            <td>
+            <!--td>
               <%= link_to "Edit", edit_convocation_path(alerte) %>
-            </td>
+            </td-->
             <td>
-              <%= link_to "Delete", alerte, method: :delete, data: {confirm: "Supprimer l'infraction N° #{alerte.cni}"} %>
+              <%= link_to "Archiver", alerte, method: :delete, data: {confirm: "Supprimer l'infraction N° #{alerte.cni}"}, class: 'btn btn-danger btn-sm' %>
             </td>
           </tr>
         <% end %>

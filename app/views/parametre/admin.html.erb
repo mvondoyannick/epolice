@@ -11,7 +11,7 @@
   <div class="col-lg-3 col-sm-4 col-md-4">
 
     <div class="card" style="height: 17rem;">
-      <div class="card-header text-dark bg-primary">Administrateurs & décideurs</div>
+      <div class="card-header text-dark bg-primary">Administrateurs</div>
       <div class="card-body">
         <h5 class="card-title">Présentation</h5>
         <h6 class="card-subtitle mb-2 text-muted">Utilsateur administrateur</h6>
@@ -19,6 +19,21 @@
       </div>
       <div class="card-footer text-mutted">
         <%= link_to 'Consulter', parametre_admins_admin_show_path, class: 'card-link btn btn-sm btn-outline-primary' %>
+        <%= link_to 'Ajouter', nil, class: 'card-link btn btn-sm btn-outline-primary' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-4 col-md-4">
+
+    <div class="card" style="height: 17rem;">
+      <div class="card-header text-dark bg-primary"><%= link_to 'Décideurs', parametre_decideurs_path, class: 'text-dark' %></div>
+      <div class="card-body">
+        <h5 class="card-title">Présentation</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Comptes d'utilisateurs des décideurs</h6>
+        <p class="card-text"></p>
+      </div>
+      <div class="card-footer text-mutted">
+        <%= link_to 'Consulter', parametre_decideurs_path, class: 'card-link btn btn-sm btn-outline-primary' %>
         <%= link_to 'Ajouter', nil, class: 'card-link btn btn-sm btn-outline-primary' %>
       </div>
     </div>
@@ -40,19 +55,6 @@
   <div class="col-lg-3 col-sm-4 col-md-4">
     <div class="card" style="height: 17rem;">
       <div class="card-header bg-danger text-dark">Acces spéciaux</div>
-      <div class="card-body">
-        <h5 class="card-title">Présentation</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Agent de recouvremenet</h6>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer text-mutted">
-        <%= link_to 'Acceder', parametre_phone_user_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3 col-sm-4 col-md-4">
-    <div class="card" style="height: 17rem;">
-      <div class="card-header bg-success text-dark">Autres</div>
       <div class="card-body">
         <h5 class="card-title">Présentation</h5>
         <h6 class="card-subtitle mb-2 text-muted">Agent de recouvremenet</h6>

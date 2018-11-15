@@ -2,6 +2,7 @@ class ConvocationsController < ApplicationController
   before_action :set_convocation, only: [:show, :edit, :update, :destroy]
   before_action :basic_auth, only: [:new, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
+  add_breadcrumb 'Fichiers', :parametre_index_path
 
 
   layout 'fylo'
@@ -17,7 +18,10 @@ class ConvocationsController < ApplicationController
   # GET /convocations/1
   # GET /convocations/1.json
   def show
-
+    add_breadcrumb 'modules', :access_application_path
+    add_breadcrumb 'contraventions', :gestion_contraventions_contraventions_all_path
+    add_breadcrumb "#{@convocation.id}", :convocation_path
+    add_breadcrumb "detail", :convocation_path
   end
 
   def home

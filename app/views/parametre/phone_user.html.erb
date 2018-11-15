@@ -7,8 +7,6 @@
           <th>Nom & prénom</th>
           <th>Phone</th>
           <th>Région</th>
-          <th>Unité</th>
-          <th>Token</th>
           <th>Valid.</th>
           <th colspan="1"></th>
         </tr>
@@ -19,16 +17,8 @@
             <td><%= agent.complete_name %></td>
             <td><%= agent.phone %></td>
             <td><%= agent.region.name if !agent.region_id.nil? %></td>
-            <td><%= agent.unite.name if !agent.unite_id.nil? %></td>
-            <td><%= agent.tokenagent.upcase %></td>
             <td>
-              <% if (agent.expire.to_date > Date.today) %>
-                <%= agent.expire.to_date %>
-              <% else %>
-                <div style="color: red;">
-                  Expiré
-                </div>
-              <% end %>
+
             </td>
             <td>
               <%= link_to 'Voir', agent, class: 'btn btn-sm btn-primary' %> &nbsp;

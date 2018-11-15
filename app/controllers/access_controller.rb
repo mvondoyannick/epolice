@@ -267,8 +267,17 @@ class AccessController < ApplicationController
   end
 
   def application
+    add_breadcrumb "modules", :access_application_path
     render layout: 'fylo'
-    add_breadcrumb "modules", access_application_path
+  end
+
+  #pour les statistiques et les etats
+  # @route: GET parametre/etat
+  # @detail: vue pour les memu des etats
+  # @developer: email:mvondoyannick@gmail.com
+  def edition
+    add_breadcrumb 'edition', :parametre_etat_path
+    render layout: 'fylo'
   end
 
   def systeme
@@ -361,7 +370,17 @@ class AccessController < ApplicationController
 
   #ajout des utilisateur administrateurs
   def admin_show
-    @user = Admin.all
+    @user = Admin.where(role_id: 1).order(name: :asc)
+    add_breadcrumb 'utilisateurs', :parametre_admin_path
+    add_breadcrumb 'administrateurs & décideurs', :parametre_admins_admin_show_path
+    render layout: 'fylo'
+  end
+
+  #permet d'afficher les decideurs de la plateforme
+  def decideur_show
+    @user = Admin.where(role_id: 2).order(name: :asc)
+    add_breadcrumb 'utilisateur', parametre_admin_path
+    add_breadcrumb 'decideurs', parametre_decideurs_path
     render layout: 'fylo'
   end
 
@@ -402,9 +421,22 @@ class AccessController < ApplicationController
     end
   end
 
+  #adition d'un administrateur
+  # @developer: mailto:mvondoyannick@gmail.com
+  def admin_edit
+    admin = params[:data]
+    @admin = Admin.find(admin)
+    add_breadcrumb 'utilisateurs', :parametre_admin_path
+    add_breadcrumb 'administrateurs', :parametre_admins_admin_show_path
+    add_breadcrumb 'edition', :parametre_admin_edit_path
+    render layout: 'fylo'
+  end
+
   #liste de tous les GRVPC
   def grvpc_show
     @grvpc = Grvpc.order(email: :asc)
+    add_breadcrumb 'utilisateurs', :parametre_admin_path
+    add_breadcrumb 'GRVPC', :access_grvpc_show_path
     render layout: 'fylo'
   end
 

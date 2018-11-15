@@ -1,5 +1,7 @@
 class GestionAlerteController < ApplicationController
   layout 'fylo'
+  add_breadcrumb 'Fichiers', :parametre_index_path
+
   #retourne toutes les alertes de ce jour
   def today
     @today = Alerte.where(created_at: Time.now.beginning_of_day..Time.now.end_of_day).order(created_at: :desc).all
@@ -82,5 +84,7 @@ class GestionAlerteController < ApplicationController
 
   def all
     @alertes = Alerte.order(created_at: :desc)
+    add_breadcrumb 'modules', :access_application_path
+    add_breadcrumb 'liste des alertes', :gestion_alerte_alertes_all_path
   end
 end
