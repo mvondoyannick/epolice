@@ -268,6 +268,13 @@ Rails.application.routes.draw do
   #gestion de about
   get 'access/about', to: 'access#about'
 
+  #les soltions de paiement sur la plateforme
+  get 'access/sols_paiement', to: 'access#solution_paiement'
+  get 'parametre/paiement', to: 'access#paiement'
+
+  #pour les types de paiement a afficher
+  get 'parametre/type_paiement', to: 'access#type_paiement'
+
   #voir toutes les alertes
   get 'access/alertes/alerte/all', to: 'access#alerte_all'
 

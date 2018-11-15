@@ -1,22 +1,22 @@
-<h1 class="m-b-40">
-  <%= link_to access_open_path do %>
-    <i class="fa fa-arrow-left"></i>
-  <% end %>
-  Configuration système
+<h1 class="m-b-10">
+  Paramètres
 </h1>
+<p class="m-b-40">
+  Configurer la plateforme en detail
+</p>
 
 <div class="row">
   <div class="col-lg-3">
     <div class="card" style="height: 17rem;">
-      <div class="card-header text-dark bg-danger"><%= link_to 'Langue et communication', parametre_access_lange_path, class: 'noir' %></div>
+      <div class="card-header text-dark bg-danger"><i class="fa fa-language"></i> <%= link_to 'Langue et communication', parametre_access_lange_path, class: 'noir' %></div>
       <div class="card-body">
         <h5 class="card-title"></h5>
         <h6 class="card-subtitle mb-2 text-muted">ajouter ou modifier les langues</h6>
         <p class="card-text"></p>
       </div>
       <div class="card-footer text-muted">
-        <%= link_to 'Langues', parametre_access_lange_path, class: 'card-link btn btn-sm btn-primary' %>
-        <a href="#" class="card-link btn btn-sm btn-primary">Ajouter</a>
+        <%= link_to 'Aperçu', parametre_access_lange_path, class: 'card-link btn btn-sm btn-outline-primary' %>
+        <a href="#" class="card-link btn btn-sm btn-outline-primary">Ajouter</a>
       </div>
     </div>
   </div>
@@ -33,50 +33,51 @@
   </div-->
   <div class="col-lg-3">
     <div class="card" style="height: 17rem;">
-      <div class="card-header text-dark"></div>
+      <div class="card-header text-dark bg-primary"><i class="fa fa-money-bill-alt"></i> <%= link_to 'Solutions de paiement', parametre_paiement_path, class: 'noir' %></div>
       <div class="card-body">
-        <h5 class="card-title"><%= link_to 'Solution de paiement', paiementsolutions_path, class: 'noir' %></h5>
-        <h6 class="card-subtitle mb-2 text-muted">Ajouter des solutions de paiements</h6>
+        <h5 class="card-title"></h5>
+        <h6 class="card-subtitle mb-2 text-muted">Ajouter, modifier ou supprimer des solutions de paiements</h6>
         <p class="card-text"></p>
       </div>
       <div class="card-footer text-muted">
-        <%= link_to 'Consulter', paiementsolutions_path, class: 'card-link btn btn-sm btn-primary' %>
-        <%= link_to 'Ajouter', new_paiementsolution_path, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Aperçu', parametre_paiement_path, class: 'card-link btn btn-sm btn-outline-primary' %>
+        <%= link_to 'Ajouter', new_paiementsolution_path, class: 'card-link btn btn-sm btn-outline-primary' %>
       </div>
     </div>
   </div>
   <div class="col-lg-3">
     <div class="card" style="height: 17rem;">
-      <div class="card-header text-dark"></div>
+      <div class="card-header text-dark bg-success"><i class="fa fa-eye-slash"></i> <%= link_to 'Apparence et personnalisation', nil, class: 'noir' %></div>
       <div class="card-body">
-        <h5 class="card-title"><%= link_to 'Apparence et personnalisation', nil, class: 'noir' %></h5>
+        <h5 class="card-title"></h5>
         <h6 class="card-subtitle mb-2 text-muted">Customize your interface theme</h6>
         <p class="card-text"></p>
 
       </div>
       <div class="card-footer text-muted">
-        <%= link_to 'Congifurer', nil, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Congifurer', nil, class: 'card-link btn btn-sm btn-outline-primary' %>
       </div>
     </div>
   </div>
   <div class="col-lg-3">
     <div class="card" style="height: 17rem;">
-      <div class="card-header text-dark"></div>
+      <div class="card-header text-dark bg-secondary"><i class="fa fa-print"></i> <%= link_to 'Impression', nil, class: 'noir' %></div>
       <div class="card-body">
-        <h5 class="card-title"><%= link_to 'Impression', nil, class: 'noir' %></h5>
+        <h5 class="card-title"></h5>
         <h6 class="card-subtitle mb-2 text-muted">Configuration des imprimantes</h6>
         <p class="card-text"></p>
       </div>
       <div class="card-footer text-mutter">
-        <%= link_to 'Congifurer', nil, class: 'card-link btn btn-sm btn-primary' %>
+        <%= link_to 'Congifurer', nil, class: 'card-link btn btn-sm btn-outline-primary' %>
       </div>
     </div>
   </div>
   <div class="col-lg-3">
-    <div class="card"style="height: 17rem;">
-      <div class="card-header text-dark"></div>
+    <div class="card" style="height: 17rem;">
+
+      <div class="card-header text-dark bg-secondary"><i class="fa fa-cloud"></i> <%= link_to 'Sauvegarde et restauration', access_systeme_path, class: 'noir' %></div>
       <div class="card-body">
-        <h5 class="card-title"><%= link_to 'Sauvegarde et restauration', access_systeme_path, class: 'noir' %></h5>
+        <h5 class="card-title"></h5>
         <h6 class="card-subtitle mb-2 text-muted">Sauvegarde et restauration de la plateforme</h6>
         <p class="card-text"></p>
 
@@ -88,9 +89,9 @@
   </div>
   <div class="col-lg-3">
     <div class="card" style="height: 17rem;">
-      <div class="card-header text-dark"></div>
+      <div class="card-header bg-success text-dark"><i class="fa fa-lock"></i> Systeme et securité</div>
       <div class="card-body">
-        <h5 class="card-title">Systeme et securité</h5>
+        <h5 class="card-title"></h5>
         <h6 class="card-subtitle mb-2 text-muted">Configuration de la sécurité de la plateforme</h6>
         <p class="card-text"></p>
 

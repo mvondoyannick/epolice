@@ -1,11 +1,15 @@
 class PaiementsolutionsController < ApplicationController
   before_action :set_paiementsolution, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!
+
+  add_breadcrumb "Fichiers", :parametre_index_path
+  add_breadcrumb "paramètre", :access_systeme_path
   layout 'fylo'
   # GET /paiementsolutions
   # GET /paiementsolutions.json
   def index
     @paiementsolutions = Paiementsolution.all
+    add_breadcrumb "solutions de paiement", paiementsolutions_path
   end
 
   # GET /paiementsolutions/1
@@ -16,6 +20,8 @@ class PaiementsolutionsController < ApplicationController
   # GET /paiementsolutions/new
   def new
     @paiementsolution = Paiementsolution.new
+    add_breadcrumb 'solutions de paiement', :paiementsolutions_path
+    add_breadcrumb 'nouvelle solution', :new_paiementsolution_path
   end
 
   # GET /paiementsolutions/1/edit

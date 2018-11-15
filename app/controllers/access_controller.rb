@@ -272,6 +272,27 @@ class AccessController < ApplicationController
   end
 
   def systeme
+    add_breadcrumb "paramètres", :access_systeme_path
+    render layout: 'fylo'
+  end
+
+  #pour les solutions de paiements sur la plateformes
+  # @detail: retourne les solutions de paiements disponible sur la plateforme
+  # @params: aucun
+  # @route:
+  # @developer: mailto:mvondoyannick@gmail.com
+  def solution_paiement
+
+    #add_breadcrumb "solutions menu", :access_sols_paiement
+    render layout: 'fylo'
+  end
+
+  #pour le type de paiement sur la plateforme
+  # @detail: paiement direct/instatané ou paiement differé
+  def type_paiement
+    add_breadcrumb 'solution menu', :parametre_paiement_path
+    add_breadcrumb 'parametres', :access_systeme_path
+    add_breadcrumb 'modes de paiement', :parametre_type_paiement_path
     render layout: 'fylo'
   end
 
@@ -282,7 +303,9 @@ class AccessController < ApplicationController
   end
 
   def paiement
-
+    add_breadcrumb 'paramètre', access_systeme_path
+    add_breadcrumb 'solutions', parametre_paiement_path
+    render layout: 'fylo'
   end
 
   #importation des parametres

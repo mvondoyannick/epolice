@@ -11,9 +11,14 @@ class Api::ConvocationsController < ApplicationController
   #HTTParty::Basement.default_options.update(verify: false)
 
   #authentification d'un agent sur la plateforme
+  # @route: GET
+  # @!method: HTTP GET
+  # @param: phone::integer, matricule::string
+  # @return: JSON tree of authenticated agent on plateform
+  # @developer: mailto:mvondoyannick@gmail.com
   def authUser
     phone = params[:phone]
-    matricule = params[:matricule]
+    matricule = params[:matricule].to_s
 
     #verification des information recu
     token = Agent.where(phone: phone, matricule: matricule)

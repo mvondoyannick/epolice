@@ -1,10 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1 class="m-b-40">
-  <%= link_to access_open_path do %>
-    <i class="fa fa-arrow-left"></i>
-  <% end %>
-  Paiementsolutions
+  Solutions de paiement
 </h1>
 <div class="row">
   <div class="col-lg-12">
@@ -12,6 +9,7 @@
       <table class="table table-borderless table-striped table-earning">
         <thead>
         <tr>
+          <th>Type</th>
           <th>Logo</th>
           <th>Name</th>
           <th>Operator</th>
@@ -21,6 +19,7 @@
         <tbody>
         <% @paiementsolutions.each do |paiementsolution| %>
           <tr>
+            <td><%= paiementsolution.type %></td>
             <td><%= image_tag(url_for(paiementsolution.image), size: 50) if paiementsolution.image.attached? %></td>
             <td><%= paiementsolution.name %></td>
             <td><%= paiementsolution.operator %></td>
@@ -38,8 +37,10 @@
 
 
 <br>
+<div class="text-right">
+  <%= link_to new_paiementsolution_path, class: 'btn btn-primary btn-sm' do %>
+    <i class="fa fa-plus"></i>
+    Ajouter
+  <% end %>
+</div>
 
-<%= link_to new_paiementsolution_path, class: 'btn btn-primary' do %>
-  <i class="fa fa-plus"></i>
-  Nouvelle solution de paiement
-<% end %>

@@ -1,0 +1,51 @@
+<h1 class="m-b-10">
+  Solutions menu
+</h1>
+<p class="m-b-40">
+  Selectionner le menu
+</p>
+
+<div class="row">
+  <div class="col-lg-3">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header text-dark bg-primary"><i class="fa fa-money-bill-alt"></i> <%= link_to 'Type de solution de paiement', parametre_paiement_path, class: 'noir' %></div>
+      <div class="card-body">
+        <h5 class="card-title">Présentation</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Mode de paiement disponible sur les differentes plateforme communiquant avec EPOLICE</h6>
+        <p class="card-text"></p>
+      </div>
+      <div class="card-footer text-muted">
+        <%= link_to 'Aperçu', parametre_type_paiement_path, class: 'card-link btn btn-sm btn-outline-primary' %>
+        <%= link_to 'Ajouter', new_paiementsolution_path, class: 'card-link btn btn-sm btn-outline-primary' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header text-dark bg-danger"><i class="fa fa-money-bill-alt"></i> <%= link_to 'Solutions de paiement', paiementsolutions_path, class: 'noir' %></div>
+      <div class="card-body">
+        <h5 class="card-title">Présentation</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Ajouter, modifier ou supprimer des solutions de paiements</h6>
+        <p class="card-text"></p>
+      </div>
+      <div class="card-footer text-muted">
+        <%= link_to 'Aperçu', paiementsolutions_path, class: 'card-link btn btn-sm btn-outline-primary' %>
+        <%= link_to 'Ajouter', new_paiementsolution_path, class: 'card-link btn btn-sm btn-outline-primary' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header text-dark bg-primary"><i class="fa fa-money-bill-alt"></i> <%= link_to 'Nouvelle solutions de paiement', parametre_paiement_path, class: 'noir' %></div>
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <h6 class="card-subtitle mb-2 text-muted">Ajouter, modifier ou supprimer des solutions de paiements</h6>
+        <p class="card-text"></p>
+      </div>
+      <div class="card-footer text-muted">
+        <%= link_to 'Aperçu', parametre_paiement_path, class: 'card-link btn btn-sm btn-outline-primary' %>
+        <%= link_to 'Ajouter', new_paiementsolution_path, class: 'card-link btn btn-sm btn-outline-primary' %>
+      </div>
+    </div>
+  </div>
+</div>

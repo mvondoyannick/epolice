@@ -4,6 +4,8 @@
 
   <div class="form-inputs">
 
+    <%= f.input :name, collection: [['Mobile manking', 'Mobile Banking'], ['Banque','Banque'], ['Visa', 'Visa'], ['Paypal', 'Paypal']], label: false, prompt: 'Selectionner une type' %>
+
     <%= f.input :name %>
 
     <%= f.input :operator %>
