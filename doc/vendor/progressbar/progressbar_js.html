@@ -1,0 +1,3376 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>progressbar.js - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../README_md.html">README</a>
+  
+    <li><a href="../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="../../app/assets/fonts/fontawesome-webfont_svg.html">fontawesome-webfont.svg</a>
+  
+    <li><a href="../../app/assets/javascripts/access_coffee.html">access.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/affectations_coffee.html">affectations.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/agents_coffee.html">agents.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/alertes_coffee.html">alertes.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../app/assets/javascripts/archive_coffee.html">archive.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/arrondissements_coffee.html">arrondissements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/assurance_coffee.html">assurance.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../app/assets/javascripts/bulletins_coffee.html">bulletins.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="../../app/assets/javascripts/carrefours_coffee.html">carrefours.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/centrepartenaires_coffee.html">centrepartenaires.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/centrerecouvrements_coffee.html">centrerecouvrements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/comments_coffee.html">comments.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/commissariats_coffee.html">commissariats.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/compte_coffee.html">compte.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/constat_coffee.html">constat.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/constats_coffee.html">constats.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/convocations_coffee.html">convocations.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/departements_coffee.html">departements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/faker_min_js.html">faker.min.js</a>
+  
+    <li><a href="../../app/assets/javascripts/gestion_alerte_coffee.html">gestion_alerte.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/gestion_constat_coffee.html">gestion_constat.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/gestion_contravention_coffee.html">gestion_contravention.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/grades_coffee.html">grades.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/groupements_coffee.html">groupements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/grvpc_coffee.html">grvpc.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/infractions_coffee.html">infractions.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/journal_coffee.html">journal.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/langues_coffee.html">langues.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/manage_coffee.html">manage.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/member_coffee.html">member.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/metropoli_coffee.html">metropoli.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/metropolisroles_coffee.html">metropolisroles.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/paiementsolutions_coffee.html">paiementsolutions.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/parametre_coffee.html">parametre.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/pieceretenus_coffee.html">pieceretenus.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/postepolices_coffee.html">postepolices.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/public_coffee.html">public.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/regions_coffee.html">regions.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/roles_coffee.html">roles.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/services_coffee.html">services.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/statistique_coffee.html">statistique.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/status_coffee.html">status.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/statuses_coffee.html">statuses.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/structures_coffee.html">structures.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/typeaccidents_coffee.html">typeaccidents.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/types_coffee.html">types.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/u_coffee.html">u.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/unites_coffee.html">unites.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/villes_coffee.html">villes.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/workflows_coffee.html">workflows.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/zonecouverturemotifs_coffee.html">zonecouverturemotifs.coffee</a>
+  
+    <li><a href="../../app/assets/stylesheets/_application_css.html">_application.css</a>
+  
+    <li><a href="../../app/assets/stylesheets/access_scss.html">access.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/affectations_scss.html">affectations.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/agents_scss.html">agents.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/alertes_scss.html">alertes.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/application_scss.html">application.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/archive_scss.html">archive.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/arrondissements_scss.html">arrondissements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/assurance_scss.html">assurance.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/bulletins_scss.html">bulletins.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/carrefours_scss.html">carrefours.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/centrepartenaires_scss.html">centrepartenaires.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/centrerecouvrements_scss.html">centrerecouvrements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/comments_scss.html">comments.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/commissariats_scss.html">commissariats.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/compte_scss.html">compte.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/constat_scss.html">constat.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/constats_scss.html">constats.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/contravetions_scss.html">contravetions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/convocations_scss.html">convocations.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/departements_scss.html">departements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/gestion_alerte_scss.html">gestion_alerte.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/gestion_constat_scss.html">gestion_constat.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/gestion_contravention_scss.html">gestion_contravention.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/grades_scss.html">grades.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/groupements_scss.html">groupements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/grvpc_scss.html">grvpc.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/infractions_scss.html">infractions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/journal_scss.html">journal.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/langues_scss.html">langues.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/manage_scss.html">manage.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/member_scss.html">member.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/metropoli_scss.html">metropoli.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/metropolisroles_scss.html">metropolisroles.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/paiementsolutions_scss.html">paiementsolutions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/parametre_scss.html">parametre.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/pieceretenus_scss.html">pieceretenus.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/postepolices_scss.html">postepolices.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/public_scss.html">public.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/regions_scss.html">regions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/roles_scss.html">roles.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/services_scss.html">services.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/statistique_scss.html">statistique.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/status_scss.html">status.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/statuses_scss.html">statuses.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/structures_scss.html">structures.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/typeaccidents_scss.html">typeaccidents.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/types_scss.html">types.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/unites_scss.html">unites.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/villes_scss.html">villes.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/zonecouverturemotifs_scss.html">zonecouverturemotifs.scss</a>
+  
+    <li><a href="../../app/views/affectations/_affectation_json_jbuilder.html">_affectation.json.jbuilder</a>
+  
+    <li><a href="../../app/views/affectations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/affectations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/agents/Untitled-1.html">Untitled-1</a>
+  
+    <li><a href="../../app/views/agents/Untitled-2.html">Untitled-2</a>
+  
+    <li><a href="../../app/views/agents/_agent_json_jbuilder.html">_agent.json.jbuilder</a>
+  
+    <li><a href="../../app/views/agents/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/agents/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/alertes/_alerte_json_jbuilder.html">_alerte.json.jbuilder</a>
+  
+    <li><a href="../../app/views/alertes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/alertes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/arrondissements/_arrondissement_json_jbuilder.html">_arrondissement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/arrondissements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/arrondissements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/bulletins/_bulletin_json_jbuilder.html">_bulletin.json.jbuilder</a>
+  
+    <li><a href="../../app/views/bulletins/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/bulletins/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/carrefours/_carrefour_json_jbuilder.html">_carrefour.json.jbuilder</a>
+  
+    <li><a href="../../app/views/carrefours/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/carrefours/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrepartenaires/_centrepartenaire_json_jbuilder.html">_centrepartenaire.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrepartenaires/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrepartenaires/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrerecouvrements/_centrerecouvrement_json_jbuilder.html">_centrerecouvrement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrerecouvrements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrerecouvrements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/comments/_comment_json_jbuilder.html">_comment.json.jbuilder</a>
+  
+    <li><a href="../../app/views/comments/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/comments/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/commissariats/_commissariat_json_jbuilder.html">_commissariat.json.jbuilder</a>
+  
+    <li><a href="../../app/views/commissariats/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/commissariats/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/constats/_constat_json_jbuilder.html">_constat.json.jbuilder</a>
+  
+    <li><a href="../../app/views/constats/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/constats/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contravetions/_contravetion_json_jbuilder.html">_contravetion.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contravetions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contravetions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/convocations/_convocation_json_jbuilder.html">_convocation.json.jbuilder</a>
+  
+    <li><a href="../../app/views/convocations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/convocations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/departements/_departement_json_jbuilder.html">_departement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/departements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/departements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/grades/_grade_json_jbuilder.html">_grade.json.jbuilder</a>
+  
+    <li><a href="../../app/views/grades/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/grades/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/groupements/_groupement_json_jbuilder.html">_groupement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/groupements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/groupements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/infractions/_infraction_json_jbuilder.html">_infraction.json.jbuilder</a>
+  
+    <li><a href="../../app/views/infractions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/infractions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/langues/_langue_json_jbuilder.html">_langue.json.jbuilder</a>
+  
+    <li><a href="../../app/views/langues/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/langues/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/metropolisroles/_metropolisrole_json_jbuilder.html">_metropolisrole.json.jbuilder</a>
+  
+    <li><a href="../../app/views/metropolisroles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/metropolisroles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paiementsolutions/_paiementsolution_json_jbuilder.html">_paiementsolution.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paiementsolutions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paiementsolutions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/pieceretenus/_pieceretenu_json_jbuilder.html">_pieceretenu.json.jbuilder</a>
+  
+    <li><a href="../../app/views/pieceretenus/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/pieceretenus/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/postepolices/_postepolice_json_jbuilder.html">_postepolice.json.jbuilder</a>
+  
+    <li><a href="../../app/views/postepolices/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/postepolices/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/regions/_region_json_jbuilder.html">_region.json.jbuilder</a>
+  
+    <li><a href="../../app/views/regions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/regions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/roles/_role_json_jbuilder.html">_role.json.jbuilder</a>
+  
+    <li><a href="../../app/views/roles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/roles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/services/_service_json_jbuilder.html">_service.json.jbuilder</a>
+  
+    <li><a href="../../app/views/services/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/services/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/status/_status_json_jbuilder.html">_status.json.jbuilder</a>
+  
+    <li><a href="../../app/views/status/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/status/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/statuses/_status_json_jbuilder.html">_status.json.jbuilder</a>
+  
+    <li><a href="../../app/views/statuses/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/statuses/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/structures/_structure_json_jbuilder.html">_structure.json.jbuilder</a>
+  
+    <li><a href="../../app/views/structures/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/structures/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/typeaccidents/_typeaccident_json_jbuilder.html">_typeaccident.json.jbuilder</a>
+  
+    <li><a href="../../app/views/typeaccidents/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/typeaccidents/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/types/_type_json_jbuilder.html">_type.json.jbuilder</a>
+  
+    <li><a href="../../app/views/types/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/types/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/unites/_unite_json_jbuilder.html">_unite.json.jbuilder</a>
+  
+    <li><a href="../../app/views/unites/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/unites/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/villes/_ville_json_jbuilder.html">_ville.json.jbuilder</a>
+  
+    <li><a href="../../app/views/villes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/villes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/workflows/_workflow_json_jbuilder.html">_workflow.json.jbuilder</a>
+  
+    <li><a href="../../app/views/workflows/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/workflows/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/zonecouverturemotifs/_zonecouverturemotif_json_jbuilder.html">_zonecouverturemotif.json.jbuilder</a>
+  
+    <li><a href="../../app/views/zonecouverturemotifs/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/zonecouverturemotifs/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../brouillons_txt.html">brouillons</a>
+  
+    <li><a href="../../config_ru.html">config.ru</a>
+  
+    <li><a href="../../erd_dot.html">erd.dot</a>
+  
+    <li><a href="../../hi.html">hi</a>
+  
+    <li><a href="../../lib/templates/rails/jbuilder/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../log/production_log.html">production.log</a>
+  
+    <li><a href="../../log/test_log.html">test.log</a>
+  
+    <li><a href="../../package_json.html">package.json</a>
+  
+    <li><a href="../../public/404_html.html">404.html</a>
+  
+    <li><a href="../../public/422_html.html">422.html</a>
+  
+    <li><a href="../../public/500_html.html">500.html</a>
+  
+    <li><a href="../../public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="../../public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="../../public/assets/application-1d6a15def6671efd85aa7f12dd7a187c8a4010b2f141f1f26f17c84657c45352_js.html">application-1d6a15def6671efd85aa7f12dd7a187c8a4010b2f141f1f26f17c84657c45352.js</a>
+  
+    <li><a href="../../public/assets/application-5173f52181c8a9ce2fd1869b7a408c290415dd6db3d815626ca73dcbf8150eb4_css.html">application-5173f52181c8a9ce2fd1869b7a408c290415dd6db3d815626ca73dcbf8150eb4.css</a>
+  
+    <li><a href="../../public/assets/fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c_svg.html">fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c.svg</a>
+  
+    <li><a href="../../public/assets/leaflet-src_js-6eed528b5678ee4f34b8be267a8da5d14734d58d56baeea6a31e9819e6630775_map.html">leaflet-src.js-6eed528b5678ee4f34b8be267a8da5d14734d58d56baeea6a31e9819e6630775.map</a>
+  
+    <li><a href="../../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../../public/robots_txt.html">robots</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/_rest_managed_json.html">_rest_managed.json</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/admin-extra_html.html">admin-extra.html</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/currency_xml.html">currency.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/elevate_xml.html">elevate.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/lang/stopwords_en_txt.html">stopwords_en</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/mapping-ISOLatin1Accent_txt.html">mapping-ISOLatin1Accent</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/protwords_txt.html">protwords</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/schema_xml.html">schema.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/scripts_conf.html">scripts.conf</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/solrconfig_xml.html">solrconfig.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/spellings_txt.html">spellings</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/synonyms_txt.html">synonyms</a>
+  
+    <li><a href="../../solr/default/core_properties.html">core.properties</a>
+  
+    <li><a href="../../solr/development/core_properties.html">core.properties</a>
+  
+    <li><a href="../../solr/solr_xml.html">solr.xml</a>
+  
+    <li><a href="../../solr/test/core_properties.html">core.properties</a>
+  
+    <li><a href="../../tmp/pids/server_pid.html">server.pid</a>
+  
+    <li><a href="../../tmp/restart_txt.html">restart</a>
+  
+    <li><a href="../../vendor/animsition/animsition_min_css.html">animsition.min.css</a>
+  
+    <li><a href="../../vendor/animsition/animsition_min_js.html">animsition.min.js</a>
+  
+    <li><a href="../../vendor/bootstrap-4_1/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../../vendor/bootstrap-4_1/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../vendor/bootstrap-4_1/popper_min_js.html">popper.min.js</a>
+  
+    <li><a href="../../vendor/bootstrap-progressbar/bootstrap-progressbar-3_3_4_min_css.html">bootstrap-progressbar-3.3.4.min.css</a>
+  
+    <li><a href="../../vendor/bootstrap-progressbar/bootstrap-progressbar_min_js.html">bootstrap-progressbar.min.js</a>
+  
+    <li><a href="../../vendor/chartjs/Chart_bundle_min_js.html">Chart.bundle.min.js</a>
+  
+    <li><a href="../../vendor/circle-progress/circle-progress_js.html">circle-progress.js</a>
+  
+    <li><a href="../../vendor/circle-progress/circle-progress_min_js.html">circle-progress.min.js</a>
+  
+    <li><a href="../../vendor/countdown/countdowntime_js.html">countdowntime.js</a>
+  
+    <li><a href="../../vendor/countdown/jquery_countdown_min_js.html">jquery.countdown.min.js</a>
+  
+    <li><a href="../../vendor/countdown/moment-timezone-with-data_min_js.html">moment-timezone-with-data.min.js</a>
+  
+    <li><a href="../../vendor/countdown/moment-timezone_min_js.html">moment-timezone.min.js</a>
+  
+    <li><a href="../../vendor/countdown/moment_min_js.html">moment.min.js</a>
+  
+    <li><a href="../../vendor/counter-up/jquery_counterup_min_js.html">jquery.counterup.min.js</a>
+  
+    <li><a href="../../vendor/counter-up/jquery_waypoints_min_js.html">jquery.waypoints.min.js</a>
+  
+    <li><a href="../../vendor/counter-up/waypoints_min_js.html">waypoints.min.js</a>
+  
+    <li><a href="../../vendor/css-hamburgers/hamburgers_css.html">hamburgers.css</a>
+  
+    <li><a href="../../vendor/css-hamburgers/hamburgers_min_css.html">hamburgers.min.css</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/HELP-US-OUT_txt.html">HELP-US-OUT</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/css/font-awesome_css.html">font-awesome.css</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/css/font-awesome_min_css.html">font-awesome.min.css</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/fonts/fontawesome-webfont_svg.html">fontawesome-webfont.svg</a>
+  
+    <li><a href="../../vendor/font-awesome-5/css/fontawesome-all_min_css.html">fontawesome-all.min.css</a>
+  
+    <li><a href="../../vendor/font-awesome-5/webfonts/fa-brands-400_svg.html">fa-brands-400.svg</a>
+  
+    <li><a href="../../vendor/font-awesome-5/webfonts/fa-regular-400_svg.html">fa-regular-400.svg</a>
+  
+    <li><a href="../../vendor/font-awesome-5/webfonts/fa-solid-900_svg.html">fa-solid-900.svg</a>
+  
+    <li><a href="../../vendor/jquery-3_2_1_min_js.html">jquery-3.2.1.min.js</a>
+  
+    <li><a href="../../vendor/jquery-ui_min_js.html">jquery-ui.min.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/css/lightbox_css.html">lightbox.css</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox-plus-jquery_js.html">lightbox-plus-jquery.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox-plus-jquery_min_js.html">lightbox-plus-jquery.min.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox-plus-jquery_min_map.html">lightbox-plus-jquery.min.map</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox_js.html">lightbox.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox_min_js.html">lightbox.min.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox_min_map.html">lightbox.min.map</a>
+  
+    <li><a href="../../vendor/lightbox2/src/css/lightbox_css.html">lightbox.css</a>
+  
+    <li><a href="../../vendor/lightbox2/src/js/lightbox_js.html">lightbox.js</a>
+  
+    <li><a href="../../vendor/mdi-font/css/material-design-iconic-font_css.html">material-design-iconic-font.css</a>
+  
+    <li><a href="../../vendor/mdi-font/css/material-design-iconic-font_min_css.html">material-design-iconic-font.min.css</a>
+  
+    <li><a href="../../vendor/mdi-font/fonts/Material-Design-Iconic-Font_svg.html">Material-Design-Iconic-Font.svg</a>
+  
+    <li><a href="../../vendor/perfect-scrollbar/perfect-scrollbar_css.html">perfect-scrollbar.css</a>
+  
+    <li><a href="../../vendor/perfect-scrollbar/perfect-scrollbar_js.html">perfect-scrollbar.js</a>
+  
+    <li><a href="../../vendor/perfect-scrollbar/perfect-scrollbar_min_js.html">perfect-scrollbar.min.js</a>
+  
+    <li><a href="../../vendor/progressbar/progressbar_js.html">progressbar.js</a>
+  
+    <li><a href="../../vendor/progressbar/progressbar_min_js.html">progressbar.min.js</a>
+  
+    <li><a href="../../vendor/select2/select2_min_css.html">select2.min.css</a>
+  
+    <li><a href="../../vendor/select2/select2_min_js.html">select2.min.js</a>
+  
+    <li><a href="../../vendor/slick/fonts/slick_svg.html">slick.svg</a>
+  
+    <li><a href="../../vendor/slick/slick-theme_css.html">slick-theme.css</a>
+  
+    <li><a href="../../vendor/slick/slick-theme_less.html">slick-theme.less</a>
+  
+    <li><a href="../../vendor/slick/slick-theme_scss.html">slick-theme.scss</a>
+  
+    <li><a href="../../vendor/slick/slick_css.html">slick.css</a>
+  
+    <li><a href="../../vendor/slick/slick_js.html">slick.js</a>
+  
+    <li><a href="../../vendor/slick/slick_less.html">slick.less</a>
+  
+    <li><a href="../../vendor/slick/slick_min_js.html">slick.min.js</a>
+  
+    <li><a href="../../vendor/slick/slick_scss.html">slick.scss</a>
+  
+    <li><a href="../../vendor/smk-accordion/accordion_css.html">accordion.css</a>
+  
+    <li><a href="../../vendor/smk-accordion/accordion_js.html">accordion.js</a>
+  
+    <li><a href="../../vendor/smk-accordion/accordion_min_js.html">accordion.min.js</a>
+  
+    <li><a href="../../vendor/sweetalert/sweetalert_min_js.html">sweetalert.min.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_brazil_js.html">jquery.vmap.brazil.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_europe_js.html">jquery.vmap.europe.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_france_js.html">jquery.vmap.france.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_germany_js.html">jquery.vmap.germany.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_js.html">jquery.vmap.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_min_js.html">jquery.vmap.min.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_russia_js.html">jquery.vmap.russia.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_sampledata_js.html">jquery.vmap.sampledata.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_usa_js.html">jquery.vmap.usa.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_world_js.html">jquery.vmap.world.js</a>
+  
+    <li><a href="../../vendor/vector-map/jqvmap_min_css.html">jqvmap.min.css</a>
+  
+    <li><a href="../../vendor/wow/animate_css.html">animate.css</a>
+  
+    <li><a href="../../vendor/wow/wow_min_js.html">wow.min.js</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page vendor/progressbar/progressbar.js">
+
+<p>(function(f){if(typeof exports===“object”&amp;&amp;typeof
+module!==“undefined”){module.exports=f()}else if(typeof
+define===“function”&amp;&amp;define.amd){define([],f)}else{var g;if(typeof
+window!==“undefined”){g=window}else if(typeof
+global!==“undefined”){g=global}else if(typeof
+self!==“undefined”){g=self}else{g=this}g.ProgressBar =
+f()}})(function(){var define,module,exports;return (function
+e(t,n,r){function s(o,u){<a href="o">if(!n</a>){<a href="o">if(!t</a>){var
+a=typeof require==“function”&amp;&amp;require;if(!u&amp;&amp;a)return
+a(o,!0);if(i)return i(o,!0);var f=new Error(“Cannot find module
+&#39;”<code>o</code>“&#39;”);throw f.code=“MODULE_NOT_FOUND”,f}var <a
+href="o">l=n</a>={exports:{}};<a
+href="o">t</a>[0].call(l.exports,function(e){var <a href="o">n=t</a>[<a
+href="e">1]</a>;return s(n?n:e)},l,l.exports,e,t,n,r)}return <a
+href="o">n</a>.exports}var i=typeof
+require==“function”&amp;&amp;require;for(var <a
+href="o">o=0;o<r.length;o++)s(r</a>);return
+s})({1:[function(require,module,exports){</p>
+
+<pre>shifty - v1.5.3 - 2016-11-29 - http://jeremyckahn.github.io/shifty</pre>
+
+<p>;(function () {</p>
+
+<pre>var root = this || Function(&#39;return this&#39;)();
+
+ Shifty Core
+ By Jeremy Kahn - jeremyckahn@gmail.com
+/</pre>
+
+<p>var Tweenable = (function () {</p>
+
+<pre>&#39;use strict&#39;;
+
+// Aliases that get defined later in this function
+var formula;
+
+// CONSTANTS
+var DEFAULT_SCHEDULE_FUNCTION;
+var DEFAULT_EASING = &#39;linear&#39;;
+var DEFAULT_DURATION = 500;
+var UPDATE_TIME = 1000 / 60;
+
+var _now = Date.now
+     ? Date.now
+     : function () {return +new Date();};
+
+var now = typeof SHIFTY_DEBUG_NOW !== &#39;undefined&#39; ? SHIFTY_DEBUG_NOW : _now;
+
+if (typeof window !== &#39;undefined&#39;) {
+  // requestAnimationFrame() shim by Paul Irish (modified for Shifty)
+  // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+  DEFAULT_SCHEDULE_FUNCTION = window.requestAnimationFrame
+     || window.webkitRequestAnimationFrame
+     || window.oRequestAnimationFrame
+     || window.msRequestAnimationFrame
+     || (window.mozCancelRequestAnimationFrame
+     &amp;&amp; window.mozRequestAnimationFrame)
+     || setTimeout;
+} else {
+  DEFAULT_SCHEDULE_FUNCTION = setTimeout;
+}
+
+function noop () {
+  // NOOP!
+}
+
+/**
+   Handy shortcut for doing a for-in loop. This is not a &quot;normal&quot; each
+   function, it is optimized for Shifty.  The iterator function only receives
+   the property name, not the value.
+   @param {Object} obj
+   @param {Function(string)} fn
+   @private
+  /
+function each (obj, fn) {
+  var key;
+  for (key in obj) {
+    if (Object.hasOwnProperty.call(obj, key)) {
+      fn(key);
+    }
+  }
+}
+
+/**
+   Perform a shallow copy of Object properties.
+   @param {Object} targetObject The object to copy into
+   @param {Object} srcObject The object to copy from
+   @return {Object} A reference to the augmented `targetObj` Object
+   @private
+  /
+function shallowCopy (targetObj, srcObj) {
+  each(srcObj, function (prop) {
+    targetObj[prop] = srcObj[prop];
+  });
+
+  return targetObj;
+}
+
+/**
+   Copies each property from src onto target, but only if the property to
+   copy to target is undefined.
+   @param {Object} target Missing properties in this Object are filled in
+   @param {Object} src
+   @private
+  /
+function defaults (target, src) {
+  each(src, function (prop) {
+    if (typeof target[prop] === &#39;undefined&#39;) {
+      target[prop] = src[prop];
+    }
+  });
+}
+
+/**
+   Calculates the interpolated tween values of an Object for a given
+   timestamp.
+   @param {Number} forPosition The position to compute the state for.
+   @param {Object} currentState Current state properties.
+   @param {Object} originalState: The original state properties the Object is
+   tweening from.
+   @param {Object} targetState: The destination state properties the Object
+   is tweening to.
+   @param {number} duration: The length of the tween in milliseconds.
+   @param {number} timestamp: The UNIX epoch time at which the tween began.
+   @param {Object} easing: This Object&#39;s keys must correspond to the keys in
+   targetState.
+   @private
+  /
+function tweenProps (forPosition, currentState, originalState, targetState,
+  duration, timestamp, easing) {
+  var normalizedPosition =
+      forPosition &lt; timestamp ? 0 : (forPosition - timestamp) / duration;
+
+  var prop;
+  var easingObjectProp;
+  var easingFn;
+  for (prop in currentState) {
+    if (currentState.hasOwnProperty(prop)) {
+      easingObjectProp = easing[prop];
+      easingFn = typeof easingObjectProp === &#39;function&#39;
+        ? easingObjectProp
+        : formula[easingObjectProp];
+
+      currentState[prop] = tweenProp(
+        originalState[prop],
+        targetState[prop],
+        easingFn,
+        normalizedPosition
+      );
+    }
+  }
+
+  return currentState;
+}
+
+/**
+   Tweens a single property.
+   @param {number} start The value that the tween started from.
+   @param {number} end The value that the tween should end at.
+   @param {Function} easingFunc The easing curve to apply to the tween.
+   @param {number} position The normalized position (between 0.0 and 1.0) to
+   calculate the midpoint of &#39;start&#39; and &#39;end&#39; against.
+   @return {number} The tweened value.
+   @private
+  /
+function tweenProp (start, end, easingFunc, position) {
+  return start + (end - start) * easingFunc(position);
+}
+
+/**
+   Applies a filter to Tweenable instance.
+   @param {Tweenable} tweenable The `Tweenable` instance to call the filter
+   upon.
+   @param {String} filterName The name of the filter to apply.
+   @private
+  /
+function applyFilter (tweenable, filterName) {
+  var filters = Tweenable.prototype.filter;
+  var args = tweenable._filterArgs;
+
+  each(filters, function (name) {
+    if (typeof filters[name][filterName] !== &#39;undefined&#39;) {
+      filters[name][filterName].apply(tweenable, args);
+    }
+  });
+}
+
+var timeoutHandler_endTime;
+var timeoutHandler_currentTime;
+var timeoutHandler_isEnded;
+var timeoutHandler_offset;
+/**
+   Handles the update logic for one step of a tween.
+   @param {Tweenable} tweenable
+   @param {number} timestamp
+   @param {number} delay
+   @param {number} duration
+   @param {Object} currentState
+   @param {Object} originalState
+   @param {Object} targetState
+   @param {Object} easing
+   @param {Function(Object, *, number)} step
+   @param {Function(Function,number)}} schedule
+   @param {number=} opt_currentTimeOverride Needed for accurate timestamp in
+   Tweenable#seek.
+   @private
+  /
+function timeoutHandler (tweenable, timestamp, delay, duration, currentState,
+  originalState, targetState, easing, step, schedule,
+  opt_currentTimeOverride) {
+
+  timeoutHandler_endTime = timestamp + delay + duration;
+
+  timeoutHandler_currentTime =
+  Math.min(opt_currentTimeOverride || now(), timeoutHandler_endTime);
+
+  timeoutHandler_isEnded =
+    timeoutHandler_currentTime &gt;= timeoutHandler_endTime;
+
+  timeoutHandler_offset = duration - (
+    timeoutHandler_endTime - timeoutHandler_currentTime);
+
+  if (tweenable.isPlaying()) {
+    if (timeoutHandler_isEnded) {
+      step(targetState, tweenable._attachment, timeoutHandler_offset);
+      tweenable.stop(true);
+    } else {
+      tweenable._scheduleId =
+        schedule(tweenable._timeoutHandler, UPDATE_TIME);
+
+      applyFilter(tweenable, &#39;beforeTween&#39;);
+
+      // If the animation has not yet reached the start point (e.g., there was
+      // delay that has not yet completed), just interpolate the starting
+      // position of the tween.
+      if (timeoutHandler_currentTime &lt; (timestamp + delay)) {
+        tweenProps(1, currentState, originalState, targetState, 1, 1, easing);
+      } else {
+        tweenProps(timeoutHandler_currentTime, currentState, originalState,
+          targetState, duration, timestamp + delay, easing);
+      }
+
+      applyFilter(tweenable, &#39;afterTween&#39;);
+
+      step(currentState, tweenable._attachment, timeoutHandler_offset);
+    }
+  }
+}
+
+/**
+   Creates a usable easing Object from a string, a function or another easing
+   Object.  If `easing` is an Object, then this function clones it and fills
+   in the missing properties with `&quot;linear&quot;`.
+   @param {Object.&lt;string|Function&gt;} fromTweenParams
+   @param {Object|string|Function} easing
+   @return {Object.&lt;string|Function&gt;}
+   @private
+  /
+function composeEasingObject (fromTweenParams, easing) {
+  var composedEasing = {};
+  var typeofEasing = typeof easing;
+
+  if (typeofEasing === &#39;string&#39; || typeofEasing === &#39;function&#39;) {
+    each(fromTweenParams, function (prop) {
+      composedEasing[prop] = easing;
+    });
+  } else {
+    each(fromTweenParams, function (prop) {
+      if (!composedEasing[prop]) {
+        composedEasing[prop] = easing[prop] || DEFAULT_EASING;
+      }
+    });
+  }
+
+  return composedEasing;
+}
+
+/**
+   Tweenable constructor.
+   @class Tweenable
+   @param {Object=} opt_initialState The values that the initial tween should
+   start at if a `from` object is not provided to `{{#crossLink
+   &quot;Tweenable/tween:method&quot;}}{{/crossLink}}` or `{{#crossLink
+   &quot;Tweenable/setConfig:method&quot;}}{{/crossLink}}`.
+   @param {Object=} opt_config Configuration object to be passed to
+   `{{#crossLink &quot;Tweenable/setConfig:method&quot;}}{{/crossLink}}`.
+   @module Tweenable
+   @constructor
+  /
+function Tweenable (opt_initialState, opt_config) {
+  this._currentState = opt_initialState || {};
+  this._configured = false;
+  this._scheduleFunction = DEFAULT_SCHEDULE_FUNCTION;
+
+  // To prevent unnecessary calls to setConfig do not set default
+  // configuration here.  Only set default configuration immediately before
+  // tweening if none has been set.
+  if (typeof opt_config !== &#39;undefined&#39;) {
+    this.setConfig(opt_config);
+  }
+}
+
+/**
+   Configure and start a tween.
+   @method tween
+   @param {Object=} opt_config Configuration object to be passed to
+   `{{#crossLink &quot;Tweenable/setConfig:method&quot;}}{{/crossLink}}`.
+   @chainable
+  /
+Tweenable.prototype.tween = function (opt_config) {
+  if (this._isTweening) {
+    return this;
+  }
+
+  // Only set default config if no configuration has been set previously and
+  // none is provided now.
+  if (opt_config !== undefined || !this._configured) {
+    this.setConfig(opt_config);
+  }
+
+  this._timestamp = now();
+  this._start(this.get(), this._attachment);
+  return this.resume();
+};
+
+/**
+   Configure a tween that will start at some point in the future.
+
+   @method setConfig
+   @param {Object} config The following values are valid:
+   - __from__ (_Object=_): Starting position.  If omitted, `{{#crossLink
+     &quot;Tweenable/get:method&quot;}}get(){{/crossLink}}` is used.
+   - __to__ (_Object=_): Ending position.
+   - __duration__ (_number=_): How many milliseconds to animate for.
+   - __delay__ (_delay=_): How many milliseconds to wait before starting the
+     tween.
+   - __start__ (_Function(Object, *)_): Function to execute when the tween
+     begins.  Receives the state of the tween as the first parameter and
+     `attachment` as the second parameter.
+   - __step__ (_Function(Object, *, number)_): Function to execute on every
+     tick.  Receives `{{#crossLink
+     &quot;Tweenable/get:method&quot;}}get(){{/crossLink}}` as the first parameter,
+     `attachment` as the second parameter, and the time elapsed since the
+     start of the tween as the third. This function is not called on the
+     final step of the animation, but `finish` is.
+   - __finish__ (_Function(Object, *)_): Function to execute upon tween
+     completion.  Receives the state of the tween as the first parameter and
+     `attachment` as the second parameter.
+   - __easing__ (_Object.&lt;string|Function&gt;|string|Function=_): Easing curve
+     name(s) or function(s) to use for the tween.
+   - __attachment__ (_*_): Cached value that is passed to the
+     `step`/`start`/`finish` methods.
+   @chainable
+  /
+Tweenable.prototype.setConfig = function (config) {
+  config = config || {};
+  this._configured = true;
+
+  // Attach something to this Tweenable instance (e.g.: a DOM element, an
+  // object, a string, etc.);
+  this._attachment = config.attachment;
+
+  // Init the internal state
+  this._pausedAtTime = null;
+  this._scheduleId = null;
+  this._delay = config.delay || 0;
+  this._start = config.start || noop;
+  this._step = config.step || noop;
+  this._finish = config.finish || noop;
+  this._duration = config.duration || DEFAULT_DURATION;
+  this._currentState = shallowCopy({}, config.from || this.get());
+  this._originalState = this.get();
+  this._targetState = shallowCopy({}, config.to || this.get());
+
+  var self = this;
+  this._timeoutHandler = function () {
+    timeoutHandler(self,
+      self._timestamp,
+      self._delay,
+      self._duration,
+      self._currentState,
+      self._originalState,
+      self._targetState,
+      self._easing,
+      self._step,
+      self._scheduleFunction
+    );
+  };
+
+  // Aliases used below
+  var currentState = this._currentState;
+  var targetState = this._targetState;
+
+  // Ensure that there is always something to tween to.
+  defaults(targetState, currentState);
+
+  this._easing = composeEasingObject(
+    currentState, config.easing || DEFAULT_EASING);
+
+  this._filterArgs =
+    [currentState, this._originalState, targetState, this._easing];
+
+  applyFilter(this, &#39;tweenCreated&#39;);
+  return this;
+};
+
+/**
+   @method get
+   @return {Object} The current state.
+  /
+Tweenable.prototype.get = function () {
+  return shallowCopy({}, this._currentState);
+};
+
+/**
+   @method set
+   @param {Object} state The current state.
+  /
+Tweenable.prototype.set = function (state) {
+  this._currentState = state;
+};
+
+/**
+   Pause a tween.  Paused tweens can be resumed from the point at which they
+   were paused.  This is different from `{{#crossLink
+   &quot;Tweenable/stop:method&quot;}}{{/crossLink}}`, as that method
+   causes a tween to start over when it is resumed.
+   @method pause
+   @chainable
+  /
+Tweenable.prototype.pause = function () {
+  this._pausedAtTime = now();
+  this._isPaused = true;
+  return this;
+};
+
+/**
+   Resume a paused tween.
+   @method resume
+   @chainable
+  /
+Tweenable.prototype.resume = function () {
+  if (this._isPaused) {
+    this._timestamp += now() - this._pausedAtTime;
+  }
+
+  this._isPaused = false;
+  this._isTweening = true;
+
+  this._timeoutHandler();
+
+  return this;
+};
+
+/**
+   Move the state of the animation to a specific point in the tween&#39;s
+   timeline.  If the animation is not running, this will cause the `step`
+   handlers to be called.
+   @method seek
+   @param {millisecond} millisecond The millisecond of the animation to seek
+   to.  This must not be less than `0`.
+   @chainable
+  /
+Tweenable.prototype.seek = function (millisecond) {
+  millisecond = Math.max(millisecond, 0);
+  var currentTime = now();
+
+  if ((this._timestamp + millisecond) === 0) {
+    return this;
+  }
+
+  this._timestamp = currentTime - millisecond;
+
+  if (!this.isPlaying()) {
+    this._isTweening = true;
+    this._isPaused = false;
+
+    // If the animation is not running, call timeoutHandler to make sure that
+    // any step handlers are run.
+    timeoutHandler(this,
+      this._timestamp,
+      this._delay,
+      this._duration,
+      this._currentState,
+      this._originalState,
+      this._targetState,
+      this._easing,
+      this._step,
+      this._scheduleFunction,
+      currentTime
+    );
+
+    this.pause();
+  }
+
+  return this;
+};
+
+/**
+   Stops and cancels a tween.
+   @param {boolean=} gotoEnd If `false` or omitted, the tween just stops at
+   its current state, and the `finish` handler is not invoked.  If `true`,
+   the tweened object&#39;s values are instantly set to the target values, and
+   `finish` is invoked.
+   @method stop
+   @chainable
+  /
+Tweenable.prototype.stop = function (gotoEnd) {
+  this._isTweening = false;
+  this._isPaused = false;
+  this._timeoutHandler = noop;
+
+  (root.cancelAnimationFrame            ||
+  root.webkitCancelAnimationFrame     ||
+  root.oCancelAnimationFrame          ||
+  root.msCancelAnimationFrame         ||
+  root.mozCancelRequestAnimationFrame ||
+  root.clearTimeout)(this._scheduleId);
+
+  if (gotoEnd) {
+    applyFilter(this, &#39;beforeTween&#39;);
+    tweenProps(
+      1,
+      this._currentState,
+      this._originalState,
+      this._targetState,
+      1,
+      0,
+      this._easing
+    );
+    applyFilter(this, &#39;afterTween&#39;);
+    applyFilter(this, &#39;afterTweenEnd&#39;);
+    this._finish.call(this, this._currentState, this._attachment);
+  }
+
+  return this;
+};
+
+/**
+   @method isPlaying
+   @return {boolean} Whether or not a tween is running.
+  /
+Tweenable.prototype.isPlaying = function () {
+  return this._isTweening &amp;&amp; !this._isPaused;
+};
+
+/**
+   Set a custom schedule function.
+
+   If a custom function is not set,
+   [`requestAnimationFrame`](https://developer.mozilla.org/en-US/docs/Web/API/window.requestAnimationFrame)
+   is used if available, otherwise
+   [`setTimeout`](https://developer.mozilla.org/en-US/docs/Web/API/Window.setTimeout)
+   is used.
+   @method setScheduleFunction
+   @param {Function(Function,number)} scheduleFunction The function to be
+   used to schedule the next frame to be rendered.
+  /
+Tweenable.prototype.setScheduleFunction = function (scheduleFunction) {
+  this._scheduleFunction = scheduleFunction;
+};
+
+/**
+   `delete` all &quot;own&quot; properties.  Call this when the `Tweenable` instance
+   is no longer needed to free memory.
+   @method dispose
+  /
+Tweenable.prototype.dispose = function () {
+  var prop;
+  for (prop in this) {
+    if (this.hasOwnProperty(prop)) {
+      delete this[prop];
+    }
+  }
+};
+
+/**
+   Filters are used for transforming the properties of a tween at various
+   points in a Tweenable&#39;s life cycle.  See the README for more info on this.
+   @private
+  /
+Tweenable.prototype.filter = {};
+
+/**
+   This object contains all of the tweens available to Shifty.  It is
+   extensible - simply attach properties to the `Tweenable.prototype.formula`
+   Object following the same format as `linear`.
+
+   `pos` should be a normalized `number` (between 0 and 1).
+   @property formula
+   @type {Object(function)}
+  /
+Tweenable.prototype.formula = {
+  linear: function (pos) {
+    return pos;
+  }
+};
+
+formula = Tweenable.prototype.formula;
+
+shallowCopy(Tweenable, {
+  &#39;now&#39;: now
+  ,&#39;each&#39;: each
+  ,&#39;tweenProps&#39;: tweenProps
+  ,&#39;tweenProp&#39;: tweenProp
+  ,&#39;applyFilter&#39;: applyFilter
+  ,&#39;shallowCopy&#39;: shallowCopy
+  ,&#39;defaults&#39;: defaults
+  ,&#39;composeEasingObject&#39;: composeEasingObject
+});
+
+// `root` is provided in the intro/outro files.
+
+// A hook used for unit testing.
+if (typeof SHIFTY_DEBUG_NOW === &#39;function&#39;) {
+  root.timeoutHandler = timeoutHandler;
+}
+
+// Bootstrap Tweenable appropriately for the environment.
+if (typeof exports === &#39;object&#39;) {
+  // CommonJS
+  module.exports = Tweenable;
+} else if (typeof define === &#39;function&#39; &amp;&amp; define.amd) {
+  // AMD
+  define(function () {return Tweenable;});
+} else if (typeof root.Tweenable === &#39;undefined&#39;) {
+  // Browser: Make `Tweenable` globally accessible.
+  root.Tweenable = Tweenable;
+}
+
+return Tweenable;</pre>
+
+<p>} ());</p>
+
+<p>/*!</p>
+
+<pre> All equations are adapted from Thomas Fuchs&#39;
+ [Scripty2](https://github.com/madrobby/scripty2/blob/master/src/effects/transitions/penner.js).
+
+ Based on Easing Equations (c) 2003 [Robert
+ Penner](http://www.robertpenner.com/), all rights reserved. This work is
+ [subject to terms](http://www.robertpenner.com/easing_terms_of_use.html).
+/</pre>
+
+<p>/*!</p>
+
+<pre>  TERMS OF USE - EASING EQUATIONS
+  Open source under the BSD License.
+  Easing Equations (c) 2003 Robert Penner, all rights reserved.
+/</pre>
+
+<p>;(function () {</p>
+
+<pre>Tweenable.shallowCopy(Tweenable.prototype.formula, {
+  easeInQuad: function (pos) {
+    return Math.pow(pos, 2);
+  },
+
+  easeOutQuad: function (pos) {
+    return -(Math.pow((pos - 1), 2) - 1);
+  },
+
+  easeInOutQuad: function (pos) {
+    if ((pos /= 0.5) &lt; 1) {return 0.5 * Math.pow(pos,2);}
+    return -0.5 * ((pos -= 2) * pos - 2);
+  },
+
+  easeInCubic: function (pos) {
+    return Math.pow(pos, 3);
+  },
+
+  easeOutCubic: function (pos) {
+    return (Math.pow((pos - 1), 3) + 1);
+  },
+
+  easeInOutCubic: function (pos) {
+    if ((pos /= 0.5) &lt; 1) {return 0.5 * Math.pow(pos,3);}
+    return 0.5 * (Math.pow((pos - 2),3) + 2);
+  },
+
+  easeInQuart: function (pos) {
+    return Math.pow(pos, 4);
+  },
+
+  easeOutQuart: function (pos) {
+    return -(Math.pow((pos - 1), 4) - 1);
+  },
+
+  easeInOutQuart: function (pos) {
+    if ((pos /= 0.5) &lt; 1) {return 0.5 * Math.pow(pos,4);}
+    return -0.5 * ((pos -= 2) * Math.pow(pos,3) - 2);
+  },
+
+  easeInQuint: function (pos) {
+    return Math.pow(pos, 5);
+  },
+
+  easeOutQuint: function (pos) {
+    return (Math.pow((pos - 1), 5) + 1);
+  },
+
+  easeInOutQuint: function (pos) {
+    if ((pos /= 0.5) &lt; 1) {return 0.5 * Math.pow(pos,5);}
+    return 0.5 * (Math.pow((pos - 2),5) + 2);
+  },
+
+  easeInSine: function (pos) {
+    return -Math.cos(pos * (Math.PI / 2)) + 1;
+  },
+
+  easeOutSine: function (pos) {
+    return Math.sin(pos * (Math.PI / 2));
+  },
+
+  easeInOutSine: function (pos) {
+    return (-0.5 * (Math.cos(Math.PI * pos) - 1));
+  },
+
+  easeInExpo: function (pos) {
+    return (pos === 0) ? 0 : Math.pow(2, 10 * (pos - 1));
+  },
+
+  easeOutExpo: function (pos) {
+    return (pos === 1) ? 1 : -Math.pow(2, -10 * pos) + 1;
+  },
+
+  easeInOutExpo: function (pos) {
+    if (pos === 0) {return 0;}
+    if (pos === 1) {return 1;}
+    if ((pos /= 0.5) &lt; 1) {return 0.5 * Math.pow(2,10 * (pos - 1));}
+    return 0.5 * (-Math.pow(2, -10 * --pos) + 2);
+  },
+
+  easeInCirc: function (pos) {
+    return -(Math.sqrt(1 - (pos * pos)) - 1);
+  },
+
+  easeOutCirc: function (pos) {
+    return Math.sqrt(1 - Math.pow((pos - 1), 2));
+  },
+
+  easeInOutCirc: function (pos) {
+    if ((pos /= 0.5) &lt; 1) {return -0.5 * (Math.sqrt(1 - pos * pos) - 1);}
+    return 0.5 * (Math.sqrt(1 - (pos -= 2) * pos) + 1);
+  },
+
+  easeOutBounce: function (pos) {
+    if ((pos) &lt; (1 / 2.75)) {
+      return (7.5625 * pos * pos);
+    } else if (pos &lt; (2 / 2.75)) {
+      return (7.5625 * (pos -= (1.5 / 2.75)) * pos + 0.75);
+    } else if (pos &lt; (2.5 / 2.75)) {
+      return (7.5625 * (pos -= (2.25 / 2.75)) * pos + 0.9375);
+    } else {
+      return (7.5625 * (pos -= (2.625 / 2.75)) * pos + 0.984375);
+    }
+  },
+
+  easeInBack: function (pos) {
+    var s = 1.70158;
+    return (pos) * pos * ((s + 1) * pos - s);
+  },
+
+  easeOutBack: function (pos) {
+    var s = 1.70158;
+    return (pos = pos - 1) * pos * ((s + 1) * pos + s) + 1;
+  },
+
+  easeInOutBack: function (pos) {
+    var s = 1.70158;
+    if ((pos /= 0.5) &lt; 1) {
+      return 0.5 * (pos * pos * (((s *= (1.525)) + 1) * pos - s));
+    }
+    return 0.5 * ((pos -= 2) * pos * (((s *= (1.525)) + 1) * pos + s) + 2);
+  },
+
+  elastic: function (pos) {
+    // jshint maxlen:90
+    return -1 * Math.pow(4,-8 * pos) * Math.sin((pos * 6 - 1) * (2 * Math.PI) / 2) + 1;
+  },
+
+  swingFromTo: function (pos) {
+    var s = 1.70158;
+    return ((pos /= 0.5) &lt; 1) ?
+        0.5 * (pos * pos * (((s *= (1.525)) + 1) * pos - s)) :
+        0.5 * ((pos -= 2) * pos * (((s *= (1.525)) + 1) * pos + s) + 2);
+  },
+
+  swingFrom: function (pos) {
+    var s = 1.70158;
+    return pos * pos * ((s + 1) * pos - s);
+  },
+
+  swingTo: function (pos) {
+    var s = 1.70158;
+    return (pos -= 1) * pos * ((s + 1) * pos + s) + 1;
+  },
+
+  bounce: function (pos) {
+    if (pos &lt; (1 / 2.75)) {
+      return (7.5625 * pos * pos);
+    } else if (pos &lt; (2 / 2.75)) {
+      return (7.5625 * (pos -= (1.5 / 2.75)) * pos + 0.75);
+    } else if (pos &lt; (2.5 / 2.75)) {
+      return (7.5625 * (pos -= (2.25 / 2.75)) * pos + 0.9375);
+    } else {
+      return (7.5625 * (pos -= (2.625 / 2.75)) * pos + 0.984375);
+    }
+  },
+
+  bouncePast: function (pos) {
+    if (pos &lt; (1 / 2.75)) {
+      return (7.5625 * pos * pos);
+    } else if (pos &lt; (2 / 2.75)) {
+      return 2 - (7.5625 * (pos -= (1.5 / 2.75)) * pos + 0.75);
+    } else if (pos &lt; (2.5 / 2.75)) {
+      return 2 - (7.5625 * (pos -= (2.25 / 2.75)) * pos + 0.9375);
+    } else {
+      return 2 - (7.5625 * (pos -= (2.625 / 2.75)) * pos + 0.984375);
+    }
+  },
+
+  easeFromTo: function (pos) {
+    if ((pos /= 0.5) &lt; 1) {return 0.5 * Math.pow(pos,4);}
+    return -0.5 * ((pos -= 2) * Math.pow(pos,3) - 2);
+  },
+
+  easeFrom: function (pos) {
+    return Math.pow(pos,4);
+  },
+
+  easeTo: function (pos) {
+    return Math.pow(pos,0.25);
+  }
+});</pre>
+
+<p>}());</p>
+
+<p>// jshint maxlen:100 /**</p>
+
+<pre> The Bezier magic in this file is adapted/copied almost wholesale from
+ [Scripty2](https://github.com/madrobby/scripty2/blob/master/src/effects/transitions/cubic-bezier.js),
+ which was adapted from Apple code (which probably came from
+ [here](http://opensource.apple.com/source/WebCore/WebCore-955.66/platform/graphics/UnitBezier.h)).
+ Special thanks to Apple and Thomas Fuchs for much of this code.
+/</pre>
+
+<p>/**</p>
+
+<pre>  Copyright (c) 2006 Apple Computer, Inc. All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice,
+  this list of conditions and the following disclaimer.
+
+  2. Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+  3. Neither the name of the copyright holder(s) nor the names of any
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot;
+  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+/</pre>
+
+<p>;(function () {</p>
+
+<pre>// port of webkit cubic bezier handling by http://www.netzgesta.de/dev/
+function cubicBezierAtTime(t,p1x,p1y,p2x,p2y,duration) {
+  var ax = 0,bx = 0,cx = 0,ay = 0,by = 0,cy = 0;
+  function sampleCurveX(t) {
+    return ((ax * t + bx) * t + cx) * t;
+  }
+  function sampleCurveY(t) {
+    return ((ay * t + by) * t + cy) * t;
+  }
+  function sampleCurveDerivativeX(t) {
+    return (3.0 * ax * t + 2.0 * bx) * t + cx;
+  }
+  function solveEpsilon(duration) {
+    return 1.0 / (200.0 * duration);
+  }
+  function solve(x,epsilon) {
+    return sampleCurveY(solveCurveX(x, epsilon));
+  }
+  function fabs(n) {
+    if (n &gt;= 0) {
+      return n;
+    } else {
+      return 0 - n;
+    }
+  }
+  function solveCurveX(x, epsilon) {
+    var t0,t1,t2,x2,d2,i;
+    for (t2 = x, i = 0; i &lt; 8; i++) {
+      x2 = sampleCurveX(t2) - x;
+      if (fabs(x2) &lt; epsilon) {
+        return t2;
+      }
+      d2 = sampleCurveDerivativeX(t2);
+      if (fabs(d2) &lt; 1e-6) {
+        break;
+      }
+      t2 = t2 - x2 / d2;
+    }
+    t0 = 0.0;
+    t1 = 1.0;
+    t2 = x;
+    if (t2 &lt; t0) {
+      return t0;
+    }
+    if (t2 &gt; t1) {
+      return t1;
+    }
+    while (t0 &lt; t1) {
+      x2 = sampleCurveX(t2);
+      if (fabs(x2 - x) &lt; epsilon) {
+        return t2;
+      }
+      if (x &gt; x2) {
+        t0 = t2;
+      }else {
+        t1 = t2;
+      }
+      t2 = (t1 - t0) * 0.5 + t0;
+    }
+    return t2; // Failure.
+  }
+  cx = 3.0 * p1x;
+  bx = 3.0 * (p2x - p1x) - cx;
+  ax = 1.0 - cx - bx;
+  cy = 3.0 * p1y;
+  by = 3.0 * (p2y - p1y) - cy;
+  ay = 1.0 - cy - by;
+  return solve(t, solveEpsilon(duration));
+}
+/**
+    getCubicBezierTransition(x1, y1, x2, y2) -&gt; Function
+
+    Generates a transition easing function that is compatible
+    with WebKit&#39;s CSS transitions `-webkit-transition-timing-function`
+    CSS property.
+
+    The W3C has more information about CSS3 transition timing functions:
+    http://www.w3.org/TR/css3-transitions/#transition-timing-function_tag
+
+    @param {number} x1
+    @param {number} y1
+    @param {number} x2
+    @param {number} y2
+    @return {function}
+    @private
+  /
+function getCubicBezierTransition (x1, y1, x2, y2) {
+  return function (pos) {
+    return cubicBezierAtTime(pos,x1,y1,x2,y2,1);
+  };
+}
+// End ported code
+
+/**
+   Create a Bezier easing function and attach it to `{{#crossLink
+   &quot;Tweenable/formula:property&quot;}}Tweenable#formula{{/crossLink}}`.  This
+   function gives you total control over the easing curve.  Matthew Lein&#39;s
+   [Ceaser](http://matthewlein.com/ceaser/) is a useful tool for visualizing
+   the curves you can make with this function.
+   @method setBezierFunction
+   @param {string} name The name of the easing curve.  Overwrites the old
+   easing function on `{{#crossLink
+   &quot;Tweenable/formula:property&quot;}}Tweenable#formula{{/crossLink}}` if it
+   exists.
+   @param {number} x1
+   @param {number} y1
+   @param {number} x2
+   @param {number} y2
+   @return {function} The easing function that was attached to
+   Tweenable.prototype.formula.
+  /
+Tweenable.setBezierFunction = function (name, x1, y1, x2, y2) {
+  var cubicBezierTransition = getCubicBezierTransition(x1, y1, x2, y2);
+  cubicBezierTransition.displayName = name;
+  cubicBezierTransition.x1 = x1;
+  cubicBezierTransition.y1 = y1;
+  cubicBezierTransition.x2 = x2;
+  cubicBezierTransition.y2 = y2;
+
+  return Tweenable.prototype.formula[name] = cubicBezierTransition;
+};
+
+/**
+   `delete` an easing function from `{{#crossLink
+   &quot;Tweenable/formula:property&quot;}}Tweenable#formula{{/crossLink}}`.  Be
+   careful with this method, as it `delete`s whatever easing formula matches
+   `name` (which means you can delete standard Shifty easing functions).
+   @method unsetBezierFunction
+   @param {string} name The name of the easing function to delete.
+   @return {function}
+  /
+Tweenable.unsetBezierFunction = function (name) {
+  delete Tweenable.prototype.formula[name];
+};</pre>
+
+<p>})();</p>
+
+<p>;(function () {</p>
+
+<pre>function getInterpolatedValues (
+  from, current, targetState, position, easing, delay) {
+  return Tweenable.tweenProps(
+    position, current, from, targetState, 1, delay, easing);
+}
+
+// Fake a Tweenable and patch some internals.  This approach allows us to
+// skip uneccessary processing and object recreation, cutting down on garbage
+// collection pauses.
+var mockTweenable = new Tweenable();
+mockTweenable._filterArgs = [];
+
+/**
+   Compute the midpoint of two Objects.  This method effectively calculates a
+   specific frame of animation that `{{#crossLink
+   &quot;Tweenable/tween:method&quot;}}{{/crossLink}}` does many times over the course
+   of a full tween.
+
+       var interpolatedValues = Tweenable.interpolate({
+         width: &#39;100px&#39;,
+         opacity: 0,
+         color: &#39;#fff&#39;
+       }, {
+         width: &#39;200px&#39;,
+         opacity: 1,
+         color: &#39;#000&#39;
+       }, 0.5);
+
+       console.log(interpolatedValues);
+       // {opacity: 0.5, width: &quot;150px&quot;, color: &quot;rgb(127,127,127)&quot;}
+
+   @static
+   @method interpolate
+   @param {Object} from The starting values to tween from.
+   @param {Object} targetState The ending values to tween to.
+   @param {number} position The normalized position value (between `0.0` and
+   `1.0`) to interpolate the values between `from` and `to` for.  `from`
+   represents `0` and `to` represents `1`.
+   @param {Object.&lt;string|Function&gt;|string|Function} easing The easing
+   curve(s) to calculate the midpoint against.  You can reference any easing
+   function attached to `Tweenable.prototype.formula`, or provide the easing
+   function(s) directly.  If omitted, this defaults to &quot;linear&quot;.
+   @param {number=} opt_delay Optional delay to pad the beginning of the
+   interpolated tween with.  This increases the range of `position` from (`0`
+   through `1`) to (`0` through `1 + opt_delay`).  So, a delay of `0.5` would
+   increase all valid values of `position` to numbers between `0` and `1.5`.
+   @return {Object}
+  /
+Tweenable.interpolate = function (
+  from, targetState, position, easing, opt_delay) {
+
+  var current = Tweenable.shallowCopy({}, from);
+  var delay = opt_delay || 0;
+  var easingObject = Tweenable.composeEasingObject(
+    from, easing || &#39;linear&#39;);
+
+  mockTweenable.set({});
+
+  // Alias and reuse the _filterArgs array instead of recreating it.
+  var filterArgs = mockTweenable._filterArgs;
+  filterArgs.length = 0;
+  filterArgs[0] = current;
+  filterArgs[1] = from;
+  filterArgs[2] = targetState;
+  filterArgs[3] = easingObject;
+
+  // Any defined value transformation must be applied
+  Tweenable.applyFilter(mockTweenable, &#39;tweenCreated&#39;);
+  Tweenable.applyFilter(mockTweenable, &#39;beforeTween&#39;);
+
+  var interpolatedValues = getInterpolatedValues(
+    from, current, targetState, position, easingObject, delay);
+
+  // Transform values back into their original format
+  Tweenable.applyFilter(mockTweenable, &#39;afterTween&#39;);
+
+  return interpolatedValues;
+};</pre>
+
+<p>}());</p>
+
+<p>/**</p>
+
+<pre> This module adds string interpolation support to Shifty.
+
+ The Token extension allows Shifty to tween numbers inside of strings.  Among
+ other things, this allows you to animate CSS properties.  For example, you
+ can do this:
+
+     var tweenable = new Tweenable();
+     tweenable.tween({
+       from: { transform: &#39;translateX(45px)&#39; },
+       to: { transform: &#39;translateX(90xp)&#39; }
+     });
+
+ `translateX(45)` will be tweened to `translateX(90)`.  To demonstrate:
+
+     var tweenable = new Tweenable();
+     tweenable.tween({
+       from: { transform: &#39;translateX(45px)&#39; },
+       to: { transform: &#39;translateX(90px)&#39; },
+       step: function (state) {
+         console.log(state.transform);
+       }
+     });
+
+ The above snippet will log something like this in the console:
+
+     translateX(60.3px)
+     ...
+     translateX(76.05px)
+     ...
+     translateX(90px)
+
+ Another use for this is animating colors:
+
+     var tweenable = new Tweenable();
+     tweenable.tween({
+       from: { color: &#39;rgb(0,255,0)&#39; },
+       to: { color: &#39;rgb(255,0,255)&#39; },
+       step: function (state) {
+         console.log(state.color);
+       }
+     });
+
+ The above snippet will log something like this:
+
+     rgb(84,170,84)
+     ...
+     rgb(170,84,170)
+     ...
+     rgb(255,0,255)
+
+ This extension also supports hexadecimal colors, in both long (`#ff00ff`)
+ and short (`#f0f`) forms.  Be aware that hexadecimal input values will be
+ converted into the equivalent RGB output values.  This is done to optimize
+ for performance.
+
+     var tweenable = new Tweenable();
+     tweenable.tween({
+       from: { color: &#39;#0f0&#39; },
+       to: { color: &#39;#f0f&#39; },
+       step: function (state) {
+         console.log(state.color);
+       }
+     });
+
+ This snippet will generate the same output as the one before it because
+ equivalent values were supplied (just in hexadecimal form rather than RGB):
+
+     rgb(84,170,84)
+     ...
+     rgb(170,84,170)
+     ...
+     rgb(255,0,255)
+
+ ## Easing support
+
+ Easing works somewhat differently in the Token extension.  This is because
+ some CSS properties have multiple values in them, and you might need to
+ tween each value along its own easing curve.  A basic example:
+
+     var tweenable = new Tweenable();
+     tweenable.tween({
+       from: { transform: &#39;translateX(0px) translateY(0px)&#39; },
+       to: { transform:   &#39;translateX(100px) translateY(100px)&#39; },
+       easing: { transform: &#39;easeInQuad&#39; },
+       step: function (state) {
+         console.log(state.transform);
+       }
+     });
+
+ The above snippet will create values like this:
+
+     translateX(11.56px) translateY(11.56px)
+     ...
+     translateX(46.24px) translateY(46.24px)
+     ...
+     translateX(100px) translateY(100px)
+
+ In this case, the values for `translateX` and `translateY` are always the
+ same for each step of the tween, because they have the same start and end
+ points and both use the same easing curve.  We can also tween `translateX`
+ and `translateY` along independent curves:
+
+     var tweenable = new Tweenable();
+     tweenable.tween({
+       from: { transform: &#39;translateX(0px) translateY(0px)&#39; },
+       to: { transform:   &#39;translateX(100px) translateY(100px)&#39; },
+       easing: { transform: &#39;easeInQuad bounce&#39; },
+       step: function (state) {
+         console.log(state.transform);
+       }
+     });
+
+ The above snippet will create values like this:
+
+     translateX(10.89px) translateY(82.35px)
+     ...
+     translateX(44.89px) translateY(86.73px)
+     ...
+     translateX(100px) translateY(100px)
+
+ `translateX` and `translateY` are not in sync anymore, because `easeInQuad`
+ was specified for `translateX` and `bounce` for `translateY`.  Mixing and
+ matching easing curves can make for some interesting motion in your
+ animations.
+
+ The order of the space-separated easing curves correspond the token values
+ they apply to.  If there are more token values than easing curves listed,
+ the last easing curve listed is used.
+ @submodule Tweenable.token
+/</pre>
+
+<p>// token function is defined above only so that dox-foundation sees it as
+// documentation and renders it.  It is never used, and is optimized away
+at // build time.</p>
+
+<p>;(function (Tweenable) {</p>
+
+<pre>/**
+   @typedef {{
+     formatString: string
+     chunkNames: Array.&lt;string&gt;
+   }}
+   @private
+  /
+var formatManifest;
+
+// CONSTANTS
+
+var R_NUMBER_COMPONENT = /(\d|\-|\.)/;
+var R_FORMAT_CHUNKS = /([^\-0-9\.]+)/g;
+var R_UNFORMATTED_VALUES = /[0-9.\-]+/g;
+var R_RGB = new RegExp(
+  &#39;rgb\\(&#39; + R_UNFORMATTED_VALUES.source +
+  (/,\s  .source) + R_UNFORMATTED_VALUES.source +
+  (/,\s*/.source) + R_UNFORMATTED_VALUES.source + &#39;\\)&#39;, &#39;g&#39;);
+var R_RGB_PREFIX = /^.*\(/;
+var R_HEX = /#([0-9]|[a-f]){3,6}/gi;
+var VALUE_PLACEHOLDER = &#39;VAL&#39;;
+
+// HELPERS
+
+/**
+   @param {Array.number} rawValues
+   @param {string} prefix
+
+   @return {Array.&lt;string&gt;}
+   @private
+  /
+function getFormatChunksFrom (rawValues, prefix) {
+  var accumulator = [];
+
+  var rawValuesLength = rawValues.length;
+  var i;
+
+  for (i = 0; i &lt; rawValuesLength; i++) {
+    accumulator.push(&#39;_&#39; + prefix + &#39;_&#39; + i);
+  }
+
+  return accumulator;
+}
+
+/**
+   @param {string} formattedString
+
+   @return {string}
+   @private
+  /
+function getFormatStringFrom (formattedString) {
+  var chunks = formattedString.match(R_FORMAT_CHUNKS);
+
+  if (!chunks) {
+    // chunks will be null if there were no tokens to parse in
+    // formattedString (for example, if formattedString is &#39;2&#39;).  Coerce
+    // chunks to be useful here.
+    chunks = [&#39;&#39;, &#39;&#39;];
+
+    // If there is only one chunk, assume that the string is a number
+    // followed by a token...
+    // NOTE: This may be an unwise assumption.
+  } else if (chunks.length === 1 ||
+    // ...or if the string starts with a number component (&quot;.&quot;, &quot;-&quot;, or a
+    // digit)...
+  formattedString.charAt(0).match(R_NUMBER_COMPONENT)) {
+    // ...prepend an empty string here to make sure that the formatted number
+    // is properly replaced by VALUE_PLACEHOLDER
+    chunks.unshift(&#39;&#39;);
+  }
+
+  return chunks.join(VALUE_PLACEHOLDER);
+}
+
+/**
+   Convert all hex color values within a string to an rgb string.
+
+   @param {Object} stateObject
+
+   @return {Object} The modified obj
+   @private
+  /
+function sanitizeObjectForHexProps (stateObject) {
+  Tweenable.each(stateObject, function (prop) {
+    var currentProp = stateObject[prop];
+
+    if (typeof currentProp === &#39;string&#39; &amp;&amp; currentProp.match(R_HEX)) {
+      stateObject[prop] = sanitizeHexChunksToRGB(currentProp);
+    }
+  });
+}
+
+/**
+   @param {string} str
+
+   @return {string}
+   @private
+  /
+function  sanitizeHexChunksToRGB (str) {
+  return filterStringChunks(R_HEX, str, convertHexToRGB);
+}
+
+/**
+   @param {string} hexString
+
+   @return {string}
+   @private
+  /
+function convertHexToRGB (hexString) {
+  var rgbArr = hexToRGBArray(hexString);
+  return &#39;rgb(&#39; + rgbArr[0] + &#39;,&#39; + rgbArr[1] + &#39;,&#39; + rgbArr[2] + &#39;)&#39;;
+}
+
+var hexToRGBArray_returnArray = [];
+/**
+   Convert a hexadecimal string to an array with three items, one each for
+   the red, blue, and green decimal values.
+
+   @param {string} hex A hexadecimal string.
+
+   @returns {Array.&lt;number&gt;} The converted Array of RGB values if `hex` is a
+   valid string, or an Array of three 0&#39;s.
+   @private
+  /
+function hexToRGBArray (hex) {
+
+  hex = hex.replace(/#/, &#39;&#39;);
+
+  // If the string is a shorthand three digit hex notation, normalize it to
+  // the standard six digit notation
+  if (hex.length === 3) {
+    hex = hex.split(&#39;&#39;);
+    hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+  }
+
+  hexToRGBArray_returnArray[0] = hexToDec(hex.substr(0, 2));
+  hexToRGBArray_returnArray[1] = hexToDec(hex.substr(2, 2));
+  hexToRGBArray_returnArray[2] = hexToDec(hex.substr(4, 2));
+
+  return hexToRGBArray_returnArray;
+}
+
+/**
+   Convert a base-16 number to base-10.
+
+   @param {Number|String} hex The value to convert
+
+   @returns {Number} The base-10 equivalent of `hex`.
+   @private
+  /
+function hexToDec (hex) {
+  return parseInt(hex, 16);
+}
+
+/**
+   Runs a filter operation on all chunks of a string that match a RegExp
+
+   @param {RegExp} pattern
+   @param {string} unfilteredString
+   @param {function(string)} filter
+
+   @return {string}
+   @private
+  /
+function filterStringChunks (pattern, unfilteredString, filter) {
+  var pattenMatches = unfilteredString.match(pattern);
+  var filteredString = unfilteredString.replace(pattern, VALUE_PLACEHOLDER);
+
+  if (pattenMatches) {
+    var pattenMatchesLength = pattenMatches.length;
+    var currentChunk;
+
+    for (var i = 0; i &lt; pattenMatchesLength; i++) {
+      currentChunk = pattenMatches.shift();
+      filteredString = filteredString.replace(
+        VALUE_PLACEHOLDER, filter(currentChunk));
+    }
+  }
+
+  return filteredString;
+}
+
+/**
+   Check for floating point values within rgb strings and rounds them.
+
+   @param {string} formattedString
+
+   @return {string}
+   @private
+  /
+function sanitizeRGBChunks (formattedString) {
+  return filterStringChunks(R_RGB, formattedString, sanitizeRGBChunk);
+}
+
+/**
+   @param {string} rgbChunk
+
+   @return {string}
+   @private
+  /
+function sanitizeRGBChunk (rgbChunk) {
+  var numbers = rgbChunk.match(R_UNFORMATTED_VALUES);
+  var numbersLength = numbers.length;
+  var sanitizedString = rgbChunk.match(R_RGB_PREFIX)[0];
+
+  for (var i = 0; i &lt; numbersLength; i++) {
+    sanitizedString += parseInt(numbers[i], 10) + &#39;,&#39;;
+  }
+
+  sanitizedString = sanitizedString.slice(0, -1) + &#39;)&#39;;
+
+  return sanitizedString;
+}
+
+/**
+   @param {Object} stateObject
+
+   @return {Object} An Object of formatManifests that correspond to
+   the string properties of stateObject
+   @private
+  /
+function getFormatManifests (stateObject) {
+  var manifestAccumulator = {};
+
+  Tweenable.each(stateObject, function (prop) {
+    var currentProp = stateObject[prop];
+
+    if (typeof currentProp === &#39;string&#39;) {
+      var rawValues = getValuesFrom(currentProp);
+
+      manifestAccumulator[prop] = {
+        &#39;formatString&#39;: getFormatStringFrom(currentProp)
+        ,&#39;chunkNames&#39;: getFormatChunksFrom(rawValues, prop)
+      };
+    }
+  });
+
+  return manifestAccumulator;
+}
+
+/**
+   @param {Object} stateObject
+   @param {Object} formatManifests
+   @private
+  /
+function expandFormattedProperties (stateObject, formatManifests) {
+  Tweenable.each(formatManifests, function (prop) {
+    var currentProp = stateObject[prop];
+    var rawValues = getValuesFrom(currentProp);
+    var rawValuesLength = rawValues.length;
+
+    for (var i = 0; i &lt; rawValuesLength; i++) {
+      stateObject[formatManifests[prop].chunkNames[i]] = +rawValues[i];
+    }
+
+    delete stateObject[prop];
+  });
+}
+
+/**
+   @param {Object} stateObject
+   @param {Object} formatManifests
+   @private
+  /
+function collapseFormattedProperties (stateObject, formatManifests) {
+  Tweenable.each(formatManifests, function (prop) {
+    var currentProp = stateObject[prop];
+    var formatChunks = extractPropertyChunks(
+      stateObject, formatManifests[prop].chunkNames);
+    var valuesList = getValuesList(
+      formatChunks, formatManifests[prop].chunkNames);
+    currentProp = getFormattedValues(
+      formatManifests[prop].formatString, valuesList);
+    stateObject[prop] = sanitizeRGBChunks(currentProp);
+  });
+}
+
+/**
+   @param {Object} stateObject
+   @param {Array.&lt;string&gt;} chunkNames
+
+   @return {Object} The extracted value chunks.
+   @private
+  /
+function extractPropertyChunks (stateObject, chunkNames) {
+  var extractedValues = {};
+  var currentChunkName, chunkNamesLength = chunkNames.length;
+
+  for (var i = 0; i &lt; chunkNamesLength; i++) {
+    currentChunkName = chunkNames[i];
+    extractedValues[currentChunkName] = stateObject[currentChunkName];
+    delete stateObject[currentChunkName];
+  }
+
+  return extractedValues;
+}
+
+var getValuesList_accumulator = [];
+/**
+   @param {Object} stateObject
+   @param {Array.&lt;string&gt;} chunkNames
+
+   @return {Array.&lt;number&gt;}
+   @private
+  /
+function getValuesList (stateObject, chunkNames) {
+  getValuesList_accumulator.length = 0;
+  var chunkNamesLength = chunkNames.length;
+
+  for (var i = 0; i &lt; chunkNamesLength; i++) {
+    getValuesList_accumulator.push(stateObject[chunkNames[i]]);
+  }
+
+  return getValuesList_accumulator;
+}
+
+/**
+   @param {string} formatString
+   @param {Array.&lt;number&gt;} rawValues
+
+   @return {string}
+   @private
+  /
+function getFormattedValues (formatString, rawValues) {
+  var formattedValueString = formatString;
+  var rawValuesLength = rawValues.length;
+
+  for (var i = 0; i &lt; rawValuesLength; i++) {
+    formattedValueString = formattedValueString.replace(
+      VALUE_PLACEHOLDER, +rawValues[i].toFixed(4));
+  }
+
+  return formattedValueString;
+}
+
+/**
+   Note: It&#39;s the duty of the caller to convert the Array elements of the
+   return value into numbers.  This is a performance optimization.
+
+   @param {string} formattedString
+
+   @return {Array.&lt;string&gt;|null}
+   @private
+  /
+function getValuesFrom (formattedString) {
+  return formattedString.match(R_UNFORMATTED_VALUES);
+}
+
+/**
+   @param {Object} easingObject
+   @param {Object} tokenData
+   @private
+  /
+function expandEasingObject (easingObject, tokenData) {
+  Tweenable.each(tokenData, function (prop) {
+    var currentProp = tokenData[prop];
+    var chunkNames = currentProp.chunkNames;
+    var chunkLength = chunkNames.length;
+
+    var easing = easingObject[prop];
+    var i;
+
+    if (typeof easing === &#39;string&#39;) {
+      var easingChunks = easing.split(&#39; &#39;);
+      var lastEasingChunk = easingChunks[easingChunks.length - 1];
+
+      for (i = 0; i &lt; chunkLength; i++) {
+        easingObject[chunkNames[i]] = easingChunks[i] || lastEasingChunk;
+      }
+
+    } else {
+      for (i = 0; i &lt; chunkLength; i++) {
+        easingObject[chunkNames[i]] = easing;
+      }
+    }
+
+    delete easingObject[prop];
+  });
+}
+
+/**
+   @param {Object} easingObject
+   @param {Object} tokenData
+   @private
+  /
+function collapseEasingObject (easingObject, tokenData) {
+  Tweenable.each(tokenData, function (prop) {
+    var currentProp = tokenData[prop];
+    var chunkNames = currentProp.chunkNames;
+    var chunkLength = chunkNames.length;
+
+    var firstEasing = easingObject[chunkNames[0]];
+    var typeofEasings = typeof firstEasing;
+
+    if (typeofEasings === &#39;string&#39;) {
+      var composedEasingString = &#39;&#39;;
+
+      for (var i = 0; i &lt; chunkLength; i++) {
+        composedEasingString += &#39; &#39; + easingObject[chunkNames[i]];
+        delete easingObject[chunkNames[i]];
+      }
+
+      easingObject[prop] = composedEasingString.substr(1);
+    } else {
+      easingObject[prop] = firstEasing;
+    }
+  });
+}
+
+Tweenable.prototype.filter.token = {
+  &#39;tweenCreated&#39;: function (currentState, fromState, toState, easingObject) {
+    sanitizeObjectForHexProps(currentState);
+    sanitizeObjectForHexProps(fromState);
+    sanitizeObjectForHexProps(toState);
+    this._tokenData = getFormatManifests(currentState);
+  },
+
+  &#39;beforeTween&#39;: function (currentState, fromState, toState, easingObject) {
+    expandEasingObject(easingObject, this._tokenData);
+    expandFormattedProperties(currentState, this._tokenData);
+    expandFormattedProperties(fromState, this._tokenData);
+    expandFormattedProperties(toState, this._tokenData);
+  },
+
+  &#39;afterTween&#39;: function (currentState, fromState, toState, easingObject) {
+    collapseFormattedProperties(currentState, this._tokenData);
+    collapseFormattedProperties(fromState, this._tokenData);
+    collapseFormattedProperties(toState, this._tokenData);
+    collapseEasingObject(easingObject, this._tokenData);
+  }
+};</pre>
+
+<p>} (Tweenable));</p>
+
+<p>}).call(null);</p>
+
+<p>},{}],2:[function(require,module,exports){ // Circle shaped progress bar</p>
+
+<p>var Shape = require(&#39;./shape&#39;); var utils =
+require(&#39;./utils&#39;);</p>
+
+<p>var Circle = function Circle(container, options) {</p>
+
+<pre>// Use two arcs to form a circle
+// See this answer http://stackoverflow.com/a/10477334/1446092
+this._pathTemplate =
+    &#39;M 50,50 m 0,-{radius}&#39; +
+    &#39; a {radius},{radius} 0 1 1 0,{2radius}&#39; +
+    &#39; a {radius},{radius} 0 1 1 0,-{2radius}&#39;;
+
+this.containerAspectRatio = 1;
+
+Shape.apply(this, arguments);</pre>
+
+<p>};</p>
+
+<p>Circle.prototype = new Shape(); Circle.prototype.constructor = Circle;</p>
+
+<p>Circle.prototype._pathString = function _pathString(opts) {</p>
+
+<pre>var widthOfWider = opts.strokeWidth;
+if (opts.trailWidth &amp;&amp; opts.trailWidth &gt; opts.strokeWidth) {
+    widthOfWider = opts.trailWidth;
+}
+
+var r = 50 - widthOfWider / 2;
+
+return utils.render(this._pathTemplate, {
+    radius: r,
+    &#39;2radius&#39;: r * 2
+});</pre>
+
+<p>};</p>
+
+<p>Circle.prototype._trailString = function _trailString(opts) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">this</span>.<span class="ruby-identifier">_pathString</span>(<span class="ruby-identifier">opts</span>);
+</pre>
+
+<p>};</p>
+
+<p>module.exports = Circle;</p>
+
+<p>},{“./shape”:7,“./utils”:9}],3:[function(require,module,exports){ // Line
+shaped progress bar</p>
+
+<p>var Shape = require(&#39;./shape&#39;); var utils =
+require(&#39;./utils&#39;);</p>
+
+<p>var Line = function Line(container, options) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">this</span>.<span class="ruby-identifier">_pathTemplate</span> = <span class="ruby-string">&#39;M 0,{center} L 100,{center}&#39;</span>;
+<span class="ruby-constant">Shape</span>.<span class="ruby-identifier">apply</span>(<span class="ruby-identifier">this</span>, <span class="ruby-identifier">arguments</span>);
+</pre>
+
+<p>};</p>
+
+<p>Line.prototype = new Shape(); Line.prototype.constructor = Line;</p>
+
+<p>Line.prototype._initializeSvg = function _initializeSvg(svg, opts) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">svg</span>.<span class="ruby-identifier">setAttribute</span>(<span class="ruby-string">&#39;viewBox&#39;</span>, <span class="ruby-string">&#39;0 0 100 &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">strokeWidth</span>);
+<span class="ruby-identifier">svg</span>.<span class="ruby-identifier">setAttribute</span>(<span class="ruby-string">&#39;preserveAspectRatio&#39;</span>, <span class="ruby-string">&#39;none&#39;</span>);
+</pre>
+
+<p>};</p>
+
+<p>Line.prototype._pathString = function _pathString(opts) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">utils</span>.<span class="ruby-identifier">render</span>(<span class="ruby-identifier">this</span>.<span class="ruby-identifier">_pathTemplate</span>, {
+    <span class="ruby-identifier">center</span><span class="ruby-operator">:</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">strokeWidth</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>
+});
+</pre>
+
+<p>};</p>
+
+<p>Line.prototype._trailString = function _trailString(opts) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">this</span>.<span class="ruby-identifier">_pathString</span>(<span class="ruby-identifier">opts</span>);
+</pre>
+
+<p>};</p>
+
+<p>module.exports = Line;</p>
+
+<p>},{“./shape”:7,“./utils”:9}],4:[function(require,module,exports){
+module.exports = {</p>
+
+<pre>// Higher level API, different shaped progress bars
+Line: require(&#39;./line&#39;),
+Circle: require(&#39;./circle&#39;),
+SemiCircle: require(&#39;./semicircle&#39;),
+Square: require(&#39;./square&#39;),
+
+// Lower level API to use any SVG path
+Path: require(&#39;./path&#39;),
+
+// Base-class for creating new custom shapes
+// to be in line with the API of built-in shapes
+// Undocumented.
+Shape: require(&#39;./shape&#39;),
+
+// Internal utils, undocumented.
+utils: require(&#39;./utils&#39;)</pre>
+
+<p>};</p>
+
+<p>},{“./circle”:2,“./line”:3,“./path”:5,“./semicircle”:6,“./shape”:7,“./square”:8,“./utils”:9}],5:[function(require,module,exports){
+// Lower level API to animate any kind of svg path</p>
+
+<p>var Tweenable = require(&#39;shifty&#39;); var utils =
+require(&#39;./utils&#39;);</p>
+
+<p>var EASING_ALIASES = {</p>
+
+<pre>easeIn: &#39;easeInCubic&#39;,
+easeOut: &#39;easeOutCubic&#39;,
+easeInOut: &#39;easeInOutCubic&#39;</pre>
+
+<p>};</p>
+
+<p>var Path = function Path(path, opts) {</p>
+
+<pre>// Throw a better error if not initialized with `new` keyword
+if (!(this instanceof Path)) {
+    throw new Error(&#39;Constructor was called without new keyword&#39;);
+}
+
+// Default parameters for animation
+opts = utils.extend({
+    duration: 800,
+    easing: &#39;linear&#39;,
+    from: {},
+    to: {},
+    step: function() {}
+}, opts);
+
+var element;
+if (utils.isString(path)) {
+    element = document.querySelector(path);
+} else {
+    element = path;
+}
+
+// Reveal .path as public attribute
+this.path = element;
+this._opts = opts;
+this._tweenable = null;
+
+// Set up the starting positions
+var length = this.path.getTotalLength();
+this.path.style.strokeDasharray = length + &#39; &#39; + length;
+this.set(0);</pre>
+
+<p>};</p>
+
+<p>Path.prototype.value = function value() {</p>
+
+<pre>var offset = this._getComputedDashOffset();
+var length = this.path.getTotalLength();
+
+var progress = 1 - offset / length;
+// Round number to prevent returning very small number like 1e-30, which
+// is practically 0
+return parseFloat(progress.toFixed(6), 10);</pre>
+
+<p>};</p>
+
+<p>Path.prototype.set = function set(progress) {</p>
+
+<pre>this.stop();
+
+this.path.style.strokeDashoffset = this._progressToOffset(progress);
+
+var step = this._opts.step;
+if (utils.isFunction(step)) {
+    var easing = this._easing(this._opts.easing);
+    var values = this._calculateTo(progress, easing);
+    var reference = this._opts.shape || this;
+    step(values, reference, this._opts.attachment);
+}</pre>
+
+<p>};</p>
+
+<p>Path.prototype.stop = function stop() {</p>
+
+<pre class="ruby"><span class="ruby-identifier">this</span>.<span class="ruby-identifier">_stopTween</span>();
+<span class="ruby-identifier">this</span>.<span class="ruby-identifier">path</span>.<span class="ruby-identifier">style</span>.<span class="ruby-identifier">strokeDashoffset</span> = <span class="ruby-identifier">this</span>.<span class="ruby-identifier">_getComputedDashOffset</span>();
+</pre>
+
+<p>};</p>
+
+<p>// Method introduced here: // <a
+href="http://jakearchibald.com/2013/animated-line-drawing-svg">jakearchibald.com/2013/animated-line-drawing-svg</a>/
+Path.prototype.animate = function animate(progress, opts, cb) {</p>
+
+<pre>opts = opts || {};
+
+if (utils.isFunction(opts)) {
+    cb = opts;
+    opts = {};
+}
+
+var passedOpts = utils.extend({}, opts);
+
+// Copy default opts to new object so defaults are not modified
+var defaultOpts = utils.extend({}, this._opts);
+opts = utils.extend(defaultOpts, opts);
+
+var shiftyEasing = this._easing(opts.easing);
+var values = this._resolveFromAndTo(progress, shiftyEasing, passedOpts);
+
+this.stop();
+
+// Trigger a layout so styles are calculated &amp; the browser
+// picks up the starting position before animating
+this.path.getBoundingClientRect();
+
+var offset = this._getComputedDashOffset();
+var newOffset = this._progressToOffset(progress);
+
+var self = this;
+this._tweenable = new Tweenable();
+this._tweenable.tween({
+    from: utils.extend({ offset: offset }, values.from),
+    to: utils.extend({ offset: newOffset }, values.to),
+    duration: opts.duration,
+    easing: shiftyEasing,
+    step: function(state) {
+        self.path.style.strokeDashoffset = state.offset;
+        var reference = opts.shape || self;
+        opts.step(state, reference, opts.attachment);
+    },
+    finish: function(state) {
+        if (utils.isFunction(cb)) {
+            cb();
+        }
+    }
+});</pre>
+
+<p>};</p>
+
+<p>Path.prototype._getComputedDashOffset = function _getComputedDashOffset() {</p>
+
+<pre class="ruby"><span class="ruby-identifier">var</span> <span class="ruby-identifier">computedStyle</span> = <span class="ruby-identifier">window</span>.<span class="ruby-identifier">getComputedStyle</span>(<span class="ruby-identifier">this</span>.<span class="ruby-identifier">path</span>, <span class="ruby-identifier">null</span>);
+<span class="ruby-keyword">return</span> <span class="ruby-identifier">parseFloat</span>(<span class="ruby-identifier">computedStyle</span>.<span class="ruby-identifier">getPropertyValue</span>(<span class="ruby-string">&#39;stroke-dashoffset&#39;</span>), <span class="ruby-value">10</span>);
+</pre>
+
+<p>};</p>
+
+<p>Path.prototype._progressToOffset = function _progressToOffset(progress) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">var</span> <span class="ruby-identifier">length</span> = <span class="ruby-identifier">this</span>.<span class="ruby-identifier">path</span>.<span class="ruby-identifier">getTotalLength</span>();
+<span class="ruby-keyword">return</span> <span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">progress</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">length</span>;
+</pre>
+
+<p>};</p>
+
+<p>// Resolves from and to values for animation.
+Path.prototype._resolveFromAndTo = function _resolveFromAndTo(progress,
+easing, opts) {</p>
+
+<pre>if (opts.from &amp;&amp; opts.to) {
+    return {
+        from: opts.from,
+        to: opts.to
+    };
+}
+
+return {
+    from: this._calculateFrom(easing),
+    to: this._calculateTo(progress, easing)
+};</pre>
+
+<p>};</p>
+
+<p>// Calculate `from` values from options passed at initialization
+Path.prototype._calculateFrom = function _calculateFrom(easing) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">Tweenable</span>.<span class="ruby-identifier">interpolate</span>(<span class="ruby-identifier">this</span>.<span class="ruby-identifier">_opts</span>.<span class="ruby-identifier">from</span>, <span class="ruby-identifier">this</span>.<span class="ruby-identifier">_opts</span>.<span class="ruby-identifier">to</span>, <span class="ruby-identifier">this</span>.<span class="ruby-identifier">value</span>(), <span class="ruby-identifier">easing</span>);
+</pre>
+
+<p>};</p>
+
+<p>// Calculate `to` values from options passed at initialization
+Path.prototype._calculateTo = function _calculateTo(progress, easing) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">Tweenable</span>.<span class="ruby-identifier">interpolate</span>(<span class="ruby-identifier">this</span>.<span class="ruby-identifier">_opts</span>.<span class="ruby-identifier">from</span>, <span class="ruby-identifier">this</span>.<span class="ruby-identifier">_opts</span>.<span class="ruby-identifier">to</span>, <span class="ruby-identifier">progress</span>, <span class="ruby-identifier">easing</span>);
+</pre>
+
+<p>};</p>
+
+<p>Path.prototype._stopTween = function _stopTween() {</p>
+
+<pre>if (this._tweenable !== null) {
+    this._tweenable.stop();
+    this._tweenable = null;
+}</pre>
+
+<p>};</p>
+
+<p>Path.prototype._easing = function _easing(easing) {</p>
+
+<pre>if (EASING_ALIASES.hasOwnProperty(easing)) {
+    return EASING_ALIASES[easing];
+}
+
+return easing;</pre>
+
+<p>};</p>
+
+<p>module.exports = Path;</p>
+
+<p>},{“./utils”:9,“shifty”:1}],6:[function(require,module,exports){ //
+Semi-SemiCircle shaped progress bar</p>
+
+<p>var Shape = require(&#39;./shape&#39;); var Circle =
+require(&#39;./circle&#39;); var utils = require(&#39;./utils&#39;);</p>
+
+<p>var SemiCircle = function SemiCircle(container, options) {</p>
+
+<pre>// Use one arc to form a SemiCircle
+// See this answer http://stackoverflow.com/a/10477334/1446092
+this._pathTemplate =
+    &#39;M 50,50 m -{radius},0&#39; +
+    &#39; a {radius},{radius} 0 1 1 {2radius},0&#39;;
+
+this.containerAspectRatio = 2;
+
+Shape.apply(this, arguments);</pre>
+
+<p>};</p>
+
+<p>SemiCircle.prototype = new Shape(); SemiCircle.prototype.constructor =
+SemiCircle;</p>
+
+<p>SemiCircle.prototype._initializeSvg = function _initializeSvg(svg, opts) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">svg</span>.<span class="ruby-identifier">setAttribute</span>(<span class="ruby-string">&#39;viewBox&#39;</span>, <span class="ruby-string">&#39;0 0 100 50&#39;</span>);
+</pre>
+
+<p>};</p>
+
+<p>SemiCircle.prototype._initializeTextContainer = function
+_initializeTextContainer(</p>
+
+<pre>opts,
+container,
+textContainer</pre>
+
+<p>) {</p>
+
+<pre>if (opts.text.style) {
+    // Reset top style
+    textContainer.style.top = &#39;auto&#39;;
+    textContainer.style.bottom = &#39;0&#39;;
+
+    if (opts.text.alignToBottom) {
+        utils.setStyle(textContainer, &#39;transform&#39;, &#39;translate(-50%, 0)&#39;);
+    } else {
+        utils.setStyle(textContainer, &#39;transform&#39;, &#39;translate(-50%, 50%)&#39;);
+    }
+}</pre>
+
+<p>};</p>
+
+<p>// Share functionality with Circle, just have different path
+SemiCircle.prototype._pathString = Circle.prototype._pathString;
+SemiCircle.prototype._trailString = Circle.prototype._trailString;</p>
+
+<p>module.exports = SemiCircle;</p>
+
+<p>},{“./circle”:2,“./shape”:7,“./utils”:9}],7:[function(require,module,exports){
+// Base object for different progress bar shapes</p>
+
+<p>var Path = require(&#39;./path&#39;); var utils =
+require(&#39;./utils&#39;);</p>
+
+<p>var DESTROYED_ERROR = &#39;Object is destroyed&#39;;</p>
+
+<p>var Shape = function Shape(container, opts) {</p>
+
+<pre>// Throw a better error if progress bars are not initialized with `new`
+// keyword
+if (!(this instanceof Shape)) {
+    throw new Error(&#39;Constructor was called without new keyword&#39;);
+}
+
+// Prevent calling constructor without parameters so inheritance
+// works correctly. To understand, this is how Shape is inherited:
+//
+//   Line.prototype = new Shape();
+//
+// We just want to set the prototype for Line.
+if (arguments.length === 0) {
+    return;
+}
+
+// Default parameters for progress bar creation
+this._opts = utils.extend({
+    color: &#39;#555&#39;,
+    strokeWidth: 1.0,
+    trailColor: null,
+    trailWidth: null,
+    fill: null,
+    text: {
+        style: {
+            color: null,
+            position: &#39;absolute&#39;,
+            left: &#39;50%&#39;,
+            top: &#39;50%&#39;,
+            padding: 0,
+            margin: 0,
+            transform: {
+                prefix: true,
+                value: &#39;translate(-50%, -50%)&#39;
+            }
+        },
+        autoStyleContainer: true,
+        alignToBottom: true,
+        value: null,
+        className: &#39;progressbar-text&#39;
+    },
+    svgStyle: {
+        display: &#39;block&#39;,
+        width: &#39;100%&#39;
+    },
+    warnings: false
+}, opts, true);  // Use recursive extend
+
+// If user specifies e.g. svgStyle or text style, the whole object
+// should replace the defaults to make working with styles easier
+if (utils.isObject(opts) &amp;&amp; opts.svgStyle !== undefined) {
+    this._opts.svgStyle = opts.svgStyle;
+}
+if (utils.isObject(opts) &amp;&amp; utils.isObject(opts.text) &amp;&amp; opts.text.style !== undefined) {
+    this._opts.text.style = opts.text.style;
+}
+
+var svgView = this._createSvgView(this._opts);
+
+var element;
+if (utils.isString(container)) {
+    element = document.querySelector(container);
+} else {
+    element = container;
+}
+
+if (!element) {
+    throw new Error(&#39;Container does not exist: &#39; + container);
+}
+
+this._container = element;
+this._container.appendChild(svgView.svg);
+if (this._opts.warnings) {
+    this._warnContainerAspectRatio(this._container);
+}
+
+if (this._opts.svgStyle) {
+    utils.setStyles(svgView.svg, this._opts.svgStyle);
+}
+
+// Expose public attributes before Path initialization
+this.svg = svgView.svg;
+this.path = svgView.path;
+this.trail = svgView.trail;
+this.text = null;
+
+var newOpts = utils.extend({
+    attachment: undefined,
+    shape: this
+}, this._opts);
+this._progressPath = new Path(svgView.path, newOpts);
+
+if (utils.isObject(this._opts.text) &amp;&amp; this._opts.text.value !== null) {
+    this.setText(this._opts.text.value);
+}</pre>
+
+<p>};</p>
+
+<p>Shape.prototype.animate = function animate(progress, opts, cb) {</p>
+
+<pre>if (this._progressPath === null) {
+    throw new Error(DESTROYED_ERROR);
+}
+
+this._progressPath.animate(progress, opts, cb);</pre>
+
+<p>};</p>
+
+<p>Shape.prototype.stop = function stop() {</p>
+
+<pre>if (this._progressPath === null) {
+    throw new Error(DESTROYED_ERROR);
+}
+
+// Don&#39;t crash if stop is called inside step function
+if (this._progressPath === undefined) {
+    return;
+}
+
+this._progressPath.stop();</pre>
+
+<p>};</p>
+
+<p>Shape.prototype.destroy = function destroy() {</p>
+
+<pre>if (this._progressPath === null) {
+    throw new Error(DESTROYED_ERROR);
+}
+
+this.stop();
+this.svg.parentNode.removeChild(this.svg);
+this.svg = null;
+this.path = null;
+this.trail = null;
+this._progressPath = null;
+
+if (this.text !== null) {
+    this.text.parentNode.removeChild(this.text);
+    this.text = null;
+}</pre>
+
+<p>};</p>
+
+<p>Shape.prototype.set = function set(progress) {</p>
+
+<pre>if (this._progressPath === null) {
+    throw new Error(DESTROYED_ERROR);
+}
+
+this._progressPath.set(progress);</pre>
+
+<p>};</p>
+
+<p>Shape.prototype.value = function value() {</p>
+
+<pre>if (this._progressPath === null) {
+    throw new Error(DESTROYED_ERROR);
+}
+
+if (this._progressPath === undefined) {
+    return 0;
+}
+
+return this._progressPath.value();</pre>
+
+<p>};</p>
+
+<p>Shape.prototype.setText = function setText(newText) {</p>
+
+<pre>if (this._progressPath === null) {
+    throw new Error(DESTROYED_ERROR);
+}
+
+if (this.text === null) {
+    // Create new text node
+    this.text = this._createTextContainer(this._opts, this._container);
+    this._container.appendChild(this.text);
+}
+
+// Remove previous text and add new
+if (utils.isObject(newText)) {
+    utils.removeChildren(this.text);
+    this.text.appendChild(newText);
+} else {
+    this.text.innerHTML = newText;
+}</pre>
+
+<p>};</p>
+
+<p>Shape.prototype._createSvgView = function _createSvgView(opts) {</p>
+
+<pre>var svg = document.createElementNS(&#39;http://www.w3.org/2000/svg&#39;, &#39;svg&#39;);
+this._initializeSvg(svg, opts);
+
+var trailPath = null;
+// Each option listed in the if condition are &#39;triggers&#39; for creating
+// the trail path
+if (opts.trailColor || opts.trailWidth) {
+    trailPath = this._createTrail(opts);
+    svg.appendChild(trailPath);
+}
+
+var path = this._createPath(opts);
+svg.appendChild(path);
+
+return {
+    svg: svg,
+    path: path,
+    trail: trailPath
+};</pre>
+
+<p>};</p>
+
+<p>Shape.prototype._initializeSvg = function _initializeSvg(svg, opts) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">svg</span>.<span class="ruby-identifier">setAttribute</span>(<span class="ruby-string">&#39;viewBox&#39;</span>, <span class="ruby-string">&#39;0 0 100 100&#39;</span>);
+</pre>
+
+<p>};</p>
+
+<p>Shape.prototype._createPath = function _createPath(opts) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">var</span> <span class="ruby-identifier">pathString</span> = <span class="ruby-identifier">this</span>.<span class="ruby-identifier">_pathString</span>(<span class="ruby-identifier">opts</span>);
+<span class="ruby-keyword">return</span> <span class="ruby-identifier">this</span>.<span class="ruby-identifier">_createPathElement</span>(<span class="ruby-identifier">pathString</span>, <span class="ruby-identifier">opts</span>);
+</pre>
+
+<p>};</p>
+
+<p>Shape.prototype._createTrail = function _createTrail(opts) {</p>
+
+<pre>// Create path string with original passed options
+var pathString = this._trailString(opts);
+
+// Prevent modifying original
+var newOpts = utils.extend({}, opts);
+
+// Defaults for parameters which modify trail path
+if (!newOpts.trailColor) {
+    newOpts.trailColor = &#39;#eee&#39;;
+}
+if (!newOpts.trailWidth) {
+    newOpts.trailWidth = newOpts.strokeWidth;
+}
+
+newOpts.color = newOpts.trailColor;
+newOpts.strokeWidth = newOpts.trailWidth;
+
+// When trail path is set, fill must be set for it instead of the
+// actual path to prevent trail stroke from clipping
+newOpts.fill = null;
+
+return this._createPathElement(pathString, newOpts);</pre>
+
+<p>};</p>
+
+<p>Shape.prototype._createPathElement = function
+_createPathElement(pathString, opts) {</p>
+
+<pre>var path = document.createElementNS(&#39;http://www.w3.org/2000/svg&#39;, &#39;path&#39;);
+path.setAttribute(&#39;d&#39;, pathString);
+path.setAttribute(&#39;stroke&#39;, opts.color);
+path.setAttribute(&#39;stroke-width&#39;, opts.strokeWidth);
+
+if (opts.fill) {
+    path.setAttribute(&#39;fill&#39;, opts.fill);
+} else {
+    path.setAttribute(&#39;fill-opacity&#39;, &#39;0&#39;);
+}
+
+return path;</pre>
+
+<p>};</p>
+
+<p>Shape.prototype._createTextContainer = function _createTextContainer(opts,
+container) {</p>
+
+<pre>var textContainer = document.createElement(&#39;div&#39;);
+textContainer.className = opts.text.className;
+
+var textStyle = opts.text.style;
+if (textStyle) {
+    if (opts.text.autoStyleContainer) {
+        container.style.position = &#39;relative&#39;;
+    }
+
+    utils.setStyles(textContainer, textStyle);
+    // Default text color to progress bar&#39;s color
+    if (!textStyle.color) {
+        textContainer.style.color = opts.color;
+    }
+}
+
+this._initializeTextContainer(opts, container, textContainer);
+return textContainer;</pre>
+
+<p>};</p>
+
+<p>// Give custom shapes possibility to modify text element
+Shape.prototype._initializeTextContainer = function(opts, container,
+element) {</p>
+
+<pre>// By default, no-op
+// Custom shapes should respect API options, such as text.style</pre>
+
+<p>};</p>
+
+<p>Shape.prototype._pathString = function _pathString(opts) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">throw</span> <span class="ruby-identifier">new</span> <span class="ruby-constant">Error</span>(<span class="ruby-string">&#39;Override this function for each progress bar&#39;</span>);
+</pre>
+
+<p>};</p>
+
+<p>Shape.prototype._trailString = function _trailString(opts) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">throw</span> <span class="ruby-identifier">new</span> <span class="ruby-constant">Error</span>(<span class="ruby-string">&#39;Override this function for each progress bar&#39;</span>);
+</pre>
+
+<p>};</p>
+
+<p>Shape.prototype._warnContainerAspectRatio = function
+_warnContainerAspectRatio(container) {</p>
+
+<pre>if (!this.containerAspectRatio) {
+    return;
+}
+
+var computedStyle = window.getComputedStyle(container, null);
+var width = parseFloat(computedStyle.getPropertyValue(&#39;width&#39;), 10);
+var height = parseFloat(computedStyle.getPropertyValue(&#39;height&#39;), 10);
+if (!utils.floatEquals(this.containerAspectRatio, width / height)) {
+    console.warn(
+        &#39;Incorrect aspect ratio of container&#39;,
+        &#39;#&#39; + container.id,
+        &#39;detected:&#39;,
+        computedStyle.getPropertyValue(&#39;width&#39;) + &#39;(width)&#39;,
+        &#39;/&#39;,
+        computedStyle.getPropertyValue(&#39;height&#39;) + &#39;(height)&#39;,
+        &#39;=&#39;,
+        width / height
+    );
+
+    console.warn(
+        &#39;Aspect ratio of should be&#39;,
+        this.containerAspectRatio
+    );
+}</pre>
+
+<p>};</p>
+
+<p>module.exports = Shape;</p>
+
+<p>},{“./path”:5,“./utils”:9}],8:[function(require,module,exports){ // Square
+shaped progress bar // Note: Square is not core part of API anymore.
+It&#39;s left here //       for reference. square is not included to the
+progressbar //       build anymore</p>
+
+<p>var Shape = require(&#39;./shape&#39;); var utils =
+require(&#39;./utils&#39;);</p>
+
+<p>var Square = function Square(container, options) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">this</span>.<span class="ruby-identifier">_pathTemplate</span> =
+    <span class="ruby-string">&#39;M 0,{halfOfStrokeWidth}&#39;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-string">&#39; L {width},{halfOfStrokeWidth}&#39;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-string">&#39; L {width},{width}&#39;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-string">&#39; L {halfOfStrokeWidth},{width}&#39;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-string">&#39; L {halfOfStrokeWidth},{strokeWidth}&#39;</span>;
+
+<span class="ruby-identifier">this</span>.<span class="ruby-identifier">_trailTemplate</span> =
+    <span class="ruby-string">&#39;M {startMargin},{halfOfStrokeWidth}&#39;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-string">&#39; L {width},{halfOfStrokeWidth}&#39;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-string">&#39; L {width},{width}&#39;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-string">&#39; L {halfOfStrokeWidth},{width}&#39;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-string">&#39; L {halfOfStrokeWidth},{halfOfStrokeWidth}&#39;</span>;
+
+<span class="ruby-constant">Shape</span>.<span class="ruby-identifier">apply</span>(<span class="ruby-identifier">this</span>, <span class="ruby-identifier">arguments</span>);
+</pre>
+
+<p>};</p>
+
+<p>Square.prototype = new Shape(); Square.prototype.constructor = Square;</p>
+
+<p>Square.prototype._pathString = function _pathString(opts) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">var</span> <span class="ruby-identifier">w</span> = <span class="ruby-value">100</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">strokeWidth</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>;
+
+<span class="ruby-keyword">return</span> <span class="ruby-identifier">utils</span>.<span class="ruby-identifier">render</span>(<span class="ruby-identifier">this</span>.<span class="ruby-identifier">_pathTemplate</span>, {
+    <span class="ruby-identifier">width</span><span class="ruby-operator">:</span> <span class="ruby-identifier">w</span>,
+    <span class="ruby-identifier">strokeWidth</span><span class="ruby-operator">:</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">strokeWidth</span>,
+    <span class="ruby-identifier">halfOfStrokeWidth</span><span class="ruby-operator">:</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">strokeWidth</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>
+});
+</pre>
+
+<p>};</p>
+
+<p>Square.prototype._trailString = function _trailString(opts) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">var</span> <span class="ruby-identifier">w</span> = <span class="ruby-value">100</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">strokeWidth</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>;
+
+<span class="ruby-keyword">return</span> <span class="ruby-identifier">utils</span>.<span class="ruby-identifier">render</span>(<span class="ruby-identifier">this</span>.<span class="ruby-identifier">_trailTemplate</span>, {
+    <span class="ruby-identifier">width</span><span class="ruby-operator">:</span> <span class="ruby-identifier">w</span>,
+    <span class="ruby-identifier">strokeWidth</span><span class="ruby-operator">:</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">strokeWidth</span>,
+    <span class="ruby-identifier">halfOfStrokeWidth</span><span class="ruby-operator">:</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">strokeWidth</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>,
+    <span class="ruby-identifier">startMargin</span><span class="ruby-operator">:</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">strokeWidth</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">trailWidth</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>
+});
+</pre>
+
+<p>};</p>
+
+<p>module.exports = Square;</p>
+
+<p>},{“./shape”:7,“./utils”:9}],9:[function(require,module,exports){ //
+Utility functions</p>
+
+<p>var PREFIXES = &#39;Webkit Moz O ms&#39;.split(&#39; &#39;); var
+FLOAT_COMPARISON_EPSILON = 0.001;</p>
+
+<p>// Copy all attributes from source object to destination object. //
+destination object is mutated. function extend(destination, source,
+recursive) {</p>
+
+<pre>destination = destination || {};
+source = source || {};
+recursive = recursive || false;
+
+for (var attrName in source) {
+    if (source.hasOwnProperty(attrName)) {
+        var destVal = destination[attrName];
+        var sourceVal = source[attrName];
+        if (recursive &amp;&amp; isObject(destVal) &amp;&amp; isObject(sourceVal)) {
+            destination[attrName] = extend(destVal, sourceVal, recursive);
+        } else {
+            destination[attrName] = sourceVal;
+        }
+    }
+}
+
+return destination;</pre>
+
+<p>}</p>
+
+<p>// Renders templates with given variables. Variables must be surrounded
+with // braces without any spaces, e.g. {variable} // All instances of
+variable placeholders will be replaced with given content // Example: //
+render(&#39;Hello, {message}!&#39;, {message: &#39;world&#39;}) function
+render(template, vars) {</p>
+
+<pre>var rendered = template;
+
+for (var key in vars) {
+    if (vars.hasOwnProperty(key)) {
+        var val = vars[key];
+        var regExpString = &#39;\\{&#39; + key + &#39;\\}&#39;;
+        var regExp = new RegExp(regExpString, &#39;g&#39;);
+
+        rendered = rendered.replace(regExp, val);
+    }
+}
+
+return rendered;</pre>
+
+<p>}</p>
+
+<p>function setStyle(element, style, value) {</p>
+
+<pre>var elStyle = element.style;  // cache for performance
+
+for (var i = 0; i &lt; PREFIXES.length; ++i) {
+    var prefix = PREFIXES[i];
+    elStyle[prefix + capitalize(style)] = value;
+}
+
+elStyle[style] = value;</pre>
+
+<p>}</p>
+
+<p>function setStyles(element, styles) {</p>
+
+<pre>forEachObject(styles, function(styleValue, styleName) {
+    // Allow disabling some individual styles by setting them
+    // to null or undefined
+    if (styleValue === null || styleValue === undefined) {
+        return;
+    }
+
+    // If style&#39;s value is {prefix: true, value: &#39;50%&#39;},
+    // Set also browser prefixed styles
+    if (isObject(styleValue) &amp;&amp; styleValue.prefix === true) {
+        setStyle(element, styleName, styleValue.value);
+    } else {
+        element.style[styleName] = styleValue;
+    }
+});</pre>
+
+<p>}</p>
+
+<p>function capitalize(text) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">text</span>.<span class="ruby-identifier">charAt</span>(<span class="ruby-value">0</span>).<span class="ruby-identifier">toUpperCase</span>() <span class="ruby-operator">+</span> <span class="ruby-identifier">text</span>.<span class="ruby-identifier">slice</span>(<span class="ruby-value">1</span>);
+</pre>
+
+<p>}</p>
+
+<p>function isString(obj) {</p>
+
+<pre>return typeof obj === &#39;string&#39; || obj instanceof String;</pre>
+
+<p>}</p>
+
+<p>function isFunction(obj) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">typeof</span> <span class="ruby-identifier">obj</span> <span class="ruby-operator">===</span> <span class="ruby-string">&#39;function&#39;</span>;
+</pre>
+
+<p>}</p>
+
+<p>function isArray(obj) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">Object</span>.<span class="ruby-identifier">prototype</span>.<span class="ruby-identifier">toString</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">obj</span>) <span class="ruby-operator">===</span> <span class="ruby-string">&#39;[object Array]&#39;</span>;
+</pre>
+
+<p>}</p>
+
+<p>// Returns true if `obj` is object as in {a: 1, b: 2}, not if it&#39;s
+function or // array function isObject(obj) {</p>
+
+<pre>if (isArray(obj)) {
+    return false;
+}
+
+var type = typeof obj;
+return type === &#39;object&#39; &amp;&amp; !!obj;</pre>
+
+<p>}</p>
+
+<p>function forEachObject(object, callback) {</p>
+
+<pre>for (var key in object) {
+    if (object.hasOwnProperty(key)) {
+        var val = object[key];
+        callback(val, key);
+    }
+}</pre>
+
+<p>}</p>
+
+<p>function floatEquals(a, b) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">Math</span>.<span class="ruby-identifier">abs</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">b</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-constant">FLOAT_COMPARISON_EPSILON</span>;
+</pre>
+
+<p>}</p>
+
+<p>// <a
+href="https://coderwall.com/p/nygghw/don-t-use-innerhtml-to-empty-dom-elements">coderwall.com/p/nygghw/don-t-use-innerhtml-to-empty-dom-elements</a>
+function removeChildren(el) {</p>
+
+<pre>while (el.firstChild) {
+    el.removeChild(el.firstChild);
+}</pre>
+
+<p>}</p>
+
+<p>module.exports = {</p>
+
+<pre>extend: extend,
+render: render,
+setStyle: setStyle,
+setStyles: setStyles,
+capitalize: capitalize,
+isString: isString,
+isFunction: isFunction,
+isObject: isObject,
+forEachObject: forEachObject,
+floatEquals: floatEquals,
+removeChildren: removeChildren</pre>
+
+<p>};</p>
+
+<p>},{}]},{},[4])(4) });</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

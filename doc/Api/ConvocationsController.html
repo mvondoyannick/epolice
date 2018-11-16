@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Api::ConvocationsController - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="../ApplicationController.html">ApplicationController</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-alerteReq">#alerteReq</a>
+    
+    <li ><a href="#method-i-api_infraction">#api_infraction</a>
+    
+    <li ><a href="#method-i-api_type">#api_type</a>
+    
+    <li ><a href="#method-i-archive_generate_qr">#archive_generate_qr</a>
+    
+    <li ><a href="#method-i-authUser">#authUser</a>
+    
+    <li ><a href="#method-i-conv">#conv</a>
+    
+    <li ><a href="#method-i-decharge">#decharge</a>
+    
+    <li ><a href="#method-i-new_alerte">#new_alerte</a>
+    
+    <li ><a href="#method-i-new_constat">#new_constat</a>
+    
+    <li ><a href="#method-i-read_alertes">#read_alertes</a>
+    
+    <li ><a href="#method-i-search_document">#search_document</a>
+    
+    <li ><a href="#method-i-set_affectation">#set_affectation</a>
+    
+    <li ><a href="#method-i-ussd_data">#ussd_data</a>
+    
+    <li ><a href="#method-i-ussd_token_verify">#ussd_token_verify</a>
+    
+    <li ><a href="#method-i-verif_contrevenant_verbalise">#verif_contrevenant_verbalise</a>
+    
+    <li ><a href="#method-i-verifyContravention">#verifyContravention</a>
+    
+    <li ><a href="#method-i-verifyContraventionFromMobile">#verifyContraventionFromMobile</a>
+    
+    <li ><a href="#method-i-verify_token">#verify_token</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Api::ConvocationsController">
+  <h1 id="class-Api::ConvocationsController" class="class">
+    class Api::ConvocationsController
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-alerteReq" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">alerteReq</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>gestion des alertes</p>
+          
+          
+
+          
+          <div class="method-source-code" id="alerteReq-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">alerteReq</span>
+  <span class="ruby-identifier">titre</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:titre</span>]
+  <span class="ruby-identifier">description</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:description</span>]
+  <span class="ruby-identifier">date</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:date</span>]
+  <span class="ruby-identifier">ville</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ville_id</span>]
+  <span class="ruby-identifier">type</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:type_id</span>]
+  <span class="ruby-identifier">agent</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:agent_id</span>]
+  <span class="ruby-identifier">status</span> = <span class="ruby-string">&quot;unresolve&quot;</span>
+
+  <span class="ruby-comment">#introcduction de la photo</span>
+
+
+  <span class="ruby-comment">#creation d&#39;une alerte</span>
+  <span class="ruby-identifier">query</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">new</span>(
+      <span class="ruby-identifier">titre</span><span class="ruby-operator">:</span> <span class="ruby-identifier">titre</span>,
+      <span class="ruby-identifier">description</span><span class="ruby-operator">:</span> <span class="ruby-identifier">description</span>,
+      <span class="ruby-identifier">date</span><span class="ruby-operator">:</span> <span class="ruby-identifier">date</span>,
+      <span class="ruby-identifier">ville_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">ville</span>,
+      <span class="ruby-identifier">type_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">type</span>,
+      <span class="ruby-identifier">agent_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">agent</span>,
+      <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-identifier">status</span>
+  )
+
+  <span class="ruby-comment">#on joint la photo</span>
+  <span class="ruby-identifier">query</span>.<span class="ruby-identifier">photo</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:photo</span>]
+
+  <span class="ruby-comment">#on enregistre les données</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">query</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+        <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:created</span>,
+        <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-identifier">query</span>
+    }
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+        <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:not_created</span>,
+        <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;une erreur est survenue&quot;</span>
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-api_infraction" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">api_infraction</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>retourne tous les types d&#39;infractions</p>
+          
+          
+
+          
+          <div class="method-source-code" id="api_infraction-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 205</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">api_infraction</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+      <span class="ruby-identifier">infractions</span><span class="ruby-operator">:</span> <span class="ruby-constant">Infraction</span>.<span class="ruby-identifier">all</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-api_type" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">api_type</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>retourner tous les types au format json pour l&#39;API</p>
+          
+          
+
+          
+          <div class="method-source-code" id="api_type-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">api_type</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {<span class="ruby-identifier">types</span><span class="ruby-operator">:</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">all</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-archive_generate_qr" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">archive_generate_qr</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="archive_generate_qr-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 244</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">archive_generate_qr</span>
+  <span class="ruby-identifier">phone</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:phone</span>]
+  <span class="ruby-identifier">matricule</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:matricule</span>]
+
+  <span class="ruby-comment">#recherche et verification de l&#39;agent</span>
+  <span class="ruby-ivar">@agent</span> = <span class="ruby-constant">Agent</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">matricule</span><span class="ruby-operator">:</span> <span class="ruby-identifier">matricule</span>, <span class="ruby-identifier">phone</span><span class="ruby-operator">:</span> <span class="ruby-identifier">phone</span>).<span class="ruby-identifier">first</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@agent</span>
+    <span class="ruby-identifier">con</span> = <span class="ruby-constant">Convocation</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">agent_id</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@agent</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">where</span>(<span class="ruby-string">&#39;pieceretenu_id &gt; 0&#39;</span>).<span class="ruby-identifier">where</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>.<span class="ruby-identifier">beginning_of_day</span><span class="ruby-operator">..</span><span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>.<span class="ruby-identifier">end_of_day</span>)
+    <span class="ruby-comment">#affectation = Affectation.where(agent_id: @agent.id).where(&#39;fin &gt;= ?&#39;, Date.today).last</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+      <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;success&#39;</span>,
+      <span class="ruby-identifier">data</span><span class="ruby-operator">:</span> <span class="ruby-identifier">con</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+        {
+            <span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">id</span>,
+            <span class="ruby-identifier">date</span><span class="ruby-operator">:</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">created_at</span>,
+            <span class="ruby-identifier">piece</span><span class="ruby-operator">:</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">pieceretenu</span>.<span class="ruby-identifier">name</span>,
+            <span class="ruby-identifier">motif</span><span class="ruby-operator">:</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">infraction</span>.<span class="ruby-identifier">motif</span>
+        }
+      <span class="ruby-keyword">end</span>
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-authUser" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">authUser</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>authentification d&#39;un agent sur la plateforme</p>
+
+<pre>@route: GET
+@!method: HTTP GET
+@param: phone::integer, matricule::string
+@return: JSON tree of authenticated agent on plateform
+@developer: mailto:mvondoyannick@gmail.com</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="authUser-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">authUser</span>
+  <span class="ruby-identifier">phone</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:phone</span>]
+  <span class="ruby-identifier">matricule</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:matricule</span>].<span class="ruby-identifier">to_s</span>
+
+  <span class="ruby-comment">#verification des information recu</span>
+  <span class="ruby-identifier">token</span> = <span class="ruby-constant">Agent</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">phone</span><span class="ruby-operator">:</span> <span class="ruby-identifier">phone</span>, <span class="ruby-identifier">matricule</span><span class="ruby-operator">:</span> <span class="ruby-identifier">matricule</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">token</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+      <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:not_found</span>,
+      <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-value">:agent_inconnu</span>,
+      <span class="ruby-identifier">code</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;404&quot;</span>,
+    }
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+      <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:found</span>,
+      <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-identifier">token</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">data</span><span class="ruby-operator">|</span>
+        {
+          <span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">complete_name</span>,
+          <span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">id</span>,
+          <span class="ruby-comment">#region: data.region.name,</span>
+          <span class="ruby-comment">#region_id: data.region_id,</span>
+          <span class="ruby-comment">#grade: data.grade.name,</span>
+          <span class="ruby-comment">#grade_id: data.grade_id,</span>
+          <span class="ruby-comment">#unite: data.unite.name,</span>
+          <span class="ruby-comment">#unite_id: data.unite_id,</span>
+          <span class="ruby-identifier">avatar</span><span class="ruby-operator">:</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">avatar</span>.<span class="ruby-identifier">url</span>,
+          <span class="ruby-identifier">unite</span><span class="ruby-operator">:</span> <span class="ruby-constant">Groupement</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">data</span>.<span class="ruby-identifier">groupement_id</span>).<span class="ruby-identifier">name</span>.<span class="ruby-identifier">split</span>[<span class="ruby-value">0</span>],
+          <span class="ruby-identifier">unite_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">groupement_id</span>,
+          <span class="ruby-comment">#region: Groupement.find(data.groupement_id).name.split[1],</span>
+          <span class="ruby-identifier">region_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">region_id</span>,
+          <span class="ruby-identifier">region</span><span class="ruby-operator">:</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">region</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">||</span> <span class="ruby-keyword">nil</span>,
+          <span class="ruby-comment">#unite: data.groupement.split[0],</span>
+          <span class="ruby-comment">#region: data.groupement.split[1],</span>
+          <span class="ruby-comment">#region2: data.region.name,</span>
+          <span class="ruby-comment">#ip_geolocation: JSON.parse(Net::HTTP.get(URI(&#39;https://ipapi.co/&#39;+request.remote_ip+&#39;/json/&#39;))),</span>
+          <span class="ruby-identifier">apikey</span><span class="ruby-operator">:</span> <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-value">10</span>),
+          <span class="ruby-identifier">cookies</span><span class="ruby-operator">:</span> {
+              <span class="ruby-identifier">value</span><span class="ruby-operator">:</span> <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-value">10</span>),
+              <span class="ruby-identifier">expires</span><span class="ruby-operator">:</span> <span class="ruby-value">72</span>.<span class="ruby-identifier">hour</span>.<span class="ruby-identifier">from_now</span>,
+              <span class="ruby-identifier">cookies_status</span><span class="ruby-operator">:</span> <span class="ruby-value">1</span>.<span class="ruby-identifier">hour</span>.<span class="ruby-identifier">from_now</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">now</span>
+          }
+        }
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-comment">#message: token,</span>
+      <span class="ruby-comment">#region: token[0].region.name,</span>
+      <span class="ruby-comment">#region_id: token[0].region_id,</span>
+      <span class="ruby-comment">#grade: token[0].grade.name,</span>
+      <span class="ruby-comment">#grade_id: token[0].grade_id,</span>
+      <span class="ruby-comment">#unite: token[0].unite.name,</span>
+      <span class="ruby-comment">#unite_id: token[0].unite_id,</span>
+      <span class="ruby-comment">#data: rails_blob_path(Agent.avatar, disposition: &quot;attachment&quot;, only_path: true),</span>
+      <span class="ruby-comment">#affectation: Affectation.find(5).fin.to_date &gt;= Date.today.to_date, #a mettre a jour de facon dynamique</span>
+      <span class="ruby-comment">#image: &#39;&#39;,</span>
+      <span class="ruby-comment">#apikey: SecureRandom.hex(10),</span>
+      <span class="ruby-comment">#code: 200,</span>
+      <span class="ruby-comment">#cookies:  {value: SecureRandom.hex(10), expires: 1.hour.from_now }</span>
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-conv" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">conv</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>GET /convocations/new permet la creation d&#39;une convocation</p>
+          
+          
+
+          
+          <div class="method-source-code" id="conv-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">conv</span>
+  <span class="ruby-identifier">cni</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:cni</span>]
+  <span class="ruby-identifier">phone</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:phone</span>]
+  <span class="ruby-identifier">immatriculation</span>  = <span class="ruby-identifier">params</span>[<span class="ruby-value">:immatriculation</span>]
+  <span class="ruby-identifier">motif</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:motif</span>]
+  <span class="ruby-identifier">pieceretenue</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:pieceretenue</span>]
+  <span class="ruby-identifier">agent</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:agent</span>]
+  <span class="ruby-identifier">status</span> = <span class="ruby-string">&quot;impaye&quot;</span>
+  <span class="ruby-identifier">code</span> = <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-value">3</span>)
+
+
+  <span class="ruby-comment">#il faudra verifier si l&#39;utilisateur et son téléphone sont authorisé et sont programmés</span>
+
+  <span class="ruby-comment">#a = Convocation.new(cni: params[:cni], phone: params[:phone], infraction_id: params[:motif], pieceretenu_id: params[:pieceretenue], agent_id: params[:agent], immatriculation: params[:immatriculation], status: &quot;impayé&quot;)</span>
+  <span class="ruby-identifier">a</span> = <span class="ruby-constant">Convocation</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">infraction_params</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-comment">#message = &quot;Le numero de telephone #{a.phone} ou le code #{a.code} est verbalise pour le(s) motif(s) ci-apres : #{a.infraction.motif}. Le montant de l amende est de : #{a.infraction.montant} F CFA.&quot;</span>
+    <span class="ruby-comment">#HTTParty.get(&quot;https://www.agis-as.com/epolice/index.php?telephone=#{a.phone}&amp;message=#{message}&quot;)</span>
+    <span class="ruby-comment">#c&#39;est ok, on envoi le SMS</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+          <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:save</span>,
+          <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-value">:created</span>
+      }
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+      <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span>,
+      <span class="ruby-identifier">data</span><span class="ruby-operator">:</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">messages</span>
+    }.<span class="ruby-identifier">to_json</span>    
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-decharge" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">decharge</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>gestion de la decharge</p>
+
+<pre>@detail : permet de gerer la decharge d&#39;un document sur la base d&#39;un N° de CNI et de la photo
+@routes
+@verb : http post, http options
+@params : CNI=&gt;string, photo=&gt;file_uri
+@format result : JSON
+@developer : mvondoyannick@gmail.com</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="decharge-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 501</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">decharge</span>
+  <span class="ruby-identifier">cni</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:cni</span>].<span class="ruby-identifier">to_string</span>.<span class="ruby-identifier">html_safe</span>
+  <span class="ruby-identifier">photo</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:photo</span>]
+
+  <span class="ruby-comment">#on recherche les information</span>
+  <span class="ruby-constant">SearchDecharge</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">cni</span>)
+
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-new_alerte" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new_alerte</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>GET ALERTS  permet de creer une nouvelle alerte</p>
+
+<pre>@developer: mailto:mvondoyannick@gmail.com</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="new_alerte-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 270</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new_alerte</span>
+
+  <span class="ruby-comment">#recuperation des parametres</span>
+  <span class="ruby-comment">#agent_id = params[:agent_id]</span>
+  <span class="ruby-comment">#type_id = params[:type_id]</span>
+  <span class="ruby-comment">#longitude = params[:longitude]</span>
+  <span class="ruby-comment">#latitude = params[:latitude]</span>
+  <span class="ruby-comment">#description = params[:description]</span>
+  <span class="ruby-comment">#statu_id = params[:statu_id]</span>
+  <span class="ruby-comment">#titre = Type.find(params[:type_id]).name</span>
+  <span class="ruby-comment">#:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre, :photo</span>
+
+
+   <span class="ruby-comment">#@alerte = Alerte.new(agent_id: agent_id, type_id: type_id, longitude: longitude, latitude: latitude, description: description, statu_id: statu_id, titre: titre, photo: photo)</span>
+
+  <span class="ruby-ivar">@alerte</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">alert_params</span>)
+
+  <span class="ruby-comment">#@alerte.photo.attach(alert_params[:photo]) #on persiste les données</span>
+  <span class="ruby-comment"># with carriewave</span>
+  <span class="ruby-comment">#@alerte.photo = params[:photo]</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@alerte</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-identifier">p</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@alerte</span>.<span class="ruby-identifier">type_id</span>).<span class="ruby-identifier">entity</span>
+    <span class="ruby-identifier">a</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span> <span class="ruby-identifier">p</span>
+    <span class="ruby-identifier">b</span> = <span class="ruby-identifier">a</span>.<span class="ruby-identifier">reject</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:empty?</span>)
+    <span class="ruby-identifier">w</span> = []
+    <span class="ruby-identifier">query</span> = <span class="ruby-identifier">b</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">content</span><span class="ruby-operator">|</span> <span class="ruby-identifier">w</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Structure</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">content</span>).<span class="ruby-identifier">name</span>)}
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">b</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@alerte</span>.<span class="ruby-identifier">photo</span>.<span class="ruby-identifier">url</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+        <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:created</span>,
+        <span class="ruby-identifier">partner</span><span class="ruby-operator">:</span> <span class="ruby-identifier">w</span>, <span class="ruby-comment">#on retourne un tableau contenant les partenaires,</span>
+        <span class="ruby-identifier">ip</span><span class="ruby-operator">:</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">remote_ip</span>,
+        <span class="ruby-comment">#ip_geolocation: JSON.parse(Net::HTTP.get(URI(&#39;https://ipapi.co/&#39;+request.remote_ip+&#39;/json/&#39;))),</span>
+        <span class="ruby-identifier">session</span><span class="ruby-operator">:</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">reset_session</span>,
+        <span class="ruby-identifier">photo</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@alerte</span>.<span class="ruby-identifier">photo</span>.<span class="ruby-identifier">url</span>,
+        <span class="ruby-identifier">photo_identifier</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@alerte</span>.<span class="ruby-identifier">photo_identifier</span>
+    }
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+        <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:failed</span>,
+        <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@alerte</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">messages</span>}
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment">#on enregistre l&#39;information dans la base de données</span>
+
+
+
+  <span class="ruby-comment">#status = @alerte.alertes.attach(params[:alertes])</span>
+  <span class="ruby-comment">#puts &quot;======= #{status} =======&quot;</span>
+  <span class="ruby-comment">#recherche des autorisations</span>
+  <span class="ruby-comment">#today = Date.today</span>
+  <span class="ruby-comment">#authorization = Affectation.where(agent_id: Agent.find(2).id).where(&quot;#{today} between #{Affectation.where(agent_id: 2).debut} and #{Affectation.where(agent_id: 2).fin}&quot;)</span>
+  <span class="ruby-comment">#puts &quot;========== #{authorization} ==========&quot;</span>
+   <span class="ruby-comment">#if @alerte.save</span>
+     <span class="ruby-comment">#message = &quot;Le numero #{a.phone} est verbalisee pour #{a.infraction.motif}, cout: #{a.infraction.montant}&quot;</span>
+     <span class="ruby-comment">#m = HTTParty.get(&quot;https://www.agis-as.com/epolice/index.php?telephone=#{a.phone}&amp;message=#{message}&quot;)</span>
+    <span class="ruby-comment">#render json: {</span>
+        <span class="ruby-comment">#status: :success,</span>
+        <span class="ruby-comment">#date: Date.today</span>
+    <span class="ruby-comment">#}</span>
+   <span class="ruby-comment">#else</span>
+    <span class="ruby-comment">#render json: {&#39;errro&#39;: @alerte.errors.messages}</span>
+   <span class="ruby-comment">#end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-new_constat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new_constat</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>nouveau constat</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new_constat-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 350</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new_constat</span>
+  <span class="ruby-identifier">query</span> = <span class="ruby-constant">Constat</span>.<span class="ruby-identifier">new</span>(
+     <span class="ruby-identifier">name1</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:name1</span>],
+     <span class="ruby-identifier">phone1</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:phone1</span>],
+     <span class="ruby-identifier">cni1</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:cni1</span>],
+     <span class="ruby-identifier">immatriculation1</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:immatriculation1</span>],
+     <span class="ruby-identifier">marque1</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:marque1</span>],
+     <span class="ruby-identifier">police1</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:police1</span>],
+     <span class="ruby-identifier">name2</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:name2</span>],
+     <span class="ruby-identifier">phone2</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:phone2</span>],
+     <span class="ruby-identifier">cni2</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:cni2</span>],
+     <span class="ruby-identifier">immatriculation2</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:immatriculation2</span>],
+     <span class="ruby-identifier">marque2</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:marque2</span>],
+     <span class="ruby-identifier">police2</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:police2</span>],
+     <span class="ruby-identifier">typeaccident_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:typeaccident</span>],
+     <span class="ruby-identifier">lieu</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:lieu</span>],
+     <span class="ruby-identifier">agent_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:agent</span>],
+     <span class="ruby-identifier">comment</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:comment</span>],
+     <span class="ruby-identifier">latitude</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:latitude</span>],
+     <span class="ruby-identifier">longitude</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:longitude</span>]
+  )
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">query</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+        <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:accepte</span>
+    }
+  <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+      <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:rejete</span>
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-read_alertes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">read_alertes</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>get stored alertes on plateforme</p>
+          
+          
+
+          
+          <div class="method-source-code" id="read_alertes-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 336</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_alertes</span>
+  <span class="ruby-comment">#on recupere les informations de l&#39;agent au nombre de 3</span>
+  <span class="ruby-comment"># #pener a ajouter les photos</span>
+  <span class="ruby-identifier">matricule</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:matricule</span>]
+  <span class="ruby-identifier">ville</span>   = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ville_id</span>]
+
+  <span class="ruby-comment">#on verifie les informations</span>
+  <span class="ruby-identifier">read</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">ville_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">ville</span>).<span class="ruby-identifier">order</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-value">:desc</span>)
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+      <span class="ruby-identifier">alerte</span><span class="ruby-operator">:</span> <span class="ruby-identifier">read</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-search_document" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">search_document</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>rechercher une piece</p>
+          
+          
+
+          
+          <div class="method-source-code" id="search_document-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 383</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">search_document</span>
+  <span class="ruby-identifier">code</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:code</span>]
+  <span class="ruby-identifier">query</span> = <span class="ruby-constant">Convocation</span>.<span class="ruby-identifier">find_by_code</span>(<span class="ruby-identifier">code</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">query</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+        <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:error</span>,
+        <span class="ruby-identifier">buy</span><span class="ruby-operator">:</span> <span class="ruby-value">:error</span>,
+        <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Ce code est inexistant&#39;</span>
+    }
+    <span class="ruby-keyword">elsif</span> (<span class="ruby-identifier">query</span>.<span class="ruby-identifier">buy</span>).<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+          <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:buy_befor_check</span>,
+          <span class="ruby-identifier">buy</span><span class="ruby-operator">:</span> <span class="ruby-value">:no</span>,
+          <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Merci de payer votre contravention&#39;</span>
+      }
+    <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">query</span>.<span class="ruby-identifier">buy</span>).<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+          <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>,
+          <span class="ruby-identifier">buy</span><span class="ruby-operator">:</span> <span class="ruby-value">:yes</span>,
+          <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-identifier">query</span>.<span class="ruby-identifier">agent</span>.<span class="ruby-identifier">phone</span>,
+          <span class="ruby-identifier">commissariat</span><span class="ruby-operator">:</span> <span class="ruby-identifier">query</span>.<span class="ruby-identifier">agent</span>.<span class="ruby-identifier">commissariat</span>.<span class="ruby-identifier">name</span>
+      }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set_affectation" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_affectation</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>permet de verifier la programmation d&#39;un agent, l&#39;affectation</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set_affectation-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 418</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_affectation</span>
+  <span class="ruby-identifier">matricule</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:matricule</span>]
+
+  <span class="ruby-comment">#on recherche l&#39;agent</span>
+  <span class="ruby-ivar">@agent</span> = <span class="ruby-constant">Agent</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">matricule</span>).<span class="ruby-identifier">id</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@agent</span>
+    <span class="ruby-comment">#rechercher l&#39;affectation de cet agent</span>
+    <span class="ruby-ivar">@affectation</span> = <span class="ruby-constant">Affectation</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">agent_id</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@agent</span>).<span class="ruby-identifier">where</span>(<span class="ruby-string">&#39;fin &gt;= ?&#39;</span>, <span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>).<span class="ruby-identifier">last</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@affectation</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+        <span class="ruby-identifier">data</span><span class="ruby-operator">:</span>
+          {
+            <span class="ruby-identifier">token</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@affectation</span>.<span class="ruby-identifier">token</span>,
+            <span class="ruby-identifier">affectation_status</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@affectation</span>.<span class="ruby-identifier">fin</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">now</span>,
+            <span class="ruby-identifier">expire_at</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@affectation</span>.<span class="ruby-identifier">fin</span>,
+            <span class="ruby-identifier">commissariat</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@affectation</span>.<span class="ruby-identifier">commissariat</span>.<span class="ruby-identifier">name</span>,
+            <span class="ruby-identifier">postepolice</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@affectation</span>.<span class="ruby-identifier">postepolice</span>.<span class="ruby-identifier">name</span>,
+            <span class="ruby-identifier">localisation</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@affectation</span>.<span class="ruby-identifier">localisation</span>
+          }
+      }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+        <span class="ruby-identifier">data</span><span class="ruby-operator">:</span>
+          {
+            <span class="ruby-identifier">token</span><span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>,
+            <span class="ruby-identifier">affectation_status</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>,
+            <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:no_data_found</span>,
+            <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Aucune affectation trouvée&#39;</span>
+          }
+      }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+        <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:not_found</span>,
+        <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Aucun agent trouvé&#39;</span>,
+        <span class="ruby-identifier">code</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;404&#39;</span>
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ussd_data" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ussd_data</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>data who comme from ussd data plateform</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ussd_data-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 409</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ussd_data</span>
+  <span class="ruby-identifier">data</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:data</span>]
+
+  <span class="ruby-comment">#on fait le decoupage de la chaine de caractere suivant le caractere de delimitation</span>
+  <span class="ruby-identifier">splited</span> = <span class="ruby-identifier">data</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;@&#39;</span>)
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">plain</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;Voici les données #{splited}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">splited</span>.<span class="ruby-identifier">nil?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ussd_token_verify" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ussd_token_verify</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>verification du token via le canal USSD</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ussd_token_verify-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ussd_token_verify</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-verif_contrevenant_verbalise" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">verif_contrevenant_verbalise</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>permet de verifier si un contrevenant a deja été verbalisé</p>
+          
+          
+
+          
+          <div class="method-source-code" id="verif_contrevenant_verbalise-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 461</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">verif_contrevenant_verbalise</span>
+  <span class="ruby-ivar">@cni</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:cni</span>].<span class="ruby-identifier">html_safe</span>
+
+  <span class="ruby-comment">#recherche contravention de la cni</span>
+  <span class="ruby-ivar">@query</span> = <span class="ruby-constant">Convocation</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">cni</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@cni</span>).<span class="ruby-identifier">where</span>(<span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Impayé&#39;</span>).<span class="ruby-identifier">last</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@query</span>
+    <span class="ruby-identifier">query</span> = <span class="ruby-ivar">@query</span>.<span class="ruby-identifier">created_at</span><span class="ruby-operator">+</span><span class="ruby-value">3</span>.<span class="ruby-identifier">day</span>
+    <span class="ruby-comment">#retourner le resultat</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">query</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+        <span class="ruby-identifier">datas</span><span class="ruby-operator">:</span>
+          {
+            <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Contraventions impayées, en cours&#39;</span>,
+            <span class="ruby-identifier">code</span><span class="ruby-operator">:</span> <span class="ruby-identifier">token</span>,
+            <span class="ruby-identifier">infraction</span><span class="ruby-operator">:</span> <span class="ruby-identifier">infraction</span>.<span class="ruby-identifier">name</span>
+          }
+      }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span>
+       {
+           <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;aucune contravention&#39;</span>,
+           <span class="ruby-identifier">code</span><span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>,
+           <span class="ruby-identifier">infraction</span><span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+       }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+        <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-value">:rien</span>
+    }
+  <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-verifyContravention" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">verifyContravention</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>permet de verifier une contravention</p>
+          
+          
+
+          
+          <div class="method-source-code" id="verifyContravention-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">verifyContravention</span>
+  <span class="ruby-identifier">code</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:code</span>]
+  <span class="ruby-identifier">lang</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:lang</span>]
+
+  <span class="ruby-comment"># pour la langue 1 = Francais, 2 = Anglais</span>
+  <span class="ruby-comment">#condition de la langue</span>
+  <span class="ruby-ivar">@p</span> = <span class="ruby-constant">Convocation</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">phone</span><span class="ruby-operator">:</span> <span class="ruby-identifier">code</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;impayé&#39;</span>).<span class="ruby-identifier">last</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@p</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">plain</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;Le numéro #{code} n&#39;est lié à aucune contravention. Merci&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">plain</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;Le numéro de téléphone  #{code} : le montant de l&#39;amende à payer est de #{@p.infraction.montant} FCFA pour une l&#39;infraction #{@p.infraction.motif}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-verifyContraventionFromMobile" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">verifyContraventionFromMobile</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>perme de verifier une contravention provenant du mobile</p>
+          
+          
+
+          
+          <div class="method-source-code" id="verifyContraventionFromMobile-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">verifyContraventionFromMobile</span>
+  <span class="ruby-identifier">cni</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:cni</span>]
+
+  <span class="ruby-identifier">query</span> = <span class="ruby-constant">Convocation</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">cni</span><span class="ruby-operator">:</span> <span class="ruby-identifier">cni</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;0&#39;</span>).<span class="ruby-identifier">last</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">query</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+        <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:false</span>,
+        <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;La CNI #{cni} n&#39;est liée à aucune contravention. merci&quot;</span>
+    }
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+        <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:true</span>,
+        <span class="ruby-identifier">data</span><span class="ruby-operator">:</span> <span class="ruby-identifier">query</span>
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-verify_token" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">verify_token</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>permet de verifier le token d&#39;un agent</p>
+          
+          
+
+          
+          <div class="method-source-code" id="verify_token-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/convocations_controller.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">verify_token</span>
+  <span class="ruby-identifier">matricule</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:matricule</span>]
+
+  <span class="ruby-comment">#on recherche l&#39;ID de cette agent</span>
+  <span class="ruby-ivar">@agent</span> = <span class="ruby-constant">Agent</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">matricule</span>)
+
+  <span class="ruby-comment">#ensuite on recherche son token egt le status de ce token</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@agent</span>.<span class="ruby-identifier">tokenagent</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@agent</span>.<span class="ruby-identifier">expire</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">now</span>
+      <span class="ruby-comment">#si son token est encore a jour</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+          <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:success</span>,
+          <span class="ruby-identifier">token</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@agent</span>.<span class="ruby-identifier">tokenagent</span>,
+          <span class="ruby-identifier">expire</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@agent</span>.<span class="ruby-identifier">expire</span>
+      }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment">#dans ce cas son token n&#39;est plus a jour, on le remet à jour</span>
+      <span class="ruby-identifier">current_agent</span> = <span class="ruby-constant">Agent</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">matricule</span><span class="ruby-operator">:</span> <span class="ruby-identifier">matricule</span>).<span class="ruby-identifier">first</span>
+      <span class="ruby-identifier">current_agent</span>.<span class="ruby-identifier">tokenagent</span>  = <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-value">3</span>)
+      <span class="ruby-identifier">current_agent</span>.<span class="ruby-identifier">expire</span>      = <span class="ruby-value">45</span>.<span class="ruby-identifier">minute</span>.<span class="ruby-identifier">from_now</span>
+      <span class="ruby-comment">#on fait persister les données</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_agent</span>.<span class="ruby-identifier">save</span>
+        <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+            <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-value">:updated</span>
+        }
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;==== #{current_agent.errors.messages}&quot;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-comment">#</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
+        <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:not_found</span>,
+        <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Pas de token trouvé&#39;</span>
+    }
+  <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

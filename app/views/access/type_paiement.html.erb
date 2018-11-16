@@ -2,3 +2,89 @@
 <p class="m-b-40">
   Selectionner les modes de paiement à activer
 </p>
+
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card" style="height: 17rem;">
+      <div class="card-header bg-primary text-dark">Activer</div>
+      <div class="card-body">
+        <%= form_tag(action: :attempt_type, method: :post) do %>
+          <div class="form-check">
+            <%= check_box_tag 'insta', 'instanne' %>
+            <label class="form-check-label lead" for="defaultCheck1">
+              Mode paiement instantané
+            </label>
+
+          </div>
+
+          <div class="form-check">
+            <%= check_box_tag 'diff', 'differe' %>
+            <label class="form-check-label lead" for="defaultCheck1">
+              Mode de paiement différé
+            </label>
+          </div>
+        <% end %>
+      </div>
+      <div class="card-footer">
+        <div class="text-right">
+          <%= submit_tag 'Valider', class: 'btn btn-outline-primary' %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-header bg-primary text-dark">
+        Statut des solutions de paiement
+      </div>
+      <div class="card-body">
+        <p class="lead">
+          Modes paiements activés
+        </p>
+        <table class="table table-striped" style="margin-bottom: 10rem;">
+          <thead>
+          <th>#</th>
+          <th>Mode de paiement</th>
+          <th>Actions</th>
+          </thead>
+          <tbody>
+            <% Modepaiement.where(status: 1).each do |modepaiements| %>
+              <tr>
+                <td><%= modepaiements.id %></td>
+                <td><%= modepaiements.name %></td>
+                <td>
+                  <%= link_to 'Retirer', access_delete_type_paiement_path(type_id: modepaiements.id), class: 'btn btn-sm btn-outline-danger' if modepaiements.status = 1 %>
+                  &nbsp;
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <hr>
+
+        <p class="lead">
+          Mode paiement désactivés"
+        </p>
+        <table class="table table-striped">
+          <thead>
+          <th>#</th>
+          <th>Mode de paiement</th>
+          <th>Actions</th>
+          </thead>
+          <tbody>
+          <% Modepaiement.where(status: 0).each do |modepaiements| %>
+            <tr>
+              <td><%= modepaiements.id %></td>
+              <td><%= modepaiements.name %></td>
+              <td>
+                <%= link_to 'Ajouter', access_add_type_paiement_path(type_id: modepaiements.id), class: 'btn btn-sm btn-outline-primary' if modepaiements.status = 0 %>
+              </td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

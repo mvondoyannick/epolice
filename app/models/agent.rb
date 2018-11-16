@@ -25,6 +25,7 @@ class Agent < ApplicationRecord
 	validates :grade_id, presence: {message: 'Merci de selectionner le grade.'}
 	validates :groupement_id, presence: {message: 'Merci de selectionner le groupement.'}
 	validates :commissariat_id, presence: {message: 'Merci de selectionner le commissariat.'}
+	validates :avatar, presence: {message: 'Merci de fournir la photo'}
 	#validates :region, presence: {message: 'Merci de selectionner la région.'}
 
 	#pour les villes d'affectations

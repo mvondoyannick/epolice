@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>sweetalert.min.js - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../README_md.html">README</a>
+  
+    <li><a href="../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="../../app/assets/fonts/fontawesome-webfont_svg.html">fontawesome-webfont.svg</a>
+  
+    <li><a href="../../app/assets/javascripts/access_coffee.html">access.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/affectations_coffee.html">affectations.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/agents_coffee.html">agents.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/alertes_coffee.html">alertes.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../app/assets/javascripts/archive_coffee.html">archive.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/arrondissements_coffee.html">arrondissements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/assurance_coffee.html">assurance.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../app/assets/javascripts/bulletins_coffee.html">bulletins.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="../../app/assets/javascripts/carrefours_coffee.html">carrefours.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/centrepartenaires_coffee.html">centrepartenaires.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/centrerecouvrements_coffee.html">centrerecouvrements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/comments_coffee.html">comments.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/commissariats_coffee.html">commissariats.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/compte_coffee.html">compte.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/constat_coffee.html">constat.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/constats_coffee.html">constats.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/convocations_coffee.html">convocations.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/departements_coffee.html">departements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/faker_min_js.html">faker.min.js</a>
+  
+    <li><a href="../../app/assets/javascripts/gestion_alerte_coffee.html">gestion_alerte.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/gestion_constat_coffee.html">gestion_constat.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/gestion_contravention_coffee.html">gestion_contravention.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/grades_coffee.html">grades.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/groupements_coffee.html">groupements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/grvpc_coffee.html">grvpc.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/infractions_coffee.html">infractions.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/journal_coffee.html">journal.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/langues_coffee.html">langues.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/manage_coffee.html">manage.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/member_coffee.html">member.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/metropoli_coffee.html">metropoli.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/metropolisroles_coffee.html">metropolisroles.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/paiementsolutions_coffee.html">paiementsolutions.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/parametre_coffee.html">parametre.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/pieceretenus_coffee.html">pieceretenus.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/postepolices_coffee.html">postepolices.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/public_coffee.html">public.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/regions_coffee.html">regions.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/roles_coffee.html">roles.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/services_coffee.html">services.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/statistique_coffee.html">statistique.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/status_coffee.html">status.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/statuses_coffee.html">statuses.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/structures_coffee.html">structures.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/typeaccidents_coffee.html">typeaccidents.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/types_coffee.html">types.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/u_coffee.html">u.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/unites_coffee.html">unites.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/villes_coffee.html">villes.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/workflows_coffee.html">workflows.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/zonecouverturemotifs_coffee.html">zonecouverturemotifs.coffee</a>
+  
+    <li><a href="../../app/assets/stylesheets/_application_css.html">_application.css</a>
+  
+    <li><a href="../../app/assets/stylesheets/access_scss.html">access.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/affectations_scss.html">affectations.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/agents_scss.html">agents.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/alertes_scss.html">alertes.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/application_scss.html">application.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/archive_scss.html">archive.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/arrondissements_scss.html">arrondissements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/assurance_scss.html">assurance.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/bulletins_scss.html">bulletins.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/carrefours_scss.html">carrefours.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/centrepartenaires_scss.html">centrepartenaires.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/centrerecouvrements_scss.html">centrerecouvrements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/comments_scss.html">comments.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/commissariats_scss.html">commissariats.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/compte_scss.html">compte.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/constat_scss.html">constat.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/constats_scss.html">constats.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/contravetions_scss.html">contravetions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/convocations_scss.html">convocations.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/departements_scss.html">departements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/gestion_alerte_scss.html">gestion_alerte.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/gestion_constat_scss.html">gestion_constat.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/gestion_contravention_scss.html">gestion_contravention.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/grades_scss.html">grades.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/groupements_scss.html">groupements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/grvpc_scss.html">grvpc.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/infractions_scss.html">infractions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/journal_scss.html">journal.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/langues_scss.html">langues.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/manage_scss.html">manage.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/member_scss.html">member.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/metropoli_scss.html">metropoli.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/metropolisroles_scss.html">metropolisroles.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/paiementsolutions_scss.html">paiementsolutions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/parametre_scss.html">parametre.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/pieceretenus_scss.html">pieceretenus.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/postepolices_scss.html">postepolices.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/public_scss.html">public.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/regions_scss.html">regions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/roles_scss.html">roles.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/services_scss.html">services.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/statistique_scss.html">statistique.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/status_scss.html">status.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/statuses_scss.html">statuses.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/structures_scss.html">structures.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/typeaccidents_scss.html">typeaccidents.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/types_scss.html">types.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/unites_scss.html">unites.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/villes_scss.html">villes.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/zonecouverturemotifs_scss.html">zonecouverturemotifs.scss</a>
+  
+    <li><a href="../../app/views/affectations/_affectation_json_jbuilder.html">_affectation.json.jbuilder</a>
+  
+    <li><a href="../../app/views/affectations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/affectations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/agents/Untitled-1.html">Untitled-1</a>
+  
+    <li><a href="../../app/views/agents/Untitled-2.html">Untitled-2</a>
+  
+    <li><a href="../../app/views/agents/_agent_json_jbuilder.html">_agent.json.jbuilder</a>
+  
+    <li><a href="../../app/views/agents/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/agents/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/alertes/_alerte_json_jbuilder.html">_alerte.json.jbuilder</a>
+  
+    <li><a href="../../app/views/alertes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/alertes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/arrondissements/_arrondissement_json_jbuilder.html">_arrondissement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/arrondissements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/arrondissements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/bulletins/_bulletin_json_jbuilder.html">_bulletin.json.jbuilder</a>
+  
+    <li><a href="../../app/views/bulletins/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/bulletins/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/carrefours/_carrefour_json_jbuilder.html">_carrefour.json.jbuilder</a>
+  
+    <li><a href="../../app/views/carrefours/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/carrefours/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrepartenaires/_centrepartenaire_json_jbuilder.html">_centrepartenaire.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrepartenaires/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrepartenaires/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrerecouvrements/_centrerecouvrement_json_jbuilder.html">_centrerecouvrement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrerecouvrements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrerecouvrements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/comments/_comment_json_jbuilder.html">_comment.json.jbuilder</a>
+  
+    <li><a href="../../app/views/comments/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/comments/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/commissariats/_commissariat_json_jbuilder.html">_commissariat.json.jbuilder</a>
+  
+    <li><a href="../../app/views/commissariats/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/commissariats/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/constats/_constat_json_jbuilder.html">_constat.json.jbuilder</a>
+  
+    <li><a href="../../app/views/constats/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/constats/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contravetions/_contravetion_json_jbuilder.html">_contravetion.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contravetions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contravetions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/convocations/_convocation_json_jbuilder.html">_convocation.json.jbuilder</a>
+  
+    <li><a href="../../app/views/convocations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/convocations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/departements/_departement_json_jbuilder.html">_departement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/departements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/departements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/grades/_grade_json_jbuilder.html">_grade.json.jbuilder</a>
+  
+    <li><a href="../../app/views/grades/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/grades/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/groupements/_groupement_json_jbuilder.html">_groupement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/groupements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/groupements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/infractions/_infraction_json_jbuilder.html">_infraction.json.jbuilder</a>
+  
+    <li><a href="../../app/views/infractions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/infractions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/langues/_langue_json_jbuilder.html">_langue.json.jbuilder</a>
+  
+    <li><a href="../../app/views/langues/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/langues/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/metropolisroles/_metropolisrole_json_jbuilder.html">_metropolisrole.json.jbuilder</a>
+  
+    <li><a href="../../app/views/metropolisroles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/metropolisroles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paiementsolutions/_paiementsolution_json_jbuilder.html">_paiementsolution.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paiementsolutions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paiementsolutions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/pieceretenus/_pieceretenu_json_jbuilder.html">_pieceretenu.json.jbuilder</a>
+  
+    <li><a href="../../app/views/pieceretenus/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/pieceretenus/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/postepolices/_postepolice_json_jbuilder.html">_postepolice.json.jbuilder</a>
+  
+    <li><a href="../../app/views/postepolices/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/postepolices/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/regions/_region_json_jbuilder.html">_region.json.jbuilder</a>
+  
+    <li><a href="../../app/views/regions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/regions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/roles/_role_json_jbuilder.html">_role.json.jbuilder</a>
+  
+    <li><a href="../../app/views/roles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/roles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/services/_service_json_jbuilder.html">_service.json.jbuilder</a>
+  
+    <li><a href="../../app/views/services/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/services/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/status/_status_json_jbuilder.html">_status.json.jbuilder</a>
+  
+    <li><a href="../../app/views/status/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/status/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/statuses/_status_json_jbuilder.html">_status.json.jbuilder</a>
+  
+    <li><a href="../../app/views/statuses/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/statuses/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/structures/_structure_json_jbuilder.html">_structure.json.jbuilder</a>
+  
+    <li><a href="../../app/views/structures/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/structures/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/typeaccidents/_typeaccident_json_jbuilder.html">_typeaccident.json.jbuilder</a>
+  
+    <li><a href="../../app/views/typeaccidents/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/typeaccidents/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/types/_type_json_jbuilder.html">_type.json.jbuilder</a>
+  
+    <li><a href="../../app/views/types/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/types/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/unites/_unite_json_jbuilder.html">_unite.json.jbuilder</a>
+  
+    <li><a href="../../app/views/unites/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/unites/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/villes/_ville_json_jbuilder.html">_ville.json.jbuilder</a>
+  
+    <li><a href="../../app/views/villes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/villes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/workflows/_workflow_json_jbuilder.html">_workflow.json.jbuilder</a>
+  
+    <li><a href="../../app/views/workflows/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/workflows/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/zonecouverturemotifs/_zonecouverturemotif_json_jbuilder.html">_zonecouverturemotif.json.jbuilder</a>
+  
+    <li><a href="../../app/views/zonecouverturemotifs/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/zonecouverturemotifs/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../brouillons_txt.html">brouillons</a>
+  
+    <li><a href="../../config_ru.html">config.ru</a>
+  
+    <li><a href="../../erd_dot.html">erd.dot</a>
+  
+    <li><a href="../../hi.html">hi</a>
+  
+    <li><a href="../../lib/templates/rails/jbuilder/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../log/production_log.html">production.log</a>
+  
+    <li><a href="../../log/test_log.html">test.log</a>
+  
+    <li><a href="../../package_json.html">package.json</a>
+  
+    <li><a href="../../public/404_html.html">404.html</a>
+  
+    <li><a href="../../public/422_html.html">422.html</a>
+  
+    <li><a href="../../public/500_html.html">500.html</a>
+  
+    <li><a href="../../public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="../../public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="../../public/assets/application-1d6a15def6671efd85aa7f12dd7a187c8a4010b2f141f1f26f17c84657c45352_js.html">application-1d6a15def6671efd85aa7f12dd7a187c8a4010b2f141f1f26f17c84657c45352.js</a>
+  
+    <li><a href="../../public/assets/application-5173f52181c8a9ce2fd1869b7a408c290415dd6db3d815626ca73dcbf8150eb4_css.html">application-5173f52181c8a9ce2fd1869b7a408c290415dd6db3d815626ca73dcbf8150eb4.css</a>
+  
+    <li><a href="../../public/assets/fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c_svg.html">fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c.svg</a>
+  
+    <li><a href="../../public/assets/leaflet-src_js-6eed528b5678ee4f34b8be267a8da5d14734d58d56baeea6a31e9819e6630775_map.html">leaflet-src.js-6eed528b5678ee4f34b8be267a8da5d14734d58d56baeea6a31e9819e6630775.map</a>
+  
+    <li><a href="../../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../../public/robots_txt.html">robots</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/_rest_managed_json.html">_rest_managed.json</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/admin-extra_html.html">admin-extra.html</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/currency_xml.html">currency.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/elevate_xml.html">elevate.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/lang/stopwords_en_txt.html">stopwords_en</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/mapping-ISOLatin1Accent_txt.html">mapping-ISOLatin1Accent</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/protwords_txt.html">protwords</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/schema_xml.html">schema.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/scripts_conf.html">scripts.conf</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/solrconfig_xml.html">solrconfig.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/spellings_txt.html">spellings</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/synonyms_txt.html">synonyms</a>
+  
+    <li><a href="../../solr/default/core_properties.html">core.properties</a>
+  
+    <li><a href="../../solr/development/core_properties.html">core.properties</a>
+  
+    <li><a href="../../solr/solr_xml.html">solr.xml</a>
+  
+    <li><a href="../../solr/test/core_properties.html">core.properties</a>
+  
+    <li><a href="../../tmp/pids/server_pid.html">server.pid</a>
+  
+    <li><a href="../../tmp/restart_txt.html">restart</a>
+  
+    <li><a href="../../vendor/animsition/animsition_min_css.html">animsition.min.css</a>
+  
+    <li><a href="../../vendor/animsition/animsition_min_js.html">animsition.min.js</a>
+  
+    <li><a href="../../vendor/bootstrap-4_1/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../../vendor/bootstrap-4_1/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../vendor/bootstrap-4_1/popper_min_js.html">popper.min.js</a>
+  
+    <li><a href="../../vendor/bootstrap-progressbar/bootstrap-progressbar-3_3_4_min_css.html">bootstrap-progressbar-3.3.4.min.css</a>
+  
+    <li><a href="../../vendor/bootstrap-progressbar/bootstrap-progressbar_min_js.html">bootstrap-progressbar.min.js</a>
+  
+    <li><a href="../../vendor/chartjs/Chart_bundle_min_js.html">Chart.bundle.min.js</a>
+  
+    <li><a href="../../vendor/circle-progress/circle-progress_js.html">circle-progress.js</a>
+  
+    <li><a href="../../vendor/circle-progress/circle-progress_min_js.html">circle-progress.min.js</a>
+  
+    <li><a href="../../vendor/countdown/countdowntime_js.html">countdowntime.js</a>
+  
+    <li><a href="../../vendor/countdown/jquery_countdown_min_js.html">jquery.countdown.min.js</a>
+  
+    <li><a href="../../vendor/countdown/moment-timezone-with-data_min_js.html">moment-timezone-with-data.min.js</a>
+  
+    <li><a href="../../vendor/countdown/moment-timezone_min_js.html">moment-timezone.min.js</a>
+  
+    <li><a href="../../vendor/countdown/moment_min_js.html">moment.min.js</a>
+  
+    <li><a href="../../vendor/counter-up/jquery_counterup_min_js.html">jquery.counterup.min.js</a>
+  
+    <li><a href="../../vendor/counter-up/jquery_waypoints_min_js.html">jquery.waypoints.min.js</a>
+  
+    <li><a href="../../vendor/counter-up/waypoints_min_js.html">waypoints.min.js</a>
+  
+    <li><a href="../../vendor/css-hamburgers/hamburgers_css.html">hamburgers.css</a>
+  
+    <li><a href="../../vendor/css-hamburgers/hamburgers_min_css.html">hamburgers.min.css</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/HELP-US-OUT_txt.html">HELP-US-OUT</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/css/font-awesome_css.html">font-awesome.css</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/css/font-awesome_min_css.html">font-awesome.min.css</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/fonts/fontawesome-webfont_svg.html">fontawesome-webfont.svg</a>
+  
+    <li><a href="../../vendor/font-awesome-5/css/fontawesome-all_min_css.html">fontawesome-all.min.css</a>
+  
+    <li><a href="../../vendor/font-awesome-5/webfonts/fa-brands-400_svg.html">fa-brands-400.svg</a>
+  
+    <li><a href="../../vendor/font-awesome-5/webfonts/fa-regular-400_svg.html">fa-regular-400.svg</a>
+  
+    <li><a href="../../vendor/font-awesome-5/webfonts/fa-solid-900_svg.html">fa-solid-900.svg</a>
+  
+    <li><a href="../../vendor/jquery-3_2_1_min_js.html">jquery-3.2.1.min.js</a>
+  
+    <li><a href="../../vendor/jquery-ui_min_js.html">jquery-ui.min.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/css/lightbox_css.html">lightbox.css</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox-plus-jquery_js.html">lightbox-plus-jquery.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox-plus-jquery_min_js.html">lightbox-plus-jquery.min.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox-plus-jquery_min_map.html">lightbox-plus-jquery.min.map</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox_js.html">lightbox.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox_min_js.html">lightbox.min.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox_min_map.html">lightbox.min.map</a>
+  
+    <li><a href="../../vendor/lightbox2/src/css/lightbox_css.html">lightbox.css</a>
+  
+    <li><a href="../../vendor/lightbox2/src/js/lightbox_js.html">lightbox.js</a>
+  
+    <li><a href="../../vendor/mdi-font/css/material-design-iconic-font_css.html">material-design-iconic-font.css</a>
+  
+    <li><a href="../../vendor/mdi-font/css/material-design-iconic-font_min_css.html">material-design-iconic-font.min.css</a>
+  
+    <li><a href="../../vendor/mdi-font/fonts/Material-Design-Iconic-Font_svg.html">Material-Design-Iconic-Font.svg</a>
+  
+    <li><a href="../../vendor/perfect-scrollbar/perfect-scrollbar_css.html">perfect-scrollbar.css</a>
+  
+    <li><a href="../../vendor/perfect-scrollbar/perfect-scrollbar_js.html">perfect-scrollbar.js</a>
+  
+    <li><a href="../../vendor/perfect-scrollbar/perfect-scrollbar_min_js.html">perfect-scrollbar.min.js</a>
+  
+    <li><a href="../../vendor/progressbar/progressbar_js.html">progressbar.js</a>
+  
+    <li><a href="../../vendor/progressbar/progressbar_min_js.html">progressbar.min.js</a>
+  
+    <li><a href="../../vendor/select2/select2_min_css.html">select2.min.css</a>
+  
+    <li><a href="../../vendor/select2/select2_min_js.html">select2.min.js</a>
+  
+    <li><a href="../../vendor/slick/fonts/slick_svg.html">slick.svg</a>
+  
+    <li><a href="../../vendor/slick/slick-theme_css.html">slick-theme.css</a>
+  
+    <li><a href="../../vendor/slick/slick-theme_less.html">slick-theme.less</a>
+  
+    <li><a href="../../vendor/slick/slick-theme_scss.html">slick-theme.scss</a>
+  
+    <li><a href="../../vendor/slick/slick_css.html">slick.css</a>
+  
+    <li><a href="../../vendor/slick/slick_js.html">slick.js</a>
+  
+    <li><a href="../../vendor/slick/slick_less.html">slick.less</a>
+  
+    <li><a href="../../vendor/slick/slick_min_js.html">slick.min.js</a>
+  
+    <li><a href="../../vendor/slick/slick_scss.html">slick.scss</a>
+  
+    <li><a href="../../vendor/smk-accordion/accordion_css.html">accordion.css</a>
+  
+    <li><a href="../../vendor/smk-accordion/accordion_js.html">accordion.js</a>
+  
+    <li><a href="../../vendor/smk-accordion/accordion_min_js.html">accordion.min.js</a>
+  
+    <li><a href="../../vendor/sweetalert/sweetalert_min_js.html">sweetalert.min.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_brazil_js.html">jquery.vmap.brazil.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_europe_js.html">jquery.vmap.europe.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_france_js.html">jquery.vmap.france.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_germany_js.html">jquery.vmap.germany.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_js.html">jquery.vmap.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_min_js.html">jquery.vmap.min.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_russia_js.html">jquery.vmap.russia.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_sampledata_js.html">jquery.vmap.sampledata.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_usa_js.html">jquery.vmap.usa.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_world_js.html">jquery.vmap.world.js</a>
+  
+    <li><a href="../../vendor/vector-map/jqvmap_min_css.html">jqvmap.min.css</a>
+  
+    <li><a href="../../vendor/wow/animate_css.html">animate.css</a>
+  
+    <li><a href="../../vendor/wow/wow_min_js.html">wow.min.js</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page vendor/sweetalert/sweetalert.min.js">
+
+<p>!function(t,e){“object”==typeof exports&amp;&amp;“object”==typeof
+module?module.exports=e():“function”==typeof
+define&amp;&amp;define.amd?define([],e):“object”==typeof
+exports?exports.swal=e():t.swal=e()}(this,function(){return
+function(t){function e(o){<a href="o">if(n</a>)return <a
+href="o">n</a>.exports;var <a href="o">r=n</a>={i:o,l:!1,exports:{}};return
+<a href="o">t</a>.call(r.exports,r,r.exports,e),r.l=!0,r.exports}var
+n={};return
+e.m=t,e.c=n,e.d=function(t,n,o){e.o(t,n)||Object.defineProperty(t,n,{configurable:!1,enumerable:!0,get:o})},e.n=function(t){var
+n=t&amp;&amp;t.__esModule?function(){return t.default}:function(){return
+t};return e.d(n,“a”,n),n},e.o=function(t,e){return
+Object.prototype.hasOwnProperty.call(t,e)},e.p=“”,e(e.s=8)}([function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=“swal-button”;e.CLASS_NAMES={MODAL:“swal-modal”,OVERLAY:“swal-overlay”,SHOW_MODAL:“swal-overlay–show-modal”,MODAL_TITLE:“swal-title”,MODAL_TEXT:“swal-text”,ICON:“swal-icon”,ICON_CUSTOM:“swal-icon–custom”,CONTENT:“swal-content”,FOOTER:“swal-footer”,BUTTON_CONTAINER:“swal-button-container”,BUTTON:o,CONFIRM_BUTTON:o+“–confirm”,CANCEL_BUTTON:o+“–cancel”,DANGER_BUTTON:o+“–danger”,BUTTON_LOADING:o+“–loading”,BUTTON_LOADER:o+“__loader”},e.default=e.CLASS_NAMES},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0}),e.getNode=function(t){var
+e=“.”+t;return document.querySelector(e)},e.stringToNode=function(t){var
+e=document.createElement(“div”);return
+e.innerHTML=t.trim(),e.firstChild},e.insertAfter=function(t,e){var
+n=e.nextSibling;e.parentNode.insertBefore(t,n)},e.removeNode=function(t){t.parentElement.removeChild(t)},e.throwErr=function(t){throw
+t=t.replace(/ +(?= )/g,“”),“SweetAlert:
+”+(t=t.trim())},e.isPlainObject=function(t){if(“[object
+Object]”!==Object.prototype.toString.call(t))return!1;var
+e=Object.getPrototypeOf(t);return
+null===e||e===Object.prototype},e.ordinalSuffixOf=function(t){var
+e=t%10,n=t%100;return
+1===e&amp;&amp;11!==n?t+“st”:2===e&amp;&amp;12!==n?t+“nd”:3===e&amp;&amp;13!==n?t+“rd”:t+“th”}},function(t,e,n){“use
+strict”;function o(t){for(var n in <a
+href="n">t)e.hasOwnProperty(n)||(e</a>=<a
+href="n">t</a>)}Object.defineProperty(e,“__esModule”,{value:!0}),o(n(25));var
+r=n(26);e.overlayMarkup=r.default,o(n(27)),o(n(28)),o(n(29));var
+i=n(0),a=i.default.MODAL_TITLE,s=i.default.MODAL_TEXT,c=i.default.ICON,l=i.default.FOOTER;e.iconMarkup=&#39;n
+&lt;div
+class=“&#39;<code>c</code>&#39;”&gt;&lt;/div&gt;&#39;,e.titleMarkup=&#39;n 
+&lt;div
+class=“&#39;<code>a</code>&#39;”&gt;&lt;/div&gt;n&#39;,e.textMarkup=&#39;n 
+&lt;div
+class=“&#39;<code>s</code>&#39;”&gt;&lt;/div&gt;&#39;,e.footerMarkup=&#39;n
+&lt;div
+class=“&#39;<code>l</code>&#39;”&gt;&lt;/div&gt;n&#39;},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(1);e.CONFIRM_KEY=“confirm”,e.CANCEL_KEY=“cancel”;var
+r={visible:!0,text:null,value:null,className:“”,closeModal:!0},i=Object.assign({},r,{visible:!1,text:“Cancel”,value:null}),a=Object.assign({},r,{text:“OK”,value:!0});e.defaultButtonList={cancel:i,confirm:a};var
+s=function(t){switch(t){case e.CONFIRM_KEY:return a;case
+e.CANCEL_KEY:return i;default:var
+n=t.charAt(0).toUpperCase()+t.slice(1);return
+Object.assign({},r,{text:n,value:t})}},c=function(t,e){var
+n=s(t);return!0===e?Object.assign({},n,{visible:!0}):“string”==typeof
+e?Object.assign({},n,{visible:!0,text:e}):o.isPlainObject(e)?Object.assign({visible:!0},n,e):Object.assign({},n,{visible:!1})},l=function(t){for(var
+e={},n=0,o=Object.keys(t);n&lt;o.length;n++){var <a href="n">r=o</a>,<a
+href="r">a=t</a>,<a href="r">s=c(r,a);e</a>=s}return
+e.cancel||(e.cancel=i),e},u=function(t){var n={};switch(t.length){case <a
+href="e.CANCEL_KEY">1:n</a>=Object.assign({},i,{visible:!1});break;case <a
+href="e.CANCEL_KEY">2:n</a>=<a href="0">c(e.CANCEL_KEY,t</a>),<a
+href="e.CONFIRM_KEY">n</a>=<a
+href="1">c(e.CONFIRM_KEY,t</a>);break;default:o.throwErr(“Invalid number of
+&#39;buttons&#39; in array (”<code>t.length</code>“).n      If you want
+more than 2 buttons, you need to use an object!”)}return
+n};e.getButtonListOpts=function(t){var
+n=e.defaultButtonList;return“string”==typeof <a
+href="e.CONFIRM_KEY">t?n</a>=<a
+href="!0,!0">c(e.CONFIRM_KEY,t):Array.isArray(t)?n=u(t):o.isPlainObject(t)?n=l(t):!0===t?n=u(</a>):!<a
+href="!1,!1">1===t?n=u(</a>):void
+0===t&amp;&amp;(n=e.defaultButtonList),n}},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(1),r=n(2),i=n(0),a=i.default.MODAL,s=i.default.OVERLAY,c=n(30),l=n(31),u=n(32),f=n(33);e.injectElIntoModal=function(t){var
+e=o.getNode(a),n=o.stringToNode(t);return e.appendChild(n),n};var
+d=function(t){t.className=a,t.textContent=“”},p=function(t,e){d(t);var
+n=e.className;n&amp;&amp;t.classList.add(n)};e.initModalContent=function(t){var
+e=o.getNode(a);p(e,t),c.default(t.icon),l.initTitle(t.title),l.initText(t.text),f.default(t.content),u.default(t.buttons,t.dangerMode)};var
+m=function(){var
+t=o.getNode(s),e=o.stringToNode(r.modalMarkup);t.appendChild(e)};e.default=m},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(3),r={isOpen:!1,promise:null,actions:{},timer:null},i=Object.assign({},r);e.resetState=function(){i=Object.assign({},r)},e.setActionValue=function(t){if(“string”==typeof
+t)return a(o.CONFIRM_KEY,t);for(var e in <a href="e">t)a(e,t</a>)};var
+a=function(t,e){<a href="t">i.actions</a>||(<a
+href="t">i.actions</a>={}),<a
+href="t">Object.assign(i.actions</a>,{value:e})};e.setActionOptionsFor=function(t,e){var
+n=(void 0===e?{}:e).closeModal,o=void <a
+href="t">0===n||n;Object.assign(i.actions</a>,{closeModal:o})},e.default=i},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(1),r=n(3),i=n(0),a=i.default.OVERLAY,s=i.default.SHOW_MODAL,c=i.default.BUTTON,l=i.default.BUTTON_LOADING,u=n(5);e.openModal=function(){o.getNode(a).classList.add(s),u.default.isOpen=!0};var
+f=function(){o.getNode(a).classList.remove(s),u.default.isOpen=!1};e.onAction=function(t){void
+0===t&amp;&amp;(t=r.CANCEL_KEY);var <a
+href="t">e=u.default.actions</a>,n=e.value;if(!1===e.closeModal){var
+i=c+“–”+t;o.getNode(i).classList.add(l)}else
+f();u.default.promise.resolve(n)},e.getState=function(){var
+t=Object.assign({},u.default);return delete t.promise,delete
+t.timer,t},e.stopLoading=function(){for(var
+t=document.querySelectorAll(“.”+c),e=0;e&lt;t.length;e++){<a
+href="e">t</a>.classList.remove(l)}}},function(t,e){var
+n;n=function(){return this}();try{n=n||Function(“return
+this”)()||(0,eval)(“this”)}catch(t){“object”==typeof
+window&amp;&amp;(n=window)}t.exports=n},function(t,e,n){(function(e){t.exports=e.sweetAlert=n(9)}).call(e,n(7))},function(t,e,n){(function(e){t.exports=e.swal=n(10)}).call(e,n(7))},function(t,e,n){“undefined”!=typeof
+window&amp;&amp;n(11),n(16);var
+o=n(23).default;t.exports=o},function(t,e,n){var o=n(12);“string”==typeof
+<a href="t.i,o,""">o&&(o=[</a>]);var r={insertAt:“top”};r.transform=void
+0;n(14)(o,r);o.locals&amp;&amp;(t.exports=o.locals)},function(t,e,n){e=t.exports=n(13)(void
+0),e.push([t.i,&#39;.swal-icon–error{border-color:#f27474;-webkit-animation:animateErrorIcon
+.5s;animation:animateErrorIcon
+.5s}.swal-icon–error__x-mark{position:relative;display:block;-webkit-animation:animateXMark
+.5s;animation:animateXMark
+.5s}.swal-icon–error__line{position:absolute;height:5px;width:47px;background-color:#f27474;display:block;top:37px;border-radius:2px}.swal-icon–error__line–left{-webkit-transform:rotate(45deg);transform:rotate(45deg);left:17px}.swal-icon–error__line–right{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);right:16px}@-webkit-keyframes
+animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@keyframes
+animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@-webkit-keyframes
+animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}@keyframes
+animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}.swal-icon–warning{border-color:#f8bb86;-webkit-animation:pulseWarning
+.75s infinite alternate;animation:pulseWarning .75s infinite
+alternate}.swal-icon–warning__body{width:5px;height:47px;top:10px;border-radius:2px;margin-left:-2px}.swal-icon–warning__body,.swal-icon–warning__dot{position:absolute;left:50%;background-color:#f8bb86}.swal-icon–warning__dot{width:7px;height:7px;border-radius:50%;margin-left:-4px;bottom:-11px}@-webkit-keyframes
+pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}@keyframes
+pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}.swal-icon–success{border-color:#a5dc86}.swal-icon–success:after,.swal-icon–success:before{content:“”;border-radius:50%;position:absolute;width:60px;height:120px;background:#fff;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal-icon–success:before{border-radius:120px
+0 0
+120px;top:-7px;left:-33px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:60px
+60px;transform-origin:60px 60px}.swal-icon–success:after{border-radius:0
+120px 120px
+0;top:-11px;left:30px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0
+60px;transform-origin:0 60px;-webkit-animation:rotatePlaceholder 4.25s
+ease-in;animation:rotatePlaceholder 4.25s
+ease-in}.swal-icon–success__ring{width:80px;height:80px;border:4px solid
+hsla(98,55%,69%,.2);border-radius:50%;box-sizing:content-box;position:absolute;left:-4px;top:-4px;z-index:2}.swal-icon–success__hide-corners{width:5px;height:90px;background-color:#fff;position:absolute;left:28px;top:8px;z-index:1;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal-icon–success__line{height:5px;background-color:#a5dc86;display:block;border-radius:2px;position:absolute;z-index:2}.swal-icon–success__line–tip{width:25px;left:14px;top:46px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-animation:animateSuccessTip
+.75s;animation:animateSuccessTip
+.75s}.swal-icon–success__line–long{width:47px;right:8px;top:38px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-animation:animateSuccessLong
+.75s;animation:animateSuccessLong .75s}@-webkit-keyframes
+rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes
+rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes
+animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@keyframes
+animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@-webkit-keyframes
+animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}@keyframes
+animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}.swal-icon–info{border-color:#c9dae1}.swal-icon–info:before{width:5px;height:29px;bottom:17px;border-radius:2px;margin-left:-2px}.swal-icon–info:after,.swal-icon–info:before{content:“”;position:absolute;left:50%;background-color:#c9dae1}.swal-icon–info:after{width:7px;height:7px;border-radius:50%;margin-left:-3px;top:19px}.swal-icon{width:80px;height:80px;border-width:4px;border-style:solid;border-radius:50%;padding:0;position:relative;box-sizing:content-box;margin:20px
+auto}.swal-icon:first-child{margin-top:32px}.swal-icon–custom{width:auto;height:auto;max-width:100%;border:none;border-radius:0}.swal-icon
+img{max-width:100%;max-height:100%}.swal-title{color:rgba(0,0,0,.65);font-weight:600;text-transform:none;position:relative;display:block;padding:13px
+16px;font-size:27px;line-height:normal;text-align:center;margin-bottom:0}.swal-title:first-child{margin-top:26px}.swal-title:not(:first-child){padding-bottom:0}.swal-title:not(:last-child){margin-bottom:13px}.swal-text{font-size:16px;position:relative;float:none;line-height:normal;vertical-align:top;text-align:left;display:inline-block;margin:0;padding:0
+10px;font-weight:400;color:rgba(0,0,0,.64);max-width:calc(100% -
+20px);overflow-wrap:break-word;box-sizing:border-box}.swal-text:first-child{margin-top:45px}.swal-text:last-child{margin-bottom:45px}.swal-footer{text-align:right;padding-top:13px;margin-top:13px;padding:13px
+16px;border-radius:inherit;border-top-left-radius:0;border-top-right-radius:0}.swal-button-container{margin:5px;display:inline-block;position:relative}.swal-button{background-color:#7cd1f9;color:#fff;border:none;box-shadow:none;border-radius:5px;font-weight:600;font-size:14px;padding:10px
+24px;margin:0;cursor:pointer}.<a
+href="not:disabled">swal-button</a>:hover{background-color:#78cbf2}.swal-button:active{background-color:#70bce0}.swal-button:focus{outline:none;box-shadow:0
+0 0 1px fff,0 0 0 3px rgba(43,114,165,.29)}.<a
+href="disabled">swal-button</a>{opacity:.5;cursor:default}.swal-button::-moz-focus-inner{border:0}.swal-button–cancel{color:#555;background-color:#efefef}.<a
+href="not:disabled">swal-button–cancel</a>:hover{background-color:#e8e8e8}.swal-button–cancel:active{background-color:#d7d7d7}.swal-button–cancel:focus{box-shadow:0
+0 0 1px fff,0 0 0 3px
+rgba(116,136,150,.29)}.swal-button–danger{background-color:#e64942}.<a
+href="not:disabled">swal-button–danger</a>:hover{background-color:#df4740}.swal-button–danger:active{background-color:#cf423b}.swal-button–danger:focus{box-shadow:0
+0 0 1px fff,0 0 0 3px rgba(165,43,43,.29)}.swal-content{padding:0
+20px;margin-top:20px;font-size:medium}.swal-content:last-child{margin-bottom:20px}.swal-content__input,.swal-content__textarea{-webkit-appearance:none;background-color:#fff;border:none;font-size:14px;display:block;box-sizing:border-box;width:100%;border:1px
+solid rgba(0,0,0,.14);padding:10px
+13px;border-radius:2px;transition:border-color
+.2s}.swal-content__input:focus,.swal-content__textarea:focus{outline:none;border-color:#6db8ff}.swal-content__textarea{resize:vertical}.swal-button–loading{color:transparent}.swal-button–loading~.swal-button__loader{opacity:1}.swal-button__loader{position:absolute;height:auto;width:43px;z-index:2;left:50%;top:50%;-webkit-transform:translateX(-50%)
+translateY(-50%);transform:translateX(-50%)
+translateY(-50%);text-align:center;pointer-events:none;opacity:0}.swal-button__loader
+div{display:inline-block;float:none;vertical-align:baseline;width:9px;height:9px;padding:0;border:none;margin:2px;opacity:.4;border-radius:7px;background-color:hsla(0,0%,100%,.9);transition:background
+.2s;-webkit-animation:swal-loading-anim 1s
+infinite;animation:swal-loading-anim 1s infinite}.swal-button__loader
+div:nth-child(3n+2){-webkit-animation-delay:.15s;animation-delay:.15s}.swal-button__loader
+div:nth-child(3n+3){-webkit-animation-delay:.3s;animation-delay:.3s}@-webkit-keyframes
+swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}@keyframes
+swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}.swal-overlay{position:fixed;top:0;bottom:0;left:0;right:0;text-align:center;font-size:0;overflow-y:scroll;background-color:rgba(0,0,0,.4);z-index:10000;pointer-events:none;opacity:0;transition:opacity
+.3s}.swal-overlay:before{content:“
+”;display:inline-block;vertical-align:middle;height:100%}.swal-overlay–show-modal{opacity:1;pointer-events:auto}.swal-overlay–show-modal
+.swal-modal{opacity:1;pointer-events:auto;box-sizing:border-box;-webkit-animation:showSweetAlert
+.3s;animation:showSweetAlert
+.3s;will-change:transform}.swal-modal{width:478px;opacity:0;pointer-events:none;background-color:#fff;text-align:center;border-radius:5px;position:static;margin:20px
+auto;display:inline-block;vertical-align:middle;-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50%
+50%;transform-origin:50% 50%;z-index:10001;transition:opacity
+.2s,-webkit-transform .3s;transition:transform .3s,opacity
+.2s;transition:transform .3s,opacity .2s,-webkit-transform .3s}@media
+(max-width:500px){.swal-modal{width:calc(100% - 20px)}}@-webkit-keyframes
+showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes
+showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}&#39;,“”])},function(t,e){function
+n(t,e){var <a href="1">n=t</a>||“”,<a href="3">r=t</a>;if(!r)return
+n;if(e&amp;&amp;“function”==typeof btoa){var <a
+href="n">i=o®;return</a>.concat(r.sources.map(function(t){return“  #
+sourceURL=”+r.sourceRoot+t+“   ”})).<a href="i">concat(</a>).join(“n”)}<a
+href="n">return</a>.join(“n”)}function o(t){return“  #
+sourceMappingURL=data:application/json;charset=utf-8;base64,”+btoa(unescape(encodeURIComponent(JSON.stringify(t))))+“
+”}t.exports=function(t){var e=[];return e.toString=function(){return
+this.map(function(e){var o=n(e,t);return <a href="2">e</a>?“@media ”+<a
+href="2">e</a>+“{”<code>o</code>“}”:o}).join(“”)},e.i=function(t,n){“string”==typeof
+<a href="null,t,""">t&&(t=[</a>]);for(var
+o={},r=0;r&lt;this.length;r++){var <a
+href="r">i=this</a>[0];“number”==typeof <a
+href="i">i&&(o</a>=!0)}for(r=0;r&lt;t.length;r++){var <a
+href="r">a=t</a>;“number”==typeof <a href="0">a</a>&amp;&amp;<a
+href="0">o[a</a>]||(<a href="2">n&&!a</a>?<a href="2">a</a>=<a
+href="2">n:n&&(a</a>=“(”+<a href="2">a</a>+“) and
+(”<code>n</code>“)”),e.push(a))}},e}},function(t,e,n){function
+o(t,e){for(var n=0;n&lt;t.length;n++){var <a href="n">o=t</a>,<a
+href="o.id">r=m</a>;if®{r.refs++;for(var <a
+href="i">i=0;i<r.parts.length;i++)r.parts</a>(<a href="i">o.parts</a>);<a
+href="i">for(;i<o.parts.length;i++)r.parts.push(u(o.parts</a>,e))}else{for(var
+<a href="i">a=[],i=0;i<o.parts.length;i++)a.push(u(o.parts</a>,<a
+href="o.id">e));m</a>={id:o.id,refs:1,parts:a}}}}function r(t,e){for(var
+n=[],o={},r=0;r&lt;t.length;r++){var <a href="r">i=t</a>,<a
+href="0">a=e.base?i</a>+<a href="0">e.base:i</a>,<a href="1">s=i</a>,<a
+href="2">c=i</a>,<a href="3">l=i</a>,u={css:s,media:c,sourceMap:l};<a
+href="a">o</a>?<a href="a">o</a>.<a href="a">parts.push(u):n.push(o</a>={<a
+href="u">id:a,parts:</a>})}return n}function i(t,e){var
+n=v(t.insertInto);if(!n)throw new Error(“Couldn&#39;t find a style target.
+This probably means that the value for the &#39;insertInto&#39; parameter
+is invalid.”);var <a
+href="w.length-1">o=w</a>;if(“top”===t.insertAt)o?o.nextSibling?n.insertBefore(e,o.nextSibling):n.appendChild(e):n.insertBefore(e,n.firstChild),w.push(e);else{if(“bottom”!==t.insertAt)throw
+new Error(“Invalid value for parameter &#39;insertAt&#39;. Must be
+&#39;top&#39; or &#39;bottom&#39;.”);n.appendChild(e)}}function
+a(t){if(null===t.parentNode)return!1;t.parentNode.removeChild(t);var
+e=w.indexOf(t);e&gt;=0&amp;&amp;w.splice(e,1)}function s(t){var
+e=document.createElement(“style”);return
+t.attrs.type=“text/css”,l(e,t.attrs),i(t,e),e}function c(t){var
+e=document.createElement(“link”);return
+t.attrs.type=“text/css”,t.attrs.rel=“stylesheet”,l(e,t.attrs),i(t,e),e}function
+l(t,e){Object.keys(e).forEach(function(n){<a
+href="n">t.setAttribute(n,e</a>)})}function u(t,e){var
+n,o,r,i;if(e.transform&amp;&amp;t.css){if(!(i=e.transform(t.css)))return
+function(){};t.css=i}if(e.singleton){var
+l=h++;n=g||(g=s(e)),o=f.bind(null,n,l,!1),r=f.bind(null,n,l,!0)}else
+t.sourceMap&amp;&amp;“function”==typeof URL&amp;&amp;“function”==typeof
+URL.createObjectURL&amp;&amp;“function”==typeof
+URL.revokeObjectURL&amp;&amp;“function”==typeof
+Blob&amp;&amp;“function”==typeof
+btoa?(n=c(e),o=p.bind(null,n,e),r=function(){a(n),n.href&amp;&amp;URL.revokeObjectURL(n.href)}):(n=s(e),o=d.bind(null,n),r=function(){a(n)});return
+o(t),function(e){if(e){if(e.css===t.css&amp;&amp;e.media===t.media&amp;&amp;e.sourceMap===t.sourceMap)return;o(t=e)}else
+r()}}function f(t,e,n,o){var
+r=n?“”:o.css;if(t.styleSheet)t.styleSheet.cssText=x(e,r);else{var <a
+href="e">i=document.createTextNode®,a=t.childNodes;a</a>&amp;&amp;<a
+href="e">t.removeChild(a</a>),<a
+href="e">a.length?t.insertBefore(i,a</a>):t.appendChild(i)}}function
+d(t,e){var
+n=e.css,o=e.media;if(o&amp;&amp;t.setAttribute(“media”,o),t.styleSheet)t.styleSheet.cssText=n;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(n))}}function
+p(t,e,n){var o=n.css,r=n.sourceMap,i=void
+0===e.convertToAbsoluteUrls&amp;&amp;r;(e.convertToAbsoluteUrls||i)&amp;&amp;(o=y(o)),r&amp;&amp;(o+=“n/*#
+sourceMappingURL=data:application/json;base64,”+btoa(unescape(encodeURIComponent(JSON.stringify®)))+“
+*/”);var a=new <a
+href="o">Blob(</a>,{type:“text/css”}),s=t.href;t.href=URL.createObjectURL(a),s&amp;&amp;URL.revokeObjectURL(s)}var
+m={},b=function(t){var e;return function(){return void
+0===e&amp;&amp;(e=t.apply(this,arguments)),e}}(function(){return
+window&amp;&amp;document&amp;&amp;document.all&amp;&amp;!window.atob}),v=function(t){var
+e={};return function(n){return void <a href="n">0===e</a>&amp;&amp;(<a
+href="n">e</a>=<a href="n">t.call(this,n)),e</a>}}(function(t){return
+document.querySelector(t)}),g=null,h=0,w=[],y=n(15);t.exports=function(t,e){if(“undefined”!=typeof
+DEBUG&amp;&amp;DEBUG&amp;&amp;“object”!=typeof document)throw new
+Error(“The style-loader cannot be used in a non-browser
+environment”);e=e||{},e.attrs=“object”==typeof
+e.attrs?e.attrs:{},e.singleton||(e.singleton=b()),e.insertInto||(e.insertInto=“head”),e.insertAt||(e.insertAt=“bottom”);var
+n=r(t,e);return o(n,e),function(t){for(var i=[],a=0;a&lt;n.length;a++){var
+<a href="a">s=n</a>,<a
+href="s.id">c=m</a>;c.refs–,i.push©}if(t){o(r(t,e),e)}for(var
+a=0;a&lt;i.length;a++){var <a href="a">c=i</a>;if(0===c.refs){for(var <a
+href="l">l=0;l<c.parts.length;l++)c.parts</a>();delete <a
+href="c.id">m</a>}}}};var x=function(){var t=[];return function(e,n){return
+<a
+href="e">t</a>=n,t.filter(Boolean).join(“n”)}}()},function(t,e){t.exports=function(t){var
+e=“undefined”!=typeof window&amp;&amp;window.location;if(!e)throw new
+Error(“fixUrls requires window.location”);if(!t||“string”!=typeof t)return
+t;var <a
+href="^\/">n=e.protocol+“//”+e.host,o=n+e.pathname.replace(//</a>*$/,“/”);return
+<a
+href="^)(">t.replace(/urls*(((?:</a>|((?:[^)(]+|([^)(]*))*))*))/gi,function(t,e){var
+r=e.trim().replace(/^“(.*)”$/,function(t,e){return
+e}).replace(/^&#39;(.*)&#39;$/,function(t,e){return e});if(/^(#|data:|<a
+href="http:\/\/|https:\/\/|file:\/\/\/)/i.test(r))return">//|https://|file:///)/i.test®)return</a>
+t;var i;return
+i=0===r.indexOf(“//”)?r:0===r.indexOf(“/”)?n+r:o+r.replace(/^.//,“”),“url(”+JSON.stringify(i)+“)”})}},function(t,e,n){var
+o=n(17);“undefined”==typeof
+window||window.Promise||(window.Promise=o),n(21),String.prototype.includes||(String.prototype.includes=function(t,e){“use
+strict”;return“number”!=typeof
+e&amp;&amp;(e=0),!(e+t.length&gt;this.length)&amp;&amp;-1!==this.indexOf(t,e)}),Array.prototype.includes||Object.defineProperty(Array.prototype,“includes”,{value:function(t,e){if(null==this)throw
+new TypeError(&#39;“this” is null or not defined&#39;);var
+n=Object(this),o=n.length&gt;&gt;&gt;0;if(0===o)return!1;for(var
+r=0|e,i=Math.max(r&gt;=0?r:o-Math.abs®,0);i&lt;o;){if(function(t,e){return
+t===e||“number”==typeof t&amp;&amp;“number”==typeof
+e&amp;&amp;isNaN(t)&amp;&amp;isNaN(e)}(<a
+href="i">n</a>,t))return!0;i++}return!1}}),“undefined”!=typeof
+window&amp;&amp;function(t){t.forEach(function(t){t.hasOwnProperty(“remove”)||Object.defineProperty(t,“remove”,{configurable:!0,enumerable:!0,writable:!0,value:function(){this.parentNode.removeChild(this)}})})}([Element.prototype,CharacterData.prototype,DocumentType.prototype])},function(t,e,n){(function(e){!function(n){function
+o(){}function r(t,e){return function(){t.apply(e,arguments)}}function
+i(t){if(“object”!=typeof this)throw new TypeError(“Promises must be
+constructed via new”);if(“function”!=typeof t)throw new TypeError(“not a
+function”);this._state=0,this._handled=!1,this._value=void
+0,this._deferreds=[],f(t,this)}function
+a(t,e){for(;3===t._state;)t=t._value;if(0===t._state)return void
+t._deferreds.push(e);t._handled=!0,i._immediateFn(function(){var
+n=1===t._state?e.onFulfilled:e.onRejected;if(null===n)return
+void(1===t._state?s:c)(e.promise,t._value);var
+o;try{o=n(t._value)}catch(t){return void
+c(e.promise,t)}s(e.promise,o)})}function s(t,e){try{if(e===t)throw new
+TypeError(“A promise cannot be resolved with
+itself.”);if(e&amp;&amp;(“object”==typeof e||“function”==typeof e)){var
+n=e.then;if(e instanceof i)return t._state=3,t._value=e,void
+l(t);if(“function”==typeof n)return void
+f(r(n,e),t)}t._state=1,t._value=e,l(t)}catch(e){c(t,e)}}function
+c(t,e){t._state=2,t._value=e,l(t)}function
+l(t){2===t._state&amp;&amp;0===t._deferreds.length&amp;&amp;i._immediateFn(function(){t._handled||i._unhandledRejectionFn(t._value)});for(var
+<a
+href="e">e=0,n=t._deferreds.length;e<n;e++)a(t,t._deferreds</a>);t._deferreds=null}function
+u(t,e,n){this.onFulfilled=“function”==typeof
+t?t:null,this.onRejected=“function”==typeof
+e?e:null,this.promise=n}function f(t,e){var
+n=!1;try{t(function(t){n||(n=!0,s(e,t))},function(t){n||(n=!0,c(e,t))})}catch(t){if(n)return;n=!0,c(e,t)}}var
+d=setTimeout;i.prototype.catch=function(t){return
+this.then(null,t)},i.prototype.then=function(t,e){var n=new
+this.constructor(o);return a(this,new u(t,e,n)),n},i.all=function(t){var
+e=Array.prototype.slice.call(t);return new i(function(t,n){function
+o(i,a){try{if(a&amp;&amp;(“object”==typeof a||“function”==typeof a)){var
+s=a.then;if(“function”==typeof s)return void
+s.call(a,function(t){o(i,t)},n)}<a
+href="i">e</a>=a,0==–r&amp;&amp;t(e)}catch(t){n(t)}}if(0===e.length)return
+t([]);for(var <a
+href="i">r=e.length,i=0;i<e.length;i++)o(i,e</a>)})},i.resolve=function(t){return
+t&amp;&amp;“object”==typeof t&amp;&amp;t.constructor===i?t:new
+i(function(e){e(t)})},i.reject=function(t){return new
+i(function(e,n){n(t)})},i.race=function(t){return new
+i(function(e,n){for(var <a
+href="o">o=0,r=t.length;o<r;o++)t</a>.then(e,n)})},i._immediateFn=“function”==typeof
+e&amp;&amp;function(t){e(t)}||function(t){d(t,0)},i._unhandledRejectionFn=function(t){“undefined”!=typeof
+console&amp;&amp;console&amp;&amp;console.warn(“Possible Unhandled Promise
+Rejection:”,t)},i._setImmediateFn=function(t){i._immediateFn=t},i._setUnhandledRejectionFn=function(t){i._unhandledRejectionFn=t},void
+0!==t&amp;&amp;t.exports?t.exports=i:n.Promise||(n.Promise=i)}(this)}).call(e,n(18).setImmediate)},function(t,e,n){function
+o(t,e){this._id=t,this._clearFn=e}var
+r=Function.prototype.apply;e.setTimeout=function(){return new
+o(r.call(setTimeout,window,arguments),clearTimeout)},e.setInterval=function(){return
+new
+o(r.call(setInterval,window,arguments),clearInterval)},e.clearTimeout=e.clearInterval=function(t){t&amp;&amp;t.close()},o.prototype.unref=o.prototype.ref=function(){},o.prototype.close=function(){this._clearFn.call(window,this._id)},e.enroll=function(t,e){clearTimeout(t._idleTimeoutId),t._idleTimeout=e},e.unenroll=function(t){clearTimeout(t._idleTimeoutId),t._idleTimeout=-1},e._unrefActive=e.active=function(t){clearTimeout(t._idleTimeoutId);var
+e=t._idleTimeout;e&gt;=0&amp;&amp;(t._idleTimeoutId=setTimeout(function(){t._onTimeout&amp;&amp;t._onTimeout()},e))},n(19),e.setImmediate=setImmediate,e.clearImmediate=clearImmediate},function(t,e,n){(function(t,e){!function(t,n){“use
+strict”;function o(t){“function”!=typeof t&amp;&amp;(t=new
+Function(“”+t));for(var e=new <a
+href="n">Array(arguments.length-1),n=0;n<e.length;n++)e</a>=<a
+href="n+1">arguments</a>;var o={callback:t,args:e};return <a
+href="c">l</a>=o,s©,c++}function r(t){delete <a href="t">l</a>}function
+i(t){var e=t.callback,o=t.args;switch(o.length){case 0:e();break;case <a
+href="0">1:e(o</a>);break;case <a href="0">2:e(o</a>,<a
+href="1">o</a>);break;case <a href="0">3:e(o</a>,<a href="1">o</a>,<a
+href="2">o</a>);break;default:e.apply(n,o)}}function
+a(t){if(u)setTimeout(a,0,t);else{var <a
+href="t">e=l</a>;if(e){u=!0;try{i(e)}finally{r(t),u=!1}}}}if(!t.setImmediate){var
+s,c=1,l={},u=!1,f=t.document,d=Object.getPrototypeOf&amp;&amp;Object.getPrototypeOf(t);d=d&amp;&amp;d.setTimeout?d:t,“[object
+process]”==={}.toString.call(t.process)?function(){s=function(t){e.nextTick(function(){a(t)})}}():function(){if(t.postMessage&amp;&amp;!t.importScripts){var
+e=!0,n=t.onmessage;return
+t.onmessage=function(){e=!1},t.postMessage(“”,“*”),t.onmessage=n,e}}()?function(){var
+e=“setImmediate$”+Math.random()+“$”,n=function(n){n.source===t&amp;&amp;“string”==typeof
+n.data&amp;&amp;0===n.data.indexOf(e)&amp;&amp;a(+n.data.slice(e.length))};t.addEventListener?t.addEventListener(“message”,n,!1):t.attachEvent(“onmessage”,n),s=function(n){t.postMessage(e+n,“*”)}}():t.MessageChannel?function(){var
+t=new
+MessageChannel;t.port1.onmessage=function(t){a(t.data)},s=function(e){t.port2.postMessage(e)}}():f&amp;&amp;“onreadystatechange”in
+f.createElement(“script”)?function(){var
+t=f.documentElement;s=function(e){var
+n=f.createElement(“script”);n.onreadystatechange=function(){a(e),n.onreadystatechange=null,t.removeChild(n),n=null},t.appendChild(n)}}():function(){s=function(t){setTimeout(a,0,t)}}(),d.setImmediate=o,d.clearImmediate=r}}(“undefined”==typeof
+self?void 0===t?this:t:self)}).call(e,n(7),n(20))},function(t,e){function
+n(){throw new Error(“setTimeout has not been defined”)}function o(){throw
+new Error(“clearTimeout has not been defined”)}function
+r(t){if(u===setTimeout)return
+setTimeout(t,0);if((u===n||!u)&amp;&amp;setTimeout)return
+u=setTimeout,setTimeout(t,0);try{return u(t,0)}catch(e){try{return
+u.call(null,t,0)}catch(e){return u.call(this,t,0)}}}function
+i(t){if(f===clearTimeout)return
+clearTimeout(t);if((f===o||!f)&amp;&amp;clearTimeout)return
+f=clearTimeout,clearTimeout(t);try{return f(t)}catch(e){try{return
+f.call(null,t)}catch(e){return f.call(this,t)}}}function
+a(){b&amp;&amp;p&amp;&amp;(b=!1,p.length?m=p.concat(m):v=-1,m.length&amp;&amp;s())}function
+s(){if(!b){var t=r(a);b=!0;for(var e=m.length;e;){<a
+href="v">for(p=m,m=[];++v<e;)p&&p</a>.run();v=-1,e=m.length}p=null,b=!1,i(t)}}function
+c(t,e){this.fun=t,this.array=e}function l(){}var
+u,f,d=t.exports={};!function(){try{u=“function”==typeof
+setTimeout?setTimeout:n}catch(t){u=n}try{f=“function”==typeof
+clearTimeout?clearTimeout:o}catch(t){f=o}}();var
+p,m=[],b=!1,v=-1;d.nextTick=function(t){var e=new
+Array(arguments.length-1);if(arguments.length&gt;1)for(var <a
+href="n-1">n=1;n<arguments.length;n++)e</a>=<a
+href="n">arguments</a>;m.push(new
+c(t,e)),1!==m.length||b||r(s)},c.prototype.run=function(){this.fun.apply(null,this.array)},d.title=“browser”,d.browser=!0,d.env={},<a
+href="">d.argv=[],d.version=“”,d.versions={},d.on=l,d.addListener=l,d.once=l,d.off=l,d.removeListener=l,d.removeAllListeners=l,d.emit=l,d.prependListener=l,d.prependOnceListener=l,d.listeners=function(t){return</a>},d.binding=function(t){throw
+new Error(“process.binding is not
+supported”)},d.cwd=function(){return“/”},d.chdir=function(t){throw new
+Error(“process.chdir is not supported”)},d.umask=function(){return
+0}},function(t,e,n){“use strict”;n(22).polyfill()},function(t,e,n){“use
+strict”;function o(t,e){if(void 0===t||null===t)throw new TypeError(“Cannot
+convert first argument to object”);for(var
+n=Object(t),o=1;o&lt;arguments.length;o++){var <a
+href="o">r=arguments</a>;if(void 0!==r&amp;&amp;null!==r)for(var
+i=Object.keys(Object®),a=0,s=i.length;a&lt;s;a++){var <a
+href="a">c=i</a>,l=Object.getOwnPropertyDescriptor(r,c);void <a
+href="c">0!==l&&l.enumerable&&(n</a>=<a href="c">r</a>)}}return n}function
+r(){Object.assign||Object.defineProperty(Object,“assign”,{enumerable:!1,configurable:!0,writable:!0,value:o})}t.exports={assign:o,polyfill:r}},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(24),r=n(6),i=n(5),a=n(36),s=function(){for(var <a
+href="e">t=[],e=0;e<arguments.length;e++)t</a>=<a
+href="e">arguments</a>;if(“undefined”!=typeof window){var
+n=a.getOpts.apply(void 0,t);return new
+Promise(function(t,e){i.default.promise={resolve:t,reject:e},o.default(n),setTimeout(function(){r.openModal()})})}};s.close=r.onAction,s.getState=r.getState,s.setActionValue=i.setActionValue,s.stopLoading=r.stopLoading,s.setDefaults=a.setDefaults,e.default=s},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(1),r=n(0),i=r.default.MODAL,a=n(4),s=n(34),c=n(35),l=n(1);e.init=function(t){o.getNode(i)||(document.body||l.throwErr(“You
+can only use SweetAlert AFTER the DOM has
+loaded!”),s.default(),a.default()),a.initModalContent(t),c.default(t)},e.default=e.init},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(0),r=o.default.MODAL;e.modalMarkup=&#39;n  &lt;div
+class=“&#39;<code>r</code>&#39;”&gt;&lt;/div&gt;&#39;,e.default=e.modalMarkup},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(0),r=o.default.OVERLAY,i=&#39;&lt;div n   
+class=“&#39;<code>r</code>&#39;”n    tabIndex=“-1”&gt;n 
+&lt;/div&gt;&#39;;e.default=i},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(0),r=o.default.ICON;e.errorIconMarkup=function(){var
+t=r+“–error”,e=t+“__line”;return&#39;n    &lt;div
+class=“&#39;<code>t</code>&#39;__x-mark”&gt;n      &lt;span
+class=“&#39;<code>e</code>” “<code>e</code>&#39;–left”&gt;&lt;/span&gt;n   
+&lt;span class=“&#39;<code>e</code>”
+“<code>e</code>&#39;–right”&gt;&lt;/span&gt;n    &lt;/div&gt;n 
+&#39;},e.warningIconMarkup=function(){var t=r+“–warning”;return&#39;n   
+&lt;span class=“&#39;<code>t</code>&#39;__body”&gt;n      &lt;span
+class=“&#39;<code>t</code>&#39;__dot”&gt;&lt;/span&gt;n    &lt;/span&gt;n 
+&#39;},e.successIconMarkup=function(){var t=r+“–success”;return&#39;n   
+&lt;span class=“&#39;<code>t</code>”__line
+“<code>t</code>&#39;__line–long”&gt;&lt;/span&gt;n    &lt;span
+class=“&#39;<code>t</code>”__line
+“<code>t</code>&#39;__line–tip”&gt;&lt;/span&gt;nn    &lt;div
+class=“&#39;<code>t</code>&#39;__ring”&gt;&lt;/div&gt;n    &lt;div
+class=“&#39;<code>t</code>&#39;__hide-corners”&gt;&lt;/div&gt;n 
+&#39;}},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(0),r=o.default.CONTENT;e.contentMarkup=&#39;n  &lt;div
+class=“&#39;<code>r</code>&#39;”&gt;nn 
+&lt;/div&gt;n&#39;},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(0),r=o.default.BUTTON_CONTAINER,i=o.default.BUTTON,a=o.default.BUTTON_LOADER;e.buttonMarkup=&#39;n
+&lt;div class=“&#39;<code>r</code>&#39;”&gt;nn    &lt;buttonn     
+class=“&#39;<code>i</code>&#39;”n    &gt;&lt;/button&gt;nn    &lt;div
+class=“&#39;<code>a</code>&#39;”&gt;n      &lt;div&gt;&lt;/div&gt;n     
+&lt;div&gt;&lt;/div&gt;n      &lt;div&gt;&lt;/div&gt;n    &lt;/div&gt;nn 
+&lt;/div&gt;n&#39;},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var <a
+href=""error","warning","success","info"">o=n(4),r=n(2),i=n(0),a=i.default.ICON,s=i.default.ICON_CUSTOM,c=</a>,l={error:r.errorIconMarkup(),warning:r.warningIconMarkup(),success:r.successIconMarkup()},u=function(t,e){var
+n=a+“–”+t;e.classList.add(n);var <a
+href="t">o=l</a>;o&amp;&amp;(e.innerHTML=o)},f=function(t,e){e.classList.add(s);var
+n=document.createElement(“img”);n.src=t,e.appendChild(n)},d=function(t){if(t){var
+e=o.injectElIntoModal(r.iconMarkup);c.includes(t)?u(t,e):f(t,e)}};e.default=d},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(2),r=n(4),i=function(t){navigator.userAgent.includes(“AppleWebKit”)&amp;&amp;(t.style.display=“none”,t.offsetHeight,t.style.display=“”)};e.initTitle=function(t){if(t){var
+e=r.injectElIntoModal(o.titleMarkup);e.textContent=t,i(e)}},e.initText=function(t){if(t){var
+e=r.injectElIntoModal(o.textMarkup);e.textContent=t,i(e)}}},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(1),r=n(4),i=n(0),a=i.default.BUTTON,s=i.default.DANGER_BUTTON,c=n(3),l=n(2),u=n(6),f=n(5),d=function(t,e,n){var
+r=e.text,i=e.value,d=e.className,p=e.closeModal,m=o.stringToNode(l.buttonMarkup),b=m.querySelector(“.”+a),v=a+“–”+t;b.classList.add(v),d&amp;&amp;b.classList.add(d),n&amp;&amp;t===c.CONFIRM_KEY&amp;&amp;b.classList.add(s),b.textContent=r;var
+g={};return <a
+href="t">g</a>=i,f.setActionValue(g),f.setActionOptionsFor(t,{closeModal:p}),b.addEventListener(“click”,function(){return
+u.onAction(t)}),m},p=function(t,e){var
+n=r.injectElIntoModal(l.footerMarkup);for(var o in t){var <a
+href="o">i=t</a>,a=d(o,i,e);i.visible&amp;&amp;n.appendChild(a)}0===n.children.length&amp;&amp;n.remove()};e.default=p},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(3),r=n(4),i=n(2),a=n(5),s=n(6),c=n(0),l=c.default.CONTENT,u=function(t){t.addEventListener(“input”,function(t){var
+e=t.target,n=e.value;a.setActionValue(n)}),t.addEventListener(“keyup”,function(t){if(“Enter”===t.key)return
+s.onAction(o.CONFIRM_KEY)}),setTimeout(function(){t.focus(),a.setActionValue(“”)},0)},f=function(t,e,n){var
+o=document.createElement(e),r=l+“__”+e;o.classList.add®;for(var i in n){var
+<a href="i">a=n</a>;<a
+href="i">o</a>=a}“input”===e&amp;&amp;u(o),t.appendChild(o)},d=function(t){if(t){var
+e=r.injectElIntoModal(i.contentMarkup),n=t.element,o=t.attributes;“string”==typeof
+n?f(e,n,o):e.appendChild(n)}};e.default=d},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(1),r=n(2),i=function(){var
+t=o.stringToNode(r.overlayMarkup);document.body.appendChild(t)};e.default=i},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(5),r=n(6),i=n(1),a=n(3),s=n(0),c=s.default.MODAL,l=s.default.BUTTON,u=s.default.OVERLAY,f=function(t){t.preventDefault(),v()},d=function(t){t.preventDefault(),g()},p=function(t){if(o.default.isOpen)switch(t.key){case“Escape”:return
+r.onAction(a.CANCEL_KEY)}},m=function(t){if(o.default.isOpen)switch(t.key){case“Tab”:return
+f(t)}},b=function(t){if(o.default.isOpen)return“Tab”===t.key&amp;&amp;t.shiftKey?d(t):void
+0},v=function(){var
+t=i.getNode(l);t&amp;&amp;(t.tabIndex=0,t.focus())},g=function(){var <a
+href="n">t=i.getNode©,e=t.querySelectorAll(“.”+l),n=e.length-1,o=e</a>;o&amp;&amp;o.focus()},h=function(t){<a
+href="t.length-1">t</a>.addEventListener(“keydown”,m)},w=function(t){<a
+href="0">t</a>.addEventListener(“keydown”,b)},y=function(){var
+t=i.getNode©,e=t.querySelectorAll(“.”+l);e.length&amp;&amp;(h(e),w(e))},x=function(t){if(i.getNode(u)===t.target)return
+r.onAction(a.CANCEL_KEY)},_=function(t){var
+e=i.getNode(u);e.removeEventListener(“click”,x),t&amp;&amp;e.addEventListener(“click”,x)},k=function(t){o.default.timer&amp;&amp;clearTimeout(o.default.timer),t&amp;&amp;(o.default.timer=window.setTimeout(function(){return
+r.onAction(a.CANCEL_KEY)},t))},O=function(t){t.closeOnEsc?document.addEventListener(“keyup”,p):document.removeEventListener(“keyup”,p),t.dangerMode?v():g(),y(),_(t.closeOnClickOutside),k(t.timer)};e.default=O},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(1),r=n(3),i=n(37),a=n(38),s={title:null,text:null,icon:null,buttons:r.defaultButtonList,content:null,className:null,closeOnClickOutside:!0,closeOnEsc:!0,dangerMode:!1,timer:null},c=Object.assign({},s);e.setDefaults=function(t){c=Object.assign({},s,t)};var
+l=function(t){var e=t&amp;&amp;t.button,n=t&amp;&amp;t.buttons;return void
+0!==e&amp;&amp;void 0!==n&amp;&amp;o.throwErr(“Cannot set both
+&#39;button&#39; and &#39;buttons&#39; options!”),void
+0!==e?{confirm:e}:n},u=function(t){return
+o.ordinalSuffixOf(t+1)},f=function(t,e){o.throwErr(u(e)+“ argument
+(&#39;”<code>t</code>“&#39;) is invalid”)},d=function(t,e){var <a
+href="n">n=t+1,r=e</a>;o.isPlainObject®||void 0===r||o.throwErr(“Expected
+”+u(n)+“ argument (&#39;”<code>r</code>“&#39;) to be a plain
+object”)},p=function(t,e){var <a href="n">n=t+1,r=e</a>;void
+0!==r&amp;&amp;o.throwErr(“Unexpected ”+u(n)+“ argument
+(”<code>r</code>“)”)},m=function(t,e,n,r){var i=typeof e,a=“string”===i,s=e
+instanceof Element;if(a){if(0===n)return{text:e};if(1===n)return{<a
+href="0">text:e,title:r</a>};if(2===n)return
+d(n,r),{icon:e};f(e,n)}else{if(s&amp;&amp;0===n)return
+d(n,r),{content:e};if(o.isPlainObject(e))return
+p(n,r),e;f(e,n)}};e.getOpts=function(){for(var <a
+href="e">t=[],e=0;e<arguments.length;e++)t</a>=<a
+href="e">arguments</a>;var n={};t.forEach(function(e,o){var
+r=m(0,e,o,t);Object.assign(n,r)});var
+o=l(n);n.buttons=r.getButtonListOpts(o),delete
+n.button,n.content=i.getContentOpts(n.content);var
+u=Object.assign({},s,c,n);return Object.keys(u).forEach(function(t){<a
+href="t">a.DEPRECATED_OPTS</a>&amp;&amp;a.logDeprecation(t)}),u}},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0});var
+o=n(1),r={element:“input”,attributes:{placeholder:“”}};e.getContentOpts=function(t){var
+e={};return o.isPlainObject(t)?Object.assign(e,t):t instanceof
+Element?{element:t}:“input”===t?r:null}},function(t,e,n){“use
+strict”;Object.defineProperty(e,“__esModule”,{value:!0}),e.logDeprecation=function(t){var
+<a
+href="t">n=e.DEPRECATED_OPTS</a>,o=n.onlyRename,r=n.replacement,i=n.subOption,a=n.link,s=o?“renamed”:“deprecated”,c=&#39;SweetAlert
+warning: “&#39;<code>t</code>&#39;” option has been
+&#39;<code>s</code>“.”;if®{c+=“ Please use”+(i?&#39;
+“&#39;<code>i</code>&#39;” in &#39;:“ ”)+&#39;“&#39;<code>r</code>&#39;”
+instead.&#39;}var l=“<a
+href="https://sweetalert.js.org";c+=a">sweetalert.js.org”;c+=a</a>?“ More
+details: ”+l+a:“ More details:
+”<code>l</code>“/guides/#upgrading-from-1x”,console.warn©},e.DEPRECATED_OPTS={type:{replacement:“icon”,<a
+href="../../"/docs/#icon"},imageUrl:{replacement:"icon",link:"/docs/#icon"},customClass:{replacement:"className",onlyRename:!0,link:"/docs/#classname"},imageSize:{},showCancelButton:{replacement:"buttons",link:"/docs/#buttons"},showConfirmButton:{replacement:"button",link:"/docs/#button"},confirmButtonText:{replacement:"button",link:"/docs/#button"},confirmButtonColor:{},cancelButtonText:{replacement:"buttons",link:"/docs/#buttons"},closeOnConfirm:{replacement:"button",subOption:"closeModal",link:"/docs/#button"},closeOnCancel:{replacement:"buttons",subOption:"closeModal",link:"/docs/#buttons"},showLoaderOnConfirm:{replacement:"buttons"},animation:{},inputType:{replacement:"content",link:"/docs/#content"},inputValue:{replacement:"content",link:"/docs/#content"},inputPlaceholder:{replacement:"content",link:"/docs/#content"},html:{replacement:"content",link:"/docs/#content"},allowEscapeKey:{replacement:"closeOnEsc",onlyRename:!0,link:"/docs/#closeonesc"},allowClickOutside:{replacement:"closeOnClickOutside",onlyRename:!0,link:"/docs/#closeonclickoutside">“/docs/#icon”},imageUrl:{replacement:“icon”,link:“/docs/#icon”},customClass:{replacement:“className”,onlyRename:!0,link:“/docs/#classname”},imageSize:{},showCancelButton:{replacement:“buttons”,link:“/docs/#buttons”},showConfirmButton:{replacement:“button”,link:“/docs/#button”},confirmButtonText:{replacement:“button”,link:“/docs/#button”},confirmButtonColor:{},cancelButtonText:{replacement:“buttons”,link:“/docs/#buttons”},closeOnConfirm:{replacement:“button”,subOption:“closeModal”,link:“/docs/#button”},closeOnCancel:{replacement:“buttons”,subOption:“closeModal”,link:“/docs/#buttons”},showLoaderOnConfirm:{replacement:“buttons”},animation:{},inputType:{replacement:“content”,link:“/docs/#content”},inputValue:{replacement:“content”,link:“/docs/#content”},inputPlaceholder:{replacement:“content”,link:“/docs/#content”},html:{replacement:“content”,link:“/docs/#content”},allowEscapeKey:{replacement:“closeOnEsc”,onlyRename:!0,link:“/docs/#closeonesc”},allowClickOutside:{replacement:“closeOnClickOutside”,onlyRename:!0,link:“/docs/#closeonclickoutside</a>”}}}])});</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

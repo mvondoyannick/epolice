@@ -1,10 +1,6 @@
 <% content_for(:title, 'DASHBOARD GESTION DES AGENTS')%>
 <p id="notice"><%= notice %></p>
 
-<%= link_to new_agent_path, class: 'btn btn-primary m-b-40 btn-sm' do %>
-  <i class="fa fa-plus"></i>
-  Ajouter un agent
-<% end %>
 <h1 class="m-b-40">
   Agents de police
 </h1>
@@ -12,9 +8,10 @@
 <div class="row">
   <div class="col-lg-12 col-xl-12 col-sm-12 table-responsive">
     <div class="table-responsive table--no-card m-b-30">
-      <table class="table table-borderless table-striped table-earning table-borderless table-active">
+      <table class="table table-borderless table-striped table-earning table-borderless table-active table-responsive">
         <thead>
         <tr>
+          <th>Photo</th>
           <th>Matricule</th>
           <th>Nom & prénom</th>
           <th>Phone</th>
@@ -26,10 +23,11 @@
         <tbody>
         <% @agents.each do |agent| %>
           <tr>
+            <td><%= image_tag(agent.avatar.url, size: 50) %></td>
             <td><%= agent.matricule %></td>
             <td><%= agent.complete_name %></td>
             <td><%= agent.phone %></td>
-            <td><%= agent.groupement.name.split[1] if !agent.groupement_id.nil? %></td>
+            <td><%= agent.region.name if !agent.region_id.nil? %></td>
             <td><%= agent.groupement.name if !agent.groupement_id.nil? %></td>
             <td><%= link_to 'Voir', agent %></td>
             <td>

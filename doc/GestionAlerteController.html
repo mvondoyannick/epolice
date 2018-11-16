@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class GestionAlerteController - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-all">#all</a>
+    
+    <li ><a href="#method-i-archive">#archive</a>
+    
+    <li ><a href="#method-i-carte">#carte</a>
+    
+    <li ><a href="#method-i-cartography">#cartography</a>
+    
+    <li ><a href="#method-i-mounth">#mounth</a>
+    
+    <li ><a href="#method-i-periode">#periode</a>
+    
+    <li ><a href="#method-i-region">#region</a>
+    
+    <li ><a href="#method-i-resolve">#resolve</a>
+    
+    <li ><a href="#method-i-time_machine">#time_machine</a>
+    
+    <li ><a href="#method-i-today">#today</a>
+    
+    <li ><a href="#method-i-tri_ville">#tri_ville</a>
+    
+    <li ><a href="#method-i-unresolve">#unresolve</a>
+    
+    <li ><a href="#method-i-week">#week</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-GestionAlerteController">
+  <h1 id="class-GestionAlerteController" class="class">
+    class GestionAlerteController
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-all" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">all</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="all-source">
+            <pre><span class="ruby-comment"># File app/controllers/gestion_alerte_controller.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">all</span>
+  <span class="ruby-ivar">@alertes</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">order</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-value">:desc</span>)
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;modules&#39;</span>, <span class="ruby-value">:access_application_path</span>
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;liste des alertes&#39;</span>, <span class="ruby-value">:gestion_alerte_alertes_all_path</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-archive" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">archive</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="archive-source">
+            <pre><span class="ruby-comment"># File app/controllers/gestion_alerte_controller.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">archive</span>
+  <span class="ruby-identifier">id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:alerte_id</span>]
+  <span class="ruby-identifier">query</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">query</span>.<span class="ruby-identifier">archive</span> = <span class="ruby-string">&quot;archived&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">query</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:back</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;Impossible d&#39;archiver&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-carte" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">carte</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="carte-source">
+            <pre><span class="ruby-comment"># File app/controllers/gestion_alerte_controller.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">carte</span>
+  <span class="ruby-identifier">data</span> = <span class="ruby-identifier">params</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;========= #{data} =============&quot;</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;cartography&#39;</span>, <span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">data</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-cartography" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cartography</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Affiche touts les points sur une carte leafleft</p>
+          
+          
+
+          
+          <div class="method-source-code" id="cartography-source">
+            <pre><span class="ruby-comment"># File app/controllers/gestion_alerte_controller.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cartography</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">nil</span>
+    <span class="ruby-identifier">id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-comment">#contient la date de debut</span>
+    <span class="ruby-ivar">@cartography</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-identifier">id</span>.<span class="ruby-identifier">days</span>.<span class="ruby-identifier">ago</span><span class="ruby-operator">..</span><span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>).<span class="ruby-identifier">order</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-value">:desc</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-comment">#contient la date de debut</span>
+    <span class="ruby-ivar">@cartography</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-identifier">id</span>.<span class="ruby-identifier">days</span>.<span class="ruby-identifier">ago</span><span class="ruby-operator">..</span><span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>).<span class="ruby-identifier">order</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-value">:desc</span>)
+    <span class="ruby-comment">#@cartography = Alerte.where(created_at: id.days.ago..Date.today, ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc)</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-mounth" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mounth</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="mounth-source">
+            <pre><span class="ruby-comment"># File app/controllers/gestion_alerte_controller.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mounth</span>
+  <span class="ruby-ivar">@mois</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-value">30</span>.<span class="ruby-identifier">days</span>.<span class="ruby-identifier">ago</span><span class="ruby-operator">..</span><span class="ruby-constant">Date</span>.<span class="ruby-identifier">tomorrow</span>).<span class="ruby-identifier">order</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-value">:desc</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-periode" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">periode</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>permet de gere la recherche par periode</p>
+          
+          
+
+          
+          <div class="method-source-code" id="periode-source">
+            <pre><span class="ruby-comment"># File app/controllers/gestion_alerte_controller.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">periode</span>
+  <span class="ruby-ivar">@debut</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:debut</span>]
+  <span class="ruby-ivar">@fin</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:fin</span>]
+  <span class="ruby-ivar">@query</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:debut</span>]<span class="ruby-operator">..</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:fin</span>]).<span class="ruby-identifier">order</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-value">:desc</span>)
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-region" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">region</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="region-source">
+            <pre><span class="ruby-comment"># File app/controllers/gestion_alerte_controller.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">region</span>
+  <span class="ruby-ivar">@region</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">order</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-value">:desc</span>).<span class="ruby-identifier">order</span>(<span class="ruby-identifier">ville_id</span><span class="ruby-operator">:</span> <span class="ruby-value">:desc</span>).<span class="ruby-identifier">distinct</span>
+
+  <span class="ruby-comment">#on affiche aussi toutes les villes disponible</span>
+  <span class="ruby-ivar">@ville</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">distinct</span>.<span class="ruby-identifier">pluck</span>(<span class="ruby-value">:ville_id</span>)
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-resolve" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">resolve</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>pour les alerte resolues</p>
+          
+          
+
+          
+          <div class="method-source-code" id="resolve-source">
+            <pre><span class="ruby-comment"># File app/controllers/gestion_alerte_controller.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">resolve</span>
+  <span class="ruby-ivar">@query</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">statu_id</span><span class="ruby-operator">:</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">order</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-value">:desc</span>)
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-time_machine" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">time_machine</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="time_machine-source">
+            <pre><span class="ruby-comment"># File app/controllers/gestion_alerte_controller.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">time_machine</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-today" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">today</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>retourne toutes les alertes de ce jour</p>
+          
+          
+
+          
+          <div class="method-source-code" id="today-source">
+            <pre><span class="ruby-comment"># File app/controllers/gestion_alerte_controller.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">today</span>
+  <span class="ruby-ivar">@today</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">beginning_of_day</span><span class="ruby-operator">..</span><span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">end_of_day</span>).<span class="ruby-identifier">order</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-value">:desc</span>).<span class="ruby-identifier">all</span>
+  <span class="ruby-comment">#@today = Alerte.where(created_at: Time.now.beginning_of_day..Time.now.end_of_day, ville_id: Agent.find(session[:id]).ville_id).order(created_at: :desc).all</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tri_ville" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">tri_ville</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="tri_ville-source">
+            <pre><span class="ruby-comment"># File app/controllers/gestion_alerte_controller.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tri_ville</span>
+  <span class="ruby-ivar">@ville</span> = <span class="ruby-constant">Ville</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:ville_id</span>]).<span class="ruby-identifier">name</span>
+  <span class="ruby-ivar">@alerte</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">ville_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ville_id</span>]).<span class="ruby-identifier">order</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-value">:desc</span>)
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-unresolve" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">unresolve</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>pour les alertes non resolues</p>
+          
+          
+
+          
+          <div class="method-source-code" id="unresolve-source">
+            <pre><span class="ruby-comment"># File app/controllers/gestion_alerte_controller.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unresolve</span>
+  <span class="ruby-ivar">@query</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">statu_id</span><span class="ruby-operator">:</span> <span class="ruby-value">2</span>).<span class="ruby-identifier">order</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-value">:desc</span>)
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-week" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">week</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="week-source">
+            <pre><span class="ruby-comment"># File app/controllers/gestion_alerte_controller.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">week</span>
+  <span class="ruby-ivar">@week</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-value">7</span>.<span class="ruby-identifier">days</span>.<span class="ruby-identifier">ago</span><span class="ruby-operator">..</span><span class="ruby-constant">Date</span>.<span class="ruby-identifier">tomorrow</span>).<span class="ruby-identifier">order</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-value">:desc</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

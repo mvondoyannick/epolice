@@ -1,7 +1,7 @@
 class AgentsController < ApplicationController
   before_action :set_agent, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
-  add_breadcrumb "Acceuil", :parametre_index_path
+  add_breadcrumb "Fichiers", :parametre_index_path
   add_breadcrumb "gestion des agents", :agents_path
   layout 'fylo'
   # GET /agents
@@ -54,7 +54,7 @@ class AgentsController < ApplicationController
   def update
     respond_to do |format|
       if @agent.update(agent_params)
-        format.html { redirect_to @agent, notice: 'Agent was successfully updated.' }
+        format.html { redirect_to agents_path, notice: 'Agent was successfully updated.' }
         format.json { render :show, status: :ok, location: @agent }
       else
         format.html { render :edit }

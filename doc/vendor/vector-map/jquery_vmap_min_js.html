@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>jquery.vmap.min.js - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../README_md.html">README</a>
+  
+    <li><a href="../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="../../app/assets/fonts/fontawesome-webfont_svg.html">fontawesome-webfont.svg</a>
+  
+    <li><a href="../../app/assets/javascripts/access_coffee.html">access.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/affectations_coffee.html">affectations.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/agents_coffee.html">agents.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/alertes_coffee.html">alertes.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../app/assets/javascripts/archive_coffee.html">archive.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/arrondissements_coffee.html">arrondissements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/assurance_coffee.html">assurance.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../app/assets/javascripts/bulletins_coffee.html">bulletins.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="../../app/assets/javascripts/carrefours_coffee.html">carrefours.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/centrepartenaires_coffee.html">centrepartenaires.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/centrerecouvrements_coffee.html">centrerecouvrements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/comments_coffee.html">comments.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/commissariats_coffee.html">commissariats.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/compte_coffee.html">compte.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/constat_coffee.html">constat.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/constats_coffee.html">constats.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/convocations_coffee.html">convocations.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/departements_coffee.html">departements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/faker_min_js.html">faker.min.js</a>
+  
+    <li><a href="../../app/assets/javascripts/gestion_alerte_coffee.html">gestion_alerte.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/gestion_constat_coffee.html">gestion_constat.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/gestion_contravention_coffee.html">gestion_contravention.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/grades_coffee.html">grades.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/groupements_coffee.html">groupements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/grvpc_coffee.html">grvpc.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/infractions_coffee.html">infractions.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/journal_coffee.html">journal.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/langues_coffee.html">langues.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/manage_coffee.html">manage.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/member_coffee.html">member.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/metropoli_coffee.html">metropoli.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/metropolisroles_coffee.html">metropolisroles.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/paiementsolutions_coffee.html">paiementsolutions.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/parametre_coffee.html">parametre.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/pieceretenus_coffee.html">pieceretenus.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/postepolices_coffee.html">postepolices.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/public_coffee.html">public.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/regions_coffee.html">regions.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/roles_coffee.html">roles.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/services_coffee.html">services.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/statistique_coffee.html">statistique.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/status_coffee.html">status.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/statuses_coffee.html">statuses.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/structures_coffee.html">structures.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/typeaccidents_coffee.html">typeaccidents.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/types_coffee.html">types.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/u_coffee.html">u.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/unites_coffee.html">unites.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/villes_coffee.html">villes.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/workflows_coffee.html">workflows.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/zonecouverturemotifs_coffee.html">zonecouverturemotifs.coffee</a>
+  
+    <li><a href="../../app/assets/stylesheets/_application_css.html">_application.css</a>
+  
+    <li><a href="../../app/assets/stylesheets/access_scss.html">access.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/affectations_scss.html">affectations.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/agents_scss.html">agents.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/alertes_scss.html">alertes.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/application_scss.html">application.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/archive_scss.html">archive.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/arrondissements_scss.html">arrondissements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/assurance_scss.html">assurance.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/bulletins_scss.html">bulletins.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/carrefours_scss.html">carrefours.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/centrepartenaires_scss.html">centrepartenaires.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/centrerecouvrements_scss.html">centrerecouvrements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/comments_scss.html">comments.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/commissariats_scss.html">commissariats.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/compte_scss.html">compte.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/constat_scss.html">constat.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/constats_scss.html">constats.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/contravetions_scss.html">contravetions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/convocations_scss.html">convocations.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/departements_scss.html">departements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/gestion_alerte_scss.html">gestion_alerte.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/gestion_constat_scss.html">gestion_constat.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/gestion_contravention_scss.html">gestion_contravention.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/grades_scss.html">grades.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/groupements_scss.html">groupements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/grvpc_scss.html">grvpc.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/infractions_scss.html">infractions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/journal_scss.html">journal.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/langues_scss.html">langues.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/manage_scss.html">manage.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/member_scss.html">member.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/metropoli_scss.html">metropoli.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/metropolisroles_scss.html">metropolisroles.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/paiementsolutions_scss.html">paiementsolutions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/parametre_scss.html">parametre.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/pieceretenus_scss.html">pieceretenus.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/postepolices_scss.html">postepolices.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/public_scss.html">public.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/regions_scss.html">regions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/roles_scss.html">roles.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/services_scss.html">services.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/statistique_scss.html">statistique.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/status_scss.html">status.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/statuses_scss.html">statuses.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/structures_scss.html">structures.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/typeaccidents_scss.html">typeaccidents.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/types_scss.html">types.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/unites_scss.html">unites.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/villes_scss.html">villes.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/zonecouverturemotifs_scss.html">zonecouverturemotifs.scss</a>
+  
+    <li><a href="../../app/views/affectations/_affectation_json_jbuilder.html">_affectation.json.jbuilder</a>
+  
+    <li><a href="../../app/views/affectations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/affectations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/agents/Untitled-1.html">Untitled-1</a>
+  
+    <li><a href="../../app/views/agents/Untitled-2.html">Untitled-2</a>
+  
+    <li><a href="../../app/views/agents/_agent_json_jbuilder.html">_agent.json.jbuilder</a>
+  
+    <li><a href="../../app/views/agents/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/agents/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/alertes/_alerte_json_jbuilder.html">_alerte.json.jbuilder</a>
+  
+    <li><a href="../../app/views/alertes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/alertes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/arrondissements/_arrondissement_json_jbuilder.html">_arrondissement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/arrondissements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/arrondissements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/bulletins/_bulletin_json_jbuilder.html">_bulletin.json.jbuilder</a>
+  
+    <li><a href="../../app/views/bulletins/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/bulletins/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/carrefours/_carrefour_json_jbuilder.html">_carrefour.json.jbuilder</a>
+  
+    <li><a href="../../app/views/carrefours/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/carrefours/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrepartenaires/_centrepartenaire_json_jbuilder.html">_centrepartenaire.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrepartenaires/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrepartenaires/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrerecouvrements/_centrerecouvrement_json_jbuilder.html">_centrerecouvrement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrerecouvrements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrerecouvrements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/comments/_comment_json_jbuilder.html">_comment.json.jbuilder</a>
+  
+    <li><a href="../../app/views/comments/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/comments/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/commissariats/_commissariat_json_jbuilder.html">_commissariat.json.jbuilder</a>
+  
+    <li><a href="../../app/views/commissariats/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/commissariats/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/constats/_constat_json_jbuilder.html">_constat.json.jbuilder</a>
+  
+    <li><a href="../../app/views/constats/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/constats/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contravetions/_contravetion_json_jbuilder.html">_contravetion.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contravetions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contravetions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/convocations/_convocation_json_jbuilder.html">_convocation.json.jbuilder</a>
+  
+    <li><a href="../../app/views/convocations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/convocations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/departements/_departement_json_jbuilder.html">_departement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/departements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/departements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/grades/_grade_json_jbuilder.html">_grade.json.jbuilder</a>
+  
+    <li><a href="../../app/views/grades/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/grades/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/groupements/_groupement_json_jbuilder.html">_groupement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/groupements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/groupements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/infractions/_infraction_json_jbuilder.html">_infraction.json.jbuilder</a>
+  
+    <li><a href="../../app/views/infractions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/infractions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/langues/_langue_json_jbuilder.html">_langue.json.jbuilder</a>
+  
+    <li><a href="../../app/views/langues/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/langues/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/metropolisroles/_metropolisrole_json_jbuilder.html">_metropolisrole.json.jbuilder</a>
+  
+    <li><a href="../../app/views/metropolisroles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/metropolisroles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paiementsolutions/_paiementsolution_json_jbuilder.html">_paiementsolution.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paiementsolutions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paiementsolutions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/pieceretenus/_pieceretenu_json_jbuilder.html">_pieceretenu.json.jbuilder</a>
+  
+    <li><a href="../../app/views/pieceretenus/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/pieceretenus/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/postepolices/_postepolice_json_jbuilder.html">_postepolice.json.jbuilder</a>
+  
+    <li><a href="../../app/views/postepolices/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/postepolices/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/regions/_region_json_jbuilder.html">_region.json.jbuilder</a>
+  
+    <li><a href="../../app/views/regions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/regions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/roles/_role_json_jbuilder.html">_role.json.jbuilder</a>
+  
+    <li><a href="../../app/views/roles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/roles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/services/_service_json_jbuilder.html">_service.json.jbuilder</a>
+  
+    <li><a href="../../app/views/services/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/services/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/status/_status_json_jbuilder.html">_status.json.jbuilder</a>
+  
+    <li><a href="../../app/views/status/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/status/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/statuses/_status_json_jbuilder.html">_status.json.jbuilder</a>
+  
+    <li><a href="../../app/views/statuses/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/statuses/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/structures/_structure_json_jbuilder.html">_structure.json.jbuilder</a>
+  
+    <li><a href="../../app/views/structures/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/structures/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/typeaccidents/_typeaccident_json_jbuilder.html">_typeaccident.json.jbuilder</a>
+  
+    <li><a href="../../app/views/typeaccidents/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/typeaccidents/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/types/_type_json_jbuilder.html">_type.json.jbuilder</a>
+  
+    <li><a href="../../app/views/types/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/types/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/unites/_unite_json_jbuilder.html">_unite.json.jbuilder</a>
+  
+    <li><a href="../../app/views/unites/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/unites/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/villes/_ville_json_jbuilder.html">_ville.json.jbuilder</a>
+  
+    <li><a href="../../app/views/villes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/villes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/workflows/_workflow_json_jbuilder.html">_workflow.json.jbuilder</a>
+  
+    <li><a href="../../app/views/workflows/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/workflows/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/zonecouverturemotifs/_zonecouverturemotif_json_jbuilder.html">_zonecouverturemotif.json.jbuilder</a>
+  
+    <li><a href="../../app/views/zonecouverturemotifs/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/zonecouverturemotifs/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../brouillons_txt.html">brouillons</a>
+  
+    <li><a href="../../config_ru.html">config.ru</a>
+  
+    <li><a href="../../erd_dot.html">erd.dot</a>
+  
+    <li><a href="../../hi.html">hi</a>
+  
+    <li><a href="../../lib/templates/rails/jbuilder/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../log/production_log.html">production.log</a>
+  
+    <li><a href="../../log/test_log.html">test.log</a>
+  
+    <li><a href="../../package_json.html">package.json</a>
+  
+    <li><a href="../../public/404_html.html">404.html</a>
+  
+    <li><a href="../../public/422_html.html">422.html</a>
+  
+    <li><a href="../../public/500_html.html">500.html</a>
+  
+    <li><a href="../../public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="../../public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="../../public/assets/application-1d6a15def6671efd85aa7f12dd7a187c8a4010b2f141f1f26f17c84657c45352_js.html">application-1d6a15def6671efd85aa7f12dd7a187c8a4010b2f141f1f26f17c84657c45352.js</a>
+  
+    <li><a href="../../public/assets/application-5173f52181c8a9ce2fd1869b7a408c290415dd6db3d815626ca73dcbf8150eb4_css.html">application-5173f52181c8a9ce2fd1869b7a408c290415dd6db3d815626ca73dcbf8150eb4.css</a>
+  
+    <li><a href="../../public/assets/fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c_svg.html">fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c.svg</a>
+  
+    <li><a href="../../public/assets/leaflet-src_js-6eed528b5678ee4f34b8be267a8da5d14734d58d56baeea6a31e9819e6630775_map.html">leaflet-src.js-6eed528b5678ee4f34b8be267a8da5d14734d58d56baeea6a31e9819e6630775.map</a>
+  
+    <li><a href="../../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../../public/robots_txt.html">robots</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/_rest_managed_json.html">_rest_managed.json</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/admin-extra_html.html">admin-extra.html</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/currency_xml.html">currency.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/elevate_xml.html">elevate.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/lang/stopwords_en_txt.html">stopwords_en</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/mapping-ISOLatin1Accent_txt.html">mapping-ISOLatin1Accent</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/protwords_txt.html">protwords</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/schema_xml.html">schema.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/scripts_conf.html">scripts.conf</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/solrconfig_xml.html">solrconfig.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/spellings_txt.html">spellings</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/synonyms_txt.html">synonyms</a>
+  
+    <li><a href="../../solr/default/core_properties.html">core.properties</a>
+  
+    <li><a href="../../solr/development/core_properties.html">core.properties</a>
+  
+    <li><a href="../../solr/solr_xml.html">solr.xml</a>
+  
+    <li><a href="../../solr/test/core_properties.html">core.properties</a>
+  
+    <li><a href="../../tmp/pids/server_pid.html">server.pid</a>
+  
+    <li><a href="../../tmp/restart_txt.html">restart</a>
+  
+    <li><a href="../../vendor/animsition/animsition_min_css.html">animsition.min.css</a>
+  
+    <li><a href="../../vendor/animsition/animsition_min_js.html">animsition.min.js</a>
+  
+    <li><a href="../../vendor/bootstrap-4_1/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../../vendor/bootstrap-4_1/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../vendor/bootstrap-4_1/popper_min_js.html">popper.min.js</a>
+  
+    <li><a href="../../vendor/bootstrap-progressbar/bootstrap-progressbar-3_3_4_min_css.html">bootstrap-progressbar-3.3.4.min.css</a>
+  
+    <li><a href="../../vendor/bootstrap-progressbar/bootstrap-progressbar_min_js.html">bootstrap-progressbar.min.js</a>
+  
+    <li><a href="../../vendor/chartjs/Chart_bundle_min_js.html">Chart.bundle.min.js</a>
+  
+    <li><a href="../../vendor/circle-progress/circle-progress_js.html">circle-progress.js</a>
+  
+    <li><a href="../../vendor/circle-progress/circle-progress_min_js.html">circle-progress.min.js</a>
+  
+    <li><a href="../../vendor/countdown/countdowntime_js.html">countdowntime.js</a>
+  
+    <li><a href="../../vendor/countdown/jquery_countdown_min_js.html">jquery.countdown.min.js</a>
+  
+    <li><a href="../../vendor/countdown/moment-timezone-with-data_min_js.html">moment-timezone-with-data.min.js</a>
+  
+    <li><a href="../../vendor/countdown/moment-timezone_min_js.html">moment-timezone.min.js</a>
+  
+    <li><a href="../../vendor/countdown/moment_min_js.html">moment.min.js</a>
+  
+    <li><a href="../../vendor/counter-up/jquery_counterup_min_js.html">jquery.counterup.min.js</a>
+  
+    <li><a href="../../vendor/counter-up/jquery_waypoints_min_js.html">jquery.waypoints.min.js</a>
+  
+    <li><a href="../../vendor/counter-up/waypoints_min_js.html">waypoints.min.js</a>
+  
+    <li><a href="../../vendor/css-hamburgers/hamburgers_css.html">hamburgers.css</a>
+  
+    <li><a href="../../vendor/css-hamburgers/hamburgers_min_css.html">hamburgers.min.css</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/HELP-US-OUT_txt.html">HELP-US-OUT</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/css/font-awesome_css.html">font-awesome.css</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/css/font-awesome_min_css.html">font-awesome.min.css</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/fonts/fontawesome-webfont_svg.html">fontawesome-webfont.svg</a>
+  
+    <li><a href="../../vendor/font-awesome-5/css/fontawesome-all_min_css.html">fontawesome-all.min.css</a>
+  
+    <li><a href="../../vendor/font-awesome-5/webfonts/fa-brands-400_svg.html">fa-brands-400.svg</a>
+  
+    <li><a href="../../vendor/font-awesome-5/webfonts/fa-regular-400_svg.html">fa-regular-400.svg</a>
+  
+    <li><a href="../../vendor/font-awesome-5/webfonts/fa-solid-900_svg.html">fa-solid-900.svg</a>
+  
+    <li><a href="../../vendor/jquery-3_2_1_min_js.html">jquery-3.2.1.min.js</a>
+  
+    <li><a href="../../vendor/jquery-ui_min_js.html">jquery-ui.min.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/css/lightbox_css.html">lightbox.css</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox-plus-jquery_js.html">lightbox-plus-jquery.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox-plus-jquery_min_js.html">lightbox-plus-jquery.min.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox-plus-jquery_min_map.html">lightbox-plus-jquery.min.map</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox_js.html">lightbox.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox_min_js.html">lightbox.min.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox_min_map.html">lightbox.min.map</a>
+  
+    <li><a href="../../vendor/lightbox2/src/css/lightbox_css.html">lightbox.css</a>
+  
+    <li><a href="../../vendor/lightbox2/src/js/lightbox_js.html">lightbox.js</a>
+  
+    <li><a href="../../vendor/mdi-font/css/material-design-iconic-font_css.html">material-design-iconic-font.css</a>
+  
+    <li><a href="../../vendor/mdi-font/css/material-design-iconic-font_min_css.html">material-design-iconic-font.min.css</a>
+  
+    <li><a href="../../vendor/mdi-font/fonts/Material-Design-Iconic-Font_svg.html">Material-Design-Iconic-Font.svg</a>
+  
+    <li><a href="../../vendor/perfect-scrollbar/perfect-scrollbar_css.html">perfect-scrollbar.css</a>
+  
+    <li><a href="../../vendor/perfect-scrollbar/perfect-scrollbar_js.html">perfect-scrollbar.js</a>
+  
+    <li><a href="../../vendor/perfect-scrollbar/perfect-scrollbar_min_js.html">perfect-scrollbar.min.js</a>
+  
+    <li><a href="../../vendor/progressbar/progressbar_js.html">progressbar.js</a>
+  
+    <li><a href="../../vendor/progressbar/progressbar_min_js.html">progressbar.min.js</a>
+  
+    <li><a href="../../vendor/select2/select2_min_css.html">select2.min.css</a>
+  
+    <li><a href="../../vendor/select2/select2_min_js.html">select2.min.js</a>
+  
+    <li><a href="../../vendor/slick/fonts/slick_svg.html">slick.svg</a>
+  
+    <li><a href="../../vendor/slick/slick-theme_css.html">slick-theme.css</a>
+  
+    <li><a href="../../vendor/slick/slick-theme_less.html">slick-theme.less</a>
+  
+    <li><a href="../../vendor/slick/slick-theme_scss.html">slick-theme.scss</a>
+  
+    <li><a href="../../vendor/slick/slick_css.html">slick.css</a>
+  
+    <li><a href="../../vendor/slick/slick_js.html">slick.js</a>
+  
+    <li><a href="../../vendor/slick/slick_less.html">slick.less</a>
+  
+    <li><a href="../../vendor/slick/slick_min_js.html">slick.min.js</a>
+  
+    <li><a href="../../vendor/slick/slick_scss.html">slick.scss</a>
+  
+    <li><a href="../../vendor/smk-accordion/accordion_css.html">accordion.css</a>
+  
+    <li><a href="../../vendor/smk-accordion/accordion_js.html">accordion.js</a>
+  
+    <li><a href="../../vendor/smk-accordion/accordion_min_js.html">accordion.min.js</a>
+  
+    <li><a href="../../vendor/sweetalert/sweetalert_min_js.html">sweetalert.min.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_brazil_js.html">jquery.vmap.brazil.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_europe_js.html">jquery.vmap.europe.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_france_js.html">jquery.vmap.france.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_germany_js.html">jquery.vmap.germany.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_js.html">jquery.vmap.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_min_js.html">jquery.vmap.min.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_russia_js.html">jquery.vmap.russia.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_sampledata_js.html">jquery.vmap.sampledata.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_usa_js.html">jquery.vmap.usa.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_world_js.html">jquery.vmap.world.js</a>
+  
+    <li><a href="../../vendor/vector-map/jqvmap_min_css.html">jqvmap.min.css</a>
+  
+    <li><a href="../../vendor/wow/animate_css.html">animate.css</a>
+  
+    <li><a href="../../vendor/wow/wow_min_js.html">wow.min.js</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page vendor/vector-map/jquery.vmap.min.js">
+
+<pre>!
+ JQVMap: jQuery Vector Map Library
+ @author JQVMap &lt;me@peterschmalfeldt.com&gt;
+ @version 1.5.1
+ @link http://jqvmap.com
+ @license https://github.com/manifestinteractive/jqvmap/blob/master/LICENSE
+ @builddate 2016/06/02</pre>
+
+<p>var
+VectorCanvas=function(a,b,c){if(this.mode=window.SVGAngle?“svg”:“vml”,this.params=c,“svg”===this.mode)this.createSvgNode=function(a){return
+document.createElementNS(this.svgns,a)};else{try{document.namespaces.rvml||document.namespaces.add(“rvml”,“urn:schemas-microsoft-com:vml”),this.createVmlNode=function(a){return
+document.createElement(“&lt;rvml:”<code>a</code>&#39;
+class=“rvml”&gt;&#39;)}}catch(d){this.createVmlNode=function(a){return
+document.createElement(“&lt;”<code>a</code>&#39;
+xmlns=“urn:schemas-microsoft.com:vml”
+class=“rvml”&gt;&#39;)}}document.createStyleSheet().addRule(“.rvml”,“behavior:url(#default#VML)”)}“svg”===this.mode?this.canvas=this.createSvgNode(“svg”):(this.canvas=this.createVmlNode(“group”),this.canvas.style.position=“absolute”),this.setSize(a,b)};VectorCanvas.prototype={svgns:“<a
+href="http://www.w3.org/2000/svg",mode:"svg",width:0,height:0,canvas:null};var">www.w3.org/2000/svg”,mode:“svg”,width:0,height:0,canvas:null};var</a>
+ColorScale=function(a,b,c,d){a&amp;&amp;this.setColors(a),b&amp;&amp;this.setNormalizeFunction(b),c&amp;&amp;this.setMin©,c&amp;&amp;this.setMax(d)};ColorScale.prototype={colors:[]};var
+JQVMap=function(a){a=a||{};var <a
+href="a.map">b,c=this,d=JQVMap.maps</a>;if(!d)throw new Error(&#39;Invalid
+“&#39;<code>a.map</code>&#39;” map parameter. Please make sure you have
+loaded this map file in your
+HTML.&#39;);this.selectedRegions=[],this.multiSelectRegion=a.multiSelectRegion,this.container=a.container,this.defaultWidth=d.width,this.defaultHeight=d.height,this.color=a.color,this.selectedColor=a.selectedColor,this.hoverColor=a.hoverColor,this.hoverColors=a.hoverColors,this.hoverOpacity=a.hoverOpacity,this.setBackgroundColor(a.backgroundColor),this.width=a.container.width(),this.height=a.container.height(),this.resize(),jQuery(window).resize(function(){var
+d=a.container.width(),e=a.container.height();if(d&amp;&amp;e){c.width=d,c.height=e,c.resize(),c.canvas.setSize(c.width,c.height),c.applyTransform();var
+<a
+href="d,e">f=jQuery.Event(“resize.jqvmap”);jQuery(a.container).trigger(f,</a>),b&amp;&amp;(jQuery(“.jqvmap-pin”).remove(),c.pinHandlers=!1,c.placePins(b.pins,b.mode))}}),this.canvas=new
+VectorCanvas(this.width,this.height,a),a.container.append(this.canvas.canvas),this.makeDraggable(),this.rootGroup=this.canvas.createGroup(!0),this.index=JQVMap.mapIndex,this.label=jQuery(“&lt;div/&gt;”).addClass(“jqvmap-label”).appendTo(jQuery(“body”)).hide(),a.enableZoom&amp;&amp;(jQuery(“&lt;div/&gt;”).addClass(“jqvmap-zoomin”).text(“+”).appendTo(a.container),jQuery(“&lt;div/&gt;”).addClass(“jqvmap-zoomout”).html(“&amp;#x2212;”).appendTo(a.container)),c.countries=[];for(var
+e in d.paths){var f=this.canvas.createPath({<a
+href="e">path:d.paths</a>.path});<a
+href="e">f.setFill(this.color),f.id=c.getCountryId(e),c.countries</a>=f,“svg”===this.canvas.mode?f.setAttribute(“class”,“jqvmap-region”):jQuery(f).addClass(“jqvmap-region”),jQuery(this.rootGroup).append(f)}if(jQuery(a.container).delegate(“svg”===this.canvas.mode?“path”:“shape”,“mouseover
+mouseout”,function(b){var <a
+href="f">e=b.target,f=b.target.id.split(“_”).pop(),g=jQuery.Event(“labelShow.jqvmap”),h=jQuery.Event(“regionMouseOver.jqvmap”);f=f.toLowerCase(),“mouseover”===b.type?(jQuery(a.container).trigger(h,[f,d.paths</a>.<a
+href="f">name]),h.isDefaultPrevented()||c.highlight(f,e),a.showTooltip&&(c.label.text(d.paths</a>.<a
+href="c.label,f">name),jQuery(a.container).trigger(g,</a>),<a
+href="f">g.isDefaultPrevented()||(c.label.show(),c.labelWidth=c.label.width(),c.labelHeight=c.label.height()))):(c.unhighlight(f,e),c.label.hide(),jQuery(a.container).trigger(“regionMouseOut.jqvmap”,[f,d.paths</a>.name]))}),jQuery(a.container).delegate(“svg”===this.canvas.mode?“path”:“shape”,“click”,function(b){var
+<a
+href="f">e=b.target,f=b.target.id.split(“_”).pop(),g=jQuery.Event(“regionClick.jqvmap”);if(f=f.toLowerCase(),jQuery(a.container).trigger(g,[f,d.paths</a>.name]),!a.multiSelectRegion&amp;&amp;!g.isDefaultPrevented())for(var
+h in <a href="h">d.paths)c.countries</a>.<a
+href="h">currentFillColor=c.countries</a>.<a
+href="h">getOriginalFill(),c.countries</a>.<a
+href="h">setFill(c.countries</a>.getOriginalFill());g.isDefaultPrevented()||(c.isSelected(f)?c.deselect(f,e):c.select(f,e))}),a.showTooltip&amp;&amp;a.container.mousemove(function(a){if(c.label.is(“:visible”)){var
+b=a.pageX-15-c.labelWidth,d=a.pageY-15-c.labelHeight;0&gt;b&amp;&amp;(b=a.pageX+15),0&gt;d&amp;&amp;(d=a.pageY+15),c.label.css({left:b,top:d})}}),this.setColors(a.colors),this.canvas.canvas.appendChild(this.rootGroup),this.applyTransform(),this.colorScale=new
+ColorScale(a.scaleColors,a.normalizeFunction,a.valueMin,a.valueMax),a.values&amp;&amp;(this.values=a.values,this.setValues(a.values)),a.selectedRegions)if(a.selectedRegions
+instanceof Array)for(var g in <a
+href="g">a.selectedRegions)this.select(a.selectedRegions</a>.toLowerCase());else
+this.select(a.selectedRegions.toLowerCase());if(this.bindZoomButtons(),a.pins&amp;&amp;(b={pins:a.pins,mode:a.pinMode},this.pinHandlers=!1,this.placePins(a.pins,a.pinMode)),a.showLabels){this.pinHandlers=!1;var
+h={};for(e in c.countries)“function”!=typeof <a
+href="e">c.countries</a>&amp;&amp;(<a href="e">a.pins&&a.pins</a>||(<a
+href="e">h</a>=e.toUpperCase()));b={pins:h,mode:“content”},this.placePins(h,“content”)}JQVMap.mapIndex++};JQVMap.prototype={transX:0,transY:0,scale:1,baseTransX:0,baseTransY:0,baseScale:1,width:0,height:0,countries:{},countriesColors:{},countriesData:{},zoomStep:1.4,zoomMaxStep:4,zoomCurStep:1},JQVMap.xlink=“<a
+href="http://www.w3.org/1999/xlink",JQVMap.mapIndex=1,JQVMap.maps={},function(){var">www.w3.org/1999/xlink”,JQVMap.mapIndex=1,JQVMap.maps={},function(){var</a>
+a={colors:1,values:1,backgroundColor:1,scaleColors:1,normalizeFunction:1,enableZoom:1,showTooltip:1,borderColor:1,borderWidth:1,borderOpacity:1,selectedRegions:1,multiSelectRegion:1},b={onLabelShow:“labelShow”,onLoad:“load”,onRegionOver:“regionMouseOver”,onRegionOut:“regionMouseOut”,onRegionClick:“regionClick”,onRegionSelect:“regionSelect”,onRegionDeselect:“regionDeselect”,onResize:“resize”};jQuery.fn.vectorMap=function©{var
+d={map:“world_en”,backgroundColor:“#a5bfdd”,color:“#f4f3f0”,hoverColor:“#c9dfaf”,hoverColors:{},<a
+href=""#b6d6ff","#005ace"">selectedColor:“#c9dfaf”,scaleColors:</a>,normalizeFunction:“linear”,enableZoom:!0,showTooltip:!0,borderColor:“#818181”,borderWidth:1,borderOpacity:.25,selectedRegions:null,multiSelectRegion:!1},<a
+href="1">e=this.data(“mapObject”);if(“addMap”===c)JQVMap.maps[arguments</a>]=<a
+href="2">arguments</a>;else{<a
+href="1">if(“set”!==c||!a[arguments</a>]){if(“string”==typeof
+c&amp;&amp;“function”==typeof <a href="c">e</a>)return <a
+href="c">e</a>.apply(e,Array.prototype.slice.call(arguments,1));jQuery.extend(d,c),d.container=this,this.css({position:“relative”,overflow:“hidden”}),e=new
+JQVMap(d),this.data(“mapObject”,e),this.unbind(“.jqvmap”);for(var f in <a
+href="f">b)d</a>&amp;&amp;<a href="f">this.bind(b</a>+“.<a
+href="f">jqvmap”,d</a>);var g=jQuery.Event(“load.jqvmap”);return
+jQuery(d.container).trigger(g,e),e}<a href="1">e[“set”+arguments</a>.<a
+href="1">charAt(0).toUpperCase()+arguments</a>.substr(1)].apply(e,Array.prototype.slice.call(arguments,2))}}}(jQuery),ColorScale.arrayToRgb=function(a){for(var
+<a
+href="d">b,c=“#”,d=0;d<a.length;d++)b=a</a>.toString(16),c+=1===b.length?“0”+b:b;return
+c},ColorScale.prototype.getColor=function(a){“function”==typeof
+this.normalize&amp;&amp;(a=this.normalize(a));for(var <a
+href="e+1">b,c=[],d=0,e=0;e<this.colors.length-1;e++)b=this.vectorLength(this.vectorSubtract(this.colors</a>,<a
+href="e">this.colors</a>)),c.push(b),d+=b;var <a
+href="e">f=(this.maxValue-this.minValue)/d;for(e=0;e<c.length;e++)c</a>*=<a
+href="e">f;for(e=0,a-=this.minValue;a-c</a>&gt;=<a
+href="e">0;)a-=c</a>,e++;var <a
+href="e">g;for(g=e===this.colors.length-1?this.vectorToNum(this.colors</a>).<a
+href="e">toString(16):this.vectorToNum(this.vectorAdd(this.colors</a>,<a
+href="e+1">this.vectorMult(this.vectorSubtract(this.colors</a>,<a
+href="e">this.colors</a>),<a
+href="e">a/c</a>))).toString(16);g.length&lt;6;)g=“0”+g;return“#”+g},ColorScale.rgbToArray=function(a){return
+<a
+href="parseInt(a.substr(0,2),16),parseInt(a.substr(2,2),16),parseInt(a.substr(4,2),16)">a=a.substr(1),</a>},ColorScale.prototype.setColors=function(a){for(var
+<a href="b">b=0;b<a.length;b++)a</a>=<a
+href="b">ColorScale.rgbToArray(a</a>);this.colors=a},ColorScale.prototype.setMax=function(a){this.clearMaxValue=a,“function”==typeof
+this.normalize?this.maxValue=this.normalize(a):this.maxValue=a},ColorScale.prototype.setMin=function(a){this.clearMinValue=a,“function”==typeof
+this.normalize?this.minValue=this.normalize(a):this.minValue=a},ColorScale.prototype.setNormalizeFunction=function(a){“polynomial”===a?this.normalize=function(a){return
+Math.pow(a,.2)}:“linear”===a?delete
+this.normalize:this.normalize=a,this.setMin(this.clearMinValue),this.setMax(this.clearMaxValue)},ColorScale.prototype.vectorAdd=function(a,b){for(var
+<a href="d">c=[],d=0;d<a.length;d++)c</a>=<a href="d">a</a>+<a
+href="d">b</a>;return
+c},ColorScale.prototype.vectorLength=function(a){for(var <a
+href="c">b=0,c=0;c<a.length;c++)b+=a</a>*<a href="c">a</a>;return
+Math.sqrt(b)},ColorScale.prototype.vectorMult=function(a,b){for(var <a
+href="d">c=[],d=0;d<a.length;d++)c</a>=<a href="d">a</a>*b;return
+c},ColorScale.prototype.vectorSubtract=function(a,b){for(var <a
+href="d">c=[],d=0;d<a.length;d++)c</a>=<a href="d">a</a>-<a
+href="d">b</a>;return
+c},ColorScale.prototype.vectorToNum=function(a){for(var <a
+href="c">b=0,c=0;c<a.length;c++)b+=Math.round(a</a>)*Math.pow(256,a.length-c-1);return
+b},JQVMap.prototype.applyTransform=function(){var
+a,b,c,d;this.defaultWidth*this.scale&lt;=this.width?(a=(this.width-this.defaultWidth*this.scale)/(2*this.scale),c=(this.width-this.defaultWidth*this.scale)/(2*this.scale)):(a=0,c=(this.width-this.defaultWidth*this.scale)/this.scale),this.defaultHeight*this.scale&lt;=this.height?(b=(this.height-this.defaultHeight*this.scale)/(2*this.scale),d=(this.height-this.defaultHeight*this.scale)/(2*this.scale)):(b=0,d=(this.height-this.defaultHeight*this.scale)/this.scale),this.transY&gt;b?this.transY=b:this.transY&lt;d&amp;&amp;(this.transY=d),this.transX&gt;a?this.transX=a:this.transX&lt;c&amp;&amp;(this.transX=c),this.canvas.applyTransformParams(this.scale,this.transX,this.transY)},JQVMap.prototype.bindZoomButtons=function(){var
+a=this;this.container.find(“.jqvmap-zoomin”).click(function(){a.zoomIn()}),this.container.find(“.jqvmap-zoomout”).click(function(){a.zoomOut()})},JQVMap.prototype.deselect=function(a,b){<a
+href="0">if(a=a.toLowerCase(),b=b||jQuery(“#”+this.getCountryId(a))</a>,<a
+href="a">this.isSelected(a))this.selectedRegions.splice(this.selectIndex(a),1),jQuery(this.container).trigger(“regionDeselect.jqvmap”,</a>),b.currentFillColor=b.getOriginalFill(),b.setFill(b.getOriginalFill());else
+for(var c in <a
+href="c">this.countries)this.selectedRegions.splice(this.selectedRegions.indexOf©,1),this.countries</a>.<a
+href="c">currentFillColor=this.color,this.countries</a>.setFill(this.color)},JQVMap.prototype.getCountryId=function(a){return“jqvmap”<code>this.index</code>“_”+a},JQVMap.prototype.getPin=function(a){var
+b=jQuery(“#”+this.getPinId(a));return
+b.html()},JQVMap.prototype.getPinId=function(a){return
+this.getCountryId(a)+“_pin”},JQVMap.prototype.getPins=function(){var
+a=this.container.find(“.jqvmap-pin”),b={};return
+jQuery.each(a,function(a,c){c=jQuery©;var <a
+href="d">d=c.attr(“for”).toLowerCase(),e=c.html();b</a>=e}),JSON.stringify(b)},JQVMap.prototype.highlight=function(a,b){<a
+href="0">b=b||jQuery(“#”+this.getCountryId(a))</a>,this.hoverOpacity?b.setOpacity(this.hoverOpacity):this.hoverColors&amp;&amp;a
+in <a
+href="a">this.hoverColors?(b.currentFillColor=b.getFill()+“”,b.setFill(this.hoverColors</a>)):this.hoverColor&amp;&amp;(b.currentFillColor=b.getFill()+“”,b.setFill(this.hoverColor))},JQVMap.prototype.isSelected=function(a){return
+this.selectIndex(a)&gt;=0},JQVMap.prototype.makeDraggable=function(){var
+a,b,c=!1,d=this;d.isMoving=!1,d.isMovingTimeout=!1;var
+e,f,g,h,i,j,k;this.container.mousemove(function(e){return
+c&amp;&amp;(d.transX-=(a-e.pageX)/d.scale,d.transY-=(b-e.pageY)/d.scale,d.applyTransform(),a=e.pageX,b=e.pageY,d.isMoving=!0,d.isMovingTimeout&amp;&amp;clearTimeout(d.isMovingTimeout),d.container.trigger(“drag”)),!1}).mousedown(function(d){return
+c=!0,a=d.pageX,b=d.pageY,!1}).mouseup(function(){return
+c=!1,clearTimeout(d.isMovingTimeout),d.isMovingTimeout=setTimeout(function(){d.isMoving=!1},100),!1}).mouseout(function(){return
+c&amp;&amp;d.isMoving?(clearTimeout(d.isMovingTimeout),d.isMovingTimeout=setTimeout(function(){c=!1,d.isMoving=!1},100),!1):void
+0}),jQuery(this.container).bind(“touchmove”,function(a){var
+b,c,l,m,n=a.originalEvent.touches;if(1===n.length){if(1===e){<a
+href="0">if(j===n</a>.<a href="0">pageX&&k===n</a>.<a
+href="0">pageY)return;l=d.transX,m=d.transY,d.transX-=(j-n</a>.<a
+href="0">pageX)/d.scale,d.transY-=(k-n</a>.pageY)/d.scale,d.applyTransform(),(l!==d.transX||m!==d.transY)&amp;&amp;a.preventDefault(),d.isMoving=!0,d.isMovingTimeout&amp;&amp;clearTimeout(d.isMovingTimeout)}<a
+href="0">j=n</a>.<a href="0">pageX,k=n</a>.pageY}else <a
+href="0">2===n.length&&(2===e?(c=Math.sqrt(Math.pow(n</a>.<a
+href="1">pageX-n</a>.<a href="0">pageX,2)+Math.pow(n</a>.<a
+href="1">pageY-n</a>.<a
+href="0">pageY,2))/h,d.setScale(i*c,f,g),a.preventDefault()):(b=jQuery(d.container).offset(),f=n</a>.<a
+href="1">pageX>n</a>.<a href="1">pageX?n</a>.<a href="0">pageX+(n</a>.<a
+href="1">pageX-n</a>.<a href="0">pageX)/2:n</a>.<a href="1">pageX+(n</a>.<a
+href="0">pageX-n</a>.<a href="0">pageX)/2,g=n</a>.<a
+href="1">pageY>n</a>.<a href="1">pageY?n</a>.<a href="0">pageY+(n</a>.<a
+href="1">pageY-n</a>.<a href="0">pageY)/2:n</a>.<a href="1">pageY+(n</a>.<a
+href="0">pageY-n</a>.<a
+href="0">pageY)/2,f-=b.left,g-=b.top,i=d.scale,h=Math.sqrt(Math.pow(n</a>.<a
+href="1">pageX-n</a>.<a href="0">pageX,2)+Math.pow(n</a>.<a
+href="1">pageY-n</a>.pageY,2))));e=n.length}),jQuery(this.container).bind(“touchstart”,function(){e=0}),jQuery(this.container).bind(“touchend”,function(){e=0})},JQVMap.prototype.placePins=function(a,b){var
+c=this;if((!b||“content”!==b&amp;&amp;“id”!==b)&amp;&amp;(b=“content”),“content”===b?jQuery.each(a,function(a,b){if(0!==jQuery(“#”+c.getCountryId(a)).length){var
+d=c.getPinId(a),e=jQuery(“#”+d);e.length&gt;0&amp;&amp;e.remove(),c.container.append(&#39;&lt;div
+id=“&#39;<code>d</code>&#39;” for=“&#39;<code>a</code>&#39;”
+class=“jqvmap-pin”
+style=“position:absolute”&gt;&#39;<code>b</code>“&lt;/div&gt;”)}}):jQuery.each(a,function(a,b){if(0!==jQuery(“#”+c.getCountryId(a)).length){var
+d=c.getPinId(a),e=jQuery(“#”+d);e.length&gt;0&amp;&amp;e.remove(),c.container.append(&#39;&lt;div
+id=“&#39;<code>d</code>&#39;” for=“&#39;<code>a</code>&#39;”
+class=“jqvmap-pin”
+style=“position:absolute”&gt;&lt;/div&gt;&#39;),e.append(jQuery(“#”+b))}}),this.positionPins(),!this.pinHandlers){this.pinHandlers=!0;var
+d=function(){c.positionPins()};this.container.bind(“zoomIn”,d).bind(“zoomOut”,d).bind(“drag”,d)}},JQVMap.prototype.positionPins=function(){var
+a=this,b=this.container.find(“.jqvmap-pin”);jQuery.each(b,function(b,c){c=jQuery©;var
+<a
+href="0">d=a.getCountryId(c.attr(“for”).toLowerCase()),e=jQuery(“#”+d),f=e</a>.<a
+href="0">getBBox(),g=a.scale,h=a.canvas.rootGroup.getBoundingClientRect(),i=a.container</a>.getBoundingClientRect(),j={left:h.left-i.left,top:h.top-i.top},k=f.x*g+f.width*g/2,l=f.y*g+f.height*g/2;c.css({left:j.left+k-c.width()/2,top:j.top+l-c.height()/2})})},JQVMap.prototype.removePin=function(a){a=a.toLowerCase(),jQuery(“#”+this.getPinId(a)).remove()},JQVMap.prototype.removePins=function(){this.container.find(“.jqvmap-pin”).remove()},JQVMap.prototype.reset=function(){for(var
+a in <a
+href="a">this.countries)this.countries</a>.setFill(this.color);this.scale=this.baseScale,this.transX=this.baseTransX,this.transY=this.baseTransY,this.applyTransform()},JQVMap.prototype.resize=function(){var
+a=this.baseScale;this.width/this.height&gt;this.defaultWidth/this.defaultHeight?(this.baseScale=this.height/this.defaultHeight,this.baseTransX=Math.abs(this.width-this.defaultWidth*this.baseScale)/(2*this.baseScale)):(this.baseScale=this.width/this.defaultWidth,this.baseTransY=Math.abs(this.height-this.defaultHeight*this.baseScale)/(2*this.baseScale)),this.scale*=this.baseScale/a,this.transX*=this.baseScale/a,this.transY*=this.baseScale/a},JQVMap.prototype.select=function(a,b){<a
+href="0">a=a.toLowerCase(),b=b||jQuery(“#”+this.getCountryId(a))</a>,<a
+href="a">this.isSelected(a)||(this.multiSelectRegion?this.selectedRegions.push(a):this.selectedRegions=</a>,<a
+href="a">jQuery(this.container).trigger(“regionSelect.jqvmap”,</a>),this.selectedColor&amp;&amp;b&amp;&amp;(b.currentFillColor=this.selectedColor,b.setFill(this.selectedColor)))},JQVMap.prototype.selectIndex=function(a){a=a.toLowerCase();for(var
+<a
+href="b">b=0;b<this.selectedRegions.length;b++)if(a===this.selectedRegions</a>)return
+b;return-1},JQVMap.prototype.setBackgroundColor=function(a){this.container.css(“background-color”,a)},JQVMap.prototype.setColors=function(a,b){if(“string”==typeof
+<a href="a">a)this.countries</a>.<a
+href="a">setFill(b),this.countries</a>.setAttribute(“original”,b);else{var
+c=a;for(var d in <a href="d">c)this.countries</a>&amp;&amp;(<a
+href="d">this.countries</a>.<a href="d">setFill(c</a>),<a
+href="d">this.countries</a>.<a
+href="d">setAttribute(“original”,c</a>))}},JQVMap.prototype.setNormalizeFunction=function(a){this.colorScale.setNormalizeFunction(a),this.values&amp;&amp;this.setValues(this.values)},JQVMap.prototype.setScale=function(a){this.scale=a,this.applyTransform()},JQVMap.prototype.setScaleColors=function(a){this.colorScale.setColors(a),this.values&amp;&amp;this.setValues(this.values)},JQVMap.prototype.setValues=function(a){var
+b,c=0,d=Number.MAX_VALUE;for(var e in <a
+href="e">a)e=e.toLowerCase(),b=parseFloat(a</a>),<a
+href="e">isNaN(b)||(b>c&&(c=a</a>),d&gt;b&amp;&amp;(d=b));d===c&amp;&amp;c++,this.colorScale.setMin(d),this.colorScale.setMax©;var
+f={};for(e in <a href="e">a)e=e.toLowerCase(),b=parseFloat(a</a>),<a
+href="e">f</a>=isNaN(b)?this.color:this.colorScale.getColor(b);this.setColors(f),this.values=a},JQVMap.prototype.unhighlight=function(a,b){<a
+href="0">a=a.toLowerCase(),b=b||jQuery(“#”+this.getCountryId(a))</a>,b.setOpacity(1),b.currentFillColor&amp;&amp;b.setFill(b.currentFillColor)},JQVMap.prototype.zoomIn=function(){var
+a=this,b=(jQuery(“#zoom”).innerHeight()-12-30-6-7-6)/(this.zoomMaxStep-this.zoomCurStep);if(a.zoomCurStep&lt;a.zoomMaxStep){a.transX-=(a.width/a.scale-a.width/(a.scale*a.zoomStep))/2,a.transY-=(a.height/a.scale-a.height/(a.scale*a.zoomStep))/2,a.setScale(a.scale*a.zoomStep),a.zoomCurStep++;var
+c=jQuery(“#zoomSlider”);c.css(“top”,parseInt(c.css(“top”),10)-b),a.container.trigger(“zoomIn”)}},JQVMap.prototype.zoomOut=function(){var
+a=this,b=(jQuery(“#zoom”).innerHeight()-12-30-6-7-6)/(this.zoomMaxStep-this.zoomCurStep);if(a.zoomCurStep&gt;1){a.transX+=(a.width/(a.scale/a.zoomStep)-a.width/a.scale)/2,a.transY+=(a.height/(a.scale/a.zoomStep)-a.height/a.scale)/2,a.setScale(a.scale/a.zoomStep),a.zoomCurStep–;var
+c=jQuery(“#zoomSlider”);c.css(“top”,parseInt(c.css(“top”),10)+b),a.container.trigger(“zoomOut”)}},VectorCanvas.prototype.applyTransformParams=function(a,b,c){“svg”===this.mode?this.rootGroup.setAttribute(“transform”,“scale(”<code>a</code>“)
+translate(”<code>b</code>“,
+”<code>c</code>“)”):(this.rootGroup.coordorigin=this.width-b+“,”+(this.height-c),this.rootGroup.coordsize=this.width/a+“,”+this.height/a)},VectorCanvas.prototype.createGroup=function(a){var
+b;return“svg”===this.mode?b=this.createSvgNode(“g”):(b=this.createVmlNode(“group”),b.style.width=this.width+“px”,b.style.height=this.height+“px”,b.style.left=“0px”,b.style.top=“0px”,b.coordorigin=“0
+0”,b.coordsize=this.width+“
+”+this.height),a&amp;&amp;(this.rootGroup=b),b},VectorCanvas.prototype.createPath=function(a){var
+b;if(“svg”===this.mode)b=this.createSvgNode(“path”),b.setAttribute(“d”,a.path),null!==this.params.borderColor&amp;&amp;b.setAttribute(“stroke”,this.params.borderColor),this.params.borderWidth&gt;0&amp;&amp;(b.setAttribute(“stroke-width”,this.params.borderWidth),b.setAttribute(“stroke-linecap”,“round”),b.setAttribute(“stroke-linejoin”,“round”)),this.params.borderOpacity&gt;0&amp;&amp;b.setAttribute(“stroke-opacity”,this.params.borderOpacity),b.setFill=function(a){this.setAttribute(“fill”,a),null===this.getAttribute(“original”)&amp;&amp;this.setAttribute(“original”,a)},b.getFill=function(){return
+this.getAttribute(“fill”)},b.getOriginalFill=function(){return
+this.getAttribute(“original”)},b.setOpacity=function(a){this.setAttribute(“fill-opacity”,a)};else{b=this.createVmlNode(“shape”),b.coordorigin=“0
+0”,b.coordsize=this.width+“
+”+this.height,b.style.width=this.width+“px”,b.style.height=this.height+“px”,b.fillcolor=JQVMap.defaultFillColor,b.stroked=!1,b.path=VectorCanvas.pathSvgToVml(a.path);var
+c=this.createVmlNode(“skew”);c.on=!0,c.matrix=“0.01,0,0,0.01,0,0”,c.offset=“0,0”,b.appendChild©;var
+d=this.createVmlNode(“fill”);b.appendChild(d),b.setFill=function(a){<a
+href="0">this.getElementsByTagName(“fill”)</a>.color=a,null===this.getAttribute(“original”)&amp;&amp;this.setAttribute(“original”,a)},b.getFill=function(){return
+<a
+href="0">this.getElementsByTagName(“fill”)</a>.color},b.getOriginalFill=function(){return
+this.getAttribute(“original”)},b.setOpacity=function(a){<a
+href="0">this.getElementsByTagName(“fill”)</a>.opacity=parseInt(100*a,10)+“%”}}return
+b},VectorCanvas.prototype.pathSvgToVml=function(a){var
+b,c,d=“”,e=0,f=0;return <a
+href="MmLlHhVvCcSs">a.replace(/(</a>)((?:-?(?:d+)?(?:.d+)?,?s?)+)/g,function(a,g,h){<a
+href="0">h=h.replace(/(d)-/g,“$1,-”).replace(/s+/g,“,”).split(“,”),h</a>||h.shift();for(var
+<a href="i">i=0,j=h.length;j>i;i++)h</a>=<a
+href="i">Math.round(100*h</a>);switch(g){<a href="0">case“m”:e+=h</a>,<a
+href="1">f+=h</a>,<a href="0">d=“t”+h.join(“,”);break;case“M”:e=h</a>,<a
+href="1">f=h</a>,<a href="0">d=“m”+h.join(“,”);break;case“l”:e+=h</a>,<a
+href="1">f+=h</a>,<a href="0">d=“r”+h.join(“,”);break;case“L”:e=h</a>,<a
+href="1">f=h</a>,<a href="0">d=“l”+h.join(“,”);break;case“h”:e+=h</a>,<a
+href="0">d=“r”+h</a>+“,<a href="0">0”;break;case“H”:e=h</a>,<a
+href="0">d=“l”e“,”+f;break;case“v”:f+=h</a>,<a href="0">d=“r0,”+h</a>;<a
+href="0">break;case“V”:f=h</a>,<a
+href="h.length-4">d=“l”e“,”+f;break;case“c”:b=e+h</a>,<a
+href="h.length-3">c=f+h</a>,<a href="h.length-2">e+=h</a>,<a
+href="h.length-1">f+=h</a>,<a
+href="h.length-4">d=“v”+h.join(“,”);break;case“C”:b=h</a>,<a
+href="h.length-3">c=h</a>,<a href="h.length-2">e=h</a>,<a
+href="h.length-1">f=h</a>,<a
+href="h.length-4">d=“c”+h.join(“,”);break;case“s”:h.unshift(f-c),h.unshift(e-b),b=e+h</a>,<a
+href="h.length-3">c=f+h</a>,<a href="h.length-2">e+=h</a>,<a
+href="h.length-1">f+=h</a>,<a
+href="h.length-4">d=“v”+h.join(“,”);break;case“S”:h.unshift(f+f-c),h.unshift(e+e-b),b=h</a>,<a
+href="h.length-3">c=h</a>,<a href="h.length-2">e=h</a>,<a
+href="h.length-1">f=h</a>,d=“c”+h.join(“,”)}return
+d}).replace(/z/g,“”)},VectorCanvas.prototype.setSize=function(a,b){if(“svg”===this.mode)this.canvas.setAttribute(“width”,a),this.canvas.setAttribute(“height”,b);else
+if(this.canvas.style.width=a+“px”,this.canvas.style.height=b+“px”,this.canvas.coordsize=a+“
+”+b,this.canvas.coordorigin=“0 0”,this.rootGroup){for(var <a
+href="d">c=this.rootGroup.getElementsByTagName(“shape”),d=0,e=c.length;e>d;d++)c</a>.coordsize=a+“
+”+<a href="d">b,c</a>.<a
+href="d">style.width=a+“px”,c</a>.style.height=b+“px”;this.rootGroup.coordsize=a+“
+”+b,this.rootGroup.style.width=a+“px”,this.rootGroup.style.height=b+“px”}this.width=a,this.height=b};</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

@@ -77,6 +77,10 @@ class Api::ConvocationsController < ApplicationController
   end
 
   #permet de verifier le token d'un agent
+  # @route: GET
+  # @params: matricule, as string
+  # @developer: mailto:mvondoyannick@gmail.com
+  # @detail:
   def verify_token
     matricule = params[:matricule]
 
@@ -113,6 +117,36 @@ class Api::ConvocationsController < ApplicationController
       }
     end
 
+  end
+
+  #permet de verifier une contravention
+  # @route: api/epolice/verify/contravention/cni
+  # @params: cni, as string
+  # @detail:
+  # @result: JSON tree
+  # developer: mailto:mvondoyannick@gmail.com
+  def verify_contravention
+    data = params[:cni].html_safe
+    query = Convocation.where(cni: data)
+    render json: {
+        result: query.map do |data|
+          {
+              contravention_id: data.id,
+              created_at: data.created_at,
+              expire_until: data.created_at+72.hours,
+              is_valid: (Date.today > data.created_at+72.hours),
+              phone: data.phone,
+              cni: data.cni,
+              immatriculation: data.immatriculation,
+              infraction_id: data.infraction_id,
+              infraction_name: data.infraction.motif,
+              infraction_amount: data.infraction.montant,
+              pieceretenu_id: data.pieceretenu_id,
+              pieceretenu_name: data.pieceretenu.name,
+              request_id: request.request_id
+          }
+        end
+    }
   end
 
   #verification du token via le canal USSD
@@ -231,7 +265,13 @@ class Api::ConvocationsController < ApplicationController
       #c'est ok, on envoi le SMS
         render json: {
             status: :save,
-            message: :created
+            message: :created,
+            is_paiement_set?: Modepaiement.where(status: 1).count,
+            modepaiement: Modepaiement.where(status: 1).map do |d|
+              {
+                  data: d.name
+              }
+            end
         }
     else
       render json: {
@@ -493,7 +533,7 @@ class Api::ConvocationsController < ApplicationController
 
   #gestion de la decharge
   # @detail : permet de gerer la decharge d'un document sur la base d'un N° de CNI et de la photo
-  # @routes
+  # @routes:
   # @verb : http post, http options
   # @params : CNI=>string, photo=>file_uri
   # @format result : JSON
@@ -501,9 +541,16 @@ class Api::ConvocationsController < ApplicationController
   def decharge
     cni = params[:cni].to_string.html_safe
     photo = params[:photo]
+    piece = params[:piece_name]
+    agent = params[:agent_id]
+    cni = params[:cni] #retourne la derniere contravention ayant le status payee | 1
+
+    query = Convocation.where(agent_id: agent, cni: cni, pieceretenu_id: piece)
+
+    render json: query
 
     #on recherche les information
-    SearchDecharge.new(cni)
+    #SearchDecharge.new(cni)
 
   end
 

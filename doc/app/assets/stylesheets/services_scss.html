@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>services.scss - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../";
+</script>
+
+<script src="../../../js/jquery.js"></script>
+<script src="../../../js/darkfish.js"></script>
+
+<link href="../../../css/fonts.css" rel="stylesheet">
+<link href="../../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../../README_md.html">README</a>
+  
+    <li><a href="../../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="../../../app/assets/fonts/fontawesome-webfont_svg.html">fontawesome-webfont.svg</a>
+  
+    <li><a href="../../../app/assets/javascripts/access_coffee.html">access.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/affectations_coffee.html">affectations.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/agents_coffee.html">agents.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/alertes_coffee.html">alertes.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/archive_coffee.html">archive.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/arrondissements_coffee.html">arrondissements.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/assurance_coffee.html">assurance.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/bulletins_coffee.html">bulletins.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/carrefours_coffee.html">carrefours.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/centrepartenaires_coffee.html">centrepartenaires.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/centrerecouvrements_coffee.html">centrerecouvrements.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/comments_coffee.html">comments.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/commissariats_coffee.html">commissariats.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/compte_coffee.html">compte.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/constat_coffee.html">constat.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/constats_coffee.html">constats.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/convocations_coffee.html">convocations.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/departements_coffee.html">departements.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/faker_min_js.html">faker.min.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/gestion_alerte_coffee.html">gestion_alerte.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gestion_constat_coffee.html">gestion_constat.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gestion_contravention_coffee.html">gestion_contravention.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/grades_coffee.html">grades.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/groupements_coffee.html">groupements.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/grvpc_coffee.html">grvpc.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/infractions_coffee.html">infractions.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/journal_coffee.html">journal.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/langues_coffee.html">langues.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/manage_coffee.html">manage.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/member_coffee.html">member.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/metropoli_coffee.html">metropoli.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/metropolisroles_coffee.html">metropolisroles.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/paiementsolutions_coffee.html">paiementsolutions.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/parametre_coffee.html">parametre.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/pieceretenus_coffee.html">pieceretenus.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/postepolices_coffee.html">postepolices.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/public_coffee.html">public.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/regions_coffee.html">regions.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/roles_coffee.html">roles.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/services_coffee.html">services.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/statistique_coffee.html">statistique.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/status_coffee.html">status.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/statuses_coffee.html">statuses.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/structures_coffee.html">structures.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/typeaccidents_coffee.html">typeaccidents.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/types_coffee.html">types.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/u_coffee.html">u.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/unites_coffee.html">unites.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/villes_coffee.html">villes.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/workflows_coffee.html">workflows.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/zonecouverturemotifs_coffee.html">zonecouverturemotifs.coffee</a>
+  
+    <li><a href="../../../app/assets/stylesheets/_application_css.html">_application.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/access_scss.html">access.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/affectations_scss.html">affectations.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/agents_scss.html">agents.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/alertes_scss.html">alertes.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/application_scss.html">application.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/archive_scss.html">archive.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/arrondissements_scss.html">arrondissements.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/assurance_scss.html">assurance.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/bulletins_scss.html">bulletins.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/carrefours_scss.html">carrefours.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/centrepartenaires_scss.html">centrepartenaires.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/centrerecouvrements_scss.html">centrerecouvrements.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/comments_scss.html">comments.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/commissariats_scss.html">commissariats.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/compte_scss.html">compte.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/constat_scss.html">constat.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/constats_scss.html">constats.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/contravetions_scss.html">contravetions.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/convocations_scss.html">convocations.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/departements_scss.html">departements.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/gestion_alerte_scss.html">gestion_alerte.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/gestion_constat_scss.html">gestion_constat.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/gestion_contravention_scss.html">gestion_contravention.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/grades_scss.html">grades.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/groupements_scss.html">groupements.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/grvpc_scss.html">grvpc.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/infractions_scss.html">infractions.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/journal_scss.html">journal.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/langues_scss.html">langues.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/manage_scss.html">manage.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/member_scss.html">member.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/metropoli_scss.html">metropoli.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/metropolisroles_scss.html">metropolisroles.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/paiementsolutions_scss.html">paiementsolutions.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/parametre_scss.html">parametre.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/pieceretenus_scss.html">pieceretenus.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/postepolices_scss.html">postepolices.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/public_scss.html">public.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/regions_scss.html">regions.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/roles_scss.html">roles.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/services_scss.html">services.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/statistique_scss.html">statistique.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/status_scss.html">status.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/statuses_scss.html">statuses.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/structures_scss.html">structures.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/typeaccidents_scss.html">typeaccidents.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/types_scss.html">types.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/unites_scss.html">unites.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/villes_scss.html">villes.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/zonecouverturemotifs_scss.html">zonecouverturemotifs.scss</a>
+  
+    <li><a href="../../../app/views/affectations/_affectation_json_jbuilder.html">_affectation.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/affectations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/affectations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/agents/Untitled-1.html">Untitled-1</a>
+  
+    <li><a href="../../../app/views/agents/Untitled-2.html">Untitled-2</a>
+  
+    <li><a href="../../../app/views/agents/_agent_json_jbuilder.html">_agent.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/agents/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/agents/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/alertes/_alerte_json_jbuilder.html">_alerte.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/alertes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/alertes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/arrondissements/_arrondissement_json_jbuilder.html">_arrondissement.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/arrondissements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/arrondissements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/bulletins/_bulletin_json_jbuilder.html">_bulletin.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/bulletins/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/bulletins/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/carrefours/_carrefour_json_jbuilder.html">_carrefour.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/carrefours/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/carrefours/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/centrepartenaires/_centrepartenaire_json_jbuilder.html">_centrepartenaire.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/centrepartenaires/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/centrepartenaires/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/centrerecouvrements/_centrerecouvrement_json_jbuilder.html">_centrerecouvrement.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/centrerecouvrements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/centrerecouvrements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/comments/_comment_json_jbuilder.html">_comment.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/comments/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/comments/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/commissariats/_commissariat_json_jbuilder.html">_commissariat.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/commissariats/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/commissariats/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/constats/_constat_json_jbuilder.html">_constat.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/constats/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/constats/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/contravetions/_contravetion_json_jbuilder.html">_contravetion.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/contravetions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/contravetions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/convocations/_convocation_json_jbuilder.html">_convocation.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/convocations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/convocations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/departements/_departement_json_jbuilder.html">_departement.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/departements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/departements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/grades/_grade_json_jbuilder.html">_grade.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/grades/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/grades/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/groupements/_groupement_json_jbuilder.html">_groupement.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/groupements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/groupements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/infractions/_infraction_json_jbuilder.html">_infraction.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/infractions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/infractions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/langues/_langue_json_jbuilder.html">_langue.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/langues/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/langues/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/metropolisroles/_metropolisrole_json_jbuilder.html">_metropolisrole.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/metropolisroles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/metropolisroles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/paiementsolutions/_paiementsolution_json_jbuilder.html">_paiementsolution.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/paiementsolutions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/paiementsolutions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/pieceretenus/_pieceretenu_json_jbuilder.html">_pieceretenu.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/pieceretenus/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/pieceretenus/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/postepolices/_postepolice_json_jbuilder.html">_postepolice.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/postepolices/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/postepolices/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/regions/_region_json_jbuilder.html">_region.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/regions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/regions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/roles/_role_json_jbuilder.html">_role.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/roles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/roles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/services/_service_json_jbuilder.html">_service.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/services/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/services/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/status/_status_json_jbuilder.html">_status.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/status/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/status/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/statuses/_status_json_jbuilder.html">_status.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/statuses/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/statuses/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/structures/_structure_json_jbuilder.html">_structure.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/structures/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/structures/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/typeaccidents/_typeaccident_json_jbuilder.html">_typeaccident.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/typeaccidents/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/typeaccidents/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/types/_type_json_jbuilder.html">_type.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/types/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/types/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/unites/_unite_json_jbuilder.html">_unite.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/unites/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/unites/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/villes/_ville_json_jbuilder.html">_ville.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/villes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/villes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/workflows/_workflow_json_jbuilder.html">_workflow.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/workflows/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/workflows/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/zonecouverturemotifs/_zonecouverturemotif_json_jbuilder.html">_zonecouverturemotif.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/zonecouverturemotifs/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/zonecouverturemotifs/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../brouillons_txt.html">brouillons</a>
+  
+    <li><a href="../../../config_ru.html">config.ru</a>
+  
+    <li><a href="../../../erd_dot.html">erd.dot</a>
+  
+    <li><a href="../../../hi.html">hi</a>
+  
+    <li><a href="../../../lib/templates/rails/jbuilder/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../log/production_log.html">production.log</a>
+  
+    <li><a href="../../../log/test_log.html">test.log</a>
+  
+    <li><a href="../../../package_json.html">package.json</a>
+  
+    <li><a href="../../../public/404_html.html">404.html</a>
+  
+    <li><a href="../../../public/422_html.html">422.html</a>
+  
+    <li><a href="../../../public/500_html.html">500.html</a>
+  
+    <li><a href="../../../public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="../../../public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="../../../public/assets/application-1d6a15def6671efd85aa7f12dd7a187c8a4010b2f141f1f26f17c84657c45352_js.html">application-1d6a15def6671efd85aa7f12dd7a187c8a4010b2f141f1f26f17c84657c45352.js</a>
+  
+    <li><a href="../../../public/assets/application-5173f52181c8a9ce2fd1869b7a408c290415dd6db3d815626ca73dcbf8150eb4_css.html">application-5173f52181c8a9ce2fd1869b7a408c290415dd6db3d815626ca73dcbf8150eb4.css</a>
+  
+    <li><a href="../../../public/assets/fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c_svg.html">fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c.svg</a>
+  
+    <li><a href="../../../public/assets/leaflet-src_js-6eed528b5678ee4f34b8be267a8da5d14734d58d56baeea6a31e9819e6630775_map.html">leaflet-src.js-6eed528b5678ee4f34b8be267a8da5d14734d58d56baeea6a31e9819e6630775.map</a>
+  
+    <li><a href="../../../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../../../public/robots_txt.html">robots</a>
+  
+    <li><a href="../../../solr/configsets/sunspot/conf/_rest_managed_json.html">_rest_managed.json</a>
+  
+    <li><a href="../../../solr/configsets/sunspot/conf/admin-extra_html.html">admin-extra.html</a>
+  
+    <li><a href="../../../solr/configsets/sunspot/conf/currency_xml.html">currency.xml</a>
+  
+    <li><a href="../../../solr/configsets/sunspot/conf/elevate_xml.html">elevate.xml</a>
+  
+    <li><a href="../../../solr/configsets/sunspot/conf/lang/stopwords_en_txt.html">stopwords_en</a>
+  
+    <li><a href="../../../solr/configsets/sunspot/conf/mapping-ISOLatin1Accent_txt.html">mapping-ISOLatin1Accent</a>
+  
+    <li><a href="../../../solr/configsets/sunspot/conf/protwords_txt.html">protwords</a>
+  
+    <li><a href="../../../solr/configsets/sunspot/conf/schema_xml.html">schema.xml</a>
+  
+    <li><a href="../../../solr/configsets/sunspot/conf/scripts_conf.html">scripts.conf</a>
+  
+    <li><a href="../../../solr/configsets/sunspot/conf/solrconfig_xml.html">solrconfig.xml</a>
+  
+    <li><a href="../../../solr/configsets/sunspot/conf/spellings_txt.html">spellings</a>
+  
+    <li><a href="../../../solr/configsets/sunspot/conf/synonyms_txt.html">synonyms</a>
+  
+    <li><a href="../../../solr/default/core_properties.html">core.properties</a>
+  
+    <li><a href="../../../solr/development/core_properties.html">core.properties</a>
+  
+    <li><a href="../../../solr/solr_xml.html">solr.xml</a>
+  
+    <li><a href="../../../solr/test/core_properties.html">core.properties</a>
+  
+    <li><a href="../../../tmp/pids/server_pid.html">server.pid</a>
+  
+    <li><a href="../../../tmp/restart_txt.html">restart</a>
+  
+    <li><a href="../../../vendor/animsition/animsition_min_css.html">animsition.min.css</a>
+  
+    <li><a href="../../../vendor/animsition/animsition_min_js.html">animsition.min.js</a>
+  
+    <li><a href="../../../vendor/bootstrap-4_1/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../../../vendor/bootstrap-4_1/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../../vendor/bootstrap-4_1/popper_min_js.html">popper.min.js</a>
+  
+    <li><a href="../../../vendor/bootstrap-progressbar/bootstrap-progressbar-3_3_4_min_css.html">bootstrap-progressbar-3.3.4.min.css</a>
+  
+    <li><a href="../../../vendor/bootstrap-progressbar/bootstrap-progressbar_min_js.html">bootstrap-progressbar.min.js</a>
+  
+    <li><a href="../../../vendor/chartjs/Chart_bundle_min_js.html">Chart.bundle.min.js</a>
+  
+    <li><a href="../../../vendor/circle-progress/circle-progress_js.html">circle-progress.js</a>
+  
+    <li><a href="../../../vendor/circle-progress/circle-progress_min_js.html">circle-progress.min.js</a>
+  
+    <li><a href="../../../vendor/countdown/countdowntime_js.html">countdowntime.js</a>
+  
+    <li><a href="../../../vendor/countdown/jquery_countdown_min_js.html">jquery.countdown.min.js</a>
+  
+    <li><a href="../../../vendor/countdown/moment-timezone-with-data_min_js.html">moment-timezone-with-data.min.js</a>
+  
+    <li><a href="../../../vendor/countdown/moment-timezone_min_js.html">moment-timezone.min.js</a>
+  
+    <li><a href="../../../vendor/countdown/moment_min_js.html">moment.min.js</a>
+  
+    <li><a href="../../../vendor/counter-up/jquery_counterup_min_js.html">jquery.counterup.min.js</a>
+  
+    <li><a href="../../../vendor/counter-up/jquery_waypoints_min_js.html">jquery.waypoints.min.js</a>
+  
+    <li><a href="../../../vendor/counter-up/waypoints_min_js.html">waypoints.min.js</a>
+  
+    <li><a href="../../../vendor/css-hamburgers/hamburgers_css.html">hamburgers.css</a>
+  
+    <li><a href="../../../vendor/css-hamburgers/hamburgers_min_css.html">hamburgers.min.css</a>
+  
+    <li><a href="../../../vendor/font-awesome-4_7/HELP-US-OUT_txt.html">HELP-US-OUT</a>
+  
+    <li><a href="../../../vendor/font-awesome-4_7/css/font-awesome_css.html">font-awesome.css</a>
+  
+    <li><a href="../../../vendor/font-awesome-4_7/css/font-awesome_min_css.html">font-awesome.min.css</a>
+  
+    <li><a href="../../../vendor/font-awesome-4_7/fonts/fontawesome-webfont_svg.html">fontawesome-webfont.svg</a>
+  
+    <li><a href="../../../vendor/font-awesome-5/css/fontawesome-all_min_css.html">fontawesome-all.min.css</a>
+  
+    <li><a href="../../../vendor/font-awesome-5/webfonts/fa-brands-400_svg.html">fa-brands-400.svg</a>
+  
+    <li><a href="../../../vendor/font-awesome-5/webfonts/fa-regular-400_svg.html">fa-regular-400.svg</a>
+  
+    <li><a href="../../../vendor/font-awesome-5/webfonts/fa-solid-900_svg.html">fa-solid-900.svg</a>
+  
+    <li><a href="../../../vendor/jquery-3_2_1_min_js.html">jquery-3.2.1.min.js</a>
+  
+    <li><a href="../../../vendor/jquery-ui_min_js.html">jquery-ui.min.js</a>
+  
+    <li><a href="../../../vendor/lightbox2/dist/css/lightbox_css.html">lightbox.css</a>
+  
+    <li><a href="../../../vendor/lightbox2/dist/js/lightbox-plus-jquery_js.html">lightbox-plus-jquery.js</a>
+  
+    <li><a href="../../../vendor/lightbox2/dist/js/lightbox-plus-jquery_min_js.html">lightbox-plus-jquery.min.js</a>
+  
+    <li><a href="../../../vendor/lightbox2/dist/js/lightbox-plus-jquery_min_map.html">lightbox-plus-jquery.min.map</a>
+  
+    <li><a href="../../../vendor/lightbox2/dist/js/lightbox_js.html">lightbox.js</a>
+  
+    <li><a href="../../../vendor/lightbox2/dist/js/lightbox_min_js.html">lightbox.min.js</a>
+  
+    <li><a href="../../../vendor/lightbox2/dist/js/lightbox_min_map.html">lightbox.min.map</a>
+  
+    <li><a href="../../../vendor/lightbox2/src/css/lightbox_css.html">lightbox.css</a>
+  
+    <li><a href="../../../vendor/lightbox2/src/js/lightbox_js.html">lightbox.js</a>
+  
+    <li><a href="../../../vendor/mdi-font/css/material-design-iconic-font_css.html">material-design-iconic-font.css</a>
+  
+    <li><a href="../../../vendor/mdi-font/css/material-design-iconic-font_min_css.html">material-design-iconic-font.min.css</a>
+  
+    <li><a href="../../../vendor/mdi-font/fonts/Material-Design-Iconic-Font_svg.html">Material-Design-Iconic-Font.svg</a>
+  
+    <li><a href="../../../vendor/perfect-scrollbar/perfect-scrollbar_css.html">perfect-scrollbar.css</a>
+  
+    <li><a href="../../../vendor/perfect-scrollbar/perfect-scrollbar_js.html">perfect-scrollbar.js</a>
+  
+    <li><a href="../../../vendor/perfect-scrollbar/perfect-scrollbar_min_js.html">perfect-scrollbar.min.js</a>
+  
+    <li><a href="../../../vendor/progressbar/progressbar_js.html">progressbar.js</a>
+  
+    <li><a href="../../../vendor/progressbar/progressbar_min_js.html">progressbar.min.js</a>
+  
+    <li><a href="../../../vendor/select2/select2_min_css.html">select2.min.css</a>
+  
+    <li><a href="../../../vendor/select2/select2_min_js.html">select2.min.js</a>
+  
+    <li><a href="../../../vendor/slick/fonts/slick_svg.html">slick.svg</a>
+  
+    <li><a href="../../../vendor/slick/slick-theme_css.html">slick-theme.css</a>
+  
+    <li><a href="../../../vendor/slick/slick-theme_less.html">slick-theme.less</a>
+  
+    <li><a href="../../../vendor/slick/slick-theme_scss.html">slick-theme.scss</a>
+  
+    <li><a href="../../../vendor/slick/slick_css.html">slick.css</a>
+  
+    <li><a href="../../../vendor/slick/slick_js.html">slick.js</a>
+  
+    <li><a href="../../../vendor/slick/slick_less.html">slick.less</a>
+  
+    <li><a href="../../../vendor/slick/slick_min_js.html">slick.min.js</a>
+  
+    <li><a href="../../../vendor/slick/slick_scss.html">slick.scss</a>
+  
+    <li><a href="../../../vendor/smk-accordion/accordion_css.html">accordion.css</a>
+  
+    <li><a href="../../../vendor/smk-accordion/accordion_js.html">accordion.js</a>
+  
+    <li><a href="../../../vendor/smk-accordion/accordion_min_js.html">accordion.min.js</a>
+  
+    <li><a href="../../../vendor/sweetalert/sweetalert_min_js.html">sweetalert.min.js</a>
+  
+    <li><a href="../../../vendor/vector-map/jquery_vmap_brazil_js.html">jquery.vmap.brazil.js</a>
+  
+    <li><a href="../../../vendor/vector-map/jquery_vmap_europe_js.html">jquery.vmap.europe.js</a>
+  
+    <li><a href="../../../vendor/vector-map/jquery_vmap_france_js.html">jquery.vmap.france.js</a>
+  
+    <li><a href="../../../vendor/vector-map/jquery_vmap_germany_js.html">jquery.vmap.germany.js</a>
+  
+    <li><a href="../../../vendor/vector-map/jquery_vmap_js.html">jquery.vmap.js</a>
+  
+    <li><a href="../../../vendor/vector-map/jquery_vmap_min_js.html">jquery.vmap.min.js</a>
+  
+    <li><a href="../../../vendor/vector-map/jquery_vmap_russia_js.html">jquery.vmap.russia.js</a>
+  
+    <li><a href="../../../vendor/vector-map/jquery_vmap_sampledata_js.html">jquery.vmap.sampledata.js</a>
+  
+    <li><a href="../../../vendor/vector-map/jquery_vmap_usa_js.html">jquery.vmap.usa.js</a>
+  
+    <li><a href="../../../vendor/vector-map/jquery_vmap_world_js.html">jquery.vmap.world.js</a>
+  
+    <li><a href="../../../vendor/vector-map/jqvmap_min_css.html">jqvmap.min.css</a>
+  
+    <li><a href="../../../vendor/wow/animate_css.html">animate.css</a>
+  
+    <li><a href="../../../vendor/wow/wow_min_js.html">wow.min.js</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page app/assets/stylesheets/services.scss">
+
+<p>// Place all the styles related to the services controller here. // They
+will automatically be included in application.css. // You can use Sass
+(SCSS) here: <a href="http://sass-lang.com">sass-lang.com</a>/</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

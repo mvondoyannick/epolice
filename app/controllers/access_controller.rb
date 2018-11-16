@@ -263,7 +263,7 @@ class AccessController < ApplicationController
 
   #for test
   def open
-
+    render layout: 'fylo'
   end
 
   def application
@@ -303,6 +303,39 @@ class AccessController < ApplicationController
     add_breadcrumb 'parametres', :access_systeme_path
     add_breadcrumb 'modes de paiement', :parametre_type_paiement_path
     render layout: 'fylo'
+  end
+
+  #supprimer un type de paiement en changeant le statut
+  def delete_type_paiement
+    data = params[:type_id]
+
+    #recherche et suppression
+    query = Modepaiement.find(data)
+    query.status = 0
+    if query.save
+      redirect_to parametre_type_paiement_path
+    end
+  end
+
+  #ajouter une type de mode de paiement
+  def add_type_paiement
+    data = params[:type_id]
+
+    #recherche et suppression
+    query = Modepaiement.find(data)
+    query.status = 1
+    if query.save
+      redirect_to parametre_type_paiement_path
+    end
+  end
+
+
+  #pour activer le type de mode de paiement selectionné
+  def attempt_type
+    #permet de faire la recherche
+    content = params
+
+
   end
 
   #module de gestion des langues

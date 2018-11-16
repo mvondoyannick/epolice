@@ -1,61 +1,61 @@
 <% content_for(:title, 'ARCHIVAGE DES DONNEES')%>
 
 <h1 class="m-b-40">
-  <%= link_to :back do %>
-    <i class="fa fa-arrow-left"></i>
-  <% end %>
   Confirmation Documents agent <%= @agent.complete_name %>
 </h1>
-<p class="title is-3 has-text-grey">
+<p class="m-b-40">
   Confirmer la reception des pieces
 </p>
 <p class="subtitle is-5">
   <i class="fa fa-warning has-text-grey"></i>
     La confirmation de la reception des documents de contravention est irreversible, il est donc important de clairement identifier les documents que l'on recoi
 </p>
-<hr class="has-background-grey">
 <div class="row">
   <div class="col-lg-6">
     <div class="card">
-      <div class="card-header">
-        <strong>Information sur les documents</strong>
+      <div class="card-header bg-secondary text-light">
+        <strong>Information sur les documents de contravention</strong>
       </div>
       <div class="card-body card-block">
         <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
           <div class="row form-group">
             <div class="col col-md-3">
-              <label for="text-input" class=" form-control-label">Date Emission</label>
+              <label for="text-input" class=" form-control-label"><i class="fa fa-calendar"></i> Date Emission</label>
             </div>
             <div class="col-12 col-md-9">
-              <input type="text" value="<%= @request.created_at %>" readonly id="text-input" name="text-input" class="form-control">
-              <small class="form-text text-muted">This is a help text</small>
+              <p class="lead">
+                <%= @request.created_at %>
+              </p>
             </div>
           </div>
           <div class="row form-group">
             <div class="col col-md-3">
-              <label for="text-input" class=" form-control-label">Numéro de téléphone</label>
+              <label for="text-input" class=" form-control-label"><i class="fa fa-phone"></i> Téléphone</label>
             </div>
             <div class="col-12 col-md-9">
-              <input type="text" value="<%= @request.phone %>" readonly id="text-input" name="text-input" class="form-control">
-              <small class="form-text text-muted">This is a help text</small>
+              <p class="lead">
+                <%= @request.phone %>
+              </p>
             </div>
           </div>
           <div class="row form-group">
             <div class="col col-md-3">
-              <label for="text-input" class=" form-control-label">Immatriculation</label>
+              <label for="text-input" class=" form-control-label"><i class="fa fa-car"></i> Immatriculation</label>
             </div>
             <div class="col-12 col-md-9">
-              <input type="text" value="<%= @request.immatriculation %>" readonly id="text-input" name="text-input" class="form-control">
-              <small class="form-text text-muted">This is a help text</small>
+              <p class="lead">
+                <%= @request.immatriculation.upcase %>
+              </p>
             </div>
           </div>
           <div class="row form-group">
             <div class="col col-md-3">
-              <label for="text-input" class=" form-control-label">Numéro CNI</label>
+              <label for="text-input" class=" form-control-label"><i class="fa fa-id-card"></i>Numéro CNI</label>
             </div>
             <div class="col-12 col-md-9">
-              <input type="text" value="<%= @request.cni %>" readonly id="text-input" name="text-input" class="form-control">
-              <small class="form-text text-muted">Numéro de la CNI du contrevenant</small>
+              <p class="lead">
+                <%= @request.cni.upcase %>
+              </p>
             </div>
           </div>
           <div class="row form-group">
@@ -63,8 +63,9 @@
               <label for="text-input" class=" form-control-label">Motif infraction</label>
             </div>
             <div class="col-12 col-md-9">
-              <input type="text" value="<%= @request.infraction.motif if !@request.infraction_id.nil? %>" readonly id="text-input" name="text-input" class="form-control">
-              <small class="form-text text-muted">Infractions retenu</small>
+              <p class="lead">
+                <%= @request.infraction.motif if !@request.infraction_id.nil? %>
+              </p>
             </div>
           </div>
           <div class="row form-group">
@@ -72,8 +73,9 @@
               <label for="text-input" class=" form-control-label">Montant Infraction</label>
             </div>
             <div class="col-12 col-md-9">
-              <input type="text" value="<%= @request.infraction.montant if !@request.infraction_id.nil? %>" readonly id="text-input" name="text-input" class="form-control">
-              <small class="form-text text-muted">Montant pour cette infraction</small>
+              <p class="lead">
+                <%= @request.infraction.montant if !@request.infraction_id.nil? %> CFA XAF
+              </p>
             </div>
           </div>
           <div class="row form-group">
@@ -81,8 +83,9 @@
               <label for="email-input" class=" form-control-label">Piece retenue</label>
             </div>
             <div class="col-12 col-md-9">
-              <input type="text" value="<%= @request.pieceretenu.name if !@request.pieceretenu_id.nil? %>" readonly  class="form-control bg-danger">
-              <small class="help-block form-text">Piece retenu pour cette contravention</small>
+              <p class="lead" style="color: #cc0000;">
+                <%= @request.pieceretenu.name if !@request.pieceretenu_id.nil? %>
+              </p>
             </div>
           </div>
           <div class="row form-group">
@@ -99,7 +102,7 @@
   </div>
   <div class="col-lg-6">
     <div class="card">
-      <div class="card-header">
+      <div class="card-header bg-secondary text-light">
         <strong>Information sur l'Agent possedant les documents</strong>
       </div>
       <div class="card-body card-block">
@@ -109,7 +112,7 @@
               <label class=" form-control-label">Matricule</label>
             </div>
             <div class="col-12 col-md-9">
-              <p class="form-control-static"><%= @request.immatriculation %></p>
+              <p class="lead"><%= @request.agent.matricule %></p>
             </div>
           </div>
           <div class="row form-group">
@@ -117,8 +120,7 @@
               <label for="text-input" class=" form-control-label">Nom complet</label>
             </div>
             <div class="col-12 col-md-9">
-              <input type="text" id="text-input" value="<%= @agent.complete_name %>" readonly class="form-control">
-              <small class="form-text text-muted">This is a help text</small>
+              <p class="lead"><%= @agent.complete_name %></p>
             </div>
           </div>
           <div class="row form-group">
@@ -126,8 +128,7 @@
               <label for="email-input" class=" form-control-label">Grade</label>
             </div>
             <div class="col-12 col-md-9">
-              <input type="email" id="email-input" value="<%= @agent.grade.name if !@agent.grade_id.nil? %>" readonly class="form-control">
-              <small class="help-block form-text">Please enter your email</small>
+              <p class="lead"><%= @agent.grade.name if !@agent.grade_id.nil? %></p>
             </div>
           </div>
           <div class="row form-group">
@@ -135,8 +136,7 @@
               <label for="password-input" class=" form-control-label">Service</label>
             </div>
             <div class="col-12 col-md-9">
-              <input type="text" id="password-input" value="<%= @agent.unite.name if !@agent.unite_id.nil? %>" readonly class="form-control">
-              <small class="help-block form-text">Please enter a complex password</small>
+              <p class="lead"><%= @agent.groupement.name if !@agent.groupement_id.nil? %></p>
             </div>
           </div>
           <div class="row form-group">
@@ -144,8 +144,9 @@
               <label for="password-input" class=" form-control-label">Sexe</label>
             </div>
             <div class="col-12 col-md-9">
-              <input type="text" id="password-input" value="<%= @agent.sexe %>" readonly class="form-control">
-              <small class="help-block form-text">Please enter a complex password</small>
+              <p class="lead">
+                <%= @agent.sexe %>
+              </p>
             </div>
           </div>
           <div class="row form-group">
@@ -153,8 +154,9 @@
               <label for="password-input" class=" form-control-label">Region de service</label>
             </div>
             <div class="col-12 col-md-9">
-              <input type="text" id="password-input" value="<%= @agent.region.name if !@agent.region_id.nil? %>" readonly class="form-control">
-              <small class="help-block form-text">Please enter a complex password</small>
+              <p class="lead">
+                <%= @agent.region.name if !@agent.region_id.nil? %>
+              </p>
             </div>
           </div>
           <div class="row form-group">
@@ -162,8 +164,9 @@
               <label for="password-input" class=" form-control-label">Statut affectation</label>
             </div>
             <div class="col-12 col-md-9">
-              <input type="text" id="password-input" value="<%= @agent.statusaffectation %>" readonly class="form-control">
-              <small class="help-block form-text">Please enter a complex password</small>
+              <p class="lead">
+                <%= @agent.statusaffectation %>
+              </p>
             </div>
           </div>
           <div class="row form-group">
@@ -171,20 +174,15 @@
               <label for="password-input" class=" form-control-label">Photo</label>
             </div>
             <div class="col-12 col-md-9">
-              <%= image_tag(@agent.avatar, size: 250) if !@agent.avatar.attached? %>
-              <small class="help-block form-text">photo de l'agent <%= @agent.complete_name %></small>
+              <%= image_tag(@agent.avatar.url, size: 250, class: 'img-thumbnail float-right') %>
             </div>
           </div>
         </form>
       </div>
       <div class="card-footer text-right">
-        <%= link_to :back, class: 'btn btn-danger btn-sm' do %>
-          <i class="fa fa-arrow-left"></i>
-          Retour
-        <% end %>
-        <%= link_to archive_merci_path(data: @request.id, agent: @agent.id), class: 'btn btn-primary btn-sm' do %>
-          <i class="fa fa-dot-circle-o"></i>
-          Recevoir les documents
+        <%= link_to archive_merci_path(data: @request.id, agent: @agent.id), class: 'btn btn-outline-primary btn-sm' do %>
+          <i class="fa fa-dot-circle"></i>
+          Valider l'archivage
         <% end %>
       </div>
     </div>

@@ -140,6 +140,9 @@ Rails.application.routes.draw do
   get 'public/desabonne'
   get 'public/attempt_search'
   post 'public/attempt_search'
+  post 'access/attempt_type' #Ajouter un mode de paiement via HTTP POST
+  get 'access/delete_type_paiement' #supprimer un type de paiement dans la base de donnees via HTTP DELETE
+  get 'access/add_type_paiement' #update le type de paiement
   get 'journal/public'
   get 'journal/private'
   resources :status
@@ -318,6 +321,12 @@ Rails.application.routes.draw do
     get 'convocations/protectCode/:code', to: 'convocations#protectCode'
     #============================== retourner le type d'infraction ===============================
     get 'alert/types/type', to: 'convocations#api_type'
+
+    #verification de la CNI
+    get 'epolice/verify/contravention/:cni', to: 'convocations#verify_contravention'
+
+    #gestion de la decharge d'une piece
+
 
     #retourn toutes les infraction
     get 'epolice/infractions/infration', to: 'convocations#api_infraction'

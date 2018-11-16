@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>popper.min.js - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../README_md.html">README</a>
+  
+    <li><a href="../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="../../app/assets/fonts/fontawesome-webfont_svg.html">fontawesome-webfont.svg</a>
+  
+    <li><a href="../../app/assets/javascripts/access_coffee.html">access.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/affectations_coffee.html">affectations.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/agents_coffee.html">agents.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/alertes_coffee.html">alertes.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../app/assets/javascripts/archive_coffee.html">archive.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/arrondissements_coffee.html">arrondissements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/assurance_coffee.html">assurance.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../app/assets/javascripts/bulletins_coffee.html">bulletins.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="../../app/assets/javascripts/carrefours_coffee.html">carrefours.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/centrepartenaires_coffee.html">centrepartenaires.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/centrerecouvrements_coffee.html">centrerecouvrements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/comments_coffee.html">comments.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/commissariats_coffee.html">commissariats.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/compte_coffee.html">compte.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/constat_coffee.html">constat.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/constats_coffee.html">constats.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/convocations_coffee.html">convocations.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/departements_coffee.html">departements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/faker_min_js.html">faker.min.js</a>
+  
+    <li><a href="../../app/assets/javascripts/gestion_alerte_coffee.html">gestion_alerte.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/gestion_constat_coffee.html">gestion_constat.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/gestion_contravention_coffee.html">gestion_contravention.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/grades_coffee.html">grades.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/groupements_coffee.html">groupements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/grvpc_coffee.html">grvpc.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/infractions_coffee.html">infractions.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/journal_coffee.html">journal.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/langues_coffee.html">langues.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/manage_coffee.html">manage.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/member_coffee.html">member.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/metropoli_coffee.html">metropoli.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/metropolisroles_coffee.html">metropolisroles.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/paiementsolutions_coffee.html">paiementsolutions.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/parametre_coffee.html">parametre.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/pieceretenus_coffee.html">pieceretenus.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/postepolices_coffee.html">postepolices.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/public_coffee.html">public.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/regions_coffee.html">regions.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/roles_coffee.html">roles.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/services_coffee.html">services.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/statistique_coffee.html">statistique.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/status_coffee.html">status.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/statuses_coffee.html">statuses.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/structures_coffee.html">structures.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/typeaccidents_coffee.html">typeaccidents.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/types_coffee.html">types.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/u_coffee.html">u.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/unites_coffee.html">unites.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/villes_coffee.html">villes.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/workflows_coffee.html">workflows.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/zonecouverturemotifs_coffee.html">zonecouverturemotifs.coffee</a>
+  
+    <li><a href="../../app/assets/stylesheets/_application_css.html">_application.css</a>
+  
+    <li><a href="../../app/assets/stylesheets/access_scss.html">access.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/affectations_scss.html">affectations.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/agents_scss.html">agents.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/alertes_scss.html">alertes.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/application_scss.html">application.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/archive_scss.html">archive.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/arrondissements_scss.html">arrondissements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/assurance_scss.html">assurance.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/bulletins_scss.html">bulletins.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/carrefours_scss.html">carrefours.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/centrepartenaires_scss.html">centrepartenaires.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/centrerecouvrements_scss.html">centrerecouvrements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/comments_scss.html">comments.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/commissariats_scss.html">commissariats.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/compte_scss.html">compte.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/constat_scss.html">constat.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/constats_scss.html">constats.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/contravetions_scss.html">contravetions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/convocations_scss.html">convocations.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/departements_scss.html">departements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/gestion_alerte_scss.html">gestion_alerte.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/gestion_constat_scss.html">gestion_constat.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/gestion_contravention_scss.html">gestion_contravention.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/grades_scss.html">grades.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/groupements_scss.html">groupements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/grvpc_scss.html">grvpc.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/infractions_scss.html">infractions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/journal_scss.html">journal.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/langues_scss.html">langues.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/manage_scss.html">manage.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/member_scss.html">member.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/metropoli_scss.html">metropoli.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/metropolisroles_scss.html">metropolisroles.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/paiementsolutions_scss.html">paiementsolutions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/parametre_scss.html">parametre.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/pieceretenus_scss.html">pieceretenus.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/postepolices_scss.html">postepolices.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/public_scss.html">public.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/regions_scss.html">regions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/roles_scss.html">roles.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/services_scss.html">services.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/statistique_scss.html">statistique.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/status_scss.html">status.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/statuses_scss.html">statuses.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/structures_scss.html">structures.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/typeaccidents_scss.html">typeaccidents.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/types_scss.html">types.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/unites_scss.html">unites.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/villes_scss.html">villes.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/zonecouverturemotifs_scss.html">zonecouverturemotifs.scss</a>
+  
+    <li><a href="../../app/views/affectations/_affectation_json_jbuilder.html">_affectation.json.jbuilder</a>
+  
+    <li><a href="../../app/views/affectations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/affectations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/agents/Untitled-1.html">Untitled-1</a>
+  
+    <li><a href="../../app/views/agents/Untitled-2.html">Untitled-2</a>
+  
+    <li><a href="../../app/views/agents/_agent_json_jbuilder.html">_agent.json.jbuilder</a>
+  
+    <li><a href="../../app/views/agents/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/agents/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/alertes/_alerte_json_jbuilder.html">_alerte.json.jbuilder</a>
+  
+    <li><a href="../../app/views/alertes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/alertes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/arrondissements/_arrondissement_json_jbuilder.html">_arrondissement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/arrondissements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/arrondissements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/bulletins/_bulletin_json_jbuilder.html">_bulletin.json.jbuilder</a>
+  
+    <li><a href="../../app/views/bulletins/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/bulletins/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/carrefours/_carrefour_json_jbuilder.html">_carrefour.json.jbuilder</a>
+  
+    <li><a href="../../app/views/carrefours/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/carrefours/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrepartenaires/_centrepartenaire_json_jbuilder.html">_centrepartenaire.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrepartenaires/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrepartenaires/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrerecouvrements/_centrerecouvrement_json_jbuilder.html">_centrerecouvrement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrerecouvrements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrerecouvrements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/comments/_comment_json_jbuilder.html">_comment.json.jbuilder</a>
+  
+    <li><a href="../../app/views/comments/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/comments/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/commissariats/_commissariat_json_jbuilder.html">_commissariat.json.jbuilder</a>
+  
+    <li><a href="../../app/views/commissariats/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/commissariats/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/constats/_constat_json_jbuilder.html">_constat.json.jbuilder</a>
+  
+    <li><a href="../../app/views/constats/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/constats/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contravetions/_contravetion_json_jbuilder.html">_contravetion.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contravetions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contravetions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/convocations/_convocation_json_jbuilder.html">_convocation.json.jbuilder</a>
+  
+    <li><a href="../../app/views/convocations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/convocations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/departements/_departement_json_jbuilder.html">_departement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/departements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/departements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/grades/_grade_json_jbuilder.html">_grade.json.jbuilder</a>
+  
+    <li><a href="../../app/views/grades/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/grades/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/groupements/_groupement_json_jbuilder.html">_groupement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/groupements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/groupements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/infractions/_infraction_json_jbuilder.html">_infraction.json.jbuilder</a>
+  
+    <li><a href="../../app/views/infractions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/infractions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/langues/_langue_json_jbuilder.html">_langue.json.jbuilder</a>
+  
+    <li><a href="../../app/views/langues/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/langues/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/metropolisroles/_metropolisrole_json_jbuilder.html">_metropolisrole.json.jbuilder</a>
+  
+    <li><a href="../../app/views/metropolisroles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/metropolisroles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paiementsolutions/_paiementsolution_json_jbuilder.html">_paiementsolution.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paiementsolutions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paiementsolutions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/pieceretenus/_pieceretenu_json_jbuilder.html">_pieceretenu.json.jbuilder</a>
+  
+    <li><a href="../../app/views/pieceretenus/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/pieceretenus/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/postepolices/_postepolice_json_jbuilder.html">_postepolice.json.jbuilder</a>
+  
+    <li><a href="../../app/views/postepolices/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/postepolices/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/regions/_region_json_jbuilder.html">_region.json.jbuilder</a>
+  
+    <li><a href="../../app/views/regions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/regions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/roles/_role_json_jbuilder.html">_role.json.jbuilder</a>
+  
+    <li><a href="../../app/views/roles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/roles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/services/_service_json_jbuilder.html">_service.json.jbuilder</a>
+  
+    <li><a href="../../app/views/services/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/services/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/status/_status_json_jbuilder.html">_status.json.jbuilder</a>
+  
+    <li><a href="../../app/views/status/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/status/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/statuses/_status_json_jbuilder.html">_status.json.jbuilder</a>
+  
+    <li><a href="../../app/views/statuses/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/statuses/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/structures/_structure_json_jbuilder.html">_structure.json.jbuilder</a>
+  
+    <li><a href="../../app/views/structures/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/structures/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/typeaccidents/_typeaccident_json_jbuilder.html">_typeaccident.json.jbuilder</a>
+  
+    <li><a href="../../app/views/typeaccidents/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/typeaccidents/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/types/_type_json_jbuilder.html">_type.json.jbuilder</a>
+  
+    <li><a href="../../app/views/types/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/types/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/unites/_unite_json_jbuilder.html">_unite.json.jbuilder</a>
+  
+    <li><a href="../../app/views/unites/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/unites/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/villes/_ville_json_jbuilder.html">_ville.json.jbuilder</a>
+  
+    <li><a href="../../app/views/villes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/villes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/workflows/_workflow_json_jbuilder.html">_workflow.json.jbuilder</a>
+  
+    <li><a href="../../app/views/workflows/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/workflows/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/zonecouverturemotifs/_zonecouverturemotif_json_jbuilder.html">_zonecouverturemotif.json.jbuilder</a>
+  
+    <li><a href="../../app/views/zonecouverturemotifs/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/zonecouverturemotifs/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../brouillons_txt.html">brouillons</a>
+  
+    <li><a href="../../config_ru.html">config.ru</a>
+  
+    <li><a href="../../erd_dot.html">erd.dot</a>
+  
+    <li><a href="../../hi.html">hi</a>
+  
+    <li><a href="../../lib/templates/rails/jbuilder/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../log/production_log.html">production.log</a>
+  
+    <li><a href="../../log/test_log.html">test.log</a>
+  
+    <li><a href="../../package_json.html">package.json</a>
+  
+    <li><a href="../../public/404_html.html">404.html</a>
+  
+    <li><a href="../../public/422_html.html">422.html</a>
+  
+    <li><a href="../../public/500_html.html">500.html</a>
+  
+    <li><a href="../../public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="../../public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="../../public/assets/application-1d6a15def6671efd85aa7f12dd7a187c8a4010b2f141f1f26f17c84657c45352_js.html">application-1d6a15def6671efd85aa7f12dd7a187c8a4010b2f141f1f26f17c84657c45352.js</a>
+  
+    <li><a href="../../public/assets/application-5173f52181c8a9ce2fd1869b7a408c290415dd6db3d815626ca73dcbf8150eb4_css.html">application-5173f52181c8a9ce2fd1869b7a408c290415dd6db3d815626ca73dcbf8150eb4.css</a>
+  
+    <li><a href="../../public/assets/fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c_svg.html">fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c.svg</a>
+  
+    <li><a href="../../public/assets/leaflet-src_js-6eed528b5678ee4f34b8be267a8da5d14734d58d56baeea6a31e9819e6630775_map.html">leaflet-src.js-6eed528b5678ee4f34b8be267a8da5d14734d58d56baeea6a31e9819e6630775.map</a>
+  
+    <li><a href="../../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../../public/robots_txt.html">robots</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/_rest_managed_json.html">_rest_managed.json</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/admin-extra_html.html">admin-extra.html</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/currency_xml.html">currency.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/elevate_xml.html">elevate.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/lang/stopwords_en_txt.html">stopwords_en</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/mapping-ISOLatin1Accent_txt.html">mapping-ISOLatin1Accent</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/protwords_txt.html">protwords</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/schema_xml.html">schema.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/scripts_conf.html">scripts.conf</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/solrconfig_xml.html">solrconfig.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/spellings_txt.html">spellings</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/synonyms_txt.html">synonyms</a>
+  
+    <li><a href="../../solr/default/core_properties.html">core.properties</a>
+  
+    <li><a href="../../solr/development/core_properties.html">core.properties</a>
+  
+    <li><a href="../../solr/solr_xml.html">solr.xml</a>
+  
+    <li><a href="../../solr/test/core_properties.html">core.properties</a>
+  
+    <li><a href="../../tmp/pids/server_pid.html">server.pid</a>
+  
+    <li><a href="../../tmp/restart_txt.html">restart</a>
+  
+    <li><a href="../../vendor/animsition/animsition_min_css.html">animsition.min.css</a>
+  
+    <li><a href="../../vendor/animsition/animsition_min_js.html">animsition.min.js</a>
+  
+    <li><a href="../../vendor/bootstrap-4_1/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../../vendor/bootstrap-4_1/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../vendor/bootstrap-4_1/popper_min_js.html">popper.min.js</a>
+  
+    <li><a href="../../vendor/bootstrap-progressbar/bootstrap-progressbar-3_3_4_min_css.html">bootstrap-progressbar-3.3.4.min.css</a>
+  
+    <li><a href="../../vendor/bootstrap-progressbar/bootstrap-progressbar_min_js.html">bootstrap-progressbar.min.js</a>
+  
+    <li><a href="../../vendor/chartjs/Chart_bundle_min_js.html">Chart.bundle.min.js</a>
+  
+    <li><a href="../../vendor/circle-progress/circle-progress_js.html">circle-progress.js</a>
+  
+    <li><a href="../../vendor/circle-progress/circle-progress_min_js.html">circle-progress.min.js</a>
+  
+    <li><a href="../../vendor/countdown/countdowntime_js.html">countdowntime.js</a>
+  
+    <li><a href="../../vendor/countdown/jquery_countdown_min_js.html">jquery.countdown.min.js</a>
+  
+    <li><a href="../../vendor/countdown/moment-timezone-with-data_min_js.html">moment-timezone-with-data.min.js</a>
+  
+    <li><a href="../../vendor/countdown/moment-timezone_min_js.html">moment-timezone.min.js</a>
+  
+    <li><a href="../../vendor/countdown/moment_min_js.html">moment.min.js</a>
+  
+    <li><a href="../../vendor/counter-up/jquery_counterup_min_js.html">jquery.counterup.min.js</a>
+  
+    <li><a href="../../vendor/counter-up/jquery_waypoints_min_js.html">jquery.waypoints.min.js</a>
+  
+    <li><a href="../../vendor/counter-up/waypoints_min_js.html">waypoints.min.js</a>
+  
+    <li><a href="../../vendor/css-hamburgers/hamburgers_css.html">hamburgers.css</a>
+  
+    <li><a href="../../vendor/css-hamburgers/hamburgers_min_css.html">hamburgers.min.css</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/HELP-US-OUT_txt.html">HELP-US-OUT</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/css/font-awesome_css.html">font-awesome.css</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/css/font-awesome_min_css.html">font-awesome.min.css</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/fonts/fontawesome-webfont_svg.html">fontawesome-webfont.svg</a>
+  
+    <li><a href="../../vendor/font-awesome-5/css/fontawesome-all_min_css.html">fontawesome-all.min.css</a>
+  
+    <li><a href="../../vendor/font-awesome-5/webfonts/fa-brands-400_svg.html">fa-brands-400.svg</a>
+  
+    <li><a href="../../vendor/font-awesome-5/webfonts/fa-regular-400_svg.html">fa-regular-400.svg</a>
+  
+    <li><a href="../../vendor/font-awesome-5/webfonts/fa-solid-900_svg.html">fa-solid-900.svg</a>
+  
+    <li><a href="../../vendor/jquery-3_2_1_min_js.html">jquery-3.2.1.min.js</a>
+  
+    <li><a href="../../vendor/jquery-ui_min_js.html">jquery-ui.min.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/css/lightbox_css.html">lightbox.css</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox-plus-jquery_js.html">lightbox-plus-jquery.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox-plus-jquery_min_js.html">lightbox-plus-jquery.min.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox-plus-jquery_min_map.html">lightbox-plus-jquery.min.map</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox_js.html">lightbox.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox_min_js.html">lightbox.min.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox_min_map.html">lightbox.min.map</a>
+  
+    <li><a href="../../vendor/lightbox2/src/css/lightbox_css.html">lightbox.css</a>
+  
+    <li><a href="../../vendor/lightbox2/src/js/lightbox_js.html">lightbox.js</a>
+  
+    <li><a href="../../vendor/mdi-font/css/material-design-iconic-font_css.html">material-design-iconic-font.css</a>
+  
+    <li><a href="../../vendor/mdi-font/css/material-design-iconic-font_min_css.html">material-design-iconic-font.min.css</a>
+  
+    <li><a href="../../vendor/mdi-font/fonts/Material-Design-Iconic-Font_svg.html">Material-Design-Iconic-Font.svg</a>
+  
+    <li><a href="../../vendor/perfect-scrollbar/perfect-scrollbar_css.html">perfect-scrollbar.css</a>
+  
+    <li><a href="../../vendor/perfect-scrollbar/perfect-scrollbar_js.html">perfect-scrollbar.js</a>
+  
+    <li><a href="../../vendor/perfect-scrollbar/perfect-scrollbar_min_js.html">perfect-scrollbar.min.js</a>
+  
+    <li><a href="../../vendor/progressbar/progressbar_js.html">progressbar.js</a>
+  
+    <li><a href="../../vendor/progressbar/progressbar_min_js.html">progressbar.min.js</a>
+  
+    <li><a href="../../vendor/select2/select2_min_css.html">select2.min.css</a>
+  
+    <li><a href="../../vendor/select2/select2_min_js.html">select2.min.js</a>
+  
+    <li><a href="../../vendor/slick/fonts/slick_svg.html">slick.svg</a>
+  
+    <li><a href="../../vendor/slick/slick-theme_css.html">slick-theme.css</a>
+  
+    <li><a href="../../vendor/slick/slick-theme_less.html">slick-theme.less</a>
+  
+    <li><a href="../../vendor/slick/slick-theme_scss.html">slick-theme.scss</a>
+  
+    <li><a href="../../vendor/slick/slick_css.html">slick.css</a>
+  
+    <li><a href="../../vendor/slick/slick_js.html">slick.js</a>
+  
+    <li><a href="../../vendor/slick/slick_less.html">slick.less</a>
+  
+    <li><a href="../../vendor/slick/slick_min_js.html">slick.min.js</a>
+  
+    <li><a href="../../vendor/slick/slick_scss.html">slick.scss</a>
+  
+    <li><a href="../../vendor/smk-accordion/accordion_css.html">accordion.css</a>
+  
+    <li><a href="../../vendor/smk-accordion/accordion_js.html">accordion.js</a>
+  
+    <li><a href="../../vendor/smk-accordion/accordion_min_js.html">accordion.min.js</a>
+  
+    <li><a href="../../vendor/sweetalert/sweetalert_min_js.html">sweetalert.min.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_brazil_js.html">jquery.vmap.brazil.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_europe_js.html">jquery.vmap.europe.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_france_js.html">jquery.vmap.france.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_germany_js.html">jquery.vmap.germany.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_js.html">jquery.vmap.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_min_js.html">jquery.vmap.min.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_russia_js.html">jquery.vmap.russia.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_sampledata_js.html">jquery.vmap.sampledata.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_usa_js.html">jquery.vmap.usa.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_world_js.html">jquery.vmap.world.js</a>
+  
+    <li><a href="../../vendor/vector-map/jqvmap_min_css.html">jqvmap.min.css</a>
+  
+    <li><a href="../../vendor/wow/animate_css.html">animate.css</a>
+  
+    <li><a href="../../vendor/wow/wow_min_js.html">wow.min.js</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page vendor/bootstrap-4.1/popper.min.js">
+
+<pre>Copyright (C) Federico Zivolo 2018
+Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
+  (function(e,t){&#39;object&#39;==typeof exports&amp;&amp;&#39;undefined&#39;!=typeof module?module.exports=t():&#39;function&#39;==typeof define&amp;&amp;define.amd?define(t):e.Popper=t()})(this,function(){&#39;use strict&#39;;function e(e){return e&amp;&amp;&#39;[object Function]&#39;==={}.toString.call(e)}function t(e,t){if(1!==e.nodeType)return[];var o=getComputedStyle(e,null);return t?o[t]:o}function o(e){return&#39;HTML&#39;===e.nodeName?e:e.parentNode||e.host}function n(e){if(!e)return document.body;switch(e.nodeName){case&#39;HTML&#39;:case&#39;BODY&#39;:return e.ownerDocument.body;case&#39;#document&#39;:return e.body;}var i=t(e),r=i.overflow,p=i.overflowX,s=i.overflowY;return /(auto|scroll|overlay)/.test(r+s+p)?e:n(o(e))}function r(e){if(!e)return document.documentElement;for(var o=ie(10)?document.body:null,n=e.offsetParent;n===o&amp;&amp;e.nextElementSibling;)n=(e=e.nextElementSibling).offsetParent;var i=n&amp;&amp;n.nodeName;return i&amp;&amp;&#39;BODY&#39;!==i&amp;&amp;&#39;HTML&#39;!==i?-1!==[&#39;TD&#39;,&#39;TABLE&#39;].indexOf(n.nodeName)&amp;&amp;&#39;static&#39;===t(n,&#39;position&#39;)?r(n):n:e?e.ownerDocument.documentElement:document.documentElement}function p(e){var t=e.nodeName;return&#39;BODY&#39;!==t&amp;&amp;(&#39;HTML&#39;===t||r(e.firstElementChild)===e)}function s(e){return null===e.parentNode?e:s(e.parentNode)}function d(e,t){if(!e||!e.nodeType||!t||!t.nodeType)return document.documentElement;var o=e.compareDocumentPosition(t)&amp;Node.DOCUMENT_POSITION_FOLLOWING,n=o?e:t,i=o?t:e,a=document.createRange();a.setStart(n,0),a.setEnd(i,0);var l=a.commonAncestorContainer;if(e!==l&amp;&amp;t!==l||n.contains(i))return p(l)?l:r(l);var f=s(e);return f.host?d(f.host,t):d(e,s(t).host)}function a(e){var t=1&lt;arguments.length&amp;&amp;void 0!==arguments[1]?arguments[1]:&#39;top&#39;,o=&#39;top&#39;===t?&#39;scrollTop&#39;:&#39;scrollLeft&#39;,n=e.nodeName;if(&#39;BODY&#39;===n||&#39;HTML&#39;===n){var i=e.ownerDocument.documentElement,r=e.ownerDocument.scrollingElement||i;return r[o]}return e[o]}function l(e,t){var o=2&lt;arguments.length&amp;&amp;void 0!==arguments[2]&amp;&amp;arguments[2],n=a(t,&#39;top&#39;),i=a(t,&#39;left&#39;),r=o?-1:1;return e.top+=n*r,e.bottom+=n*r,e.left+=i*r,e.right+=i*r,e}function f(e,t){var o=&#39;x&#39;===t?&#39;Left&#39;:&#39;Top&#39;,n=&#39;Left&#39;==o?&#39;Right&#39;:&#39;Bottom&#39;;return parseFloat(e[&#39;border&#39;+o+&#39;Width&#39;],10)+parseFloat(e[&#39;border&#39;+n+&#39;Width&#39;],10)}function m(e,t,o,n){return Q(t[&#39;offset&#39;+e],t[&#39;scroll&#39;+e],o[&#39;client&#39;+e],o[&#39;offset&#39;+e],o[&#39;scroll&#39;+e],ie(10)?o[&#39;offset&#39;+e]+n[&#39;margin&#39;+(&#39;Height&#39;===e?&#39;Top&#39;:&#39;Left&#39;)]+n[&#39;margin&#39;+(&#39;Height&#39;===e?&#39;Bottom&#39;:&#39;Right&#39;)]:0)}function h(){var e=document.body,t=document.documentElement,o=ie(10)&amp;&amp;getComputedStyle(t);return{height:m(&#39;Height&#39;,e,t,o),width:m(&#39;Width&#39;,e,t,o)}}function c(e){return de({},e,{right:e.left+e.width,bottom:e.top+e.height})}function g(e){var o={};try{if(ie(10)){o=e.getBoundingClientRect();var n=a(e,&#39;top&#39;),i=a(e,&#39;left&#39;);o.top+=n,o.left+=i,o.bottom+=n,o.right+=i}else o=e.getBoundingClientRect()}catch(t){}var r={left:o.left,top:o.top,width:o.right-o.left,height:o.bottom-o.top},p=&#39;HTML&#39;===e.nodeName?h():{},s=p.width||e.clientWidth||r.right-r.left,d=p.height||e.clientHeight||r.bottom-r.top,l=e.offsetWidth-s,m=e.offsetHeight-d;if(l||m){var g=t(e);l-=f(g,&#39;x&#39;),m-=f(g,&#39;y&#39;),r.width-=l,r.height-=m}return c(r)}function u(e,o){var i=2&lt;arguments.length&amp;&amp;void 0!==arguments[2]&amp;&amp;arguments[2],r=ie(10),p=&#39;HTML&#39;===o.nodeName,s=g(e),d=g(o),a=n(e),f=t(o),m=parseFloat(f.borderTopWidth,10),h=parseFloat(f.borderLeftWidth,10);i&amp;&amp;&#39;HTML&#39;===o.nodeName&amp;&amp;(d.top=Q(d.top,0),d.left=Q(d.left,0));var u=c({top:s.top-d.top-m,left:s.left-d.left-h,width:s.width,height:s.height});if(u.marginTop=0,u.marginLeft=0,!r&amp;&amp;p){var b=parseFloat(f.marginTop,10),y=parseFloat(f.marginLeft,10);u.top-=m-b,u.bottom-=m-b,u.left-=h-y,u.right-=h-y,u.marginTop=b,u.marginLeft=y}return(r&amp;&amp;!i?o.contains(a):o===a&amp;&amp;&#39;BODY&#39;!==a.nodeName)&amp;&amp;(u=l(u,o)),u}function b(e){var t=1&lt;arguments.length&amp;&amp;void 0!==arguments[1]&amp;&amp;arguments[1],o=e.ownerDocument.documentElement,n=u(e,o),i=Q(o.clientWidth,window.innerWidth||0),r=Q(o.clientHeight,window.innerHeight||0),p=t?0:a(o),s=t?0:a(o,&#39;left&#39;),d={top:p-n.top+n.marginTop,left:s-n.left+n.marginLeft,width:i,height:r};return c(d)}function y(e){var n=e.nodeName;return&#39;BODY&#39;===n||&#39;HTML&#39;===n?!1:&#39;fixed&#39;===t(e,&#39;position&#39;)||y(o(e))}function w(e){if(!e||!e.parentElement||ie())return document.documentElement;for(var o=e.parentElement;o&amp;&amp;&#39;none&#39;===t(o,&#39;transform&#39;);)o=o.parentElement;return o||document.documentElement}function E(e,t,i,r){var p=4&lt;arguments.length&amp;&amp;void 0!==arguments[4]&amp;&amp;arguments[4],s={top:0,left:0},a=p?w(e):d(e,t);if(&#39;viewport&#39;===r)s=b(a,p);else{var l;&#39;scrollParent&#39;===r?(l=n(o(t)),&#39;BODY&#39;===l.nodeName&amp;&amp;(l=e.ownerDocument.documentElement)):&#39;window&#39;===r?l=e.ownerDocument.documentElement:l=r;var f=u(l,a,p);if(&#39;HTML&#39;===l.nodeName&amp;&amp;!y(a)){var m=h(),c=m.height,g=m.width;s.top+=f.top-f.marginTop,s.bottom=c+f.top,s.left+=f.left-f.marginLeft,s.right=g+f.left}else s=f}return s.left+=i,s.top+=i,s.right-=i,s.bottom-=i,s}function v(e){var t=e.width,o=e.height;return t*o}function x(e,t,o,n,i){var r=5&lt;arguments.length&amp;&amp;void 0!==arguments[5]?arguments[5]:0;if(-1===e.indexOf(&#39;auto&#39;))return e;var p=E(o,n,r,i),s={top:{width:p.width,height:t.top-p.top},right:{width:p.right-t.right,height:p.height},bottom:{width:p.width,height:p.bottom-t.bottom},left:{width:t.left-p.left,height:p.height}},d=Object.keys(s).map(function(e){return de({key:e},s[e],{area:v(s[e])})}).sort(function(e,t){return t.area-e.area}),a=d.filter(function(e){var t=e.width,n=e.height;return t&gt;=o.clientWidth&amp;&amp;n&gt;=o.clientHeight}),l=0&lt;a.length?a[0].key:d[0].key,f=e.split(&#39;-&#39;)[1];return l+(f?&#39;-&#39;+f:&#39;&#39;)}function O(e,t,o){var n=3&lt;arguments.length&amp;&amp;void 0!==arguments[3]?arguments[3]:null,i=n?w(t):d(t,o);return u(o,i,n)}function L(e){var t=getComputedStyle(e),o=parseFloat(t.marginTop)+parseFloat(t.marginBottom),n=parseFloat(t.marginLeft)+parseFloat(t.marginRight),i={width:e.offsetWidth+n,height:e.offsetHeight+o};return i}function S(e){var t={left:&#39;right&#39;,right:&#39;left&#39;,bottom:&#39;top&#39;,top:&#39;bottom&#39;};return e.replace(/left|right|bottom|top/g,function(e){return t[e]})}function T(e,t,o){o=o.split(&#39;-&#39;)[0];var n=L(e),i={width:n.width,height:n.height},r=-1!==[&#39;right&#39;,&#39;left&#39;].indexOf(o),p=r?&#39;top&#39;:&#39;left&#39;,s=r?&#39;left&#39;:&#39;top&#39;,d=r?&#39;height&#39;:&#39;width&#39;,a=r?&#39;width&#39;:&#39;height&#39;;return i[p]=t[p]+t[d]/2-n[d]/2,i[s]=o===s?t[s]-n[a]:t[S(s)],i}function D(e,t){return Array.prototype.find?e.find(t):e.filter(t)[0]}function C(e,t,o){if(Array.prototype.findIndex)return e.findIndex(function(e){return e[t]===o});var n=D(e,function(e){return e[t]===o});return e.indexOf(n)}function N(t,o,n){var i=void 0===n?t:t.slice(0,C(t,&#39;name&#39;,n));return i.forEach(function(t){t[&#39;function&#39;]&amp;&amp;console.warn(&#39;`modifier.function` is deprecated, use `modifier.fn`!&#39;);var n=t[&#39;function&#39;]||t.fn;t.enabled&amp;&amp;e(n)&amp;&amp;(o.offsets.popper=c(o.offsets.popper),o.offsets.reference=c(o.offsets.reference),o=n(o,t))}),o}function k(){if(!this.state.isDestroyed){var e={instance:this,styles:{},arrowStyles:{},attributes:{},flipped:!1,offsets:{}};e.offsets.reference=O(this.state,this.popper,this.reference,this.options.positionFixed),e.placement=x(this.options.placement,e.offsets.reference,this.popper,this.reference,this.options.modifiers.flip.boundariesElement,this.options.modifiers.flip.padding),e.originalPlacement=e.placement,e.positionFixed=this.options.positionFixed,e.offsets.popper=T(this.popper,e.offsets.reference,e.placement),e.offsets.popper.position=this.options.positionFixed?&#39;fixed&#39;:&#39;absolute&#39;,e=N(this.modifiers,e),this.state.isCreated?this.options.onUpdate(e):(this.state.isCreated=!0,this.options.onCreate(e))}}function P(e,t){return e.some(function(e){var o=e.name,n=e.enabled;return n&amp;&amp;o===t})}function W(e){for(var t=[!1,&#39;ms&#39;,&#39;Webkit&#39;,&#39;Moz&#39;,&#39;O&#39;],o=e.charAt(0).toUpperCase()+e.slice(1),n=0;n&lt;t.length;n++){var i=t[n],r=i?&#39;&#39;+i+o:e;if(&#39;undefined&#39;!=typeof document.body.style[r])return r}return null}function B(){return this.state.isDestroyed=!0,P(this.modifiers,&#39;applyStyle&#39;)&amp;&amp;(this.popper.removeAttribute(&#39;x-placement&#39;),this.popper.style.position=&#39;&#39;,this.popper.style.top=&#39;&#39;,this.popper.style.left=&#39;&#39;,this.popper.style.right=&#39;&#39;,this.popper.style.bottom=&#39;&#39;,this.popper.style.willChange=&#39;&#39;,this.popper.style[W(&#39;transform&#39;)]=&#39;&#39;),this.disableEventListeners(),this.options.removeOnDestroy&amp;&amp;this.popper.parentNode.removeChild(this.popper),this}function H(e){var t=e.ownerDocument;return t?t.defaultView:window}function A(e,t,o,i){var r=&#39;BODY&#39;===e.nodeName,p=r?e.ownerDocument.defaultView:e;p.addEventListener(t,o,{passive:!0}),r||A(n(p.parentNode),t,o,i),i.push(p)}function I(e,t,o,i){o.updateBound=i,H(e).addEventListener(&#39;resize&#39;,o.updateBound,{passive:!0});var r=n(e);return A(r,&#39;scroll&#39;,o.updateBound,o.scrollParents),o.scrollElement=r,o.eventsEnabled=!0,o}function M(){this.state.eventsEnabled||(this.state=I(this.reference,this.options,this.state,this.scheduleUpdate))}function F(e,t){return H(e).removeEventListener(&#39;resize&#39;,t.updateBound),t.scrollParents.forEach(function(e){e.removeEventListener(&#39;scroll&#39;,t.updateBound)}),t.updateBound=null,t.scrollParents=[],t.scrollElement=null,t.eventsEnabled=!1,t}function R(){this.state.eventsEnabled&amp;&amp;(cancelAnimationFrame(this.scheduleUpdate),this.state=F(this.reference,this.state))}function U(e){return&#39;&#39;!==e&amp;&amp;!isNaN(parseFloat(e))&amp;&amp;isFinite(e)}function Y(e,t){Object.keys(t).forEach(function(o){var n=&#39;&#39;;-1!==[&#39;width&#39;,&#39;height&#39;,&#39;top&#39;,&#39;right&#39;,&#39;bottom&#39;,&#39;left&#39;].indexOf(o)&amp;&amp;U(t[o])&amp;&amp;(n=&#39;px&#39;),e.style[o]=t[o]+n})}function j(e,t){Object.keys(t).forEach(function(o){var n=t[o];!1===n?e.removeAttribute(o):e.setAttribute(o,t[o])})}function q(e,t,o){var n=D(e,function(e){var o=e.name;return o===t}),i=!!n&amp;&amp;e.some(function(e){return e.name===o&amp;&amp;e.enabled&amp;&amp;e.order&lt;n.order});if(!i){var r=&#39;`&#39;+t+&#39;`&#39;;console.warn(&#39;`&#39;+o+&#39;`&#39;+&#39; modifier is required by &#39;+r+&#39; modifier in order to work, be sure to include it before &#39;+r+&#39;!&#39;)}return i}function K(e){return&#39;end&#39;===e?&#39;start&#39;:&#39;start&#39;===e?&#39;end&#39;:e}function V(e){var t=1&lt;arguments.length&amp;&amp;void 0!==arguments[1]&amp;&amp;arguments[1],o=le.indexOf(e),n=le.slice(o+1).concat(le.slice(0,o));return t?n.reverse():n}function z(e,t,o,n){var i=e.match(/((?:\-|\+)?\d*\.?\d*)(.*)/),r=+i[1],p=i[2];if(!r)return e;if(0===p.indexOf(&#39;%&#39;)){var s;switch(p){case&#39;%p&#39;:s=o;break;case&#39;%&#39;:case&#39;%r&#39;:default:s=n;}var d=c(s);return d[t]/100*r}if(&#39;vh&#39;===p||&#39;vw&#39;===p){var a;return a=&#39;vh&#39;===p?Q(document.documentElement.clientHeight,window.innerHeight||0):Q(document.documentElement.clientWidth,window.innerWidth||0),a/100*r}return r}function G(e,t,o,n){var i=[0,0],r=-1!==[&#39;right&#39;,&#39;left&#39;].indexOf(n),p=e.split(/(\+|\-)/).map(function(e){return e.trim()}),s=p.indexOf(D(p,function(e){return-1!==e.search(/,|\s/)}));p[s]&amp;&amp;-1===p[s].indexOf(&#39;,&#39;)&amp;&amp;console.warn(&#39;Offsets separated by white space(s) are deprecated, use a comma (,) instead.&#39;);var d=/\s*,\s*|\s+/,a=-1===s?[p]:[p.slice(0,s).concat([p[s].split(d)[0]]),[p[s].split(d)[1]].concat(p.slice(s+1))];return a=a.map(function(e,n){var i=(1===n?!r:r)?&#39;height&#39;:&#39;width&#39;,p=!1;return e.reduce(function(e,t){return&#39;&#39;===e[e.length-1]&amp;&amp;-1!==[&#39;+&#39;,&#39;-&#39;].indexOf(t)?(e[e.length-1]=t,p=!0,e):p?(e[e.length-1]+=t,p=!1,e):e.concat(t)},[]).map(function(e){return z(e,i,t,o)})}),a.forEach(function(e,t){e.forEach(function(o,n){U(o)&amp;&amp;(i[t]+=o*(&#39;-&#39;===e[n-1]?-1:1))})}),i}function _(e,t){var o,n=t.offset,i=e.placement,r=e.offsets,p=r.popper,s=r.reference,d=i.split(&#39;-&#39;)[0];return o=U(+n)?[+n,0]:G(n,p,s,d),&#39;left&#39;===d?(p.top+=o[0],p.left-=o[1]):&#39;right&#39;===d?(p.top+=o[0],p.left+=o[1]):&#39;top&#39;===d?(p.left+=o[0],p.top-=o[1]):&#39;bottom&#39;===d&amp;&amp;(p.left+=o[0],p.top+=o[1]),e.popper=p,e}for(var X=Math.min,J=Math.floor,Q=Math.max,Z=&#39;undefined&#39;!=typeof window&amp;&amp;&#39;undefined&#39;!=typeof document,$=[&#39;Edge&#39;,&#39;Trident&#39;,&#39;Firefox&#39;],ee=0,te=0;te&lt;$.length;te+=1)if(Z&amp;&amp;0&lt;=navigator.userAgent.indexOf($[te])){ee=1;break}var i=Z&amp;&amp;window.Promise,oe=i?function(e){var t=!1;return function(){t||(t=!0,window.Promise.resolve().then(function(){t=!1,e()}))}}:function(e){var t=!1;return function(){t||(t=!0,setTimeout(function(){t=!1,e()},ee))}},ne={},ie=function(){var e=0&lt;arguments.length&amp;&amp;void 0!==arguments[0]?arguments[0]:&#39;all&#39;;return(e=e.toString(),ne.hasOwnProperty(e))?ne[e]:(&#39;11&#39;===e?ne[e]=-1!==navigator.userAgent.indexOf(&#39;Trident&#39;):&#39;10&#39;===e?ne[e]=-1!==navigator.appVersion.indexOf(&#39;MSIE 10&#39;):&#39;all&#39;===e?ne[e]=-1!==navigator.userAgent.indexOf(&#39;Trident&#39;)||-1!==navigator.userAgent.indexOf(&#39;MSIE&#39;):void 0,ne.all=ne.all||Object.keys(ne).some(function(e){return ne[e]}),ne[e])},re=function(e,t){if(!(e instanceof t))throw new TypeError(&#39;Cannot call a class as a function&#39;)},pe=function(){function e(e,t){for(var o,n=0;n&lt;t.length;n++)o=t[n],o.enumerable=o.enumerable||!1,o.configurable=!0,&#39;value&#39;in o&amp;&amp;(o.writable=!0),Object.defineProperty(e,o.key,o)}return function(t,o,n){return o&amp;&amp;e(t.prototype,o),n&amp;&amp;e(t,n),t}}(),se=function(e,t,o){return t in e?Object.defineProperty(e,t,{value:o,enumerable:!0,configurable:!0,writable:!0}):e[t]=o,e},de=Object.assign||function(e){for(var t,o=1;o&lt;arguments.length;o++)for(var n in t=arguments[o],t)Object.prototype.hasOwnProperty.call(t,n)&amp;&amp;(e[n]=t[n]);return e},ae=[&#39;auto-start&#39;,&#39;auto&#39;,&#39;auto-end&#39;,&#39;top-start&#39;,&#39;top&#39;,&#39;top-end&#39;,&#39;right-start&#39;,&#39;right&#39;,&#39;right-end&#39;,&#39;bottom-end&#39;,&#39;bottom&#39;,&#39;bottom-start&#39;,&#39;left-end&#39;,&#39;left&#39;,&#39;left-start&#39;],le=ae.slice(3),fe={FLIP:&#39;flip&#39;,CLOCKWISE:&#39;clockwise&#39;,COUNTERCLOCKWISE:&#39;counterclockwise&#39;},me=function(){function t(o,n){var i=this,r=2&lt;arguments.length&amp;&amp;void 0!==arguments[2]?arguments[2]:{};re(this,t),this.scheduleUpdate=function(){return requestAnimationFrame(i.update)},this.update=oe(this.update.bind(this)),this.options=de({},t.Defaults,r),this.state={isDestroyed:!1,isCreated:!1,scrollParents:[]},this.reference=o&amp;&amp;o.jquery?o[0]:o,this.popper=n&amp;&amp;n.jquery?n[0]:n,this.options.modifiers={},Object.keys(de({},t.Defaults.modifiers,r.modifiers)).forEach(function(e){i.options.modifiers[e]=de({},t.Defaults.modifiers[e]||{},r.modifiers?r.modifiers[e]:{})}),this.modifiers=Object.keys(this.options.modifiers).map(function(e){return de({name:e},i.options.modifiers[e])}).sort(function(e,t){return e.order-t.order}),this.modifiers.forEach(function(t){t.enabled&amp;&amp;e(t.onLoad)&amp;&amp;t.onLoad(i.reference,i.popper,i.options,t,i.state)}),this.update();var p=this.options.eventsEnabled;p&amp;&amp;this.enableEventListeners(),this.state.eventsEnabled=p}return pe(t,[{key:&#39;update&#39;,value:function(){return k.call(this)}},{key:&#39;destroy&#39;,value:function(){return B.call(this)}},{key:&#39;enableEventListeners&#39;,value:function(){return M.call(this)}},{key:&#39;disableEventListeners&#39;,value:function(){return R.call(this)}}]),t}();return me.Utils=(&#39;undefined&#39;==typeof window?global:window).PopperUtils,me.placements=ae,me.Defaults={placement:&#39;bottom&#39;,positionFixed:!1,eventsEnabled:!0,removeOnDestroy:!1,onCreate:function(){},onUpdate:function(){},modifiers:{shift:{order:100,enabled:!0,fn:function(e){var t=e.placement,o=t.split(&#39;-&#39;)[0],n=t.split(&#39;-&#39;)[1];if(n){var i=e.offsets,r=i.reference,p=i.popper,s=-1!==[&#39;bottom&#39;,&#39;top&#39;].indexOf(o),d=s?&#39;left&#39;:&#39;top&#39;,a=s?&#39;width&#39;:&#39;height&#39;,l={start:se({},d,r[d]),end:se({},d,r[d]+r[a]-p[a])};e.offsets.popper=de({},p,l[n])}return e}},offset:{order:200,enabled:!0,fn:_,offset:0},preventOverflow:{order:300,enabled:!0,fn:function(e,t){var o=t.boundariesElement||r(e.instance.popper);e.instance.reference===o&amp;&amp;(o=r(o));var n=E(e.instance.popper,e.instance.reference,t.padding,o,e.positionFixed);t.boundaries=n;var i=t.priority,p=e.offsets.popper,s={primary:function(e){var o=p[e];return p[e]&lt;n[e]&amp;&amp;!t.escapeWithReference&amp;&amp;(o=Q(p[e],n[e])),se({},e,o)},secondary:function(e){var o=&#39;right&#39;===e?&#39;left&#39;:&#39;top&#39;,i=p[o];return p[e]&gt;n[e]&amp;&amp;!t.escapeWithReference&amp;&amp;(i=X(p[o],n[e]-(&#39;right&#39;===e?p.width:p.height))),se({},o,i)}};return i.forEach(function(e){var t=-1===[&#39;left&#39;,&#39;top&#39;].indexOf(e)?&#39;secondary&#39;:&#39;primary&#39;;p=de({},p,s[t](e))}),e.offsets.popper=p,e},priority:[&#39;left&#39;,&#39;right&#39;,&#39;top&#39;,&#39;bottom&#39;],padding:5,boundariesElement:&#39;scrollParent&#39;},keepTogether:{order:400,enabled:!0,fn:function(e){var t=e.offsets,o=t.popper,n=t.reference,i=e.placement.split(&#39;-&#39;)[0],r=J,p=-1!==[&#39;top&#39;,&#39;bottom&#39;].indexOf(i),s=p?&#39;right&#39;:&#39;bottom&#39;,d=p?&#39;left&#39;:&#39;top&#39;,a=p?&#39;width&#39;:&#39;height&#39;;return o[s]&lt;r(n[d])&amp;&amp;(e.offsets.popper[d]=r(n[d])-o[a]),o[d]&gt;r(n[s])&amp;&amp;(e.offsets.popper[d]=r(n[s])),e}},arrow:{order:500,enabled:!0,fn:function(e,o){var n;if(!q(e.instance.modifiers,&#39;arrow&#39;,&#39;keepTogether&#39;))return e;var i=o.element;if(&#39;string&#39;==typeof i){if(i=e.instance.popper.querySelector(i),!i)return e;}else if(!e.instance.popper.contains(i))return console.warn(&#39;WARNING: `arrow.element` must be child of its popper element!&#39;),e;var r=e.placement.split(&#39;-&#39;)[0],p=e.offsets,s=p.popper,d=p.reference,a=-1!==[&#39;left&#39;,&#39;right&#39;].indexOf(r),l=a?&#39;height&#39;:&#39;width&#39;,f=a?&#39;Top&#39;:&#39;Left&#39;,m=f.toLowerCase(),h=a?&#39;left&#39;:&#39;top&#39;,g=a?&#39;bottom&#39;:&#39;right&#39;,u=L(i)[l];d[g]-u&lt;s[m]&amp;&amp;(e.offsets.popper[m]-=s[m]-(d[g]-u)),d[m]+u&gt;s[g]&amp;&amp;(e.offsets.popper[m]+=d[m]+u-s[g]),e.offsets.popper=c(e.offsets.popper);var b=d[m]+d[l]/2-u/2,y=t(e.instance.popper),w=parseFloat(y[&#39;margin&#39;+f],10),E=parseFloat(y[&#39;border&#39;+f+&#39;Width&#39;],10),v=b-e.offsets.popper[m]-w-E;return v=Q(X(s[l]-u,v),0),e.arrowElement=i,e.offsets.arrow=(n={},se(n,m,Math.round(v)),se(n,h,&#39;&#39;),n),e},element:&#39;[x-arrow]&#39;},flip:{order:600,enabled:!0,fn:function(e,t){if(P(e.instance.modifiers,&#39;inner&#39;))return e;if(e.flipped&amp;&amp;e.placement===e.originalPlacement)return e;var o=E(e.instance.popper,e.instance.reference,t.padding,t.boundariesElement,e.positionFixed),n=e.placement.split(&#39;-&#39;)[0],i=S(n),r=e.placement.split(&#39;-&#39;)[1]||&#39;&#39;,p=[];switch(t.behavior){case fe.FLIP:p=[n,i];break;case fe.CLOCKWISE:p=V(n);break;case fe.COUNTERCLOCKWISE:p=V(n,!0);break;default:p=t.behavior;}return p.forEach(function(s,d){if(n!==s||p.length===d+1)return e;n=e.placement.split(&#39;-&#39;)[0],i=S(n);var a=e.offsets.popper,l=e.offsets.reference,f=J,m=&#39;left&#39;===n&amp;&amp;f(a.right)&gt;f(l.left)||&#39;right&#39;===n&amp;&amp;f(a.left)&lt;f(l.right)||&#39;top&#39;===n&amp;&amp;f(a.bottom)&gt;f(l.top)||&#39;bottom&#39;===n&amp;&amp;f(a.top)&lt;f(l.bottom),h=f(a.left)&lt;f(o.left),c=f(a.right)&gt;f(o.right),g=f(a.top)&lt;f(o.top),u=f(a.bottom)&gt;f(o.bottom),b=&#39;left&#39;===n&amp;&amp;h||&#39;right&#39;===n&amp;&amp;c||&#39;top&#39;===n&amp;&amp;g||&#39;bottom&#39;===n&amp;&amp;u,y=-1!==[&#39;top&#39;,&#39;bottom&#39;].indexOf(n),w=!!t.flipVariations&amp;&amp;(y&amp;&amp;&#39;start&#39;===r&amp;&amp;h||y&amp;&amp;&#39;end&#39;===r&amp;&amp;c||!y&amp;&amp;&#39;start&#39;===r&amp;&amp;g||!y&amp;&amp;&#39;end&#39;===r&amp;&amp;u);(m||b||w)&amp;&amp;(e.flipped=!0,(m||b)&amp;&amp;(n=p[d+1]),w&amp;&amp;(r=K(r)),e.placement=n+(r?&#39;-&#39;+r:&#39;&#39;),e.offsets.popper=de({},e.offsets.popper,T(e.instance.popper,e.offsets.reference,e.placement)),e=N(e.instance.modifiers,e,&#39;flip&#39;))}),e},behavior:&#39;flip&#39;,padding:5,boundariesElement:&#39;viewport&#39;},inner:{order:700,enabled:!1,fn:function(e){var t=e.placement,o=t.split(&#39;-&#39;)[0],n=e.offsets,i=n.popper,r=n.reference,p=-1!==[&#39;left&#39;,&#39;right&#39;].indexOf(o),s=-1===[&#39;top&#39;,&#39;left&#39;].indexOf(o);return i[p?&#39;left&#39;:&#39;top&#39;]=r[o]-(s?i[p?&#39;width&#39;:&#39;height&#39;]:0),e.placement=S(t),e.offsets.popper=c(i),e}},hide:{order:800,enabled:!0,fn:function(e){if(!q(e.instance.modifiers,&#39;hide&#39;,&#39;preventOverflow&#39;))return e;var t=e.offsets.reference,o=D(e.instance.modifiers,function(e){return&#39;preventOverflow&#39;===e.name}).boundaries;if(t.bottom&lt;o.top||t.left&gt;o.right||t.top&gt;o.bottom||t.right&lt;o.left){if(!0===e.hide)return e;e.hide=!0,e.attributes[&#39;x-out-of-boundaries&#39;]=&#39;&#39;}else{if(!1===e.hide)return e;e.hide=!1,e.attributes[&#39;x-out-of-boundaries&#39;]=!1}return e}},computeStyle:{order:850,enabled:!0,fn:function(e,t){var o=t.x,n=t.y,i=e.offsets.popper,p=D(e.instance.modifiers,function(e){return&#39;applyStyle&#39;===e.name}).gpuAcceleration;void 0!==p&amp;&amp;console.warn(&#39;WARNING: `gpuAcceleration` option moved to `computeStyle` modifier and will not be supported in future versions of Popper.js!&#39;);var s,d,a=void 0===p?t.gpuAcceleration:p,l=r(e.instance.popper),f=g(l),m={position:i.position},h={left:J(i.left),top:J(i.top),bottom:J(i.bottom),right:J(i.right)},c=&#39;bottom&#39;===o?&#39;top&#39;:&#39;bottom&#39;,u=&#39;right&#39;===n?&#39;left&#39;:&#39;right&#39;,b=W(&#39;transform&#39;);if(d=&#39;bottom&#39;==c?-f.height+h.bottom:h.top,s=&#39;right&#39;==u?-f.width+h.right:h.left,a&amp;&amp;b)m[b]=&#39;translate3d(&#39;+s+&#39;px, &#39;+d+&#39;px, 0)&#39;,m[c]=0,m[u]=0,m.willChange=&#39;transform&#39;;else{var y=&#39;bottom&#39;==c?-1:1,w=&#39;right&#39;==u?-1:1;m[c]=d*y,m[u]=s*w,m.willChange=c+&#39;, &#39;+u}var E={&quot;x-placement&quot;:e.placement};return e.attributes=de({},E,e.attributes),e.styles=de({},m,e.styles),e.arrowStyles=de({},e.offsets.arrow,e.arrowStyles),e},gpuAcceleration:!0,x:&#39;bottom&#39;,y:&#39;right&#39;},applyStyle:{order:900,enabled:!0,fn:function(e){return Y(e.instance.popper,e.styles),j(e.instance.popper,e.attributes),e.arrowElement&amp;&amp;Object.keys(e.arrowStyles).length&amp;&amp;Y(e.arrowElement,e.arrowStyles),e},onLoad:function(e,t,o,n,i){var r=O(i,t,e,o.positionFixed),p=x(o.placement,r,t,e,o.modifiers.flip.boundariesElement,o.modifiers.flip.padding);return t.setAttribute(&#39;x-placement&#39;,p),Y(t,{position:o.positionFixed?&#39;fixed&#39;:&#39;absolute&#39;}),o},gpuAcceleration:void 0}}},me});</pre>
+
+<p>//# sourceMappingURL=popper.min.js.map</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

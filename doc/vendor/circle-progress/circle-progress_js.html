@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>circle-progress.js - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../README_md.html">README</a>
+  
+    <li><a href="../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="../../app/assets/fonts/fontawesome-webfont_svg.html">fontawesome-webfont.svg</a>
+  
+    <li><a href="../../app/assets/javascripts/access_coffee.html">access.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/affectations_coffee.html">affectations.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/agents_coffee.html">agents.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/alertes_coffee.html">alertes.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../app/assets/javascripts/archive_coffee.html">archive.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/arrondissements_coffee.html">arrondissements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/assurance_coffee.html">assurance.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../app/assets/javascripts/bulletins_coffee.html">bulletins.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="../../app/assets/javascripts/carrefours_coffee.html">carrefours.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/centrepartenaires_coffee.html">centrepartenaires.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/centrerecouvrements_coffee.html">centrerecouvrements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/comments_coffee.html">comments.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/commissariats_coffee.html">commissariats.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/compte_coffee.html">compte.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/constat_coffee.html">constat.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/constats_coffee.html">constats.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/convocations_coffee.html">convocations.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/departements_coffee.html">departements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/faker_min_js.html">faker.min.js</a>
+  
+    <li><a href="../../app/assets/javascripts/gestion_alerte_coffee.html">gestion_alerte.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/gestion_constat_coffee.html">gestion_constat.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/gestion_contravention_coffee.html">gestion_contravention.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/grades_coffee.html">grades.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/groupements_coffee.html">groupements.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/grvpc_coffee.html">grvpc.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/infractions_coffee.html">infractions.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/journal_coffee.html">journal.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/langues_coffee.html">langues.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/manage_coffee.html">manage.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/member_coffee.html">member.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/metropoli_coffee.html">metropoli.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/metropolisroles_coffee.html">metropolisroles.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/paiementsolutions_coffee.html">paiementsolutions.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/parametre_coffee.html">parametre.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/pieceretenus_coffee.html">pieceretenus.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/postepolices_coffee.html">postepolices.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/public_coffee.html">public.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/regions_coffee.html">regions.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/roles_coffee.html">roles.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/services_coffee.html">services.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/statistique_coffee.html">statistique.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/status_coffee.html">status.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/statuses_coffee.html">statuses.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/structures_coffee.html">structures.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/typeaccidents_coffee.html">typeaccidents.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/types_coffee.html">types.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/u_coffee.html">u.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/unites_coffee.html">unites.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/villes_coffee.html">villes.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/workflows_coffee.html">workflows.coffee</a>
+  
+    <li><a href="../../app/assets/javascripts/zonecouverturemotifs_coffee.html">zonecouverturemotifs.coffee</a>
+  
+    <li><a href="../../app/assets/stylesheets/_application_css.html">_application.css</a>
+  
+    <li><a href="../../app/assets/stylesheets/access_scss.html">access.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/affectations_scss.html">affectations.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/agents_scss.html">agents.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/alertes_scss.html">alertes.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/application_scss.html">application.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/archive_scss.html">archive.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/arrondissements_scss.html">arrondissements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/assurance_scss.html">assurance.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/bulletins_scss.html">bulletins.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/carrefours_scss.html">carrefours.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/centrepartenaires_scss.html">centrepartenaires.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/centrerecouvrements_scss.html">centrerecouvrements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/comments_scss.html">comments.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/commissariats_scss.html">commissariats.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/compte_scss.html">compte.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/constat_scss.html">constat.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/constats_scss.html">constats.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/contravetions_scss.html">contravetions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/convocations_scss.html">convocations.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/departements_scss.html">departements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/gestion_alerte_scss.html">gestion_alerte.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/gestion_constat_scss.html">gestion_constat.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/gestion_contravention_scss.html">gestion_contravention.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/grades_scss.html">grades.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/groupements_scss.html">groupements.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/grvpc_scss.html">grvpc.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/infractions_scss.html">infractions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/journal_scss.html">journal.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/langues_scss.html">langues.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/manage_scss.html">manage.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/member_scss.html">member.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/metropoli_scss.html">metropoli.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/metropolisroles_scss.html">metropolisroles.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/paiementsolutions_scss.html">paiementsolutions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/parametre_scss.html">parametre.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/pieceretenus_scss.html">pieceretenus.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/postepolices_scss.html">postepolices.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/public_scss.html">public.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/regions_scss.html">regions.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/roles_scss.html">roles.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/services_scss.html">services.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/statistique_scss.html">statistique.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/status_scss.html">status.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/statuses_scss.html">statuses.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/structures_scss.html">structures.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/typeaccidents_scss.html">typeaccidents.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/types_scss.html">types.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/unites_scss.html">unites.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/villes_scss.html">villes.scss</a>
+  
+    <li><a href="../../app/assets/stylesheets/zonecouverturemotifs_scss.html">zonecouverturemotifs.scss</a>
+  
+    <li><a href="../../app/views/affectations/_affectation_json_jbuilder.html">_affectation.json.jbuilder</a>
+  
+    <li><a href="../../app/views/affectations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/affectations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/agents/Untitled-1.html">Untitled-1</a>
+  
+    <li><a href="../../app/views/agents/Untitled-2.html">Untitled-2</a>
+  
+    <li><a href="../../app/views/agents/_agent_json_jbuilder.html">_agent.json.jbuilder</a>
+  
+    <li><a href="../../app/views/agents/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/agents/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/alertes/_alerte_json_jbuilder.html">_alerte.json.jbuilder</a>
+  
+    <li><a href="../../app/views/alertes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/alertes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/arrondissements/_arrondissement_json_jbuilder.html">_arrondissement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/arrondissements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/arrondissements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/bulletins/_bulletin_json_jbuilder.html">_bulletin.json.jbuilder</a>
+  
+    <li><a href="../../app/views/bulletins/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/bulletins/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/carrefours/_carrefour_json_jbuilder.html">_carrefour.json.jbuilder</a>
+  
+    <li><a href="../../app/views/carrefours/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/carrefours/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrepartenaires/_centrepartenaire_json_jbuilder.html">_centrepartenaire.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrepartenaires/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrepartenaires/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrerecouvrements/_centrerecouvrement_json_jbuilder.html">_centrerecouvrement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrerecouvrements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/centrerecouvrements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/comments/_comment_json_jbuilder.html">_comment.json.jbuilder</a>
+  
+    <li><a href="../../app/views/comments/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/comments/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/commissariats/_commissariat_json_jbuilder.html">_commissariat.json.jbuilder</a>
+  
+    <li><a href="../../app/views/commissariats/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/commissariats/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/constats/_constat_json_jbuilder.html">_constat.json.jbuilder</a>
+  
+    <li><a href="../../app/views/constats/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/constats/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contravetions/_contravetion_json_jbuilder.html">_contravetion.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contravetions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/contravetions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/convocations/_convocation_json_jbuilder.html">_convocation.json.jbuilder</a>
+  
+    <li><a href="../../app/views/convocations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/convocations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/departements/_departement_json_jbuilder.html">_departement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/departements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/departements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/grades/_grade_json_jbuilder.html">_grade.json.jbuilder</a>
+  
+    <li><a href="../../app/views/grades/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/grades/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/groupements/_groupement_json_jbuilder.html">_groupement.json.jbuilder</a>
+  
+    <li><a href="../../app/views/groupements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/groupements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/infractions/_infraction_json_jbuilder.html">_infraction.json.jbuilder</a>
+  
+    <li><a href="../../app/views/infractions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/infractions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/langues/_langue_json_jbuilder.html">_langue.json.jbuilder</a>
+  
+    <li><a href="../../app/views/langues/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/langues/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/metropolisroles/_metropolisrole_json_jbuilder.html">_metropolisrole.json.jbuilder</a>
+  
+    <li><a href="../../app/views/metropolisroles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/metropolisroles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paiementsolutions/_paiementsolution_json_jbuilder.html">_paiementsolution.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paiementsolutions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/paiementsolutions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/pieceretenus/_pieceretenu_json_jbuilder.html">_pieceretenu.json.jbuilder</a>
+  
+    <li><a href="../../app/views/pieceretenus/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/pieceretenus/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/postepolices/_postepolice_json_jbuilder.html">_postepolice.json.jbuilder</a>
+  
+    <li><a href="../../app/views/postepolices/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/postepolices/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/regions/_region_json_jbuilder.html">_region.json.jbuilder</a>
+  
+    <li><a href="../../app/views/regions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/regions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/roles/_role_json_jbuilder.html">_role.json.jbuilder</a>
+  
+    <li><a href="../../app/views/roles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/roles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/services/_service_json_jbuilder.html">_service.json.jbuilder</a>
+  
+    <li><a href="../../app/views/services/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/services/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/status/_status_json_jbuilder.html">_status.json.jbuilder</a>
+  
+    <li><a href="../../app/views/status/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/status/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/statuses/_status_json_jbuilder.html">_status.json.jbuilder</a>
+  
+    <li><a href="../../app/views/statuses/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/statuses/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/structures/_structure_json_jbuilder.html">_structure.json.jbuilder</a>
+  
+    <li><a href="../../app/views/structures/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/structures/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/typeaccidents/_typeaccident_json_jbuilder.html">_typeaccident.json.jbuilder</a>
+  
+    <li><a href="../../app/views/typeaccidents/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/typeaccidents/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/types/_type_json_jbuilder.html">_type.json.jbuilder</a>
+  
+    <li><a href="../../app/views/types/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/types/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/unites/_unite_json_jbuilder.html">_unite.json.jbuilder</a>
+  
+    <li><a href="../../app/views/unites/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/unites/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/villes/_ville_json_jbuilder.html">_ville.json.jbuilder</a>
+  
+    <li><a href="../../app/views/villes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/villes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/workflows/_workflow_json_jbuilder.html">_workflow.json.jbuilder</a>
+  
+    <li><a href="../../app/views/workflows/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/workflows/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../app/views/zonecouverturemotifs/_zonecouverturemotif_json_jbuilder.html">_zonecouverturemotif.json.jbuilder</a>
+  
+    <li><a href="../../app/views/zonecouverturemotifs/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../app/views/zonecouverturemotifs/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../brouillons_txt.html">brouillons</a>
+  
+    <li><a href="../../config_ru.html">config.ru</a>
+  
+    <li><a href="../../erd_dot.html">erd.dot</a>
+  
+    <li><a href="../../hi.html">hi</a>
+  
+    <li><a href="../../lib/templates/rails/jbuilder/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../log/production_log.html">production.log</a>
+  
+    <li><a href="../../log/test_log.html">test.log</a>
+  
+    <li><a href="../../package_json.html">package.json</a>
+  
+    <li><a href="../../public/404_html.html">404.html</a>
+  
+    <li><a href="../../public/422_html.html">422.html</a>
+  
+    <li><a href="../../public/500_html.html">500.html</a>
+  
+    <li><a href="../../public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="../../public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="../../public/assets/application-1d6a15def6671efd85aa7f12dd7a187c8a4010b2f141f1f26f17c84657c45352_js.html">application-1d6a15def6671efd85aa7f12dd7a187c8a4010b2f141f1f26f17c84657c45352.js</a>
+  
+    <li><a href="../../public/assets/application-5173f52181c8a9ce2fd1869b7a408c290415dd6db3d815626ca73dcbf8150eb4_css.html">application-5173f52181c8a9ce2fd1869b7a408c290415dd6db3d815626ca73dcbf8150eb4.css</a>
+  
+    <li><a href="../../public/assets/fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c_svg.html">fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c.svg</a>
+  
+    <li><a href="../../public/assets/leaflet-src_js-6eed528b5678ee4f34b8be267a8da5d14734d58d56baeea6a31e9819e6630775_map.html">leaflet-src.js-6eed528b5678ee4f34b8be267a8da5d14734d58d56baeea6a31e9819e6630775.map</a>
+  
+    <li><a href="../../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../../public/robots_txt.html">robots</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/_rest_managed_json.html">_rest_managed.json</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/admin-extra_html.html">admin-extra.html</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/currency_xml.html">currency.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/elevate_xml.html">elevate.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/lang/stopwords_en_txt.html">stopwords_en</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/mapping-ISOLatin1Accent_txt.html">mapping-ISOLatin1Accent</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/protwords_txt.html">protwords</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/schema_xml.html">schema.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/scripts_conf.html">scripts.conf</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/solrconfig_xml.html">solrconfig.xml</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/spellings_txt.html">spellings</a>
+  
+    <li><a href="../../solr/configsets/sunspot/conf/synonyms_txt.html">synonyms</a>
+  
+    <li><a href="../../solr/default/core_properties.html">core.properties</a>
+  
+    <li><a href="../../solr/development/core_properties.html">core.properties</a>
+  
+    <li><a href="../../solr/solr_xml.html">solr.xml</a>
+  
+    <li><a href="../../solr/test/core_properties.html">core.properties</a>
+  
+    <li><a href="../../tmp/pids/server_pid.html">server.pid</a>
+  
+    <li><a href="../../tmp/restart_txt.html">restart</a>
+  
+    <li><a href="../../vendor/animsition/animsition_min_css.html">animsition.min.css</a>
+  
+    <li><a href="../../vendor/animsition/animsition_min_js.html">animsition.min.js</a>
+  
+    <li><a href="../../vendor/bootstrap-4_1/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../../vendor/bootstrap-4_1/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../vendor/bootstrap-4_1/popper_min_js.html">popper.min.js</a>
+  
+    <li><a href="../../vendor/bootstrap-progressbar/bootstrap-progressbar-3_3_4_min_css.html">bootstrap-progressbar-3.3.4.min.css</a>
+  
+    <li><a href="../../vendor/bootstrap-progressbar/bootstrap-progressbar_min_js.html">bootstrap-progressbar.min.js</a>
+  
+    <li><a href="../../vendor/chartjs/Chart_bundle_min_js.html">Chart.bundle.min.js</a>
+  
+    <li><a href="../../vendor/circle-progress/circle-progress_js.html">circle-progress.js</a>
+  
+    <li><a href="../../vendor/circle-progress/circle-progress_min_js.html">circle-progress.min.js</a>
+  
+    <li><a href="../../vendor/countdown/countdowntime_js.html">countdowntime.js</a>
+  
+    <li><a href="../../vendor/countdown/jquery_countdown_min_js.html">jquery.countdown.min.js</a>
+  
+    <li><a href="../../vendor/countdown/moment-timezone-with-data_min_js.html">moment-timezone-with-data.min.js</a>
+  
+    <li><a href="../../vendor/countdown/moment-timezone_min_js.html">moment-timezone.min.js</a>
+  
+    <li><a href="../../vendor/countdown/moment_min_js.html">moment.min.js</a>
+  
+    <li><a href="../../vendor/counter-up/jquery_counterup_min_js.html">jquery.counterup.min.js</a>
+  
+    <li><a href="../../vendor/counter-up/jquery_waypoints_min_js.html">jquery.waypoints.min.js</a>
+  
+    <li><a href="../../vendor/counter-up/waypoints_min_js.html">waypoints.min.js</a>
+  
+    <li><a href="../../vendor/css-hamburgers/hamburgers_css.html">hamburgers.css</a>
+  
+    <li><a href="../../vendor/css-hamburgers/hamburgers_min_css.html">hamburgers.min.css</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/HELP-US-OUT_txt.html">HELP-US-OUT</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/css/font-awesome_css.html">font-awesome.css</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/css/font-awesome_min_css.html">font-awesome.min.css</a>
+  
+    <li><a href="../../vendor/font-awesome-4_7/fonts/fontawesome-webfont_svg.html">fontawesome-webfont.svg</a>
+  
+    <li><a href="../../vendor/font-awesome-5/css/fontawesome-all_min_css.html">fontawesome-all.min.css</a>
+  
+    <li><a href="../../vendor/font-awesome-5/webfonts/fa-brands-400_svg.html">fa-brands-400.svg</a>
+  
+    <li><a href="../../vendor/font-awesome-5/webfonts/fa-regular-400_svg.html">fa-regular-400.svg</a>
+  
+    <li><a href="../../vendor/font-awesome-5/webfonts/fa-solid-900_svg.html">fa-solid-900.svg</a>
+  
+    <li><a href="../../vendor/jquery-3_2_1_min_js.html">jquery-3.2.1.min.js</a>
+  
+    <li><a href="../../vendor/jquery-ui_min_js.html">jquery-ui.min.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/css/lightbox_css.html">lightbox.css</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox-plus-jquery_js.html">lightbox-plus-jquery.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox-plus-jquery_min_js.html">lightbox-plus-jquery.min.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox-plus-jquery_min_map.html">lightbox-plus-jquery.min.map</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox_js.html">lightbox.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox_min_js.html">lightbox.min.js</a>
+  
+    <li><a href="../../vendor/lightbox2/dist/js/lightbox_min_map.html">lightbox.min.map</a>
+  
+    <li><a href="../../vendor/lightbox2/src/css/lightbox_css.html">lightbox.css</a>
+  
+    <li><a href="../../vendor/lightbox2/src/js/lightbox_js.html">lightbox.js</a>
+  
+    <li><a href="../../vendor/mdi-font/css/material-design-iconic-font_css.html">material-design-iconic-font.css</a>
+  
+    <li><a href="../../vendor/mdi-font/css/material-design-iconic-font_min_css.html">material-design-iconic-font.min.css</a>
+  
+    <li><a href="../../vendor/mdi-font/fonts/Material-Design-Iconic-Font_svg.html">Material-Design-Iconic-Font.svg</a>
+  
+    <li><a href="../../vendor/perfect-scrollbar/perfect-scrollbar_css.html">perfect-scrollbar.css</a>
+  
+    <li><a href="../../vendor/perfect-scrollbar/perfect-scrollbar_js.html">perfect-scrollbar.js</a>
+  
+    <li><a href="../../vendor/perfect-scrollbar/perfect-scrollbar_min_js.html">perfect-scrollbar.min.js</a>
+  
+    <li><a href="../../vendor/progressbar/progressbar_js.html">progressbar.js</a>
+  
+    <li><a href="../../vendor/progressbar/progressbar_min_js.html">progressbar.min.js</a>
+  
+    <li><a href="../../vendor/select2/select2_min_css.html">select2.min.css</a>
+  
+    <li><a href="../../vendor/select2/select2_min_js.html">select2.min.js</a>
+  
+    <li><a href="../../vendor/slick/fonts/slick_svg.html">slick.svg</a>
+  
+    <li><a href="../../vendor/slick/slick-theme_css.html">slick-theme.css</a>
+  
+    <li><a href="../../vendor/slick/slick-theme_less.html">slick-theme.less</a>
+  
+    <li><a href="../../vendor/slick/slick-theme_scss.html">slick-theme.scss</a>
+  
+    <li><a href="../../vendor/slick/slick_css.html">slick.css</a>
+  
+    <li><a href="../../vendor/slick/slick_js.html">slick.js</a>
+  
+    <li><a href="../../vendor/slick/slick_less.html">slick.less</a>
+  
+    <li><a href="../../vendor/slick/slick_min_js.html">slick.min.js</a>
+  
+    <li><a href="../../vendor/slick/slick_scss.html">slick.scss</a>
+  
+    <li><a href="../../vendor/smk-accordion/accordion_css.html">accordion.css</a>
+  
+    <li><a href="../../vendor/smk-accordion/accordion_js.html">accordion.js</a>
+  
+    <li><a href="../../vendor/smk-accordion/accordion_min_js.html">accordion.min.js</a>
+  
+    <li><a href="../../vendor/sweetalert/sweetalert_min_js.html">sweetalert.min.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_brazil_js.html">jquery.vmap.brazil.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_europe_js.html">jquery.vmap.europe.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_france_js.html">jquery.vmap.france.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_germany_js.html">jquery.vmap.germany.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_js.html">jquery.vmap.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_min_js.html">jquery.vmap.min.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_russia_js.html">jquery.vmap.russia.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_sampledata_js.html">jquery.vmap.sampledata.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_usa_js.html">jquery.vmap.usa.js</a>
+  
+    <li><a href="../../vendor/vector-map/jquery_vmap_world_js.html">jquery.vmap.world.js</a>
+  
+    <li><a href="../../vendor/vector-map/jqvmap_min_css.html">jqvmap.min.css</a>
+  
+    <li><a href="../../vendor/wow/animate_css.html">animate.css</a>
+  
+    <li><a href="../../vendor/wow/wow_min_js.html">wow.min.js</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page vendor/circle-progress/circle-progress.js">
+
+<pre>jquery-circle-progress - jQuery Plugin to draw animated circular progress bars:
+{@link http://kottenator.github.io/jquery-circle-progress/}
+
+@author Rostyslav Bryzgunov &lt;kottenator@gmail.com&gt;
+@version 1.2.2
+@licence MIT
+@preserve</pre>
+
+<p>// UMD factory - <a
+href="https://github.com/umdjs/umd/blob/d31bb6ee7098715e019f52bdfe27b3e4bfd2b97e/templates/jqueryPlugin.js">github.com/umdjs/umd/blob/d31bb6ee7098715e019f52bdfe27b3e4bfd2b97e/templates/jqueryPlugin.js</a>
+// Uses AMD, CommonJS or browser globals to create a jQuery plugin.
+(function(factory) {</p>
+
+<pre>if (typeof define === &#39;function&#39; &amp;&amp; define.amd) {
+  // AMD - register as an anonymous module
+  define([&#39;jquery&#39;], factory);
+} else if (typeof module === &#39;object&#39; &amp;&amp; module.exports) {
+  // Node/CommonJS
+  var $ = require(&#39;jquery&#39;);
+  factory($);
+  module.exports = $;
+} else {
+  // Browser globals
+  factory(jQuery);
+}</pre>
+
+<p>})(function($) {</p>
+
+<pre>/**
+   Inner implementation of the circle progress bar.
+   The class is not exposed _yet_ but you can create an instance through jQuery method call.
+
+   @param {object} config - You can customize any class member (property or method).
+   @class
+   @alias CircleProgress
+  /
+function CircleProgress(config) {
+  this.init(config);
+}
+
+CircleProgress.prototype = {
+  //--------------------------------------- public options ---------------------------------------
+  /**
+     This is the only required option. It should be from `0.0` to `1.0`.
+     @type {number}
+     @default 0.0
+    /
+  value: 0.0,
+
+  /**
+     Size of the canvas in pixels.
+     It&#39;s a square so we need only one dimension.
+     @type {number}
+     @default 100.0
+    /
+  size: 100.0,
+
+  /**
+     Initial angle for `0.0` value in radians.
+     @type {number}
+     @default -Math.PI
+    /
+  startAngle: -Math.PI,
+
+  /**
+     Width of the arc in pixels.
+     If it&#39;s `&#39;auto&#39;` - the value is calculated as `[this.size]{@link CircleProgress#size} / 14`.
+     @type {number|string}
+     @default &#39;auto&#39;
+    /
+  thickness: &#39;auto&#39;,
+
+  /**
+     Fill of the arc. You may set it to:
+
+       - solid color:
+         - `&#39;#3aeabb&#39;`
+         - `{ color: &#39;#3aeabb&#39; }`
+         - `{ color: &#39;rgba(255, 255, 255, .3)&#39; }`
+       - linear gradient _(left to right)_:
+         - `{ gradient: [&#39;#3aeabb&#39;, &#39;#fdd250&#39;], gradientAngle: Math.PI / 4 }`
+         - `{ gradient: [&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;], gradientDirection: [x0, y0, x1, y1] }`
+         - `{ gradient: [[&quot;red&quot;, .2], [&quot;green&quot;, .3], [&quot;blue&quot;, .8]] }`
+       - image:
+         - `{ image: &#39;http://i.imgur.com/pT0i89v.png&#39; }`
+         - `{ image: imageObject }`
+         - `{ color: &#39;lime&#39;, image: &#39;http://i.imgur.com/pT0i89v.png&#39; }` -
+           color displayed until the image is loaded
+
+     @default {gradient: [&#39;#3aeabb&#39;, &#39;#fdd250&#39;]}
+    /
+  fill: {
+    gradient: [&#39;#3aeabb&#39;, &#39;#fdd250&#39;]
+  },
+
+  /**
+     Color of the &quot;empty&quot; arc. Only a color fill supported by now.
+     @type {string}
+     @default &#39;rgba(0, 0, 0, .1)&#39;
+    /
+  emptyFill: &#39;rgba(0, 0, 0, .1)&#39;,
+
+  /**
+     jQuery Animation config.
+     You can pass `false` to disable the animation.
+     @see http://api.jquery.com/animate/
+     @type {object|boolean}
+     @default {duration: 1200, easing: &#39;circleProgressEasing&#39;}
+    /
+  animation: {
+    duration: 1200,
+    easing: &#39;circleProgressEasing&#39;
+  },
+
+  /**
+     Default animation starts at `0.0` and ends at specified `value`. Let&#39;s call this _direct animation_.
+     If you want to make _reversed animation_ - set `animationStartValue: 1.0`.
+     Also you may specify any other value from `0.0` to `1.0`.
+     @type {number}
+     @default 0.0
+    /
+  animationStartValue: 0.0,
+
+  /**
+     Reverse animation and arc draw.
+     By default, the arc is filled from `0.0` to `value`, _clockwise_.
+     With `reverse: true` the arc is filled from `1.0` to `value`, _counter-clockwise_.
+     @type {boolean}
+     @default false
+    /
+  reverse: false,
+
+  /**
+     Arc line cap: `&#39;butt&#39;`, `&#39;round&#39;` or `&#39;square&#39;` -
+     [read more]{@link https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D.lineCap}.
+     @type {string}
+     @default &#39;butt&#39;
+    /
+  lineCap: &#39;butt&#39;,
+
+  /**
+     Canvas insertion mode: append or prepend it into the parent element?
+     @type {string}
+     @default &#39;prepend&#39;
+    /
+  insertMode: &#39;prepend&#39;,
+
+  //------------------------------ protected properties and methods ------------------------------
+  /**
+     Link to {@link CircleProgress} constructor.
+     @protected
+    /
+  constructor: CircleProgress,
+
+  /**
+     Container element. Should be passed into constructor config.
+     @protected
+     @type {jQuery}
+    /
+  el: null,
+
+  /**
+     Canvas element. Automatically generated and prepended to [this.el]{@link CircleProgress#el}.
+     @protected
+     @type {HTMLCanvasElement}
+    /
+  canvas: null,
+
+  /**
+     2D-context of [this.canvas]{@link CircleProgress#canvas}.
+     @protected
+     @type {CanvasRenderingContext2D}
+    /
+  ctx: null,
+
+  /**
+     Radius of the outer circle. Automatically calculated as `[this.size]{@link CircleProgress#size} / 2`.
+     @protected
+     @type {number}
+    /
+  radius: 0.0,
+
+  /**
+     Fill of the main arc. Automatically calculated, depending on [this.fill]{@link CircleProgress#fill} option.
+     @protected
+     @type {string|CanvasGradient|CanvasPattern}
+    /
+  arcFill: null,
+
+  /**
+     Last rendered frame value.
+     @protected
+     @type {number}
+    /
+  lastFrameValue: 0.0,
+
+  /**
+     Init/re-init the widget.
+
+     Throws a jQuery event:
+
+     - `circle-inited(jqEvent)`
+
+     @param {object} config - You can customize any class member (property or method).
+    /
+  init: function(config) {
+    $.extend(this, config);
+    this.radius = this.size / 2;
+    this.initWidget();
+    this.initFill();
+    this.draw();
+    this.el.trigger(&#39;circle-inited&#39;);
+  },
+
+  /**
+     Initialize `&lt;canvas&gt;`.
+     @protected
+    /
+  initWidget: function() {
+    if (!this.canvas)
+      this.canvas = $(&#39;&lt;canvas&gt;&#39;)[this.insertMode == &#39;prepend&#39; ? &#39;prependTo&#39; : &#39;appendTo&#39;](this.el)[0];
+
+    var canvas = this.canvas;
+    canvas.width = this.size;
+    canvas.height = this.size;
+    this.ctx = canvas.getContext(&#39;2d&#39;);
+
+    if (window.devicePixelRatio &gt; 1) {
+      var scaleBy = window.devicePixelRatio;
+      canvas.style.width = canvas.style.height = this.size + &#39;px&#39;;
+      canvas.width = canvas.height = this.size * scaleBy;
+      this.ctx.scale(scaleBy, scaleBy);
+    }
+  },
+
+  /**
+     This method sets [this.arcFill]{@link CircleProgress#arcFill}.
+     It could do this async (on image load).
+     @protected
+    /
+  initFill: function() {
+    var self = this,
+      fill = this.fill,
+      ctx = this.ctx,
+      size = this.size;
+
+    if (!fill)
+      throw Error(&quot;The fill is not specified!&quot;);
+
+    if (typeof fill == &#39;string&#39;)
+      fill = {color: fill};
+
+    if (fill.color)
+      this.arcFill = fill.color;
+
+    if (fill.gradient) {
+      var gr = fill.gradient;
+
+      if (gr.length == 1) {
+        this.arcFill = gr[0];
+      } else if (gr.length &gt; 1) {
+        var ga = fill.gradientAngle || 0, // gradient direction angle; 0 by default
+          gd = fill.gradientDirection || [
+              size / 2 * (1 - Math.cos(ga)), // x0
+              size / 2 * (1 + Math.sin(ga)), // y0
+              size / 2 * (1 + Math.cos(ga)), // x1
+              size / 2 * (1 - Math.sin(ga))  // y1
+            ];
+
+        var lg = ctx.createLinearGradient.apply(ctx, gd);
+
+        for (var i = 0; i &lt; gr.length; i++) {
+          var color = gr[i],
+            pos = i / (gr.length - 1);
+
+          if ($.isArray(color)) {
+            pos = color[1];
+            color = color[0];
+          }
+
+          lg.addColorStop(pos, color);
+        }
+
+        this.arcFill = lg;
+      }
+    }
+
+    if (fill.image) {
+      var img;
+
+      if (fill.image instanceof Image) {
+        img = fill.image;
+      } else {
+        img = new Image();
+        img.src = fill.image;
+      }
+
+      if (img.complete)
+        setImageFill();
+      else
+        img.onload = setImageFill;
+    }
+
+    function setImageFill() {
+      var bg = $(&#39;&lt;canvas&gt;&#39;)[0];
+      bg.width = self.size;
+      bg.height = self.size;
+      bg.getContext(&#39;2d&#39;).drawImage(img, 0, 0, size, size);
+      self.arcFill = self.ctx.createPattern(bg, &#39;no-repeat&#39;);
+      self.drawFrame(self.lastFrameValue);
+    }
+  },
+
+  /**
+     Draw the circle.
+     @protected
+    /
+  draw: function() {
+    if (this.animation)
+      this.drawAnimated(this.value);
+    else
+      this.drawFrame(this.value);
+  },
+
+  /**
+     Draw a single animation frame.
+     @protected
+     @param {number} v - Frame value.
+    /
+  drawFrame: function(v) {
+    this.lastFrameValue = v;
+    this.ctx.clearRect(0, 0, this.size, this.size);
+    this.drawEmptyArc(v);
+    this.drawArc(v);
+  },
+
+  /**
+     Draw the arc (part of the circle).
+     @protected
+     @param {number} v - Frame value.
+    /
+  drawArc: function(v) {
+    if (v === 0)
+      return;
+
+    var ctx = this.ctx,
+      r = this.radius,
+      t = this.getThickness(),
+      a = this.startAngle;
+
+    ctx.save();
+    ctx.beginPath();
+
+    if (!this.reverse) {
+      ctx.arc(r, r, r - t / 2, a, a + Math.PI * 2 * v);
+    } else {
+      ctx.arc(r, r, r - t / 2, a - Math.PI * 2 * v, a);
+    }
+
+    ctx.lineWidth = t;
+    ctx.lineCap = this.lineCap;
+    ctx.strokeStyle = this.arcFill;
+    ctx.stroke();
+    ctx.restore();
+  },
+
+  /**
+     Draw the _empty (background)_ arc (part of the circle).
+     @protected
+     @param {number} v - Frame value.
+    /
+  drawEmptyArc: function(v) {
+    var ctx = this.ctx,
+      r = this.radius,
+      t = this.getThickness(),
+      a = this.startAngle;
+
+    if (v &lt; 1) {
+      ctx.save();
+      ctx.beginPath();
+
+      if (v &lt;= 0) {
+        ctx.arc(r, r, r - t / 2, 0, Math.PI * 2);
+      } else {
+        if (!this.reverse) {
+          ctx.arc(r, r, r - t / 2, a + Math.PI * 2 * v, a);
+        } else {
+          ctx.arc(r, r, r - t / 2, a, a - Math.PI * 2 * v);
+        }
+      }
+
+      ctx.lineWidth = t;
+      ctx.strokeStyle = this.emptyFill;
+      ctx.stroke();
+      ctx.restore();
+    }
+  },
+
+  /**
+     Animate the progress bar.
+
+     Throws 3 jQuery events:
+
+     - `circle-animation-start(jqEvent)`
+     - `circle-animation-progress(jqEvent, animationProgress, stepValue)` - multiple event
+       animationProgress: from `0.0` to `1.0`; stepValue: from `0.0` to `value`
+     - `circle-animation-end(jqEvent)`
+
+     @protected
+     @param {number} v - Final value.
+    /
+  drawAnimated: function(v) {
+    var self = this,
+      el = this.el,
+      canvas = $(this.canvas);
+
+    // stop previous animation before new &quot;start&quot; event is triggered
+    canvas.stop(true, false);
+    el.trigger(&#39;circle-animation-start&#39;);
+
+    canvas
+      .css({animationProgress: 0})
+      .animate({animationProgress: 1}, $.extend({}, this.animation, {
+        step: function(animationProgress) {
+          var stepValue = self.animationStartValue * (1 - animationProgress) + v * animationProgress;
+          self.drawFrame(stepValue);
+          el.trigger(&#39;circle-animation-progress&#39;, [animationProgress, stepValue]);
+        }
+      }))
+      .promise()
+      .always(function() {
+        // trigger on both successful &amp; failure animation end
+        el.trigger(&#39;circle-animation-end&#39;);
+      });
+  },
+
+  /**
+     Get the circle thickness.
+     @see CircleProgress#thickness
+     @protected
+     @returns {number}
+    /
+  getThickness: function() {
+    return $.isNumeric(this.thickness) ? this.thickness : this.size / 14;
+  },
+
+  /**
+     Get current value.
+     @protected
+     @return {number}
+    /
+  getValue: function() {
+    return this.value;
+  },
+
+  /**
+     Set current value (with smooth animation transition).
+     @protected
+     @param {number} newValue
+    /
+  setValue: function(newValue) {
+    if (this.animation)
+      this.animationStartValue = this.lastFrameValue;
+    this.value = newValue;
+    this.draw();
+  }
+};
+
+//----------------------------------- Initiating jQuery plugin -----------------------------------
+$.circleProgress = {
+  // Default options (you may override them)
+  defaults: CircleProgress.prototype
+};
+
+// ease-in-out-cubic
+$.easing.circleProgressEasing = function(x) {
+  if (x &lt; 0.5) {
+    x = 2 * x;
+    return 0.5 * x * x * x;
+  } else {
+    x = 2 - 2 * x;
+    return 1 - 0.5 * x * x * x;
+  }
+};
+
+/**
+   Creates an instance of {@link CircleProgress}.
+   Produces [init event]{@link CircleProgress#init} and [animation events]{@link CircleProgress#drawAnimated}.
+
+   @param {object} [configOrCommand] - Config object or command name.
+
+   Config example (you can specify any {@link CircleProgress} property):
+
+   ```js
+   { value: 0.75, size: 50, animation: false }
+   ```
+
+   Commands:
+
+   ```js
+   el.circleProgress(&#39;widget&#39;); // get the &lt;canvas&gt;
+   el.circleProgress(&#39;value&#39;); // get the value
+   el.circleProgress(&#39;value&#39;, newValue); // update the value
+   el.circleProgress(&#39;redraw&#39;); // redraw the circle
+   el.circleProgress(); // the same as &#39;redraw&#39;
+   ```
+
+   @param {string} [commandArgument] - Some commands (like `&#39;value&#39;`) may require an argument.
+   @see CircleProgress
+   @alias &quot;$(...).circleProgress&quot;
+  /
+$.fn.circleProgress = function(configOrCommand, commandArgument) {
+  var dataName = &#39;circle-progress&#39;,
+    firstInstance = this.data(dataName);
+
+  if (configOrCommand == &#39;widget&#39;) {
+    if (!firstInstance)
+      throw Error(&#39;Calling &quot;widget&quot; method on not initialized instance is forbidden&#39;);
+    return firstInstance.canvas;
+  }
+
+  if (configOrCommand == &#39;value&#39;) {
+    if (!firstInstance)
+      throw Error(&#39;Calling &quot;value&quot; method on not initialized instance is forbidden&#39;);
+    if (typeof commandArgument == &#39;undefined&#39;) {
+      return firstInstance.getValue();
+    } else {
+      var newValue = arguments[1];
+      return this.each(function() {
+        $(this).data(dataName).setValue(newValue);
+      });
+    }
+  }
+
+  return this.each(function() {
+    var el = $(this),
+      instance = el.data(dataName),
+      config = $.isPlainObject(configOrCommand) ? configOrCommand : {};
+
+    if (instance) {
+      instance.init(config);
+    } else {
+      var initialConfig = $.extend({}, el.data());
+      if (typeof initialConfig.fill == &#39;string&#39;)
+        initialConfig.fill = JSON.parse(initialConfig.fill);
+      if (typeof initialConfig.animation == &#39;string&#39;)
+        initialConfig.animation = JSON.parse(initialConfig.animation);
+      config = $.extend(initialConfig, config);
+      config.el = el;
+      instance = new CircleProgress(config);
+      el.data(dataName, instance);
+    }
+  });
+};</pre>
+
+<p>});</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

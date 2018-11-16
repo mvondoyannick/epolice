@@ -41,8 +41,8 @@ class ArchiveController < ApplicationController
     #demarrage du processus de notification via SMS
     phone = Agent.find(@agent).phone
     current_convocation = Convocation.find(@data)
-    message = "Valider la transmission du documents #{current_convocation.pieceretenu.name} correspondant a l infraction du #{current_convocation.created_at} faites par vous (#{Agent.find(@agent).complete_name}) a l agent #{current_admin.email}."
-    HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{phone}&message=#{message}")
+    #message = "Valider la transmission du documents #{current_convocation.pieceretenu.name} correspondant a l infraction du #{current_convocation.created_at} faites par vous (#{Agent.find(@agent).complete_name}) a l agent #{current_admin.email}."
+    #HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{phone}&message=#{message}")
   end
 
   def validate

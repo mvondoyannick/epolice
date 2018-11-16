@@ -1,0 +1,2210 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class AccessController - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-about">#about</a>
+    
+    <li ><a href="#method-i-access_control">#access_control</a>
+    
+    <li ><a href="#method-i-admin">#admin</a>
+    
+    <li ><a href="#method-i-admin_edit">#admin_edit</a>
+    
+    <li ><a href="#method-i-admin_new">#admin_new</a>
+    
+    <li ><a href="#method-i-admin_show">#admin_show</a>
+    
+    <li ><a href="#method-i-administration">#administration</a>
+    
+    <li ><a href="#method-i-alerte">#alerte</a>
+    
+    <li ><a href="#method-i-alerte_all">#alerte_all</a>
+    
+    <li ><a href="#method-i-application">#application</a>
+    
+    <li ><a href="#method-i-assurance_show">#assurance_show</a>
+    
+    <li ><a href="#method-i-attemp_account">#attemp_account</a>
+    
+    <li ><a href="#method-i-attemp_buying">#attemp_buying</a>
+    
+    <li ><a href="#method-i-attemp_login">#attemp_login</a>
+    
+    <li ><a href="#method-i-buy_document">#buy_document</a>
+    
+    <li ><a href="#method-i-constat">#constat</a>
+    
+    <li ><a href="#method-i-convocation">#convocation</a>
+    
+    <li ><a href="#method-i-convocation_all">#convocation_all</a>
+    
+    <li ><a href="#method-i-decideur_show">#decideur_show</a>
+    
+    <li ><a href="#method-i-edition">#edition</a>
+    
+    <li ><a href="#method-i-email">#email</a>
+    
+    <li ><a href="#method-i-export_detail">#export_detail</a>
+    
+    <li ><a href="#method-i-exportation">#exportation</a>
+    
+    <li ><a href="#method-i-grvpc_new">#grvpc_new</a>
+    
+    <li ><a href="#method-i-grvpc_show">#grvpc_show</a>
+    
+    <li ><a href="#method-i-importation">#importation</a>
+    
+    <li ><a href="#method-i-index">#index</a>
+    
+    <li ><a href="#method-i-lange">#lange</a>
+    
+    <li ><a href="#method-i-login">#login</a>
+    
+    <li ><a href="#method-i-login2">#login2</a>
+    
+    <li ><a href="#method-i-logout">#logout</a>
+    
+    <li ><a href="#method-i-member_new">#member_new</a>
+    
+    <li ><a href="#method-i-member_show">#member_show</a>
+    
+    <li ><a href="#method-i-metropolis_show">#metropolis_show</a>
+    
+    <li ><a href="#method-i-new">#new</a>
+    
+    <li ><a href="#method-i-open">#open</a>
+    
+    <li ><a href="#method-i-paiement">#paiement</a>
+    
+    <li ><a href="#method-i-partenaires">#partenaires</a>
+    
+    <li ><a href="#method-i-partner">#partner</a>
+    
+    <li ><a href="#method-i-partner_detail">#partner_detail</a>
+    
+    <li ><a href="#method-i-read">#read</a>
+    
+    <li ><a href="#method-i-read_document">#read_document</a>
+    
+    <li ><a href="#method-i-request_account">#request_account</a>
+    
+    <li ><a href="#method-i-request_doc">#request_doc</a>
+    
+    <li ><a href="#method-i-request_service">#request_service</a>
+    
+    <li ><a href="#method-i-search_cni">#search_cni</a>
+    
+    <li ><a href="#method-i-search_document">#search_document</a>
+    
+    <li ><a href="#method-i-serviceShow">#serviceShow</a>
+    
+    <li ><a href="#method-i-setup_import_export">#setup_import_export</a>
+    
+    <li ><a href="#method-i-solution_paiement">#solution_paiement</a>
+    
+    <li ><a href="#method-i-systeme">#systeme</a>
+    
+    <li ><a href="#method-i-tested">#tested</a>
+    
+    <li ><a href="#method-i-type_paiement">#type_paiement</a>
+    
+    <li ><a href="#method-i-yelp">#yelp</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-AccessController">
+  <h1 id="class-AccessController" class="class">
+    class AccessController
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-about" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">about</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>apropos route /access/request/about params</p>
+          
+          
+
+          
+          <div class="method-source-code" id="about-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">about</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-access_control" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">access_control</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>permet une administration totale</p>
+          
+          
+
+          
+          <div class="method-source-code" id="access_control-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">access_control</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-admin" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">admin</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Administration de la plateforme route /acces/admin params:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="admin-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">admin</span>
+  <span class="ruby-ivar">@top_infraction</span> = <span class="ruby-constant">Convocation</span>.<span class="ruby-identifier">distinct</span>.<span class="ruby-identifier">pluck</span>(<span class="ruby-value">:infraction_id</span>)
+  <span class="ruby-ivar">@top_alerte</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">distinct</span>.<span class="ruby-identifier">pluck</span>(<span class="ruby-value">:type_id</span>)
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+  <span class="ruby-comment">#render layout: &#39;admin&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-admin_edit" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">admin_edit</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>adition d&#39;un administrateur</p>
+
+<pre>@developer: mailto:mvondoyannick@gmail.com</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="admin_edit-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 426</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">admin_edit</span>
+  <span class="ruby-identifier">admin</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:data</span>]
+  <span class="ruby-ivar">@admin</span> = <span class="ruby-constant">Admin</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">admin</span>)
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;utilisateurs&#39;</span>, <span class="ruby-value">:parametre_admin_path</span>
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;administrateurs&#39;</span>, <span class="ruby-value">:parametre_admins_admin_show_path</span>
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;edition&#39;</span>, <span class="ruby-value">:parametre_admin_edit_path</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-admin_new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">admin_new</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="admin_new-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 410</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">admin_new</span>
+  <span class="ruby-ivar">@data</span> = <span class="ruby-constant">Admin</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">admin_params</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@data</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@data</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-comment">#on envoi le sms</span>
+    <span class="ruby-identifier">message</span> = <span class="ruby-node">&quot;Mr/Mme #{@data.name} vous avez un compte sur la plateforme. EPOLICE&quot;</span>
+    <span class="ruby-constant">HTTParty</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;https://www.agis-as.com/epolice/index.php?telephone=#{@data.phone}&amp;message=#{message}&quot;</span>)
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-value">:admin_show</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:admin_show</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-admin_show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">admin_show</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>ajout des utilisateur administrateurs</p>
+          
+          
+
+          
+          <div class="method-source-code" id="admin_show-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 372</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">admin_show</span>
+  <span class="ruby-ivar">@user</span> = <span class="ruby-constant">Admin</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">role_id</span><span class="ruby-operator">:</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">order</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-value">:asc</span>)
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;utilisateurs&#39;</span>, <span class="ruby-value">:parametre_admin_path</span>
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;administrateurs &amp; décideurs&#39;</span>, <span class="ruby-value">:parametre_admins_admin_show_path</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-administration" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">administration</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>pour le paiement dans l&#39;administration camerounaise</p>
+          
+          
+
+          
+          <div class="method-source-code" id="administration-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">administration</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;administration&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-alerte" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">alerte</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="alerte-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 362</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">alerte</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-alerte_all" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">alerte_all</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>voir toutes les alertes</p>
+          
+          
+
+          
+          <div class="method-source-code" id="alerte_all-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">alerte_all</span>
+  <span class="ruby-ivar">@alerte</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">all</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;admin&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-application" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">application</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="application-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 269</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">application</span>
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&quot;modules&quot;</span>, <span class="ruby-value">:access_application_path</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-assurance_show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">assurance_show</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>ajout des assurances</p>
+          
+          
+
+          
+          <div class="method-source-code" id="assurance_show-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 462</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">assurance_show</span>
+  <span class="ruby-ivar">@user</span> = <span class="ruby-constant">Assurance</span>.<span class="ruby-identifier">all</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-attemp_account" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">attemp_account</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="attemp_account-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">attemp_account</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:service</span>].<span class="ruby-identifier">present?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:nom</span>].<span class="ruby-identifier">present?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:prenom</span>].<span class="ruby-identifier">present?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:matricule</span>].<span class="ruby-identifier">present?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:phone</span>].<span class="ruby-identifier">present?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:email</span>].<span class="ruby-identifier">present?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:_pwd</span>].<span class="ruby-identifier">present?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:pwd_confirme</span>].<span class="ruby-identifier">present?</span>
+    <span class="ruby-comment">#on considere que tout est ok</span>
+    <span class="ruby-identifier">redirect_to</span>(<span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;login&#39;</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;Certains champs semblent etre vides&quot;</span>
+    <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;Certains champs semblent etre vides #{params}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-attemp_buying" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">attemp_buying</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Never trust parameters from the scary internet, only allow the white list
+through. def access_params</p>
+
+<pre class="ruby"><span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(:<span class="ruby-identifier">fylo</span>).<span class="ruby-identifier">permit</span>(:<span class="ruby-identifier">name</span>, :<span class="ruby-identifier">prenom</span>, :<span class="ruby-identifier">email</span>)
+</pre>
+
+<p>end</p>
+          
+          
+
+          
+          <div class="method-source-code" id="attemp_buying-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">attemp_buying</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-attemp_login" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">attemp_login</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="attemp_login-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">attemp_login</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:matricule</span>].<span class="ruby-identifier">present?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:pwd</span>].<span class="ruby-identifier">present?</span>
+    <span class="ruby-identifier">found_user</span> = <span class="ruby-constant">Fylo</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">matricule</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:matricule</span>]).<span class="ruby-identifier">first</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">found_user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">found_user</span>.<span class="ruby-identifier">password</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:pwd</span>]
+      <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;tout est ok&quot;</span>
+      <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;=============== utilisateur trouvé ============&quot;</span>
+      <span class="ruby-identifier">session</span>[<span class="ruby-value">:name</span>] = <span class="ruby-identifier">found_user</span>.<span class="ruby-identifier">name</span>
+      <span class="ruby-identifier">session</span>[<span class="ruby-value">:id</span>] = <span class="ruby-identifier">found_user</span>.<span class="ruby-identifier">id</span>
+      <span class="ruby-identifier">session</span>[<span class="ruby-value">:lastConnection</span>] = <span class="ruby-identifier">found_user</span>.<span class="ruby-identifier">lastConnected</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-node">&quot;#{session[:name]} vous etes connecté&quot;</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">role</span>.<span class="ruby-identifier">name</span> <span class="ruby-comment">#found_user.service</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;urgence&quot;</span>
+          <span class="ruby-identifier">session</span>[<span class="ruby-value">:role</span>] = <span class="ruby-string">&quot;urgence&quot;</span>
+          <span class="ruby-identifier">redirect_to</span>(<span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;request_service&#39;</span>, <span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>)
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;developer&quot;</span>
+          <span class="ruby-identifier">session</span>[<span class="ruby-value">:role</span>] = <span class="ruby-string">&quot;admin&quot;</span>
+          <span class="ruby-identifier">redirect_to</span>(<span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;developer&#39;</span>)
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;admin&quot;</span>
+          <span class="ruby-identifier">session</span>[<span class="ruby-value">:role</span>] = <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">role</span>.<span class="ruby-identifier">name</span>
+          <span class="ruby-identifier">redirect_to</span>(<span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;admin&#39;</span>)
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;superAdmin&quot;</span>
+          <span class="ruby-identifier">session</span>[<span class="ruby-value">:role</span>] = <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">role</span>.<span class="ruby-identifier">name</span>
+          <span class="ruby-identifier">redirect_to</span> <span class="ruby-string">&quot;/access/admin&quot;</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;administrateur&quot;</span>
+          <span class="ruby-identifier">session</span>[<span class="ruby-value">:role</span>] = <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">role</span>.<span class="ruby-identifier">name</span>
+          <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">access_a_l_administration_path</span>
+          <span class="ruby-comment">#redirect_to action: administration</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;camwater&quot;</span>
+          <span class="ruby-identifier">session</span>[<span class="ruby-value">:role</span>] = <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">role</span>.<span class="ruby-identifier">name</span>
+          <span class="ruby-identifier">redirect_to</span>(<span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;request_service&#39;</span>) 
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;======== utilisateur inconnu =========&quot;</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;Impossible de vous identifier&quot;</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">root_path</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;Une information semble etre incomplete&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">root_path</span>
+  <span class="ruby-keyword">end</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-buy_document" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">buy_document</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>permet de payer une contravention</p>
+          
+          
+
+          
+          <div class="method-source-code" id="buy_document-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 216</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">buy_document</span>
+  <span class="ruby-comment">#confirm paiement</span>
+
+  <span class="ruby-comment">#recherche de l&#39;enregistrement dans la BD</span>
+  <span class="ruby-identifier">pay</span> = <span class="ruby-constant">Convocation</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+
+  <span class="ruby-comment">#debut de la mise a jour</span>
+  <span class="ruby-identifier">pay</span>.<span class="ruby-identifier">status</span> = <span class="ruby-string">&quot;paye&quot;</span>
+  <span class="ruby-comment">#s = pay.save</span>
+  <span class="ruby-comment">#verification</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">pay</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;====== c&#39;est bon, on a update ========&quot;</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;A Paiement effectué&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;/access/a/l/administration&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;========= error =========&quot;</span>
+    <span class="ruby-comment">#redirect_to action: &#39;administration&#39;, notice: &quot;Impossible d effectuer le paiement : #{s.errors.messages}&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;administration&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-constat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">constat</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="constat-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 354</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">constat</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convocation" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convocation</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="convocation-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 358</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convocation</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convocation_all" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convocation_all</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>voir toutes les convocations</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convocation_all-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convocation_all</span>
+  <span class="ruby-ivar">@convocation</span> = <span class="ruby-constant">Convocation</span>.<span class="ruby-identifier">all</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;admin&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-decideur_show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">decideur_show</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>permet d&#39;afficher les decideurs de la plateforme</p>
+          
+          
+
+          
+          <div class="method-source-code" id="decideur_show-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 380</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">decideur_show</span>
+  <span class="ruby-ivar">@user</span> = <span class="ruby-constant">Admin</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">role_id</span><span class="ruby-operator">:</span> <span class="ruby-value">2</span>).<span class="ruby-identifier">order</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-value">:asc</span>)
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;utilisateur&#39;</span>, <span class="ruby-identifier">parametre_admin_path</span>
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;decideurs&#39;</span>, <span class="ruby-identifier">parametre_decideurs_path</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-edition" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edition</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>pour les statistiques et les etats</p>
+
+<pre>@route: GET parametre/etat
+@detail: vue pour les memu des etats
+@developer: email:mvondoyannick@gmail.com</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="edition-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 278</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edition</span>
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;edition&#39;</span>, <span class="ruby-value">:parametre_etat_path</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-email" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">email</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>pour la lecture des email</p>
+          
+          
+
+          
+          <div class="method-source-code" id="email-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">email</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;wemail&#39;</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-export_detail" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">export_detail</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>pour les parametres de la table selectionnée</p>
+          
+          
+
+          
+          <div class="method-source-code" id="export_detail-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 349</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">export_detail</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:table</span>]
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">controller</span><span class="ruby-operator">:</span> <span class="ruby-value">:access</span>, <span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;#{params[:table]}&quot;</span>, <span class="ruby-identifier">data</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:table</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-exportation" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">exportation</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>exportation des documents</p>
+          
+          
+
+          
+          <div class="method-source-code" id="exportation-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 332</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">exportation</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-grvpc_new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">grvpc_new</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Ajout d&#39;un nouveau compte GRVPC</p>
+          
+          
+
+          
+          <div class="method-source-code" id="grvpc_new-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 444</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">grvpc_new</span>
+  <span class="ruby-ivar">@data</span> = <span class="ruby-constant">Grvpc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">grvpc_params</span>)
+  <span class="ruby-comment">#on sauvegarde les informations</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@data</span>.<span class="ruby-identifier">save</span>
+
+  <span class="ruby-keyword">else</span>
+
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-grvpc_show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">grvpc_show</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>liste de tous les GRVPC</p>
+          
+          
+
+          
+          <div class="method-source-code" id="grvpc_show-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 436</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">grvpc_show</span>
+  <span class="ruby-ivar">@grvpc</span> = <span class="ruby-constant">Grvpc</span>.<span class="ruby-identifier">order</span>(<span class="ruby-identifier">email</span><span class="ruby-operator">:</span> <span class="ruby-value">:asc</span>)
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;utilisateurs&#39;</span>, <span class="ruby-value">:parametre_admin_path</span>
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;GRVPC&#39;</span>, <span class="ruby-value">:access_grvpc_show_path</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-importation" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">importation</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>importation des parametres</p>
+          
+          
+
+          
+          <div class="method-source-code" id="importation-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 324</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">importation</span>
+  <span class="ruby-identifier">file</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:file</span>]
+  <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">import</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-node">&quot;Fichier #{file} importé avec succes&quot;</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-lange" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">lange</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>module de gestion des langues</p>
+
+<pre>@detail: retourne les langues disponible sur le systeme
+@route:
+@developer: mailto:mvondoyannick@gmail.com</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="lange-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 312</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">lange</span>
+  <span class="ruby-ivar">@langue</span> = <span class="ruby-constant">Langue</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-login" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">login</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="login-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">login</span>
+  <span class="ruby-comment">#render layout: &#39;login&#39;</span>
+  <span class="ruby-comment"># vue de connexion principale</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;template/login2&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-login2" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">login2</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="login2-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">login2</span>
+<span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;template/login2&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-logout" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">logout</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="logout-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">logout</span>
+  <span class="ruby-identifier">session</span>[<span class="ruby-value">:role</span>] = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;======= #{session[:role].inspect} =========&quot;</span>
+  <span class="ruby-identifier">redirect_to</span>(<span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;login&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-member_new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">member_new</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>enregistrement d&#39;un nouveau partenaire</p>
+          
+          
+
+          
+          <div class="method-source-code" id="member_new-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 395</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">member_new</span>
+  <span class="ruby-ivar">@member</span> = <span class="ruby-constant">Member</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-comment">#retriving datas</span>
+  <span class="ruby-identifier">member</span> = <span class="ruby-constant">Member</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">email</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:email</span>], <span class="ruby-identifier">password</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:password</span>], <span class="ruby-identifier">matricule</span><span class="ruby-operator">:</span> <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-value">10</span>).<span class="ruby-identifier">upcase</span>, <span class="ruby-identifier">service_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:service_id</span>], <span class="ruby-identifier">phone</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:phone</span>], <span class="ruby-identifier">region_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:region_id</span>])
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">member</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;Membre ajouter avec succes&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-identifier">member_new</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-node">&quot;Impossible d&#39;enregistrer un partenaire: #{member.errors.messages}&quot;</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;====== #{member.errors.messages} =======&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-member_show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">member_show</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>ajout despartenaires</p>
+          
+          
+
+          
+          <div class="method-source-code" id="member_show-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 389</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">member_show</span>
+  <span class="ruby-ivar">@user</span> = <span class="ruby-constant">Member</span>.<span class="ruby-identifier">all</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-metropolis_show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">metropolis_show</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>ajout du personnel de metropolis</p>
+          
+          
+
+          
+          <div class="method-source-code" id="metropolis_show-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 456</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">metropolis_show</span>
+  <span class="ruby-ivar">@user</span> = <span class="ruby-constant">Metropoli</span>.<span class="ruby-identifier">all</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@request</span> = <span class="ruby-constant">Fylo</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-open" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">open</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>for test</p>
+          
+          
+
+          
+          <div class="method-source-code" id="open-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 265</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">open</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-paiement" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">paiement</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="paiement-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 317</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">paiement</span>
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;paramètre&#39;</span>, <span class="ruby-identifier">access_systeme_path</span>
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;solutions&#39;</span>, <span class="ruby-identifier">parametre_paiement_path</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-partenaires" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">partenaires</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <h6 id="method-i-partenaires-label-pour+les+partenaires+-3D-3D-3D-3D-3D-3D-3D-3D-3D-3D-3D-3D-3D-3D">pour les partenaires ==============<span><a href="#method-i-partenaires-label-pour+les+partenaires+-3D-3D-3D-3D-3D-3D-3D-3D-3D-3D-3D-3D-3D-3D">&para;</a> <a href="#top">&uarr;</a></span></h6>
+          
+          
+
+          
+          <div class="method-source-code" id="partenaires-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">partenaires</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;admin&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-partner" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">partner</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>gestion des partenaires</p>
+          
+          
+
+          
+          <div class="method-source-code" id="partner-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 248</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">partner</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-partner_detail" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">partner_detail</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>detail sur les partenaires</p>
+          
+          
+
+          
+          <div class="method-source-code" id="partner_detail-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 253</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">partner_detail</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:jeton</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;grvpc&#39;</span>
+    <span class="ruby-ivar">@query</span> = <span class="ruby-constant">Grvpc</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:jeton</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;metropolis&#39;</span>
+    <span class="ruby-ivar">@query</span> = <span class="ruby-constant">Metropoli</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:jeton</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;member&#39;</span>
+    <span class="ruby-ivar">@query</span> = <span class="ruby-constant">Member</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-read" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">read</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>permet de generer un fichier PDF</p>
+          
+          
+
+          
+          <div class="method-source-code" id="read-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-read_document" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">read_document</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>lesture d&#39;un document de contravention</p>
+          
+          
+
+          
+          <div class="method-source-code" id="read_document-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_document</span>
+  <span class="ruby-comment">#puts &quot;======= #{params[:controller]} ========&quot;</span>
+  <span class="ruby-comment">#on pars chercher le contenu du params</span>
+  <span class="ruby-ivar">@query</span> = <span class="ruby-constant">Convocation</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:contravention_id</span>])
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;administration&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-request_account" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">request_account</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Demander un compte à la DGSN route /access/request/account params:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="request_account-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">request_account</span>
+  <span class="ruby-ivar">@request</span> = <span class="ruby-constant">Fylo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:name</span>])
+
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">save</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@request</span>, <span class="ruby-identifier">notice</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Alerte was successfully created.&#39;</span> }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:show</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:created</span>, <span class="ruby-identifier">location</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@request</span> }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">controller</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;access&quot;</span>, <span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;login&quot;</span> }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span> }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-request_doc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">request_doc</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Documentation de la plateforme route /acces/request/docs params</p>
+          
+          
+
+          
+          <div class="method-source-code" id="request_doc-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">request_doc</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-request_service" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">request_service</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="request_service-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">request_service</span>
+  <span class="ruby-ivar">@alert</span> = <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">all</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;other&#39;</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-search_cni" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">search_cni</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="search_cni-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 201</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">search_cni</span>
+  <span class="ruby-identifier">cni</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:cni</span>]
+  <span class="ruby-ivar">@query</span> = <span class="ruby-constant">Convocation</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">cni</span><span class="ruby-operator">:</span> <span class="ruby-identifier">cni</span>)
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;administration&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-search_document" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">search_document</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>pour la recherche des documents</p>
+          
+          
+
+          
+          <div class="method-source-code" id="search_document-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">search_document</span>
+  <span class="ruby-identifier">query</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:input</span>]
+  <span class="ruby-identifier">type</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:type</span>]
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">type</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;cni&quot;</span>
+      <span class="ruby-ivar">@title</span> = <span class="ruby-string">&quot;Recherche suivant &quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">type</span>
+      <span class="ruby-ivar">@query</span> = <span class="ruby-constant">Convocation</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">cni</span><span class="ruby-operator">:</span> <span class="ruby-identifier">query</span>).<span class="ruby-identifier">uniq</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;immatriculation&quot;</span>
+      <span class="ruby-ivar">@query</span> = <span class="ruby-constant">Convocation</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">immatriculation</span><span class="ruby-operator">:</span> <span class="ruby-identifier">query</span>).<span class="ruby-identifier">uniq</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;telephone&quot;</span>
+      <span class="ruby-ivar">@title</span> = <span class="ruby-string">&quot;Recherche suivant &quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">type</span>
+      <span class="ruby-ivar">@query</span> = <span class="ruby-constant">Convocation</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">phone</span><span class="ruby-operator">:</span> <span class="ruby-identifier">query</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;impaye&quot;</span>).<span class="ruby-identifier">order</span>(<span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-value">:desc</span>).<span class="ruby-identifier">order</span>(<span class="ruby-identifier">cni</span><span class="ruby-operator">:</span> <span class="ruby-value">:desc</span>)
+      <span class="ruby-comment">#@cni = Convocation </span>
+      <span class="ruby-comment">#redirect_to action: self, id: &quot;#{type}/#{query}&quot;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;code&quot;</span>
+      <span class="ruby-ivar">@query</span> = <span class="ruby-constant">Convocation</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">code</span><span class="ruby-operator">:</span> <span class="ruby-identifier">query</span>).<span class="ruby-identifier">uniq</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;administration&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-serviceShow" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">serviceShow</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>les services de la plateforme</p>
+          
+          
+
+          
+          <div class="method-source-code" id="serviceShow-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">serviceShow</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;template/login2&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-setup_import_export" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setup_import_export</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>configuration des inportation-exportation</p>
+          
+          
+
+          
+          <div class="method-source-code" id="setup_import_export-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 367</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup_import_export</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-solution_paiement" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">solution_paiement</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>pour les solutions de paiements sur la plateformes</p>
+
+<pre>@detail: retourne les solutions de paiements disponible sur la plateforme
+@params: aucun
+@route:
+@developer: mailto:mvondoyannick@gmail.com</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="solution_paiement-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 293</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">solution_paiement</span>
+
+  <span class="ruby-comment">#add_breadcrumb &quot;solutions menu&quot;, :access_sols_paiement</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-systeme" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">systeme</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="systeme-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 283</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">systeme</span>
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&quot;paramètres&quot;</span>, <span class="ruby-value">:access_systeme_path</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tested" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">tested</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="tested-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 336</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tested</span>
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">all</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xls</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">csv</span> {<span class="ruby-identifier">send_data</span> <span class="ruby-constant">Alerte</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">to_csv</span>}
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xls</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-type_paiement" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">type_paiement</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>pour le type de paiement sur la plateforme</p>
+
+<pre>@detail: paiement direct/instatané ou paiement differé</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="type_paiement-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 301</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">type_paiement</span>
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;solution menu&#39;</span>, <span class="ruby-value">:parametre_paiement_path</span>
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;parametres&#39;</span>, <span class="ruby-value">:access_systeme_path</span>
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;modes de paiement&#39;</span>, <span class="ruby-value">:parametre_type_paiement_path</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yelp" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">yelp</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>pour la gestion de l&#39;aide sur l&#39;application</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yelp-source">
+            <pre><span class="ruby-comment"># File app/controllers/access_controller.rb, line 468</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yelp</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">layout</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;fylo&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

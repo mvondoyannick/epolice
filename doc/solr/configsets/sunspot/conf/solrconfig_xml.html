@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>solrconfig.xml - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../../";
+</script>
+
+<script src="../../../../js/jquery.js"></script>
+<script src="../../../../js/darkfish.js"></script>
+
+<link href="../../../../css/fonts.css" rel="stylesheet">
+<link href="../../../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../../../README_md.html">README</a>
+  
+    <li><a href="../../../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="../../../../app/assets/fonts/fontawesome-webfont_svg.html">fontawesome-webfont.svg</a>
+  
+    <li><a href="../../../../app/assets/javascripts/access_coffee.html">access.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/affectations_coffee.html">affectations.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/agents_coffee.html">agents.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/alertes_coffee.html">alertes.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../../../app/assets/javascripts/archive_coffee.html">archive.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/arrondissements_coffee.html">arrondissements.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/assurance_coffee.html">assurance.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../../../app/assets/javascripts/bulletins_coffee.html">bulletins.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="../../../../app/assets/javascripts/carrefours_coffee.html">carrefours.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/centrepartenaires_coffee.html">centrepartenaires.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/centrerecouvrements_coffee.html">centrerecouvrements.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/comments_coffee.html">comments.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/commissariats_coffee.html">commissariats.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/compte_coffee.html">compte.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/constat_coffee.html">constat.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/constats_coffee.html">constats.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/convocations_coffee.html">convocations.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/departements_coffee.html">departements.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/faker_min_js.html">faker.min.js</a>
+  
+    <li><a href="../../../../app/assets/javascripts/gestion_alerte_coffee.html">gestion_alerte.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/gestion_constat_coffee.html">gestion_constat.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/gestion_contravention_coffee.html">gestion_contravention.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/grades_coffee.html">grades.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/groupements_coffee.html">groupements.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/grvpc_coffee.html">grvpc.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/infractions_coffee.html">infractions.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/journal_coffee.html">journal.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/langues_coffee.html">langues.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/manage_coffee.html">manage.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/member_coffee.html">member.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/metropoli_coffee.html">metropoli.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/metropolisroles_coffee.html">metropolisroles.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/paiementsolutions_coffee.html">paiementsolutions.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/parametre_coffee.html">parametre.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/pieceretenus_coffee.html">pieceretenus.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/postepolices_coffee.html">postepolices.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/public_coffee.html">public.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/regions_coffee.html">regions.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/roles_coffee.html">roles.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/services_coffee.html">services.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/statistique_coffee.html">statistique.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/status_coffee.html">status.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/statuses_coffee.html">statuses.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/structures_coffee.html">structures.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/typeaccidents_coffee.html">typeaccidents.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/types_coffee.html">types.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/u_coffee.html">u.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/unites_coffee.html">unites.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/villes_coffee.html">villes.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/workflows_coffee.html">workflows.coffee</a>
+  
+    <li><a href="../../../../app/assets/javascripts/zonecouverturemotifs_coffee.html">zonecouverturemotifs.coffee</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/_application_css.html">_application.css</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/access_scss.html">access.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/affectations_scss.html">affectations.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/agents_scss.html">agents.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/alertes_scss.html">alertes.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/application_scss.html">application.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/archive_scss.html">archive.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/arrondissements_scss.html">arrondissements.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/assurance_scss.html">assurance.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/bulletins_scss.html">bulletins.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/carrefours_scss.html">carrefours.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/centrepartenaires_scss.html">centrepartenaires.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/centrerecouvrements_scss.html">centrerecouvrements.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/comments_scss.html">comments.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/commissariats_scss.html">commissariats.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/compte_scss.html">compte.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/constat_scss.html">constat.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/constats_scss.html">constats.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/contravetions_scss.html">contravetions.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/convocations_scss.html">convocations.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/departements_scss.html">departements.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/gestion_alerte_scss.html">gestion_alerte.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/gestion_constat_scss.html">gestion_constat.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/gestion_contravention_scss.html">gestion_contravention.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/grades_scss.html">grades.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/groupements_scss.html">groupements.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/grvpc_scss.html">grvpc.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/infractions_scss.html">infractions.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/journal_scss.html">journal.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/langues_scss.html">langues.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/manage_scss.html">manage.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/member_scss.html">member.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/metropoli_scss.html">metropoli.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/metropolisroles_scss.html">metropolisroles.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/paiementsolutions_scss.html">paiementsolutions.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/parametre_scss.html">parametre.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/pieceretenus_scss.html">pieceretenus.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/postepolices_scss.html">postepolices.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/public_scss.html">public.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/regions_scss.html">regions.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/roles_scss.html">roles.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/services_scss.html">services.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/statistique_scss.html">statistique.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/status_scss.html">status.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/statuses_scss.html">statuses.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/structures_scss.html">structures.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/typeaccidents_scss.html">typeaccidents.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/types_scss.html">types.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/unites_scss.html">unites.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/villes_scss.html">villes.scss</a>
+  
+    <li><a href="../../../../app/assets/stylesheets/zonecouverturemotifs_scss.html">zonecouverturemotifs.scss</a>
+  
+    <li><a href="../../../../app/views/affectations/_affectation_json_jbuilder.html">_affectation.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/affectations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/affectations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/agents/Untitled-1.html">Untitled-1</a>
+  
+    <li><a href="../../../../app/views/agents/Untitled-2.html">Untitled-2</a>
+  
+    <li><a href="../../../../app/views/agents/_agent_json_jbuilder.html">_agent.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/agents/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/agents/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/alertes/_alerte_json_jbuilder.html">_alerte.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/alertes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/alertes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/arrondissements/_arrondissement_json_jbuilder.html">_arrondissement.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/arrondissements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/arrondissements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/bulletins/_bulletin_json_jbuilder.html">_bulletin.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/bulletins/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/bulletins/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/carrefours/_carrefour_json_jbuilder.html">_carrefour.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/carrefours/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/carrefours/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/centrepartenaires/_centrepartenaire_json_jbuilder.html">_centrepartenaire.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/centrepartenaires/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/centrepartenaires/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/centrerecouvrements/_centrerecouvrement_json_jbuilder.html">_centrerecouvrement.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/centrerecouvrements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/centrerecouvrements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/comments/_comment_json_jbuilder.html">_comment.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/comments/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/comments/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/commissariats/_commissariat_json_jbuilder.html">_commissariat.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/commissariats/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/commissariats/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/constats/_constat_json_jbuilder.html">_constat.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/constats/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/constats/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/contravetions/_contravetion_json_jbuilder.html">_contravetion.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/contravetions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/contravetions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/convocations/_convocation_json_jbuilder.html">_convocation.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/convocations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/convocations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/departements/_departement_json_jbuilder.html">_departement.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/departements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/departements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/grades/_grade_json_jbuilder.html">_grade.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/grades/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/grades/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/groupements/_groupement_json_jbuilder.html">_groupement.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/groupements/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/groupements/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/infractions/_infraction_json_jbuilder.html">_infraction.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/infractions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/infractions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/langues/_langue_json_jbuilder.html">_langue.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/langues/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/langues/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/metropolisroles/_metropolisrole_json_jbuilder.html">_metropolisrole.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/metropolisroles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/metropolisroles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/paiementsolutions/_paiementsolution_json_jbuilder.html">_paiementsolution.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/paiementsolutions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/paiementsolutions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/pieceretenus/_pieceretenu_json_jbuilder.html">_pieceretenu.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/pieceretenus/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/pieceretenus/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/postepolices/_postepolice_json_jbuilder.html">_postepolice.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/postepolices/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/postepolices/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/regions/_region_json_jbuilder.html">_region.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/regions/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/regions/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/roles/_role_json_jbuilder.html">_role.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/roles/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/roles/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/services/_service_json_jbuilder.html">_service.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/services/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/services/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/status/_status_json_jbuilder.html">_status.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/status/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/status/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/statuses/_status_json_jbuilder.html">_status.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/statuses/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/statuses/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/structures/_structure_json_jbuilder.html">_structure.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/structures/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/structures/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/typeaccidents/_typeaccident_json_jbuilder.html">_typeaccident.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/typeaccidents/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/typeaccidents/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/types/_type_json_jbuilder.html">_type.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/types/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/types/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/unites/_unite_json_jbuilder.html">_unite.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/unites/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/unites/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/villes/_ville_json_jbuilder.html">_ville.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/villes/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/villes/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/workflows/_workflow_json_jbuilder.html">_workflow.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/workflows/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/workflows/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/zonecouverturemotifs/_zonecouverturemotif_json_jbuilder.html">_zonecouverturemotif.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/zonecouverturemotifs/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../app/views/zonecouverturemotifs/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../brouillons_txt.html">brouillons</a>
+  
+    <li><a href="../../../../config_ru.html">config.ru</a>
+  
+    <li><a href="../../../../erd_dot.html">erd.dot</a>
+  
+    <li><a href="../../../../hi.html">hi</a>
+  
+    <li><a href="../../../../lib/templates/rails/jbuilder/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../log/production_log.html">production.log</a>
+  
+    <li><a href="../../../../log/test_log.html">test.log</a>
+  
+    <li><a href="../../../../package_json.html">package.json</a>
+  
+    <li><a href="../../../../public/404_html.html">404.html</a>
+  
+    <li><a href="../../../../public/422_html.html">422.html</a>
+  
+    <li><a href="../../../../public/500_html.html">500.html</a>
+  
+    <li><a href="../../../../public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="../../../../public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="../../../../public/assets/application-1d6a15def6671efd85aa7f12dd7a187c8a4010b2f141f1f26f17c84657c45352_js.html">application-1d6a15def6671efd85aa7f12dd7a187c8a4010b2f141f1f26f17c84657c45352.js</a>
+  
+    <li><a href="../../../../public/assets/application-5173f52181c8a9ce2fd1869b7a408c290415dd6db3d815626ca73dcbf8150eb4_css.html">application-5173f52181c8a9ce2fd1869b7a408c290415dd6db3d815626ca73dcbf8150eb4.css</a>
+  
+    <li><a href="../../../../public/assets/fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c_svg.html">fontawesome-webfont-fc378232f9dad500890aa9e0bdd030a53d2f317d517393a3b91400b4ddce4c7c.svg</a>
+  
+    <li><a href="../../../../public/assets/leaflet-src_js-6eed528b5678ee4f34b8be267a8da5d14734d58d56baeea6a31e9819e6630775_map.html">leaflet-src.js-6eed528b5678ee4f34b8be267a8da5d14734d58d56baeea6a31e9819e6630775.map</a>
+  
+    <li><a href="../../../../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../../../../public/robots_txt.html">robots</a>
+  
+    <li><a href="../../../../solr/configsets/sunspot/conf/_rest_managed_json.html">_rest_managed.json</a>
+  
+    <li><a href="../../../../solr/configsets/sunspot/conf/admin-extra_html.html">admin-extra.html</a>
+  
+    <li><a href="../../../../solr/configsets/sunspot/conf/currency_xml.html">currency.xml</a>
+  
+    <li><a href="../../../../solr/configsets/sunspot/conf/elevate_xml.html">elevate.xml</a>
+  
+    <li><a href="../../../../solr/configsets/sunspot/conf/lang/stopwords_en_txt.html">stopwords_en</a>
+  
+    <li><a href="../../../../solr/configsets/sunspot/conf/mapping-ISOLatin1Accent_txt.html">mapping-ISOLatin1Accent</a>
+  
+    <li><a href="../../../../solr/configsets/sunspot/conf/protwords_txt.html">protwords</a>
+  
+    <li><a href="../../../../solr/configsets/sunspot/conf/schema_xml.html">schema.xml</a>
+  
+    <li><a href="../../../../solr/configsets/sunspot/conf/scripts_conf.html">scripts.conf</a>
+  
+    <li><a href="../../../../solr/configsets/sunspot/conf/solrconfig_xml.html">solrconfig.xml</a>
+  
+    <li><a href="../../../../solr/configsets/sunspot/conf/spellings_txt.html">spellings</a>
+  
+    <li><a href="../../../../solr/configsets/sunspot/conf/synonyms_txt.html">synonyms</a>
+  
+    <li><a href="../../../../solr/default/core_properties.html">core.properties</a>
+  
+    <li><a href="../../../../solr/development/core_properties.html">core.properties</a>
+  
+    <li><a href="../../../../solr/solr_xml.html">solr.xml</a>
+  
+    <li><a href="../../../../solr/test/core_properties.html">core.properties</a>
+  
+    <li><a href="../../../../tmp/pids/server_pid.html">server.pid</a>
+  
+    <li><a href="../../../../tmp/restart_txt.html">restart</a>
+  
+    <li><a href="../../../../vendor/animsition/animsition_min_css.html">animsition.min.css</a>
+  
+    <li><a href="../../../../vendor/animsition/animsition_min_js.html">animsition.min.js</a>
+  
+    <li><a href="../../../../vendor/bootstrap-4_1/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../../../../vendor/bootstrap-4_1/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../../../vendor/bootstrap-4_1/popper_min_js.html">popper.min.js</a>
+  
+    <li><a href="../../../../vendor/bootstrap-progressbar/bootstrap-progressbar-3_3_4_min_css.html">bootstrap-progressbar-3.3.4.min.css</a>
+  
+    <li><a href="../../../../vendor/bootstrap-progressbar/bootstrap-progressbar_min_js.html">bootstrap-progressbar.min.js</a>
+  
+    <li><a href="../../../../vendor/chartjs/Chart_bundle_min_js.html">Chart.bundle.min.js</a>
+  
+    <li><a href="../../../../vendor/circle-progress/circle-progress_js.html">circle-progress.js</a>
+  
+    <li><a href="../../../../vendor/circle-progress/circle-progress_min_js.html">circle-progress.min.js</a>
+  
+    <li><a href="../../../../vendor/countdown/countdowntime_js.html">countdowntime.js</a>
+  
+    <li><a href="../../../../vendor/countdown/jquery_countdown_min_js.html">jquery.countdown.min.js</a>
+  
+    <li><a href="../../../../vendor/countdown/moment-timezone-with-data_min_js.html">moment-timezone-with-data.min.js</a>
+  
+    <li><a href="../../../../vendor/countdown/moment-timezone_min_js.html">moment-timezone.min.js</a>
+  
+    <li><a href="../../../../vendor/countdown/moment_min_js.html">moment.min.js</a>
+  
+    <li><a href="../../../../vendor/counter-up/jquery_counterup_min_js.html">jquery.counterup.min.js</a>
+  
+    <li><a href="../../../../vendor/counter-up/jquery_waypoints_min_js.html">jquery.waypoints.min.js</a>
+  
+    <li><a href="../../../../vendor/counter-up/waypoints_min_js.html">waypoints.min.js</a>
+  
+    <li><a href="../../../../vendor/css-hamburgers/hamburgers_css.html">hamburgers.css</a>
+  
+    <li><a href="../../../../vendor/css-hamburgers/hamburgers_min_css.html">hamburgers.min.css</a>
+  
+    <li><a href="../../../../vendor/font-awesome-4_7/HELP-US-OUT_txt.html">HELP-US-OUT</a>
+  
+    <li><a href="../../../../vendor/font-awesome-4_7/css/font-awesome_css.html">font-awesome.css</a>
+  
+    <li><a href="../../../../vendor/font-awesome-4_7/css/font-awesome_min_css.html">font-awesome.min.css</a>
+  
+    <li><a href="../../../../vendor/font-awesome-4_7/fonts/fontawesome-webfont_svg.html">fontawesome-webfont.svg</a>
+  
+    <li><a href="../../../../vendor/font-awesome-5/css/fontawesome-all_min_css.html">fontawesome-all.min.css</a>
+  
+    <li><a href="../../../../vendor/font-awesome-5/webfonts/fa-brands-400_svg.html">fa-brands-400.svg</a>
+  
+    <li><a href="../../../../vendor/font-awesome-5/webfonts/fa-regular-400_svg.html">fa-regular-400.svg</a>
+  
+    <li><a href="../../../../vendor/font-awesome-5/webfonts/fa-solid-900_svg.html">fa-solid-900.svg</a>
+  
+    <li><a href="../../../../vendor/jquery-3_2_1_min_js.html">jquery-3.2.1.min.js</a>
+  
+    <li><a href="../../../../vendor/jquery-ui_min_js.html">jquery-ui.min.js</a>
+  
+    <li><a href="../../../../vendor/lightbox2/dist/css/lightbox_css.html">lightbox.css</a>
+  
+    <li><a href="../../../../vendor/lightbox2/dist/js/lightbox-plus-jquery_js.html">lightbox-plus-jquery.js</a>
+  
+    <li><a href="../../../../vendor/lightbox2/dist/js/lightbox-plus-jquery_min_js.html">lightbox-plus-jquery.min.js</a>
+  
+    <li><a href="../../../../vendor/lightbox2/dist/js/lightbox-plus-jquery_min_map.html">lightbox-plus-jquery.min.map</a>
+  
+    <li><a href="../../../../vendor/lightbox2/dist/js/lightbox_js.html">lightbox.js</a>
+  
+    <li><a href="../../../../vendor/lightbox2/dist/js/lightbox_min_js.html">lightbox.min.js</a>
+  
+    <li><a href="../../../../vendor/lightbox2/dist/js/lightbox_min_map.html">lightbox.min.map</a>
+  
+    <li><a href="../../../../vendor/lightbox2/src/css/lightbox_css.html">lightbox.css</a>
+  
+    <li><a href="../../../../vendor/lightbox2/src/js/lightbox_js.html">lightbox.js</a>
+  
+    <li><a href="../../../../vendor/mdi-font/css/material-design-iconic-font_css.html">material-design-iconic-font.css</a>
+  
+    <li><a href="../../../../vendor/mdi-font/css/material-design-iconic-font_min_css.html">material-design-iconic-font.min.css</a>
+  
+    <li><a href="../../../../vendor/mdi-font/fonts/Material-Design-Iconic-Font_svg.html">Material-Design-Iconic-Font.svg</a>
+  
+    <li><a href="../../../../vendor/perfect-scrollbar/perfect-scrollbar_css.html">perfect-scrollbar.css</a>
+  
+    <li><a href="../../../../vendor/perfect-scrollbar/perfect-scrollbar_js.html">perfect-scrollbar.js</a>
+  
+    <li><a href="../../../../vendor/perfect-scrollbar/perfect-scrollbar_min_js.html">perfect-scrollbar.min.js</a>
+  
+    <li><a href="../../../../vendor/progressbar/progressbar_js.html">progressbar.js</a>
+  
+    <li><a href="../../../../vendor/progressbar/progressbar_min_js.html">progressbar.min.js</a>
+  
+    <li><a href="../../../../vendor/select2/select2_min_css.html">select2.min.css</a>
+  
+    <li><a href="../../../../vendor/select2/select2_min_js.html">select2.min.js</a>
+  
+    <li><a href="../../../../vendor/slick/fonts/slick_svg.html">slick.svg</a>
+  
+    <li><a href="../../../../vendor/slick/slick-theme_css.html">slick-theme.css</a>
+  
+    <li><a href="../../../../vendor/slick/slick-theme_less.html">slick-theme.less</a>
+  
+    <li><a href="../../../../vendor/slick/slick-theme_scss.html">slick-theme.scss</a>
+  
+    <li><a href="../../../../vendor/slick/slick_css.html">slick.css</a>
+  
+    <li><a href="../../../../vendor/slick/slick_js.html">slick.js</a>
+  
+    <li><a href="../../../../vendor/slick/slick_less.html">slick.less</a>
+  
+    <li><a href="../../../../vendor/slick/slick_min_js.html">slick.min.js</a>
+  
+    <li><a href="../../../../vendor/slick/slick_scss.html">slick.scss</a>
+  
+    <li><a href="../../../../vendor/smk-accordion/accordion_css.html">accordion.css</a>
+  
+    <li><a href="../../../../vendor/smk-accordion/accordion_js.html">accordion.js</a>
+  
+    <li><a href="../../../../vendor/smk-accordion/accordion_min_js.html">accordion.min.js</a>
+  
+    <li><a href="../../../../vendor/sweetalert/sweetalert_min_js.html">sweetalert.min.js</a>
+  
+    <li><a href="../../../../vendor/vector-map/jquery_vmap_brazil_js.html">jquery.vmap.brazil.js</a>
+  
+    <li><a href="../../../../vendor/vector-map/jquery_vmap_europe_js.html">jquery.vmap.europe.js</a>
+  
+    <li><a href="../../../../vendor/vector-map/jquery_vmap_france_js.html">jquery.vmap.france.js</a>
+  
+    <li><a href="../../../../vendor/vector-map/jquery_vmap_germany_js.html">jquery.vmap.germany.js</a>
+  
+    <li><a href="../../../../vendor/vector-map/jquery_vmap_js.html">jquery.vmap.js</a>
+  
+    <li><a href="../../../../vendor/vector-map/jquery_vmap_min_js.html">jquery.vmap.min.js</a>
+  
+    <li><a href="../../../../vendor/vector-map/jquery_vmap_russia_js.html">jquery.vmap.russia.js</a>
+  
+    <li><a href="../../../../vendor/vector-map/jquery_vmap_sampledata_js.html">jquery.vmap.sampledata.js</a>
+  
+    <li><a href="../../../../vendor/vector-map/jquery_vmap_usa_js.html">jquery.vmap.usa.js</a>
+  
+    <li><a href="../../../../vendor/vector-map/jquery_vmap_world_js.html">jquery.vmap.world.js</a>
+  
+    <li><a href="../../../../vendor/vector-map/jqvmap_min_css.html">jqvmap.min.css</a>
+  
+    <li><a href="../../../../vendor/wow/animate_css.html">animate.css</a>
+  
+    <li><a href="../../../../vendor/wow/wow_min_js.html">wow.min.js</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page solr/configsets/sunspot/conf/solrconfig.xml">
+
+<p>&lt;!–</p>
+
+<pre>Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the &quot;License&quot;); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</pre>
+
+<p>–&gt;</p>
+
+<p>&lt;!–</p>
+
+<pre>For more details about configurations options that may appear in
+this file, see http://wiki.apache.org/solr/SolrConfigXml.</pre>
+
+<p>–&gt; &lt;config&gt;</p>
+
+<pre>&lt;!-- In all configuration below, a prefix of &quot;solr.&quot; for class names
+     is an alias that causes solr to search appropriate packages,
+     including org.apache.solr.(search|update|request|core|analysis)
+
+     You may also specify a fully qualified Java classname if you
+     have your own custom plugins.
+  --&gt;
+
+&lt;!-- Controls what version of Lucene various components of Solr
+     adhere to.  Generally, you want to use the latest version to
+     get all bug fixes and improvements. It is highly recommended
+     that you fully re-index after changing this setting as it can
+     affect both how text is indexed and queried.
+--&gt;
+&lt;luceneMatchVersion&gt;5.0.0&lt;/luceneMatchVersion&gt;
+
+&lt;!-- Data Directory
+
+     Used to specify an alternate directory to hold all index data
+     other than the default ./data under the Solr home.  If
+     replication is in use, this should match the replication
+     configuration.
+  --&gt;
+&lt;dataDir&gt;${solr.data.dir:}&lt;/dataDir&gt;
+
+&lt;!-- The DirectoryFactory to use for indexes.
+
+     solr.StandardDirectoryFactory is filesystem
+     based and tries to pick the best implementation for the current
+     JVM and platform.  solr.NRTCachingDirectoryFactory, the default,
+     wraps solr.StandardDirectoryFactory and caches small files in memory
+     for better NRT performance.
+
+     One can force a particular implementation via solr.MMapDirectoryFactory,
+     solr.NIOFSDirectoryFactory, or solr.SimpleFSDirectoryFactory.
+
+     solr.RAMDirectoryFactory is memory based, not
+     persistent, and doesn&#39;t work with replication.
+  --&gt;
+&lt;directoryFactory name=&quot;DirectoryFactory&quot; 
+                  class=&quot;${solr.directoryFactory:solr.NRTCachingDirectoryFactory}&quot;&gt;
+&lt;/directoryFactory&gt; 
+
+&lt;!-- The CodecFactory for defining the format of the inverted index.
+     The default implementation is SchemaCodecFactory, which is the official Lucene
+     index format, but hooks into the schema to provide per-field customization of
+     the postings lists and per-document values in the fieldType element
+     (postingsFormat/docValuesFormat). Note that most of the alternative implementations
+     are experimental, so if you choose to customize the index format, it&#39;s a good
+     idea to convert back to the official format e.g. via IndexWriter.addIndexes(IndexReader)
+     before upgrading to a newer version to avoid unnecessary reindexing.
+--&gt;
+&lt;codecFactory class=&quot;solr.SchemaCodecFactory&quot;/&gt;
+
+&lt;schemaFactory class=&quot;ClassicIndexSchemaFactory&quot;/&gt;
+
+&lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Index Config - These settings control low-level behavior of indexing
+     Most example settings here show the default value, but are commented
+     out, to more easily see where customizations have been made.
+
+     Note: This replaces &lt;indexDefaults&gt; and &lt;mainIndex&gt; from older versions
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;
+&lt;indexConfig&gt;
+
+  &lt;!-- LockFactory 
+
+       This option specifies which Lucene LockFactory implementation
+       to use.
+
+       single = SingleInstanceLockFactory - suggested for a
+                read-only index or when there is no possibility of
+                another process trying to modify the index.
+       native = NativeFSLockFactory - uses OS native file locking.
+                Do not use when multiple solr webapps in the same
+                JVM are attempting to share a single index.
+       simple = SimpleFSLockFactory  - uses a plain file for locking
+
+       Defaults: &#39;native&#39; is default for Solr3.6 and later, otherwise
+                 &#39;simple&#39; is the default
+
+       More details on the nuances of each LockFactory...
+       http://wiki.apache.org/lucene-java/AvailableLockFactories
+  --&gt;
+  &lt;lockType&gt;${solr.lock.type:native}&lt;/lockType&gt;
+
+  &lt;!-- Lucene Infostream
+
+       To aid in advanced debugging, Lucene provides an &quot;InfoStream&quot;
+       of detailed information when indexing.
+
+       Setting the value to true will instruct the underlying Lucene
+       IndexWriter to write its info stream to solr&#39;s log. By default,
+       this is enabled here, and controlled through log4j.properties.
+    --&gt;
+   &lt;infoStream&gt;true&lt;/infoStream&gt;
+&lt;/indexConfig&gt;
+
+&lt;!-- JMX
+
+     This example enables JMX if and only if an existing MBeanServer
+     is found, use this if you want to configure JMX through JVM
+     parameters. Remove this to disable exposing Solr configuration
+     and statistics to JMX.
+
+     For more details see http://wiki.apache.org/solr/SolrJmx
+  --&gt;
+&lt;jmx /&gt;
+&lt;!-- If you want to connect to a particular server, specify the
+     agentId 
+  --&gt;
+&lt;!-- &lt;jmx agentId=&quot;myAgent&quot; /&gt; --&gt;
+&lt;!-- If you want to start a new MBeanServer, specify the serviceUrl --&gt;
+&lt;!-- &lt;jmx serviceUrl=&quot;service:jmx:rmi:///jndi/rmi://localhost:9999/solr&quot;/&gt;
+  --&gt;
+
+&lt;!-- The default high-performance update handler --&gt;
+&lt;updateHandler class=&quot;solr.DirectUpdateHandler2&quot;&gt;
+
+  &lt;!-- Enables a transaction log, used for real-time get, durability, and
+       and solr cloud replica recovery.  The log can grow as big as
+       uncommitted changes to the index, so use of a hard autoCommit
+       is recommended (see below).
+       &quot;dir&quot; - the target directory for transaction logs, defaults to the
+              solr data directory.  --&gt; 
+  &lt;updateLog&gt;
+    &lt;str name=&quot;dir&quot;&gt;${solr.ulog.dir:}&lt;/str&gt;
+  &lt;/updateLog&gt;
+
+  &lt;!-- AutoCommit
+
+       Perform a hard commit automatically under certain conditions.
+       Instead of enabling autoCommit, consider using &quot;commitWithin&quot;
+       when adding documents. 
+
+       http://wiki.apache.org/solr/UpdateXmlMessages
+
+       maxDocs - Maximum number of documents to add since the last
+                 commit before automatically triggering a new commit.
+
+       maxTime - Maximum amount of time in ms that is allowed to pass
+                 since a document was added before automatically
+                 triggering a new commit. 
+       openSearcher - if false, the commit causes recent index changes
+         to be flushed to stable storage, but does not cause a new
+         searcher to be opened to make those changes visible.
+
+       If the updateLog is enabled, then it&#39;s highly recommended to
+       have some sort of hard autoCommit to limit the log size.
+    --&gt;
+   &lt;autoCommit&gt; 
+     &lt;maxTime&gt;${solr.autoCommit.maxTime:15000}&lt;/maxTime&gt; 
+     &lt;openSearcher&gt;false&lt;/openSearcher&gt; 
+   &lt;/autoCommit&gt;
+
+  &lt;!-- softAutoCommit is like autoCommit except it causes a
+       &#39;soft&#39; commit which only ensures that changes are visible
+       but does not ensure that data is synced to disk.  This is
+       faster and more near-realtime friendly than a hard commit.
+    --&gt;
+   &lt;autoSoftCommit&gt; 
+     &lt;maxTime&gt;${solr.autoSoftCommit.maxTime:-1}&lt;/maxTime&gt; 
+   &lt;/autoSoftCommit&gt;
+
+&lt;/updateHandler&gt;
+
+&lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Query section - these settings control query time things like caches
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;
+&lt;query&gt;
+  &lt;!-- Max Boolean Clauses
+
+       Maximum number of clauses in each BooleanQuery,  an exception
+       is thrown if exceeded.
+
+       ** WARNING **
+
+       This option actually modifies a global Lucene property that
+       will affect all SolrCores.  If multiple solrconfig.xml files
+       disagree on this property, the value at any given moment will
+       be based on the last SolrCore to be initialized.
+
+    --&gt;
+  &lt;maxBooleanClauses&gt;1024&lt;/maxBooleanClauses&gt;
+
+  &lt;!-- Solr Internal Query Caches
+
+       There are two implementations of cache available for Solr,
+       LRUCache, based on a synchronized LinkedHashMap, and
+       FastLRUCache, based on a ConcurrentHashMap.  
+
+       FastLRUCache has faster gets and slower puts in single
+       threaded operation and thus is generally faster than LRUCache
+       when the hit ratio of the cache is high (&gt; 75%), and may be
+       faster under other scenarios on multi-cpu systems.
+  --&gt;
+
+  &lt;!-- Filter Cache
+
+       Cache used by SolrIndexSearcher for filters (DocSets),
+       unordered sets of *all* documents that match a query.  When a
+       new searcher is opened, its caches may be prepopulated or
+       &quot;autowarmed&quot; using data from caches in the old searcher.
+       autowarmCount is the number of items to prepopulate.  For
+       LRUCache, the autowarmed items will be the most recently
+       accessed items.
+
+       Parameters:
+         class - the SolrCache implementation LRUCache or
+             (LRUCache or FastLRUCache)
+         size - the maximum number of entries in the cache
+         initialSize - the initial capacity (number of entries) of
+             the cache.  (see java.util.HashMap)
+         autowarmCount - the number of entries to prepopulate from
+             and old cache.  
+    --&gt;
+  &lt;filterCache class=&quot;solr.FastLRUCache&quot;
+               size=&quot;512&quot;
+               initialSize=&quot;512&quot;
+               autowarmCount=&quot;0&quot;/&gt;
+
+  &lt;!-- Query Result Cache
+
+       Caches results of searches - ordered lists of document ids
+       (DocList) based on a query, a sort, and the range of documents requested.  
+    --&gt;
+  &lt;queryResultCache class=&quot;solr.LRUCache&quot;
+                   size=&quot;512&quot;
+                   initialSize=&quot;512&quot;
+                   autowarmCount=&quot;0&quot;/&gt;
+
+  &lt;!-- Document Cache
+
+       Caches Lucene Document objects (the stored fields for each
+       document).  Since Lucene internal document ids are transient,
+       this cache will not be autowarmed.  
+    --&gt;
+  &lt;documentCache class=&quot;solr.LRUCache&quot;
+                 size=&quot;512&quot;
+                 initialSize=&quot;512&quot;
+                 autowarmCount=&quot;0&quot;/&gt;
+
+  &lt;!-- custom cache currently used by block join --&gt; 
+  &lt;cache name=&quot;perSegFilter&quot;
+    class=&quot;solr.search.LRUCache&quot;
+    size=&quot;10&quot;
+    initialSize=&quot;0&quot;
+    autowarmCount=&quot;10&quot;
+    regenerator=&quot;solr.NoOpRegenerator&quot; /&gt;
+
+  &lt;!-- Lazy Field Loading
+
+       If true, stored fields that are not requested will be loaded
+       lazily.  This can result in a significant speed improvement
+       if the usual case is to not load all stored fields,
+       especially if the skipped fields are large compressed text
+       fields.
+  --&gt;
+  &lt;enableLazyFieldLoading&gt;true&lt;/enableLazyFieldLoading&gt;
+
+ &lt;!-- Result Window Size
+
+      An optimization for use with the queryResultCache.  When a search
+      is requested, a superset of the requested number of document ids
+      are collected.  For example, if a search for a particular query
+      requests matching documents 10 through 19, and queryWindowSize is 50,
+      then documents 0 through 49 will be collected and cached.  Any further
+      requests in that range can be satisfied via the cache.  
+   --&gt;
+ &lt;queryResultWindowSize&gt;20&lt;/queryResultWindowSize&gt;
+
+ &lt;!-- Maximum number of documents to cache for any entry in the
+      queryResultCache. 
+   --&gt;
+ &lt;queryResultMaxDocsCached&gt;200&lt;/queryResultMaxDocsCached&gt;
+
+  &lt;!-- Use Cold Searcher
+
+       If a search request comes in and there is no current
+       registered searcher, then immediately register the still
+       warming searcher and use it.  If &quot;false&quot; then all requests
+       will block until the first searcher is done warming.
+    --&gt;
+  &lt;useColdSearcher&gt;false&lt;/useColdSearcher&gt;
+
+  &lt;!-- Max Warming Searchers
+
+       Maximum number of searchers that may be warming in the
+       background concurrently.  An error is returned if this limit
+       is exceeded.
+
+       Recommend values of 1-2 for read-only slaves, higher for
+       masters w/o cache warming.
+    --&gt;
+  &lt;maxWarmingSearchers&gt;2&lt;/maxWarmingSearchers&gt;
+
+&lt;/query&gt;
+
+&lt;!-- Request Dispatcher
+
+     This section contains instructions for how the SolrDispatchFilter
+     should behave when processing requests for this SolrCore.
+
+     handleSelect is a legacy option that affects the behavior of requests
+     such as /select?qt=XXX
+
+     handleSelect=&quot;true&quot; will cause the SolrDispatchFilter to process
+     the request and dispatch the query to a handler specified by the 
+     &quot;qt&quot; param, assuming &quot;/select&quot; isn&#39;t already registered.
+
+     handleSelect=&quot;false&quot; will cause the SolrDispatchFilter to
+     ignore &quot;/select&quot; requests, resulting in a 404 unless a handler
+     is explicitly registered with the name &quot;/select&quot;
+
+     handleSelect=&quot;true&quot; is not recommended for new users, but is the default
+     for backwards compatibility
+  --&gt;
+&lt;requestDispatcher handleSelect=&quot;false&quot; &gt;
+  &lt;!-- Request Parsing
+
+       These settings indicate how Solr Requests may be parsed, and
+       what restrictions may be placed on the ContentStreams from
+       those requests
+
+       enableRemoteStreaming - enables use of the stream.file
+       and stream.url parameters for specifying remote streams.
+
+       multipartUploadLimitInKB - specifies the max size (in KiB) of
+       Multipart File Uploads that Solr will allow in a Request.
+
+       formdataUploadLimitInKB - specifies the max size (in KiB) of
+       form data (application/x-www-form-urlencoded) sent via
+       POST. You can use POST to pass request parameters not
+       fitting into the URL.
+
+       addHttpRequestToContext - if set to true, it will instruct
+       the requestParsers to include the original HttpServletRequest
+       object in the context map of the SolrQueryRequest under the 
+       key &quot;httpRequest&quot;. It will not be used by any of the existing
+       Solr components, but may be useful when developing custom 
+       plugins.
+
+       *** WARNING ***
+       The settings below authorize Solr to fetch remote files, You
+       should make sure your system has some authentication before
+       using enableRemoteStreaming=&quot;true&quot;
+
+    --&gt; 
+  &lt;requestParsers enableRemoteStreaming=&quot;true&quot; 
+                  multipartUploadLimitInKB=&quot;2048000&quot;
+                  formdataUploadLimitInKB=&quot;2048&quot;
+                  addHttpRequestToContext=&quot;false&quot;/&gt;
+
+  &lt;!-- HTTP Caching
+
+       Set HTTP caching related parameters (for proxy caches and clients).
+
+       The options below instruct Solr not to output any HTTP Caching
+       related headers
+    --&gt;
+  &lt;httpCaching never304=&quot;true&quot; /&gt;
+
+&lt;/requestDispatcher&gt;
+
+&lt;!-- Request Handlers 
+
+     http://wiki.apache.org/solr/SolrRequestHandler
+
+     Incoming queries will be dispatched to a specific handler by name
+     based on the path specified in the request.
+
+     Legacy behavior: If the request path uses &quot;/select&quot; but no Request
+     Handler has that name, and if handleSelect=&quot;true&quot; has been specified in
+     the requestDispatcher, then the Request Handler is dispatched based on
+     the qt parameter.  Handlers without a leading &#39;/&#39; are accessed this way
+     like so: http://host/app/[core/]select?qt=name  If no qt is
+     given, then the requestHandler that declares default=&quot;true&quot; will be
+     used or the one named &quot;standard&quot;.
+
+     If a Request Handler is declared with startup=&quot;lazy&quot;, then it will
+     not be initialized until the first request that uses it.
+
+  --&gt;
+&lt;!-- SearchHandler
+
+     http://wiki.apache.org/solr/SearchHandler
+
+     For processing Search Queries, the primary Request Handler
+     provided with Solr is &quot;SearchHandler&quot; It delegates to a sequent
+     of SearchComponents (see below) and supports distributed
+     queries across multiple shards
+  --&gt;
+&lt;requestHandler name=&quot;/select&quot; class=&quot;solr.SearchHandler&quot;&gt;
+  &lt;lst name=&quot;defaults&quot;&gt;
+    &lt;str name=&quot;spellcheck.dictionary&quot;&gt;default&lt;/str&gt;
+    &lt;str name=&quot;spellcheck.extendedResults&quot;&gt;true&lt;/str&gt;
+    &lt;str name=&quot;spellcheck.collate&quot;&gt;true&lt;/str&gt;
+  &lt;/lst&gt;
+  &lt;arr name=&quot;last-components&quot;&gt;
+    &lt;str&gt;spellcheck&lt;/str&gt;
+  &lt;/arr&gt;
+&lt;/requestHandler&gt;
+
+&lt;!-- A request handler that returns indented JSON by default --&gt;
+&lt;requestHandler name=&quot;/query&quot; class=&quot;solr.SearchHandler&quot;&gt;
+   &lt;lst name=&quot;defaults&quot;&gt;
+     &lt;str name=&quot;echoParams&quot;&gt;explicit&lt;/str&gt;
+     &lt;str name=&quot;wt&quot;&gt;json&lt;/str&gt;
+     &lt;str name=&quot;indent&quot;&gt;true&lt;/str&gt;
+     &lt;str name=&quot;df&quot;&gt;text&lt;/str&gt;
+   &lt;/lst&gt;
+   &lt;arr name=&quot;last-components&quot;&gt;
+     &lt;str&gt;spellcheck&lt;/str&gt;
+   &lt;/arr&gt;
+&lt;/requestHandler&gt;
+
+&lt;!--
+  The export request handler is used to export full sorted result sets.
+  Do not change these defaults.
+--&gt;
+&lt;requestHandler name=&quot;/export&quot; class=&quot;solr.SearchHandler&quot;&gt;
+  &lt;lst name=&quot;invariants&quot;&gt;
+    &lt;str name=&quot;rq&quot;&gt;{!xport}&lt;/str&gt;
+    &lt;str name=&quot;wt&quot;&gt;xsort&lt;/str&gt;
+    &lt;str name=&quot;distrib&quot;&gt;false&lt;/str&gt;
+  &lt;/lst&gt;
+
+  &lt;arr name=&quot;components&quot;&gt;
+    &lt;str&gt;query&lt;/str&gt;
+  &lt;/arr&gt;
+&lt;/requestHandler&gt;
+
+&lt;initParams path=&quot;/update/**,/query,/select,/tvrh,/elevate,/spell&quot;&gt;
+  &lt;lst name=&quot;defaults&quot;&gt;
+    &lt;str name=&quot;df&quot;&gt;text&lt;/str&gt;
+  &lt;/lst&gt;
+&lt;/initParams&gt;
+
+&lt;!-- Field Analysis Request Handler
+
+     RequestHandler that provides much the same functionality as
+     analysis.jsp. Provides the ability to specify multiple field
+     types and field names in the same request and outputs
+     index-time and query-time analysis for each of them.
+
+     Request parameters are:
+     analysis.fieldname - field name whose analyzers are to be used
+
+     analysis.fieldtype - field type whose analyzers are to be used
+     analysis.fieldvalue - text for index-time analysis
+     q (or analysis.q) - text for query time analysis
+     analysis.showmatch (true|false) - When set to true and when
+         query analysis is performed, the produced tokens of the
+         field value analysis will be marked as &quot;matched&quot; for every
+         token that is produces by the query analysis
+ --&gt;
+&lt;requestHandler name=&quot;/analysis/field&quot; 
+                startup=&quot;lazy&quot;
+                class=&quot;solr.FieldAnalysisRequestHandler&quot; /&gt;
+
+&lt;!-- Document Analysis Handler
+
+     http://wiki.apache.org/solr/AnalysisRequestHandler
+
+     An analysis handler that provides a breakdown of the analysis
+     process of provided documents. This handler expects a (single)
+     content stream with the following format:
+
+     &lt;docs&gt;
+       &lt;doc&gt;
+         &lt;field name=&quot;id&quot;&gt;1&lt;/field&gt;
+         &lt;field name=&quot;name&quot;&gt;The Name&lt;/field&gt;
+         &lt;field name=&quot;text&quot;&gt;The Text Value&lt;/field&gt;
+       &lt;/doc&gt;
+       &lt;doc&gt;...&lt;/doc&gt;
+       &lt;doc&gt;...&lt;/doc&gt;
+       ...
+     &lt;/docs&gt;
+
+  Note: Each document must contain a field which serves as the
+  unique key. This key is used in the returned response to associate
+  an analysis breakdown to the analyzed document.
+
+  Like the FieldAnalysisRequestHandler, this handler also supports
+  query analysis by sending either an &quot;analysis.query&quot; or &quot;q&quot;
+  request parameter that holds the query text to be analyzed. It
+  also supports the &quot;analysis.showmatch&quot; parameter which when set to
+  true, all field tokens that match the query tokens will be marked
+  as a &quot;match&quot;. 
+--&gt;
+&lt;requestHandler name=&quot;/analysis/document&quot; 
+                class=&quot;solr.DocumentAnalysisRequestHandler&quot; 
+                startup=&quot;lazy&quot; /&gt;
+
+&lt;!-- Echo the request contents back to the client --&gt;
+&lt;requestHandler name=&quot;/debug/dump&quot; class=&quot;solr.DumpRequestHandler&quot; &gt;
+  &lt;lst name=&quot;defaults&quot;&gt;
+   &lt;str name=&quot;echoParams&quot;&gt;explicit&lt;/str&gt; 
+   &lt;str name=&quot;echoHandler&quot;&gt;true&lt;/str&gt;
+  &lt;/lst&gt;
+&lt;/requestHandler&gt;
+
+&lt;searchComponent name=&quot;spellcheck&quot; class=&quot;solr.SpellCheckComponent&quot;&gt;
+
+  &lt;str name=&quot;queryAnalyzerFieldType&quot;&gt;textSpell&lt;/str&gt;
+
+  &lt;!-- Multiple &quot;Spell Checkers&quot; can be declared and used by this
+       component
+    --&gt;
+  &lt;lst name=&quot;spellchecker&quot;&gt;
+    &lt;str name=&quot;name&quot;&gt;default&lt;/str&gt;
+    &lt;!-- change field to textSpell and use copyField in schema.xml
+    to spellcheck multiple fields --&gt;
+    &lt;str name=&quot;field&quot;&gt;textSpell&lt;/str&gt;
+    &lt;str name=&quot;buildOnOptimize&quot;&gt;true&lt;/str&gt;
+  &lt;/lst&gt;
+
+  &lt;lst name=&quot;spellchecker&quot;&gt;
+    &lt;str name=&quot;name&quot;&gt;example&lt;/str&gt;
+    &lt;str name=&quot;field&quot;&gt;title_text&lt;/str&gt;
+    &lt;str name=&quot;buildOnOptimize&quot;&gt;true&lt;/str&gt;
+    &lt;str name=&quot;classname&quot;&gt;solr.DirectSolrSpellChecker&lt;/str&gt;
+    &lt;!-- the spellcheck distance measure used, the default is the internal levenshtein --&gt;
+    &lt;str name=&quot;distanceMeasure&quot;&gt;internal&lt;/str&gt;
+    &lt;!-- minimum accuracy needed to be considered a valid spellcheck suggestion --&gt;
+    &lt;float name=&quot;accuracy&quot;&gt;0.5&lt;/float&gt;
+    &lt;!-- the maximum #edits we consider when enumerating terms: can be 1 or 2 --&gt;
+    &lt;int name=&quot;maxEdits&quot;&gt;2&lt;/int&gt;
+    &lt;!-- the minimum shared prefix when enumerating terms --&gt;
+    &lt;int name=&quot;minPrefix&quot;&gt;1&lt;/int&gt;
+    &lt;!-- maximum number of inspections per result. --&gt;
+    &lt;int name=&quot;maxInspections&quot;&gt;5&lt;/int&gt;
+    &lt;!-- minimum length of a query term to be considered for correction --&gt;
+    &lt;int name=&quot;minQueryLength&quot;&gt;4&lt;/int&gt;
+    &lt;!-- maximum threshold of documents a query term can appear to be considered for correction --&gt;
+    &lt;float name=&quot;maxQueryFrequency&quot;&gt;0.01&lt;/float&gt;
+    &lt;!-- uncomment this to require suggestions to occur in 1% of the documents
+         &lt;float name=&quot;thresholdTokenFrequency&quot;&gt;.01&lt;/float&gt;
+    --&gt;
+  &lt;/lst&gt;
+
+  &lt;!-- a spellchecker that can break or combine words.  See &quot;/spell&quot; handler below for usage --&gt;
+  &lt;lst name=&quot;spellchecker&quot;&gt;
+    &lt;str name=&quot;name&quot;&gt;wordbreak&lt;/str&gt;
+    &lt;str name=&quot;classname&quot;&gt;solr.WordBreakSolrSpellChecker&lt;/str&gt;
+    &lt;str name=&quot;field&quot;&gt;name&lt;/str&gt;
+    &lt;str name=&quot;combineWords&quot;&gt;true&lt;/str&gt;
+    &lt;str name=&quot;breakWords&quot;&gt;true&lt;/str&gt;
+    &lt;int name=&quot;maxChanges&quot;&gt;10&lt;/int&gt;
+  &lt;/lst&gt;
+  --&gt;
+&lt;/searchComponent&gt;
+
+&lt;!-- Search Components
+
+     Search components are registered to SolrCore and used by 
+     instances of SearchHandler (which can access them by name)
+
+     By default, the following components are available:
+
+     &lt;searchComponent name=&quot;query&quot;     class=&quot;solr.QueryComponent&quot; /&gt;
+     &lt;searchComponent name=&quot;facet&quot;     class=&quot;solr.FacetComponent&quot; /&gt;
+     &lt;searchComponent name=&quot;mlt&quot;       class=&quot;solr.MoreLikeThisComponent&quot; /&gt;
+     &lt;searchComponent name=&quot;highlight&quot; class=&quot;solr.HighlightComponent&quot; /&gt;
+     &lt;searchComponent name=&quot;stats&quot;     class=&quot;solr.StatsComponent&quot; /&gt;
+     &lt;searchComponent name=&quot;debug&quot;     class=&quot;solr.DebugComponent&quot; /&gt;
+
+   --&gt;
+
+&lt;!-- Terms Component
+
+     http://wiki.apache.org/solr/TermsComponent
+
+     A component to return terms and document frequency of those
+     terms
+  --&gt;
+&lt;searchComponent name=&quot;terms&quot; class=&quot;solr.TermsComponent&quot;/&gt;
+
+&lt;!-- A request handler for demonstrating the terms component --&gt;
+&lt;requestHandler name=&quot;/terms&quot; class=&quot;solr.SearchHandler&quot; startup=&quot;lazy&quot;&gt;
+   &lt;lst name=&quot;defaults&quot;&gt;
+    &lt;bool name=&quot;terms&quot;&gt;true&lt;/bool&gt;
+    &lt;bool name=&quot;distrib&quot;&gt;false&lt;/bool&gt;
+  &lt;/lst&gt;     
+  &lt;arr name=&quot;components&quot;&gt;
+    &lt;str&gt;terms&lt;/str&gt;
+  &lt;/arr&gt;
+&lt;/requestHandler&gt;
+
+&lt;requestHandler class=&quot;solr.MoreLikeThisHandler&quot; name=&quot;/mlt&quot;&gt;
+  &lt;lst name=&quot;defaults&quot;&gt;
+    &lt;str name=&quot;mlt.mintf&quot;&gt;1&lt;/str&gt;
+    &lt;str name=&quot;mlt.mindf&quot;&gt;2&lt;/str&gt;
+  &lt;/lst&gt;
+&lt;/requestHandler&gt;
+
+&lt;!-- Legacy config for the admin interface --&gt;
+&lt;admin&gt;
+  &lt;defaultQuery&gt;*:*&lt;/defaultQuery&gt;
+&lt;/admin&gt;</pre>
+
+<p>&lt;/config&gt;</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
