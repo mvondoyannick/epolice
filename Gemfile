@@ -18,6 +18,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'breadcrumbs_on_rails'
 #adding carrierwave
 gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-base64'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -63,7 +64,7 @@ gem 'devise'
 #Ajout de cancancan
 gem 'cancancan', '~> 2.0'
 #ajout de sunspot
-gem 'sunspot_rails'
+#gem 'sunspot_rails'
 #using underscore js
 gem 'underscore-rails', '~> 1.8', '>= 1.8.3'
 #user JSON Web Token
@@ -73,20 +74,18 @@ gem 'mini_magick'
 #integration de leaflet from https://github.com/axyjo/leaflet-rails
 gem 'leaflet-rails'
 #Ajout de la lib D3
-gem "d3-rails"
+gem 'd3-rails'
 #integrating chartjs rails
 gem 'chart-js-rails'
 #pour le breadcrumb
 #gem "breadcrumbs_on_rails"
 #gestion des charts pour les statistiques
-gem "chartkick"
+gem 'chartkick'
 #ajout de onesignal
 gem 'onsignal'
 #installation de groupdate
-gem "groupdate"
-#pour la gestion des SMS avec SMSAPI
-gem 'smsapi-client-rails', '~> 0.1.0'
-#ajout de httparty
+gem 'groupdate'
+#ajout de la gem httparty
 gem 'httparty'
 #add popper gem
 gem 'popper_js', '~> 1.14.3'
@@ -109,7 +108,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'sunspot_solr'
+  #gem 'sunspot_solr'
   #gestionnaire des graphique du modele
   #gem 'rails-erd'
 end

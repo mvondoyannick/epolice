@@ -4,7 +4,7 @@ class Api::ConvocationsController < ApplicationController
   require 'uri'
   require 'httparty'
   require 'base64'
-  require 'carrierwave/orm/activerecord'
+  #require 'carrierwave/orm/activerecord'
   require 'json'
 
   #autoriser les connexion en https
@@ -280,13 +280,13 @@ class Api::ConvocationsController < ApplicationController
     #:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre, :photo
 
 
-     #@alerte = Alerte.new(agent_id: agent_id, type_id: type_id, longitude: longitude.to_s, latitude: latitude.to_s, description: description, statu_id: statu_id, titre: titre)
+     #@alerte = Alerte.new(agent_id: agent_id, type_id: type_id, longitude: longitude, latitude: latitude, description: description, statu_id: statu_id, titre: titre, photo: photo)
 
     @alerte = Alerte.new(alert_params)
 
     #@alerte.photo.attach(alert_params[:photo]) #on persiste les données
     # with carriewave
-    @alerte.photo = params[:photo]
+    #@alerte.photo = params[:photo]
     if @alerte.save
       p = Type.find(@alerte.type_id).entity
       a = JSON.parse p
@@ -294,11 +294,12 @@ class Api::ConvocationsController < ApplicationController
       w = []
       query = b.each {|content| w.push(Structure.find(content).name)}
       puts b
+      puts @alerte.photo.url
       render json: {
           status: :created,
           partner: w, #on retourne un tableau contenant les partenaires,
           ip: request.remote_ip,
-          ip_geolocation: JSON.parse(Net::HTTP.get(URI('https://ipapi.co/'+request.remote_ip+'/json/'))),
+          #ip_geolocation: JSON.parse(Net::HTTP.get(URI('https://ipapi.co/'+request.remote_ip+'/json/'))),
           session: request.reset_session,
           photo: @alerte.photo.url,
           photo_identifier: @alerte.photo_identifier
@@ -521,7 +522,7 @@ class Api::ConvocationsController < ApplicationController
     end
 
     def alert_params
-      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre, :photo)
+      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre, :photo, :region_id)
     end
 
     def infraction_params
