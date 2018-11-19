@@ -187,6 +187,11 @@ class Api::ConvocationsController < ApplicationController
     end
   end
 
+  #recherche d'une contravention pour paiement
+  def search_paiement_contravention
+
+  end
+
   #gestion des alertes
   def alerteReq
     titre = params[:titre]

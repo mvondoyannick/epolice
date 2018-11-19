@@ -27,7 +27,7 @@
             <td><%= user.role.name %></td>
             <td><%= user.phone %></td>
             <td>
-              <%= link_to 'Bloquer', nil, class: 'btn btn-sm btn-primary' %>
+              <%= link_to 'Bloquer', access_admin_lock_path(user_id: user.id, role_id: user.role_id), class: 'btn btn-sm btn-primary' if user.lock = true %>
               <%= link_to 'Editer', parametre_admin_edit_path(data: user.id), class: 'btn btn-sm btn-primary' %>
               <%= link_to 'Supprimer', nil, class: 'btn btn-sm btn-danger' %>
             </td>
@@ -97,7 +97,7 @@
         </div>
       </div>
       <div class="text-right">
-        <%= submit_tag 'Enregistrer', class: 'btn btn-sm btn-primary' %>
+        <%= submit_tag 'Enregistrer', class: 'btn btn-sm btn-primary', id: 'submit' %>
         <input type="reset" class="btn btn-sm btn-danger" value="Annuler">
       </div>
 

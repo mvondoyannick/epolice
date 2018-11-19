@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<%= render 'layouts/views/link_head' %>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <%= render 'layouts/views/header' %>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <%= render 'layouts/views/left' %>
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <%= render 'layouts/views/content' %>
+  <!-- /.content-wrapper -->
+  <%= render 'layouts/views/footer' %>
+
+  <!-- Control Sidebar -->
+  <%= render 'layouts/views/right' %>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+  <%= render 'layouts/views/link_footer' %>
+
+
+
+<!-- insetion modal test -->
+<div class="modal fade" id="user" tabindex="-1" role="dialog" aria-labelledby="user" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Ajouter un enregistrement administratif</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= form_tag controller: :access, action: :admin_new, method: :post do %>
+        <table width="100%">
+          <tr>
+            <td><%= text_field_tag :name, nil, class: 'form-control', placeholder: 'Nom', required: true %></td>
+            <td><%= text_field_tag :prenom, nil, class: 'form-control', placeholder: 'Prénom' %></td>
+          </tr>
+          <tr>
+            <td><%= telephone_field_tag :phone, nil, class: 'form-control', placeholder: 'Téléphone', required: true %></td>
+            <td><%= email_field_tag :email, nil, class: 'form-control', placeholder: 'Adresse email', required: true %></td>
+          </tr>
+          <tr>
+            <td><%= password_field_tag :password, nil, class: 'form-control', placeholder: 'Mot de passe', required: true %></td>
+            <td><%= password_field_tag :password_confirmation, nil, class: 'form-control', placeholder: 'Confirmer le mot de passe', required: true %></td>
+          </tr>
+
+          <tr>
+            <td><%= select_tag :role_id, options_from_collection_for_select(Role.all, 'id', 'name') , class: 'form-control', prompt: 'Selectionner un role', include_blank: false, require: true %></td>
+            <td class="text-right">
+              <%= submit_tag 'Enregistrer', class: 'btn btn btn-success', style: 'margin-top: 2%;', id: 'validate' %>
+              <input type="reset" class="btn btn btn-danger" value="Annuler" style="margin-top: 2%;">
+            </td>
+          </tr>
+
+        </table>
+        <% end %>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<!-- preventing before submit form
+<script>
+    $(function () {
+        $('#validate').click(function ( event) {
+            event.preventDefault();
+            if($('#name').val()==""){
+                alert("Le nom d'utilisateurbv est requis");
+            }else if($('#prenom').val()==""){
+                alert("Le prénom est requis");
+            }else if($('#email').val()==""){
+                alert("L'email' est requise");
+            }else if($('#phone').val()==""){
+                alert("Le téléphone  est requis");
+            }else if($('#password').val()==""){
+                alert("Le mot de passe est requis");
+            }else if($('#password_confirmation').val()==""){
+                alert("La confirmation du mot de passe est requise");
+            }else if($('#role_id').val()==""){
+                alert("La rôle est requis");
+            }else if($('#password_confirmation').val()!=$('#password').val()){
+                alert("Le mot de passe et sa confirmation doivent être concordants");
+            }else {
+                /*$.ajax({
+
+                })*/
+            }
+
+        })
+    })
+</script>-->
+</html>

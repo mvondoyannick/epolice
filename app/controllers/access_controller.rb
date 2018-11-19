@@ -349,7 +349,7 @@ class AccessController < ApplicationController
 
   def paiement
     add_breadcrumb 'paramètre', access_systeme_path
-    add_breadcrumb 'solutions', parametre_paiement_path
+    add_breadcrumb 'modes de paiement', parametre_paiement_path
     render layout: 'fylo'
   end
 
@@ -409,6 +409,78 @@ class AccessController < ApplicationController
     render layout: 'fylo'
   end
 
+
+  #pour effectuer les testes sur les vues admin LTE
+  def test
+
+    render layout: 'views/index'
+
+  end
+
+  # nouveau design
+  def utilisateurs
+
+  end
+
+  def dashboard
+    @active = 'active'
+    render layout: 'views/index'
+  end
+
+  def dashboard1
+    @active = 'active'
+    render layout: 'views/index'
+  end
+
+  def users
+    @admin = Admin.all
+    render layout: 'views/index'
+  end
+
+  def alertes
+    @alertes = Alerte.all
+
+  end
+
+  def parametres
+
+  end
+
+  def agents
+
+  end
+
+  def programmations
+
+  end
+
+  def contraventions
+
+  end
+
+
+
+
+  #bloquer un administrateur ou les decideurs
+  # detail:
+  # route: GET
+  # developer: mailto:mvondoyannick@gmail.com
+  def admin_lock
+    data = params[:user_id]
+    role = params[:role_id]
+
+    #start query
+    query = Admin.where(id: data, role_id: role)
+
+    #on change le statut de l'utilisateur
+    query.lock = true
+
+    if query.save
+      redirect_to parametre_admins_admin_show_path, flash[:notice] = "User locked"
+    end
+
+  end
+
   #permet d'afficher les decideurs de la plateforme
   def decideur_show
     @user = Admin.where(role_id: 2).order(name: :asc)
@@ -448,7 +520,7 @@ class AccessController < ApplicationController
       #on envoi le sms
       message = "Mr/Mme #{@data.name} vous avez un compte sur la plateforme. EPOLICE"
       HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{@data.phone}&message=#{message}")
-      redirect_to action: :admin_show
+      redirect_to access_users_path
     else
       render :admin_show
     end

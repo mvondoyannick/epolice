@@ -1,11 +1,12 @@
 class ParametreController < ApplicationController
   before_action :authenticate_admin!
-  layout 'fylo'
+  #layout 'fylo'
+  #render 'layouts/views/index'
   add_breadcrumb "Fichiers", :parametre_index_path
 
 
   def index
-
+    render layout: 'views/index'
   end
 
   def gestion_sturcture_partenaire

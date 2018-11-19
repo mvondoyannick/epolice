@@ -39,8 +39,8 @@ class Convocation < ApplicationRecord
 
     def send_sms
         message = "Mr/Mme #{self.phone}, le cout de l'amende est de #{self.infraction.montant} FCFA. Code contraveniton : #{self.code}. Rendez-vous sur https://goo.gl/3hm3ke."
-        result = HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{self.phone}&message=#{message}")
-        puts "========== #{result}"
+        #result = HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{self.phone}&message=#{message}")
+        #puts "========== #{result}"
     end
 
 end

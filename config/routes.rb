@@ -143,6 +143,11 @@ Rails.application.routes.draw do
   post 'access/attempt_type' #Ajouter un mode de paiement via HTTP POST
   get 'access/delete_type_paiement' #supprimer un type de paiement dans la base de donnees via HTTP DELETE
   get 'access/add_type_paiement' #update le type de paiement
+  get 'access/admin_lock' #bloquer un utilisateurs administrateur
+  get 'access/test'
+  get 'access/dashboard'
+  get 'access/dashboard1'
+  get 'access/users' #pour la gestion des utilisateurs
   get 'journal/public'
   get 'journal/private'
   resources :status
