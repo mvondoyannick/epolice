@@ -12,6 +12,9 @@ puts "======= #{a} ========"
 class SprintPayGateway
 
   #défintion des entetes
+  def initialize(phone, amount)
+
+  end
 
 
   #permet de verifier s'il s'agit de MTN ou d'ORANGE
@@ -57,7 +60,12 @@ class SprintPayGateway
         headers: headers
     )
 
-    puts response
+    self.class.post(
+        base_payment_url,
+        body: setBody,
+        headers: headers
+    )
+    #puts response
 
   end
 end
