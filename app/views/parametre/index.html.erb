@@ -6,49 +6,53 @@
   </p>
 
 <div class="row">
-  <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 17rem;">
-      <div class="card-header bg-danger text-dark">
-        <i class="fa fa-map"></i>&nbsp;<%= link_to 'Découpage administratif', parametre_localisation_path, class: 'noir' %></div>
+  <div class="col-lg-3">
+    <div class="card" style="position: relative; left: 0px; top: 0px; height: 17rem;">
+      <div class="card-header ui-sortable-handle" style="cursor: move;">
+        <h3 class="card-title">
+          <i class="ion ion-clipboard mr-1"></i>
+          Découpage administratif
+        </h3>
+
+        <div class="card-tools">
+        </div>
+      </div>
+      <!-- /.card-header -->
       <div class="card-body">
-        <h5 class="card-title">Présentation</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Regions, departements et arrondissements</h6>
-        <p class="card-text"></p>
 
       </div>
-      <div class="card-footer text-muted">
-        <%= link_to 'Aperçu', parametre_localisation_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-        <%= link_to 'Ajouter', nil, class: 'card-link btn btn-sm btn-outline-primary', data: { toggle: 'modal', target: '#exampleModalLong'} %>
+      <!-- /.card-body -->
+      <div class="card-footer clearfix">
+        <%= link_to parametre_localisation_path, class: 'btn btn-info float-right' do %>
+          <i class="fa fa-plus"></i>
+          Aperçu
+        <% end %>
       </div>
     </div>
   </div>
-  <!--div class="col-lg-3">
-    <div class="card">
+
+  <div class="col-lg-3">
+    <div class="card" style="position: relative; left: 0px; top: 0px; height: 17rem;">
+      <div class="card-header ui-sortable-handle" style="cursor: move;">
+        <h3 class="card-title">
+          <i class="ion ion-clipboard mr-1"></i>
+          Grades
+        </h3>
+
+        <div class="card-tools">
+          <%= link_to 'Ajouter', new_grade_path, class: 'btn btn-sm btn-primary' %>
+        </div>
+      </div>
+      <!-- /.card-header -->
       <div class="card-body">
-        <h5 class="card-title"><%= link_to 'Services', unites_path, class: 'noir' %></h5>
-        <h6 class="card-subtitle mb-2 text-muted">Services de la police</h6>
-        <p class="card-text"></p>
+
       </div>
-      <div class="card-footer text-muted">
-        <%= link_to 'Aperçu', unites_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-        <%= link_to 'Ajouter', new_unite_path, class: 'card-link btn btn-sm btn-outline-primary text-right' %>
-      </div>
-    </div>
-  </div-->
-  <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 17rem;">
-      <div class="card-header bg-warning">
-        <i class="fa fa-cloud"></i>
-        <%= link_to 'Grade', grades_path, class: 'noir' %>
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Présentation</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Grades de la police</h6>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer text-mutted">
-        <%= link_to 'Aperçu', grades_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-        <%= link_to 'Ajouter', new_grade_path, class: 'card-link btn btn-sm btn-outline-primary' %>
+      <!-- /.card-body -->
+      <div class="card-footer clearfix">
+        <%= link_to grades_path, class: 'btn btn-info float-right' do %>
+          <i class="fa fa-eye"></i>
+          Aperçu
+        <% end %>
       </div>
     </div>
   </div>

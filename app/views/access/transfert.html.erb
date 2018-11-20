@@ -89,6 +89,7 @@
               <th>Piece retenue</th>
               <th>Agent</th>
               <th>Statut</th>
+              <th>Statut code</th>
             </tr>
           </thead>
           <tbody>
@@ -100,7 +101,18 @@
               <td><%= transferts.convocation.infraction.motif %></td>
               <td><span class="tag tag-success"><%= transferts.convocation.pieceretenu.name %></span></td>
               <td><%= transferts.agent.crypted %></td>
-              <td><span class="badge bg-danger-gradient"><%= 'not transfered' if transferts.status = 1 || 'false' %></span></td>
+              <td>
+                <% if transferts.status = 0 %>
+                  <span class="badge bg-danger">
+                    Non transferer
+                  </span>
+                <% elsif  transferts.status = 1 %>
+                  <span class="badge bg-primary">
+                    prending
+                  </span>
+                <% end %>
+              </td>
+              <td><%= transferts.status_code %></td>
             </tr>
           <% end %>
           </tbody>

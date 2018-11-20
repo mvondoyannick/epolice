@@ -13,9 +13,9 @@ class MToM
   end
 
   #valide un code recu par le transmetteur
-  def valideCode(code)
+  def is_code_valid?(code)
     @code = code
-    if valideUser == true
+    if is_user_valid? == true
 
       return
     end
@@ -23,22 +23,38 @@ class MToM
 
   #generate all user contravention
   # detail: retourne toutes les contraventions d'un agent
-  def userConvocation
-    response = valideUser
+  def getConvocation
+    response = is_user_valid?
     if response == true
       agent = Agent.where(phone: @mat).last
       query = Convocation.where(agent_id: agent.id)
-      return query
+      return query.map do |data|
+            {
+                contravention_id: data.id,
+                pieceretenu_id: data.pieceretenu_id,
+                pieceretenu_name: data.pieceretenu.name
+            }
+          end
     end
   end
 
   #retourne les informations sur l'agent qui est encapsulé dans la SQ code
-  def generateQRcode
+  def getQRcode
 
   end
 
+  #retourne toutes les informations sur un agent
+  def getAgentData
+    agent = Agent.find_by(phone: @mat)
+    if agent
+      return agent
+    end
+  end
+
+
+
   # detail: permet de valider l'utilisateur
-  def valideUser
+  def is_user_valid?
 
     #on recherche cet utilisateur
     query = Agent.find_by(phone: @mat)
@@ -49,8 +65,8 @@ class MToM
     end
   end
 
-  def generateCode
-    response = valideUser
+  def getCode
+    response = is_user_valid?
     if response == true
       return SecureRandom.hex(3).upcase
     end

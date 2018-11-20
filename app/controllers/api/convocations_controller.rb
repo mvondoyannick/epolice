@@ -566,9 +566,28 @@ class Api::ConvocationsController < ApplicationController
   # developer: mailto:mvondoyannick@gmail.com
   # status: stagind
   def startArchivage
-    phone = params[:phone]
-    query = MToM.new(phone)
-    render json: query.userConvocation
+    $phone = params[:phone]
+    query = MToM.new($phone)
+    render json: query.getConvocation
+  end
+
+  #reception des données durant le processus d'archivage
+  def receiveData
+    datas = params[:data]
+
+    #appel du module
+    query = MToM.new($phone)
+    data = datas.split(',')
+    # on recupere l'ID de l'agent
+    agent_id = query.getAgentData
+    #on recupere le code
+    code = query.getCode
+    # on cree le transfert
+    data.each {|content| Transfert.create agent_id: agent_id.id, convocation_id: content.to_i, status: "0", code: query.getCode, status_code: 'waiting', expire_in: 5.minutes.from_now}
+    #query = Transfert.new(agent_id: agentData.id, convocation_id: userConvocation.id)
+    render json: {
+        data: code
+    }
   end
 
 

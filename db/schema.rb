@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_19_154110) do
+ActiveRecord::Schema.define(version: 2018_11_20_174837) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -549,6 +549,9 @@ ActiveRecord::Schema.define(version: 2018_11_19_154110) do
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "code"
+    t.string "status_code"
+    t.string "expire_in"
     t.index ["agent_id"], name: "index_transferts_on_agent_id"
     t.index ["convocation_id"], name: "index_transferts_on_convocation_id"
   end

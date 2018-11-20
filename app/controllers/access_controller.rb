@@ -575,13 +575,13 @@ class AccessController < ApplicationController
   end
 
   def transfert
-    @transfert = Transfert.order(created_at: :desc).last(10)
+    @transfert = Transfert.order(created_at: :desc).last(100)
     render layout: 'views/index'
   end
 
   #mon brouillon
   def draft
-    
+
   end
 
   private

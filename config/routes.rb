@@ -334,7 +334,11 @@ Rails.application.routes.draw do
 
 
     #archivage d'une piece M to M, M to PC, PC to PC
+    # detail: start archiving process
     get 'epolice/trasmission/start/:phone', to: 'convocations#startArchivage'
+
+    #reception de toutes les documents/convocation selectionné
+    match 'epolice/transmission/:data/step/2', to: 'convocations#receiveData', via: [:options, :post, :get]
     # end
     #verification de la CNI
     get 'epolice/verify/contravention/:cni', to: 'convocations#verify_contravention'
