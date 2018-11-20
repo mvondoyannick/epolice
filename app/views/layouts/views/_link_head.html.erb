@@ -8,19 +8,19 @@
 
 
   <!-- Font Awesome -->
-  <%= stylesheet_link_tag 'application' %>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <%= stylesheet_link_tag 'application', 'data-turbolinks-track': 'reloatd' %>
+  <%= javascript_include_tag 'https://code.jquery.com/jquery-3.3.1.min.js', 'data-turbolinks-track': 'reload' %>
   <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/font-awesome/css/font-awesome.min.css">
   <link href="https://colorlib.com/polygon/cooladmin/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
   <!-- Ionicons -->
-  <%= stylesheet_link_tag 'https://adminlte.io/themes/dev/AdminLTE/plugins/datatables/dataTables.bootstrap4.css' %>
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <%= stylesheet_link_tag 'https://adminlte.io/themes/dev/AdminLTE/plugins/datatables/dataTables.bootstrap4.css', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css", 'data-turbolinks-track': 'reload' %>
   <!-- Theme style -->
-  <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/dist/css/adminlte.min.css">
+  <%= stylesheet_link_tag "https://adminlte.io/themes/dev/AdminLTE/dist/css/adminlte.min.css", 'data-turbolinks-track': 'reload' %>
   <!-- iCheck -->
-  <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/iCheck/flat/blue.css">
+  <%= stylesheet_link_tag "https://adminlte.io/themes/dev/AdminLTE/plugins/iCheck/flat/blue.css", 'data-turbolinks-track': 'reload' %>
   <!-- Morris chart -->
-  <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/morris/morris.css">
+  <%= stylesheet_link_tag "https://adminlte.io/themes/dev/AdminLTE/plugins/morris/morris.css", 'data-turbolinks-track': 'reload' %>
   <!-- jvectormap -->
   <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
   <!-- Date Picker -->

@@ -559,6 +559,18 @@ class Api::ConvocationsController < ApplicationController
 
   end
 
+  #debut de l'archivage
+  # detail: debut du processus d'archivage
+  # route: GET epolice/trasmission/start/:phone
+  # params: phone: string
+  # developer: mailto:mvondoyannick@gmail.com
+  # status: stagind
+  def startArchivage
+    phone = params[:phone]
+    query = MToM.new(phone)
+    render json: query.userConvocation
+  end
+
 
   private
     def no_sens

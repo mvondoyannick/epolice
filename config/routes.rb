@@ -147,6 +147,10 @@ Rails.application.routes.draw do
   get 'access/test'
   get 'access/dashboard'
   get 'access/dashboard1'
+  #le brouillon personnel
+
+  # end
+  get 'access/draft'
   get 'access/users' #pour la gestion des utilisateurs
   get 'access/transfert'
   get 'journal/public'
@@ -328,6 +332,10 @@ Rails.application.routes.draw do
     #============================== retourner le type d'infraction ===============================
     get 'alert/types/type', to: 'convocations#api_type'
 
+
+    #archivage d'une piece M to M, M to PC, PC to PC
+    get 'epolice/trasmission/start/:phone', to: 'convocations#startArchivage'
+    # end
     #verification de la CNI
     get 'epolice/verify/contravention/:cni', to: 'convocations#verify_contravention'
 

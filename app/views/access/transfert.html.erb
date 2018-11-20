@@ -1,2 +1,113 @@
+<div class="row">
+  <div class="col-lg-3 col-6">
+    <!-- small box -->
+    <div class="small-box bg-danger">
+      <div class="inner">
+        <h3>PC to PC</h3>
 
-<%= Transfert.all.each {|data| data} %>
+        <p>Transfert to others PC</p>
+      </div>
+      <div class="icon">
+        <i class="fa fa-laptop"></i>
+      </div>
+      <a href="#" class="small-box-footer" data-toggle="modal" data-target="#ModalCode">Generate code <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+  </div>
+  <div class="col-lg-3 col-6">
+    <!-- small box -->
+    <div class="small-box bg-info">
+      <div class="inner">
+        <h3>PC to Mobile</h3>
+
+        <p>From this PC to Mobile</p>
+      </div>
+      <div class="icon">
+        <i class="fa fa-qrcode"></i>
+      </div>
+      <a href="#" class="small-box-footer" data-toggle="modal" data-target="#exampleModal">Generate QRCode <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+  </div>
+  <div class="col-lg-3 col-6">
+    <!-- small box -->
+    <div class="small-box bg-success">
+      <div class="inner">
+        <h3>AGENTS</h3>
+
+        <p>Authenticate mobile agent</p>
+      </div>
+      <div class="icon">
+        <i class="fa fa-users"></i>
+      </div>
+      <a href="#" class="small-box-footer">Start authentification <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+  </div>
+  <div class="col-lg-3 col-6">
+    <!-- small box -->
+    <div class="small-box bg-info">
+      <div class="inner">
+        <h3>150</h3>
+
+        <p>New Orders</p>
+      </div>
+      <div class="icon">
+        <i class="ion ion-bag"></i>
+      </div>
+      <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<h1>
+  Derniers 10 documents retenus
+</h1>
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Responsive Hover Table</h3>
+
+        <div class="card-tools">
+          <div class="input-group input-group-sm" style="width: 150px;">
+            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body table-responsive p-0">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Date</th>
+              <th>Contravention ID</th>
+              <th>Contravention</th>
+              <th>Piece retenue</th>
+              <th>Agent</th>
+              <th>Statut</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% @transfert.each do |transferts| %>
+            <tr>
+              <td><%= transferts.id %></td>
+              <td><%= transferts.created_at %></td>
+              <td><%= transferts.convocation_id %></td>
+              <td><%= transferts.convocation.infraction.motif %></td>
+              <td><span class="tag tag-success"><%= transferts.convocation.pieceretenu.name %></span></td>
+              <td><%= transferts.agent.crypted %></td>
+              <td><span class="badge bg-danger-gradient"><%= 'not transfered' if transferts.status = 1 || 'false' %></span></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+</div>
