@@ -9,7 +9,7 @@ class AgentsController < ApplicationController
   def index
     respond_to do |format|
       format.html do
-        @agents = Agent.order(name: :asc)
+        @agents = Agent.order(name: :asc).include(:region)
       end
       format.xls
     end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_16_184406) do
+ActiveRecord::Schema.define(version: 2018_11_19_154110) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -543,6 +543,16 @@ ActiveRecord::Schema.define(version: 2018_11_16_184406) do
     t.index ["region_id"], name: "index_structures_on_region_id"
   end
 
+  create_table "transferts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "agent_id"
+    t.bigint "convocation_id"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["agent_id"], name: "index_transferts_on_agent_id"
+    t.index ["convocation_id"], name: "index_transferts_on_convocation_id"
+  end
+
   create_table "typeaccidents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -629,4 +639,6 @@ ActiveRecord::Schema.define(version: 2018_11_16_184406) do
   add_foreign_key "postepolices", "regions"
   add_foreign_key "services", "types"
   add_foreign_key "structures", "regions"
+  add_foreign_key "transferts", "agents"
+  add_foreign_key "transferts", "convocations"
 end

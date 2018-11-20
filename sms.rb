@@ -25,7 +25,7 @@ class SprintPayGateway
   #permet d'effectuer le paiement proprement dit
   def pay
     #definitin de l'url de base
-    base_payment_url = 'https://www.abc.com/api/paiement/'
+    base_payment_url = 'http://197.159.2.146:7086/sprintpayapi/payment/orangemoney/request'
     #definition des headers
 
     headers: {

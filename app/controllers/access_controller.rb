@@ -574,6 +574,10 @@ class AccessController < ApplicationController
     render layout: 'fylo'
   end
 
+  def transfert
+    render layout: 'views/index'
+  end
+
   private
 
   def admin_params

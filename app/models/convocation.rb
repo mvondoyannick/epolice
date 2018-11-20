@@ -4,8 +4,10 @@ class Convocation < ApplicationRecord
     require 'active_record/associations'
     require 'active_record/associations/association'
     #before_commit :send_sms
-    after_create :send_sms
+    #after_create :send_sms
     before_create :set_code
+
+    after_save :set_transfert
     #before_commit :set_status
     #after_save :send_sms
     #on autorise le transfert via https avec HTTParty
@@ -38,9 +40,29 @@ class Convocation < ApplicationRecord
     end
 
     def send_sms
+
         message = "Mr/Mme #{self.phone}, le cout de l'amende est de #{self.infraction.montant} FCFA. Code contraveniton : #{self.code}. Rendez-vous sur https://goo.gl/3hm3ke."
-        #result = HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{self.phone}&message=#{message}")
-        #puts "========== #{result}"
+        result = HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{self.phone}&message=#{message}")
+        puts "========== #{result}"
+    end
+
+    #permet d'effectuer l'achivage, le premier archivage pour cette contravention
+    # developer: mailto:mvondoyannick@gmail.com
+    # detail: on fait l'archivage si tout de passe bien au niveau contravention
+    def set_transfert
+        commit = Transfert.new(agent_id: self.agent_id, convocation_id: self.id, status: true)
+        if commit.save
+            puts 'success'
+            send_sms
+        else
+            puts commit.errors.messages
+        end
+    end
+
+    private
+
+    def transfet_params
+       #params.permit(:agent_id, :convocation)
     end
 
 end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  agent: one
+  convocation: one
+  status: MyString
+
+two:
+  agent: two
+  convocation: two
+  status: MyString

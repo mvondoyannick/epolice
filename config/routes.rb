@@ -148,6 +148,7 @@ Rails.application.routes.draw do
   get 'access/dashboard'
   get 'access/dashboard1'
   get 'access/users' #pour la gestion des utilisateurs
+  get 'access/transfert'
   get 'journal/public'
   get 'journal/private'
   resources :status
