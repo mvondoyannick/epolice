@@ -47,6 +47,77 @@
         </li>
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
+            <i class="fa fa-file-word nav-icon"></i>
+            <p>
+              Fichiers
+              <i class="right fa fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <%= link_to parametre_localisation_path, class: 'nav-link' do %>
+                <i class="fa fa-user nav-icon"></i>
+                <p>Découpage administratif</p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to groupements_path, class: 'nav-link' do %>
+                <i class="fa fa-lock nav-icon"></i>
+                <p>GRVPC</p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to commissariats_path, class: 'nav-link' do %>
+                <i class="fa fa-laptop nav-icon"></i>
+                <p>Commissariats</p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to grades_path, class: 'nav-link' do %>
+                <i class="fa fa-mobile-phone nav-icon"></i>
+                <p>Grades</p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to postepolices_path, class: 'nav-link' do %>
+                <i class="fa fa-hand-point-left nav-icon"></i>
+                <p>Postes de polices</p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to agents_path, class: 'nav-link' do %>
+                <i class="fa fa-user-secret nav-icon"></i>
+                <p>Effectifs</p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to infractions_path, class: 'nav-link' do %>
+                <i class="fa fa-mobile-phone nav-icon"></i>
+                <p>Infractions</p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to pieceretenus_path, class: 'nav-link' do %>
+                <i class="fa fa-mobile-phone nav-icon"></i>
+                <p>Elements à retenir</p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to types_path, class: 'nav-link' do %>
+                <i class="fa fa-mobile-phone nav-icon"></i>
+                <p>Types d'evenements</p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to parametre_gestion_sturcture_partenaire_path, class: 'nav-link' do %>
+                <i class="fa fa-mobile-phone nav-icon"></i>
+                <p>Partenaires</p>
+              <% end %>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
             <i class="nav-icon fa fa-users"></i>
             <p>
               Utilisateurs
@@ -56,26 +127,64 @@
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <%= link_to access_users_path, class: 'nav-link' do %>
-                <i class="fa fa-list nav-icon"></i>
+                <i class="fa fa-user nav-icon"></i>
                 <p>Gestion utilisateurs</p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to access_users_path, class: 'nav-link' do %>
+                <i class="fa fa-lock nav-icon"></i>
+                <p>Admin & décideurs</p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to access_users_path, class: 'nav-link' do %>
+                <i class="fa fa-user-circle nav-icon"></i>
+                <p>Partenaires et autres</p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to access_users_path, class: 'nav-link' do %>
+                <i class="fa fa-mobile-phone nav-icon"></i>
+                <p>Autorisations mobiles</p>
               <% end %>
             </li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a href="pages/widgets.html" class="nav-link">
+        <li class="nav-item has-treeview">
+          <%= link_to nil, class: 'nav-link' do  %>
             <i class="nav-icon fa fa-th"></i>
             <p>
-              Widgets
-              <span class="right badge badge-danger">New</span>
+              Applications
+              <i class="right fa fa-angle-left"></i>
             </p>
-          </a>
+          <% end %>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <%= link_to gestion_alerte_alertes_all_path, class: 'nav-link' do %>
+                <i class="fa fa-bell nav-icon"></i>
+                <p>Alertes</p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to gestion_contraventions_contraventions_all_path, class: 'nav-link' do %>
+                <i class="fa fa-car nav-icon"></i>
+                <p>Contraventions</p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to gestion_constat_all_path, class: 'nav-link' do %>
+                <i class="fa fa-circle nav-icon"></i>
+                <p>Constats</p>
+              <% end %>
+            </li>
+          </ul>
         </li>
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
             <i class="nav-icon fa fa-pie-chart"></i>
             <p>
-              Charts
+              Recherche
               <i class="right fa fa-angle-left"></i>
             </p>
           </a>
@@ -102,23 +211,23 @@
         </li>
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
-            <i class="nav-icon fa fa-tree"></i>
+            <i class="nav-icon fa fa-cogs"></i>
             <p>
-              UI Elements
+              Parametres
               <i class="fa fa-angle-left right"></i>
             </p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a href="pages/UI/general.html" class="nav-link">
-                <i class="fa fa-circle-o nav-icon"></i>
-                <p>General</p>
+                <i class="fa fa-magic nav-icon"></i>
+                <p>Autorisations</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="pages/UI/icons.html" class="nav-link">
-                <i class="fa fa-circle-o nav-icon"></i>
-                <p>Icons</p>
+                <i class="fa fa-language nav-icon"></i>
+                <p>Langues</p>
               </a>
             </li>
             <li class="nav-item">
@@ -137,34 +246,34 @@
         </li>
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
-            <i class="nav-icon fa fa-edit"></i>
+            <i class="nav-icon fa fa-bookmark"></i>
             <p>
-              Forms
+              Export/Import
               <i class="fa fa-angle-left right"></i>
             </p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a href="pages/forms/general.html" class="nav-link">
-                <i class="fa fa-circle-o nav-icon"></i>
-                <p>General Elements</p>
+                <i class="fa fa-upload nav-icon"></i>
+                <p>Exportations</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="pages/forms/advanced.html" class="nav-link">
-                <i class="fa fa-circle-o nav-icon"></i>
-                <p>Advanced Elements</p>
+                <i class="fa fa-download nav-icon"></i>
+                <p>Importations</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="pages/forms/editors.html" class="nav-link">
-                <i class="fa fa-circle-o nav-icon"></i>
-                <p>Editors</p>
+                <i class="fa fa-cog nav-icon"></i>
+                <p>Parametres</p>
               </a>
             </li>
           </ul>
         </li>
-        <li class="nav-item has-treeview">
+        <!--li class="nav-item has-treeview">
           <a href="#" class="nav-link">
             <i class="nav-icon fa fa-table"></i>
             <p>
@@ -327,7 +436,7 @@
             <i class="nav-icon fa fa-circle-o text-info"></i>
             <p>Informational</p>
           </a>
-        </li>
+        </li -->
       </ul>
     </nav>
     <!-- /.sidebar-menu -->
