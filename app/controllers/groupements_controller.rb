@@ -3,7 +3,7 @@ class GroupementsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:destroy]
   add_breadcrumb "Fichiers", :parametre_index_path
 
-  layout 'fylo'
+  layout 'views/index'
   # GET /groupements
   # GET /groupements.json
   def index

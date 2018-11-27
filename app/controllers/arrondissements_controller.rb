@@ -4,7 +4,7 @@ class ArrondissementsController < ApplicationController
   add_breadcrumb "Acceuil", :parametre_index_path
   add_breadcrumb "découpage administratif", :parametre_localisation_path
   add_breadcrumb "gestion des arrondissements", :arrondissements_path
-  layout 'fylo'
+  layout 'views/index'
   # GET /arrondissements
   # GET /arrondissements.json
   def index

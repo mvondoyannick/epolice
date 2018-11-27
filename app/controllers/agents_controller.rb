@@ -3,13 +3,13 @@ class AgentsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:destroy]
   add_breadcrumb "Fichiers", :parametre_index_path
   add_breadcrumb "gestion des agents", :agents_path
-  layout 'fylo'
+  layout 'views/index'
   # GET /agents
   # GET /agents.json
   def index
     respond_to do |format|
       format.html do
-        @agents = Agent.order(name: :asc).include(:region)
+        @agents = Agent.order(name: :asc)
       end
       format.xls
     end

@@ -424,30 +424,45 @@ class Api::ConvocationsController < ApplicationController
     end
   end
 
-  #rechercher une piece
+  #rechercher une piece dans le cadre de l'argchivage
+  # detail:
+  # route: GET api/document/find/:code
+  # method GET
+  # developer: mailto:mvondoyannick@gmail.com
   def search_document
-    code = params[:code]
-    query = Convocation.find_by_code(code)
-    if query.nil?
+    #code = params[:code]
+    code = params[:code] #code ici represente le numéro de telephone avec lequel on desire effectuer une recherhce
+
+    #on recherche dans la table
+    convocation = Convocation.where(phone: code).last
+    if convocation
+      query = Transfert.where(convocation_id: convocation.id)
+      #query = Convocation.find_by_code(code)
+      if query
+        render json: {
+            message: :found,
+            result: query.map do |data|
+              {
+                date: data.created_at,
+                agent: Agent.find(data.agent_id).complete_name,
+                date_convocation: Convocation.find(data.convocation_id).created_at,
+                lieu: Agent.find(data.agent_id).commissariat.name,
+                piece: Convocation.find(data.convocation_id).pieceretenu.name
+              }
+            end
+        }
+      else
+        render json: {
+            message: :not_found,
+            result: query
+        }
+      end
+    else
       render json: {
-          status: :error,
-          buy: :error,
-          message: 'Ce code est inexistant'
+          message: :not_found
       }
-      elsif (query.buy).nil?
-        render json: {
-            status: :buy_befor_check,
-            buy: :no,
-            message: 'Merci de payer votre contravention'
-        }
-      elsif !(query.buy).nil?
-        render json: {
-            status: :ok,
-            buy: :yes,
-            message: query.agent.phone,
-            commissariat: query.agent.commissariat.name
-        }
     end
+
   end
 
   #data who comme from ussd data plateform

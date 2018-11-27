@@ -1,7 +1,7 @@
 class CommissariatsController < ApplicationController
   before_action :set_commissariat, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
-  layout 'fylo'
+  layout 'views/index'
   add_breadcrumb "Fichiers", :parametre_index_path
   # GET /commissariats
   # GET /commissariats.json

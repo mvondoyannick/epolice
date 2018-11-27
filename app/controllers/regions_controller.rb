@@ -4,7 +4,7 @@ class RegionsController < ApplicationController
   add_breadcrumb "Acceuil", :parametre_index_path
   add_breadcrumb "découpage administratif", :parametre_localisation_path
   #add_breadcrumb "gestion des region", :regions_path
-  layout 'fylo'
+  layout 'views/index'
   # GET /regions
   # GET /regions.json
   def index

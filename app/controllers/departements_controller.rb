@@ -3,7 +3,7 @@ class DepartementsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:destroy]
   add_breadcrumb "Fichiers", :parametre_index_path
   add_breadcrumb "découpage administratif", :parametre_localisation_path
-  layout 'fylo'
+  layout 'views/index'
   # GET /departements
   # GET /departements.json
   def index

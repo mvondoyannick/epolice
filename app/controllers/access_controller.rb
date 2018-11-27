@@ -14,6 +14,7 @@ class AccessController < ApplicationController
 
   def new
     @request = Fylo.new
+    render layout: 'views/index'
   end
 
   def login
@@ -44,8 +45,9 @@ class AccessController < ApplicationController
   def admin
     @top_infraction = Convocation.distinct.pluck(:infraction_id)
     @top_alerte = Alerte.distinct.pluck(:type_id)
-    render layout: 'fylo'
+    #render layout: 'fylo'
     #render layout: 'admin'
+    render layout: 'views/index'
   end
 
 
@@ -115,7 +117,8 @@ class AccessController < ApplicationController
   #voir toutes les convocations
   def convocation_all
     @convocation = Convocation.all
-    render layout: 'admin'
+    #render layout: 'admin'
+    render layout: 'views/index'
   end
 
   def attemp_login
@@ -169,12 +172,14 @@ class AccessController < ApplicationController
 
   #=========== pour les partenaires ==============
   def partenaires
-    render layout: 'admin'
+    #render layout: 'admin'
+    render layout: 'views/index'
   end
 
   #pour le paiement dans l'administration camerounaise
   def administration
-    render layout: 'administration'
+    #render layout: 'administration'
+    render layout: 'views/index'
   end
 
   #pour la recherche des documents
@@ -195,13 +200,15 @@ class AccessController < ApplicationController
       when "code"
         @query = Convocation.where(code: query).uniq
     end
-    render layout: 'administration'
+    #render layout: 'administration'
+    render layout: 'views/index'
   end
 
   def search_cni
     cni = params[:cni]
     @query = Convocation.where(cni: cni)
-    render layout: 'administration'
+    #render layout: 'administration'
+    render layout: 'views/index'
   end
 
   #lesture d'un document de contravention
@@ -209,7 +216,8 @@ class AccessController < ApplicationController
     #puts "======= #{params[:controller]} ========"
     #on pars chercher le contenu du params
     @query = Convocation.find(params[:contravention_id])
-    render layout: 'administration'
+    #render layout: 'administration'
+    render layout: 'views/index'
   end
 
   #permet de payer une contravention
@@ -231,7 +239,8 @@ class AccessController < ApplicationController
       puts "========= error ========="
       #redirect_to action: 'administration', notice: "Impossible d effectuer le paiement : #{s.errors.messages}"
     end
-    render layout: 'administration'
+    #render layout: 'administration'
+    render layout: 'views/index'
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
@@ -246,7 +255,8 @@ class AccessController < ApplicationController
 
   #gestion des partenaires
   def partner
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   #detail sur les partenaires
@@ -258,17 +268,20 @@ class AccessController < ApplicationController
     elsif params[:jeton] == 'member'
       @query = Member.find_by(id: params[:id])
     end
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   #for test
   def open
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   def application
     add_breadcrumb "modules", :access_application_path
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   #pour les statistiques et les etats
@@ -277,12 +290,14 @@ class AccessController < ApplicationController
   # @developer: email:mvondoyannick@gmail.com
   def edition
     add_breadcrumb 'edition', :parametre_etat_path
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   def systeme
     add_breadcrumb "paramètres", :access_systeme_path
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   #pour les solutions de paiements sur la plateformes
@@ -293,7 +308,8 @@ class AccessController < ApplicationController
   def solution_paiement
 
     #add_breadcrumb "solutions menu", :access_sols_paiement
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   #pour le type de paiement sur la plateforme
@@ -302,7 +318,8 @@ class AccessController < ApplicationController
     add_breadcrumb 'solution menu', :parametre_paiement_path
     add_breadcrumb 'parametres', :access_systeme_path
     add_breadcrumb 'modes de paiement', :parametre_type_paiement_path
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   #supprimer un type de paiement en changeant le statut
@@ -344,13 +361,15 @@ class AccessController < ApplicationController
   # @developer: mailto:mvondoyannick@gmail.com
   def lange
     @langue = Langue.new
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   def paiement
     add_breadcrumb 'paramètre', access_systeme_path
     add_breadcrumb 'modes de paiement', parametre_paiement_path
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   #importation des parametres
@@ -358,12 +377,14 @@ class AccessController < ApplicationController
     file = params[:file]
     Alerte.import(file)
     flash[:notice] = "Fichier #{file} importé avec succes"
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   #exportation des documents
   def exportation
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   def tested
@@ -385,20 +406,24 @@ class AccessController < ApplicationController
   end
 
   def constat
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   def convocation
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   def alerte
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   #configuration des inportation-exportation
   def setup_import_export
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   #ajout des utilisateur administrateurs
@@ -406,7 +431,8 @@ class AccessController < ApplicationController
     @user = Admin.where(role_id: 1).order(name: :asc)
     add_breadcrumb 'utilisateurs', :parametre_admin_path
     add_breadcrumb 'administrateurs & décideurs', :parametre_admins_admin_show_path
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
 
@@ -566,12 +592,14 @@ class AccessController < ApplicationController
   #ajout des assurances
   def assurance_show
     @user = Assurance.all
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   #pour la gestion de l'aide sur l'application
   def yelp
-    render layout: 'fylo'
+    #render layout: 'fylo'
+    render layout: 'views/index'
   end
 
   def transfert
@@ -588,6 +616,7 @@ class AccessController < ApplicationController
 
   def admin_params
     params.permit(:name, :prenom, :email, :password, :password_confirmation, :role_id)
+    render layout: 'views/index'
   end
 
   def grvpc_params

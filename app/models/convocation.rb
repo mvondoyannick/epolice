@@ -8,7 +8,7 @@ class Convocation < ApplicationRecord
     before_create :set_code
 
     after_save :set_transfert
-    #before_commit :set_status
+    before_commit :set_status
     #after_save :send_sms
     #on autorise le transfert via https avec HTTParty
     HTTParty::Basement.default_options.update(verify: false)
