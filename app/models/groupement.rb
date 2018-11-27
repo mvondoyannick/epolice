@@ -7,6 +7,8 @@ class Groupement < ApplicationRecord
   validates :region_id, presence: {message: 'Remplire la region'}, uniqueness: {message: "Cette région est deja existante."}
 
   def set_email
+    #mise a jour de la casse du grvpc
+    self.name = self.name[0..4].upcase+self.name[5..self.name.length]
     self.email = self.name.delete(' ').downcase+'-'+SecureRandom.hex(2)+'@epolice.cm' unless self.email.nil?
   end
 end

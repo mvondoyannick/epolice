@@ -2,7 +2,7 @@ class GradesController < ApplicationController
   before_action :set_grade, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, only: [:destroy]
   add_breadcrumb "fichiers", :parametre_index_path
-  layout 'fylo'
+  layout 'views/index'
 
   # GET /grades
   # GET /grades.json

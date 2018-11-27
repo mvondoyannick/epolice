@@ -1,6 +1,6 @@
 class CentrerecouvrementsController < ApplicationController
   before_action :set_centrerecouvrement, only: [:show, :edit, :update, :destroy]
-  layout 'fylo'
+  layout 'views/index'
 
   # GET /centrerecouvrements
   # GET /centrerecouvrements.json

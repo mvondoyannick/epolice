@@ -1,7 +1,7 @@
 class GrvpcController < ApplicationController
   before_action :authenticate_grvpc!, only: [:index]
   add_breadcrumb "Dashboard", :grvpc_index_path
-  layout 'grvpc/grvpc'
+  layout 'views/index'
 
   def index
     @alerte = Alerte.order(created_at: :desc).limit(10)

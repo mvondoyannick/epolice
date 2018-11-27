@@ -4,7 +4,7 @@ class PostepolicesController < ApplicationController
   #before_action :authenticate_grvpc!, only: [:new, :update, :destroy]
   add_breadcrumb "Fichiers", :parametre_index_path
 
-  layout 'fylo'
+  layout 'views/index'
 
   # GET /postepolices
   # GET /postepolices.json

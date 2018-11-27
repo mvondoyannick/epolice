@@ -3,7 +3,7 @@ class InfractionsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:destroy]
   add_breadcrumb "Acceuil", :parametre_index_path
   add_breadcrumb "gestion des infractions", :infractions_path
-  layout 'fylo'
+  layout 'views/index'
   # GET /infractions
   # GET /infractions.json
   def index

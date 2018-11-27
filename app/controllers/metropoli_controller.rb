@@ -1,6 +1,6 @@
 class MetropoliController < ApplicationController
   before_action :authenticate_metropoli!, only: [:index, :detail, :comptable, :submit]
-  layout 'fylo'
+  layout 'views/index'
   def index
     @convocations = Convocation.order(created_at: :desc).where(submit: nil)
   end

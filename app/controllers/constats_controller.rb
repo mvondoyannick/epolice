@@ -1,5 +1,6 @@
 class ConstatsController < ApplicationController
   before_action :set_constat, only: [:show, :edit, :update, :destroy]
+  layout 'views/index'
 
   # GET /constats
   # GET /constats.json

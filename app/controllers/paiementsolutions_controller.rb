@@ -4,7 +4,7 @@ class PaiementsolutionsController < ApplicationController
 
   add_breadcrumb "Fichiers", :parametre_index_path
   add_breadcrumb "paramètre", :access_systeme_path
-  layout 'fylo'
+  layout 'views/index'
   # GET /paiementsolutions
   # GET /paiementsolutions.json
   def index

@@ -1,7 +1,7 @@
 class BulletinsController < ApplicationController
   before_action :set_bulletin, only: [:show, :edit, :update, :destroy]
 
-  layout 'fylo'
+  layout 'views/index'
   # GET /bulletins
   # GET /bulletins.json
   def index

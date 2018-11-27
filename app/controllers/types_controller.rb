@@ -4,7 +4,7 @@ class TypesController < ApplicationController
   add_breadcrumb "Fichiers", :parametre_index_path
   #add_breadcrumb "gestion des types d'evenement", :types_path
 
-  layout 'fylo'
+  layout 'views/index'
   # GET /types
   # GET /types.json
   def index

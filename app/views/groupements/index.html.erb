@@ -1,42 +1,57 @@
 <p id="notice"><%= notice %></p>
-<%= link_to new_groupement_path, class: 'btn btn-primary m-b-30 btn-sm' do %>
-  <i class="fa fa-plus"></i>
-  Ajouter un groupement
-<% end %>
 <h1 class="m-b-40">
-  Groupements régionaux
+  Liste des groupements régionaux
 </h1>
 
-<div class="col-lg-12">
-  <div class="table-responsive table--no-card m-b-30">
-    <table class="table table-borderless table-striped table-earning">
-      <thead>
-      <tr>
-        <th>Libellé groupement</th>
-        <th>Numéro téléphone</th>
-        <th>Région localisation</th>
-        <th colspan="3">Actions</th>
-      </tr>
-      </thead>
-      <tbody>
-      <% @groupements.each do |groupement| %>
-        <tr>
-          <td><%= groupement.name %></td>
-          <td><%= groupement.phone %></td>
-          <td><%= groupement.region.name %></td>
-          <td><%= link_to 'Show', groupement %></td>
-          <td><%= link_to 'Edit', edit_groupement_path(groupement) %></td>
-          <td><%= link_to 'Destroy', groupement, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
-        </tr>
-      <% end %>
-      </tbody>
-    </table>
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Liste des GRVPC regionaux</h3>
+
+        <div class="card-tools">
+          <div class="input-group input-group-sm" style="width: 150px;">
+            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body table-responsive p-0">
+        <table class="table table-hover">
+          <tbody><tr>
+            <th>ID</th>
+            <th>Libellé</th>
+            <th>Région</th>
+            <th>Contact</th>
+            <th colspan="3" class="float-right">Actionc</th>
+          </tr>
+          <% @groupements.each do |groupements| %>
+            <tr>
+              <td><%= groupements.id %></td>
+              <td><%= groupements.name %></td>
+              <td><%= groupements.region.name %></td>
+              <td><%= groupements.phone %></td>
+              <td><%= link_to 'detail', groupements %></td>
+              <td><%= link_to 'Editer', edit_groupement_path(groupements) %></td>
+              <td><%= link_to 'Supprimer', groupements, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
   </div>
 </div>
 
 <br>
 
-<%= link_to new_groupement_path, class: 'btn btn-primary btn-sm' do %>
+<%= link_to new_groupement_path, class: 'btn btn-primary btn-sm float-right' do %>
   <i class="fa fa-plus"></i>
-  Ajouter un groupement
+  Ajouter
 <% end %>

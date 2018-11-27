@@ -1,4 +1,5 @@
 class ConstatController < ApplicationController
+  layout 'views/index'
   def read
   end
 

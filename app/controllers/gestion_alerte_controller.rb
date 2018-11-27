@@ -1,5 +1,5 @@
 class GestionAlerteController < ApplicationController
-  layout 'fylo'
+  layout 'views/index'
   add_breadcrumb 'Fichiers', :parametre_index_path
 
   #retourne toutes les alertes de ce jour

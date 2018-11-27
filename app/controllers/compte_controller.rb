@@ -1,7 +1,7 @@
 class CompteController < ApplicationController
   def index
     @user = Agent.all
-    render layout: 'admin'
+    render layout: 'views/index'
   end
 
   def validate

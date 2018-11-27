@@ -3,7 +3,7 @@ class StructuresController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:destroy]
   add_breadcrumb "Acceuil", :parametre_index_path
   add_breadcrumb "gestion des partenaires", :structures_path
-  layout 'fylo'
+  layout 'views/index'
   # GET /structures
   # GET /structures.json
   def index

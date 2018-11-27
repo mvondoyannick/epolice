@@ -1,7 +1,7 @@
 class LanguesController < ApplicationController
   before_action :set_langue, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!
-  layout 'fylo'
+  layout 'views/index'
   # GET /langues
   # GET /langues.json
   def index

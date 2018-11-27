@@ -3,7 +3,7 @@ class PieceretenusController < ApplicationController
 
   add_breadcrumb "accueil", :parametre_index_path
   add_breadcrumb "gestion des pièces pouvants etre retenue", :pieceretenus_path
-  layout 'fylo'
+  layout 'views/index'
   # GET /pieceretenus
   # GET /pieceretenus.json
   def index

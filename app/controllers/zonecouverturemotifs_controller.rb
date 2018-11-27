@@ -1,6 +1,6 @@
 class ZonecouverturemotifsController < ApplicationController
   before_action :set_zonecouverturemotif, only: [:show, :edit, :update, :destroy]
-  layout 'fylo'
+  layout 'views/index'
   # GET /zonecouverturemotifs
   # GET /zonecouverturemotifs.json
   def index

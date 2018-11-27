@@ -1,7 +1,7 @@
 class TypeaccidentsController < ApplicationController
   before_action :set_typeaccident, only: [:show, :edit, :update, :destroy]
 
-  layout 'fylo'
+  layout 'views/index'
 
   # GET /typeaccidents
   # GET /typeaccidents.json
