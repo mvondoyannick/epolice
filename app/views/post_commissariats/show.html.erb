@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Commissariat:</strong>
+  <%= @post_commissariat.commissariat %>
+</p>
+
+<p>
+  <strong>Agent:</strong>
+  <%= @post_commissariat.agent %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @post_commissariat.grade %>
+</p>
+
+<%= link_to 'Edit', edit_post_commissariat_path(@post_commissariat) %> |
+<%= link_to 'Back', post_commissariats_path %>

@@ -20,6 +20,7 @@ class CommissariatsController < ApplicationController
   # GET /commissariats/new
   def new
     @commissariat = Commissariat.new
+    add_breadcrumb "commissariats", :commissariats_path
     add_breadcrumb 'nouveau commissariat', :new_commissariat_path
   end
 

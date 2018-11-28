@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :post_commissariats
   resources :comments
   resources :bulletins
   resources :centrepartenaires

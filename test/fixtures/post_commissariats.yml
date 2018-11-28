@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  commissariat: one
+  agent: one
+  grade: one
+
+two:
+  commissariat: two
+  agent: two
+  grade: two
