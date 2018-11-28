@@ -32,7 +32,7 @@
               <td><%= regions.name %></td>
               <td><%= link_to 'Voir', regions, class: 'float-right' %></td>
               <td><%= link_to 'Modifier', edit_region_path(regions), class: 'float-right' %></td>
-              <td><%= link_to 'Supprimer', regions, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm float-right' %></td>
+              <td><%= link_to 'Supprimer', {action: :destroy, id: regions.id}, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm float-right' %></td>
             </tr>
           <% end %>
 

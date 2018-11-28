@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_28_110407) do
+ActiveRecord::Schema.define(version: 2018_11_28_163519) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -408,10 +408,12 @@ ActiveRecord::Schema.define(version: 2018_11_28_110407) do
     t.string "phone2"
     t.string "code"
     t.bigint "region_id"
+    t.bigint "structure_id"
     t.index ["email"], name: "index_members_on_email", unique: true
     t.index ["region_id"], name: "index_members_on_region_id"
     t.index ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
     t.index ["service_id"], name: "index_members_on_service_id"
+    t.index ["structure_id"], name: "index_members_on_structure_id"
     t.index ["unlock_token"], name: "index_members_on_unlock_token", unique: true
   end
 
@@ -645,6 +647,7 @@ ActiveRecord::Schema.define(version: 2018_11_28_110407) do
   add_foreign_key "infractions", "zonecouverturemotifs"
   add_foreign_key "members", "regions"
   add_foreign_key "members", "services"
+  add_foreign_key "members", "structures"
   add_foreign_key "metropolis", "metropolisroles"
   add_foreign_key "paiements", "convocations"
   add_foreign_key "post_commissariats", "agents"

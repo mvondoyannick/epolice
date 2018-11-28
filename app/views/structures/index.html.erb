@@ -1,41 +1,158 @@
 <p id="notice"><%= notice %></p>
-
-<h1 class="m-b-40">
-  Partenaires
-</h1>
-
-<table class="table table-borderless table-striped table-earning table-hover table-sm">
-  <thead>
-    <tr>
-      <th>Logo</th>
-      <th>Region</th>
-      <th>Nom partenaire</th>
-      <th>Téléphone</th>
-      <th>Email</th>
-      <th>Catégorie</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @structures.each do |structure| %>
-      <tr>
-        <td><%= image_tag(structure.logo, size: '75x75') if structure.logo.attached? %></td>
-        <td><%= structure.region.name %></td>
-        <td><%= structure.name %></td>
-        <td><%= structure.phonestructure %></td>
-        <td><%= structure.email %></td>
-        <td><%= structure.category %></td>
-        <td><%= link_to 'Voir', structure %></td>
-        <td><%= link_to 'Supprimer', structure, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to new_structure_path, class: 'btn btn-primary btn-sm' do %>
+<%= link_to new_structure_path, class: 'btn btn-primary btn-sm float-right' do %>
   <%= fa_icon 'plus' %>
   Ajouter un partenaire
 <% end %>
+<h1 class="m-b-40">
+  Partenaires
+</h1>
+<br>
+<div class="row">
+  <div class="col-md-3">
+    <div class="card card-success card-outline">
+      <div class="card-header">
+        <h3 class="card-title">Centre de gestion des alertes</h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+          </button>
+        </div>
+        <!-- /.card-tools -->
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body" style="display: block;">
+        The body of the card
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer">
+        <%= link_to 'Ajouter', nil, class: 'btn btn-sm btn-outline-success float-right' %>
+      </div>
+    </div>
+    <!-- /.card -->
+  </div>
+  <div class="col-md-3">
+    <div class="card card-danger card-outline">
+      <div class="card-header">
+        <h3 class="card-title">Centres de gestion des contraventions</h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+          </button>
+        </div>
+        <!-- /.card-tools -->
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body" style="display: block;">
+        The body of the card
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer">
+        <%= link_to 'Ajouter', nil, class: 'btn btn-sm btn-outline-danger float-right' %>
+      </div>
+    </div>
+    <!-- /.card -->
+  </div>
+  <div class="col-md-3">
+    <div class="card card-warning card-outline">
+      <div class="card-header">
+        <h3 class="card-title">Centre de recouvrement</h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+          </button>
+        </div>
+        <!-- /.card-tools -->
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body" style="display: block;">
+        The body of the card
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer">
+        <%= link_to 'Ajouter', nil, class: 'btn btn-sm btn-outline-warning float-right' %>
+      </div>
+    </div>
+    <!-- /.card -->
+  </div>
+  <div class="col-md-3">
+    <div class="card card-primary card-outline">
+      <div class="card-header">
+        <h3 class="card-title">Centres de gestion des constats</h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+          </button>
+        </div>
+        <!-- /.card-tools -->
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body" style="display: block;">
+        The body of the card
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer">
+        <%= link_to 'Ajouter', nil, class: 'btn btn-sm btn-outline-primary float-right' %>
+      </div>
+    </div>
+    <!-- /.card -->
+  </div>
+</div>
+
+
+<br>
+
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Liste de tous les partenaires</h3>
+
+        <div class="card-tools">
+          <div class="input-group input-group-sm" style="width: 150px;">
+            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body table-responsive p-0">
+        <table class="table table-hover">
+          <tbody>
+            <tr>
+              <th>ID</th>
+              <th>Logo</th>
+              <th>Région</th>
+              <th>Libellé partenaire</th>
+              <th>N° Téléphone</th>
+              <th>Adresse email</th>
+              <th>Catégorie</th>
+              <th colspan="3"></th>
+            </tr>
+            <% @structures.each do |structure| %>
+            <tr>
+              <td><%= structure.id %></td>
+              <td><%= image_tag(structure.logo, size: '75x75', class: 'rounded') if structure.logo.attached? %></td>
+              <td><%= structure.region.name %></td>
+              <td><%= structure.name %></td>
+              <td><%= structure.phonestructure %></td>
+              <td><%= structure.email %></td>
+              <td><%= structure.category %></td>
+              <td><%= link_to 'Voir', structure %></td>
+              <td><%= link_to 'Supprimer', structure, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
+              <td><%= link_to 'Voir les comptes', "structures/#{structure.id}/accounts", class: 'btn btn-sm btn-outline-primary' %></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+</div>
+
+
+<br>

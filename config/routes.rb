@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :bulletins
   resources :centrepartenaires
   resources :structures
+  get 'structures/:id/accounts', to: 'structures#accounts' #liste les comptes associés
+  match 'structures/:id/accounts/new', to: 'structures#new_account', via: [:post, :get] #creation d'un nouveau compte pour une structure données
   resources :centrerecouvrements
   resources :paiementsolutions
   resources :langues

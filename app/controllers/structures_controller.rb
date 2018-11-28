@@ -28,6 +28,25 @@ class StructuresController < ApplicationController
     add_breadcrumb 'edition', structure_path
   end
 
+  # GET /structures/1/accounts
+  def accounts
+    id = params[:id]
+    @account = Member.where(structure_id: id)
+  end
+
+  # GET /structures/1/accounts/new
+  # developer: mailto:mvondoyannick@gmail.com
+  # detail:
+  def new_account
+    member = Member.new(account_params)
+    if member.save
+      redirect_to structures_path
+    else
+      puts 'Une erreur est survenue'
+      puts member.errors.messages
+    end
+  end
+
   # POST /structures
   # POST /structures.json
   def create
@@ -72,6 +91,10 @@ class StructuresController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_structure
       @structure = Structure.find(params[:id])
+    end
+
+    def account_params
+      params.permit(:structure_id, :phone, :prenom, :email, :password, :service_id, :region_id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
