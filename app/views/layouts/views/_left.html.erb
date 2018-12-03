@@ -13,10 +13,17 @@
         <img src="https://adminlte.io/themes/dev/AdminLTE/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="#" class="d-block"><%= current_admin.name %>&nbsp;<%= current_admin.prenom %></a>
+        <% if admin_signed_in? %>
+            <a href="#" class="d-block"><%= current_admin.name %>&nbsp;<%= current_admin.prenom %></a>
+          <% elsif grvpc_signed_in? %>
+            <a href="#" class="d-block"><%= current_grvpc.email %></a>
+          <% elsif member_signed_in? %>
+            <a href="#" class="d-block"><%= current_member.email %></a>
+        <% end %>
       </div>
     </div>
 
+    <% if admin_signed_in? %>
     <!-- Sidebar Menu -->
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -439,6 +446,420 @@
       </ul>
     </nav>
     <!-- /.sidebar-menu -->
+      <% elsif grvpc_signed_in? %>
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link <%= 'active' if current_page?(parametre_index_path) %>">
+              <i class="nav-icon fa fa-desktop" aria-hidden="true"></i>
+              <p>
+                Tab. de bord GRVPC
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="fa fa-file-word nav-icon"></i>
+              <p>
+                Bulletin patrouille
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <%= link_to affectations_path, class: 'nav-link' do %>
+                  <i class="fa fa-user nav-icon"></i>
+                  <p>Smart bulletin de patrouille</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to new_affectation_path, class: 'nav-link' do %>
+                  <i class="fa fa-user nav-icon"></i>
+                  <p>Nouveau bulletin</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to parametre_localisation_path, class: 'nav-link' do %>
+                  <i class="fa fa-user nav-icon"></i>
+                  <p>Découpage administratif</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to groupements_path, class: 'nav-link' do %>
+                  <i class="fa fa-lock nav-icon"></i>
+                  <p>GRVPC</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to commissariats_path, class: "nav-link #{'active' if current_page?(commissariats_path) }"  do %>
+                  <i class="fa fa-laptop nav-icon"></i>
+                  <p>Commissariats</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to grades_path, class: "nav-link #{'active' if current_page?(grades_path)}" do %>
+                  <i class="fa fa-mobile-phone nav-icon"></i>
+                  <p>Grades</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to postepolices_path, class: "nav-link #{ 'active' if current_page?(postepolices_path) }" do %>
+                  <i class="fa fa-hand-point-left nav-icon"></i>
+                  <p>Postes de polices</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to agents_path, class: "nav-link #{'active' if current_page?(agents_path)}" do %>
+                  <i class="fa fa-user-secret nav-icon"></i>
+                  <p>Effectifs</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to infractions_path, class: "nav-link #{'active' if current_page?(infractions_path)}" do %>
+                  <i class="fa fa-mobile-phone nav-icon"></i>
+                  <p>Infractions</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to pieceretenus_path, class: "nav-link #{'active' if current_page?(pieceretenus_path)}" do %>
+                  <i class="fa fa-mobile-phone nav-icon"></i>
+                  <p>Elements à retenir</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to types_path, class: "nav-link #{'active' if current_page?(types_path)}" do %>
+                  <i class="fa fa-mobile-phone nav-icon"></i>
+                  <p>Types d'evenements</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to structures_path, class: "nav-link #{'active' if current_page?(structures_path)}" do %>
+                  <i class="fa fa-mobile-phone nav-icon"></i>
+                  <p>Partenaires</p>
+                <% end %>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-users"></i>
+              <p>
+                Utilisateurs
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <%= link_to parametre_admin_path, class: "nav-link #{'active' if current_page?(parametre_admin_path)}" do %>
+                  <i class="fa fa-user-secret nav-icon"></i>
+                  <p>utilisateurs</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to access_users_path, class: "nav-link #{'active' if current_page?(access_users_path)}" do %>
+                  <i class="fa fa-user nav-icon"></i>
+                  <p>Gestion utilisateurs</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to access_users_path, class: "nav-link #{'active' if current_page?(access_users_path)}" do %>
+                  <i class="fa fa-lock nav-icon"></i>
+                  <p>Admin & décideurs</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to access_users_path, class: 'nav-link' do %>
+                  <i class="fa fa-user-circle nav-icon"></i>
+                  <p>Partenaires et autres</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to access_users_path, class: 'nav-link' do %>
+                  <i class="fa fa-mobile-phone nav-icon"></i>
+                  <p>Autorisations mobiles</p>
+                <% end %>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <%= link_to nil, class: 'nav-link' do  %>
+              <i class="nav-icon fa fa-th"></i>
+              <p>
+                Applications
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            <% end %>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <%= link_to gestion_alerte_alertes_all_path, class: 'nav-link' do %>
+                  <i class="fa fa-bell nav-icon"></i>
+                  <p>Alertes</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to gestion_contraventions_contraventions_all_path, class: 'nav-link' do %>
+                  <i class="fa fa-car nav-icon"></i>
+                  <p>Contraventions</p>
+                <% end %>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-pie-chart"></i>
+              <p>
+                Recherche
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/charts/chartjs.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>ChartJS</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/charts/flot.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Flot</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/charts/inline.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Inline</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-cogs"></i>
+              <p>
+                Parametres
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <%= link_to parametre_access_lange_path, class: 'nav-link' do %>
+                  <i class="fa fa-magic nav-icon"></i>
+                  <p>Autorisations</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to parametre_access_lange_path, class: 'nav-link' do %>
+                  <i class="fa fa-language nav-icon"></i>
+                  <p>Langues</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to parametre_paiement_path, class: 'nav-link' do %>
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Modes de paiement</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <a href="pages/UI/sliders.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Sliders</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-bookmark"></i>
+              <p>
+                Export/Import
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <%= link_to parametre_access_exporter_export_path, class: 'nav-link' do %>
+                  <i class="fa fa-upload nav-icon"></i>
+                  <p>Exportations</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to parametre_access_importer_import_path, class: 'nav-link' do %>
+                  <i class="fa fa-download nav-icon"></i>
+                  <p>Importations</p>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to parametre_access_setup_import_export_path, class: 'nav-link' do %>
+                  <i class="fa fa-cog nav-icon"></i>
+                  <p>Parametres</p>
+                <% end %>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <%= link_to parametre_etat_path, class: 'nav-link' do %>
+              <i class="nav-icon fa fa-edit"></i>
+              <p>
+                Edition
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            <% end %>
+          </li>
+          <li class="nav-header">AUTRES ACTIONS</li>
+          <li class="nav-item">
+            <%= link_to access_yelp_path, class: 'nav-link' do %>
+              <i class="nav-icon fa fa-question-circle"></i>
+              <p>
+                Aide
+              </p>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to destroy_admin_session_path, method: :delete, class: 'nav-link' do %>
+              <i class="nav-icon fa fa-signing"></i>
+              <p>
+                Se déconnecter
+              </p>
+            <% end %>
+          </li>
+          <!--li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-envelope-o"></i>
+              <p>
+                Mailbox
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/mailbox/mailbox.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Inbox</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/mailbox/compose.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Compose</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/mailbox/read-mail.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Read</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Pages
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/examples/invoice.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Invoice</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/profile.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Profile</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/login.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Login</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/register.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Register</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Lockscreen</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-plus-square-o"></i>
+              <p>
+                Extras
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/examples/404.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Error 404</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/500.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Error 500</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/blank.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Blank Page</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="starter.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Starter Page</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-header">MISCELLANEOUS</li>
+          <li class="nav-item">
+            <a href="https://adminlte.io/docs" class="nav-link">
+              <i class="nav-icon fa fa-file"></i>
+              <p>Documentation</p>
+            </a>
+          </li>
+          <li class="nav-header">LABELS</li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-circle-o text-danger"></i>
+              <p class="text">Important</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-circle-o text-warning"></i>
+              <p>Warning</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-circle-o text-info"></i>
+              <p>Informational</p>
+            </a>
+          </li -->
+        </ul>
+      </nav>
+    <% end %>
   </div>
   <!-- /.sidebar -->
 </aside>

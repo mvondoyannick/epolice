@@ -5,7 +5,7 @@ class AffectationsController < ApplicationController
   add_breadcrumb "Index", :grvpc_index_path
 
 
-  layout 'grvpc/grvpc'
+  layout 'views/index'
 
   # GET /affectations
   # GET /affectations.json
