@@ -1,5 +1,5 @@
 class Api::ConvocationsController < ApplicationController
-  skip_before_action :verify_authenticity_token, only: [:new_alerte]
+  skip_before_action :verify_authenticity_token, only: [:new_alerte, :authenticate]
   require 'net/http'
   require 'uri'
   require 'httparty'
@@ -603,6 +603,24 @@ class Api::ConvocationsController < ApplicationController
     render json: {
         data: code
     }
+  end
+
+  #fin de l'archivage
+  def endArchivage
+    data = params[:code]
+    process = MToM.new($phone)
+    d = process.finalize(params[:phone], data)
+    puts d
+    if d == 'success'
+      render json: {
+          message: :validate
+      }
+    else
+      render json: {
+          message: :failed,
+          reason: 'Incompatible phone or code'
+      }
+    end
   end
 
 

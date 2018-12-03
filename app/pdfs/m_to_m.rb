@@ -71,4 +71,16 @@ class MToM
       return SecureRandom.hex(3).upcase
     end
   end
+
+  #finaliser le mode de transfert
+  def finalize(phone, code)
+    @phone = phone
+    @code = code
+
+    if @phone == $phone
+      return 'success'
+    else
+      return 'failed'
+    end
+  end
 end

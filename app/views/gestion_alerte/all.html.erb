@@ -15,56 +15,78 @@
 </div>
 
 <div class="row">
-  <div class="col-lg-12">
-    <div class="table-responsive table--no-card m-b-30">
-      <table class="table table-borderless table-striped table-earning table-bordered">
-        <thead>
-        <tr>
-          <th>#</th>
-          <th>Titre</th>
-          <th>Description</th>
-          <th>Date</th>
-          <th>Statut</th>
-          <th>Services</th>
-          <th colspan="3">&nbsp;</th>
-        </tr>
-        </thead>
-        <tbody>
-        <% @alertes.each do |alerte| %>
-          <tr>
-            <td>
-              <%= alerte.id %>
-            </td>
-            <td>
-              <%= alerte.titre %>
-            </td>
-            <td>
-              <%= truncate(alerte.description.html_safe, lenght: 10) %>
-            </td>
-            <td>
-              <%= alerte.created_at %>
-            </td>
-            <td>
-              <%= link_to alerte.statu.name, nil, class: 'btn btn-sm btn-danger disabled' if !alerte.statu_id.nil? %>
-            </td>
-            <td>
-              <% p = JSON.parse alerte.type.entity if !alerte.type_id.nil? %>
-              <% a = p.reject(&:empty?) %>
-              <% a.each do |data| %>
-                <%= link_to Structure.find(data).name, structure_path(data) %>, <br>
-              <% end %>
-            </td>
-            <td>
-              <%= link_to "Voir", alerte_path(alerte), class: 'btn btn-sm btn-primary' %>
-            </td>
-            <td>
-              <%= link_to "Supprimer", alerte, method: :delete, data: {confirm: "Supprimer cette alerte : #{alerte.code}"}, class: 'btn btn-sm btn-danger disabled' if !current_admin.role.name = 'decideur' %>
-            </td>
-          </tr>
-        <% end %>
-        </tbody>
-      </table>
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Responsive Hover Table</h3>
+
+        <div class="card-tools">
+          <div class="input-group input-group-sm" style="width: 150px;">
+            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body table-responsive p-0">
+        <table class="table table-hover" id="table">
+          <tbody>
+            <tr>
+              <th>ID</th>
+              <th>Titre</th>
+              <th>Description</th>
+              <th>Région</th>
+              <th>Arrondissement</th>
+              <th>Lieu dit</th>
+              <th>Date</th>
+              <th>Statut</th>
+              <th>Services</th>
+              <th colspan="3">Action</th>
+            </tr>
+            <% @alertes.each do |alerte| %>
+            <tr>
+              <td>
+                <%= alerte.id %>
+              </td>
+              <td>
+                <%= alerte.titre %>
+              </td>
+              <td>
+                <%= truncate(alerte.description.html_safe, lenght: 10) %>
+              </td>
+              <td><%= alerte.region.name if !alerte.region_id.nil? %></td>
+              <td><%= alerte.arrondissement.name if !alerte.arrondissement_id.nil? %></td>
+              <td><%= alerte.lieudit %></td>
+              <td>
+                <%= alerte.created_at %>
+              </td>
+              <td>
+                <%= link_to alerte.statu.name, nil, class: 'btn btn-sm btn-danger disabled' if !alerte.statu_id.nil? %>
+              </td>
+              <td>
+                <% p = JSON.parse alerte.type.entity if !alerte.type_id.nil? %>
+                <% a = p.reject(&:empty?) %>
+                <% a.each do |data| %>
+                  <%= link_to Structure.find(data).name, structure_path(data) %>, <br>
+                <% end %>
+              </td>
+              <td>
+                <%= link_to "Voir", alerte_path(alerte), class: 'btn btn-sm btn-primary' %>
+              </td>
+              <td>
+                <%= link_to "Supprimer", alerte, method: :delete, data: {confirm: "Supprimer cette alerte : #{alerte.code}"}, class: 'btn btn-sm btn-danger disabled' if !current_admin.role.name = 'decideur' %>
+              </td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+      <!-- /.card-body -->
     </div>
+    <!-- /.card -->
   </div>
 </div>
 

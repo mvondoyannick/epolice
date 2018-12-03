@@ -5,8 +5,6 @@ class Member < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :trackable, :lockable, :timeoutable, :trackable
 
-  belongs_to :service
-  belongs_to :region
 
   private
 

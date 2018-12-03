@@ -346,6 +346,9 @@ Rails.application.routes.draw do
     #verification de la CNI
     get 'epolice/verify/contravention/:cni', to: 'convocations#verify_contravention'
 
+    #retourne le code pour validations
+    get 'epolice/verify/:code/:phone', to: 'convocations#endArchivage'
+
     #gestion de la decharge d'une piece
 
 
@@ -376,6 +379,17 @@ Rails.application.routes.draw do
 
     #send contravention datas to USSD
     #match 'epolice/contravention/ussd', to 'api#', via: [:post, :options]
+  end
+
+  #pour l'API les partenaires pour l'application mobile
+  namespace :api do
+    namespace :v1 do
+      namespace :partner do
+        get 'start/here', to: 'api#start'
+        get 'alertes/:id', to: 'api#alertes' #retourne toutes les alertes
+        match 'authenticate', to: 'api#authenticate', via: [:post, :options]
+      end
+    end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

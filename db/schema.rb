@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_28_163519) do
+ActiveRecord::Schema.define(version: 2018_11_29_091830) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -117,7 +117,10 @@ ActiveRecord::Schema.define(version: 2018_11_28_163519) do
     t.string "archive"
     t.bigint "region_id"
     t.string "photo"
+    t.string "lieudit"
+    t.bigint "arrondissement_id"
     t.index ["agent_id"], name: "index_alertes_on_agent_id"
+    t.index ["arrondissement_id"], name: "index_alertes_on_arrondissement_id"
     t.index ["region_id"], name: "index_alertes_on_region_id"
     t.index ["statu_id"], name: "index_alertes_on_statu_id"
     t.index ["type_id"], name: "index_alertes_on_type_id"
@@ -402,17 +405,13 @@ ActiveRecord::Schema.define(version: 2018_11_28_163519) do
     t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "service_id"
     t.string "status"
     t.string "phone1"
     t.string "phone2"
     t.string "code"
-    t.bigint "region_id"
     t.bigint "structure_id"
     t.index ["email"], name: "index_members_on_email", unique: true
-    t.index ["region_id"], name: "index_members_on_region_id"
     t.index ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
-    t.index ["service_id"], name: "index_members_on_service_id"
     t.index ["structure_id"], name: "index_members_on_structure_id"
     t.index ["unlock_token"], name: "index_members_on_unlock_token", unique: true
   end
@@ -616,6 +615,7 @@ ActiveRecord::Schema.define(version: 2018_11_28_163519) do
   add_foreign_key "agents", "groupements"
   add_foreign_key "agents", "regions"
   add_foreign_key "alertes", "agents"
+  add_foreign_key "alertes", "arrondissements"
   add_foreign_key "alertes", "regions"
   add_foreign_key "alertes", "status", column: "statu_id"
   add_foreign_key "alertes", "types"
@@ -645,8 +645,6 @@ ActiveRecord::Schema.define(version: 2018_11_28_163519) do
   add_foreign_key "infractions", "departements"
   add_foreign_key "infractions", "regions"
   add_foreign_key "infractions", "zonecouverturemotifs"
-  add_foreign_key "members", "regions"
-  add_foreign_key "members", "services"
   add_foreign_key "members", "structures"
   add_foreign_key "metropolis", "metropolisroles"
   add_foreign_key "paiements", "convocations"

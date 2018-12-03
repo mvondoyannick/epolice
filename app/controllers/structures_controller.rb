@@ -31,7 +31,7 @@ class StructuresController < ApplicationController
   # GET /structures/1/accounts
   def accounts
     id = params[:id]
-    @account = Member.where(structure_id: id)
+    @account = Member.all
   end
 
   # GET /structures/1/accounts/new
@@ -94,7 +94,7 @@ class StructuresController < ApplicationController
     end
 
     def account_params
-      params.permit(:structure_id, :phone, :prenom, :email, :password, :service_id, :region_id)
+      params.permit(:structure, :phone, :prenom, :email, :password)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
