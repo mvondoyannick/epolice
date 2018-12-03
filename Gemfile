@@ -19,6 +19,9 @@ gem 'breadcrumbs_on_rails'
 #adding carrierwave
 gem 'carrierwave', '~> 1.0'
 gem 'carrierwave-base64'
+#add onesignal gem https://github.com/tbalthazar/onesignal-ruby
+gem 'one_signal'
+#gem 'onesignal'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes

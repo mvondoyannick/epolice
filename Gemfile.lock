@@ -162,6 +162,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     nokogiri (1.8.5-x86-mingw32)
       mini_portile2 (~> 2.3.0)
+    one_signal (1.2.0)
     onsignal (5.0.3)
       actionpack (>= 5.0)
       actionview (>= 5.0)
@@ -307,6 +308,7 @@ DEPENDENCIES
   leaflet-rails
   mini_magick
   mysql2 (>= 0.3.18, < 0.5)
+  one_signal
   onsignal
   popper_js (~> 1.14.3)
   prawn (~> 2.2, >= 2.2.2)

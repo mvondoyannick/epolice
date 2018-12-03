@@ -38,8 +38,6 @@
               <th>ID</th>
               <th>Titre</th>
               <th>Description</th>
-              <th>Région</th>
-              <th>Arrondissement</th>
               <th>Lieu dit</th>
               <th>Date</th>
               <th>Statut</th>
@@ -57,8 +55,6 @@
               <td>
                 <%= truncate(alerte.description.html_safe, lenght: 10) %>
               </td>
-              <td><%= alerte.region.name if !alerte.region_id.nil? %></td>
-              <td><%= alerte.arrondissement.name if !alerte.arrondissement_id.nil? %></td>
               <td><%= alerte.lieudit %></td>
               <td>
                 <%= alerte.created_at %>

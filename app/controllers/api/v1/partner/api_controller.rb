@@ -7,7 +7,11 @@ class Api::V1::Partner::ApiController < ApplicationController
   #liste des alertes
   def alertes
     region = params[:id]
-    alerte = Alerte.where(region_id: region).order(id: :desc)
+    alerte = Alerte.where(region_id: region).order(created_at: :desc).first(30)
+    base_url = 'http://192.168.1.245/api/v1/partner/'
+    #TODO revoir le probleme des images, il faut recuperer les images depuis les assets directement
+    image_tab = Array.new
+    image_tab.push(URI.join('http://192.168.1.245:3000/assets/epolice.PNG'))
     render json:
       {
         result: alerte.map do |data|
@@ -21,9 +25,14 @@ class Api::V1::Partner::ApiController < ApplicationController
             latitude: data.latitude,
             statut: data.statu_id,
             region: Region.find(data.region_id).name,
-            arrondissement: Arrondissement.find(data.arrondissement_id).name,
+            arrondissement: Arrondissement.where(region_id: data.region_id).map do |arrondissement|
+              {
+                arr_id: arrondissement.id,
+                arr_name: arrondissement.name
+              }
+            end,
             lieu_dit: data.lieudit,
-            #photo: image_tag('logo_mobile.png')
+            images: image_tab
           }
         end
       }
@@ -45,9 +54,22 @@ class Api::V1::Partner::ApiController < ApplicationController
       }
     else
       render json: {
-          message: :failed
+          message: 'Adresse email ou mot de passe invalide.'
       }
     end
+  end
+
+  def uuid_partner
+    id = params[:uuid]
+    puts "values are : #{params[:uuid]}"
+  end
+
+  def alerte_detail
+    id = params[:id]
+    query = Alerte.find(id)
+    render json: {
+        alert: query
+    }
   end
 
   private

@@ -332,8 +332,8 @@ Rails.application.routes.draw do
     get 'convocations/verify/:code/:lang', to: 'convocations#verifyContravention' #verification a partir de l'USSD
     get 'convocations/verifymobile/:cni', to: 'convocations#verifyContraventionFromMobile' #verification a partir du client mobile
     get 'convocations/protectCode/:code', to: 'convocations#protectCode'
-    #============================== retourner le type d'infraction ===============================
-    get 'alert/types/type', to: 'convocations#api_type'
+    #============================== retourner tous les types d'infraction ===============================
+    get 'alert/types/type/:region_id', to: 'convocations#api_type'
 
 
     #archivage d'une piece M to M, M to PC, PC to PC
@@ -382,12 +382,14 @@ Rails.application.routes.draw do
   end
 
   #pour l'API les partenaires pour l'application mobile
-  namespace :api do
+  namespace :api, defaults: {format: :json} do
     namespace :v1 do
       namespace :partner do
         get 'start/here', to: 'api#start'
         get 'alertes/:id', to: 'api#alertes' #retourne toutes les alertes
+        get 'alerte/:id', to: 'api#alerte_detail' #retourne une alerte speciique
         match 'authenticate', to: 'api#authenticate', via: [:post, :options]
+        match 'uuid', to: 'api#uuid_partner', via: [:post, :options]
       end
     end
   end

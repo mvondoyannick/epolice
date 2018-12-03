@@ -7,8 +7,8 @@ class Api::ConvocationsController < ApplicationController
   #require 'carrierwave/orm/activerecord'
   require 'json'
 
-  #autoriser les connexion en https
-  #HTTParty::Basement.default_options.update(verify: false)
+  #autoriser les connexion en https sans authentifcation https
+  HTTParty::Basement.default_options.update(verify: false)
 
   #authentification d'un agent sur la plateforme
   # @route: GET
@@ -41,16 +41,24 @@ class Api::ConvocationsController < ApplicationController
             #grade_id: data.grade_id,
             #unite: data.unite.name,
             #unite_id: data.unite_id,
-            avatar: data.avatar.url,
+            avatar: URI.join('http://192.168.1.245:3000/', data.avatar.url),
             unite: Groupement.find(data.groupement_id).name.split[0],
             unite_id: data.groupement_id,
             #region: Groupement.find(data.groupement_id).name.split[1],
             region_id: data.region_id,
             region: data.region.name || nil,
+            arrondissements: Arrondissement.where(region_id: data.region_id).map do |arrondissement|
+              {
+                arrondissement_id: arrondissement.id,
+                arrondissement_name: arrondissement.name
+              }
+            end,
             #unite: data.groupement.split[0],
             #region: data.groupement.split[1],
             #region2: data.region.name,
-            #ip_geolocation: JSON.parse(Net::HTTP.get(URI('https://ipapi.co/'+request.remote_ip+'/json/'))),
+            # TODO revoir le probleme de la geolocalisation par IP avec HTTParty
+            #ip_geolocation: HTTParty.get('https://ipapi.co/'+request.remote_ip+'/json/'),
+            #JSON.parse(Net::HTTP.get(URI('https://ipapi.co/'+request.remote_ip+'/json/'))),
             apikey: SecureRandom.hex(10),
             cookies: {
                 value: SecureRandom.hex(10),
@@ -237,7 +245,16 @@ class Api::ConvocationsController < ApplicationController
 
   #retourner tous les types au format json pour l'API
   def api_type
-    render json: {types: Type.all}
+    region = params[:region_id]
+    render json: {
+      types: Type.all,
+      arrondissement: Arrondissement.where(region_id: region).map do |arrondissement|
+        {
+          arrondissement_id: arrondissement.id,
+          arrondissement_name: arrondissement.name
+        }
+      end
+    }
   end
 
   #retourne tous les types d'infractions
@@ -349,6 +366,10 @@ class Api::ConvocationsController < ApplicationController
           photo: @alerte.photo.url,
           photo_identifier: @alerte.photo_identifier
       }
+
+      #ensuite on emet la notification
+      OneSignals::new_alerte(@alerte.description.truncate(20), @alerte.id)
+
     else
       render json: {
           status: :failed,
@@ -638,7 +659,7 @@ class Api::ConvocationsController < ApplicationController
     end
 
     def alert_params
-      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre, :photo, :region_id)
+      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre, :photo, :region_id, :lieudit)
     end
 
     def infraction_params
