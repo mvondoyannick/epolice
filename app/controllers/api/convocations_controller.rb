@@ -403,12 +403,28 @@ class Api::ConvocationsController < ApplicationController
     #on recupere les informations de l'agent au nombre de 3
     # #pener a ajouter les photos
     matricule = params[:matricule]
-    ville   = params[:ville_id]
+    ville   = params[:ville_id] #attention, ceci concerne la region
 
     #on verifie les informations
-    read = Alerte.where(ville_id: ville).order(created_at: :desc)
+    # TODO conditionner l'affichage des alertes en fontions du statut non_resolu
+    read = Alerte.where(region_id: ville).where(statu_id: 2).order(created_at: :desc).first(5)
+    tab = []
     render json: {
-        alerte: read
+        alerte: read.map do |data|
+          {
+              action: data.action,
+              arrondissement: Arrondissement.find(data.arrondissement_id).name,
+              date: data.created_at,
+              region: Region.find(data.region_id).name,
+              description: data.description,
+              titre: Type.find(data.titre).name,
+              statut: Statu.find(data.statu_id).name,
+              image: URI.join('http://192.168.1.245:3000/assets/logo_mobile.png'),
+              partenaire_id: JSON.parse(Type.find(data.type_id).entity).reject(&:empty?).each {|content| tab.push(Structure.find(content).name)},
+              partenaire: tab.uniq
+
+          }
+        end
     }
   end
 
@@ -659,7 +675,7 @@ class Api::ConvocationsController < ApplicationController
     end
 
     def alert_params
-      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre, :photo, :region_id, :lieudit)
+      params.permit(:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre, :photo, :region_id, :lieudit, :arrondissement_id)
     end
 
     def infraction_params

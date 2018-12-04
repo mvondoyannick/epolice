@@ -6,20 +6,13 @@ class AuthenticatePartner
   end
 
   def authenticate
-    query = Member.where(email: $email, password: $password).last
+    #query = Member.where(email: $email, password: $password).last
+    query = Member.where(email: $email).first
 
-    if query
-      return query.map do |data|
-          {
-              message: :succes,
-              partner: data,
-              blueprint: SecureRandom.hex(10),
-              created_at: Date.today,
-              expire_in: 5.hour.from_now
-          }
-        end
+    if query&.valid_password?($password)
+      return query.as_json(only: [:id, :email, :phone, :structure_id, message: 'success']), status: :authenticated
     else
-      return false
+      return :unauthorized
     end
   end
 end
