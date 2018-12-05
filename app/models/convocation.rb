@@ -33,6 +33,7 @@ class Convocation < ApplicationRecord
     def set_code
         self.code = SecureRandom.hex(3).upcase
         self.token = SecureRandom.hex(10).upcase
+        self.status = '0' #0 pour impayé, 1 pour payé
     end
 
     def self.send_email
@@ -41,9 +42,10 @@ class Convocation < ApplicationRecord
 
     def send_sms
 
-        message = "Mr/Mme #{self.phone}, le cout de l'amende est de #{self.infraction.montant} FCFA. Code contraveniton : #{self.code}. Rendez-vous sur https://goo.gl/3hm3ke."
-        result = HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{self.phone}&message=#{message}")
-        puts "========== #{result}"
+        message = "Mr/Mme #{self.phone}, le cout de l'amende est de #{self.infraction.montant} FCFA. Code contraveniton : #{self.code}. Rendez-vous sur https://epolice.herokuapp.com/public/#{self.code} ou sur #123*118#, *155*118#"
+
+        #insertion du module SendSms
+        SendSms.new(self.phone, message)
     end
 
     #permet d'effectuer l'achivage, le premier archivage pour cette contravention

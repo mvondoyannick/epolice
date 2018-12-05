@@ -56,6 +56,10 @@
             <%= f.association :grade, prompt: "Selectionner un grade", label: false %>
           </div>
           <div class="form-group">
+            <label for="company" class="form-control-label">Ajouter à un GRVPC?</label>
+            <%= f.input :bloque, as: :radio_buttons, collection: [['OUI', 'oui'], ['NON', 'non']], label: false %>
+          </div>
+          <div class="form-group">
             <label for="company" class=" form-control-label">GRVPC</label>
             <%= f.association :groupement, prompt: "Selectionner un GRVPC", label: false %>
           </div>

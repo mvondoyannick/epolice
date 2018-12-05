@@ -10,5 +10,8 @@ class Groupement < ApplicationRecord
     #mise a jour de la casse du grvpc
     self.name = self.name[0..4].upcase+self.name[5..self.name.length]
     self.email = self.name.delete(' ').downcase+'-'+SecureRandom.hex(2)+'@epolice.cm' unless self.email.nil?
+
+    #mise a jour de l'ecriture de groupement
+    #self.name =
   end
 end

@@ -588,6 +588,63 @@ class Api::ConvocationsController < ApplicationController
 
   end
 
+  #retourne les convocations sur la base de la CNI|phone
+  # TODO update and perform some request
+  # TODO using module PublicModule
+  def convocation_search
+    phone = params[:phone]
+
+    #init treatment
+    PublicModule.new(phone: phone)
+
+    #search convocation with params
+    query = PublicModule::contravention
+
+    render json: {
+      results: query.map do |data|
+        {
+          convocation_id: data.id,
+          phone: data.phone,
+          immatriculation: data.immatriculation,
+          created_at: data.created_at,
+          agent: Agent.find(data.agent_id).complete_name,
+          token: data.token,
+          code: data.code,
+          infraction_id: data.infraction_id,
+          infraction_name: Infraction.find(data.infraction_id).motif,
+          infraction_amount: Infraction.find(data.infraction_id).montant,
+          pieceretenu: Pieceretenu.find(data.pieceretenu_id).name
+        }
+      end
+    }
+  end
+
+  #liste des infractions juste pour l'educations au changement
+  def infraction_list
+    query = PublicModule::infraction_list
+
+    render json: {
+        results: query.map do |data|
+          {
+              infraction_id: data.id,
+              infraction_name: data.motif,
+              infraction_montant: data.montant+' F CFA',
+              class: data.classe,
+              source_juridique: data.source,
+              zone_couverture: Zonecouverturemotif.find(data.zonecouverturemotif_id).name
+          }
+        end
+    }
+  end
+
+  #authentification d'un agent
+  def authenticate_agent
+    token = params[:token]
+    PublicModule::new(token: token)
+    query = PublicModule::authenticate_agent
+    render json: query
+  end
+
   #gestion de la decharge
   # @detail : permet de gerer la decharge d'un document sur la base d'un N° de CNI et de la photo
   # @routes:
@@ -681,4 +738,5 @@ class Api::ConvocationsController < ApplicationController
     def infraction_params
       params.permit(:infraction_id, :pieceretenu_id, :agent_id, :phone, :cni, :immatriculation)
     end
+
 end

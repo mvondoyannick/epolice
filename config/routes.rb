@@ -379,6 +379,15 @@ Rails.application.routes.draw do
 
     #send contravention datas to USSD
     #match 'epolice/contravention/ussd', to 'api#', via: [:post, :options]
+
+    #retourne toutes les informations sur une contravention sur la base du phone|cni
+    match 'epolice/contraventions/search/:phone(/:type)', to: 'convocations#convocation_search', via: [:get, :options]
+
+    #retourne la documentation sur une contravention
+    match 'epolice/contraventions/education/all', to: 'convocations#infraction_list', via: [:get, :options]
+
+    #retourne les informations d'authentification d'un agent
+    match 'epolice/authenticate/agent/:token', to: 'convocations#authenticate_agent', via: [:get, :options]
   end
 
   #pour l'API les partenaires pour l'application mobile

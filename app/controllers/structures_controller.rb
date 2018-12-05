@@ -31,7 +31,7 @@ class StructuresController < ApplicationController
   # GET /structures/1/accounts
   def accounts
     id = params[:id]
-    @account = Member.all
+    @account = Member.where(structure_id: id)
   end
 
   # GET /structures/1/accounts/new

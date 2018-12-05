@@ -1,0 +1,15 @@
+class SendSms
+  def initialize(phone, message)
+    $phone = phone
+    $message = message
+  end
+
+  def self.send
+
+    require 'httparty'
+
+    HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{$phone}&message=#{$message}")
+    #envoi du SMS via HTTPatrty
+
+  end
+end

@@ -20,9 +20,9 @@ class PublicModule
   #retourne les informations d'une contravention
   # params AUCUN
   def self.contravention
-    contravention = Convocation.where(phone: $phone)
+    contravention = Convocation.where(phone: $phone, buy: nil)
     if contravention
-      return contravention.as_json(only: [:id, :phone, :immatriculation, :created_at, :agent_id, :token, :code, :infraction_id, :pieceretenu_id])
+      return contravention #.as_json(only: [:id, :phone, :immatriculation, :created_at, :agent_id, :token, :code, :infraction_id, :pieceretenu_id])
     else
       return nil
     end
@@ -31,15 +31,15 @@ class PublicModule
 
   #permet d'authentifier un agent de police particulier
   def self.authenticate_agent
-    query = Agent.where(tokenagent: $token.downcase)
-    return query.as_json(only: [:name, :prenom, :grade_id, :sexe, :region_id ])
+    query = Agent.where(tokenagent: $token.downcase).first
+    return query #.as_json(only: [:name, :prenom, :grade_id, :sexe, :region_id ])
 
   end
 
   #retourne le cout total d'une contravention
   def self.infraction_list
     infraction = Infraction.all
-    return infraction.as_json(only: [:id, :motif, :montant])
+    return infraction #.as_json(only: [:id, :motif, :montant])
   end
 
   #retourne tous les arretés dans le cadre des informations d'education
