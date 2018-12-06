@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_29_091830) do
+ActiveRecord::Schema.define(version: 2018_12_05_202635) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -590,6 +590,27 @@ ActiveRecord::Schema.define(version: 2018_11_29_091830) do
     t.string "description"
   end
 
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "email"
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.string "name"
+    t.string "prenom"
+    t.bigint "role_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["role_id"], name: "index_users_on_role_id"
+  end
+
   create_table "villes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "long"
@@ -598,65 +619,11 @@ ActiveRecord::Schema.define(version: 2018_11_29_091830) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "zonecouverturemotifs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "zonecouverturemotifs", id: :bigint, default: nil, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "detail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "admins", "roles"
-  add_foreign_key "affectations", "agents"
-  add_foreign_key "affectations", "commissariats"
-  add_foreign_key "affectations", "postepolices"
-  add_foreign_key "affectations", "regions"
-  add_foreign_key "agents", "commissariats"
-  add_foreign_key "agents", "grades"
-  add_foreign_key "agents", "groupements"
-  add_foreign_key "agents", "regions"
-  add_foreign_key "alertes", "agents"
-  add_foreign_key "alertes", "arrondissements"
-  add_foreign_key "alertes", "regions"
-  add_foreign_key "alertes", "status", column: "statu_id"
-  add_foreign_key "alertes", "types"
-  add_foreign_key "arrondissements", "departements"
-  add_foreign_key "arrondissements", "regions"
-  add_foreign_key "bulletins", "commissariats"
-  add_foreign_key "carrefours", "villes"
-  add_foreign_key "centrepartenaires", "arrondissements"
-  add_foreign_key "centrepartenaires", "departements"
-  add_foreign_key "centrepartenaires", "regions"
-  add_foreign_key "centrepartenaires", "structures"
-  add_foreign_key "centrerecouvrements", "regions"
-  add_foreign_key "comments", "alertes"
-  add_foreign_key "commissariats", "arrondissements"
-  add_foreign_key "commissariats", "departements"
-  add_foreign_key "commissariats", "regions"
-  add_foreign_key "constats", "agents"
-  add_foreign_key "constats", "typeaccidents"
-  add_foreign_key "convocations", "agents"
-  add_foreign_key "convocations", "infractions"
-  add_foreign_key "convocations", "pieceretenus"
-  add_foreign_key "departements", "regions"
-  add_foreign_key "fylos", "commissariats"
-  add_foreign_key "fylos", "roles"
-  add_foreign_key "groupements", "regions"
-  add_foreign_key "infractions", "arrondissements"
-  add_foreign_key "infractions", "departements"
-  add_foreign_key "infractions", "regions"
-  add_foreign_key "infractions", "zonecouverturemotifs"
-  add_foreign_key "members", "structures"
-  add_foreign_key "metropolis", "metropolisroles"
-  add_foreign_key "paiements", "convocations"
-  add_foreign_key "post_commissariats", "agents"
-  add_foreign_key "post_commissariats", "commissariats"
-  add_foreign_key "post_commissariats", "grades"
-  add_foreign_key "postepolices", "agents"
-  add_foreign_key "postepolices", "commissariats"
-  add_foreign_key "postepolices", "grades"
-  add_foreign_key "postepolices", "regions"
-  add_foreign_key "services", "types"
-  add_foreign_key "structures", "regions"
-  add_foreign_key "transferts", "agents"
-  add_foreign_key "transferts", "convocations"
 end

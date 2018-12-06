@@ -12,8 +12,8 @@ module SprintPay
 
       # TODO permet de verifier le numero de telephone
       def self.verifyPhone
-        #tableau d'operateur mobile
-        @ORANGE = %w(55 91 90 98)
+        #tableau d'operateur mobile et des numero permettant de les indentifier
+        @ORANGE = %w(55 91 90 98 96 95)
         @MTN = %w(51 71 70 50 51 54)
 
         #on recupere le numero et on le converti en string
@@ -67,8 +67,8 @@ module SprintPay
       include HTTParty
 
       HEADERS = {
-          "Authorization": "9a82f943-712c-4a3a-9747-ab430ded3f74",
-          "DateTime": "2c110723-f334-4638-a610-1d575eefd60f",
+          "Authorization": "SP:2c110723-f334-4638-a610-1d575eefd60f:MjBmNjBjNzg5YmE3MWYwYTAxM2Y4Nzg3ODViYjRlOTRkZjAwYTYxMg==",
+          "DateTime": "2018-12-05T18:55:25Z",
           "Content-Type": "application/json"
       }
 
@@ -77,15 +77,22 @@ module SprintPay
         $amount = amount
       end
 
+      #inclussion test
+      def self.includeKey 
+        request = HTTParty.get('http://localhost/printsdk')
+        return request
+      end
+
       def self.send(body)
-        q = HTTParty.post('https://test-api.sprint-pay.com/sprintpayapi//payment/orangemoney/request', headers: HEADERS, body: body)
+        #https://test-api.sprint-pay.com/sprintpayapi/payment/mobilemoney/request/v3
+        q = HTTParty.post('https://test-api.sprint-pay.com/sprintpayapi/payment/orangemoney/request/v3', headers: HEADERS, body: body)
         return q.as_json
       end
 
       def self.payment_orange
         body_data = {
-            "phone": '691451189', #utiliser la variable globale disponible a cet effet
-            "amount": '100'       #utiliser le montant globale disponible a cet effet
+            "phone": $phone, #utiliser la variable globale disponible a cet effet
+            "amount": $amount       #utiliser le montant globale disponible a cet effet
         }.to_json
 
         send(body_data)

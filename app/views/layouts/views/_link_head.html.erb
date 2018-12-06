@@ -2,13 +2,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><%= full_title(yield :title)%></title>
+
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
   <!-- Font Awesome -->
-  <%= stylesheet_link_tag 'application', 'data-turbolinks-track': 'reloatd' %>
+  <%= stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'https://code.jquery.com/jquery-3.3.1.min.js', 'data-turbolinks-track': 'reload' %>
   <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/font-awesome/css/font-awesome.min.css">
   <link href="https://colorlib.com/polygon/cooladmin/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
@@ -22,6 +23,8 @@
   <!-- Morris chart -->
   <%= stylesheet_link_tag "https://adminlte.io/themes/dev/AdminLTE/plugins/morris/morris.css", 'data-turbolinks-track': 'reload' %>
   <!-- jvectormap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modal.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal.min.css" />
   <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
   <!-- Date Picker -->
   <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/datepicker/datepicker3.css">
@@ -31,4 +34,10 @@
   <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <script>
+      $( document ).on('turbolinks:load', function() {
+          $('#table').DataTable()
+      })
+  </script>
 </head>

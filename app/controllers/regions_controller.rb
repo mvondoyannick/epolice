@@ -12,6 +12,13 @@ class RegionsController < ApplicationController
     add_breadcrumb "regions", :regions_path
   end
 
+  def new_release
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   # GET /regions/1
   # GET /regions/1.json
   def show
