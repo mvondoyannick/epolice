@@ -20,12 +20,12 @@ class DepartementsController < ApplicationController
   # GET /departements/new
   def new
     @departement = Departement.new
-    add_breadcrumb 'nouveau département', departement_path
+    #add_breadcrumb 'nouveau département', departement_path
   end
 
   # GET /departements/1/edit
   def edit
-    add_breadcrumb 'editer', departement_path
+    #add_breadcrumb 'editer', departement_path
   end
 
   # POST /departements

@@ -10,11 +10,11 @@ class Region < ApplicationRecord
 
   private
   def validate_region
-    if Region.all.count == 10
+    #if Region.all.count == 10
       #on annuler l'enregistrement
-      puts 'annuler l enregistrement en cours ...'
-      throw :abort
+      #puts 'annuler l enregistrement en cours ...'
+      #throw :abort
 
-    end
+    #end
   end
 end

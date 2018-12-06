@@ -40,32 +40,23 @@ class Api::V1::Partner::ApiController < ApplicationController
 
   #authentification des partenaires sur la plateforme
   def authenticate
-    #query = Agent.where(name: params[:login], phone: params[:password]).last
+    query = Agent.where(name: params[:login], phone: params[:password]).last
 
-    #start module authentication
-    query = AuthenticatePartner::new(params[:login], params[:password])
-
-    #render result to client requested authentication
-    render json: query
-
-
-=begin
     if query
       render json:
-                 {
-        message: :succes,
-        partner: query,
-        #blueprint: SecureRandom.hex(10),
-        created_at: Date.today,
-        expire_in: 5.hour.from_now,
+         {
+             message: :succes,
+             partner: query,
+             #blueprint: SecureRandom.hex(10),
+             created_at: Date.today,
+             expire_in: 5.hour.from_now,
 
-      }
+         }
     else
       render json: {
-          message: 'Adresse email ou mot de passe invalide.'
+          message: :failed
       }
     end
-=end
   end
 
   def uuid_partner
