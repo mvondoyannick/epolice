@@ -1,4 +1,10 @@
 <p id="notice"><%= notice %></p>
+<br>
+<%= link_to new_region_path, class: 'btn btn-primary m-b-40 float-right' do %>
+  <i class="fa fa-plus"></i>
+  Ajouter
+<% end %>
+<br>
 <h1 class="m-b-40">
   Liste des regions
 </h1>
@@ -6,33 +12,51 @@
   <div class="col-12">
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">Responsive Hover Table</h3>
+        <h3 class="card-title">Liste des regions disponible</h3>
 
         <div class="card-tools">
-          <div class="input-group input-group-sm" style="width: 150px;">
-            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-            <div class="input-group-append">
-              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-            </div>
-          </div>
         </div>
       </div>
       <!-- /.card-header -->
       <div class="card-body table-responsive p-0">
-        <table class="table table-hover" id="table">
-          <tbody><tr>
-            <th>ID</th>
-            <th>Nom région</th>
-            <th colspan="3" class="float-right">Actions</th>
-          </tr>
+        <table class="table table-hover" id="tableRegion">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nom région</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
           <% Region.all.each do |regions| %>
             <tr>
-              <td><%= regions.id %></td>
+              <td width="5%"><%= fa_icon 'star' %></td>
               <td><%= regions.name %></td>
-              <td><%= link_to 'Voir', regions, class: 'float-right' %></td>
-              <td><%= link_to 'Modifier', edit_region_path(regions), class: 'float-right' %></td>
-              <td><%= link_to 'Supprimer', {action: :destroy, id: regions.id}, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm float-right' %></td>
+              <td>
+                <div class="dropdown float-right">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Actions
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <%= link_to regions, class: 'float-right dropdown-item' do %>
+                      <%= fa_icon 'eye' %>
+                      Voir
+                    <% end %>
+                    <%= link_to edit_region_path(regions), class: 'float-right dropdown-item' do %>
+                      <%= fa_icon 'edit' %>
+                      Editer
+                    <% end %>
+                    <%= link_to "regions/supprimer/#{regions.id}", data: { confirm: 'Are you sure?' }, class: 'float-right dropdown-item' do %>
+                      <%= fa_icon 'trash' %>
+                      Supprimer
+                    <% end %>
+                    <%= link_to "regions/supprimer/#{regions.id}", data: { confirm: 'Are you sure?' }, class: 'float-right dropdown-item' do %>
+                      <%= fa_icon 'star' %>
+                      Départements de <%= regions.name %>
+                    <% end %>
+                  </div>
+                </div>
+              </td>
             </tr>
           <% end %>
 
@@ -46,15 +70,8 @@
 </div>
 
 
-<br>
-<%= link_to new_region_path, class: 'btn btn-primary m-b-40 btn-sm float-right' do %>
-  <i class="fa fa-plus"></i>
-  Ajouter une Région
-<% end %>
-<br>
-
 <script>
-    $(document).ready( function () {
-        $('#table').DataTable();
-    } );
+  $(document).ready( function () {
+      $('#tableRegion').DataTable();
+  } );
 </script>

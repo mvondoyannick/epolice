@@ -35,16 +35,9 @@ class Api::ConvocationsController < ApplicationController
           {
             name: data.complete_name,
             id: data.id,
-            #region: data.region.name,
-            #region_id: data.region_id,
-            #grade: data.grade.name,
-            #grade_id: data.grade_id,
-            #unite: data.unite.name,
-            #unite_id: data.unite_id,
             avatar: URI.join('http://192.168.1.245:3000/', data.avatar.url),
             unite: Groupement.find(data.groupement_id).name.split[0],
             unite_id: data.groupement_id,
-            #region: Groupement.find(data.groupement_id).name.split[1],
             region_id: data.region_id,
             region: data.region.name || nil,
             arrondissements: Arrondissement.where(region_id: data.region_id).map do |arrondissement|
@@ -53,9 +46,6 @@ class Api::ConvocationsController < ApplicationController
                 arrondissement_name: arrondissement.name
               }
             end,
-            #unite: data.groupement.split[0],
-            #region: data.groupement.split[1],
-            #region2: data.region.name,
             # TODO revoir le probleme de la geolocalisation par IP avec HTTParty
             #ip_geolocation: HTTParty.get('https://ipapi.co/'+request.remote_ip+'/json/'),
             #JSON.parse(Net::HTTP.get(URI('https://ipapi.co/'+request.remote_ip+'/json/'))),
@@ -67,21 +57,13 @@ class Api::ConvocationsController < ApplicationController
             }
           }
         end
-        #message: token,
-        #region: token[0].region.name,
-        #region_id: token[0].region_id,
-        #grade: token[0].grade.name,
-        #grade_id: token[0].grade_id,
-        #unite: token[0].unite.name,
-        #unite_id: token[0].unite_id,
-        #data: rails_blob_path(Agent.avatar, disposition: "attachment", only_path: true),
-        #affectation: Affectation.find(5).fin.to_date >= Date.today.to_date, #a mettre a jour de facon dynamique
-        #image: '',
-        #apikey: SecureRandom.hex(10),
-        #code: 200,
         #cookies:  {value: SecureRandom.hex(10), expires: 1.hour.from_now }
       }
     end
+  end
+
+  # TODO pour mon test personnel d'integration
+  def sprintpay
   end
 
   #permet de verifier le token d'un agent
@@ -331,19 +313,6 @@ class Api::ConvocationsController < ApplicationController
   # @developer: mailto:mvondoyannick@gmail.com
   def new_alerte
 
-    #recuperation des parametres
-    #agent_id = params[:agent_id]
-    #type_id = params[:type_id]
-    #longitude = params[:longitude]
-    #latitude = params[:latitude]
-    #description = params[:description]
-    #statu_id = params[:statu_id]
-    #titre = Type.find(params[:type_id]).name
-    #:agent_id, :type_id, :longitude, :latitude, :description, :statu_id, :titre, :photo
-
-
-     #@alerte = Alerte.new(agent_id: agent_id, type_id: type_id, longitude: longitude, latitude: latitude, description: description, statu_id: statu_id, titre: titre, photo: photo)
-
     @alerte = Alerte.new(alert_params)
 
     #@alerte.photo.attach(alert_params[:photo]) #on persiste les données
@@ -377,25 +346,6 @@ class Api::ConvocationsController < ApplicationController
     end
 
     #on enregistre l'information dans la base de données
-
-
-
-    #status = @alerte.alertes.attach(params[:alertes])
-    #puts "======= #{status} ======="
-    #recherche des autorisations
-    #today = Date.today
-    #authorization = Affectation.where(agent_id: Agent.find(2).id).where("#{today} between #{Affectation.where(agent_id: 2).debut} and #{Affectation.where(agent_id: 2).fin}")
-    #puts "========== #{authorization} =========="
-     #if @alerte.save
-       #message = "Le numero #{a.phone} est verbalisee pour #{a.infraction.motif}, cout: #{a.infraction.montant}"
-       #m = HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{a.phone}&message=#{message}")
-      #render json: {
-          #status: :success,
-          #date: Date.today
-      #}
-     #else
-      #render json: {'errro': @alerte.errors.messages}
-     #end
   end
 
   #get stored alertes on plateforme
@@ -585,7 +535,6 @@ class Api::ConvocationsController < ApplicationController
           message: :rien
       }
     end
-
   end
 
   #retourne les convocations sur la base de la CNI|phone
@@ -622,6 +571,8 @@ class Api::ConvocationsController < ApplicationController
   #liste des infractions juste pour l'educations au changement
   def infraction_list
     query = PublicModule::infraction_list
+
+    puts query.as_json
 
     render json: {
         results: query.map do |data|

@@ -1,221 +1,48 @@
-<h1 class="m-b-40">
+<h1 class="m-b-40" style="margin-bottom: 40px;">
   Découpage administratif
 </h1>
 
 <div class="row">
-  <div class="col-lg-3">
-    <div class="card" style="position: relative; left: 0px; top: 0px;">
-      <div class="card-header ui-sortable-handle" style="cursor: move;">
-        <h3 class="card-title">
-          <i class="ion ion-clipboard mr-1"></i>
-          Régions
-          <%= link_to new_region_path, class: 'btn btn-info float-right btn-sm' do %>
-            <i class="fa fa-plus"></i>
-            Ajouter
-          <% end %>
-        </h3>
+  <div class="col-md-3 col-sm-6 col-12">
+    <%= link_to regions_path, class: 'text-dark' do %>
+      <div class="info-box">
+      <span class="info-box-icon bg-info-gradient"><i class="fa fa-star"></i></span>
 
-        <div class="card-tools">
-        </div>
+      <div class="info-box-content">
+        <span class="info-box-text">
+          <h5>Régions</h5>
+        </span>
+        <span class="info-box-number"><%= Region.all.count %></span>
       </div>
-      <!-- /.card-header -->
-      <div class="card-body">
-
-      </div>
-      <!-- /.card-body -->
-      <div class="card-footer clearfix">
-        <%= link_to regions_path, class: 'btn btn-info float-right btn-sm' do %>
-          <i class="fa fa-plus"></i>
-          Aperçu
-        <% end %>
-      </div>
+      <!-- /.info-box-content -->
     </div>
+    <% end %>
+    <!-- /.info-box -->
   </div>
-  <div class="col-lg-3">
-    <div class="card" style="position: relative; left: 0px; top: 0px;">
-      <div class="card-header ui-sortable-handle" style="cursor: move;">
-        <h3 class="card-title">
-          <i class="ion ion-clipboard mr-1"></i>
-          Départements
-          <%= link_to new_departement_path, class: 'btn btn-info float-right btn-sm' do %>
-            <i class="fa fa-plus"></i>
-            Ajouter
-          <% end %>
-        </h3>
+  <div class="col-md-3 col-sm-6 col-12">
+    <%= link_to departements_path, class: 'text-dark' do %>
+    <div class="info-box">
+      <span class="info-box-icon bg-success-gradient"><i class="fa fa-star"></i></span>
 
-        <div class="card-tools">
-        </div>
+      <div class="info-box-content">
+        <span class="info-box-text">Départements</span>
+        <span class="info-box-number"><%= Departement.all.count %></span>
       </div>
-      <!-- /.card-header -->
-      <div class="card-body">
-
-      </div>
-      <!-- /.card-body -->
-      <div class="card-footer clearfix">
-        <%= link_to departements_path, class: 'btn btn-info float-right btn-sm' do %>
-          <i class="fa fa-plus"></i>
-          Aperçu
-        <% end %>
-      </div>
+      <!-- /.info-box-content -->
     </div>
+    <% end %>
+    <!-- /.info-box -->
   </div>
-  <div class="col-lg-3">
-    <div class="card" style="position: relative; left: 0px; top: 0px;">
-      <div class="card-header ui-sortable-handle" style="cursor: move;">
-        <h3 class="card-title">
-          <i class="ion ion-clipboard mr-1"></i>
-          Arrondissements
-          <%= link_to new_arrondissement_path, class: 'btn btn-info float-right btn-sm' do %>
-            <i class="fa fa-plus"></i>
-            Ajouter
-          <% end %>
-        </h3>
+  <div class="col-md-3 col-sm-6 col-12">
+    <div class="info-box">
+      <span class="info-box-icon bg-danger-gradient"><i class="fa fa-star"></i></span>
 
-        <div class="card-tools">
-        </div>
+      <div class="info-box-content">
+        <span class="info-box-text">Arrondissements</span>
+        <span class="info-box-number"><%= Arrondissement.all.count %></span>
       </div>
-      <!-- /.card-header -->
-      <div class="card-body">
-
-      </div>
-      <!-- /.card-body -->
-      <div class="card-footer clearfix">
-        <%= link_to arrondissements_path, class: 'btn btn-info float-right btn-sm' do %>
-          <i class="fa fa-plus"></i>
-          Aperçu
-        <% end %>
-      </div>
+      <!-- /.info-box-content -->
     </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-4">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title">Liste des regions</h3>
-
-        <div class="card-tools">
-          <div class="input-group input-group-sm" style="width: 150px;">
-            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-            <div class="input-group-append">
-              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /.card-header -->
-      <div class="card-body table-responsive p-0">
-        <table class="table table-hover">
-          <tbody><tr>
-            <th>ID</th>
-            <th>Libellé</th>
-          </tr>
-          <% Region.all.each do |regions| %>
-          <tr>
-            <td><%= regions.id %></td>
-            <td><%= regions.name %></td>
-          </tr>
-
-          <% end %>
-          </tbody>
-        </table>
-      </div>
-      <div class="card-footer">
-        <div class="text-right">
-          <%= link_to 'Tout voir', regions_path, class: 'btn btn-sm btn-primary' %>
-        </div>
-      </div>
-      <!-- /.card-body -->
-    </div>
-    <!-- /.card -->
-  </div>
-  <div class="col-4">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title">Liste des departements</h3>
-
-        <div class="card-tools">
-          <div class="input-group input-group-sm" style="width: 150px;">
-            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-            <div class="input-group-append">
-              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /.card-header -->
-      <div class="card-body table-responsive p-0">
-        <table class="table table-hover">
-          <tbody><tr>
-            <th>ID</th>
-            <th>Libellé</th>
-            <th>Region</th>
-          </tr>
-          <% Departement.last(10).each do |departements| %>
-            <tr>
-              <td><%= departements.id %></td>
-              <td><%= departements.name %></td>
-              <td><%= departements.region.name %></td>
-            </tr>
-          <% end %>
-
-          </tbody>
-        </table>
-      </div>
-      <div class="card-footer">
-        <div class="text-right">
-          <%= link_to 'Tout voir', departements_path, class: 'btn btn-sm btn-primary' %>
-        </div>
-      </div>
-      <!-- /.card-body -->
-    </div>
-    <!-- /.card -->
-  </div>
-  <div class="col-4">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title">Liste des arrondissements</h3>
-
-        <div class="card-tools">
-          <div class="input-group input-group-sm" style="width: 150px;">
-            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-            <div class="input-group-append">
-              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /.card-header -->
-      <div class="card-body table-responsive p-0">
-        <table class="table table-hover">
-          <tbody><tr>
-            <th>ID</th>
-            <th>Libellé</th>
-            <th>departement</th>
-            <th>region</th>
-          </tr>
-          <% Arrondissement.last(10).each do |arrondissements| %>
-            <tr>
-              <td><%= arrondissements.id %></td>
-              <td><%= arrondissements.name %></td>
-              <td><%= arrondissements.departement.name %></td>
-              <td><%= arrondissements.region.name %></td>
-            </tr>
-          <% end %>
-
-          </tbody>
-        </table>
-      </div>
-      <div class="card-footer">
-        <div class="text-right">
-          <%= link_to 'Tout voir', arrondissements_path, class: 'btn btn-sm btn-primary' %>
-        </div>
-      </div>
-      <!-- /.card-body -->
-    </div>
-    <!-- /.card -->
+    <!-- /.info-box -->
   </div>
 </div>

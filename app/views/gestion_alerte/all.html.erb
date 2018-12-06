@@ -33,7 +33,7 @@
       <!-- /.card-header -->
       <div class="card-body table-responsive p-0">
         <table class="table table-hover" id="table">
-          <tbody>
+          <thead>
             <tr>
               <th>ID</th>
               <th>Titre</th>
@@ -44,6 +44,8 @@
               <th>Services</th>
               <th colspan="3">Action</th>
             </tr>
+          </thead>
+          <tbody>
             <% @alertes.each do |alerte| %>
             <tr>
               <td>

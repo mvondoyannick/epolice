@@ -1,41 +1,82 @@
 <p id="notice"><%= notice %></p>
-<%= link_to new_departement_path, class: 'btn btn-primary m-b-40' do %>
+<%= link_to new_departement_path, class: 'btn btn-primary m-b-40 float-right' do %>
   <i class="fa fa-plus"></i>
-  Nouveau departement
+  Nouveau
 <% end %>
 <h1 class="m-b-40">
   Départements</h1>
 
+
 <div class="row">
-  <div class="col-lg-12">
-    <div class="table-responsive table--no-card m-b-30">
-      <table class="table table-borderless table-striped table-earning">
-        <thead>
-        <tr>
-          <th>Name</th>
-          <th>Région</th>
-          <th colspan="3"></th>
-        </tr>
-        </thead>
-        <tbody>
-        <% @departements.each do |departement| %>
-          <tr>
-            <td><%= departement.name %></td>
-            <td><%= departement.region.name %></td>
-            <td><%= link_to 'Show', departement %></td>
-            <td><%= link_to 'Edit', edit_departement_path(departement) %></td>
-            <td><%= link_to 'Supprimer', departement, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %></td>
-          </tr>
-        <% end %>
-        </tbody>
-      </table>
+    <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Liste des departements</h3>
+
+        <div class="card-tools">
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body table-responsive p-0">
+        <table class="table table-hover" id="tableRegion">
+          <thead>
+            <tr>
+              <th width="10">#</th>
+              <th width="20%">Nom département</th>
+              <th>Région associée</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+          <% @departements.each do |departement| %>
+            <tr>
+              <td><%= fa_icon 'star' %></td>
+              <td><%= departement.name %></td>
+              <td>
+                <%= link_to region_path(departement.region_id), class: 'dark-text' do %>
+                  <%= fa_icon 'map-marker' %>
+                  <%= departement.region.name %>
+                <% end %>
+              </td>
+              <td>
+                <div class="dropdown float-right">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Actions
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <%= link_to departement, class: 'dropdown-item' do %>
+                      <%= fa_icon 'eye' %>
+                      Voir
+                    <% end %>
+                    <%= link_to edit_departement_path(departement), class: 'dropdown-item' do %>
+                      <%= fa_icon 'edit' %>
+                      Editer
+                    <% end %>
+                    <%= link_to departement, method: :delete, data: { confirm: 'Are you sure?' }, class: 'dropdown-item' do %>
+                      <%= fa_icon 'trash' %>
+                      Supprimer
+                    <% end %>
+                    <%= link_to departement, method: :delete, data: { confirm: 'Are you sure?' }, class: 'dropdown-item' do %>
+                      <%= fa_icon 'list' %>
+                      Arrondissements de <%= departement.name %>
+                    <% end %>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
     </div>
+  </div>
+  </div>
   </div>
 </div>
 
 <br>
 
-<%= link_to new_departement_path, class: 'btn btn-primary' do %>
-  <i class="fa fa-plus"></i>
-  Nouveau departement
-<% end %>
+<script>
+  $(document).ready( function () {
+      $('#tableRegion').DataTable();
+  } );
+</script>

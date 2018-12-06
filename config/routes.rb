@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users #pour les utilisateurs de la plateforme
+  get 'regions/supprimer/:id', to: 'regions#supprimer'
+  get "project/new_release", to: 'regions#new_release', :as => :new_release
   resources :post_commissariats
   resources :comments
   resources :bulletins

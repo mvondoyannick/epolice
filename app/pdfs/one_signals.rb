@@ -16,6 +16,8 @@ class OneSignals
   }
 
   def self.send_push(body)
+    #TODO penser à desactiver des nous passerons en HTTPS (production)
+    HTTParty::Basement.default_options.update(verify: false)
     HTTParty.post 'https://onesignal.com/api/v1/notifications', headers: HEADERS, body: body, logger: @push_logger, log_level: :debug, log_format: :curl
   end
 

@@ -12,9 +12,17 @@ class RegionsController < ApplicationController
     add_breadcrumb "regions", :regions_path
   end
 
+  def new_release
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   # GET /regions/1
   # GET /regions/1.json
   def show
+    add_breadcrumb "regions", :regions_path
     add_breadcrumb "details", :region_path
   end
 
@@ -68,6 +76,18 @@ class RegionsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def supprimer
+    id = params[:id]
+    query = Region.find(id)
+    if query.destroy
+      respond_to do |format|
+        format.html { redirect_to regions_url, notice: 'Supprimer.'  }
+        format.json { head :no_content }
+      end
+    end
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
