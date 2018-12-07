@@ -5,51 +5,95 @@
   Liste des agent de police
 </h1>
 
+<br>
+
+<div class="text-right float-right">
+  <div class="d-inline p-2">
+    <%= link_to new_agent_path, class: 'btn btn-primary btn-sm' do %>
+      <i class="fa fa-plus"></i>
+      Ajouter un agent
+    <% end %>
+  </div>
+  <%= link_to agents_path(format: :xls), class: 'btn btn-success btn-sm' do %>
+    <i class="fa fa-file-excel"></i>
+    Exporter les agents
+  <% end %>
+</div>
+
+<br>
+<br>
+
 <div class="row">
   <div class="col-12">
     <div class="card">
       <div class="card-header">
         <h3 class="card-title">Responsive Hover Table</h3>
 
-        <div class="card-tools">
-          <div class="input-group input-group-sm" style="width: 150px;">
-            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-            <div class="input-group-append">
-              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-            </div>
-          </div>
-        </div>
       </div>
       <!-- /.card-header -->
       <div class="card-body table-responsive p-0">
-        <table class="table table-hover">
+        <table class="table table-hover" id="tableRegion">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Photo</th>
+            <th>Matricule</th>
+            <th>Nom & prénom</th>
+            <th>Phone</th>
+            <th>Région</th>
+            <th>GRVPC</th>
+            <th></th>
+          </tr>
+          </thead>
           <tbody>
-            <tr>
-              <th>ID</th>
-              <th>Photo</th>
-              <th>Matricule</th>
-              <th>Nom & prénom</th>
-              <th>Phone</th>
-              <th>Région</th>
-              <th>GRVPC</th>
-              <th colspan="3"> Action</th>
-            </tr>
             <% @agents.each do |agent| %>
             <tr>
-              <td><%= agent.id %></td>
+              <td><%= fa_icon 'star' %></td>
               <td><%= image_tag(agent.avatar.url, size: 50) %></td>
               <td><%= agent.matricule %></td>
               <td><%= agent.complete_name %></td>
               <td><%= agent.phone %></td>
               <td><%= agent.region.name if !agent.region_id.nil? %></td>
               <td><%= agent.groupement.name if !agent.groupement_id.nil? %></td>
-              <td><%= link_to 'Voir', agent %></td>
               <td>
-                <%= link_to 'Modifier', edit_agent_path(agent) %>
-              </td>
-              <td>
-                <%= link_to 'Supprimer', agent, method: :delete, data: { confirm: "Supprimer l'agent #{agent.complete_name}?" }, class: 'btn btn-danger btn-sm' %>
+                <div class="dropdown float-right">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Actions
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <%= link_to agent, class: 'dropdown-item' do %>
+                      <%= fa_icon 'eye' %>
+                      Voir
+                    <% end %>
+                    <%= link_to edit_agent_path(agent), class: 'dropdown-item' do %>
+                      <%= fa_icon 'edit' %>
+                      Editer
+                    <% end %>
+                    <div class="dropdown-divider"></div>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'share' %>
+                      Envoyer un mail à <%= agent.complete_name %>
+                    <% end %>
+                    <div class="dropdown-divider"></div>
+                    <%= link_to "agent/send/sms/#{agent.id}/#{agent.phone}", class: 'dropdown-item' do %>
+                      <%= fa_icon 'phone' %>
+                      Envoyer SMS <%= agent.complete_name %>
+                    <% end %>
+                    <div class="dropdown-divider"></div>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'lock' %>
+                      Bloquer
+                    <% end %>
+                    <%= link_to agent, method: :delete, data: { confirm: "Supprimer l'agent #{agent.complete_name}?" }, class: 'dropdown-item' do %>
+                      <%= fa_icon 'times' %>
+                      Supprimer
+                    <% end %>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'plus' %>
+                      Autres fonctionnalités
+                    <% end %>
+                  </div>
+                </div>
               </td>
             </tr>
           <% end %>
@@ -63,16 +107,8 @@
 </div>
 
 
-<br>
-<div class="text-right">
-  <div class="d-inline p-2">
-    <%= link_to new_agent_path, class: 'btn btn-primary btn-sm' do %>
-      <i class="fa fa-plus"></i>
-      Ajouter un agent
-    <% end %>
-  </div>
-  <%= link_to agents_path(format: :xls), class: 'btn btn-success btn-sm' do %>
-    <i class="fa fa-file-excel"></i>
-    Exporter les agents
-  <% end %>
-</div>
+<script>
+    $(document).ready( function () {
+        $('#tableRegion').DataTable();
+    } );
+</script>

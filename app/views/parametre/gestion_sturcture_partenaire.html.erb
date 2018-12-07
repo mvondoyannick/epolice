@@ -1,42 +1,178 @@
 <h1 class="m-b-40">
-  <%= link_to :back do %>
-    <i class="fa fa-arrow-left"></i>
-  <% end %>
-  Gestion du partenaire
+  Gestion du partenaire sur la plateforme
 </h1>
 
+<%= link_to 'Ajouter', nil, class: 'btn btn-primary float-right' %>
+
+<br>
+<br>
+
 <div class="row">
-  <div class="col-lg-3">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Partenaire</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Acceder/ajouter la structure des partenaires</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Acceder', structures_path, class: 'card-link' %>
-        <%= link_to 'Ajouter', new_structure_path, class: 'card-link' %>
+
+  <div class="col-md-4">
+    <div class="card card-success card-outline">
+      <div class="card-header">
+        <h3 class="card-title">
+          <%= link_to 'Sous centres partenaire', centrepartenaires_path, class: 'text-dark' %>
+        </h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
+        </div>
+        <!-- /.card-tools -->
       </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        The body of the card
+      </div>
+      <!-- /.card-body -->
     </div>
+    <!-- /.card -->
   </div>
-  <div class="col-lg-3">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Centres du partenaire</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Lister, ajouter ou supprimer des comptes</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Acceder', centrepartenaires_path, class: 'card-link' %>
-        <%= link_to 'Ajouter', new_centrepartenaire_path, class: 'card-link' %>
+
+  <div class="col-md-4">
+    <div class="card card-success card-outline">
+      <div class="card-header">
+        <h3 class="card-title">
+          <%= link_to 'Comptes utilisateur', parametre_admins_member_show_path, class: 'text-dark' %>
+        </h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
+        </div>
+        <!-- /.card-tools -->
       </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        The body of the card
+      </div>
+      <!-- /.card-body -->
     </div>
+    <!-- /.card -->
   </div>
-  <div class="col-lg-3">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Comptes du centre</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Lister, ajouter ou supprimer des comptes</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Acceder', parametre_admins_member_show_path, class: 'card-link' %>
-        <%= link_to 'Ajouter', access_member_new_path, class: 'card-link' %>
+
+  <div class="col-md-4">
+    <div class="card card-success card-outline">
+      <div class="card-header">
+        <h3 class="card-title">
+          <%= link_to 'Découpage administratif', parametre_localisation_path, class: 'text-dark' %>
+        </h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
+        </div>
+        <!-- /.card-tools -->
       </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        The body of the card
+      </div>
+      <!-- /.card-body -->
     </div>
+    <!-- /.card -->
+  </div>
+
+</div>
+<br>
+<br>
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Liste des partenaires</h3>
+
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body table-responsive p-0">
+        <table class="table table-hover" id="tableRegion">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nom</th>
+              <th>Raison sociale</th>
+              <th>Adresse email</th>
+              <th>Téléphone</th>
+              <th>Responsable</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+          <% Structure.all.each do |members| %>
+          <tr>
+            <td><%= fa_icon 'star' %></td>
+            <td><%= members.name %></td>
+            <td><%= members.raison %></td>
+            <td><%= members.email %></td>
+            <td><%= members.phonestructure %></td>
+            <td><%= members.contactname %>&nbsp;<%= members.contantprenom %></td>
+            <td>
+              <div class="dropdown float-right">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Actions
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <%= link_to structure_path(members), class: 'dropdown-item' do %>
+                    <%= fa_icon 'eye' %>
+                    Voir
+                  <% end %>
+                  <%= link_to edit_structure_path(members), class: 'dropdown-item' do %>
+                    <%= fa_icon 'edit' %>
+                    Editer
+                  <% end %>
+                  <%= link_to structure_path(members), class: 'dropdown-item' do %>
+                    <%= fa_icon 'home' %>
+                    Centres associés
+                  <% end %>
+                  <div class="dropdown-divider"></div>
+                  <%= link_to nil, class: 'dropdown-item' do %>
+                    <%= fa_icon 'share' %>
+                    Envoyer un mail à <%= members.name %>
+                  <% end %>
+                  <div class="dropdown-divider"></div>
+                  <%= link_to nil, class: 'dropdown-item' do %>
+                    <%= fa_icon 'envelope' %>
+                    Message au responsable
+                  <% end %>
+                  <%= link_to nil, class: 'dropdown-item' do %>
+                    <%= fa_icon 'phone' %>
+                    SMS au responsable
+                  <% end %>
+                  <div class="dropdown-divider"></div>
+                  <%= link_to nil, class: 'dropdown-item' do %>
+                    <%= fa_icon 'lock' %>
+                    Bloquer <%= members.name %>
+                  <% end %>
+                  <%= link_to nil, class: 'dropdown-item' do %>
+                    <%= fa_icon 'times' %>
+                    Supprimer <%= members.name %>
+                  <% end %>
+                  <%= link_to nil, class: 'dropdown-item' do %>
+                    <%= fa_icon 'plus' %>
+                    Autres fonctionnalités
+                  <% end %>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
   </div>
 </div>
+
+<!-- integration des dataTables -->
+<script>
+    $(document).ready( function () {
+        $('#tableRegion').DataTable();
+    } );
+</script>

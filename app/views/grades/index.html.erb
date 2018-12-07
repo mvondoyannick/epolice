@@ -3,39 +3,99 @@
 
 <h1 class="m-b-40">Grades de police</h1>
 
+<br>
+
+<div class="text-right">
+  <%= link_to new_grade_path, class: 'btn btn-primary float-right' do %>
+    <i class="fa fa-plus"></i>
+    &nbsp;Ajouter
+  <% end %>
+</div>
+
+<br>
+<br>
+
 <div class="row">
   <div class="col-lg-12">
-    <div class="table-responsive table--no-card m-b-30">
-      <table class="table table-borderless table-striped table-earning">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Liste des grades</h3>
+
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body table-responsive p-0">
+        <table class="table table-hover" id="tableRegion">
         <thead>
         <tr>
           <th>#</th>
           <th>Nom grade</th>
           <th>Description</th>
-          <th colspan="3"></th>
+          <th></th>
         </tr>
         </thead>
         <tbody>
           <% @grades.each do |grade| %>
             <tr>
-              <td><%= grade.id %></td>
+              <td><%= fa_icon 'star' %></td>
               <td><%= grade.name %></td>
               <td><%= grade.detail %></td>
-              <td class="text-right"><%= link_to 'Voir', grade %></td>
-              <td class="text-right"><%= link_to 'Editer', edit_grade_path(grade) %></td>
-              <td class="text-right" ><%= link_to 'Supprimer', grade, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm'%></td>
+              <td>
+                <div class="dropdown float-right">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Actions
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <%= link_to grade, class: 'dropdown-item' do %>
+                      <%= fa_icon 'eye' %>
+                      Voir
+                    <% end %>
+                    <%= link_to edit_grade_path(grade), class: 'dropdown-item' do %>
+                      <%= fa_icon 'edit' %>
+                      Editer
+                    <% end %>
+                    <div class="dropdown-divider"></div>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'share' %>
+                      Envoyer un mail à
+                    <% end %>
+                    <div class="dropdown-divider"></div>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'envelope' %>
+                      Message au responsable
+                    <% end %>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'phone' %>
+                      SMS au responsable
+                    <% end %>
+                    <div class="dropdown-divider"></div>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'lock' %>
+                      Bloquer <%= grade.name %>
+                    <% end %>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'times' %>
+                      Supprimer
+                    <% end %>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'plus' %>
+                      Autres fonctionnalités
+                    <% end %>
+                  </div>
+                </div>
+              </td>
             </tr>
           <% end %>
         </tbody>
       </table>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="text-right">
-  <%= link_to new_grade_path, class: 'btn btn-primary' do %>
-    <i class="fa fa-plus"></i>
-    &nbsp;Ajouter
-  <% end %>
-</div>
+
+<script>
+    $(document).ready( function () {
+        $('#tableRegion').DataTable();
+    } );
+</script>
 

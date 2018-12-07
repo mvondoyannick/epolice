@@ -10,6 +10,7 @@ class ParametreController < ApplicationController
   end
 
   def gestion_sturcture_partenaire
+    add_breadcrumb "gestion partenaire", :parametre_gestion_sturcture_partenaire_path
     render layout: 'views/index'
   end
 

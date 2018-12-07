@@ -6,293 +6,214 @@
   </p>
 
 <div class="row">
-  <div class="col-lg-3">
-    <div class="card" style="position: relative; left: 0px; top: 0px; height: 17rem;">
-      <div class="card-header ui-sortable-handle" style="cursor: move;">
+  <div class="col-md-3">
+      <div class="card card-success card-outline">
+      <div class="card-header">
         <h3 class="card-title">
-          <i class="ion ion-clipboard mr-1"></i>
-          Découpage administratif
+          <%= link_to 'Découpage administratif', parametre_localisation_path, class: 'text-dark' %>
         </h3>
 
         <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
         </div>
+        <!-- /.card-tools -->
       </div>
       <!-- /.card-header -->
       <div class="card-body">
-
+        The body of the card
       </div>
       <!-- /.card-body -->
-      <div class="card-footer clearfix">
-        <%= link_to parametre_localisation_path, class: 'btn btn-info float-right' do %>
-          <i class="fa fa-plus"></i>
-          Aperçu
-        <% end %>
-      </div>
     </div>
+    <!-- /.card -->
   </div>
 
-  <div class="col-lg-3">
-    <div class="card" style="position: relative; left: 0px; top: 0px; height: 17rem;">
-      <div class="card-header ui-sortable-handle" style="cursor: move;">
+  <div class="col-md-3">
+    <div class="card card-success card-outline">
+      <div class="card-header">
         <h3 class="card-title">
-          <i class="ion ion-clipboard mr-1"></i>
-          GRVPC
+          <%= link_to 'GRVPC', groupements_path, class: 'text-dark' %>
         </h3>
 
         <div class="card-tools">
-          <%= link_to 'Ajouter', new_groupement_path, class: 'btn btn-sm btn-primary' %>
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
         </div>
+        <!-- /.card-tools -->
       </div>
       <!-- /.card-header -->
       <div class="card-body">
-
+        The body of the card
       </div>
       <!-- /.card-body -->
-      <div class="card-footer clearfix">
-        <%= link_to groupements_path, class: 'btn btn-info float-right' do %>
-          <i class="fa fa-eye"></i>
-          Aperçu
-        <% end %>
-      </div>
     </div>
+    <!-- /.card -->
   </div>
-  <div class="col-lg-3">
-    <div class="card" style="position: relative; left: 0px; top: 0px; height: 17rem;">
-      <div class="card-header ui-sortable-handle" style="cursor: move;">
+
+  <div class="col-md-3">
+    <div class="card card-success card-outline">
+      <div class="card-header">
         <h3 class="card-title">
-          <i class="ion ion-clipboard mr-1"></i>
-          Commissariats
+          <%= link_to 'Commissariat', commissariats_path, class: 'text-dark' %>
         </h3>
 
         <div class="card-tools">
-          <%= link_to 'Ajouter', new_commissariat_path, class: 'btn btn-sm btn-primary' %>
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
         </div>
+        <!-- /.card-tools -->
       </div>
       <!-- /.card-header -->
       <div class="card-body">
-
+        The body of the card
       </div>
       <!-- /.card-body -->
-      <div class="card-footer clearfix">
-        <%= link_to commissariats_path, class: 'btn btn-info float-right' do %>
-          <i class="fa fa-eye"></i>
-          Aperçu
-        <% end %>
-      </div>
     </div>
+    <!-- /.card -->
   </div>
-  <div class="col-lg-3">
-    <div class="card" style="position: relative; left: 0px; top: 0px; height: 17rem;">
-      <div class="card-header ui-sortable-handle" style="cursor: move;">
+
+  <div class="col-md-3">
+    <div class="card card-success card-outline">
+      <div class="card-header">
         <h3 class="card-title">
-          <i class="ion ion-clipboard mr-1"></i>
-          Grades
+          <%= link_to 'Grades de police', grades_path, class: 'text-dark' %>
         </h3>
 
         <div class="card-tools">
-          <%= link_to 'Ajouter', new_grade_path, class: 'btn btn-sm btn-primary' %>
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
         </div>
+        <!-- /.card-tools -->
       </div>
       <!-- /.card-header -->
       <div class="card-body">
-
+        The body of the card
       </div>
       <!-- /.card-body -->
-      <div class="card-footer clearfix">
-        <%= link_to grades_path, class: 'btn btn-info float-right' do %>
-          <i class="fa fa-eye"></i>
-          Aperçu
-        <% end %>
-      </div>
     </div>
+    <!-- /.card -->
   </div>
-  <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 17rem;">
-      <div class="card-header bg-danger"><%= link_to 'GRVPC', parametre_grvpc_path, class: 'noir' %></div>
-      <div class="card-body">
-        <h5 class="card-title">Présentation</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Gestion des GRVPC et de postes de polices</h6>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer text-mutted">
-        <%= link_to 'Aperçu', groupements_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-        <%= link_to 'Ajouter', new_groupement_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 17rem;">
-      <div class="card-header bg-danger"><%= link_to 'Commissariats', commissariats_path, class: 'noir' %></div>
-      <div class="card-body">
-        <h5 class="card-title">Présentation</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Commissariats de police</h6>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer text-mutted">
-        <%= link_to 'Aperçu', commissariats_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-        <%= link_to 'Ajouter', new_commissariat_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 17rem;">
-      <div class="card-header bg-danger text-dark"><i class="fa fa-building"></i> <%= link_to 'Postes de polices', postepolices_path, class: 'noir' %></div>
-      <div class="card-body">
-        <h5 class="card-title">Présentation</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Gestion des postes de police</h6>
-        <p class="card-text"></p>
 
+  <div class="col-md-3">
+    <div class="card card-success card-outline">
+      <div class="card-header">
+        <h3 class="card-title">
+          <%= link_to 'Effectifs de police', agents_path, class: 'text-dark' %>
+        </h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
+        </div>
+        <!-- /.card-tools -->
       </div>
-      <div class="card-footer text-muted">
-        <%= link_to 'Aperçu', postepolices_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-        <%= link_to 'Ajouter', new_postepolice_path, class: 'card-link btn btn-sm btn-outline-primary' %>
+      <!-- /.card-header -->
+      <div class="card-body">
+        The body of the card
       </div>
+      <!-- /.card-body -->
     </div>
+    <!-- /.card -->
   </div>
-  <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 17rem;">
-      <div class="card-header bg-danger"><%= link_to 'Effectifs', agents_path, class: 'noir' %></div>
+
+  <div class="col-md-3">
+    <div class="card card-success card-outline">
+      <div class="card-header">
+        <h3 class="card-title">
+          <%= link_to 'Partenaires', parametre_gestion_sturcture_partenaire_path, class: 'text-dark' %>
+        </h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
+        </div>
+        <!-- /.card-tools -->
+      </div>
+      <!-- /.card-header -->
       <div class="card-body">
-        <h5 class="card-title">Présentation</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Personnel de la police</h6>
-        <p class="card-text"></p>
+        The body of the card
       </div>
-      <div class="card-footer text-mutted">
-        <%= link_to 'Aperçu', agents_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-        <%= link_to 'Ajouter', new_agent_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-      </div>
+      <!-- /.card-body -->
     </div>
+    <!-- /.card -->
   </div>
-  <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 17rem;">
-      <div class="card-header bg-danger"><%= link_to 'Partenaires', parametre_gestion_sturcture_partenaire_path, class: 'noir' %></div>
+
+  <div class="col-md-3">
+    <div class="card card-success card-outline">
+      <div class="card-header">
+        <h3 class="card-title">
+          <%= link_to 'Types Infractions', infractions_path, class: 'text-dark' %>
+        </h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
+        </div>
+        <!-- /.card-tools -->
+      </div>
+      <!-- /.card-header -->
       <div class="card-body">
-        <h5 class="card-title">Présentation</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Organisations destinataires des alertes</h6>
-        <p class="card-text"></p>
+        The body of the card
       </div>
-      <div class="card-footer text-mutted">
-        <%= link_to 'Aperçu', parametre_gestion_sturcture_partenaire_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-        <%= link_to 'Ajouter', new_structure_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-      </div>
+      <!-- /.card-body -->
     </div>
-  </div>
-  <!-- div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 13rem;">
-      <div class="card-body">
-        <h5 class="card-title"><%= link_to 'Centres de recouvrement', centrerecouvrements_path, class: 'noir' %></h5>
-        <h6 class="card-subtitle mb-2 text-muted">Centre de recouvrement des amendes aux infractions du code de la route</h6>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer text-muted">
-        <%= link_to 'Aperçu', centrerecouvrements_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-        <%= link_to 'Ajouter', new_centrerecouvrement_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-      </div>
-    </div>
-  </div -->
-  <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 17rem;">
-      <div class="card-header bg-danger"><%= link_to "Types d'infractions", infractions_path, class: 'noir' %></div>
-      <div class="card-body">
-        <h5 class="card-title">Présentation</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Liste des motifs aux infractions du code de la route</h6>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer text-mutted">
-        <%= link_to 'Aperçu', infractions_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-        <%= link_to 'Ajouter', new_infraction_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 17rem;">
-      <div class="card-header bg-danger"><%= link_to 'Elements à retenir', pieceretenus_path, class: 'noir' %></div>
-      <div class="card-body">
-        <h5 class="card-title">Présentation</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Documents et/ou objets d'identification du contrevenant ou de l'engin roulant susceptible d'etre retenus</h6>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer text-mutted">
-        <%= link_to 'Aperçu', pieceretenus_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-        <%= link_to 'Ajouter', new_pieceretenu_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-      </div>
-    </div>
+    <!-- /.card -->
   </div>
 
 
+  <div class="col-md-3">
+    <div class="card card-success card-outline">
+      <div class="card-header">
+        <h3 class="card-title">
+          <%= link_to 'Elements à retenir', pieceretenus_path, class: 'text-dark' %>
+        </h3>
 
-  <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 17rem;">
-      <div class="card-header bg-danger"><%= link_to "Types d'evenements", types_path, class: 'noir' %></div>
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
+        </div>
+        <!-- /.card-tools -->
+      </div>
+      <!-- /.card-header -->
       <div class="card-body">
-        <h5 class="card-title">Présentation</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Evénements survenant dans la cité susceptibles de faire l’objet d’une alerte</h6>
-        <p class="card-text"></p>
+        The body of the card
       </div>
-      <div class="card-footer text-mutted">
-        <%= link_to 'Aperçu', types_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-        <%= link_to 'Ajouter', new_type_path, class: 'card-link btn btn-sm btn-outline-primary' %>
-      </div>
+      <!-- /.card-body -->
     </div>
+    <!-- /.card -->
   </div>
-  <!--div class="col-lg-3">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Administration de la plateforme EPOLICE</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Tous les evenements</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Aperçu', parametre_admin_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_admin_registration_path, class: 'card-link' %>
-      </div>
-    </div>
-  </div-->
 
-  <div class="col-lg-4 col-xl-3 col-sm-4">
-    <div class="card" style="height: 17rem;">
-      <div class="card-header bg-primary text-dark">
-        <i class="fa fa-download"></i>&nbsp;Import/export
+
+  <div class="col-md-3">
+    <div class="card card-success card-outline">
+      <div class="card-header">
+        <h3 class="card-title">
+          <%= link_to 'Types Evenements', types_path, class: 'text-dark' %>
+        </h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
+        </div>
+        <!-- /.card-tools -->
       </div>
+      <!-- /.card-header -->
       <div class="card-body">
-        <h5 class="card-title">Présentation</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Importation et/ou exportation des données</h6>
-        <p class="card-text"></p>
+        The body of the card
       </div>
-      <div class="card-footer text-mutted">
-        <%= link_to parametre_access_exporter_export_path, class: 'card-link btn btn-sm btn-outline-primary' do %>
-          <i class="fa fa-download"></i>
-          Exporter
-        <% end %>
-        <%= link_to parametre_access_importer_import_path, class: 'card-link btn btn-sm btn-outline-primary' do %>
-          <i class="fa fa-upload"></i>
-          Importer
-        <% end %>
-      </div>
+      <!-- /.card-body -->
     </div>
+    <!-- /.card -->
   </div>
-  <!--div class="col-lg-3">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title"><%= link_to 'Centressss de recouvrement', centrerecouvrements_path, class: 'noir' %></h5>
-        <h6 class="card-subtitle mb-2 text-muted">Gestion des centres de recouvrements</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Aperçu', centrerecouvrements_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_centrerecouvrement_path, class: 'card-link' %>
-      </div>
-    </div>
-  </div-->
-  <!-- div class="col-lg-3">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title"><%= link_to 'Archivage des données', nil, class: 'noir' %></h5>
-        <h6 class="card-subtitle mb-2 text-muted">Administration des grades</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Aperçu', archive_index_path, class: 'card-link' %>
-        &nbsp;&nbsp;
-        <%= link_to 'Ajouter', new_grade_path, class: 'card-link' %>
-      </div>
-    </div>
-  </div-->
+
 </div>
 

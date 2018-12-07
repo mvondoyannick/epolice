@@ -14,39 +14,75 @@
       <div class="card-header">
         <h3 class="card-title">Liste des commissariats</h3>
 
-        <div class="card-tools">
-          <div class="input-group input-group-sm" style="width: 150px;">
-            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-            <div class="input-group-append">
-              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-            </div>
-          </div>
-        </div>
       </div>
       <!-- /.card-header -->
       <div class="card-body table-responsive p-0">
-        <table class="table table-hover">
-          <tbody><tr>
-            <th>ID</th>
-            <th>Libellé</th>
-            <th>Numéro de téléphone</th>
-            <th>Région</th>
-            <th>Département</th>
-            <th>Arrondissement</th>
-            <th colspan="3">Actions</th>
-          </tr>
+        <table class="table table-hover" id="tableRegion">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Libellé</th>
+              <th>Numéro de téléphone</th>
+              <th>Région</th>
+              <th>Département</th>
+              <th>Arrondissement</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+
           <% @commissariats.each do |commissariat| %>
             <tr>
-              <td><%= commissariat.id %></td>
+              <td><%= fa_icon 'star' %></td>
               <td><%= commissariat.name %></td>
               <td><%= commissariat.phone %></td>
               <td><%= commissariat.region.name if !commissariat.region_id.nil? %></td>
               <td><%= commissariat.departement.name if !commissariat.departement_id.nil? %></td>
               <td><%= commissariat.arrondissement.name if !commissariat.arrondissement_id.nil? %></td>
-              <td><%= link_to 'Voir', commissariat %></td>
-              <td><%= link_to 'Edit', edit_commissariat_path(commissariat) %></td>
-              <td><%= link_to 'Supprimer', commissariat, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %></td>
+              <td>
+                <div class="dropdown float-right">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Actions
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <%= link_to commissariat, class: 'dropdown-item' do %>
+                      <%= fa_icon 'eye' %>
+                      Voir
+                    <% end %>
+                    <%= link_to edit_commissariat_path(commissariat), class: 'dropdown-item' do %>
+                      <%= fa_icon 'edit' %>
+                      Editer
+                    <% end %>
+                    <div class="dropdown-divider"></div>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'share' %>
+                      Envoyer un mail à
+                    <% end %>
+                    <div class="dropdown-divider"></div>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'envelope' %>
+                      Message au responsable
+                    <% end %>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'phone' %>
+                      SMS au responsable
+                    <% end %>
+                    <div class="dropdown-divider"></div>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'lock' %>
+                      Bloquer <%= commissariat.name %>
+                    <% end %>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'times' %>
+                      Supprimer
+                    <% end %>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'plus' %>
+                      Autres fonctionnalités
+                    <% end %>
+                  </div>
+                </div>
+              </td>
             </tr>
           <% end %>
           </tbody>
@@ -57,3 +93,10 @@
     <!-- /.card -->
   </div>
 </div>
+
+
+<script>
+    $(document).ready( function () {
+        $('#tableRegion').DataTable();
+    } );
+</script>

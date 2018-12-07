@@ -9,35 +9,59 @@
       <div class="card-header">
         <h3 class="card-title">Liste des posts</h3>
 
-        <div class="card-tools">
-          <div class="input-group input-group-sm" style="width: 150px;">
-            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-            <div class="input-group-append">
-              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-            </div>
-          </div>
-        </div>
       </div>
       <!-- /.card-header -->
       <div class="card-body table-responsive p-0">
-        <table class="table table-hover">
-          <tbody><tr>
-            <th>ID</th>
-            <th>Region</th>
-            <th>Commissariat</th>
-            <th>Agent</th>
-            <th>Grade</th>
-            <th colspan="2">Action</th>
-          </tr>
+        <table class="table table-hover" id="tableRegion">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Region</th>
+              <th>Commissariat</th>
+              <th>Agent</th>
+              <th>Grade</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+
           <% @post_commissariats.each do |post_commissariat| %>
             <tr>
-              <td><%= post_commissariat.id %></td>
+              <td><%= fa_icon 'star' %></td>
               <td><%= post_commissariat.commissariat.region.name %></td>
               <td><%= post_commissariat.commissariat.name %></td>
-              <td><%= post_commissariat.agent.complete_name %></td>
+              <td><%= link_to post_commissariat.agent.complete_name, nil, data: {toggle: "tooltip", html: "true", placement: "right"}, title: "#{image_tag(post_commissariat.agent.avatar.url, size: 50)}" %></td>
               <td><%= post_commissariat.grade.name %></td>
-              <td><%= link_to 'voir', post_commissariat_path(post_commissariat) %></td>
+              <td>
+                <div class="dropdown float-right">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Actions
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <%= link_to post_commissariat, class: 'dropdown-item' do %>
+                      <%= fa_icon 'eye' %>
+                      Voir
+                    <% end %>
+                    <%= link_to edit_post_commissariat_path(post_commissariat), class: 'dropdown-item' do %>
+                      <%= fa_icon 'edit' %>
+                      Editer
+                    <% end %>
+                    <div class="dropdown-divider"></div>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'phone' %>
+                      SMS au responsable
+                    <% end %>
+                    <div class="dropdown-divider"></div>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'times' %>
+                      Supprimer
+                    <% end %>
+                    <%= link_to nil, class: 'dropdown-item' do %>
+                      <%= fa_icon 'plus' %>
+                      Autres fonctionnalités
+                    <% end %>
+                  </div>
+                </div>
             </tr>
           <% end %>
 
@@ -50,4 +74,9 @@
   </div>
 </div>
 
-<br>
+<script>
+    $(document).ready( function () {
+        $('#tableRegion').DataTable();
+        $('[data-toggle="tooltip"]').tooltip();
+    } );
+</script>

@@ -16,6 +16,25 @@ class AgentsController < ApplicationController
     add_breadcrumb 'agents', :agents_path
   end
 
+  def send_sms_view
+    add_breadcrumb 'SMS', nil
+  end
+
+
+  def sms
+    phone = params[:phone]
+    message = params[:message]
+
+    #init module
+    SendSms::new(phone, message)
+
+    #send sms to phone number
+    SendSms::send
+
+    redirect_to parametre_index_path
+
+  end
+
   # GET /agents/1
   # GET /agents/1.json
   def show

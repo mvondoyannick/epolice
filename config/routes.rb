@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'agis/console'
   devise_for :users #pour les utilisateurs de la plateforme
   get 'regions/supprimer/:id', to: 'regions#supprimer'
   get "project/new_release", to: 'regions#new_release', :as => :new_release
@@ -7,6 +8,9 @@ Rails.application.routes.draw do
   resources :bulletins
   resources :centrepartenaires
   resources :structures
+  resources :structures do
+    resources :centrepartenaires
+  end
   get 'structures/:id/accounts', to: 'structures#accounts' #liste les comptes associés
   match 'structures/:id/accounts/new', to: 'structures#new_account', via: [:post, :get] #creation d'un nouveau compte pour une structure données
   resources :centrerecouvrements
@@ -265,6 +269,8 @@ Rails.application.routes.draw do
   resources :infractions
   resources :convocations
   resources :agents
+  get 'agent/send/sms/:id/:phone', to: 'agents#send_sms_view'
+  post 'agents/sms' #permet l'envoi des sms aux agents
   #root 'convocations#index'
   #root 'welcome#home'
   root 'access#login'

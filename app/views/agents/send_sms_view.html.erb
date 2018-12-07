@@ -1,0 +1,86 @@
+<h1>
+  <% @phone = Agent.find(params[:id]).phone %>
+  Envoi du SMS à l'agent <%= Agent.find(params[:id]).complete_name %>
+</h1>
+
+<br>
+<br>
+
+<div class="row">
+
+  <div class="col-6">
+    <div class="card card-primary">
+      <div class="card-header">
+        <h3 class="card-title">A Propos de <%= Agent.find(params[:id]).complete_name %></h3>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body box-profile">
+        <div class="text-center">
+          <%= image_tag(Agent.find(params[:id]).avatar.url, size: 75, class: "profile-user-img img-fluid img-circle") %>
+        </div>
+        <strong><i class="fa fa-book mr-1"></i> Nom complet</strong>
+
+        <p class="text-muted">
+          <%= Agent.find(params[:id]).complete_name %>
+        </p>
+
+        <hr>
+
+        <strong><i class="fa fa-map-marker mr-1"></i> Region affectation</strong>
+
+        <p class="text-muted">
+          <%= Agent.find(params[:id]).region.name %>
+        </p>
+
+        <hr>
+
+        <strong><i class="fa fa-phone mr-1"></i> Phone</strong>
+
+        <p class="text-muted">
+          <%= Agent.find(params[:id]).phone %>
+        </p>
+
+        <hr>
+
+        <strong><i class="fa fa-file-word mr-1"></i> Grade</strong>
+
+        <p class="text-muted">
+          <%= Agent.find(params[:id]).grade.name %>
+        </p>
+      </div>
+      <!-- /.card-body -->
+    </div>
+  </div>
+
+  <div class="col-6">
+    <%= form_tag(action: :sms) do %>
+      <%= hidden_field_tag :agent_id, nil, value: params[:id] %>
+      <div class="card card-warning">
+        <div class="card-header">
+          <h3 class="card-title">Formulaire SMS</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <!-- text input -->
+            <div class="form-group">
+              <label>Numéro téléphone</label>
+              <%= text_field_tag :phone, nil, class: 'form-control', value: @phone, readonly: true %>
+            </div>
+
+            <!-- textarea -->
+            <div class="form-group">
+              <label>Contenu message</label>
+              <%= text_area_tag :message, nil, class: 'form-control', placeholder: 'Message SMS', required: true %>
+            </div>
+
+            <div class="form-group float-right">
+              <%= submit_tag 'Envoyer', class: 'btn btn-sm btn-primary' %>
+            </div>
+        </div>
+        <!-- /.card-body -->
+      </div>
+
+    <% end %>
+  </div>
+
+</div>

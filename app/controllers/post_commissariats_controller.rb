@@ -1,17 +1,22 @@
 class PostCommissariatsController < ApplicationController
   before_action :set_post_commissariat, only: [:show, :edit, :update, :destroy]
 
+  add_breadcrumb "Fichiers", :parametre_index_path
+
   layout 'views/index'
 
   # GET /post_commissariats
   # GET /post_commissariats.json
   def index
     @post_commissariats = PostCommissariat.all
+    add_breadcrumb "posts commissariats", :post_commissariats_path
   end
 
   # GET /post_commissariats/1
   # GET /post_commissariats/1.json
   def show
+    add_breadcrumb "posts commissariats", :post_commissariats_path
+    add_breadcrumb "detail", :post_commissariat_path
   end
 
   # GET /post_commissariats/new

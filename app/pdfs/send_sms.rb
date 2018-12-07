@@ -11,5 +11,7 @@ class SendSms
     HTTParty.get("https://www.agis-as.com/epolice/index.php?telephone=#{$phone}&message=#{$message}")
     #envoi du SMS via HTTPatrty
 
+    return true
+
   end
 end
