@@ -17,7 +17,14 @@ Elle propose les services suivants:
           
         ![gestion des utilisateurs](doc_md/users_md.png)
 2. **API**
-
+3. **Fonctionnalités**
+    1. **Découpage administratif**
+        1. Ajout, modification, suppression des regions
+        2. Ajout, modification, suppresion des départements
+        3. Ajout, modification, suppression des arrondissements
+    2. **Poste de police**
+        1. Ajout, suppresion, modification des postes de police
+        2. Affectation dun poste de police à un découpage administratif
 
 
 oThis README would normally document whatever steps are necessary to get the
