@@ -17,7 +17,7 @@ gem 'sass-rails', '~> 5.0'
 #breadcrumb
 gem 'breadcrumbs_on_rails'
 #adding carrierwave
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'carrierwave-base64'
 #add onesignal gem https://github.com/tbalthazar/onesignal-ruby
 gem 'one_signal'
